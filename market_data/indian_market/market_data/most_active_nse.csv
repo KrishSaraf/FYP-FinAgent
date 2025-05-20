@@ -1,0 +1,11 @@
+ticker,company,price,percent_change,net_change,bid,ask,high,low,open,low_circuit_limit,up_circuit_limit,volume,close,overall_rating,short_term_trend,long_term_trend,52_week_low,52_week_high
+BRTI.NS,Bharti Airtel,1814.0,-2.85,-53.2,0.0,1814.0,1834.0,1810.1,1834.0,1680.5,2053.9,100661947,1867.2,Neutral,Bearish,Bullish,1219.05,1917.0
+INID.NS,Indian Railway Finance Corporati,138.61,6.43,8.37,138.61,0.0,140.22,130.0,130.8,117.21,143.26,85425664,130.24,Moderately Bullish,Bullish,Moderately Bullish,108.04,229.0
+BAJE.NS,Bharat Electronics,363.9,3.85,13.5,363.9,0.0,371.15,349.6,351.6,315.4,385.4,68855230,350.4,Bullish,Bullish,Bullish,221.0,351.0
+CNBK.NS,Canara Bank,107.76,2.47,2.6,107.76,0.0,108.59,105.5,105.5,94.64,115.67,33164732,105.16,Bullish,Bullish,Bullish,78.6,128.9
+ETEA.NS,Eternal,245.76,1.31,3.17,0.0,245.76,246.94,242.0,242.6,218.33,266.84,30854384,242.59,Moderately Bullish,Bullish,Moderately Bullish,146.3,304.7
+INBK.NS,Indusind Bank,780.2,-0.04,-0.3,780.2,0.0,785.5,750.0,750.0,702.45,858.55,27168175,780.5,Bearish,Bearish,Bearish,606.0,1550.0
+SWIG.NS,Swiggy,321.2,1.57,4.95,321.2,0.0,327.2,315.3,317.8,253.0,379.5,23405796,316.25,Moderately Bearish,Moderately Bullish,Bearish,297.0,617.3
+TISC.NS,Tata Steel,157.55,0.13,0.2,0.0,157.55,158.15,157.0,157.35,141.61,173.08,22884700,157.35,Bullish,Bullish,Bullish,122.62,184.6
+TAMO.NS,Tata Motors,730.7,0.36,2.6,730.7,0.0,742.0,725.55,730.0,655.3,800.9,20631410,728.1,Moderately Bullish,Bullish,Moderately Bullish,535.75,1179.0
+GAIL.NS,Gail India,186.28,0.68,1.26,0.0,186.28,187.5,184.38,184.95,166.51,203.52,17089176,185.02,Neutral,Bearish,Moderately Bullish,150.52,246.3
