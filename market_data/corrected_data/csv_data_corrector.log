@@ -1,0 +1,829 @@
+2025-05-31 16:43:21,344 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/RELIANCE/historical_data.csv
+2025-05-31 16:43:21,344 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:43:21,344 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/RELIANCE/historical_data.csv
+2025-05-31 16:43:21,345 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/BAJAJFINSV/historical_data.csv
+2025-05-31 16:43:21,345 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:43:21,345 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/BAJAJFINSV/historical_data.csv
+2025-05-31 16:43:21,345 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/NTPC/historical_data.csv
+2025-05-31 16:43:21,345 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:43:21,345 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/NTPC/historical_data.csv
+2025-05-31 16:43:21,345 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/INFY/historical_data.csv
+2025-05-31 16:43:21,346 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:43:21,346 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/INFY/historical_data.csv
+2025-05-31 16:43:21,346 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/TCS/historical_data.csv
+2025-05-31 16:43:21,346 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:43:21,346 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/TCS/historical_data.csv
+2025-05-31 16:43:21,346 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/ULTRACEMCO/historical_data.csv
+2025-05-31 16:43:21,347 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:43:21,347 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/ULTRACEMCO/historical_data.csv
+2025-05-31 16:43:21,347 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/BAJFINANCE/historical_data.csv
+2025-05-31 16:43:21,347 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:43:21,347 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/BAJFINANCE/historical_data.csv
+2025-05-31 16:43:21,347 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/INDUSINDBK/historical_data.csv
+2025-05-31 16:43:21,348 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:43:21,348 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/INDUSINDBK/historical_data.csv
+2025-05-31 16:43:21,348 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/WIPRO/historical_data.csv
+2025-05-31 16:43:21,348 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:43:21,348 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/WIPRO/historical_data.csv
+2025-05-31 16:43:21,348 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/ONGC/historical_data.csv
+2025-05-31 16:43:21,348 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:43:21,348 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/ONGC/historical_data.csv
+2025-05-31 16:43:21,348 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/HDFC/historical_data.csv
+2025-05-31 16:43:21,349 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:43:21,349 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/HDFC/historical_data.csv
+2025-05-31 16:43:21,349 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/TECHM/historical_data.csv
+2025-05-31 16:43:21,349 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:43:21,349 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/TECHM/historical_data.csv
+2025-05-31 16:43:21,349 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/TATACONSUM/historical_data.csv
+2025-05-31 16:43:21,350 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:43:21,350 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/TATACONSUM/historical_data.csv
+2025-05-31 16:43:21,350 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/HEROMOTOCO/historical_data.csv
+2025-05-31 16:43:21,350 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:43:21,350 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/HEROMOTOCO/historical_data.csv
+2025-05-31 16:43:21,351 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/HINDUNILVR/historical_data.csv
+2025-05-31 16:43:21,351 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:43:21,351 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/HINDUNILVR/historical_data.csv
+2025-05-31 16:43:21,351 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/BRITANNIA/historical_data.csv
+2025-05-31 16:43:21,351 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:43:21,351 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/BRITANNIA/historical_data.csv
+2025-05-31 16:43:21,351 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/SUNPHARMA/historical_data.csv
+2025-05-31 16:43:21,352 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:43:21,352 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/SUNPHARMA/historical_data.csv
+2025-05-31 16:43:21,352 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/MARUTI/historical_data.csv
+2025-05-31 16:43:21,352 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:43:21,352 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/MARUTI/historical_data.csv
+2025-05-31 16:43:21,352 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/BPCL/historical_data.csv
+2025-05-31 16:43:21,353 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:43:21,353 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/BPCL/historical_data.csv
+2025-05-31 16:43:21,353 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/BHARTIARTL/historical_data.csv
+2025-05-31 16:43:21,353 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:43:21,353 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/BHARTIARTL/historical_data.csv
+2025-05-31 16:43:21,353 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/SBIN/historical_data.csv
+2025-05-31 16:43:21,354 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:43:21,354 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/SBIN/historical_data.csv
+2025-05-31 16:43:21,354 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/JSWSTEEL/historical_data.csv
+2025-05-31 16:43:21,354 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:43:21,354 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/JSWSTEEL/historical_data.csv
+2025-05-31 16:43:21,354 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/ICICIBANK/historical_data.csv
+2025-05-31 16:43:21,354 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:43:21,355 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/ICICIBANK/historical_data.csv
+2025-05-31 16:43:21,355 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/SHREECEM/historical_data.csv
+2025-05-31 16:43:21,355 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:43:21,355 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/SHREECEM/historical_data.csv
+2025-05-31 16:43:21,355 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/NESTLEIND/historical_data.csv
+2025-05-31 16:43:21,355 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:43:21,355 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/NESTLEIND/historical_data.csv
+2025-05-31 16:43:21,355 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/HCLTECH/historical_data.csv
+2025-05-31 16:43:21,356 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:43:21,356 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/HCLTECH/historical_data.csv
+2025-05-31 16:43:21,356 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/HDFCLIFE/historical_data.csv
+2025-05-31 16:43:21,356 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:43:21,356 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/HDFCLIFE/historical_data.csv
+2025-05-31 16:43:21,356 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/UPL/historical_data.csv
+2025-05-31 16:43:21,357 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:43:21,357 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/UPL/historical_data.csv
+2025-05-31 16:43:21,357 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/COALINDIA/historical_data.csv
+2025-05-31 16:43:21,357 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:43:21,357 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/COALINDIA/historical_data.csv
+2025-05-31 16:43:21,357 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/DRREDDY/historical_data.csv
+2025-05-31 16:43:21,358 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:43:21,358 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/DRREDDY/historical_data.csv
+2025-05-31 16:43:21,358 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/CIPLA/historical_data.csv
+2025-05-31 16:43:21,358 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:43:21,358 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/CIPLA/historical_data.csv
+2025-05-31 16:43:21,358 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/HDFCBANK/historical_data.csv
+2025-05-31 16:43:21,358 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:43:21,358 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/HDFCBANK/historical_data.csv
+2025-05-31 16:43:21,358 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/ADANIPORTS/historical_data.csv
+2025-05-31 16:43:21,359 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:43:21,359 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/ADANIPORTS/historical_data.csv
+2025-05-31 16:43:21,359 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/TATASTEEL/historical_data.csv
+2025-05-31 16:43:21,359 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:43:21,359 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/TATASTEEL/historical_data.csv
+2025-05-31 16:43:21,359 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/ITC/historical_data.csv
+2025-05-31 16:43:21,360 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:43:21,360 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/ITC/historical_data.csv
+2025-05-31 16:43:21,360 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/TITAN/historical_data.csv
+2025-05-31 16:43:21,360 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:43:21,360 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/TITAN/historical_data.csv
+2025-05-31 16:43:21,360 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/LT/historical_data.csv
+2025-05-31 16:43:21,360 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:43:21,361 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/LT/historical_data.csv
+2025-05-31 16:43:21,361 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/BAJAJ-AUTO/historical_data.csv
+2025-05-31 16:43:21,361 - csv_data_corrector - WARNING - Malformed JSON structure in content.
+2025-05-31 16:43:21,361 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/BAJAJ-AUTO/historical_data.csv
+2025-05-31 16:43:21,361 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/AXISBANK/historical_data.csv
+2025-05-31 16:43:21,361 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:43:21,361 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/AXISBANK/historical_data.csv
+2025-05-31 16:43:21,361 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/KOTAKBANK/historical_data.csv
+2025-05-31 16:43:21,361 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:43:21,361 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/KOTAKBANK/historical_data.csv
+2025-05-31 16:43:21,362 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/GRASIM/historical_data.csv
+2025-05-31 16:43:21,362 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:43:21,362 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/GRASIM/historical_data.csv
+2025-05-31 16:43:21,362 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/EICHERMOT/historical_data.csv
+2025-05-31 16:43:21,362 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:43:21,362 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/EICHERMOT/historical_data.csv
+2025-05-31 16:43:21,362 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/POWERGRID/historical_data.csv
+2025-05-31 16:43:21,363 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:43:21,363 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/POWERGRID/historical_data.csv
+2025-05-31 16:43:21,363 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/TATAMOTORS/historical_data.csv
+2025-05-31 16:43:21,363 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:43:21,363 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/TATAMOTORS/historical_data.csv
+2025-05-31 16:43:21,363 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/IOC/historical_data.csv
+2025-05-31 16:43:21,363 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:43:21,363 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/IOC/historical_data.csv
+2025-05-31 16:43:21,363 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/ASIANPAINT/historical_data.csv
+2025-05-31 16:43:21,364 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:43:21,364 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/ASIANPAINT/historical_data.csv
+2025-05-31 16:45:40,407 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/RELIANCE/historical_data.csv
+2025-05-31 16:45:40,408 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:45:40,408 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/RELIANCE/historical_data.csv
+2025-05-31 16:45:40,408 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/BAJAJFINSV/historical_data.csv
+2025-05-31 16:45:40,408 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:45:40,408 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/BAJAJFINSV/historical_data.csv
+2025-05-31 16:45:40,408 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/NTPC/historical_data.csv
+2025-05-31 16:45:40,409 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:45:40,409 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/NTPC/historical_data.csv
+2025-05-31 16:45:40,409 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/INFY/historical_data.csv
+2025-05-31 16:45:40,409 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:45:40,409 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/INFY/historical_data.csv
+2025-05-31 16:45:40,409 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/TCS/historical_data.csv
+2025-05-31 16:45:40,410 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:45:40,410 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/TCS/historical_data.csv
+2025-05-31 16:45:40,410 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/ULTRACEMCO/historical_data.csv
+2025-05-31 16:45:40,410 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:45:40,410 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/ULTRACEMCO/historical_data.csv
+2025-05-31 16:45:40,410 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/BAJFINANCE/historical_data.csv
+2025-05-31 16:45:40,411 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:45:40,411 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/BAJFINANCE/historical_data.csv
+2025-05-31 16:45:40,411 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/INDUSINDBK/historical_data.csv
+2025-05-31 16:45:40,411 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:45:40,411 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/INDUSINDBK/historical_data.csv
+2025-05-31 16:45:40,411 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/WIPRO/historical_data.csv
+2025-05-31 16:45:40,412 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:45:40,412 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/WIPRO/historical_data.csv
+2025-05-31 16:45:40,412 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/ONGC/historical_data.csv
+2025-05-31 16:45:40,412 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:45:40,412 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/ONGC/historical_data.csv
+2025-05-31 16:45:40,412 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/HDFC/historical_data.csv
+2025-05-31 16:45:40,413 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:45:40,413 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/HDFC/historical_data.csv
+2025-05-31 16:45:40,413 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/TECHM/historical_data.csv
+2025-05-31 16:45:40,413 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:45:40,413 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/TECHM/historical_data.csv
+2025-05-31 16:45:40,413 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/TATACONSUM/historical_data.csv
+2025-05-31 16:45:40,414 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:45:40,414 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/TATACONSUM/historical_data.csv
+2025-05-31 16:45:40,414 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/HEROMOTOCO/historical_data.csv
+2025-05-31 16:45:40,414 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:45:40,414 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/HEROMOTOCO/historical_data.csv
+2025-05-31 16:45:40,414 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/HINDUNILVR/historical_data.csv
+2025-05-31 16:45:40,415 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:45:40,415 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/HINDUNILVR/historical_data.csv
+2025-05-31 16:45:40,415 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/BRITANNIA/historical_data.csv
+2025-05-31 16:45:40,415 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:45:40,415 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/BRITANNIA/historical_data.csv
+2025-05-31 16:45:40,415 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/SUNPHARMA/historical_data.csv
+2025-05-31 16:45:40,416 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:45:40,416 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/SUNPHARMA/historical_data.csv
+2025-05-31 16:45:40,416 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/MARUTI/historical_data.csv
+2025-05-31 16:45:40,416 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:45:40,416 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/MARUTI/historical_data.csv
+2025-05-31 16:45:40,416 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/BPCL/historical_data.csv
+2025-05-31 16:45:40,417 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:45:40,417 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/BPCL/historical_data.csv
+2025-05-31 16:45:40,417 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/BHARTIARTL/historical_data.csv
+2025-05-31 16:45:40,417 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:45:40,417 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/BHARTIARTL/historical_data.csv
+2025-05-31 16:45:40,417 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/SBIN/historical_data.csv
+2025-05-31 16:45:40,417 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:45:40,417 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/SBIN/historical_data.csv
+2025-05-31 16:45:40,418 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/JSWSTEEL/historical_data.csv
+2025-05-31 16:45:40,418 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:45:40,418 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/JSWSTEEL/historical_data.csv
+2025-05-31 16:45:40,418 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/ICICIBANK/historical_data.csv
+2025-05-31 16:45:40,418 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:45:40,418 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/ICICIBANK/historical_data.csv
+2025-05-31 16:45:40,418 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/SHREECEM/historical_data.csv
+2025-05-31 16:45:40,419 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:45:40,419 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/SHREECEM/historical_data.csv
+2025-05-31 16:45:40,419 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/NESTLEIND/historical_data.csv
+2025-05-31 16:45:40,419 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:45:40,419 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/NESTLEIND/historical_data.csv
+2025-05-31 16:45:40,419 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/HCLTECH/historical_data.csv
+2025-05-31 16:45:40,420 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:45:40,420 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/HCLTECH/historical_data.csv
+2025-05-31 16:45:40,420 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/HDFCLIFE/historical_data.csv
+2025-05-31 16:45:40,420 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:45:40,420 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/HDFCLIFE/historical_data.csv
+2025-05-31 16:45:40,420 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/UPL/historical_data.csv
+2025-05-31 16:45:40,420 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:45:40,420 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/UPL/historical_data.csv
+2025-05-31 16:45:40,420 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/COALINDIA/historical_data.csv
+2025-05-31 16:45:40,421 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:45:40,421 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/COALINDIA/historical_data.csv
+2025-05-31 16:45:40,421 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/DRREDDY/historical_data.csv
+2025-05-31 16:45:40,421 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:45:40,421 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/DRREDDY/historical_data.csv
+2025-05-31 16:45:40,421 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/CIPLA/historical_data.csv
+2025-05-31 16:45:40,422 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:45:40,422 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/CIPLA/historical_data.csv
+2025-05-31 16:45:40,422 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/HDFCBANK/historical_data.csv
+2025-05-31 16:45:40,422 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:45:40,422 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/HDFCBANK/historical_data.csv
+2025-05-31 16:45:40,422 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/ADANIPORTS/historical_data.csv
+2025-05-31 16:45:40,422 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:45:40,422 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/ADANIPORTS/historical_data.csv
+2025-05-31 16:45:40,423 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/TATASTEEL/historical_data.csv
+2025-05-31 16:45:40,423 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:45:40,423 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/TATASTEEL/historical_data.csv
+2025-05-31 16:45:40,423 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/ITC/historical_data.csv
+2025-05-31 16:45:40,423 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:45:40,423 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/ITC/historical_data.csv
+2025-05-31 16:45:40,423 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/TITAN/historical_data.csv
+2025-05-31 16:45:40,424 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:45:40,424 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/TITAN/historical_data.csv
+2025-05-31 16:45:40,424 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/LT/historical_data.csv
+2025-05-31 16:45:40,424 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:45:40,424 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/LT/historical_data.csv
+2025-05-31 16:45:40,424 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/BAJAJ-AUTO/historical_data.csv
+2025-05-31 16:45:40,424 - csv_data_corrector - WARNING - Malformed JSON structure in content.
+2025-05-31 16:45:40,424 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/BAJAJ-AUTO/historical_data.csv
+2025-05-31 16:45:40,424 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/AXISBANK/historical_data.csv
+2025-05-31 16:45:40,425 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:45:40,425 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/AXISBANK/historical_data.csv
+2025-05-31 16:45:40,425 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/KOTAKBANK/historical_data.csv
+2025-05-31 16:45:40,425 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:45:40,425 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/KOTAKBANK/historical_data.csv
+2025-05-31 16:45:40,425 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/GRASIM/historical_data.csv
+2025-05-31 16:45:40,426 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:45:40,426 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/GRASIM/historical_data.csv
+2025-05-31 16:45:40,426 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/EICHERMOT/historical_data.csv
+2025-05-31 16:45:40,426 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:45:40,426 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/EICHERMOT/historical_data.csv
+2025-05-31 16:45:40,426 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/POWERGRID/historical_data.csv
+2025-05-31 16:45:40,426 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:45:40,426 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/POWERGRID/historical_data.csv
+2025-05-31 16:45:40,426 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/TATAMOTORS/historical_data.csv
+2025-05-31 16:45:40,427 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:45:40,427 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/TATAMOTORS/historical_data.csv
+2025-05-31 16:45:40,427 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/IOC/historical_data.csv
+2025-05-31 16:45:40,427 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:45:40,427 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/IOC/historical_data.csv
+2025-05-31 16:45:40,427 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/ASIANPAINT/historical_data.csv
+2025-05-31 16:45:40,427 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:45:40,427 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/ASIANPAINT/historical_data.csv
+2025-05-31 16:47:59,284 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/RELIANCE/historical_data.csv
+2025-05-31 16:47:59,285 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:47:59,285 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/RELIANCE/historical_data.csv
+2025-05-31 16:47:59,286 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/BAJAJFINSV/historical_data.csv
+2025-05-31 16:47:59,286 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:47:59,286 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/BAJAJFINSV/historical_data.csv
+2025-05-31 16:47:59,286 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/NTPC/historical_data.csv
+2025-05-31 16:47:59,286 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:47:59,287 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/NTPC/historical_data.csv
+2025-05-31 16:47:59,287 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/INFY/historical_data.csv
+2025-05-31 16:47:59,287 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:47:59,287 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/INFY/historical_data.csv
+2025-05-31 16:47:59,287 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/TCS/historical_data.csv
+2025-05-31 16:47:59,287 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:47:59,288 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/TCS/historical_data.csv
+2025-05-31 16:47:59,288 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/ULTRACEMCO/historical_data.csv
+2025-05-31 16:47:59,288 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:47:59,288 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/ULTRACEMCO/historical_data.csv
+2025-05-31 16:47:59,288 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/BAJFINANCE/historical_data.csv
+2025-05-31 16:47:59,289 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:47:59,289 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/BAJFINANCE/historical_data.csv
+2025-05-31 16:47:59,289 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/INDUSINDBK/historical_data.csv
+2025-05-31 16:47:59,289 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:47:59,289 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/INDUSINDBK/historical_data.csv
+2025-05-31 16:47:59,289 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/WIPRO/historical_data.csv
+2025-05-31 16:47:59,290 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:47:59,290 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/WIPRO/historical_data.csv
+2025-05-31 16:47:59,290 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/ONGC/historical_data.csv
+2025-05-31 16:47:59,290 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:47:59,290 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/ONGC/historical_data.csv
+2025-05-31 16:47:59,290 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/HDFC/historical_data.csv
+2025-05-31 16:47:59,291 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:47:59,291 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/HDFC/historical_data.csv
+2025-05-31 16:47:59,291 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/TECHM/historical_data.csv
+2025-05-31 16:47:59,291 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:47:59,291 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/TECHM/historical_data.csv
+2025-05-31 16:47:59,292 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/TATACONSUM/historical_data.csv
+2025-05-31 16:47:59,292 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:47:59,292 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/TATACONSUM/historical_data.csv
+2025-05-31 16:47:59,292 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/HEROMOTOCO/historical_data.csv
+2025-05-31 16:47:59,292 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:47:59,292 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/HEROMOTOCO/historical_data.csv
+2025-05-31 16:47:59,293 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/HINDUNILVR/historical_data.csv
+2025-05-31 16:47:59,293 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:47:59,293 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/HINDUNILVR/historical_data.csv
+2025-05-31 16:47:59,293 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/BRITANNIA/historical_data.csv
+2025-05-31 16:47:59,293 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:47:59,293 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/BRITANNIA/historical_data.csv
+2025-05-31 16:47:59,294 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/SUNPHARMA/historical_data.csv
+2025-05-31 16:47:59,294 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:47:59,294 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/SUNPHARMA/historical_data.csv
+2025-05-31 16:47:59,294 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/MARUTI/historical_data.csv
+2025-05-31 16:47:59,294 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:47:59,295 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/MARUTI/historical_data.csv
+2025-05-31 16:47:59,295 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/BPCL/historical_data.csv
+2025-05-31 16:47:59,295 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:47:59,295 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/BPCL/historical_data.csv
+2025-05-31 16:47:59,295 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/BHARTIARTL/historical_data.csv
+2025-05-31 16:47:59,295 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:47:59,295 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/BHARTIARTL/historical_data.csv
+2025-05-31 16:47:59,295 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/SBIN/historical_data.csv
+2025-05-31 16:47:59,296 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:47:59,296 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/SBIN/historical_data.csv
+2025-05-31 16:47:59,296 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/JSWSTEEL/historical_data.csv
+2025-05-31 16:47:59,296 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:47:59,296 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/JSWSTEEL/historical_data.csv
+2025-05-31 16:47:59,296 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/ICICIBANK/historical_data.csv
+2025-05-31 16:47:59,297 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:47:59,297 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/ICICIBANK/historical_data.csv
+2025-05-31 16:47:59,297 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/SHREECEM/historical_data.csv
+2025-05-31 16:47:59,297 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:47:59,297 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/SHREECEM/historical_data.csv
+2025-05-31 16:47:59,297 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/NESTLEIND/historical_data.csv
+2025-05-31 16:47:59,297 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:47:59,297 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/NESTLEIND/historical_data.csv
+2025-05-31 16:47:59,297 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/HCLTECH/historical_data.csv
+2025-05-31 16:47:59,298 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:47:59,298 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/HCLTECH/historical_data.csv
+2025-05-31 16:47:59,298 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/HDFCLIFE/historical_data.csv
+2025-05-31 16:47:59,298 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:47:59,298 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/HDFCLIFE/historical_data.csv
+2025-05-31 16:47:59,298 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/UPL/historical_data.csv
+2025-05-31 16:47:59,299 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:47:59,299 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/UPL/historical_data.csv
+2025-05-31 16:47:59,299 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/COALINDIA/historical_data.csv
+2025-05-31 16:47:59,299 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:47:59,299 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/COALINDIA/historical_data.csv
+2025-05-31 16:47:59,299 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/DRREDDY/historical_data.csv
+2025-05-31 16:47:59,300 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:47:59,300 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/DRREDDY/historical_data.csv
+2025-05-31 16:47:59,300 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/CIPLA/historical_data.csv
+2025-05-31 16:47:59,300 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:47:59,300 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/CIPLA/historical_data.csv
+2025-05-31 16:47:59,300 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/HDFCBANK/historical_data.csv
+2025-05-31 16:47:59,300 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:47:59,301 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/HDFCBANK/historical_data.csv
+2025-05-31 16:47:59,301 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/ADANIPORTS/historical_data.csv
+2025-05-31 16:47:59,301 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:47:59,301 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/ADANIPORTS/historical_data.csv
+2025-05-31 16:47:59,301 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/TATASTEEL/historical_data.csv
+2025-05-31 16:47:59,302 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:47:59,302 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/TATASTEEL/historical_data.csv
+2025-05-31 16:47:59,302 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/ITC/historical_data.csv
+2025-05-31 16:47:59,302 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:47:59,302 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/ITC/historical_data.csv
+2025-05-31 16:47:59,302 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/TITAN/historical_data.csv
+2025-05-31 16:47:59,302 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:47:59,302 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/TITAN/historical_data.csv
+2025-05-31 16:47:59,302 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/LT/historical_data.csv
+2025-05-31 16:47:59,303 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:47:59,303 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/LT/historical_data.csv
+2025-05-31 16:47:59,303 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/BAJAJ-AUTO/historical_data.csv
+2025-05-31 16:47:59,303 - csv_data_corrector - WARNING - Malformed JSON structure in content.
+2025-05-31 16:47:59,303 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/BAJAJ-AUTO/historical_data.csv
+2025-05-31 16:47:59,303 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/AXISBANK/historical_data.csv
+2025-05-31 16:47:59,303 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:47:59,303 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/AXISBANK/historical_data.csv
+2025-05-31 16:47:59,303 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/KOTAKBANK/historical_data.csv
+2025-05-31 16:47:59,304 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:47:59,304 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/KOTAKBANK/historical_data.csv
+2025-05-31 16:47:59,304 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/GRASIM/historical_data.csv
+2025-05-31 16:47:59,304 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:47:59,304 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/GRASIM/historical_data.csv
+2025-05-31 16:47:59,304 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/EICHERMOT/historical_data.csv
+2025-05-31 16:47:59,305 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:47:59,305 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/EICHERMOT/historical_data.csv
+2025-05-31 16:47:59,305 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/POWERGRID/historical_data.csv
+2025-05-31 16:47:59,305 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:47:59,305 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/POWERGRID/historical_data.csv
+2025-05-31 16:47:59,305 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/TATAMOTORS/historical_data.csv
+2025-05-31 16:47:59,305 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:47:59,305 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/TATAMOTORS/historical_data.csv
+2025-05-31 16:47:59,305 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/IOC/historical_data.csv
+2025-05-31 16:47:59,306 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:47:59,306 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/IOC/historical_data.csv
+2025-05-31 16:47:59,306 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/ASIANPAINT/historical_data.csv
+2025-05-31 16:47:59,306 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:47:59,306 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/ASIANPAINT/historical_data.csv
+2025-05-31 16:49:44,826 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/RELIANCE/historical_data.csv
+2025-05-31 16:49:44,827 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:49:44,827 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/RELIANCE/historical_data.csv
+2025-05-31 16:49:44,827 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/BAJAJFINSV/historical_data.csv
+2025-05-31 16:49:44,828 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:49:44,828 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/BAJAJFINSV/historical_data.csv
+2025-05-31 16:49:44,828 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/NTPC/historical_data.csv
+2025-05-31 16:49:44,828 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:49:44,828 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/NTPC/historical_data.csv
+2025-05-31 16:49:44,828 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/INFY/historical_data.csv
+2025-05-31 16:49:44,829 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:49:44,829 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/INFY/historical_data.csv
+2025-05-31 16:49:44,829 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/TCS/historical_data.csv
+2025-05-31 16:49:44,829 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:49:44,829 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/TCS/historical_data.csv
+2025-05-31 16:49:44,829 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/ULTRACEMCO/historical_data.csv
+2025-05-31 16:49:44,830 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:49:44,830 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/ULTRACEMCO/historical_data.csv
+2025-05-31 16:49:44,830 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/BAJFINANCE/historical_data.csv
+2025-05-31 16:49:44,830 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:49:44,830 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/BAJFINANCE/historical_data.csv
+2025-05-31 16:49:44,831 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/INDUSINDBK/historical_data.csv
+2025-05-31 16:49:44,831 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:49:44,831 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/INDUSINDBK/historical_data.csv
+2025-05-31 16:49:44,831 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/WIPRO/historical_data.csv
+2025-05-31 16:49:44,832 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:49:44,832 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/WIPRO/historical_data.csv
+2025-05-31 16:49:44,832 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/ONGC/historical_data.csv
+2025-05-31 16:49:44,832 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:49:44,832 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/ONGC/historical_data.csv
+2025-05-31 16:49:44,832 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/HDFC/historical_data.csv
+2025-05-31 16:49:44,833 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:49:44,833 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/HDFC/historical_data.csv
+2025-05-31 16:49:44,833 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/TECHM/historical_data.csv
+2025-05-31 16:49:44,833 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:49:44,833 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/TECHM/historical_data.csv
+2025-05-31 16:49:44,833 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/TATACONSUM/historical_data.csv
+2025-05-31 16:49:44,834 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:49:44,834 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/TATACONSUM/historical_data.csv
+2025-05-31 16:49:44,834 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/HEROMOTOCO/historical_data.csv
+2025-05-31 16:49:44,834 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:49:44,834 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/HEROMOTOCO/historical_data.csv
+2025-05-31 16:49:44,834 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/HINDUNILVR/historical_data.csv
+2025-05-31 16:49:44,835 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:49:44,835 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/HINDUNILVR/historical_data.csv
+2025-05-31 16:49:44,835 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/BRITANNIA/historical_data.csv
+2025-05-31 16:49:44,835 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:49:44,835 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/BRITANNIA/historical_data.csv
+2025-05-31 16:49:44,835 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/SUNPHARMA/historical_data.csv
+2025-05-31 16:49:44,836 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:49:44,836 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/SUNPHARMA/historical_data.csv
+2025-05-31 16:49:44,836 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/MARUTI/historical_data.csv
+2025-05-31 16:49:44,836 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:49:44,836 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/MARUTI/historical_data.csv
+2025-05-31 16:49:44,836 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/BPCL/historical_data.csv
+2025-05-31 16:49:44,837 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:49:44,837 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/BPCL/historical_data.csv
+2025-05-31 16:49:44,837 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/BHARTIARTL/historical_data.csv
+2025-05-31 16:49:44,837 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:49:44,837 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/BHARTIARTL/historical_data.csv
+2025-05-31 16:49:44,837 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/SBIN/historical_data.csv
+2025-05-31 16:49:44,838 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:49:44,838 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/SBIN/historical_data.csv
+2025-05-31 16:49:44,838 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/JSWSTEEL/historical_data.csv
+2025-05-31 16:49:44,838 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:49:44,838 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/JSWSTEEL/historical_data.csv
+2025-05-31 16:49:44,838 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/ICICIBANK/historical_data.csv
+2025-05-31 16:49:44,839 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:49:44,839 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/ICICIBANK/historical_data.csv
+2025-05-31 16:49:44,839 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/SHREECEM/historical_data.csv
+2025-05-31 16:49:44,839 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:49:44,839 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/SHREECEM/historical_data.csv
+2025-05-31 16:49:44,839 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/NESTLEIND/historical_data.csv
+2025-05-31 16:49:44,839 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:49:44,839 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/NESTLEIND/historical_data.csv
+2025-05-31 16:49:44,839 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/HCLTECH/historical_data.csv
+2025-05-31 16:49:44,840 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:49:44,840 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/HCLTECH/historical_data.csv
+2025-05-31 16:49:44,840 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/HDFCLIFE/historical_data.csv
+2025-05-31 16:49:44,840 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:49:44,840 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/HDFCLIFE/historical_data.csv
+2025-05-31 16:49:44,840 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/UPL/historical_data.csv
+2025-05-31 16:49:44,841 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:49:44,841 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/UPL/historical_data.csv
+2025-05-31 16:49:44,841 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/COALINDIA/historical_data.csv
+2025-05-31 16:49:44,841 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:49:44,841 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/COALINDIA/historical_data.csv
+2025-05-31 16:49:44,841 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/DRREDDY/historical_data.csv
+2025-05-31 16:49:44,841 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:49:44,841 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/DRREDDY/historical_data.csv
+2025-05-31 16:49:44,842 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/CIPLA/historical_data.csv
+2025-05-31 16:49:44,842 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:49:44,842 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/CIPLA/historical_data.csv
+2025-05-31 16:49:44,842 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/HDFCBANK/historical_data.csv
+2025-05-31 16:49:44,842 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:49:44,842 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/HDFCBANK/historical_data.csv
+2025-05-31 16:49:44,842 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/ADANIPORTS/historical_data.csv
+2025-05-31 16:49:44,843 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:49:44,843 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/ADANIPORTS/historical_data.csv
+2025-05-31 16:49:44,843 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/TATASTEEL/historical_data.csv
+2025-05-31 16:49:44,843 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:49:44,843 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/TATASTEEL/historical_data.csv
+2025-05-31 16:49:44,844 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/ITC/historical_data.csv
+2025-05-31 16:49:44,844 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:49:44,844 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/ITC/historical_data.csv
+2025-05-31 16:49:44,844 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/TITAN/historical_data.csv
+2025-05-31 16:49:44,844 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:49:44,844 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/TITAN/historical_data.csv
+2025-05-31 16:49:44,844 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/LT/historical_data.csv
+2025-05-31 16:49:44,845 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:49:44,845 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/LT/historical_data.csv
+2025-05-31 16:49:44,845 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/BAJAJ-AUTO/historical_data.csv
+2025-05-31 16:49:44,845 - csv_data_corrector - WARNING - Malformed JSON structure in content.
+2025-05-31 16:49:44,845 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/BAJAJ-AUTO/historical_data.csv
+2025-05-31 16:49:44,845 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/AXISBANK/historical_data.csv
+2025-05-31 16:49:44,845 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:49:44,845 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/AXISBANK/historical_data.csv
+2025-05-31 16:49:44,845 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/KOTAKBANK/historical_data.csv
+2025-05-31 16:49:44,846 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:49:44,846 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/KOTAKBANK/historical_data.csv
+2025-05-31 16:49:44,846 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/GRASIM/historical_data.csv
+2025-05-31 16:49:44,846 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:49:44,846 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/GRASIM/historical_data.csv
+2025-05-31 16:49:44,846 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/EICHERMOT/historical_data.csv
+2025-05-31 16:49:44,847 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:49:44,847 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/EICHERMOT/historical_data.csv
+2025-05-31 16:49:44,847 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/POWERGRID/historical_data.csv
+2025-05-31 16:49:44,847 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:49:44,847 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/POWERGRID/historical_data.csv
+2025-05-31 16:49:44,847 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/TATAMOTORS/historical_data.csv
+2025-05-31 16:49:44,847 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:49:44,847 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/TATAMOTORS/historical_data.csv
+2025-05-31 16:49:44,847 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/IOC/historical_data.csv
+2025-05-31 16:49:44,848 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:49:44,848 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/IOC/historical_data.csv
+2025-05-31 16:49:44,848 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/ASIANPAINT/historical_data.csv
+2025-05-31 16:49:44,848 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:49:44,848 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/ASIANPAINT/historical_data.csv
+2025-05-31 16:51:54,932 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/RELIANCE/historical_data.csv
+2025-05-31 16:51:54,933 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:51:54,933 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/RELIANCE/historical_data.csv
+2025-05-31 16:51:54,934 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/BAJAJFINSV/historical_data.csv
+2025-05-31 16:51:54,934 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:51:54,934 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/BAJAJFINSV/historical_data.csv
+2025-05-31 16:51:54,934 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/NTPC/historical_data.csv
+2025-05-31 16:51:54,935 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:51:54,935 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/NTPC/historical_data.csv
+2025-05-31 16:51:54,935 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/INFY/historical_data.csv
+2025-05-31 16:51:54,935 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:51:54,935 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/INFY/historical_data.csv
+2025-05-31 16:51:54,935 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/TCS/historical_data.csv
+2025-05-31 16:51:54,936 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:51:54,936 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/TCS/historical_data.csv
+2025-05-31 16:51:54,936 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/ULTRACEMCO/historical_data.csv
+2025-05-31 16:51:54,936 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:51:54,936 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/ULTRACEMCO/historical_data.csv
+2025-05-31 16:51:54,936 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/BAJFINANCE/historical_data.csv
+2025-05-31 16:51:54,937 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:51:54,937 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/BAJFINANCE/historical_data.csv
+2025-05-31 16:51:54,937 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/INDUSINDBK/historical_data.csv
+2025-05-31 16:51:54,937 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:51:54,937 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/INDUSINDBK/historical_data.csv
+2025-05-31 16:51:54,937 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/WIPRO/historical_data.csv
+2025-05-31 16:51:54,938 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:51:54,938 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/WIPRO/historical_data.csv
+2025-05-31 16:51:54,938 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/ONGC/historical_data.csv
+2025-05-31 16:51:54,938 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:51:54,938 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/ONGC/historical_data.csv
+2025-05-31 16:51:54,938 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/HDFC/historical_data.csv
+2025-05-31 16:51:54,938 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:51:54,938 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/HDFC/historical_data.csv
+2025-05-31 16:51:54,939 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/TECHM/historical_data.csv
+2025-05-31 16:51:54,939 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:51:54,939 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/TECHM/historical_data.csv
+2025-05-31 16:51:54,939 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/TATACONSUM/historical_data.csv
+2025-05-31 16:51:54,940 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:51:54,940 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/TATACONSUM/historical_data.csv
+2025-05-31 16:51:54,940 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/HEROMOTOCO/historical_data.csv
+2025-05-31 16:51:54,940 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:51:54,940 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/HEROMOTOCO/historical_data.csv
+2025-05-31 16:51:54,940 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/HINDUNILVR/historical_data.csv
+2025-05-31 16:51:54,941 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:51:54,941 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/HINDUNILVR/historical_data.csv
+2025-05-31 16:51:54,941 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/BRITANNIA/historical_data.csv
+2025-05-31 16:51:54,941 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:51:54,941 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/BRITANNIA/historical_data.csv
+2025-05-31 16:51:54,941 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/SUNPHARMA/historical_data.csv
+2025-05-31 16:51:54,942 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:51:54,942 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/SUNPHARMA/historical_data.csv
+2025-05-31 16:51:54,942 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/MARUTI/historical_data.csv
+2025-05-31 16:51:54,942 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:51:54,942 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/MARUTI/historical_data.csv
+2025-05-31 16:51:54,942 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/BPCL/historical_data.csv
+2025-05-31 16:51:54,943 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:51:54,943 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/BPCL/historical_data.csv
+2025-05-31 16:51:54,943 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/BHARTIARTL/historical_data.csv
+2025-05-31 16:51:54,943 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:51:54,943 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/BHARTIARTL/historical_data.csv
+2025-05-31 16:51:54,943 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/SBIN/historical_data.csv
+2025-05-31 16:51:54,943 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:51:54,943 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/SBIN/historical_data.csv
+2025-05-31 16:51:54,944 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/JSWSTEEL/historical_data.csv
+2025-05-31 16:51:54,944 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:51:54,944 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/JSWSTEEL/historical_data.csv
+2025-05-31 16:51:54,944 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/ICICIBANK/historical_data.csv
+2025-05-31 16:51:54,944 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:51:54,944 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/ICICIBANK/historical_data.csv
+2025-05-31 16:51:54,944 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/SHREECEM/historical_data.csv
+2025-05-31 16:51:54,945 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:51:54,945 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/SHREECEM/historical_data.csv
+2025-05-31 16:51:54,945 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/NESTLEIND/historical_data.csv
+2025-05-31 16:51:54,945 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:51:54,945 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/NESTLEIND/historical_data.csv
+2025-05-31 16:51:54,945 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/HCLTECH/historical_data.csv
+2025-05-31 16:51:54,945 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:51:54,946 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/HCLTECH/historical_data.csv
+2025-05-31 16:51:54,946 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/HDFCLIFE/historical_data.csv
+2025-05-31 16:51:54,946 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:51:54,946 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/HDFCLIFE/historical_data.csv
+2025-05-31 16:51:54,946 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/UPL/historical_data.csv
+2025-05-31 16:51:54,946 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:51:54,946 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/UPL/historical_data.csv
+2025-05-31 16:51:54,946 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/COALINDIA/historical_data.csv
+2025-05-31 16:51:54,947 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:51:54,947 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/COALINDIA/historical_data.csv
+2025-05-31 16:51:54,947 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/DRREDDY/historical_data.csv
+2025-05-31 16:51:54,947 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:51:54,947 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/DRREDDY/historical_data.csv
+2025-05-31 16:51:54,947 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/CIPLA/historical_data.csv
+2025-05-31 16:51:54,948 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:51:54,948 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/CIPLA/historical_data.csv
+2025-05-31 16:51:54,948 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/HDFCBANK/historical_data.csv
+2025-05-31 16:51:54,948 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:51:54,948 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/HDFCBANK/historical_data.csv
+2025-05-31 16:51:54,948 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/ADANIPORTS/historical_data.csv
+2025-05-31 16:51:54,949 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:51:54,949 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/ADANIPORTS/historical_data.csv
+2025-05-31 16:51:54,949 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/TATASTEEL/historical_data.csv
+2025-05-31 16:51:54,949 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:51:54,949 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/TATASTEEL/historical_data.csv
+2025-05-31 16:51:54,949 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/ITC/historical_data.csv
+2025-05-31 16:51:54,950 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:51:54,950 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/ITC/historical_data.csv
+2025-05-31 16:51:54,950 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/TITAN/historical_data.csv
+2025-05-31 16:51:54,950 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:51:54,950 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/TITAN/historical_data.csv
+2025-05-31 16:51:54,950 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/LT/historical_data.csv
+2025-05-31 16:51:54,951 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:51:54,951 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/LT/historical_data.csv
+2025-05-31 16:51:54,951 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/BAJAJ-AUTO/historical_data.csv
+2025-05-31 16:51:54,951 - csv_data_corrector - WARNING - Malformed JSON structure in content.
+2025-05-31 16:51:54,951 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/BAJAJ-AUTO/historical_data.csv
+2025-05-31 16:51:54,951 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/AXISBANK/historical_data.csv
+2025-05-31 16:51:54,951 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:51:54,951 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/AXISBANK/historical_data.csv
+2025-05-31 16:51:54,951 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/KOTAKBANK/historical_data.csv
+2025-05-31 16:51:54,952 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:51:54,952 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/KOTAKBANK/historical_data.csv
+2025-05-31 16:51:54,952 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/GRASIM/historical_data.csv
+2025-05-31 16:51:54,952 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:51:54,952 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/GRASIM/historical_data.csv
+2025-05-31 16:51:54,952 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/EICHERMOT/historical_data.csv
+2025-05-31 16:51:54,952 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:51:54,952 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/EICHERMOT/historical_data.csv
+2025-05-31 16:51:54,952 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/POWERGRID/historical_data.csv
+2025-05-31 16:51:54,953 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:51:54,953 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/POWERGRID/historical_data.csv
+2025-05-31 16:51:54,953 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/TATAMOTORS/historical_data.csv
+2025-05-31 16:51:54,953 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:51:54,953 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/TATAMOTORS/historical_data.csv
+2025-05-31 16:51:54,953 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/IOC/historical_data.csv
+2025-05-31 16:51:54,954 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:51:54,954 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/IOC/historical_data.csv
+2025-05-31 16:51:54,954 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/ASIANPAINT/historical_data.csv
+2025-05-31 16:51:54,954 - csv_data_corrector - ERROR - Mismatched square brackets in JSON content.
+2025-05-31 16:51:54,954 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/ASIANPAINT/historical_data.csv
+2025-05-31 16:55:00,458 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/RELIANCE/historical_data.csv
+2025-05-31 16:55:00,459 - csv_data_corrector - ERROR - JSON parsing error: Extra data: line 1 column 5 (char 4). Content: "[{"metric": "Price", "label": "Price on NSE", "values": [["2024-05-17", "1435.70"], ["2024-05-18", 
+2025-05-31 16:55:00,459 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/RELIANCE/historical_data.csv
+2025-05-31 16:55:00,459 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/BAJAJFINSV/historical_data.csv
+2025-05-31 16:55:00,459 - csv_data_corrector - ERROR - JSON parsing error: Extra data: line 1 column 5 (char 4). Content: "[{"metric": "Price", "label": "Price on NSE", "values": [["2024-05-17", "1584.75"], ["2024-05-18", 
+2025-05-31 16:55:00,459 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/BAJAJFINSV/historical_data.csv
+2025-05-31 16:55:00,459 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/NTPC/historical_data.csv
+2025-05-31 16:55:00,460 - csv_data_corrector - ERROR - JSON parsing error: Extra data: line 1 column 5 (char 4). Content: "[{"metric": "Price", "label": "Price on NSE", "values": [["2024-05-17", "365.45"], ["2024-05-18", "
+2025-05-31 16:55:00,460 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/NTPC/historical_data.csv
+2025-05-31 16:55:00,460 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/INFY/historical_data.csv
+2025-05-31 16:55:00,460 - csv_data_corrector - ERROR - JSON parsing error: Extra data: line 1 column 5 (char 4). Content: "[{"metric": "Price", "label": "Price on NSE", "values": [["2024-05-17", "1444.30"], ["2024-05-18", 
+2025-05-31 16:55:00,460 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/INFY/historical_data.csv
+2025-05-31 16:55:00,460 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/TCS/historical_data.csv
+2025-05-31 16:55:00,460 - csv_data_corrector - ERROR - JSON parsing error: Extra data: line 1 column 5 (char 4). Content: "[{"metric": "Price", "label": "Price on NSE", "values": [["2024-05-17", "3834.10"], ["2024-05-18", 
+2025-05-31 16:55:00,460 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/TCS/historical_data.csv
+2025-05-31 16:55:00,460 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/ULTRACEMCO/historical_data.csv
+2025-05-31 16:55:00,461 - csv_data_corrector - ERROR - JSON parsing error: Extra data: line 1 column 5 (char 4). Content: "[{"metric": "Price", "label": "Price on NSE", "values": [["2024-05-17", "9890.35"], ["2024-05-18", 
+2025-05-31 16:55:00,461 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/ULTRACEMCO/historical_data.csv
+2025-05-31 16:55:00,461 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/BAJFINANCE/historical_data.csv
+2025-05-31 16:55:00,461 - csv_data_corrector - ERROR - JSON parsing error: Extra data: line 1 column 5 (char 4). Content: "[{"metric": "Price", "label": "Price on NSE", "values": [["2024-05-17", "6727.40"], ["2024-05-18", 
+2025-05-31 16:55:00,461 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/BAJFINANCE/historical_data.csv
+2025-05-31 16:55:00,461 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/INDUSINDBK/historical_data.csv
+2025-05-31 16:55:00,461 - csv_data_corrector - ERROR - JSON parsing error: Extra data: line 1 column 5 (char 4). Content: "[{"metric": "Price", "label": "Price on NSE", "values": [["2024-05-17", "1412.35"], ["2024-05-18", 
+2025-05-31 16:55:00,461 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/INDUSINDBK/historical_data.csv
+2025-05-31 16:55:00,461 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/WIPRO/historical_data.csv
+2025-05-31 16:55:00,462 - csv_data_corrector - ERROR - JSON parsing error: Extra data: line 1 column 5 (char 4). Content: "[{"metric": "Price", "label": "Price on NSE", "values": [["2024-05-17", "230.50"], ["2024-05-18", "
+2025-05-31 16:55:00,462 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/WIPRO/historical_data.csv
+2025-05-31 16:55:00,462 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/ONGC/historical_data.csv
+2025-05-31 16:55:00,462 - csv_data_corrector - ERROR - JSON parsing error: Extra data: line 1 column 5 (char 4). Content: "[{"metric": "Price", "label": "Price on NSE", "values": [["2024-05-17", "277.45"], ["2024-05-18", "
+2025-05-31 16:55:00,462 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/ONGC/historical_data.csv
+2025-05-31 16:55:00,462 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/HDFC/historical_data.csv
+2025-05-31 16:55:00,462 - csv_data_corrector - ERROR - JSON parsing error: Extra data: line 1 column 5 (char 4). Content: "[{"metric": "Price", "label": "Price on NSE", "values": [["2024-05-17", "1464.10"], ["2024-05-18", 
+2025-05-31 16:55:00,462 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/HDFC/historical_data.csv
+2025-05-31 16:55:00,462 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/TECHM/historical_data.csv
+2025-05-31 16:55:00,463 - csv_data_corrector - ERROR - JSON parsing error: Extra data: line 1 column 5 (char 4). Content: "[{"metric": "Price", "label": "Price on NSE", "values": [["2024-05-17", "1305.40"], ["2024-05-18", 
+2025-05-31 16:55:00,463 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/TECHM/historical_data.csv
+2025-05-31 16:55:00,463 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/TATACONSUM/historical_data.csv
+2025-05-31 16:55:00,463 - csv_data_corrector - ERROR - JSON parsing error: Extra data: line 1 column 5 (char 4). Content: "[{"metric": "Price", "label": "Price on NSE", "values": [["2024-05-17", "1081.76"], ["2024-05-18", 
+2025-05-31 16:55:00,463 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/TATACONSUM/historical_data.csv
+2025-05-31 16:55:00,463 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/HEROMOTOCO/historical_data.csv
+2025-05-31 16:55:00,463 - csv_data_corrector - ERROR - JSON parsing error: Extra data: line 1 column 5 (char 4). Content: "[{"metric": "Price", "label": "Price on NSE", "values": [["2024-05-17", "5089.20"], ["2024-05-18", 
+2025-05-31 16:55:00,463 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/HEROMOTOCO/historical_data.csv
+2025-05-31 16:55:00,463 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/HINDUNILVR/historical_data.csv
+2025-05-31 16:55:00,464 - csv_data_corrector - ERROR - JSON parsing error: Extra data: line 1 column 5 (char 4). Content: "[{"metric": "Price", "label": "Price on NSE", "values": [["2024-05-17", "2320.35"], ["2024-05-18", 
+2025-05-31 16:55:00,464 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/HINDUNILVR/historical_data.csv
+2025-05-31 16:55:00,464 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/BRITANNIA/historical_data.csv
+2025-05-31 16:55:00,464 - csv_data_corrector - ERROR - JSON parsing error: Extra data: line 1 column 5 (char 4). Content: "[{"metric": "Price", "label": "Price on NSE", "values": [["2024-05-17", "5086.80"], ["2024-05-18", 
+2025-05-31 16:55:00,464 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/BRITANNIA/historical_data.csv
+2025-05-31 16:55:00,464 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/SUNPHARMA/historical_data.csv
+2025-05-31 16:55:00,465 - csv_data_corrector - ERROR - JSON parsing error: Extra data: line 1 column 5 (char 4). Content: "[{"metric": "Price", "label": "Price on NSE", "values": [["2024-05-17", "1531.40"], ["2024-05-18", 
+2025-05-31 16:55:00,465 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/SUNPHARMA/historical_data.csv
+2025-05-31 16:55:00,465 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/MARUTI/historical_data.csv
+2025-05-31 16:55:00,465 - csv_data_corrector - ERROR - JSON parsing error: Extra data: line 1 column 5 (char 4). Content: "[{"metric": "Price", "label": "Price on NSE", "values": [["2024-05-17", "12641.50"], ["2024-05-18",
+2025-05-31 16:55:00,465 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/MARUTI/historical_data.csv
+2025-05-31 16:55:00,465 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/BPCL/historical_data.csv
+2025-05-31 16:55:00,466 - csv_data_corrector - ERROR - JSON parsing error: Extra data: line 1 column 5 (char 4). Content: "[{"metric": "Price", "label": "Price on NSE", "values": [["2024-05-17", "314.15"], ["2024-05-18", "
+2025-05-31 16:55:00,466 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/BPCL/historical_data.csv
+2025-05-31 16:55:00,466 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/BHARTIARTL/historical_data.csv
+2025-05-31 16:55:00,466 - csv_data_corrector - ERROR - JSON parsing error: Extra data: line 1 column 5 (char 4). Content: "[{"metric": "Price", "label": "Price on NSE", "values": [["2024-05-17", "1344.45"], ["2024-05-18", 
+2025-05-31 16:55:00,466 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/BHARTIARTL/historical_data.csv
+2025-05-31 16:55:00,466 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/SBIN/historical_data.csv
+2025-05-31 16:55:00,466 - csv_data_corrector - ERROR - JSON parsing error: Extra data: line 1 column 5 (char 4). Content: "[{"metric": "Price", "label": "Price on NSE", "values": [["2024-05-17", "817.85"], ["2024-05-18", "
+2025-05-31 16:55:00,466 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/SBIN/historical_data.csv
+2025-05-31 16:55:00,466 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/JSWSTEEL/historical_data.csv
+2025-05-31 16:55:00,467 - csv_data_corrector - ERROR - JSON parsing error: Extra data: line 1 column 5 (char 4). Content: "[{"metric": "Price", "label": "Price on NSE", "values": [["2024-05-17", "907.45"], ["2024-05-18", "
+2025-05-31 16:55:00,467 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/JSWSTEEL/historical_data.csv
+2025-05-31 16:55:00,467 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/ICICIBANK/historical_data.csv
+2025-05-31 16:55:00,467 - csv_data_corrector - ERROR - JSON parsing error: Extra data: line 1 column 5 (char 4). Content: "[{"metric": "Price", "label": "Price on NSE", "values": [["2024-05-17", "1130.50"], ["2024-05-18", 
+2025-05-31 16:55:00,467 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/ICICIBANK/historical_data.csv
+2025-05-31 16:55:00,467 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/SHREECEM/historical_data.csv
+2025-05-31 16:55:00,467 - csv_data_corrector - ERROR - JSON parsing error: Extra data: line 1 column 5 (char 4). Content: "[{"metric": "Price", "label": "Price on NSE", "values": [["2024-05-17", "26305.80"], ["2024-05-18",
+2025-05-31 16:55:00,467 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/SHREECEM/historical_data.csv
+2025-05-31 16:55:00,467 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/NESTLEIND/historical_data.csv
+2025-05-31 16:55:00,468 - csv_data_corrector - ERROR - JSON parsing error: Extra data: line 1 column 5 (char 4). Content: "[{"metric": "Price", "label": "Price on NSE", "values": [["2024-05-17", "2445.50"], ["2024-05-18", 
+2025-05-31 16:55:00,468 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/NESTLEIND/historical_data.csv
+2025-05-31 16:55:00,468 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/HCLTECH/historical_data.csv
+2025-05-31 16:55:00,468 - csv_data_corrector - ERROR - JSON parsing error: Extra data: line 1 column 5 (char 4). Content: "[{"metric": "Price", "label": "Price on NSE", "values": [["2024-05-17", "1333.20"], ["2024-05-18", 
+2025-05-31 16:55:00,468 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/HCLTECH/historical_data.csv
+2025-05-31 16:55:00,468 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/HDFCLIFE/historical_data.csv
+2025-05-31 16:55:00,468 - csv_data_corrector - ERROR - JSON parsing error: Extra data: line 1 column 5 (char 4). Content: "[{"metric": "Price", "label": "Price on NSE", "values": [["2024-05-17", "570.20"], ["2024-05-18", "
+2025-05-31 16:55:00,468 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/HDFCLIFE/historical_data.csv
+2025-05-31 16:55:00,468 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/UPL/historical_data.csv
+2025-05-31 16:55:00,469 - csv_data_corrector - ERROR - JSON parsing error: Extra data: line 1 column 5 (char 4). Content: "[{"metric": "Price", "label": "Price on NSE", "values": [["2024-05-17", "490.42"], ["2024-05-18", "
+2025-05-31 16:55:00,469 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/UPL/historical_data.csv
+2025-05-31 16:55:00,469 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/COALINDIA/historical_data.csv
+2025-05-31 16:55:00,469 - csv_data_corrector - ERROR - JSON parsing error: Extra data: line 1 column 5 (char 4). Content: "[{"metric": "Price", "label": "Price on NSE", "values": [["2024-05-17", "470.25"], ["2024-05-18", "
+2025-05-31 16:55:00,469 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/COALINDIA/historical_data.csv
+2025-05-31 16:55:00,469 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/DRREDDY/historical_data.csv
+2025-05-31 16:55:00,469 - csv_data_corrector - ERROR - JSON parsing error: Extra data: line 1 column 5 (char 4). Content: "[{"metric": "Price", "label": "Price on NSE", "values": [["2024-05-17", "1159.91"], ["2024-05-18", 
+2025-05-31 16:55:00,469 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/DRREDDY/historical_data.csv
+2025-05-31 16:55:00,469 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/CIPLA/historical_data.csv
+2025-05-31 16:55:00,470 - csv_data_corrector - ERROR - JSON parsing error: Extra data: line 1 column 5 (char 4). Content: "[{"metric": "Price", "label": "Price on NSE", "values": [["2024-05-17", "1399.05"], ["2024-05-18", 
+2025-05-31 16:55:00,470 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/CIPLA/historical_data.csv
+2025-05-31 16:55:00,470 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/HDFCBANK/historical_data.csv
+2025-05-31 16:55:00,470 - csv_data_corrector - ERROR - JSON parsing error: Extra data: line 1 column 5 (char 4). Content: "[{"metric": "Price", "label": "Price on NSE", "values": [["2024-05-17", "1464.10"], ["2024-05-18", 
+2025-05-31 16:55:00,470 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/HDFCBANK/historical_data.csv
+2025-05-31 16:55:00,470 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/ADANIPORTS/historical_data.csv
+2025-05-31 16:55:00,470 - csv_data_corrector - ERROR - JSON parsing error: Extra data: line 1 column 5 (char 4). Content: "[{"metric": "Price", "label": "Price on NSE", "values": [["2024-05-17", "1335.70"], ["2024-05-18", 
+2025-05-31 16:55:00,470 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/ADANIPORTS/historical_data.csv
+2025-05-31 16:55:00,470 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/TATASTEEL/historical_data.csv
+2025-05-31 16:55:00,471 - csv_data_corrector - ERROR - JSON parsing error: Extra data: line 1 column 5 (char 4). Content: "[{"metric": "Price", "label": "Price on NSE", "values": [["2024-05-17", "167.35"], ["2024-05-18", "
+2025-05-31 16:55:00,471 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/TATASTEEL/historical_data.csv
+2025-05-31 16:55:00,471 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/ITC/historical_data.csv
+2025-05-31 16:55:00,471 - csv_data_corrector - ERROR - JSON parsing error: Extra data: line 1 column 5 (char 4). Content: "[{"metric": "Price", "label": "Price on NSE", "values": [["2024-05-17", "408.99"], ["2024-05-18", "
+2025-05-31 16:55:00,471 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/ITC/historical_data.csv
+2025-05-31 16:55:00,471 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/TITAN/historical_data.csv
+2025-05-31 16:55:00,471 - csv_data_corrector - ERROR - JSON parsing error: Extra data: line 1 column 5 (char 4). Content: "[{"metric": "Price", "label": "Price on NSE", "values": [["2024-05-17", "3361.15"], ["2024-05-18", 
+2025-05-31 16:55:00,471 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/TITAN/historical_data.csv
+2025-05-31 16:55:00,471 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/LT/historical_data.csv
+2025-05-31 16:55:00,472 - csv_data_corrector - ERROR - JSON parsing error: Extra data: line 1 column 5 (char 4). Content: "[{"metric": "Price", "label": "Price on NSE", "values": [["2024-05-17", "4764.30"], ["2024-05-18", 
+2025-05-31 16:55:00,472 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/LT/historical_data.csv
+2025-05-31 16:55:00,472 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/BAJAJ-AUTO/historical_data.csv
+2025-05-31 16:55:00,472 - csv_data_corrector - ERROR - JSON parsing error: Expecting value: line 1 column 1 (char 0). Content: error
+An error occurred while fetching historical data. Expecting value: line 2 column 1 (char 1)
+2025-05-31 16:55:00,472 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/BAJAJ-AUTO/historical_data.csv
+2025-05-31 16:55:00,472 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/AXISBANK/historical_data.csv
+2025-05-31 16:55:00,472 - csv_data_corrector - ERROR - JSON parsing error: Extra data: line 1 column 5 (char 4). Content: "[{"metric": "Price", "label": "Price on NSE", "values": [["2024-05-17", "1141.35"], ["2024-05-18", 
+2025-05-31 16:55:00,472 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/AXISBANK/historical_data.csv
+2025-05-31 16:55:00,472 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/KOTAKBANK/historical_data.csv
+2025-05-31 16:55:00,473 - csv_data_corrector - ERROR - JSON parsing error: Extra data: line 1 column 5 (char 4). Content: "[{"metric": "Price", "label": "Price on NSE", "values": [["2024-05-17", "1696.55"], ["2024-05-18", 
+2025-05-31 16:55:00,473 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/KOTAKBANK/historical_data.csv
+2025-05-31 16:55:00,473 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/GRASIM/historical_data.csv
+2025-05-31 16:55:00,473 - csv_data_corrector - ERROR - JSON parsing error: Extra data: line 1 column 5 (char 4). Content: "[{"metric": "Price", "label": "Price on NSE", "values": [["2024-05-17", "2423.65"], ["2024-05-18", 
+2025-05-31 16:55:00,473 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/GRASIM/historical_data.csv
+2025-05-31 16:55:00,473 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/EICHERMOT/historical_data.csv
+2025-05-31 16:55:00,473 - csv_data_corrector - ERROR - JSON parsing error: Extra data: line 1 column 5 (char 4). Content: "[{"metric": "Price", "label": "Price on NSE", "values": [["2024-05-17", "4693.90"], ["2024-05-18", 
+2025-05-31 16:55:00,473 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/EICHERMOT/historical_data.csv
+2025-05-31 16:55:00,473 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/POWERGRID/historical_data.csv
+2025-05-31 16:55:00,474 - csv_data_corrector - ERROR - JSON parsing error: Extra data: line 1 column 5 (char 4). Content: "[{"metric": "Price", "label": "Price on NSE", "values": [["2024-05-17", "313.15"], ["2024-05-18", "
+2025-05-31 16:55:00,474 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/POWERGRID/historical_data.csv
+2025-05-31 16:55:00,474 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/TATAMOTORS/historical_data.csv
+2025-05-31 16:55:00,474 - csv_data_corrector - ERROR - JSON parsing error: Extra data: line 1 column 5 (char 4). Content: "[{"metric": "Price", "label": "Price on NSE", "values": [["2024-05-17", "945.70"], ["2024-05-18", "
+2025-05-31 16:55:00,474 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/TATAMOTORS/historical_data.csv
+2025-05-31 16:55:00,474 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/IOC/historical_data.csv
+2025-05-31 16:55:00,474 - csv_data_corrector - ERROR - JSON parsing error: Extra data: line 1 column 5 (char 4). Content: "[{"metric": "Price", "label": "Price on NSE", "values": [["2024-05-17", "164.05"], ["2024-05-18", "
+2025-05-31 16:55:00,474 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/IOC/historical_data.csv
+2025-05-31 16:55:00,474 - csv_data_corrector - INFO - Correcting file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/ASIANPAINT/historical_data.csv
+2025-05-31 16:55:00,475 - csv_data_corrector - ERROR - JSON parsing error: Extra data: line 1 column 5 (char 4). Content: "[{"metric": "Price", "label": "Price on NSE", "values": [["2024-05-17", "2809.90"], ["2024-05-18", 
+2025-05-31 16:55:00,475 - csv_data_corrector - WARNING - No corrections made for file: /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/market_data/indian_market/ASIANPAINT/historical_data.csv

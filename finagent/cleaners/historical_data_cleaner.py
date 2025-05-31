@@ -10,13 +10,10 @@ from typing import Dict, List, Optional, Union
 import logging
 from finagent.registry import CLEANER
 
-# Create the output directory first
-output_dir = Path('market_data/cleaned_data')
-output_dir.mkdir(parents=True, exist_ok=True)
-
 # Configure logging
+output_dir = Path('market_data/cleaned_data')
 log_file_path = output_dir / 'historical_data_cleaner.log'
-log_file_path.parent.mkdir(parents=True, exist_ok=True)  # Ensure the directory exists
+log_file_path.parent.mkdir(parents=True, exist_ok=True)
 
 logging.basicConfig(
     level=logging.INFO,
@@ -46,24 +43,20 @@ class HistoricalDataCleaner:
         self.output_dir.mkdir(parents=True, exist_ok=True)
         
     def _parse_historical_data(self, file_path: Path) -> List[Dict]:
-        """Parse a historical data file and return a list of dictionaries containing the parsed data.
-        
-        Args:
-            file_path (Path): Path to the historical data file
-            
-        Returns:
-            List[Dict]: List of dictionaries containing the parsed data
-        """
+        """Parse a historical data file and return a list of dictionaries containing the parsed data."""
         try:
             # Read the file content
             with open(file_path, 'r') as f:
                 content = f.read()
-                
+            
             # Remove the 'datasets' header
             content = content.replace('datasets\n', '')
             
             # Replace single quotes with double quotes for valid JSON
             content = content.replace("'", '"')
+            
+            # Replace 'None' with 'null' for valid JSON
+            content = content.replace("'None'", "null")
             
             # Strip any extra whitespace and newlines
             content = content.strip()
@@ -71,53 +64,40 @@ class HistoricalDataCleaner:
             # Remove any BOM or special characters at the start
             content = content.lstrip('\ufeff')
             
+            # Fix improperly closed arrays (e.g., "values": [...]], "meta": {...})
+            content = content.replace("]], \"meta\":", "], \"meta\":")
+            
+            # Validate JSON structure
+            if content.count('{') != content.count('}'):
+                logger.error("Mismatched curly braces in JSON content.")
+                return []
+            if content.count('[') != content.count(']'):
+                logger.error("Mismatched square brackets in JSON content.")
+                return []
+            
             # Find the first '[' and last ']' to extract just the JSON array
             start_idx = content.find('[')
             end_idx = content.rfind(']') + 1
             if start_idx != -1 and end_idx != 0:
                 content = content[start_idx:end_idx]
+            else:
+                logger.warning(f"Malformed JSON structure in file: {file_path}")
+                return []
             
-            # Parse the JSON string twice due to double-encoding
+            # Parse the JSON string
             try:
-                # First try parsing as is
                 data = json.loads(content)
             except json.JSONDecodeError as e:
-                try:
-                    # If that fails, try parsing the string representation
-                    # First, remove any extra quotes at the start and end
-                    content = content.strip('"')
-                    data = json.loads(json.loads(content))
-                except json.JSONDecodeError as e:
-                    # Try to recover partial data
-                    error_pos = e.pos
-                    error_line = e.lineno
-                    error_col = e.colno
-                    
-                    logger.error(f"JSON parsing error at line {error_line}, column {error_col} (char {error_pos})")
-                    
-                    # Find the last complete object before the error
-                    last_complete = content.rfind('}', 0, error_pos)
-                    if last_complete != -1:
-                        # Extract the valid portion of the JSON
-                        valid_content = content[:last_complete + 1] + ']'
-                        try:
-                            # Try to parse the valid portion
-                            data = json.loads(valid_content)
-                            logger.info(f"Recovered partial data up to char {last_complete}")
-                        except json.JSONDecodeError:
-                            try:
-                                # If that fails, try parsing the string representation of the valid portion
-                                data = json.loads(json.loads(valid_content))
-                                logger.info(f"Recovered partial data up to char {last_complete}")
-                            except json.JSONDecodeError:
-                                logger.error("Could not recover partial data")
-                                return []
-                    else:
-                        logger.error("Could not find complete object before error")
-                        return []
+                logger.error(f"JSON parsing error in file {file_path}: {str(e)}")
+                return []
+            
+            # Validate the parsed data
+            if not isinstance(data, list):
+                logger.warning(f"Unexpected JSON structure in file: {file_path}")
+                return []
             
             return data
-            
+        
         except Exception as e:
             logger.error(f"Error parsing historical data file {file_path}: {str(e)}")
             return []
@@ -202,7 +182,7 @@ class HistoricalDataCleaner:
         stock_symbol = file_path.parent.name
         
         # Create stock-specific output directory
-        stock_output_dir = self.output_dir / stock_symbol
+        stock_output_dir = self.output_dir / stock_symbol / "historical_data"
         stock_output_dir.mkdir(parents=True, exist_ok=True)
         
         # Parse the data
@@ -212,9 +192,12 @@ class HistoricalDataCleaner:
         df = self._convert_to_dataframe(data)
         
         # Save the cleaned data
-        output_path = stock_output_dir / "historical_data_cleaned.csv"
-        df.to_csv(output_path)
-        logger.info(f"Saved cleaned data to: {output_path}")
+        if not df.empty:
+            output_path = stock_output_dir / "historical_data_cleaned.csv"
+            df.to_csv(output_path)
+            logger.info(f"Saved cleaned data to: {output_path}")
+        else:
+            logger.warning(f"No cleaned data generated for file: {file_path}")
         
         return df
     
@@ -239,4 +222,61 @@ class HistoricalDataCleaner:
                 logger.error(f"Error cleaning file {file_path}: {str(e)}")
                 continue
         
-        return cleaned_data 
+        return cleaned_data
+    
+    def test_data_correction(self, file_path: Union[str, Path]) -> None:
+        """
+        Test if the entries in the datasets column are being corrected properly.
+        
+        Args:
+            file_path: Path to the historical data file to test
+        """
+        file_path = Path(file_path)
+        logger.info(f"Testing data correction for file: {file_path}")
+        
+        try:
+            # Read the file content
+            with open(file_path, 'r') as f:
+                content = f.read()
+            
+            # Original content before corrections
+            logger.info("Original content (character 6700 onwards):")
+            logger.info(content[6700:6800])  # Log content around the problematic area
+            
+            # Apply corrections
+            corrected_content = content.replace('datasets\n', '')
+            corrected_content = corrected_content.replace("'", '"')
+            corrected_content = corrected_content.replace("'None'", "null")
+            corrected_content = corrected_content.strip()
+            corrected_content = corrected_content.lstrip('\ufeff')
+            
+            # Log corrected content
+            logger.info("Corrected content (character 6700 onwards):")
+            logger.info(corrected_content[6700:6800])  # Log corrected content around the problematic area
+            
+            # Validate JSON parsing
+            start_idx = corrected_content.find('[')
+            end_idx = corrected_content.rfind(']') + 1
+            if start_idx != -1 and end_idx != 0:
+                corrected_content = corrected_content[start_idx:end_idx]
+            else:
+                logger.warning(f"Malformed JSON structure in file: {file_path}")
+                return
+            
+            # Parse the JSON string
+            try:
+                data = json.loads(corrected_content)
+                logger.info("JSON parsing successful. Sample data:")
+                logger.info(data[:2])  # Log the first two entries for verification
+            except json.JSONDecodeError as e:
+                logger.error(f"JSON parsing error in file {file_path}: {str(e)}")
+                return
+            
+            # Validate the parsed data structure
+            if isinstance(data, list) and all(isinstance(entry, dict) for entry in data):
+                logger.info("Data structure validation successful.")
+            else:
+                logger.warning("Unexpected data structure after corrections.")
+        
+        except Exception as e:
+            logger.error(f"Error testing data correction for file {file_path}: {str(e)}")

@@ -20,19 +20,14 @@ def main():
     
     # Define input and output directories
     input_dir = project_root / "market_data" / "indian_market"
-    output_dir = project_root / "market_data" / "indian_market" / "cleaned_data"
+    output_dir = project_root / "market_data" / "cleaned_data"
     
     # Create cleaner instance
     cleaner = HistoricalDataCleaner(input_dir, output_dir)
     
-    # Clean all historical data files
-    logger.info("Starting to clean historical data files...")
-    cleaned_data = cleaner.clean_all_files()
-    
-    # Log results
-    logger.info(f"Successfully cleaned {len(cleaned_data)} files")
-    for file_name in cleaned_data:
-        logger.info(f"Cleaned: {file_name}")
+    # Test data correction for a specific file
+    test_file = input_dir / "RELIANCE" / "historical_data.csv"
+    cleaner.test_data_correction(test_file)
 
 if __name__ == "__main__":
-    main() 
+    main()

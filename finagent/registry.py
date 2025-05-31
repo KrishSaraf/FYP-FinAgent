@@ -1,14 +1,4 @@
-# from mmengine.registry import Registry
-
-# DATASET = Registry('data', locations=['finagent.data'])
-# PROMPT = Registry('prompt', locations=['finagent.prompt'])
-# AGENT = Registry('agent', locations=['finagent.agent'])
-# PROVIDER = Registry('provider', locations=['finagent.provider'])
-# DOWNLOADER = Registry('downloader', locations=['finagent.downloader'])
-# PROCESSOR = Registry('processor', locations=['finagent.processor'])
-# ENVIRONMENT = Registry('environment', locations=['finagent.environment'])
-# MEMORY = Registry('memory', locations=['finagent.memory'])
-# PLOTS = Registry('plot', locations=['finagent.plots'])
+# Registry for managing different modules in the project
 
 class Registry:
     def __init__(self, name):
@@ -23,5 +13,6 @@ class Registry:
             return cls
         return _register
 
+# Define registries for different components
 DOWNLOADER = Registry('downloader')
 CLEANER = Registry('cleaner')  # Registry for data cleaners
