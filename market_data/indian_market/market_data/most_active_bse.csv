@@ -1,0 +1,11 @@
+ticker,company,price,percent_change,net_change,bid,ask,high,low,open,low_circuit_limit,up_circuit_limit,volume,close,overall_rating,short_term_trend,long_term_trend,52_week_low,52_week_high
+BRTI.BO,Bharti Airtel,1814.35,-2.81,-52.45,0.0,0.0,1833.8,1810.1,1832.2,1632.95,1995.75,5555243,1866.8,Neutral,Bearish,Bullish,1224.5,1916.9
+BAJE.BO,Bharat Electronics,363.9,3.87,13.55,0.0,0.0,371.0,349.5,351.8,327.55,400.25,2818319,350.35,Bullish,Bullish,Bullish,221.0,351.0
+TTPW.BO,Tata Power Co,405.7,1.93,7.7,0.0,0.0,409.45,396.4,396.4,365.15,446.25,1589004,398.0,Bullish,Bullish,Bullish,326.25,494.85
+HALC.BO,Hindalco Industries,657.45,-0.6,-3.95,0.0,0.0,662.0,654.3,659.95,591.75,723.15,1353705,661.4,Bullish,Bullish,Bullish,546.25,772.0
+TAMO.BO,Tata Motors,730.7,0.36,2.65,0.0,0.0,742.0,725.55,728.6,657.65,803.75,1197738,728.05,Moderately Bullish,Bullish,Moderately Bullish,542.55,1179.05
+CROP.BO,Crompton Greaves Consumer Electr,351.4,7.33,24.0,0.0,0.0,353.2,338.05,338.05,316.3,386.5,1158514,327.4,Neutral,Bullish,Bearish,303.0,483.65
+ADAN.BO,Adani Power,565.4,4.13,22.4,0.0,0.0,569.3,543.3,545.65,452.35,678.45,1027592,543.0,Moderately Bullish,Bullish,Moderately Bullish,430.85,896.75
+GAIL.BO,Gail India,186.35,0.73,1.35,0.0,0.0,187.4,184.2,185.0,167.7,204.9,949629,185.0,Neutral,Bearish,Moderately Bullish,150.6,246.35
+ICBK.BO,Icici Bank,1453.65,0.19,2.8,0.0,0.0,1458.55,1446.9,1452.3,1308.3,1599.0,926612,1450.85,Bullish,Bullish,Bullish,1051.5,1456.0
+TISC.BO,Tata Steel,157.45,0.06,0.1,0.0,0.0,158.25,157.0,157.75,141.75,173.15,918450,157.35,Bullish,Bullish,Bullish,122.6,184.6
