@@ -32,21 +32,23 @@ OA_YAHOOFINANCE_KEY = "abc123abc123abc123abc123abc123" # https://finnhub.io/
 HUGGINEFACE_KEY = "abc123abc123abc123abc123abc123" # https://huggingface.co/
 RAPIDAPI_KEY = "abc123abc123abc123abc123abc123" # https://rapidapi.com/
 ALPHA_VANTAGE_KEY = "abc123abc123abc123abc123abc123" # https://www.alphavantage.co/
+
+INDIAN_API_KEY = "" # https://indianapi.in/indian-stock-market
 ```
 
 # Prepare the data
 ```
 
 1. Download the data
-python tools/download_prices.py
-python tools/download_news.py
+
+python download_data.py
 ...
 
 2. Process the data
-python tools/data_process.py
+python clean_data.py
 ```
 
-# Run
+# Run - not done yet
 ```
 python main.py
 python main_mi_w_decision.py

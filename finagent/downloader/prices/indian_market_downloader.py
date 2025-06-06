@@ -80,7 +80,7 @@ class IndianMarketDownloader(Downloader):
             return []
 
     def _make_request(self, endpoint: str, params: Optional[Dict[str, Any]] = None) -> Optional[Dict[str, Any]]:
-        """Generic method to make API requests with improved error handling"""
+        """Generic method to make API requests with improved error handling and a delay."""
         try:
             headers = {
                 "x-api-key": self.token,
@@ -93,6 +93,7 @@ class IndianMarketDownloader(Downloader):
                 timeout=30
             )
             response.raise_for_status()
+            time.sleep(self.delay)  # Add a delay after each request
             return response.json()
         except requests.exceptions.RequestException as e:
             self.logger.error(f"API request failed for {endpoint}: {e}")
@@ -210,9 +211,9 @@ class IndianMarketDownloader(Downloader):
         return self._make_request("fetch_52_week_high_low_data")
 
     def download(self,
-                stocks: Optional[List[str]] = None,
-                start_date: Optional[str] = None,
-                end_date: Optional[str] = None):
+                 stocks: Optional[List[str]] = None,
+                 start_date: Optional[str] = None,
+                 end_date: Optional[str] = None):
         """Enhanced main download method with additional data types"""
         start_date = datetime.strptime(start_date if start_date else self.start_date, "%Y-%m-%d")
         end_date = datetime.strptime(end_date if end_date else self.end_date, "%Y-%m-%d")
@@ -242,8 +243,9 @@ class IndianMarketDownloader(Downloader):
 
         for data_type, data in market_data.items():
             if data is not None:
-                df = pd.DataFrame(data) if isinstance(data, list) else pd.DataFrame([data])
-                df.to_csv(os.path.join(self.workdir, "market_data", f"{data_type}.csv"), index=False)
+                file_path = os.path.join(self.workdir, "market_data", f"{data_type}.json")
+                with open(file_path, "w") as json_file:
+                    json.dump(data, json_file, indent=4)
                 self.logger.info(f"Successfully downloaded {data_type}")
 
         # Download stock-specific data
@@ -265,15 +267,12 @@ class IndianMarketDownloader(Downloader):
 
             for data_type, download_func in data_types.items():
                 try:
-                    df = download_func(stock)
+                    data = download_func(stock)
                     
-                    if df is not None:
-                        if isinstance(df, dict):
-                            df = pd.DataFrame([df])
-                        elif isinstance(df, list):
-                            df = pd.DataFrame(df)
-                            
-                        df.to_csv(os.path.join(stock_dir, f"{data_type}.csv"), index=False)
+                    if data is not None:
+                        file_path = os.path.join(stock_dir, f"{data_type}.json")
+                        with open(file_path, "w") as json_file:
+                            json.dump(data, json_file, indent=4)
                         self.logger.info(f"Successfully downloaded {data_type} for {stock}")
                     else:
                         self.logger.warning(f"Failed to download {data_type} for {stock}")
@@ -282,4 +281,4 @@ class IndianMarketDownloader(Downloader):
 
             time.sleep(self.delay)  # Rate limiting
 
-        self.logger.info("Download completed successfully") 
+        self.logger.info("Download completed successfully")

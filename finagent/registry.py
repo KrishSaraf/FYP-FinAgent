@@ -1,14 +1,4 @@
-# from mmengine.registry import Registry
-
-# DATASET = Registry('data', locations=['finagent.data'])
-# PROMPT = Registry('prompt', locations=['finagent.prompt'])
-# AGENT = Registry('agent', locations=['finagent.agent'])
-# PROVIDER = Registry('provider', locations=['finagent.provider'])
-# DOWNLOADER = Registry('downloader', locations=['finagent.downloader'])
-# PROCESSOR = Registry('processor', locations=['finagent.processor'])
-# ENVIRONMENT = Registry('environment', locations=['finagent.environment'])
-# MEMORY = Registry('memory', locations=['finagent.memory'])
-# PLOTS = Registry('plot', locations=['finagent.plots'])
+# Registry for managing different modules in the project
 
 class Registry:
     def __init__(self, name):
@@ -17,10 +7,13 @@ class Registry:
 
     def register_module(self, force=False):
         def _register(cls):
-            if not force and cls.__name__ in self._module_dict:
-                raise KeyError(f'{cls.__name__} is already registered in {self._name}')
+            if cls.__name__ in self._module_dict:
+                print(f'{cls.__name__} is already registered in {self._name}')
+                return  # Skip re-registration
             self._module_dict[cls.__name__] = cls
             return cls
         return _register
 
+# Define registries for different components
 DOWNLOADER = Registry('downloader')
+CLEANER = Registry('cleaner')  # Registry for data cleaners

@@ -1,0 +1,325 @@
+{
+    "measureCode": "EPS",
+    "measureName": "EPS",
+    "periods": [
+        {
+            "RelativePeriod": {
+                "Type": "Annual",
+                "Number": -1
+            },
+            "FiscalPeriod": {
+                "Type": "FY",
+                "Year": 2024
+            },
+            "CalendarYear": 2024,
+            "CalendarMonth": 3,
+            "ActualReportDate": "2024-04-20T06:46:00",
+            "Actuals": {
+                "Actual": [
+                    {
+                        "CurrencyCode": "INR",
+                        "Reported": 90.01,
+                        "ReportedDate": "2024-04-20T06:46:00",
+                        "SurprisePercent": 4.21,
+                        "SurpriseMean": 86.37,
+                        "StandardizedUnexpectedEarnings": 0.75,
+                        "NumberOfEstimates": 4
+                    }
+                ]
+            },
+            "Estimates": null,
+            "EstimateSnapshots": null
+        },
+        {
+            "RelativePeriod": {
+                "Type": "Annual",
+                "Number": 0
+            },
+            "FiscalPeriod": {
+                "Type": "FY",
+                "Year": 2025
+            },
+            "CalendarYear": 2025,
+            "CalendarMonth": 3,
+            "ActualReportDate": "2025-04-19T13:20:00",
+            "Actuals": {
+                "Actual": [
+                    {
+                        "CurrencyCode": "INR",
+                        "Reported": 92.39,
+                        "ReportedDate": "2025-04-19T13:20:00",
+                        "SurprisePercent": -3.76,
+                        "SurpriseMean": 96.0,
+                        "NumberOfEstimates": 1
+                    }
+                ]
+            },
+            "Estimates": null,
+            "EstimateSnapshots": null
+        },
+        {
+            "RelativePeriod": {
+                "Type": "Annual",
+                "Number": 1
+            },
+            "FiscalPeriod": {
+                "Type": "FY",
+                "Year": 2026
+            },
+            "CalendarYear": 2026,
+            "CalendarMonth": 3,
+            "ActualReportDate": null,
+            "Actuals": null,
+            "Estimates": {
+                "Estimate": [
+                    {
+                        "CurrencyCode": "INR",
+                        "UnverifiedMean": null,
+                        "PreliminaryMean": null,
+                        "Mean": 98,
+                        "High": 105,
+                        "Low": 92,
+                        "NumberOfEstimates": 2,
+                        "Median": 98,
+                        "StandardDeviation": 6,
+                        "RevisionStatisticsList": {
+                            "revisionStatistics": null
+                        },
+                        "RevisionCluster": {
+                            "beginDate": null,
+                            "averageRevision": null,
+                            "unit": null,
+                            "numberOfRevisions": null,
+                            "meanChange": null,
+                            "priceChangePercent": null
+                        },
+                        "PredictedSurprise": {
+                            "unit": null,
+                            "isSignificant": null,
+                            "value": null
+                        },
+                        "SmartEstimate": 97
+                    }
+                ]
+            },
+            "EstimateSnapshots": {
+                "EstimateSnapshot": [
+                    {
+                        "CurrencyCode": "INR",
+                        "Mean": 98,
+                        "High": 105,
+                        "Low": 92,
+                        "NumberOfEstimates": 2,
+                        "Median": 98,
+                        "StandardDeviation": 6,
+                        "Age": "OneWeekAgo",
+                        "PredictedSurprise": {
+                            "unit": null,
+                            "isSignificant": null,
+                            "value": null
+                        },
+                        "SmartEstimate": 97
+                    },
+                    {
+                        "CurrencyCode": "INR",
+                        "Mean": 101,
+                        "High": 110,
+                        "Low": 92,
+                        "NumberOfEstimates": 2,
+                        "Median": 101,
+                        "StandardDeviation": 8,
+                        "Age": "ThirtyDaysAgo",
+                        "PredictedSurprise": {
+                            "unit": null,
+                            "isSignificant": null,
+                            "value": null
+                        },
+                        "SmartEstimate": 98
+                    },
+                    {
+                        "CurrencyCode": "INR",
+                        "Mean": 102,
+                        "High": 110,
+                        "Low": 94,
+                        "NumberOfEstimates": 2,
+                        "Median": 102,
+                        "StandardDeviation": 7,
+                        "Age": "SixtyDaysAgo",
+                        "PredictedSurprise": {
+                            "unit": null,
+                            "isSignificant": null,
+                            "value": null
+                        },
+                        "SmartEstimate": 101
+                    }
+                ]
+            }
+        },
+        {
+            "RelativePeriod": {
+                "Type": "Annual",
+                "Number": 2
+            },
+            "FiscalPeriod": {
+                "Type": "FY",
+                "Year": 2027
+            },
+            "CalendarYear": 2027,
+            "CalendarMonth": 3,
+            "ActualReportDate": null,
+            "Actuals": null,
+            "Estimates": {
+                "Estimate": [
+                    {
+                        "CurrencyCode": "INR",
+                        "UnverifiedMean": null,
+                        "PreliminaryMean": null,
+                        "Mean": 115,
+                        "High": 125,
+                        "Low": 106,
+                        "NumberOfEstimates": 2,
+                        "Median": 115,
+                        "StandardDeviation": 9,
+                        "RevisionStatisticsList": {
+                            "revisionStatistics": null
+                        },
+                        "RevisionCluster": null,
+                        "PredictedSurprise": {
+                            "unit": null,
+                            "isSignificant": null,
+                            "value": null
+                        },
+                        "SmartEstimate": 114
+                    }
+                ]
+            },
+            "EstimateSnapshots": {
+                "EstimateSnapshot": [
+                    {
+                        "CurrencyCode": "INR",
+                        "Mean": 115,
+                        "High": 125,
+                        "Low": 106,
+                        "NumberOfEstimates": 2,
+                        "Median": 115,
+                        "StandardDeviation": 9,
+                        "Age": "OneWeekAgo",
+                        "PredictedSurprise": {
+                            "unit": null,
+                            "isSignificant": null,
+                            "value": null
+                        },
+                        "SmartEstimate": 114
+                    },
+                    {
+                        "CurrencyCode": "INR",
+                        "Mean": 116,
+                        "High": 127,
+                        "Low": 106,
+                        "NumberOfEstimates": 2,
+                        "Median": 116,
+                        "StandardDeviation": 10,
+                        "Age": "ThirtyDaysAgo",
+                        "PredictedSurprise": {
+                            "unit": null,
+                            "isSignificant": null,
+                            "value": null
+                        },
+                        "SmartEstimate": 113
+                    },
+                    {
+                        "CurrencyCode": "INR",
+                        "Mean": 117,
+                        "High": 127,
+                        "Low": 107,
+                        "NumberOfEstimates": 2,
+                        "Median": 117,
+                        "StandardDeviation": 9,
+                        "Age": "SixtyDaysAgo",
+                        "PredictedSurprise": {
+                            "unit": null,
+                            "isSignificant": null,
+                            "value": null
+                        },
+                        "SmartEstimate": 116
+                    }
+                ]
+            }
+        },
+        {
+            "RelativePeriod": {
+                "Type": "Annual",
+                "Number": 3
+            },
+            "FiscalPeriod": {
+                "Type": "FY",
+                "Year": 2028
+            },
+            "CalendarYear": 2028,
+            "CalendarMonth": 3,
+            "ActualReportDate": null,
+            "Actuals": null,
+            "Estimates": {
+                "Estimate": [
+                    {
+                        "CurrencyCode": "INR",
+                        "UnverifiedMean": null,
+                        "PreliminaryMean": null,
+                        "Mean": 123,
+                        "High": 123,
+                        "Low": 123,
+                        "NumberOfEstimates": 1,
+                        "Median": 123,
+                        "StandardDeviation": 0,
+                        "RevisionStatisticsList": {
+                            "revisionStatistics": null
+                        },
+                        "RevisionCluster": null,
+                        "PredictedSurprise": {
+                            "unit": null,
+                            "isSignificant": null,
+                            "value": null
+                        },
+                        "SmartEstimate": 123
+                    }
+                ]
+            },
+            "EstimateSnapshots": {
+                "EstimateSnapshot": [
+                    {
+                        "CurrencyCode": "INR",
+                        "Mean": 123,
+                        "High": 123,
+                        "Low": 123,
+                        "NumberOfEstimates": 1,
+                        "Median": 123,
+                        "StandardDeviation": 0,
+                        "Age": "OneWeekAgo",
+                        "PredictedSurprise": {
+                            "unit": null,
+                            "isSignificant": null,
+                            "value": null
+                        },
+                        "SmartEstimate": 123
+                    },
+                    {
+                        "CurrencyCode": "INR",
+                        "Mean": 123,
+                        "High": 123,
+                        "Low": 123,
+                        "NumberOfEstimates": 1,
+                        "Median": 123,
+                        "StandardDeviation": 0,
+                        "Age": "ThirtyDaysAgo",
+                        "PredictedSurprise": {
+                            "unit": null,
+                            "isSignificant": null,
+                            "value": null
+                        },
+                        "SmartEstimate": 123
+                    }
+                ]
+            }
+        }
+    ]
+}
