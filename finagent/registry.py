@@ -7,8 +7,9 @@ class Registry:
 
     def register_module(self, force=False):
         def _register(cls):
-            if not force and cls.__name__ in self._module_dict:
-                raise KeyError(f'{cls.__name__} is already registered in {self._name}')
+            if cls.__name__ in self._module_dict:
+                print(f'{cls.__name__} is already registered in {self._name}')
+                return  # Skip re-registration
             self._module_dict[cls.__name__] = cls
             return cls
         return _register

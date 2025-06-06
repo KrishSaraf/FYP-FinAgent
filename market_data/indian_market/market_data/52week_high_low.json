@@ -1,0 +1,146 @@
+{
+    "BSE_52WeekHighLow": {
+        "high52Week": [
+            {
+                "ticker": "LLOS.BO",
+                "company": "Lloyds Enterprises",
+                "price": 70.26,
+                "52_week_high": 68.1
+            },
+            {
+                "ticker": "OIAJ.BO",
+                "company": "Osiajee Texfab",
+                "price": 235.7,
+                "52_week_high": 228.4
+            },
+            {
+                "ticker": "ADML.BO",
+                "company": "Ador Multiproducts",
+                "price": 96.94,
+                "52_week_high": 92.33
+            },
+            {
+                "ticker": "LKPM.BO",
+                "company": "Lkp Finance",
+                "price": 480.0,
+                "52_week_high": 489.7
+            },
+            {
+                "ticker": "RESP.BO",
+                "company": "Resonance Specialties",
+                "price": 119.0,
+                "52_week_high": 123.0
+            },
+            {
+                "ticker": "LYMT.BO",
+                "company": "Lloyds Metals And Energy",
+                "price": 1458.2,
+                "52_week_high": 1534.75
+            }
+        ],
+        "low52Week": [
+            {
+                "ticker": "SILF.BO",
+                "company": "Siel Financial Services",
+                "price": 8.13,
+                "52_week_low": 8.49
+            },
+            {
+                "ticker": "NAKH.BO",
+                "company": "Naksh Precious Metals",
+                "price": 7.15,
+                "52_week_low": 7.13
+            },
+            {
+                "ticker": "VASU.BO",
+                "company": "Vasundhara Rasayans",
+                "price": 199.3,
+                "52_week_low": 200.0
+            },
+            {
+                "ticker": "AXIA.BO",
+                "company": "Axita Cotton",
+                "price": 9.07,
+                "52_week_low": 9.08
+            },
+            {
+                "ticker": "SURJ.BO",
+                "company": "Suraj Products",
+                "price": 315.0,
+                "52_week_low": 309.5
+            },
+            {
+                "ticker": "RAPI.BO",
+                "company": "Rapid Investments",
+                "price": 86.99,
+                "52_week_low": 85.5
+            }
+        ]
+    },
+    "NSE_52WeekHighLow": {
+        "high52Week": [
+            {
+                "ticker": "LLOS.NS",
+                "company": "Lloyds Enterprises",
+                "price": 70.33,
+                "52_week_high": 68.15
+            },
+            {
+                "ticker": "MAGL.NS",
+                "company": "Magellanic Cloud",
+                "price": 79.54,
+                "52_week_high": 83.85
+            },
+            {
+                "ticker": "LYMT.NS",
+                "company": "Lloyds Metals And Energy",
+                "price": 1458.9,
+                "52_week_high": 1533.5
+            },
+            {
+                "ticker": "MCFL.NS",
+                "company": "Mangal Credit And Fincorp",
+                "price": 187.98,
+                "52_week_high": 200.2
+            }
+        ],
+        "low52Week": [
+            {
+                "ticker": "KHAD.NS",
+                "company": "Khadim India",
+                "price": 267.3,
+                "52_week_low": 256.65
+            },
+            {
+                "ticker": "NVKR.NS",
+                "company": "Navkar Urbanstructure",
+                "price": 2.05,
+                "52_week_low": 2.16
+            },
+            {
+                "ticker": "UNTD.NS",
+                "company": "United Polyfab Gujarat",
+                "price": 15.5,
+                "52_week_low": 15.56
+            },
+            {
+                "ticker": "BSLL.NS",
+                "company": "Bsl",
+                "price": 138.08,
+                "52_week_low": 140.55
+            },
+            {
+                "ticker": "MITT.NS",
+                "company": "Mittal Life Style",
+                "price": 1.48,
+                "52_week_low": 1.45
+            },
+            {
+                "ticker": "AXIA.NS",
+                "company": "Axita Cotton",
+                "price": 9.07,
+                "52_week_low": 9.08
+            }
+        ]
+    }
+}

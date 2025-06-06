@@ -41,14 +41,14 @@ INDIAN_API_KEY = "" # https://indianapi.in/indian-stock-market
 
 1. Download the data
 
-python downloader/prices/indian_market_downloader.py
+python download_data.py
 ...
 
 2. Process the data
-python cleaners/clean_historical_data.py
+python clean_data.py
 ```
 
-# Run
+# Run - not done yet
 ```
 python main.py
 python main_mi_w_decision.py
