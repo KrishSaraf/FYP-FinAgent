@@ -1,0 +1,6 @@
+tickerId,companyName,priceToBookValueRatio,priceToEarningsValueRatio,marketCap,price,percentChange,netChange,returnOnAverageEquity5YearAverage,returnOnAverageEquityTrailing12Month,ltDebtPerEquityMostRecentFiscalYear,netProfitMargin5YearAverage,netProfitMarginPercentTrailing12Month,dividendYieldIndicatedAnnualDividend,totalSharesOutstanding,languageSupport,imageUrl,overallRating,yhigh,ylow
+S0003089,Sun Pharmaceutical Industries,5.53,33.63,403066.45,1679.95,-0.2,-3.3,13.02,16.64,0.5,16.24,21.6,0.96,239.93,Sun Pharmaceutical Industries,https://logo.clearbit.com/sunpharma.com/,Bearish,1960.2,1376.75
+S0003081,Divis Laboratories,11.74,79.54,174159.65,6547.45,-1.25,-82.7,18.08,15.39,0.01,25.96,23.59,0.45,26.6,Divis Laboratories,https://logo.clearbit.com/divislabs.com/,Bullish,6764.0,4183.35
+S0003049,Cipla,3.81,22.56,121202.01,1500.6,0.74,10.95,15.18,18.21,0.81,14.74,19.21,0.88,80.77,Cipla,https://logo.clearbit.com/cipla.com/,Moderately Bullish,1702.0,1310.05
+S0003222,Torrent Pharmaceuticals,13.99,55.06,106613.92,3151.3,0.23,7.35,22.03,26.46,17.63,14.14,16.59,1.02,33.83,Torrent Pharmaceuticals,https://logo.clearbit.com/torrentpharma.com/,Bearish,3589.95,2576.4
+S0003058,Dr Reddys Laboratories,3.1,18.43,110184.67,1320.5,2.37,30.6,17.62,18.28,2.34,15.81,17.54,0.64,83.44,Dr Reddys Laboratories,https://logo.clearbit.com/drreddys.com/,Bullish,1420.2,1025.9

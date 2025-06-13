@@ -1,0 +1,5 @@
+rank,since,firstName,mI,lastName,age,title
+1,10/24/2016,Chinnaswamy,,Vijayakumar,55,"{'startYear': '2023', 'startMonth': '', 'startDay': '', 'iD1': 'CEO', 'abbr1': 'CEO', 'iD2': 'MDR', 'abbr2': 'Mgng.Dir.', 'Value': 'Chief Executive Officer, Managing Director, Executive Director'}"
+2,09/06/2024,Shiv,,Walia,,"{'startYear': '2024', 'startMonth': '9', 'startDay': '6', 'iD1': 'CFO', 'abbr1': 'CFO', 'iD2': '', 'abbr2': '', 'Value': 'Chief Financial Officer'}"
+3,07/28/2021,Jill,,Kouri,,"{'startYear': '2021', 'startMonth': '7', 'startDay': '28', 'iD1': 'CMO', 'abbr1': 'CMO', 'iD2': '', 'abbr2': '', 'Value': 'Chief Marketing Officer'}"
+4,07/01/2006,Manish,,Anand,,"{'startYear': '2019', 'startMonth': '', 'startDay': '', 'iD1': 'SEC', 'abbr1': 'Secy.', 'iD2': '', 'abbr2': '', 'Value': 'Company Secretary'}"

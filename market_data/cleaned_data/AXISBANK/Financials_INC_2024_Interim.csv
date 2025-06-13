@@ -1,0 +1,24 @@
+displayName,key,value,qoQComp,yqoQComp,FiscalYear,Type
+Interest Income Bank ,InterestIncomeBank,30230.58,,,2024,Interim
+Total Interest Expense ,TotalInterestExpense,16727.24,,,2024,Interim
+Net Interest Income ,NetInterestIncome,13503.34,,,2024,Interim
+Loan Loss Provision ,LoanLossProvision,1216.78,,,2024,Interim
+Net Interest Inc After Loan Loss Prov ,NetInterestIncAfterLoanLossProv,12286.56,,,2024,Interim
+Non- Interest Income Bank ,Non-InterestIncomeBank,7605.52,,,2024,Interim
+Non- Interest Expense Bank ,Non-InterestExpenseBank,-9907.21,,,2024,Interim
+Net Income Before Taxes ,NetIncomeBeforeTaxes,9984.87,,,2024,Interim
+Provisionfor Income Taxes ,ProvisionforIncomeTaxes,2371.32,,,2024,Interim
+Net Income After Taxes ,NetIncomeAfterTaxes,7613.55,,,2024,Interim
+Minority Interest ,MinorityInterest,-31.03,,,2024,Interim
+Equity In Affiliates ,EquityInAffiliates,16.52,,,2024,Interim
+Net Income Before Extra Items ,NetIncomeBeforeExtraItems,7599.04,,,2024,Interim
+Net Income ,NetIncome,7599.04,,,2024,Interim
+Income Availableto Com Excl Extra Ord ,IncomeAvailabletoComExclExtraOrd,7599.04,,,2024,Interim
+Income Availableto Com Incl Extra Ord ,IncomeAvailabletoComInclExtraOrd,7599.04,,,2024,Interim
+Diluted Net Income ,DilutedNetIncome,7599.04,,,2024,Interim
+Diluted Weighted Average Shares ,DilutedWeightedAverageShares,311.24,,,2024,Interim
+Diluted EPS Excluding Extra Ord Items ,DilutedEPSExcludingExtraOrdItems,24.42,,,2024,Interim
+DPS- Common Stock Primary Issue ,DPS-CommonStockPrimaryIssue,1.00,,,2024,Interim
+Diluted Normalized EPS ,DilutedNormalizedEPS,24.42,,,2024,Interim
+period Length ,periodLength,3,,,2024,Interim
+period Type ,periodType,Months,,,2024,Interim

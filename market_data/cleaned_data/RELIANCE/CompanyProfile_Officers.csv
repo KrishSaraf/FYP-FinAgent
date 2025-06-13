@@ -1,0 +1,7 @@
+rank,since,firstName,mI,lastName,age,title
+1,07/31/2002,Mukesh,Dhirubhai,Ambani,67,"{'startYear': '2002', 'startMonth': '7', 'startDay': '31', 'iD1': 'CHM', 'abbr1': 'Chmn.', 'iD2': 'MDR', 'abbr2': 'Mgng.Dir.', 'Value': 'Executive Chairman of the Board, Managing Director'}"
+2,2011,Srikanth,,Venkatachari,,"{'startYear': '2023', 'startMonth': '6', 'startDay': '1', 'iD1': 'CFO', 'abbr1': 'CFO', 'iD2': '', 'abbr2': '', 'Value': 'Chief Financial Officer'}"
+3,03/29/2019,Savithri,,Parekh,,"{'startYear': '2019', 'startMonth': '3', 'startDay': '29', 'iD1': 'CCO', 'abbr1': 'Chief Comp.', 'iD2': 'SEC', 'abbr2': 'Secy.', 'Value': 'Company Secretary, Compliance Officer'}"
+4,08/04/1995,Hital,Rasiklal,Meswani,,"{'startYear': '1995', 'startMonth': '8', 'startDay': '4', 'iD1': 'EDR', 'abbr1': 'Exec. Dir.', 'iD2': '', 'abbr2': '', 'Value': 'Executive Director'}"
+5,06/26/1986,Nikhil,Rasiklal,Meswani,58,"{'startYear': '1986', 'startMonth': '6', 'startDay': '26', 'iD1': 'EDR', 'abbr1': 'Exec. Dir.', 'iD2': '', 'abbr2': '', 'Value': 'Executive Director'}"
+6,08/21/2009,Panda,Madhusudan,Sivaprasad,72,"{'startYear': '2009', 'startMonth': '8', 'startDay': '21', 'iD1': 'EDR', 'abbr1': 'Exec. Dir.', 'iD2': '', 'abbr2': '', 'Value': 'Executive Director'}"

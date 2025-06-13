@@ -1,0 +1,24 @@
+displayName,key,value,qoQComp,yqoQComp,FiscalYear,Type
+Interest Income Bank ,InterestIncomeBank,65668.83,,,2025,Annual
+Total Interest Expense ,TotalInterestExpense,28274.55,,,2025,Annual
+Net Interest Income ,NetInterestIncome,37394.28,,,2025,Annual
+Loan Loss Provision ,LoanLossProvision,3859.24,,,2025,Annual
+Net Interest Inc After Loan Loss Prov ,NetInterestIncAfterLoanLossProv,33535.04,,,2025,Annual
+Non- Interest Income Bank ,Non-InterestIncomeBank,37407.27,,,2025,Annual
+Non- Interest Expense Bank ,Non-InterestExpenseBank,-41953.28,,,2025,Annual
+Net Income Before Taxes ,NetIncomeBeforeTaxes,28989.03,,,2025,Annual
+Provisionfor Income Taxes ,ProvisionforIncomeTaxes,7043.29,,,2025,Annual
+Net Income After Taxes ,NetIncomeAfterTaxes,21945.74,,,2025,Annual
+Minority Interest ,MinorityInterest,0.00,,,2025,Annual
+Equity In Affiliates ,EquityInAffiliates,180.25,,,2025,Annual
+Net Income Before Extra Items ,NetIncomeBeforeExtraItems,22125.99,,,2025,Annual
+Net Income ,NetIncome,22125.99,,,2025,Annual
+Income Availableto Com Excl Extra Ord ,IncomeAvailabletoComExclExtraOrd,22125.99,,,2025,Annual
+Income Availableto Com Incl Extra Ord ,IncomeAvailabletoComInclExtraOrd,22125.99,,,2025,Annual
+Diluted Net Income ,DilutedNetIncome,22125.99,,,2025,Annual
+Diluted Weighted Average Shares ,DilutedWeightedAverageShares,198.81,,,2025,Annual
+Diluted EPS Excluding Extra Ord Items ,DilutedEPSExcludingExtraOrdItems,111.29,,,2025,Annual
+DPS- Common Stock Primary Issue ,DPS-CommonStockPrimaryIssue,2.50,,,2025,Annual
+Diluted Normalized EPS ,DilutedNormalizedEPS,96.81,,,2025,Annual
+period Length ,periodLength,12,,,2025,Annual
+period Type ,periodType,Months,,,2025,Annual

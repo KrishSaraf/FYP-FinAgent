@@ -1,0 +1,5 @@
+tickerId,companyName,remarks,recordDate,xdDate,interimOrFinal,instrumentType,value,percentage,dateOfAnnouncement,bookClosureStartDate,bookClosureEndDate,sortDate
+S0003023,Indusind Bank,Rs.16.5000 per share(165%)Final Dividend,2024-06-28,2024-06-28,Final,5,16.5,165,2024-04-25,,,2024-06-28
+S0003023,Indusind Bank,Rs.14.0000 per share(140%)Final Dividend,2023-06-02,2023-06-02,Final,5,14.0,140,2023-04-24,,,2023-06-02
+S0003023,Indusind Bank,Rs.8.5000 per share(85%)Dividend,2022-08-12,2022-08-11,Final,5,8.5,85,2022-04-29,,,2022-08-11
+S0003023,Indusind Bank,Rs.5.0000 per share(50%)Final Dividend,,2021-08-17,Final,5,5.0,50,2021-04-30,2021-08-20,2021-08-26,2021-08-17

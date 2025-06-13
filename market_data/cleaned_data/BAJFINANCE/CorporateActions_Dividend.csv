@@ -1,0 +1,7 @@
+tickerId,companyName,remarks,recordDate,xdDate,interimOrFinal,instrumentType,value,percentage,dateOfAnnouncement,bookClosureStartDate,bookClosureEndDate,sortDate
+S0003015,Bajaj Finance,Rs.44.0000 per share(2200%)Final Dividend,2025-05-30,2025-05-30,Final,5,44,2200,2025-04-30,,,2025-05-30
+S0003015,Bajaj Finance,Rs.12.0000 per share(600%)Special Dividend,2025-05-09,2025-05-09,Special,5,12,600,2025-04-29,,,2025-05-09
+S0003015,Bajaj Finance,Rs.36.0000 per share(1800%)Final Dividend,2024-06-21,2024-06-21,Final,5,36,1800,2024-04-25,,,2024-06-21
+S0003015,Bajaj Finance,Rs.30.0000 per share(1500%)Final Dividend,2023-06-30,2023-06-30,Final,5,30,1500,2023-04-26,,,2023-06-30
+S0003015,Bajaj Finance,Rs.20.0000 per share(1000%)Dividend,2022-07-01,2022-06-30,Final,5,20,1000,2022-04-26,,,2022-06-30
+S0003015,Bajaj Finance,Rs.10.0000 per share(500%)Final Dividend,,2021-07-08,Final,5,10,500,2021-04-27,2021-07-10,2021-07-20,2021-07-08

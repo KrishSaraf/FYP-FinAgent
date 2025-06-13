@@ -1,0 +1,11 @@
+tickerId,companyName,remarks,recordDate,xdDate,interimOrFinal,instrumentType,value,percentage,dateOfAnnouncement,bookClosureStartDate,bookClosureEndDate,sortDate
+S0003053,Hindustan Unilever,Rs.24.0000 per share(2400%)Final Dividend,2025-06-23,2025-06-23,Final,5,24,2400,2025-04-24,,,2025-06-23
+S0003053,Hindustan Unilever,Rs.19.0000 per share(1900%)Interim Dividend,2024-11-06,2024-11-06,Interim,5,19,1900,2024-10-10,,,2024-11-06
+S0003053,Hindustan Unilever,Rs.10.0000 per share(1000%)Special Dividend,2024-11-06,2024-11-06,Special,5,10,1000,2024-10-11,,,2024-11-06
+S0003053,Hindustan Unilever,Rs.24.0000 per share(2400%)Final Dividend,,2024-06-14,Interim,5,24,2400,2024-04-24,2024-06-15,2024-06-21,2024-06-14
+S0003053,Hindustan Unilever,Rs.18.0000 per share(1800%)Interim Dividend,2023-11-02,2023-11-02,Interim,5,18,1800,2023-10-05,,,2023-11-02
+S0003053,Hindustan Unilever,Rs.22.0000 per share(2200%)Final Dividend,,2023-06-19,Final,5,22,2200,2023-04-27,2023-06-20,2023-06-26,2023-06-19
+S0003053,Hindustan Unilever,Rs.17.0000 per share(1700%)Interim Dividend,2022-11-02,2022-11-01,Interim,5,17,1700,2022-10-07,,,2022-11-01
+S0003053,Hindustan Unilever,Rs.19.0000 per share(1900%)Final Dividend,,2022-06-15,Final,5,19,1900,2022-04-27,2022-06-17,2022-06-23,2022-06-15
+S0003053,Hindustan Unilever,Rs.15.0000 per share(1500%)Interim Dividend,2021-10-27,2021-10-26,Interim,5,15,1500,2021-10-04,,,2021-10-26
+S0003053,Hindustan Unilever,Rs.17.0000 per share(1700%)Final Dividend,,2021-06-14,Final,5,17,1700,2021-04-29,2021-06-16,2021-06-22,2021-06-14

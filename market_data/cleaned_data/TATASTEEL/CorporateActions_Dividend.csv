@@ -1,0 +1,6 @@
+tickerId,companyName,remarks,recordDate,xdDate,interimOrFinal,instrumentType,value,percentage,dateOfAnnouncement,bookClosureStartDate,bookClosureEndDate,sortDate
+S0003026,Tata Steel,Rs.3.6000 per share(360%)Final Dividend,2025-06-06,2025-06-06,Final,5,3.6,360,2025-05-12,,,2025-06-06
+S0003026,Tata Steel,Rs.3.6000 per share(360%)Final Dividend,2024-06-21,2024-06-21,Final,5,3.6,360,2024-05-29,,,2024-06-21
+S0003026,Tata Steel,Rs.3.6000 per share(360%)Final Dividend,,2023-06-22,Final,5,3.6,360,2023-05-02,2023-06-23,2023-07-05,2023-06-22
+S0003026,Tata Steel,Rs.12.7500 per share(510%)Dividend,,2022-06-15,Final,109,12.75,510,2022-05-04,2022-06-17,2022-06-28,2022-06-15
+S0003026,Tata Steel,Rs.6.2500 per share(250%)Final Dividend on Partly Paid shares to the extent unpaid,,2021-06-17,Final,109,6.25,250,2021-05-05,2021-06-19,2021-06-30,2021-06-17

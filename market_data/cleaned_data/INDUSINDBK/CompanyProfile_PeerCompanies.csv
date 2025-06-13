@@ -1,0 +1,6 @@
+tickerId,companyName,priceToBookValueRatio,priceToEarningsValueRatio,marketCap,price,percentChange,netChange,returnOnAverageEquity5YearAverage,returnOnAverageEquityTrailing12Month,ltDebtPerEquityMostRecentFiscalYear,netProfitMargin5YearAverage,netProfitMarginPercentTrailing12Month,dividendYieldIndicatedAnnualDividend,totalSharesOutstanding,languageSupport,imageUrl,overallRating,yhigh,ylow
+S0003683,Indian Overseas Bank,2.46,23.02,76333.12,39.64,-2.65,-1.08,9.14,11.36,131.01,15.87,20.57,,1925.66,Indian Overseas Bank,https://logo.clearbit.com/iob.in/,Neutral,74.84,33.01
+S0003021,Yes Bank,1.39,27.1,65387.34,20.85,-0.38,-0.08,1.11,5.44,150.47,3.36,16.23,,3136.08,Yes Bank,https://images.mintgenie.com/prod/stock/Y.png,Neutral,27.41,16.02
+S0003023,Indusind Bank,0.98,24.64,64131.76,823.2,2.5,20.1,10.3,4.02,82.83,21.4,9.64,,77.91,Indusind Bank,https://images.mintgenie.com/prod/stock/I.png,Neutral,1550.0,605.4
+S0003270,Bank Of India,0.7,5.95,56635.0,124.3,0.04,0.05,8.5,12.62,153.44,18.65,27.62,3.24,455.63,Bank Of India,https://logo.clearbit.com/bankofindia.co.in/,Bullish,137.35,90.0
+S0003247,Au Small Finance Bank,3.15,25.68,55829.21,749.05,4.03,29.0,15.32,14.17,67.92,23.81,19.98,0.14,74.53,Au Small Finance Bank,https://logo.clearbit.com/aubank.in/,Bullish,755.0,479.0

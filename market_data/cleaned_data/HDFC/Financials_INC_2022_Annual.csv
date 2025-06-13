@@ -1,0 +1,23 @@
+displayName,key,value,qoQComp,yqoQComp,FiscalYear,Type
+Interest Income Bank ,InterestIncomeBank,135936.41,,,2022,Annual
+Total Interest Expense ,TotalInterestExpense,58584.33,,,2022,Annual
+Net Interest Income ,NetInterestIncome,77352.08,,,2022,Annual
+Loan Loss Provision ,LoanLossProvision,12500.86,,,2022,Annual
+Net Interest Inc After Loan Loss Prov ,NetInterestIncAfterLoanLossProv,64851.22,,,2022,Annual
+Non- Interest Income Bank ,Non-InterestIncomeBank,31758.99,,,2022,Annual
+Non- Interest Expense Bank ,Non-InterestExpenseBank,-45736.83,,,2022,Annual
+Net Income Before Taxes ,NetIncomeBeforeTaxes,50873.38,,,2022,Annual
+Provisionfor Income Taxes ,ProvisionforIncomeTaxes,12722.48,,,2022,Annual
+Net Income After Taxes ,NetIncomeAfterTaxes,38150.90,,,2022,Annual
+Minority Interest ,MinorityInterest,-98.15,,,2022,Annual
+Net Income Before Extra Items ,NetIncomeBeforeExtraItems,38052.75,,,2022,Annual
+Net Income ,NetIncome,38052.75,,,2022,Annual
+Income Availableto Com Excl Extra Ord ,IncomeAvailabletoComExclExtraOrd,38052.75,,,2022,Annual
+Income Availableto Com Incl Extra Ord ,IncomeAvailabletoComInclExtraOrd,38052.75,,,2022,Annual
+Diluted Net Income ,DilutedNetIncome,38052.75,,,2022,Annual
+Diluted Weighted Average Shares ,DilutedWeightedAverageShares,557.09,,,2022,Annual
+Diluted EPS Excluding Extra Ord Items ,DilutedEPSExcludingExtraOrdItems,68.31,,,2022,Annual
+DPS- Common Stock Primary Issue ,DPS-CommonStockPrimaryIssue,15.50,,,2022,Annual
+Diluted Normalized EPS ,DilutedNormalizedEPS,68.22,,,2022,Annual
+period Length ,periodLength,12,,,2022,Annual
+period Type ,periodType,Months,,,2022,Annual

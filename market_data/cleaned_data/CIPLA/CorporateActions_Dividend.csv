@@ -1,0 +1,7 @@
+tickerId,companyName,remarks,recordDate,xdDate,interimOrFinal,instrumentType,value,percentage,dateOfAnnouncement,bookClosureStartDate,bookClosureEndDate,sortDate
+S0003049,Cipla,Rs.16.0000 per share(800%)Final Dividend,2025-06-27,2025-06-27,Final,5,16.0,800,2025-05-13,,,2025-06-27
+S0003049,Cipla,Rs.3.0000 per share(150%)Special Dividend,2025-06-27,2025-06-27,Special,5,3.0,150,2025-05-14,,,2025-06-27
+S0003049,Cipla,Rs.13.0000 per share(650%)Final Dividend,2024-08-02,2024-08-02,Final,5,13.0,650,2024-05-10,,,2024-08-02
+S0003049,Cipla,Rs.8.5000 per share(425%)Final Dividend,2023-07-21,2023-07-21,Final,5,8.5,425,2023-05-12,,,2023-07-21
+S0003049,Cipla,Rs.5.0000 per share(250%)Dividend,2022-08-10,2022-08-08,Final,5,5.0,250,2022-07-27,,,2022-08-08
+S0003049,Cipla,Rs.5.0000 per share(250%)Dividend,,2021-08-09,Final,5,5.0,250,2021-05-14,2021-08-11,2021-08-25,2021-08-09

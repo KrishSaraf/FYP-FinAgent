@@ -1,0 +1,6 @@
+tickerId,companyName,remarks,recordDate,xdDate,interimOrFinal,instrumentType,value,percentage,dateOfAnnouncement,bookClosureStartDate,bookClosureEndDate,sortDate
+S0003097,Jsw Steel,Rs.2.8000 per share(280%)Final Dividend,2025-07-08,,Final,5,2.8,280,2025-05-23,,,2025-07-08
+S0003097,Jsw Steel,Rs.7.3000 per share(730%)Final Dividend,,2024-07-09,Final,5,7.3,730,2024-05-21,2024-07-10,2024-07-12,2024-07-09
+S0003097,Jsw Steel,Rs.3.4000 per share(340%)Final Dividend,,2023-07-11,Final,5,3.4,340,2023-05-22,2023-07-12,2023-07-14,2023-07-11
+S0003097,Jsw Steel,Rs.17.3500 per share(1735%)Final Dividend,,2022-07-04,Final,5,17.35,1735,2022-05-27,2022-07-06,2022-07-08,2022-07-04
+S0003097,Jsw Steel,Rs.6.5000 per share(650%)Final Dividend,,2021-07-05,Final,5,6.5,650,2021-05-21,2021-07-07,2021-07-09,2021-07-05

@@ -1,0 +1,11 @@
+rank,since,firstName,mI,lastName,age,title
+1,05/10/2007,Sanjivnayan,Rahulkumar,Bajaj,54,"{'startYear': '2020', 'startMonth': '3', 'startDay': '17', 'iD1': 'CHM', 'abbr1': 'Chmn.', 'iD2': 'MDR', 'abbr2': 'Mgng.Dir.', 'Value': 'Executive Chairman of the Board, Managing Director'}"
+2,02/01/2025,Ramandeep,Singh,Sahni,,"{'startYear': '2025', 'startMonth': '2', 'startDay': '1', 'iD1': 'CFO', 'abbr1': 'CFO', 'iD2': '', 'abbr2': '', 'Value': 'Chief Financial Officer'}"
+3,02/04/2019,Anish,Praful,Amin,,"{'startYear': '2023', 'startMonth': '', 'startDay': '', 'iD1': 'CEX', 'abbr1': 'Corp. Exec.', 'iD2': '', 'abbr2': '', 'Value': 'President - Group Risk, Assurance and Human Resources'}"
+4,04/01/2017,Tarun,,Chugh,55,"{'startYear': '2017', 'startMonth': '4', 'startDay': '1', 'iD1': 'CEX', 'abbr1': 'Corp. Exec.', 'iD2': '', 'abbr2': '', 'Value': 'Managing Director, Chief Executive Officer of Bajaj Allianz Life Insurance Company Ltd'}"
+5,06/01/2023,Kurush,,Irani,,"{'startYear': '2023', 'startMonth': '6', 'startDay': '1', 'iD1': 'CEX', 'abbr1': 'Corp. Exec.', 'iD2': '', 'abbr2': '', 'Value': 'President - Corporate Social Responsibility'}"
+6,NA,Purav,,Jhaveri,,"{'startYear': 'NA', 'startMonth': '', 'startDay': '', 'iD1': 'CEX', 'abbr1': 'Corp. Exec.', 'iD2': '', 'abbr2': '', 'Value': 'President - Investments'}"
+7,01/03/2019,Devang,,Mody,,"{'startYear': '2023', 'startMonth': '', 'startDay': '', 'iD1': 'CEX', 'abbr1': 'Corp. Exec.', 'iD2': '', 'abbr2': '', 'Value': 'Whole Time Director and Chief Executive Officer of Bajaj Finserv Health Ltd'}"
+8,NA,Ganesh,,Mohan,,"{'startYear': '2022', 'startMonth': '', 'startDay': '', 'iD1': 'CEX', 'abbr1': 'Corp. Exec.', 'iD2': '', 'abbr2': '', 'Value': 'Whole Time Director and Chief Executive Officer, Bajaj Finserv Asset Management Ltd'}"
+9,NA,Ashish,,Panchal,,"{'startYear': '2022', 'startMonth': '', 'startDay': '', 'iD1': 'CEX', 'abbr1': 'Corp. Exec.', 'iD2': '', 'abbr2': '', 'Value': 'Whole Time Director and Chief Executive Officer of Bajaj Finserv Direct Ltd'}"
+10,2011,V.,,Rajagopalan,68,"{'startYear': '2017', 'startMonth': '', 'startDay': '', 'iD1': 'CEX', 'abbr1': 'Corp. Exec.', 'iD2': '', 'abbr2': '', 'Value': 'President - Legal and Taxation'}"

@@ -1,0 +1,11 @@
+tickerId,companyName,remarks,recordDate,xdDate,interimOrFinal,instrumentType,value,percentage,dateOfAnnouncement,bookClosureStartDate,bookClosureEndDate,sortDate
+S0003056,Indian Oil Corp,Rs.3.0000 per share(30%)Final Dividend,,,Final,5,3.0,30,2025-04-30,,,2025-04-30
+S0003056,Indian Oil Corp,Rs.7.0000 per share(70%)Final Dividend,2024-07-12,2024-07-12,Final,5,7.0,70,2024-04-30,,,2024-07-12
+S0003056,Indian Oil Corp,Rs.5.0000 per share(50%)Interim Dividend,2023-11-10,2023-11-10,Interim,5,5.0,50,2023-10-31,,,2023-11-10
+S0003056,Indian Oil Corp,Rs.3.0000 per share(30%)Final Dividend,2023-07-28,2023-07-28,Final,5,3.0,30,2023-05-16,,,2023-07-28
+S0003056,Indian Oil Corp,Rs.2.4000 per share(24%)Final Dividend,2022-08-12,2022-08-11,Final,5,2.4,24,2022-05-17,,,2022-08-11
+S0003056,Indian Oil Corp,Rs.4.0000 per share (40%) Second Interim Dividend,2022-02-10,2022-02-09,Interim,5,4.0,40,2022-01-31,,,2022-02-09
+S0003056,Indian Oil Corp,Rs.5.0000 per share(50%)Interim Dividend,2021-11-12,2021-11-11,Interim,5,5.0,50,2021-11-01,,,2021-11-11
+S0003056,Indian Oil Corp,Rs.1.5000 per share(15%)Final Dividend,2021-08-06,2021-08-05,Final,5,1.5,15,2021-05-19,,,2021-08-05
+S0003056,Indian Oil Corp,Rs.3.0000 per share(30%)Interim Dividend,2021-03-24,2021-03-23,Interim,5,3.0,30,2021-03-10,,,2021-03-23
+S0003056,Indian Oil Corp,Rs.7.5000 per share(75%)Interim Dividend,2021-02-10,2021-02-09,Interim,5,7.5,75,2021-01-29,,,2021-02-09

@@ -1,0 +1,28 @@
+displayName,key,value,yqoQComp,qoQComp,FiscalYear,Type
+Revenue ,Revenue,5717.61,,,2022,Annual
+Total Revenue ,TotalRevenue,5717.61,,,2022,Annual
+Costof Revenue Total ,CostofRevenueTotal,1574.18,,,2022,Annual
+Gross Profit ,GrossProfit,4143.44,,,2022,Annual
+Selling/ General/ Admin Expenses Total ,Selling/General/AdminExpensesTotal,3063.26,,,2022,Annual
+Depreciation/ Amortization ,Depreciation/Amortization,300.84,,,2022,Annual
+Unusual Expense( Income) ,UnusualExpense(Income),-306.89,,,2022,Annual
+Other Operating Expenses Total ,OtherOperatingExpensesTotal,11.16,,,2022,Annual
+Total Operating Expense ,TotalOperatingExpense,4642.55,,,2022,Annual
+Operating Income ,OperatingIncome,1075.06,,,2022,Annual
+Interest Inc( Exp) Net- Non- Op Total ,InterestInc(Exp)Net-Non-OpTotal,-88.59,,,2022,Annual
+Gain( Loss)on Saleof Assets ,Gain(Loss)onSaleofAssets,11.61,,,2022,Annual
+Other Net ,OtherNet,-10.29,,,2022,Annual
+Net Income Before Taxes ,NetIncomeBeforeTaxes,987.79,,,2022,Annual
+Provisionfor Income Taxes ,ProvisionforIncomeTaxes,197.84,,,2022,Annual
+Net Income After Taxes ,NetIncomeAfterTaxes,789.95,,,2022,Annual
+Minority Interest ,MinorityInterest,-234.83,,,2022,Annual
+Net Income Before Extra Items ,NetIncomeBeforeExtraItems,555.12,,,2022,Annual
+Net Income ,NetIncome,555.12,,,2022,Annual
+Income Availableto Com Excl Extra Ord ,IncomeAvailabletoComExclExtraOrd,555.12,,,2022,Annual
+Income Availableto Com Incl Extra Ord ,IncomeAvailabletoComInclExtraOrd,555.12,,,2022,Annual
+Diluted Net Income ,DilutedNetIncome,555.12,,,2022,Annual
+Diluted Weighted Average Shares ,DilutedWeightedAverageShares,75.50,,,2022,Annual
+Diluted EPS Excluding Extra Ord Items ,DilutedEPSExcludingExtraOrdItems,7.35,,,2022,Annual
+Diluted Normalized EPS ,DilutedNormalizedEPS,3.98,,,2022,Annual
+period Length ,periodLength,12,,,2022,Annual
+period Type ,periodType,Months,,,2022,Annual

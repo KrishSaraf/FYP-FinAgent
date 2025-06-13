@@ -1,0 +1,9 @@
+rank,since,firstName,mI,lastName,age,title
+1,12/06/2015,Sanjiv,,Puri,62,"{'startYear': '2019', 'startMonth': '5', 'startDay': '13', 'iD1': 'CHM', 'abbr1': 'Chmn.', 'iD2': 'MDR', 'abbr2': 'Mgng.Dir.', 'Value': 'Executive Chairman of the Board, Managing Director'}"
+2,09/05/2020,Supratim,,Dutta,58,"{'startYear': '2022', 'startMonth': '7', 'startDay': '22', 'iD1': 'CFO', 'abbr1': 'CFO', 'iD2': 'EDR', 'abbr2': 'Exec. Dir.', 'Value': 'Chief Financial Officer, Whole- Time Director'}"
+3,NA,A.,K.,Rajput,68,"{'startYear': '2022', 'startMonth': '11', 'startDay': '', 'iD1': 'CEX', 'abbr1': 'Corp. Exec.', 'iD2': '', 'abbr2': '', 'Value': 'President - Corporate Affairs'}"
+4,02/04/2018,Rajendra,Kumar,Singhi,59,"{'startYear': '2023', 'startMonth': '', 'startDay': '', 'iD1': 'EVP', 'abbr1': 'Exec. VP', 'iD2': 'CCO', 'abbr2': 'Chief Comp.', 'Value': 'Executive Vice President, Compliance Officer, Company Secretary'}"
+5,04/01/2016,Sumant,,Bhargavan,60,"{'startYear': '2018', 'startMonth': '11', 'startDay': '16', 'iD1': 'EDR', 'abbr1': 'Exec. Dir.', 'iD2': '', 'abbr2': '', 'Value': 'Wholetime Director'}"
+6,NA,Hemant,,Malik,58,"{'startYear': '2023', 'startMonth': '8', 'startDay': '12', 'iD1': 'EDR', 'abbr1': 'Exec. Dir.', 'iD2': '', 'abbr2': '', 'Value': 'Whole-time Director, Divisional Chief Executive - Foods Business Division'}"
+7,05/01/2022,Sandeep,,Kaul,57,"{'startYear': '2022', 'startMonth': '5', 'startDay': '1', 'iD1': 'OTH', 'abbr1': 'Other', 'iD2': '', 'abbr2': '', 'Value': 'Group Head - ITD, MAB, Start-Up Ventures, LSTC and Quality'}"
+8,12/14/2009,S.,,Sivakumar,63,"{'startYear': '2023', 'startMonth': '', 'startDay': '', 'iD1': 'OTH', 'abbr1': 'Other', 'iD2': '', 'abbr2': '', 'Value': 'Group Head - Agri Business, IT, EHS, Sustainability and CSR'}"

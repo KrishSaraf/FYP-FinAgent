@@ -1,0 +1,6 @@
+tickerId,companyName,priceToBookValueRatio,priceToEarningsValueRatio,marketCap,price,percentChange,netChange,returnOnAverageEquity5YearAverage,returnOnAverageEquityTrailing12Month,ltDebtPerEquityMostRecentFiscalYear,netProfitMargin5YearAverage,netProfitMarginPercentTrailing12Month,dividendYieldIndicatedAnnualDividend,totalSharesOutstanding,languageSupport,imageUrl,overallRating,yhigh,ylow
+S0003028,Itc,7.45,26.46,526217.3,420.9,0.38,1.6,26.27,27.52,0.2,25.23,24.32,3.44,1250.22,Itc,https://logo.clearbit.com/itcportal.com/,Bearish,498.94,380.43
+S0003315,Godfrey Phillips India,8.34,37.85,42585.1,8190.4,-0.39,-32.1,20.82,22.92,2.32,14.8,12.77,0.75,5.2,Godfrey Phillips India,https://logo.clearbit.com/godfreyphillips.com/,Neutral,9256.55,3305.55
+S0002575,Elitecon International,51.68,192.68,9128.23,571.05,4.99,27.15,,94.72,0.44,,14.32,,15.98,Elitecon International,https://images.mintgenie.com/prod/stock/E.png,Bullish,543.9,11.02
+S0003865,Vst Industries,3.56,22.34,4773.1,281.0,0.54,1.5,28.17,22.55,,18.56,16.05,3.6,16.99,Vst Industries,https://logo.clearbit.com/vsthyd.com/,Bearish,486.7,235.25
+S0000396,Ntc Industries,1.37,22.58,285.17,199.2,-0.03,-0.05,8.32,7.26,35.13,17.75,18.11,,1.43,Ntc Industries,https://logo.clearbit.com/ntcind.com/,Neutral,294.9,124.5

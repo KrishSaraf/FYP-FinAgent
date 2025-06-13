@@ -1,0 +1,19 @@
+displayName,key,value
+"EPS Change %, TTM over TTM",ePSChangePercentTTMOverTTM,1.67
+"Revenue growth rate, 5 year",revenueGrowthRate5Year,12.41
+"EPS growth rate, 5 year",ePSGrowthRate5Year,10.58
+Revenue Change % - most recent quarter 1 year ago,revenueChangePercentMostRecentQuarter1YearAgo,7.92
+"Growth rate% - dividend, 3 year",growthRatePercentDividend3Year,11.52
+"Growth rate% - EPS, 3 year",growthRatePercentEPS3year,7.07
+Revenue/share (5 yr growth),revenuePerShare(5yrGrowth),13.02
+"Free Operating Cash Flow, 5 Year CAGR",freeOperatingCashFlow5YearCAGR,18.09
+"Tangible Book Value, Total Equity, 5 Year CAGR",tangibleBookValueTotalEquity5YearCAGR,7.32
+"Earnings Before Interest, Taxes, Depreciation & Amortization, 5 Year Interim CAGR",earningsBeforeInterestTaxesDepreciationAmortization5YearInterimCAGR,11.85
+"Capital Spending growth rate, 5 year",capitalSpendingGrowthRate5Year,-7.52
+"Revenue Change %, TTM over TTM",revenueChangePercentTTMPOverTTM,6.07
+"Growth rate% -  Revenue, 3 year",growthRatePercentRevenue3Year,10.25
+"Book value per share growth rate, 5 year",bookValuePerShareGrowthRate5Year,8.42
+EPS Change % - most recent quarter 1 year ago,ePSChangePercentMostRecentQuarter1YearAgo),-11.86
+"Net Profit Margin growth rate, 5 year",netProfitMarginGrowthRate5Year,-2.18
+"Earnings Before Interest, Taxes, Depreciation & Amortization, 5 Year CAGR",earningsBeforeInterestTaxesDepreciationAmortization5YearCAGR,11.86
+"Total Debt, 5 Year CAGR",totalDebt5YearCAGR,12.17

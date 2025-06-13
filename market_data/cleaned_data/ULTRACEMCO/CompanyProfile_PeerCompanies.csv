@@ -1,0 +1,6 @@
+tickerId,companyName,priceToBookValueRatio,priceToEarningsValueRatio,marketCap,price,percentChange,netChange,returnOnAverageEquity5YearAverage,returnOnAverageEquityTrailing12Month,ltDebtPerEquityMostRecentFiscalYear,netProfitMargin5YearAverage,netProfitMarginPercentTrailing12Month,dividendYieldIndicatedAnnualDividend,totalSharesOutstanding,languageSupport,imageUrl,overallRating,ylow,yhigh
+S0003075,Ultratech Cement,4.59,53.1,331375.36,11246.2,0.78,87.1,11.59,9.88,23.55,9.96,8.75,0.63,29.47,Ultratech Cement,https://logo.clearbit.com/ultratechcement.com/,Bearish,9550.0,12341.0
+S0003182,Grasim Industries,1.77,43.91,174773.52,2571.2,0.69,17.6,7.07,4.29,129.31,8.12,5.59,0.39,67.97,Grasim Industries,https://logo.clearbit.com/grasim.com/,Moderately Bearish,2175.0,2875.45
+S0003102,Ambuja Cements,2.55,32.63,136220.02,555.35,0.95,5.25,,8.78,0.88,,14.72,0.36,245.29,Ambuja Cements,https://logo.clearbit.com/ambujacement.com/,Neutral,452.9,706.85
+S0003220,Shree Cement,4.93,94.61,106410.94,29486.0,-0.14,-40.45,10.5,5.32,4.23,10.92,5.83,0.36,3.61,Shree Cement,https://logo.clearbit.com/shreecement.com/,Neutral,23500.15,31924.55
+S0003416,J.k. Cement,7.08,54.62,45303.51,5877.15,2.82,161.25,15.31,15.03,77.38,7.25,7.34,0.27,7.71,J.k. Cement,https://logo.clearbit.com/jkcement.com/,Bullish,3634.84,6100.0

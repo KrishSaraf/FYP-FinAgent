@@ -1,0 +1,6 @@
+tickerId,companyName,remarks,recordDate,xdDate,interimOrFinal,instrumentType,value,percentage,dateOfAnnouncement,bookClosureStartDate,bookClosureEndDate,sortDate
+S0003016,State Bank Of India,Rs.15.9000 per share(1590%)Final Dividend,2025-05-16,2025-05-16,Final,5,15.9,1590,2025-05-05,,,2025-05-16
+S0003016,State Bank Of India,Rs.13.7000 per share(1370%)Final Dividend,2024-05-22,2024-05-22,Final,5,13.7,1370,2024-05-09,,,2024-05-22
+S0003016,State Bank Of India,Rs.11.3000 per share(1130%)Dividend,,2023-05-31,Final,5,11.3,1130,2023-05-18,2023-06-01,2023-06-05,2023-05-31
+S0003016,State Bank Of India,Rs.7.1000 per share(710%)Dividend,,2022-05-25,Final,5,7.1,710,2022-05-13,2022-05-27,2022-05-31,2022-05-25
+S0003016,State Bank Of India,Rs.4.0000 per share(400%)Dividend,,2021-06-03,Final,5,4.0,400,2021-05-21,2021-06-05,2021-06-09,2021-06-03

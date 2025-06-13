@@ -1,0 +1,7 @@
+rank,since,firstName,mI,lastName,age,title
+1,07/01/2023,Polavarapu,Mallikharj,Prasad,,"{'startYear': '2024', 'startMonth': '9', 'startDay': '1', 'iD1': 'CHM', 'abbr1': 'Chmn.', 'iD2': 'CEO', 'abbr2': 'CEO', 'Value': 'Executive Chairman of the Board, Chief Executive Officer, Managing Director, Director - Technical'}"
+2,02/08/2024,Mukesh,,Agarwal,,"{'startYear': '2024', 'startMonth': '2', 'startDay': '13', 'iD1': 'CFO', 'abbr1': 'CFO', 'iD2': 'FID', 'abbr2': 'Fin. Dir.', 'Value': 'Chief Financial Officer, Executive Director, Director - Finance'}"
+3,10/01/2022,Bijay,Prakash,Dubey,,"{'startYear': '2023', 'startMonth': '', 'startDay': '', 'iD1': 'CCO', 'abbr1': 'Chief Comp.', 'iD2': 'SEC', 'abbr2': 'Secy.', 'Value': 'Compliance Officer, Company Secretary'}"
+4,12/23/2022,Mukesh,,Choudhary,,"{'startYear': '2025', 'startMonth': '6', 'startDay': '1', 'iD1': 'EDR', 'abbr1': 'Exec. Dir.', 'iD2': 'DMK', 'abbr2': 'Dir.-Mktg.', 'Value': 'Executive Director, Director of Marketing and Business Development'}"
+5,01/23/2025,Achyut,,Ghatak,,"{'startYear': '2025', 'startMonth': '1', 'startDay': '23', 'iD1': 'EDR', 'abbr1': 'Exec. Dir.', 'iD2': '', 'abbr2': '', 'Value': 'Director (Technical)'}"
+6,07/28/2021,Vinay,,Ranjan,,"{'startYear': '2021', 'startMonth': '7', 'startDay': '28', 'iD1': 'EDR', 'abbr1': 'Exec. Dir.', 'iD2': '', 'abbr2': '', 'Value': 'Executive Director, Director - Personnel and Industrial Relations'}"

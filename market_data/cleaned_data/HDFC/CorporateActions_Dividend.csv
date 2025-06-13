@@ -1,0 +1,6 @@
+tickerId,companyName,remarks,recordDate,xdDate,interimOrFinal,instrumentType,value,percentage,dateOfAnnouncement,bookClosureStartDate,bookClosureEndDate,sortDate
+S0003020,Hdfc Bank,Rs.22.0000 per share(2200%)Dividend,2025-06-27,2025-06-27,Final,5,22.0,2200,2025-04-21,,,2025-06-27
+S0003020,Hdfc Bank,Rs.19.5000 per share(1950%)Final Dividend,2024-05-10,2024-05-10,Final,5,19.5,1950,2024-04-22,,,2024-05-10
+S0003020,Hdfc Bank,Rs.19.0000 per share(1900%)Final Dividend,2023-05-16,2023-05-16,Final,5,19.0,1900,2023-04-17,,,2023-05-16
+S0003020,Hdfc Bank,Rs.15.5000 per share(1550%)Dividend,2022-05-13,2022-05-12,Final,5,15.5,1550,2022-04-23,,,2022-05-12
+S0003020,Hdfc Bank,Rs.6.5000 per share(650%)Dividend,2021-06-30,2021-06-29,Final,5,6.5,650,2021-06-18,,,2021-06-29

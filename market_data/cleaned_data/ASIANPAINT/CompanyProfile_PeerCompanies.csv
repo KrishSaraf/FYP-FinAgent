@@ -1,0 +1,6 @@
+tickerId,companyName,priceToBookValueRatio,priceToEarningsValueRatio,marketCap,price,percentChange,netChange,returnOnAverageEquity5YearAverage,returnOnAverageEquityTrailing12Month,ltDebtPerEquityMostRecentFiscalYear,netProfitMargin5YearAverage,netProfitMarginPercentTrailing12Month,dividendYieldIndicatedAnnualDividend,totalSharesOutstanding,languageSupport,imageUrl,overallRating,ylow,yhigh
+S0003079,Asian Paints,11.11,54.91,215627.66,2248.0,0.2,4.55,25.5,19.24,7.13,12.77,10.94,1.1,95.92,Asian Paints,https://logo.clearbit.com/asianpaints.com/,Bearish,2125.0,3394.0
+S0003161,Pidilite Industries,16.14,75.32,154906.8,3049.1,-0.07,-2.25,21.36,22.86,2.26,13.69,15.95,0.52,50.8,Pidilite Industries,https://logo.clearbit.com/pidilite.com/,Bullish,2620.15,3414.4
+S0003719,Solar Industries India,34.68,125.77,149695.89,16542.8,-2.81,-479.1,28.64,31.45,9.52,13.77,17.06,0.06,9.05,Solar Industries India,https://logo.clearbit.com/solargroup.com/,Bullish,7889.95,17049.0
+S0003197,Srf,7.15,72.2,92318.54,3114.4,0.32,10.0,17.03,10.38,16.14,12.33,8.51,0.24,29.64,Srf,https://logo.clearbit.com/srf.com/,Bullish,2088.55,3127.5
+S0003444,Coromandel International,6.19,38.04,67347.38,2282.0,-1.46,-33.85,23.48,20.15,5.4,7.85,8.53,0.52,29.51,Coromandel International,https://logo.clearbit.com/coromandel.biz/,Neutral,1250.0,2649.95

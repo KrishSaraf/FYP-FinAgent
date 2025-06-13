@@ -1,0 +1,24 @@
+displayName,key,value,yqoQComp,qoQComp,FiscalYear,Type
+Interest Income Bank ,InterestIncomeBank,269851.66,,,2020,Annual
+Total Interest Expense ,TotalInterestExpense,161123.80,,,2020,Annual
+Net Interest Income ,NetInterestIncome,108727.86,,,2020,Annual
+Loan Loss Provision ,LoanLossProvision,43848.89,,,2020,Annual
+Net Interest Inc After Loan Loss Prov ,NetInterestIncAfterLoanLossProv,64878.97,,,2020,Annual
+Non- Interest Income Bank ,Non-InterestIncomeBank,98158.99,,,2020,Annual
+Non- Interest Expense Bank ,Non-InterestExpenseBank,-132721.37,,,2020,Annual
+Net Income Before Taxes ,NetIncomeBeforeTaxes,30316.59,,,2020,Annual
+Provisionfor Income Taxes ,ProvisionforIncomeTaxes,8973.39,,,2020,Annual
+Net Income After Taxes ,NetIncomeAfterTaxes,21343.20,,,2020,Annual
+Minority Interest ,MinorityInterest,-1372.17,,,2020,Annual
+Equity In Affiliates ,EquityInAffiliates,2963.14,,,2020,Annual
+Net Income Before Extra Items ,NetIncomeBeforeExtraItems,22934.17,,,2020,Annual
+Total Extraordinary Items ,TotalExtraordinaryItems,-3166.37,,,2020,Annual
+Net Income ,NetIncome,19767.80,,,2020,Annual
+Income Availableto Com Excl Extra Ord ,IncomeAvailabletoComExclExtraOrd,22934.17,,,2020,Annual
+Income Availableto Com Incl Extra Ord ,IncomeAvailabletoComInclExtraOrd,19767.80,,,2020,Annual
+Diluted Net Income ,DilutedNetIncome,19767.80,,,2020,Annual
+Diluted Weighted Average Shares ,DilutedWeightedAverageShares,892.46,,,2020,Annual
+Diluted EPS Excluding Extra Ord Items ,DilutedEPSExcludingExtraOrdItems,25.70,,,2020,Annual
+Diluted Normalized EPS ,DilutedNormalizedEPS,21.65,,,2020,Annual
+period Length ,periodLength,12,,,2020,Annual
+period Type ,periodType,Months,,,2020,Annual
