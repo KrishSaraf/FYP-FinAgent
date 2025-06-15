@@ -1,0 +1,14 @@
+tickerId,companyName,remarks,recordDate,xdDate,interimOrFinal,instrumentType,value,percentage,dateOfAnnouncement,bookClosureStartDate,bookClosureEndDate,sortDate
+S0003030,Oil And Natural Gas Corp,Rs.1.2500 per share(25%)Final Dividend,,,Final,5,1.25,25,2025-05-21,,,2025-05-21
+S0003030,Oil And Natural Gas Corp,Rs.5.0000 per share(100%)Second Interim Dividend,2025-02-07,2025-02-07,Interim,5,5.0,100,2025-01-27,,,2025-02-07
+S0003030,Oil And Natural Gas Corp,Rs.6.0000 per share(120%)First Interim Dividend (XD date revised),2024-11-20,2024-11-19,Interim,5,6.0,120,2024-11-07,,,2024-11-19
+S0003030,Oil And Natural Gas Corp,Rs.2.5000 per share(50%)Final Dividend,2024-08-23,2024-08-23,Final,5,2.5,50,2024-05-21,,,2024-08-23
+S0003030,Oil And Natural Gas Corp,Rs.4.0000 per share(80%)Interim Dividend (Revised),2024-02-17,2024-02-16,Interim,5,4.0,80,2024-02-05,,,2024-02-16
+S0003030,Oil And Natural Gas Corp,Rs.5.7500 per share(115%)Interim Dividend,2023-11-21,2023-11-21,Interim,5,5.75,115,2023-11-10,,,2023-11-21
+S0003030,Oil And Natural Gas Corp,Rs.0.5000 per share(10%)Final Dividend,2023-08-18,2023-08-18,Final,5,0.5,10,2023-05-26,,,2023-08-18
+S0003030,Oil And Natural Gas Corp,Rs.4.0000 per share(80%)Second Interim Dividend,2023-02-24,2023-02-24,Interim,5,4.0,80,2023-02-09,,,2023-02-24
+S0003030,Oil And Natural Gas Corp,Rs.6.7500 per share(135%)Interim Dividend,2022-11-22,2022-11-21,Interim,5,6.75,135,2022-11-09,,,2022-11-21
+S0003030,Oil And Natural Gas Corp,Rs.1.7500 per share (35%) Second Interim Dividend,2022-02-22,2022-02-21,Interim,5,1.75,35,2022-02-08,,,2022-02-21
+S0003030,Oil And Natural Gas Corp,Rs.5.5000 per share(110%)Interim Dividend,2021-11-23,2021-11-22,Interim,5,5.5,110,2021-11-08,,,2021-11-22
+S0003030,Oil And Natural Gas Corp,Rs.1.8500 per share(37%)Final Dividend,2021-09-10,2021-09-08,Final,5,1.85,37,2021-06-25,,,2021-09-08
+S0003030,Oil And Natural Gas Corp,Rs.1.7500 per share(35%)Interim Dividend,2021-02-20,2021-02-17,Interim,5,1.75,35,2021-02-15,,,2021-02-17

@@ -1,0 +1,7 @@
+rank,since,firstName,mI,lastName,age,title
+1,04/01/2024,Devang,,Gheewalla,,"{'startYear': '2024', 'startMonth': '4', 'startDay': '1', 'iD1': 'PRE', 'abbr1': 'Pres.', 'iD2': 'CFO', 'abbr2': 'CFO', 'Value': 'President, Chief Financial Officer'}"
+2,01/01/2024,Ashok,V.,Vaswani,63,"{'startYear': '2024', 'startMonth': '1', 'startDay': '1', 'iD1': 'CEO', 'abbr1': 'CEO', 'iD2': 'MDR', 'abbr2': 'Mgng.Dir.', 'Value': 'Chief Executive Officer, Managing Director, Executive Director'}"
+3,12/01/2020,Avan,,Doomasia,,"{'startYear': '2021', 'startMonth': '', 'startDay': '', 'iD1': 'EVP', 'abbr1': 'Exec. VP', 'iD2': 'SEC', 'abbr2': 'Secy.', 'Value': 'Senior Executive Vice President, Company Secretary'}"
+4,10/23/2023,Himanshu,,Vasa,,"{'startYear': '2023', 'startMonth': '10', 'startDay': '23', 'iD1': 'CCO', 'abbr1': 'Chief Comp.', 'iD2': '', 'abbr2': '', 'Value': 'Chief Compliance Officer'}"
+5,11/01/2022,Shanti,,Ekambaram,60,"{'startYear': '2024', 'startMonth': '3', 'startDay': '19', 'iD1': 'DMD', 'abbr1': 'Dep-Mgng.Dir.', 'iD2': 'EDR', 'abbr2': 'Exec. Dir.', 'Value': 'Deputy Managing Director, Whole Time Director'}"
+6,02/11/2025,Jaideep,,Hansraj,59,"{'startYear': '2025', 'startMonth': '2', 'startDay': '11', 'iD1': 'EDR', 'abbr1': 'Exec. Dir.', 'iD2': '', 'abbr2': '', 'Value': 'Executive Director'}"

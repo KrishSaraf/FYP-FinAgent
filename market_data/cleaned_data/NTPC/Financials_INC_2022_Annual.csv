@@ -1,0 +1,32 @@
+displayName,key,value,yqoQComp,qoQComp,FiscalYear,Type
+Revenue ,Revenue,123683.94,,,2022,Annual
+Other Revenue Total ,OtherRevenueTotal,8985.34,,,2022,Annual
+Total Revenue ,TotalRevenue,132669.28,,,2022,Annual
+Costof Revenue Total ,CostofRevenueTotal,75693.59,,,2022,Annual
+Fuel Expense ,FuelExpense,710.15,,,2022,Annual
+Operations Maintenance ,OperationsMaintenance,4423.65,,,2022,Annual
+Selling/ General/ Admin Expenses Total ,Selling/General/AdminExpensesTotal,11107.98,,,2022,Annual
+Depreciation/ Amortization ,Depreciation/Amortization,15061.80,,,2022,Annual
+Unusual Expense( Income) ,UnusualExpense(Income),0.00,,,2022,Annual
+Other Operating Expenses Total ,OtherOperatingExpensesTotal,-305.46,,,2022,Annual
+Total Operating Expense ,TotalOperatingExpense,106691.71,,,2022,Annual
+Operating Income ,OperatingIncome,25977.57,,,2022,Annual
+Interest Inc( Exp) Net- Non- Op Total ,InterestInc(Exp)Net-Non-OpTotal,-7480.10,,,2022,Annual
+Gain( Loss)on Saleof Assets ,Gain(Loss)onSaleofAssets,-101.79,,,2022,Annual
+Other Net ,OtherNet,2125.23,,,2022,Annual
+Net Income Before Taxes ,NetIncomeBeforeTaxes,20520.91,,,2022,Annual
+Provisionfor Income Taxes ,ProvisionforIncomeTaxes,5047.10,,,2022,Annual
+Net Income After Taxes ,NetIncomeAfterTaxes,15473.81,,,2022,Annual
+Minority Interest ,MinorityInterest,-284.39,,,2022,Annual
+Net Income Before Extra Items ,NetIncomeBeforeExtraItems,15189.42,,,2022,Annual
+Net Income ,NetIncome,15189.42,,,2022,Annual
+Total Adjustmentsto Net Income ,TotalAdjustmentstoNetIncome,14864.80,,,2022,Annual
+Income Availableto Com Excl Extra Ord ,IncomeAvailabletoComExclExtraOrd,16675.90,,,2022,Annual
+Income Availableto Com Incl Extra Ord ,IncomeAvailabletoComInclExtraOrd,16675.90,,,2022,Annual
+Diluted Net Income ,DilutedNetIncome,16675.90,,,2022,Annual
+Diluted Weighted Average Shares ,DilutedWeightedAverageShares,969.67,,,2022,Annual
+Diluted EPS Excluding Extra Ord Items ,DilutedEPSExcludingExtraOrdItems,17.20,,,2022,Annual
+DPS- Common Stock Primary Issue ,DPS-CommonStockPrimaryIssue,7.00,,,2022,Annual
+Diluted Normalized EPS ,DilutedNormalizedEPS,17.28,,,2022,Annual
+period Length ,periodLength,12,,,2022,Annual
+period Type ,periodType,Months,,,2022,Annual

@@ -1,0 +1,6 @@
+tickerId,companyName,priceToBookValueRatio,priceToEarningsValueRatio,marketCap,price,percentChange,netChange,returnOnAverageEquity5YearAverage,returnOnAverageEquityTrailing12Month,ltDebtPerEquityMostRecentFiscalYear,netProfitMargin5YearAverage,netProfitMarginPercentTrailing12Month,dividendYieldIndicatedAnnualDividend,totalSharesOutstanding,languageSupport,imageUrl,overallRating,ylow,yhigh
+S0003053,Hindustan Unilever,11.25,53.76,561282.11,2388.85,0.49,11.75,21.1,21.17,2.52,16.83,16.91,1.82,234.96,Hindustan Unilever,https://logo.clearbit.com/hul.co.in/,Moderately Bullish,2136.0,3022.47
+S0003255,Godrej Consumer Products,10.46,66.2,123835.09,1210.45,-0.38,-4.6,11.36,15.06,0.77,10.01,12.89,1.63,102.31,Godrej Consumer Products,https://logo.clearbit.com/godrejcp.com/,Moderately Bearish,979.75,1541.3
+S0003173,Marico,22.89,55.98,90906.75,698.9,-0.52,-3.65,38.43,41.73,3.12,14.51,15.31,1.49,130.07,Marico,https://images.mintgenie.com/prod/stock/M.png,Neutral,577.9,740.0
+S0003129,Dabur India,8.07,49.43,85324.18,481.25,-1.43,-7.0,20.07,17.11,4.5,15.26,13.85,1.63,177.3,Dabur India,https://logo.clearbit.com/dabur.com/,Bearish,420.05,672.0
+S0003140,Colgate Palmolive India,40.56,46.98,66343.82,2435.65,-0.68,-16.75,72.92,81.2,2.73,22.02,23.79,2.05,27.24,Colgate Palmolive India,https://logo.clearbit.com/colgate.co.in/,Bearish,2324.0,3893.0

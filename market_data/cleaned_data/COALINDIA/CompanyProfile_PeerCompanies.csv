@@ -1,0 +1,6 @@
+tickerId,companyName,priceToBookValueRatio,priceToEarningsValueRatio,marketCap,price,percentChange,netChange,returnOnAverageEquity5YearAverage,returnOnAverageEquityTrailing12Month,ltDebtPerEquityMostRecentFiscalYear,netProfitMargin5YearAverage,netProfitMarginPercentTrailing12Month,dividendYieldIndicatedAnnualDividend,totalSharesOutstanding,languageSupport,imageUrl,overallRating,yhigh,ylow
+S0003094,Adani Enterprises,5.71,40.8,291866.75,2536.05,1.28,32.1,10.0,15.91,156.68,3.3,7.67,0.05,115.09,Adani Enterprises,https://images.mintgenie.com/prod/stock/A.png,Moderately Bullish,3743.0,2026.9
+S0003044,Coal India,2.45,6.88,245800.42,398.85,0.99,3.9,46.59,38.89,7.6,21.56,25.08,6.36,616.27,Coal India,https://logo.clearbit.com/coalindia.in/,Moderately Bullish,544.7,349.2
+S0001548,Sindhu Trade Links,2.29,57.65,3564.94,23.12,4.14,0.92,1.16,-2.35,47.52,-0.51,4.18,,154.19,Sindhu Trade Links,https://logo.clearbit.com/sindhutrade.com/,Bullish,29.11,12.9
+S0002913,Stratmont Industries,8.29,240.39,241.66,84.8,-0.01,-0.01,11.29,6.03,20.59,1.15,1.12,,2.85,Stratmont Industries,https://images.mintgenie.com/prod/stock/S.png,Neutral,208.65,33.24
+S0001713,Emergent Industrial Solutions,9.26,129.69,231.14,505.9,2.0,9.9,9.34,,0.0,0.7,0.57,,0.46,Emergent Industrial Solutions,https://images.mintgenie.com/prod/stock/E.png,Bullish,695.7,94.5

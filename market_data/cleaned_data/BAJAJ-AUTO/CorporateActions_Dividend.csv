@@ -1,0 +1,6 @@
+tickerId,companyName,remarks,recordDate,xdDate,interimOrFinal,instrumentType,value,percentage,dateOfAnnouncement,bookClosureStartDate,bookClosureEndDate,sortDate
+S0003120,Bajaj Auto,Rs.210.0000 per share(2100%)Final Dividend,2025-06-20,2025-06-20,Final,5,210,2100,2025-05-29,,,2025-06-20
+S0003120,Bajaj Auto,Rs.80.0000 per share(800%)Dividend,2024-06-14,2024-06-14,Final,5,80,800,2024-04-18,,,2024-06-14
+S0003120,Bajaj Auto,Rs.140.0000 per share(1400%)Final Dividend,2023-06-30,2023-06-30,Final,5,140,1400,2023-04-25,,,2023-06-30
+S0003120,Bajaj Auto,Rs.140.0000 per share(1400%)Dividend,2022-07-01,2022-06-30,Final,5,140,1400,2022-04-27,,,2022-06-30
+S0003120,Bajaj Auto,Rs.140.0000 per share(1400%)Dividend,,2021-07-08,Final,5,140,1400,2021-04-29,2021-07-10,2021-07-22,2021-07-08

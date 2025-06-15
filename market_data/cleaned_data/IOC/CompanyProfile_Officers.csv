@@ -1,0 +1,9 @@
+rank,since,firstName,mI,lastName,age,title
+1,11/13/2024,Arvinder,Singh,Sahney,54,"{'startYear': '2024', 'startMonth': '11', 'startDay': '13', 'iD1': 'CHM', 'abbr1': 'Chmn.', 'iD2': 'DRC', 'abbr2': 'Dir.', 'Value': 'Chairman of the Board'}"
+2,10/09/2023,Anuj,,Jain,52,"{'startYear': '2023', 'startMonth': '10', 'startDay': '9', 'iD1': 'FID', 'abbr1': 'Fin. Dir.', 'iD2': 'EDR', 'abbr2': 'Exec. Dir.', 'Value': 'Finance Director, Whole Time Director'}"
+3,09/01/2017,Kamal,Kumar,Gwalani,,"{'startYear': '2023', 'startMonth': '', 'startDay': '', 'iD1': 'CCO', 'abbr1': 'Chief Comp.', 'iD2': 'SEC', 'abbr2': 'Secy.', 'Value': 'Compliance Officer, Company Secretary'}"
+4,10/28/2021,Vaduguri,Satish,Kumar,,"{'startYear': '2024', 'startMonth': '11', 'startDay': '13', 'iD1': 'EDR', 'abbr1': 'Exec. Dir.', 'iD2': 'DMK', 'abbr2': 'Dir.-Mktg.', 'Value': 'Director - Marketing, Whole-Time Director'}"
+5,03/15/2024,Rashmi,,Govil,53,"{'startYear': '2024', 'startMonth': '3', 'startDay': '15', 'iD1': 'EDR', 'abbr1': 'Exec. Dir.', 'iD2': 'DHR', 'abbr2': 'Dir.-HR', 'Value': 'Whole-Time Director, Director of Human Resources'}"
+6,07/17/2024,Arvind,,Kumar,57,"{'startYear': '2024', 'startMonth': '7', 'startDay': '17', 'iD1': 'EDR', 'abbr1': 'Exec. Dir.', 'iD2': '', 'abbr2': '', 'Value': 'Director - Refineries, Whole-Time Director'}"
+7,08/14/2023,Nachimuthu,Senthil,Kumar,,"{'startYear': '2024', 'startMonth': '9', 'startDay': '1', 'iD1': 'EDR', 'abbr1': 'Exec. Dir.', 'iD2': '', 'abbr2': '', 'Value': 'Director - Planning and Business Development, Director - Pipelines, Whole Time Director'}"
+8,01/16/2024,Alok,,Sharma,,"{'startYear': '2024', 'startMonth': '1', 'startDay': '16', 'iD1': 'EDR', 'abbr1': 'Exec. Dir.', 'iD2': '', 'abbr2': '', 'Value': 'Whole-Time Director, Director - Research & Development'}"

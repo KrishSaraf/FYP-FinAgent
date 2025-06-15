@@ -1,0 +1,23 @@
+displayName,key,value
+Market Cap,marketCap,121202.01
+52 week Low Date,52WeekLowDate,2025-04-07T00:00:00
+Price - 1 Day % Change,price1DayPercentChange,1.22
+Relative (S&P500) price percent change - 13 week,relativePricePercentChange13Week,-6.97
+Avg trading volume last 10 days,avgTradingVolumeLast10Days,1.69
+Price - 13 week price percent change,price13WeekPricePercentChange,1.92
+Price - 52 week price percent change,price52WeekPricePercentChange,-0.48
+Avg Trading Volume Last 3 months,avgTradingVolumeLast3months,33.15
+Price - 5 Day % Change,price5DayPercentChange,0.87
+Price % Change Month To Date,pricePercentChangeMonthToDate,1.64
+Relative (S&P500) price percent change - 04 week,relativePricePercentChange-04week,-1.16
+52 week High Date,52WeekHighDate,2024-10-09T00:00:00
+Price - 26 week price percent change,price26WeekPricePercentChange,-0.56
+PDATE,PDATE,2025-06-05T00:00:00
+Price - YTD price percent change,priceYTDPricePercentChange,-2.56
+Relative (S&P500) price percent change - 52 week,relativePricePercentChange52Week,-9.10
+NPRICE,NPRICE,1489.80
+Relative (S&P500) price percent change - 26 week,relativePricePercentChange26Week,-0.17
+52 week Low,52WeekLow,1335.00
+52 week High,52WeekHigh,1702.05
+Beta,beta,0.43
+Relative (S&P500) price percent change - Year to Date,relativePricePercentChangeYearToDate,-6.52

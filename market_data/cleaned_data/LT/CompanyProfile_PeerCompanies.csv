@@ -1,0 +1,6 @@
+tickerId,companyName,priceToBookValueRatio,priceToEarningsValueRatio,marketCap,price,percentChange,netChange,returnOnAverageEquity5YearAverage,returnOnAverageEquityTrailing12Month,ltDebtPerEquityMostRecentFiscalYear,netProfitMargin5YearAverage,netProfitMarginPercentTrailing12Month,dividendYieldIndicatedAnnualDividend,totalSharesOutstanding,languageSupport,imageUrl,overallRating,ylow,yhigh
+S0003533,Max Healthcare Institute,11.9,99.13,113560.15,1168.6,2.75,31.25,11.25,12.1,29.5,15.91,15.31,0.13,97.18,Max Healthcare Institute,https://logo.clearbit.com/maxhealthcare.in/,Bullish,747.35,1227.5
+S0003104,Apollo Hospitals Enterprise,12.0,68.17,99811.0,6941.7,0.98,67.1,15.0,19.09,83.18,5.46,6.75,0.28,14.38,Apollo Hospitals Enterprise,https://logo.clearbit.com/apollohospitals.com/,Neutral,5690.8,7545.1
+S0003296,Fortis Healthcare,6.26,65.9,57621.04,763.7,1.19,9.0,6.88,9.34,25.92,9.18,10.4,0.14,75.45,Fortis Healthcare,https://logo.clearbit.com/fortishealthcare.com/,Bullish,406.35,756.9
+S0003663,Narayana Hrudayalaya,9.74,44.38,35708.73,1749.9,0.38,6.7,25.11,24.24,59.03,11.8,14.14,0.26,20.41,Narayana Hrudayalaya,https://images.mintgenie.com/prod/stock/N.png,Bullish,1087.8,1872.85
+S0005349,Global Health,9.49,62.01,32710.46,1219.6,1.65,19.85,14.18,15.3,18.41,11.38,13.04,,26.82,Global Health,https://logo.clearbit.com/medanta.org/,Bullish,936.05,1388.65

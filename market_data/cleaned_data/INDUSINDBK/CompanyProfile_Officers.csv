@@ -1,0 +1,11 @@
+rank,since,firstName,mI,lastName,age,title
+1,NA,Sumant,,Kathpalia,63,"{'startYear': '2020', 'startMonth': '3', 'startDay': '24', 'iD1': 'CEO', 'abbr1': 'CEO', 'iD2': 'MDR', 'abbr2': 'Mgng.Dir.', 'Value': 'Chief Executive Officer, Managing Director, Executive Director'}"
+2,NA,Arun,,Khurana,,"{'startYear': '2025', 'startMonth': '1', 'startDay': '21', 'iD1': 'DCE', 'abbr1': 'Dep-CEO', 'iD2': 'CFO', 'abbr2': 'CFO', 'Value': 'Deputy Chief Executive Officer, Whole-Time Director, Chief Financial Officer'}"
+3,01/09/2006,Zubin,D.,Mody,,"{'startYear': '2020', 'startMonth': '', 'startDay': '', 'iD1': 'CHO', 'abbr1': 'Chief HR', 'iD2': '', 'abbr2': '', 'Value': 'Chief Human Resources Officer'}"
+4,NA,Anil,M.,Rao,,"{'startYear': '2024', 'startMonth': '3', 'startDay': '31', 'iD1': 'CAD', 'abbr1': 'Chief Admin.', 'iD2': '', 'abbr2': '', 'Value': 'Chief Administrative Officer'}"
+5,06/20/2022,Anand,Kumar,Das,,"{'startYear': '2022', 'startMonth': '12', 'startDay': '16', 'iD1': 'CCO', 'abbr1': 'Chief Comp.', 'iD2': 'SEC', 'abbr2': 'Secy.', 'Value': 'Compliance Officer, Company Secretary, Nodal Officer'}"
+6,06/28/2023,Vivek,,Bajpeyi,,"{'startYear': '2023', 'startMonth': '6', 'startDay': '28', 'iD1': 'CRO', 'abbr1': 'CRO', 'iD2': '', 'abbr2': '', 'Value': 'Chief Risk Officer'}"
+7,2011,Sanjeev,,Anand,,"{'startYear': '2022', 'startMonth': '', 'startDay': '', 'iD1': 'OTH', 'abbr1': 'Other', 'iD2': '', 'abbr2': '', 'Value': 'Head - Corporate, Commercial, Rural and Inclusive Banking'}"
+8,2022,Siddharth,,Banerjee,,"{'startYear': '2024', 'startMonth': '3', 'startDay': '31', 'iD1': 'OTH', 'abbr1': 'Other', 'iD2': '', 'abbr2': '', 'Value': 'Head  Investment Banking, Global Markets & Financial Institutions Group'}"
+9,NA,Anish,,Behl,,"{'startYear': 'NA', 'startMonth': '', 'startDay': '', 'iD1': 'OTH', 'abbr1': 'Other', 'iD2': '', 'abbr2': '', 'Value': 'Head - Wealth and Para Banking'}"
+10,NA,Charu,Sachdeva,Mathur,,"{'startYear': '2022', 'startMonth': '', 'startDay': '', 'iD1': 'OTH', 'abbr1': 'Other', 'iD2': '', 'abbr2': '', 'Value': 'Head - Digital Banking and Strategy (Existing Business)'}"

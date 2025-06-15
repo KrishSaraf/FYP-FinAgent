@@ -1,0 +1,30 @@
+displayName,key,value,qoQComp,yqoQComp,FiscalYear,Type
+Revenue ,Revenue,20211.25,,,2020,Annual
+Total Revenue ,TotalRevenue,20211.25,,,2020,Annual
+Costof Revenue Total ,CostofRevenueTotal,11575.59,,,2020,Annual
+Gross Profit ,GrossProfit,8635.66,,,2020,Annual
+Selling/ General/ Admin Expenses Total ,Selling/General/AdminExpensesTotal,4354.59,,,2020,Annual
+Depreciation/ Amortization ,Depreciation/Amortization,780.50,,,2020,Annual
+Unusual Expense( Income) ,UnusualExpense(Income),-1.19,,,2020,Annual
+Other Operating Expenses Total ,OtherOperatingExpensesTotal,118.07,,,2020,Annual
+Total Operating Expense ,TotalOperatingExpense,16827.56,,,2020,Annual
+Operating Income ,OperatingIncome,3383.69,,,2020,Annual
+Interest Inc( Exp) Net- Non- Op Total ,InterestInc(Exp)Net-Non-OpTotal,137.33,,,2020,Annual
+Gain( Loss)on Saleof Assets ,Gain(Loss)onSaleofAssets,14.17,,,2020,Annual
+Other Net ,OtherNet,98.80,,,2020,Annual
+Net Income Before Taxes ,NetIncomeBeforeTaxes,3633.99,,,2020,Annual
+Provisionfor Income Taxes ,ProvisionforIncomeTaxes,1049.15,,,2020,Annual
+Net Income After Taxes ,NetIncomeAfterTaxes,2584.84,,,2020,Annual
+Minority Interest ,MinorityInterest,-69.02,,,2020,Annual
+Net Income Before Extra Items ,NetIncomeBeforeExtraItems,2515.82,,,2020,Annual
+Total Extraordinary Items ,TotalExtraordinaryItems,189.35,,,2020,Annual
+Net Income ,NetIncome,2705.17,,,2020,Annual
+Income Availableto Com Excl Extra Ord ,IncomeAvailabletoComExclExtraOrd,2515.82,,,2020,Annual
+Income Availableto Com Incl Extra Ord ,IncomeAvailabletoComInclExtraOrd,2705.17,,,2020,Annual
+Diluted Net Income ,DilutedNetIncome,2705.17,,,2020,Annual
+Diluted Weighted Average Shares ,DilutedWeightedAverageShares,95.92,,,2020,Annual
+Diluted EPS Excluding Extra Ord Items ,DilutedEPSExcludingExtraOrdItems,26.23,,,2020,Annual
+DPS- Common Stock Primary Issue ,DPS-CommonStockPrimaryIssue,12.00,,,2020,Annual
+Diluted Normalized EPS ,DilutedNormalizedEPS,26.11,,,2020,Annual
+period Length ,periodLength,12,,,2020,Annual
+period Type ,periodType,Months,,,2020,Annual

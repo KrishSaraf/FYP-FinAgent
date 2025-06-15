@@ -1,0 +1,27 @@
+displayName,key,value,yqoQComp,qoQComp,FiscalYear,Type
+Revenue ,Revenue,100615.80,,,2021,Annual
+Total Revenue ,TotalRevenue,100615.80,,,2021,Annual
+Costof Revenue Total ,CostofRevenueTotal,38344.30,,,2021,Annual
+Gross Profit ,GrossProfit,62271.50,,,2021,Annual
+Selling/ General/ Admin Expenses Total ,Selling/General/AdminExpensesTotal,16899.80,,,2021,Annual
+Depreciation/ Amortization ,Depreciation/Amortization,29404.40,,,2021,Annual
+Unusual Expense( Income) ,UnusualExpense(Income),15914.50,,,2021,Annual
+Total Operating Expense ,TotalOperatingExpense,100563.00,,,2021,Annual
+Operating Income ,OperatingIncome,52.80,,,2021,Annual
+Interest Inc( Exp) Net- Non- Op Total ,InterestInc(Exp)Net-Non-OpTotal,-12839.50,,,2021,Annual
+Other Net ,OtherNet,-1701.50,,,2021,Annual
+Net Income Before Taxes ,NetIncomeBeforeTaxes,-14488.20,,,2021,Annual
+Provisionfor Income Taxes ,ProvisionforIncomeTaxes,8932.50,,,2021,Annual
+Net Income After Taxes ,NetIncomeAfterTaxes,-23420.70,,,2021,Annual
+Minority Interest ,MinorityInterest,-2719.50,,,2021,Annual
+Net Income Before Extra Items ,NetIncomeBeforeExtraItems,-26140.20,,,2021,Annual
+Total Extraordinary Items ,TotalExtraordinaryItems,11056.70,,,2021,Annual
+Net Income ,NetIncome,-15083.50,,,2021,Annual
+Income Availableto Com Excl Extra Ord ,IncomeAvailabletoComExclExtraOrd,-26140.20,,,2021,Annual
+Income Availableto Com Incl Extra Ord ,IncomeAvailabletoComInclExtraOrd,-15083.50,,,2021,Annual
+Diluted Net Income ,DilutedNetIncome,-15083.50,,,2021,Annual
+Diluted Weighted Average Shares ,DilutedWeightedAverageShares,555.67,,,2021,Annual
+Diluted EPS Excluding Extra Ord Items ,DilutedEPSExcludingExtraOrdItems,-47.04,,,2021,Annual
+Diluted Normalized EPS ,DilutedNormalizedEPS,-28.43,,,2021,Annual
+period Length ,periodLength,12,,,2021,Annual
+period Type ,periodType,Months,,,2021,Annual

@@ -1,0 +1,6 @@
+rank,since,firstName,mI,lastName,age,title
+1,NA,Umang,,Vohra,52,"{'startYear': '2016', 'startMonth': '9', 'startDay': '1', 'iD1': 'CEO', 'abbr1': 'CEO', 'iD2': 'MDR', 'abbr2': 'Mgng.Dir.', 'Value': 'Global Chief Executive Officer, Managing Director, Executive Director'}"
+2,08/16/2022,Ashish,,Adukia,,"{'startYear': '2022', 'startMonth': '8', 'startDay': '16', 'iD1': 'CFO', 'abbr1': 'CFO', 'iD2': '', 'abbr2': '', 'Value': 'Global Chief Financial Officer'}"
+3,02/01/2025,Achin,,Gupta,,"{'startYear': '2025', 'startMonth': '2', 'startDay': '1', 'iD1': 'COO', 'abbr1': 'COO', 'iD2': '', 'abbr2': '', 'Value': 'Global Chief Operating Officer'}"
+4,07/26/2024,Sneha,,Hiranandani,,"{'startYear': '2024', 'startMonth': '7', 'startDay': '26', 'iD1': 'CIO', 'abbr1': 'CIO', 'iD2': '', 'abbr2': '', 'Value': 'Chief Information Officer'}"
+5,02/09/2017,Rajendra,Kumar,Chopra,,"{'startYear': '2019', 'startMonth': '', 'startDay': '', 'iD1': 'CCO', 'abbr1': 'Chief Comp.', 'iD2': 'SEC', 'abbr2': 'Secy.', 'Value': 'Compliance Officer, Company Secretary'}"

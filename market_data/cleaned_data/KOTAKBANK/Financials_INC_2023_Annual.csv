@@ -1,0 +1,24 @@
+displayName,key,value,qoQComp,yqoQComp,FiscalYear,Type
+Interest Income Bank ,InterestIncomeBank,42151.06,,,2023,Annual
+Total Interest Expense ,TotalInterestExpense,14411.13,,,2023,Annual
+Net Interest Income ,NetInterestIncome,27739.93,,,2023,Annual
+Loan Loss Provision ,LoanLossProvision,508.45,,,2023,Annual
+Net Interest Inc After Loan Loss Prov ,NetInterestIncAfterLoanLossProv,27231.48,,,2023,Annual
+Non- Interest Income Bank ,Non-InterestIncomeBank,25990.97,,,2023,Annual
+Non- Interest Expense Bank ,Non-InterestExpenseBank,-33576.26,,,2023,Annual
+Net Income Before Taxes ,NetIncomeBeforeTaxes,19646.18,,,2023,Annual
+Provisionfor Income Taxes ,ProvisionforIncomeTaxes,4865.74,,,2023,Annual
+Net Income After Taxes ,NetIncomeAfterTaxes,14780.44,,,2023,Annual
+Minority Interest ,MinorityInterest,0.00,,,2023,Annual
+Equity In Affiliates ,EquityInAffiliates,144.57,,,2023,Annual
+Net Income Before Extra Items ,NetIncomeBeforeExtraItems,14925.01,,,2023,Annual
+Net Income ,NetIncome,14925.01,,,2023,Annual
+Income Availableto Com Excl Extra Ord ,IncomeAvailabletoComExclExtraOrd,14925.01,,,2023,Annual
+Income Availableto Com Incl Extra Ord ,IncomeAvailabletoComInclExtraOrd,14925.01,,,2023,Annual
+Diluted Net Income ,DilutedNetIncome,14925.01,,,2023,Annual
+Diluted Weighted Average Shares ,DilutedWeightedAverageShares,198.62,,,2023,Annual
+Diluted EPS Excluding Extra Ord Items ,DilutedEPSExcludingExtraOrdItems,75.14,,,2023,Annual
+DPS- Common Stock Primary Issue ,DPS-CommonStockPrimaryIssue,1.50,,,2023,Annual
+Diluted Normalized EPS ,DilutedNormalizedEPS,74.39,,,2023,Annual
+period Length ,periodLength,12,,,2023,Annual
+period Type ,periodType,Months,,,2023,Annual

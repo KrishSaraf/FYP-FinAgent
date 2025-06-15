@@ -1,0 +1,10 @@
+rank,since,firstName,mI,lastName,age,title
+1,NA,Pawan,,Munjal,70,"{'startYear': '2023', 'startMonth': '5', 'startDay': '1', 'iD1': 'CHM', 'abbr1': 'Chmn.', 'iD2': 'EDR', 'abbr2': 'Exec. Dir.', 'Value': 'Executive Chairman of the Board'}"
+2,NA,Vikram,Sitaram,Kasbekar,69,"{'startYear': '2025', 'startMonth': '5', 'startDay': '1', 'iD1': 'CEO', 'abbr1': 'CEO', 'iD2': 'EDR', 'abbr2': 'Exec. Dir.', 'Value': 'Acting Chief Executive Officer, Executive Director - Operations'}"
+3,03/01/2024,Vivek,,Anand,,"{'startYear': '2024', 'startMonth': '3', 'startDay': '1', 'iD1': 'CFO', 'abbr1': 'CFO', 'iD2': '', 'abbr2': '', 'Value': 'Chief Financial Officer'}"
+4,02/01/2022,Dhiraj,,Kapoor,,"{'startYear': '2022', 'startMonth': '2', 'startDay': '1', 'iD1': 'CCO', 'abbr1': 'Chief Comp.', 'iD2': 'SEC', 'abbr2': 'Secy.', 'Value': 'Compliance Officer, Company Secretary'}"
+5,08/12/2024,Pooja,,Yadava,,"{'startYear': '2024', 'startMonth': '8', 'startDay': '12', 'iD1': 'GCN', 'abbr1': 'Counsel', 'iD2': '', 'abbr2': '', 'Value': 'General Counsel'}"
+6,NA,Ram,,Kuppuswamy,,"{'startYear': '2025', 'startMonth': '4', 'startDay': '1', 'iD1': 'OTH', 'abbr1': 'Other', 'iD2': '', 'abbr2': '', 'Value': 'Chief Operations Officer - Manufacturing'}"
+7,NA,Swadesh,,Srivastava,,"{'startYear': '2023', 'startMonth': '4', 'startDay': '', 'iD1': 'OTH', 'abbr1': 'Other', 'iD2': '', 'abbr2': '', 'Value': 'Chief Business Officer - Emerging Mobility Business Unit'}"
+8,05/01/2025,Ashutosh,,Varma,,"{'startYear': '2025', 'startMonth': '5', 'startDay': '1', 'iD1': 'OTH', 'abbr1': 'Other', 'iD2': '', 'abbr2': '', 'Value': 'Chief Business Officer - India Business Unit'}"
+9,NA,Rakesh,,Vasisht,,"{'startYear': 'NA', 'startMonth': '', 'startDay': '', 'iD1': 'OTH', 'abbr1': 'Other', 'iD2': '', 'abbr2': '', 'Value': 'Head - Corporate Services, Executive Sponsor - Scooters'}"

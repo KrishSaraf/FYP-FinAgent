@@ -1,0 +1,31 @@
+displayName,key,value,qoQComp,yqoQComp,FiscalYear,Type
+Revenue ,Revenue,39783.00,,,2020,Annual
+Total Revenue ,TotalRevenue,39783.00,,,2020,Annual
+Costof Revenue Total ,CostofRevenueTotal,19345.00,,,2020,Annual
+Gross Profit ,GrossProfit,20438.00,,,2020,Annual
+Selling/ General/ Admin Expenses Total ,Selling/General/AdminExpensesTotal,9035.00,,,2020,Annual
+Depreciation/ Amortization ,Depreciation/Amortization,1002.00,,,2020,Annual
+Unusual Expense( Income) ,UnusualExpense(Income),272.00,,,2020,Annual
+Other Operating Expenses Total ,OtherOperatingExpensesTotal,1516.00,,,2020,Annual
+Total Operating Expense ,TotalOperatingExpense,31170.00,,,2020,Annual
+Operating Income ,OperatingIncome,8613.00,,,2020,Annual
+Interest Inc( Exp) Net- Non- Op Total ,InterestInc(Exp)Net-Non-OpTotal,549.00,,,2020,Annual
+Gain( Loss)on Saleof Assets ,Gain(Loss)onSaleofAssets,46.00,,,2020,Annual
+Other Net ,OtherNet,-35,,,2020,Annual
+Net Income Before Taxes ,NetIncomeBeforeTaxes,9173.00,,,2020,Annual
+Provisionfor Income Taxes ,ProvisionforIncomeTaxes,2409.00,,,2020,Annual
+Net Income After Taxes ,NetIncomeAfterTaxes,6764.00,,,2020,Annual
+Minority Interest ,MinorityInterest,-8,,,2020,Annual
+Net Income Before Extra Items ,NetIncomeBeforeExtraItems,6756.00,,,2020,Annual
+Total Extraordinary Items ,TotalExtraordinaryItems,-8,,,2020,Annual
+Net Income ,NetIncome,6748.00,,,2020,Annual
+Income Availableto Com Excl Extra Ord ,IncomeAvailabletoComExclExtraOrd,6756.00,,,2020,Annual
+Income Availableto Com Incl Extra Ord ,IncomeAvailabletoComInclExtraOrd,6748.00,,,2020,Annual
+Dilution Adjustment ,DilutionAdjustment,0.00,,,2020,Annual
+Diluted Net Income ,DilutedNetIncome,6748.00,,,2020,Annual
+Diluted Weighted Average Shares ,DilutedWeightedAverageShares,216.50,,,2020,Annual
+Diluted EPS Excluding Extra Ord Items ,DilutedEPSExcludingExtraOrdItems,31.21,,,2020,Annual
+DPS- Common Stock Primary Issue ,DPS-CommonStockPrimaryIssue,25.00,,,2020,Annual
+Diluted Normalized EPS ,DilutedNormalizedEPS,31.98,,,2020,Annual
+period Length ,periodLength,12,,,2020,Annual
+period Type ,periodType,Months,,,2020,Annual

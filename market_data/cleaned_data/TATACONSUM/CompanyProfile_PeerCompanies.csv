@@ -1,0 +1,6 @@
+tickerId,companyName,priceToBookValueRatio,priceToEarningsValueRatio,marketCap,price,percentChange,netChange,returnOnAverageEquity5YearAverage,returnOnAverageEquityTrailing12Month,ltDebtPerEquityMostRecentFiscalYear,netProfitMargin5YearAverage,netProfitMarginPercentTrailing12Month,dividendYieldIndicatedAnnualDividend,totalSharesOutstanding,languageSupport,imageUrl,overallRating,ylow,yhigh
+S0003095,Nestle India,57.64,74.91,232621.31,2414.65,0.56,13.35,,87.27,9.08,,15.88,1.1,96.34,Nestle India,https://logo.clearbit.com/nestle.in/,Bullish,2115.0,2777.0
+S0003082,Britannia Industries,30.65,60.76,135484.44,5604.75,0.07,3.75,55.84,52.52,16.81,12.77,12.14,1.35,24.17,Britannia Industries,https://logo.clearbit.com/britannia.co.in/,Bullish,4506.5,6473.1
+S0003126,Tata Consumer Products,5.56,80.03,110388.55,1116.4,0.47,5.2,6.87,7.09,3.32,8.64,7.83,0.73,98.88,Tata Consumer Products,https://images.mintgenie.com/prod/stock/T.png,Neutral,884.0,1247.39
+S0003586,Patanjali Foods,5.35,46.75,62033.89,1711.25,1.62,27.2,11.79,12.06,0.05,3.22,3.81,0.65,36.25,Patanjali Foods,https://images.mintgenie.com/prod/stock/R.png,Bearish,1170.1,2030.0
+S0003473,Godrej Industries,3.94,40.79,45776.16,1359.0,14.56,172.7,7.77,10.81,189.92,6.98,9.45,,33.68,Godrej Industries,https://images.mintgenie.com/prod/stock/G.png,Bullish,724.35,1313.95

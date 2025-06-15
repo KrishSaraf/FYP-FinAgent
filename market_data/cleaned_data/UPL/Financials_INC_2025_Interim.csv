@@ -1,0 +1,28 @@
+displayName,key,value,qoQComp,yqoQComp,FiscalYear,Type
+Revenue ,Revenue,9067.00,,,2025,Interim
+Total Revenue ,TotalRevenue,9067.00,,,2025,Interim
+Costof Revenue Total ,CostofRevenueTotal,4520.00,,,2025,Interim
+Gross Profit ,GrossProfit,4547.00,,,2025,Interim
+Selling/ General/ Admin Expenses Total ,Selling/General/AdminExpensesTotal,1424.00,,,2025,Interim
+Depreciation/ Amortization ,Depreciation/Amortization,660.00,,,2025,Interim
+Unusual Expense( Income) ,UnusualExpense(Income),49.00,,,2025,Interim
+Other Operating Expenses Total ,OtherOperatingExpensesTotal,1977.00,,,2025,Interim
+Total Operating Expense ,TotalOperatingExpense,8630.00,,,2025,Interim
+Operating Income ,OperatingIncome,437.00,,,2025,Interim
+Interest Inc( Exp) Net- Non- Op Total ,InterestInc(Exp)Net-Non-OpTotal,-990,,,2025,Interim
+Other Net ,OtherNet,98.00,,,2025,Interim
+Net Income Before Taxes ,NetIncomeBeforeTaxes,-455,,,2025,Interim
+Provisionfor Income Taxes ,ProvisionforIncomeTaxes,72.00,,,2025,Interim
+Net Income After Taxes ,NetIncomeAfterTaxes,-527,,,2025,Interim
+Minority Interest ,MinorityInterest,143.00,,,2025,Interim
+Net Income Before Extra Items ,NetIncomeBeforeExtraItems,-384,,,2025,Interim
+Net Income ,NetIncome,-384,,,2025,Interim
+Income Availableto Com Excl Extra Ord ,IncomeAvailabletoComExclExtraOrd,-384,,,2025,Interim
+Income Availableto Com Incl Extra Ord ,IncomeAvailabletoComInclExtraOrd,-384,,,2025,Interim
+Diluted Net Income ,DilutedNetIncome,-384,,,2025,Interim
+Diluted Weighted Average Shares ,DilutedWeightedAverageShares,66.50,,,2025,Interim
+Diluted EPS Excluding Extra Ord Items ,DilutedEPSExcludingExtraOrdItems,-5.77,,,2025,Interim
+DPS- Common Stock Primary Issue ,DPS-CommonStockPrimaryIssue,0.00,,,2025,Interim
+Diluted Normalized EPS ,DilutedNormalizedEPS,-5.30,,,2025,Interim
+period Length ,periodLength,3,,,2025,Interim
+period Type ,periodType,Months,,,2025,Interim

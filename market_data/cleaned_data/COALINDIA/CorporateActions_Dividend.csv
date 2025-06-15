@@ -1,0 +1,15 @@
+tickerId,companyName,remarks,recordDate,xdDate,interimOrFinal,instrumentType,value,percentage,dateOfAnnouncement,bookClosureStartDate,bookClosureEndDate,sortDate
+S0003044,Coal India,Rs.5.1500 per share(51.5%)Final Dividend,,,Final,5,5.15,51.5,2025-05-07,,,2025-05-07
+S0003044,Coal India,Rs.5.6000 per share(56%)Second Interim Dividend,2025-01-31,2025-01-31,Interim,5,5.6,56.0,2025-01-15,,,2025-01-31
+S0003044,Coal India,Rs.15.7500 per share(157.5%)First Interim Dividend,2024-11-05,2024-11-05,Interim,5,15.75,157.5,2024-10-14,,,2024-11-05
+S0003044,Coal India,Rs.5.0000 per share(50%)Final Dividend,2024-08-16,2024-08-16,Final,5,5.0,50.0,2024-05-02,,,2024-08-16
+S0003044,Coal India,Rs.5.2500 per share(52.5%)Second Interim Dividend,2024-02-20,2024-02-20,Interim,5,5.25,52.5,2024-01-30,,,2024-02-20
+S0003044,Coal India,Rs.15.2500 per share(152.5%)First Interim Dividend,2023-11-21,2023-11-21,Interim,5,15.25,152.5,2023-10-18,,,2023-11-21
+S0003044,Coal India,Rs.4.0000 per share(40%)Final Dividend,2023-08-18,2023-08-18,Final,5,4.0,40.0,2023-05-08,,,2023-08-18
+S0003044,Coal India,Rs.5.2500 per share(52.5%)Second Interim Dividend,2023-02-08,2023-02-08,Interim,5,5.25,52.5,2023-01-18,,,2023-02-08
+S0003044,Coal India,Rs.15.0000 per share (150%) First Interim Dividend,2022-11-16,2022-11-15,Interim,5,15.0,150.0,2022-11-04,,,2022-11-15
+S0003044,Coal India,Rs.3.0000 per share(30%)Final Dividend,2022-08-12,2022-08-11,Final,5,3.0,30.0,2022-05-25,,,2022-08-11
+S0003044,Coal India,Rs.5.0000 per share(50%)Second Interim Dividend,2022-02-22,2022-02-21,Interim,5,5.0,50.0,2022-02-08,,,2022-02-21
+S0003044,Coal India,Rs.9.0000 per share(90%)Interim Dividend,2021-12-07,2021-12-06,Interim,5,9.0,90.0,2021-11-23,,,2021-12-06
+S0003044,Coal India,Rs.3.5000 per share(35%)Final Dividend,2021-09-03,2021-09-02,Final,5,3.5,35.0,2021-06-14,,,2021-09-02
+S0003044,Coal India,Rs.5.0000 per share(50%)Second Interim Dividend,2021-03-16,2021-03-15,Interim,5,5.0,50.0,2021-02-23,,,2021-03-15

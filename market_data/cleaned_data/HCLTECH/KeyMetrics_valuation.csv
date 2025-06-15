@@ -1,0 +1,24 @@
+displayName,key,value
+"P/E excluding extraordinary items, most recent fiscal year",pPerEExcludingExtraordinaryItemsMostRecentFiscalYear,25.47
+"Current Dividend Yield - Common Stock Primary Issue, LTM",currentDividendYieldCommonStockPrimaryIssueLTM,3.31
+Price to Book - most recent fiscal year,priceToBookMostRecentFiscalYear,6.36
+Price to Free Cash Flow per Share - trailing 12 months,priceToFreeCashFlowPerShareTrailing12Months,90.19
+P/E Basic excluding extraordinary items - TTM,pPerEBasicExcludingExtraordinaryItemsTTM,24.82
+P/E including extraordinary items - TTM,pPerEIncludingExtraordinaryItemsTTM,25.46
+"P/E excluding extraordinary items low, trailing 12 months",pPerEExcludingExtraordinaryItemsLowTrailing12Months,12.67
+Price to Tangible Book - most fiscal year,priceToTangibleBookMostFiscalYear,10.79
+Dividend Yield - 5 Year Average,dividendYield5YearAverage,
+Price to sales - most recent fiscal year,priceToSalesMostRecentFiscalYear,3.78
+"Net Debt, LFI",netDebtLFI,-240750
+Price to Tangible Book - most recent quarter,priceToTangibleBookMostRecentQuarter,10.79
+Price to Book - most recent quarter,priceToBookMostRecentQuarter,6.36
+Dividend Yield - indicated annual dividend divided by closing price,dividendYieldIndicatedAnnualDividendDividedByClosingprice,3.31
+Price to Cash Flow per share - trailing 12 month,priceToCashFlowPerShareTrailing12Month,20.58
+Peg Ratio,pegRatio,2.90
+is ForCasted,isForCasted,true
+Price to Free Cash Flow per Share - most recent fiscal year,priceToFreeCashFlowPerShareMostRecentFiscalYear,90.19
+"P/E Normalized, most recent fiscal year",pPerENormalizedMostRecentFiscalYear,25.47
+"P/E excluding extraordinary items high, trailing 12 months",pPerExcludingExtraordinaryItemsHighTrailing12Months,30.38
+"P/E excluding extraordinary items, most recent fiscal year quarter",pPerEExcludingExtraordinaryItemsMostRecentFiscalYearQuarter,25.46
+Price to sales - trailing 12 month,priceToSalesTrailing12Month,3.78
+"Net Debt, LFY",netDebtLFY,-240750

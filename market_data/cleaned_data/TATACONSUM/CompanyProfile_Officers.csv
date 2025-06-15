@@ -1,0 +1,11 @@
+rank,since,firstName,mI,lastName,age,title
+1,04/04/2020,Sunil,Alaric,D'Souza,,"{'startYear': '2020', 'startMonth': '4', 'startDay': '4', 'iD1': 'CEO', 'abbr1': 'CEO', 'iD2': 'MDR', 'abbr2': 'Mgng.Dir.', 'Value': 'Chief Executive Officer, Managing Director, Executive Director'}"
+2,12/18/2023,Ashish,,Goenka,41,"{'startYear': '2023', 'startMonth': '12', 'startDay': '18', 'iD1': 'CFO', 'abbr1': 'CFO', 'iD2': '', 'abbr2': '', 'Value': 'Group Chief Financial Officer'}"
+3,05/2021,Deepika,,Bhan,,"{'startYear': '2021', 'startMonth': '5', 'startDay': '', 'iD1': 'CEX', 'abbr1': 'Corp. Exec.', 'iD2': '', 'abbr2': '', 'Value': 'President - Packaged Foods (India)'}"
+4,10/08/2024,Partha,,Biswas,55,"{'startYear': '2024', 'startMonth': '10', 'startDay': '8', 'iD1': 'CEX', 'abbr1': 'Corp. Exec.', 'iD2': '', 'abbr2': '', 'Value': 'President - Ready-To-Drink (RTD) Business'}"
+5,04/2021,Puneet,,Das,,"{'startYear': '2021', 'startMonth': '4', 'startDay': '', 'iD1': 'CEX', 'abbr1': 'Corp. Exec.', 'iD2': '', 'abbr2': '', 'Value': 'President - Packaged Beverages India & South Asia'}"
+6,01/2022,Gharry,,Eccles,,"{'startYear': '2022', 'startMonth': '1', 'startDay': '', 'iD1': 'CEX', 'abbr1': 'Corp. Exec.', 'iD2': '', 'abbr2': '', 'Value': 'President - International Business'}"
+7,04/2021,Punit,,Gupta,,"{'startYear': '2023', 'startMonth': '11', 'startDay': '18', 'iD1': 'CEX', 'abbr1': 'Corp. Exec.', 'iD2': '', 'abbr2': '', 'Value': 'President and Head of Sales, India'}"
+8,04/2021,Prashant,,Parameswaran,,"{'startYear': '2024', 'startMonth': '', 'startDay': '', 'iD1': 'CEX', 'abbr1': 'Corp. Exec.', 'iD2': '', 'abbr2': '', 'Value': 'President, Soulfull'}"
+9,01/2020,Ajit,Sukumar,Krishnakumar,,"{'startYear': '2023', 'startMonth': '11', 'startDay': '1', 'iD1': 'COO', 'abbr1': 'COO', 'iD2': 'EDR', 'abbr2': 'Exec. Dir.', 'Value': 'Chief Operating Officer, Executive Director'}"
+10,01/2023,Tarun,N. P.,Varma,,"{'startYear': '2023', 'startMonth': '1', 'startDay': '', 'iD1': 'CHO', 'abbr1': 'Chief HR', 'iD2': '', 'abbr2': '', 'Value': 'Global Chief Human Resources Officer'}"

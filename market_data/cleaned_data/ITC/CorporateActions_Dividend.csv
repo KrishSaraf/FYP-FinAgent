@@ -1,0 +1,12 @@
+tickerId,companyName,remarks,recordDate,xdDate,interimOrFinal,instrumentType,value,percentage,dateOfAnnouncement,bookClosureStartDate,bookClosureEndDate,sortDate
+S0003028,Itc,Rs.7.8500 per share(785%)Final Dividend,2025-05-28,2025-05-28,Final,5,7.85,785,2025-05-22,,,2025-05-28
+S0003028,Itc,Rs.6.5000 per share(650%)Interim Dividend,2025-02-12,2025-02-12,Interim,5,6.5,650,2025-02-06,,,2025-02-12
+S0003028,Itc,Rs.7.5000 per share(750%)Final Dividend,2024-06-04,2024-06-04,Final,5,7.5,750,2024-05-23,,,2024-06-04
+S0003028,Itc,Rs.6.2500 per share(625%)Interim Dividend,2024-02-08,2024-02-08,Interim,5,6.25,625,2024-01-29,,,2024-02-08
+S0003028,Itc,Rs.6.7500 per share(675%)Final Dividend,2023-05-30,2023-05-30,Final,5,6.75,675,2023-05-18,,,2023-05-30
+S0003028,Itc,Rs.2.7500 per share(275%)Special Dividend,2023-05-30,2023-05-30,Special,5,2.75,275,2023-05-19,,,2023-05-30
+S0003028,Itc,Rs.6.0000 per share(600%)Interim Dividend,2023-02-15,2023-02-15,Interim,5,6.0,600,2023-02-03,,,2023-02-15
+S0003028,Itc,Rs.6.2500 per share(625%)Final Dividend,2022-05-28,2022-05-26,Final,5,6.25,625,2022-05-18,,,2022-05-26
+S0003028,Itc,Rs.5.2500 per share(525%)Interim Dividend,2022-02-15,2022-02-14,Interim,5,5.25,525,2022-02-03,,,2022-02-14
+S0003028,Itc,Rs.5.7500 per share(575%)Final Dividend,2021-06-11,2021-06-10,Final,5,5.75,575,2021-06-01,,,2021-06-10
+S0003028,Itc,Rs.5.0000 per share(500%)Interim Dividend,2021-02-23,2021-02-22,Interim,5,5.0,500,2021-02-11,,,2021-02-22

@@ -1,0 +1,29 @@
+displayName,key,value,qoQComp,yqoQComp,FiscalYear,Type
+Revenue ,Revenue,255324.00,,,2025,Annual
+Total Revenue ,TotalRevenue,255324.00,,,2025,Annual
+Costof Revenue Total ,CostofRevenueTotal,11648.00,,,2025,Annual
+Gross Profit ,GrossProfit,243676.00,,,2025,Annual
+Selling/ General/ Admin Expenses Total ,Selling/General/AdminExpensesTotal,170982.00,,,2025,Annual
+Depreciation/ Amortization ,Depreciation/Amortization,5242.00,,,2025,Annual
+Unusual Expense( Income) ,UnusualExpense(Income),-15,,,2025,Annual
+Other Operating Expenses Total ,OtherOperatingExpensesTotal,5284.00,,,2025,Annual
+Total Operating Expense ,TotalOperatingExpense,193141.00,,,2025,Annual
+Operating Income ,OperatingIncome,62183.00,,,2025,Annual
+Interest Inc( Exp) Net- Non- Op Total ,InterestInc(Exp)Net-Non-OpTotal,3236.00,,,2025,Annual
+Gain( Loss)on Saleof Assets ,Gain(Loss)onSaleofAssets,20.00,,,2025,Annual
+Other Net ,OtherNet,-108,,,2025,Annual
+Net Income Before Taxes ,NetIncomeBeforeTaxes,65331.00,,,2025,Annual
+Provisionfor Income Taxes ,ProvisionforIncomeTaxes,16534.00,,,2025,Annual
+Net Income After Taxes ,NetIncomeAfterTaxes,48797.00,,,2025,Annual
+Minority Interest ,MinorityInterest,-244,,,2025,Annual
+Net Income Before Extra Items ,NetIncomeBeforeExtraItems,48553.00,,,2025,Annual
+Net Income ,NetIncome,48553.00,,,2025,Annual
+Income Availableto Com Excl Extra Ord ,IncomeAvailabletoComExclExtraOrd,48553.00,,,2025,Annual
+Income Availableto Com Incl Extra Ord ,IncomeAvailabletoComInclExtraOrd,48553.00,,,2025,Annual
+Diluted Net Income ,DilutedNetIncome,48553.00,,,2025,Annual
+Diluted Weighted Average Shares ,DilutedWeightedAverageShares,361.81,,,2025,Annual
+Diluted EPS Excluding Extra Ord Items ,DilutedEPSExcludingExtraOrdItems,134.20,,,2025,Annual
+DPS- Common Stock Primary Issue ,DPS-CommonStockPrimaryIssue,60.00,,,2025,Annual
+Diluted Normalized EPS ,DilutedNormalizedEPS,134.12,,,2025,Annual
+period Length ,periodLength,12,,,2025,Annual
+period Type ,periodType,Months,,,2025,Annual

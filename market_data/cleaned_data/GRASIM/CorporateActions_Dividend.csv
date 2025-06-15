@@ -1,0 +1,7 @@
+tickerId,companyName,remarks,recordDate,xdDate,interimOrFinal,instrumentType,value,percentage,dateOfAnnouncement,bookClosureStartDate,bookClosureEndDate,sortDate
+S0003182,Grasim Industries,Rs.10.0000 per share(500%)Dividend,,,Final,5,10,500,2025-05-22,,,2025-05-22
+S0003182,Grasim Industries,Rs.10.0000 per share(500%)Final Dividend,,2024-08-06,Final,5,10,500,2024-05-22,2024-08-07,2024-08-20,2024-08-06
+S0003182,Grasim Industries,Rs.10.0000 per share(500%)Final Dividend,,2023-08-11,Final,5,10,500,2023-05-26,2023-08-12,2023-08-25,2023-08-11
+S0003182,Grasim Industries,Rs.5.0000 per share(250%)Special Dividend,,,Special,5,5,250,2022-05-25,,,2022-05-25
+S0003182,Grasim Industries,Rs.4.0000 per share(200%)Special Dividend,,2021-08-12,Special,5,4,200,2021-05-25,2021-08-14,2021-08-27,2021-08-12
+S0003182,Grasim Industries,Rs.5.0000 per share(250%)Final Dividend,,2021-08-12,Final,5,5,250,2021-05-24,2021-08-14,2021-08-27,2021-08-12

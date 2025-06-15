@@ -1,0 +1,11 @@
+rank,since,firstName,mI,lastName,age,title
+1,04/2021,Bimal,,Bhattacharyya,,"{'startYear': '2025', 'startMonth': '2', 'startDay': '14', 'iD1': 'PRE', 'abbr1': 'Pres.', 'iD2': '', 'abbr2': '', 'Value': 'President, Interim Chief Audit Executive'}"
+2,01/01/2020,Amit,,Talgeri,,"{'startYear': '2021', 'startMonth': '4', 'startDay': '', 'iD1': 'CPR', 'abbr1': 'Co-Pres.', 'iD2': 'CRO', 'abbr2': 'CRO', 'Value': 'President, Chief Risk Officer'}"
+3,11/19/2018,Amitabh,,Chaudhry,59,"{'startYear': '2019', 'startMonth': '1', 'startDay': '1', 'iD1': 'CEO', 'abbr1': 'CEO', 'iD2': 'MDR', 'abbr2': 'Mgng.Dir.', 'Value': 'Chief Executive Officer, Managing Director, Executive Director'}"
+4,03/06/2020,Puneet,,Sharma,,"{'startYear': '2021', 'startMonth': '', 'startDay': '', 'iD1': 'CFO', 'abbr1': 'CFO', 'iD2': '', 'abbr2': '', 'Value': 'Group Executive, Chief Financial Officer'}"
+5,04/2021,Anil,,Agarwal,,"{'startYear': '2023', 'startMonth': '', 'startDay': '', 'iD1': 'CEX', 'abbr1': 'Corp. Exec.', 'iD2': '', 'abbr2': '', 'Value': 'President - Financial Institutions Group and PSU and Govt. Coverage Group'}"
+6,2023,Reynold,,D'souza,,"{'startYear': '2023', 'startMonth': '', 'startDay': '', 'iD1': 'CEX', 'abbr1': 'Corp. Exec.', 'iD2': '', 'abbr2': '', 'Value': 'President - Liability Sales'}"
+7,2023,Arnika,,Dixit,,"{'startYear': '2023', 'startMonth': '', 'startDay': '', 'iD1': 'CEX', 'abbr1': 'Corp. Exec.', 'iD2': '', 'abbr2': '', 'Value': 'President - Branch Banking'}"
+8,NA,Vivek,,Gupta,,"{'startYear': 'NA', 'startMonth': '', 'startDay': '', 'iD1': 'CEX', 'abbr1': 'Corp. Exec.', 'iD2': '', 'abbr2': '', 'Value': 'President - Wholesale Banking Products'}"
+9,2023,Damini,,Marwah,,"{'startYear': '2024', 'startMonth': '', 'startDay': '', 'iD1': 'CEX', 'abbr1': 'Corp. Exec.', 'iD2': '', 'abbr2': '', 'Value': 'President - Legal, Chief Ethics Officer'}"
+10,04/2021,Sanjeev,,Moghe,,"{'startYear': '2021', 'startMonth': '4', 'startDay': '', 'iD1': 'CEX', 'abbr1': 'Corp. Exec.', 'iD2': '', 'abbr2': '', 'Value': 'President - Cards'}"

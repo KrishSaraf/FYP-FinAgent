@@ -1,0 +1,6 @@
+tickerId,companyName,remarks,recordDate,xdDate,interimOrFinal,instrumentType,value,percentage,dateOfAnnouncement,bookClosureStartDate,bookClosureEndDate,sortDate
+S0003103,Hdfc Life Insurance Company,Rs.2.1000 per share(21%)Final Dividend,2025-06-20,2025-06-20,Final,5,2.1,21.0,2025-04-17,,,2025-06-20
+S0003103,Hdfc Life Insurance Company,Rs.2.0000 per share(20%)Final Dividend,2024-06-21,2024-06-21,Final,5,2.0,20.0,2024-04-18,,,2024-06-21
+S0003103,Hdfc Life Insurance Company,Rs.1.9000 per share(19%)Final Dividend,2023-06-16,2023-06-16,Final,5,1.9,19.0,2023-04-26,,,2023-06-16
+S0003103,Hdfc Life Insurance Company,Rs.1.7000 per share(17%)Final Dividend,2022-06-01,2022-05-31,Final,5,1.7,17.0,2022-04-26,,,2022-05-31
+S0003103,Hdfc Life Insurance Company,Rs.2.0200 per share(20.2%)Final Dividend,2021-07-01,2021-06-30,Final,5,2.02,20.2,2021-04-26,,,2021-06-30

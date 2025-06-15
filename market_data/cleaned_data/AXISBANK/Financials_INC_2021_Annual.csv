@@ -1,0 +1,23 @@
+displayName,key,value,qoQComp,yqoQComp,FiscalYear,Type
+Interest Income Bank ,InterestIncomeBank,64397.36,,,2021,Annual
+Total Interest Expense ,TotalInterestExpense,34627.38,,,2021,Annual
+Net Interest Income ,NetInterestIncome,29769.98,,,2021,Annual
+Loan Loss Provision ,LoanLossProvision,11099.33,,,2021,Annual
+Net Interest Inc After Loan Loss Prov ,NetInterestIncAfterLoanLossProv,18670.65,,,2021,Annual
+Non- Interest Income Bank ,Non-InterestIncomeBank,13576.92,,,2021,Annual
+Non- Interest Expense Bank ,Non-InterestExpenseBank,-22497.49,,,2021,Annual
+Net Income Before Taxes ,NetIncomeBeforeTaxes,9750.08,,,2021,Annual
+Provisionfor Income Taxes ,ProvisionforIncomeTaxes,2497.69,,,2021,Annual
+Net Income After Taxes ,NetIncomeAfterTaxes,7252.39,,,2021,Annual
+Minority Interest ,MinorityInterest,-56.89,,,2021,Annual
+Equity In Affiliates ,EquityInAffiliates,0.00,,,2021,Annual
+Net Income Before Extra Items ,NetIncomeBeforeExtraItems,7195.50,,,2021,Annual
+Net Income ,NetIncome,7195.50,,,2021,Annual
+Income Availableto Com Excl Extra Ord ,IncomeAvailabletoComExclExtraOrd,7195.50,,,2021,Annual
+Income Availableto Com Incl Extra Ord ,IncomeAvailabletoComInclExtraOrd,7195.50,,,2021,Annual
+Diluted Net Income ,DilutedNetIncome,7195.50,,,2021,Annual
+Diluted Weighted Average Shares ,DilutedWeightedAverageShares,298.26,,,2021,Annual
+Diluted EPS Excluding Extra Ord Items ,DilutedEPSExcludingExtraOrdItems,24.12,,,2021,Annual
+Diluted Normalized EPS ,DilutedNormalizedEPS,25.39,,,2021,Annual
+period Length ,periodLength,12,,,2021,Annual
+period Type ,periodType,Months,,,2021,Annual
