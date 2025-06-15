@@ -1,0 +1,11 @@
+Age,CurrencyCode,Mean,High,Low,Median,StandardDeviation,SmartEstimate,NumEstimates
+OneWeekAgo,INR,13,15,12,13,0,13,11
+ThirtyDaysAgo,INR,12,14,11,12,0,12,12
+SixtyDaysAgo,INR,12,14,11,12,0,12,12
+NinetyDaysAgo,INR,12,14,11,12,0,12,12
+OneWeekAgo,INR,17,19,15,16,1,17,11
+ThirtyDaysAgo,INR,16,18,14,16,1,16,11
+SixtyDaysAgo,INR,16,18,14,16,1,16,11
+NinetyDaysAgo,INR,16,18,14,16,1,16,11
+OneWeekAgo,INR,20,22,19,20,0,20,6
+ThirtyDaysAgo,INR,19,19,19,19,0,19,1

@@ -1,0 +1,4 @@
+ticker_id,company_name,price,percent_change,net_change,bid,ask,high,low,open,low_circuit_limit,up_circuit_limit,volume,date,time,close,bid_size,ask_size,exchange_type,lot_size,overall_rating,short_term_trends,long_term_trends,year_low,year_high,ric
+S0003077,Shriram Finance,688.25,5.65,36.80,0.00,0.00,690.90,644.30,654.00,586.30,716.55,20115034,2025-06-06,10:20:58,651.45,0.00,0.00,NSI,1.00,Bullish,Bullish,Bullish,438.60,730.45,SHMF.NS
+S0003015,Bajaj Finance,9371.50,4.90,437.50,0.00,9371.50,9434.00,8876.00,8945.00,8041.00,9827.00,1978382,2025-06-06,10:24:38,8934.00,0.00,183,NSI,1.00,Bullish,Bullish,Bullish,6367.04,9646.87,BJFN.NS
+S0003097,Jsw Steel,1004.90,3.73,36.15,0.00,1004.90,1010.65,967.65,968.75,871.90,1065.60,2089570,2025-06-06,10:18:40,968.75,0.00,126,NSI,1.00,Bullish,Bullish,Bullish,823.80,1074.90,JSTL.NS
