@@ -1,7 +1,7 @@
 import json
 import pandas as pd
 import logging
-from typing import Dict
+from typing import Dict, Tuple
 from ..registry import CLEANER  # Import the CLEANER registry
 
 @CLEANER.register_module()
@@ -20,15 +20,18 @@ class StockForecastsCleaner:
             format="%(asctime)s - %(name)s - %(levelname)s - %(message)s"
         )
 
-    def parse_stock_forecasts_json(self, json_file_path: str) -> Dict[str, pd.DataFrame]:
+    def parse_stock_forecasts_json(self, json_file_path: str) -> Tuple[pd.DataFrame, pd.DataFrame]:
         """
-        Parses stock forecasts JSON data into multiple DataFrames.
+        Parses stock forecasts JSON data into two DataFrames: one for estimates and actuals,
+        and another for snapshots.
 
         Args:
             json_file_path (str): Path to the JSON file containing stock forecasts data.
 
         Returns:
-            Dict[str, pd.DataFrame]: A dictionary of DataFrames for each relevant section.
+            Tuple[pd.DataFrame, pd.DataFrame]: A tuple containing:
+                - DataFrame for estimates and actuals
+                - DataFrame for snapshots
         """
         try:
             self.logger.info(f"Parsing JSON file: {json_file_path}")
@@ -39,117 +42,82 @@ class StockForecastsCleaner:
             self.logger.debug(f"Loaded JSON content: {data}")
 
             # Validate the JSON structure
-            if not isinstance(data, dict):
-                self.logger.error("Invalid JSON structure: Expected a dictionary.")
-                return {}
+            if not isinstance(data, dict) or 'periods' not in data:
+                self.logger.error("Invalid JSON structure: Expected a dictionary with 'periods'.")
+                return pd.DataFrame(), pd.DataFrame()
 
-            dataframes = {}
-
-            # Extract measure information
-            measure_code = data.get("measureCode", "Unknown")
-            measure_name = data.get("measureName", "Unknown")
-            self.logger.debug(f"Measure Code: {measure_code}, Measure Name: {measure_name}")
+            estimates_actuals_rows = []
+            snapshots_rows = []
 
             # Iterate through periods
-            periods = data.get("periods", [])
-            if not periods:
-                self.logger.warning("No periods found in the JSON file.")
-                return {}
-
-            actuals_data = []
-            estimates_data = []
-            snapshots_data = []
-
-            for period in periods:
+            for period in data['periods']:
                 if not isinstance(period, dict):
                     self.logger.warning(f"Invalid period structure: {period}")
                     continue
 
-                fiscal_year = period.get("FiscalPeriod", {}).get("Year", "Unknown")
-                calendar_year = period.get("CalendarYear", "Unknown")
-                calendar_month = period.get("CalendarMonth", "Unknown")
-                actual_report_date = period.get("ActualReportDate", None)
+                base_info = {
+                    'CalendarMonth': period.get('CalendarMonth'),
+                    'CalendarYear': period.get('CalendarYear'),
+                    'FiscalYear': period.get('FiscalPeriod', {}).get('Year'),
+                    'ActualReportDate': period.get('ActualReportDate')
+                }
 
-                # Debugging: Log the period details
-                self.logger.debug(f"Processing period: FiscalYear={fiscal_year}, CalendarYear={calendar_year}, CalendarMonth={calendar_month}")
-
-                # Extract Actuals
-                actuals = period.get("Actuals", {}).get("Actual", [])
-                if actuals is None:
-                    self.logger.warning(f"No actuals found for period: {period}")
-                else:
-                    for actual in actuals:
-                        actuals_data.append({
-                            "FiscalYear": fiscal_year,
-                            "CalendarYear": calendar_year,
-                            "CalendarMonth": calendar_month,
-                            "ActualReportDate": actual_report_date,
-                            "CurrencyCode": actual.get("CurrencyCode", None),
-                            "Reported": actual.get("Reported", None),
-                            "ReportedDate": actual.get("ReportedDate", None),
-                            "SurprisePercent": actual.get("SurprisePercent", None),
-                            "SurpriseMean": actual.get("SurpriseMean", None),
-                            "StandardizedUnexpectedEarnings": actual.get("StandardizedUnexpectedEarnings", None),
-                            "NumberOfEstimates": actual.get("NumberOfEstimates", None)
+                # Handle Actuals
+                if period.get('Actuals') and period['Actuals'].get('Actual'):
+                    for actual in period['Actuals']['Actual']:
+                        row = base_info.copy()
+                        row.update({
+                            'Type': 'Actual',
+                            'CurrencyCode': actual.get('CurrencyCode', ""),
+                            'Reported': actual.get('Reported', ""),
+                            'ReportedDate': actual.get('ReportedDate', ""),
+                            'SurprisePercent': actual.get('SurprisePercent', ""),
+                            'SurpriseMean': actual.get('SurpriseMean', ""),
+                            'SUE': actual.get('StandardizedUnexpectedEarnings', ""),
+                            'NumEstimates': actual.get('NumberOfEstimates', "")
                         })
+                        estimates_actuals_rows.append(row)
 
-                # Extract Estimates
-                estimates = period.get("Estimates", {}).get("Estimate", [])
-                if estimates is None:
-                    self.logger.warning(f"No estimates found for period: {period}")
-                else:
-                    for estimate in estimates:
-                        estimates_data.append({
-                            "FiscalYear": fiscal_year,
-                            "CalendarYear": calendar_year,
-                            "CalendarMonth": calendar_month,
-                            "CurrencyCode": estimate.get("CurrencyCode", None),
-                            "Mean": estimate.get("Mean", None),
-                            "High": estimate.get("High", None),
-                            "Low": estimate.get("Low", None),
-                            "NumberOfEstimates": estimate.get("NumberOfEstimates", None),
-                            "Median": estimate.get("Median", None),
-                            "StandardDeviation": estimate.get("StandardDeviation", None),
-                            "SmartEstimate": estimate.get("SmartEstimate", None)
+                # Handle Estimates
+                if period.get('Estimates') and period['Estimates'].get('Estimate'):
+                    for estimate in period['Estimates']['Estimate']:
+                        row = base_info.copy()
+                        row.update({
+                            'Type': 'Estimate',
+                            'CurrencyCode': estimate.get('CurrencyCode', ""),
+                            'Mean': estimate.get('Mean', ""),
+                            'High': estimate.get('High', ""),
+                            'Low': estimate.get('Low', ""),
+                            'Median': estimate.get('Median', ""),
+                            'StandardDeviation': estimate.get('StandardDeviation', ""),
+                            'SmartEstimate': estimate.get('SmartEstimate', ""),
+                            'NumEstimates': estimate.get('NumberOfEstimates', "")
                         })
+                        estimates_actuals_rows.append(row)
 
-                # Extract EstimateSnapshots
-                snapshots = period.get("EstimateSnapshots", {}).get("EstimateSnapshot", [])
-                if snapshots is None:
-                    self.logger.warning(f"No estimate snapshots found for period: {period}")
-                else:
-                    for snapshot in snapshots:
-                        snapshots_data.append({
-                            "FiscalYear": fiscal_year,
-                            "CalendarYear": calendar_year,
-                            "CalendarMonth": calendar_month,
-                            "CurrencyCode": snapshot.get("CurrencyCode", None),
-                            "Mean": snapshot.get("Mean", None),
-                            "High": snapshot.get("High", None),
-                            "Low": snapshot.get("Low", None),
-                            "NumberOfEstimates": snapshot.get("NumberOfEstimates", None),
-                            "Median": snapshot.get("Median", None),
-                            "StandardDeviation": snapshot.get("StandardDeviation", None),
-                            "Age": snapshot.get("Age", None),
-                            "SmartEstimate": snapshot.get("SmartEstimate", None)
-                        })
+                # Handle EstimateSnapshots
+                if period.get('EstimateSnapshots') and period['EstimateSnapshots'].get('EstimateSnapshot'):
+                    for snapshot in period['EstimateSnapshots']['EstimateSnapshot']:
+                        row = {
+                            'Age': snapshot.get('Age', ""),
+                            'CurrencyCode': snapshot.get('CurrencyCode', ""),
+                            'Mean': snapshot.get('Mean', ""),
+                            'High': snapshot.get('High', ""),
+                            'Low': snapshot.get('Low', ""),
+                            'Median': snapshot.get('Median', ""),
+                            'StandardDeviation': snapshot.get('StandardDeviation', ""),
+                            'SmartEstimate': snapshot.get('SmartEstimate', ""),
+                            'NumEstimates': snapshot.get('NumberOfEstimates', "")
+                        }
+                        snapshots_rows.append(row)
 
-            # Convert lists to DataFrames
-            if actuals_data:
-                df_actuals = pd.DataFrame(actuals_data)
-                dataframes["Actuals"] = df_actuals
-
-            if estimates_data:
-                df_estimates = pd.DataFrame(estimates_data)
-                dataframes["Estimates"] = df_estimates
-
-            if snapshots_data:
-                df_snapshots = pd.DataFrame(snapshots_data)
-                dataframes["EstimateSnapshots"] = df_snapshots
+            # Convert rows to DataFrames
+            estimates_actuals_df = pd.DataFrame(estimates_actuals_rows)
+            snapshots_df = pd.DataFrame(snapshots_rows)
 
             self.logger.info(f"Successfully parsed JSON file: {json_file_path}")
-            return dataframes
+            return estimates_actuals_df, snapshots_df
 
         except Exception as e:
             self.logger.error(f"Error parsing JSON file {json_file_path}: {e}")
-            return {}
+            return pd.DataFrame(), pd.DataFrame()

@@ -1,0 +1,4 @@
+ticker_id,company_name,price,percent_change,net_change,bid,ask,high,low,open,low_circuit_limit,up_circuit_limit,volume,date,time,close,bid_size,ask_size,exchange_type,lot_size,overall_rating,short_term_trends,long_term_trends,year_low,year_high,ric
+S0003103,Hdfc Life Insurance Company,755.10,-0.85,-6.50,0.00,755.10,764.40,750.55,764.40,685.45,837.75,1214989,2025-06-06,10:22:56,761.60,0.00,218,NSI,1.00,Bullish,Moderately Bearish,Bullish,511.40,791.10,HDFL.NS
+S0003091,Bharat Electronics,390.70,-0.71,-2.80,0.00,390.70,396.85,389.20,394.85,354.15,432.85,17365730,2025-06-06,10:24:40,393.50,0.00,617,NSI,1.00,Bullish,Bullish,Bullish,230.00,394.70,BAJE.NS
+S0003039,Bharti Airtel,1870.20,-0.46,-8.60,0.00,1870.20,1881.90,1867.30,1872.10,1691.00,2066.60,4644125,2025-06-06,10:22:21,1878.80,0.00,171,NSI,1.00,Bullish,Bullish,Bullish,1219.05,1917.00,BRTI.NS

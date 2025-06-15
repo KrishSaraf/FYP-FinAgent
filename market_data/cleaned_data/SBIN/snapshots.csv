@@ -1,0 +1,11 @@
+Age,CurrencyCode,Mean,High,Low,Median,StandardDeviation,SmartEstimate,NumEstimates
+OneWeekAgo,INR,84,97,66,89,9,85,7
+ThirtyDaysAgo,INR,85,97,66,89,9,86,7
+SixtyDaysAgo,INR,85,97,66,89,9,86,7
+NinetyDaysAgo,INR,85,97,66,88,10,84,6
+OneWeekAgo,INR,91,112,71,91,12,92,6
+ThirtyDaysAgo,INR,92,112,71,93,12,93,6
+SixtyDaysAgo,INR,92,112,71,93,12,93,6
+NinetyDaysAgo,INR,91,112,71,91,13,91,5
+OneWeekAgo,INR,89,95,83,89,6,89,2
+ThirtyDaysAgo,INR,83,83,83,83,0,83,1
