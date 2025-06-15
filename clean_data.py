@@ -456,10 +456,10 @@ def main():
     """
     Main function to parse all JSON files and clean the data.
     """
-    # clean_historical_data()
-    # clean_stock_details()
-    # clean_historical_stats()
-    # clean_stock_forecasts()
+    clean_historical_data()
+    clean_stock_details()
+    clean_historical_stats()
+    clean_stock_forecasts()
     clean_52week_high_low()
     clean_commodities()
     clean_ipo()
