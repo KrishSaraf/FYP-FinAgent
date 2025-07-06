@@ -34,6 +34,9 @@ RAPIDAPI_KEY = "abc123abc123abc123abc123abc123" # https://rapidapi.com/
 ALPHA_VANTAGE_KEY = "abc123abc123abc123abc123abc123" # https://www.alphavantage.co/
 
 INDIAN_API_KEY = "" # https://indianapi.in/indian-stock-market
+REDDIT_CLIENT_ID = "" # https://www.reddit.com/prefs/apps create an app here
+REDDIT_CLIENT_SECRET = ""
+REDDIT_USER_AGENT = ""
 ```
 
 # Prepare the data
@@ -42,6 +45,7 @@ INDIAN_API_KEY = "" # https://indianapi.in/indian-stock-market
 1. Download the data
 
 python download_data.py
+python download_reddit_data.py
 ...
 
 2. Process the data

@@ -5,6 +5,7 @@ from finagent.cleaners.price_cleaner import PriceCleaner
 from finagent.cleaners.stock_details_cleaner import StockDetailsCleaner
 from finagent.cleaners.historical_stats_cleaner import HistoricalStatsCleaner
 from finagent.cleaners.stock_forecasts_cleaner import StockForecastsCleaner
+from finagent.cleaners.reddit_data_cleaner import RedditDataCleaner
 import json
 import pandas as pd
 
@@ -451,6 +452,37 @@ def clean_trending():
     except Exception as e:
         logger.error(f"Error parsing trending.json file: {e}")
 
+def clean_reddit_data():
+    """
+    Function to clean Reddit JSON files and save them as CSVs using RedditDataCleaner.
+    """
+    # Define input and output directories
+    input_dir = Path("social_media_data/uncleaned_data/reddit_scraper")
+    output_dir = Path("social_media_data/cleaned_data")
+
+    # Initialize the RedditDataCleaner
+    cleaner = RedditDataCleaner()
+
+    # Iterate through all JSON files in the input directory
+    for json_file_path in input_dir.glob("*_reddit_posts.json"):
+        # Extract the stock name from the file name
+        stock_name = json_file_path.stem.replace("_reddit_posts", "")
+        logger.info(f"Processing Reddit data for stock: {stock_name}")
+
+        # Parse the JSON file using RedditDataCleaner
+        df = cleaner.parse_reddit_json(str(json_file_path))
+        if df is None or df.empty:
+            logger.warning(f"No data found in {json_file_path}, skipping.")
+            continue
+
+        # Create the output directory for the stock
+        stock_output_dir = output_dir / stock_name
+        stock_output_dir.mkdir(parents=True, exist_ok=True)
+
+        # Save the DataFrame as a CSV
+        output_csv_path = stock_output_dir / "reddit.csv"
+        df.to_csv(output_csv_path, index=False)
+        logger.info(f"Saved cleaned Reddit data to: {output_csv_path}")
 
 def main():
     """
@@ -467,6 +499,7 @@ def main():
     clean_mutual_funds()
     clean_price_shockers()
     clean_trending()
+    clean_reddit_data()
 
 if __name__ == "__main__":
     main()
