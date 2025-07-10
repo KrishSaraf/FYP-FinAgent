@@ -14,7 +14,7 @@ subreddits = [
     "trading",
     "stockmarket",
     "investing",
-    "stocks"
+    "stocks",
 ]
 
 # Initialize RedditStockScraper
