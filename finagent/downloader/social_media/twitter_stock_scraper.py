@@ -197,7 +197,7 @@ class TwitterStockScraper:
 
                 # Extract cookies
                 self.logger.info("Extracting cookies...")
-                await page.wait_for_timeout(600000)  # Wait for a few seconds to ensure cookies are set
+                await page.wait_for_timeout(1200000)  # Wait for a few seconds to ensure cookies are set
                 cookies = await context.cookies()
                 with open(output_path, "w") as f:
                     json.dump(cookies, f, indent=4)
@@ -216,7 +216,7 @@ class TwitterStockScraper:
         """
         try:
             # Generate cookies if not already available
-            cookies_path = "cookies.json"
+            cookies_path = "finagent/downloader/social_media/cookies.json"
             if not os.path.exists(cookies_path):
                 self.logger.info("Generating cookies...")
                 await self.generate_cookies_with_proxy(
@@ -231,7 +231,11 @@ class TwitterStockScraper:
                 cookies = json.load(f)
 
             # Add account to the pool with cookies
-            await self.api.pool.add_account_with_cookies(
+            await self.api.pool.add_account(
+                username=self.username,
+                password=self.password,
+                email="pranav020@e.ntu.edu.sg",
+                email_password=None,  # Not needed for cookie-based login
                 cookies=cookies,
                 proxy=account_proxy
             )
