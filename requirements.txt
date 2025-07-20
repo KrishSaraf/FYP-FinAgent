@@ -24,3 +24,6 @@ snapshot_selenium
 pyecharts
 dotenv
 praw==7.8.1
+twscrape
+selenium
+playwright

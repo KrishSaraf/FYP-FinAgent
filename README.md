@@ -37,6 +37,10 @@ INDIAN_API_KEY = "" # https://indianapi.in/indian-stock-market
 REDDIT_CLIENT_ID = "" # https://www.reddit.com/prefs/apps create an app here
 REDDIT_CLIENT_SECRET = ""
 REDDIT_USER_AGENT = ""
+TWITTER_USERNAME = "" # Have made burner with school email
+TWITTER_PASSWORD = ""
+THORDATA_USERNAME = "" # https://www.thordata.com/ for proxy server for twscrape
+THORDATA_PASSWORD = ""
 ```
 
 # Prepare the data
@@ -46,6 +50,7 @@ REDDIT_USER_AGENT = ""
 
 python download_data.py
 python download_reddit_data.py
+python download_twitter_data.py #WIP
 ...
 
 2. Process the data
