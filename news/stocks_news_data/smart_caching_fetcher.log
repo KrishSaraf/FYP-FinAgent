@@ -1,0 +1,582 @@
+2025-07-20 23:20:40,025 - INFO - Created config: smart_config.json
+2025-07-20 23:20:40,025 - ERROR - ❌ Please update your Marketaux API key in config
+2025-07-20 23:21:38,497 - INFO - ✅ Smart Marketaux API initialized
+2025-07-20 23:21:44,951 - INFO - 🧠 SMART CACHING NEWS FETCHER
+2025-07-20 23:21:44,951 - INFO - ==================================================
+2025-07-20 23:21:44,951 - INFO - 📊 Cache Status:
+2025-07-20 23:21:44,951 - INFO -    Previous API calls: 0
+2025-07-20 23:21:44,951 - INFO -    Articles in storage: 0
+2025-07-20 23:21:44,951 - INFO -    Last update: None
+2025-07-20 23:21:44,955 - INFO - 📅 Processing: 2024-06-06 to 2024-06-13
+2025-07-20 23:21:44,955 - INFO - 🔍 API Call: general_indian_market (2024-06-06 to 2024-06-13)
+2025-07-20 23:21:45,481 - INFO - ✅ Cached: general_indian_market (2024-06-06 to 2024-06-13) - 3 articles
+2025-07-20 23:21:45,481 - INFO - 💾 Added 3 new unique articles (total: 3)
+2025-07-20 23:21:46,983 - INFO - 🔍 API Call: bse_sensex_trading (2024-06-06 to 2024-06-13)
+2025-07-20 23:21:47,492 - INFO - ✅ Cached: bse_sensex_trading (2024-06-06 to 2024-06-13) - 3 articles
+2025-07-20 23:21:47,493 - INFO - 💾 Added 3 new unique articles (total: 6)
+2025-07-20 23:21:48,997 - INFO - 🔍 API Call: nse_nifty_index (2024-06-06 to 2024-06-13)
+2025-07-20 23:21:49,473 - INFO - ✅ Cached: nse_nifty_index (2024-06-06 to 2024-06-13) - 0 articles
+2025-07-20 23:21:50,976 - INFO - 🔍 API Call: indian_banking_sector (2024-06-06 to 2024-06-13)
+2025-07-20 23:21:51,446 - INFO - ✅ Cached: indian_banking_sector (2024-06-06 to 2024-06-13) - 3 articles
+2025-07-20 23:21:51,447 - INFO - 💾 Added 3 new unique articles (total: 9)
+2025-07-20 23:21:52,953 - INFO - 🔍 API Call: indian_it_companies (2024-06-06 to 2024-06-13)
+2025-07-20 23:21:53,432 - INFO - ✅ Cached: indian_it_companies (2024-06-06 to 2024-06-13) - 3 articles
+2025-07-20 23:21:53,433 - INFO - 💾 Added 3 new unique articles (total: 12)
+2025-07-20 23:21:54,938 - INFO - 🔍 API Call: indian_pharmaceutical (2024-06-06 to 2024-06-13)
+2025-07-20 23:21:55,321 - INFO - ✅ Cached: indian_pharmaceutical (2024-06-06 to 2024-06-13) - 3 articles
+2025-07-20 23:21:55,323 - INFO - 💾 Added 3 new unique articles (total: 15)
+2025-07-20 23:21:56,828 - INFO - 🔍 API Call: indian_automobile (2024-06-06 to 2024-06-13)
+2025-07-20 23:21:57,035 - INFO - ✅ Cached: indian_automobile (2024-06-06 to 2024-06-13) - 3 articles
+2025-07-20 23:21:57,037 - INFO - 💾 Added 3 new unique articles (total: 18)
+2025-07-20 23:21:58,541 - INFO - 🔍 API Call: reliance_industries (2024-06-06 to 2024-06-13)
+2025-07-20 23:21:58,935 - INFO - ✅ Cached: reliance_industries (2024-06-06 to 2024-06-13) - 3 articles
+2025-07-20 23:21:58,937 - INFO - 💾 Added 3 new unique articles (total: 21)
+2025-07-20 23:22:00,443 - INFO - 🔍 API Call: tata_group_companies (2024-06-06 to 2024-06-13)
+2025-07-20 23:22:00,867 - INFO - ✅ Cached: tata_group_companies (2024-06-06 to 2024-06-13) - 3 articles
+2025-07-20 23:22:00,870 - INFO - 💾 Added 2 new unique articles (total: 23)
+2025-07-20 23:22:02,375 - INFO - 🔍 API Call: hdfc_icici_banking (2024-06-06 to 2024-06-13)
+2025-07-20 23:22:02,658 - INFO - ✅ Cached: hdfc_icici_banking (2024-06-06 to 2024-06-13) - 3 articles
+2025-07-20 23:22:02,660 - INFO - 💾 Added 3 new unique articles (total: 26)
+2025-07-20 23:22:04,164 - INFO - 🔍 API Call: infosys_wipro_it (2024-06-06 to 2024-06-13)
+2025-07-20 23:22:04,658 - INFO - ✅ Cached: infosys_wipro_it (2024-06-06 to 2024-06-13) - 3 articles
+2025-07-20 23:22:04,661 - INFO - 💾 Added 3 new unique articles (total: 29)
+2025-07-20 23:22:06,163 - INFO - 🔍 API Call: indian_oil_gas (2024-06-06 to 2024-06-13)
+2025-07-20 23:22:06,629 - INFO - ✅ Cached: indian_oil_gas (2024-06-06 to 2024-06-13) - 3 articles
+2025-07-20 23:22:06,632 - INFO - 💾 Added 3 new unique articles (total: 32)
+2025-07-20 23:22:08,139 - INFO - 🔍 API Call: indian_steel_sector (2024-06-06 to 2024-06-13)
+2025-07-20 23:22:08,587 - INFO - ✅ Cached: indian_steel_sector (2024-06-06 to 2024-06-13) - 1 articles
+2025-07-20 23:22:08,590 - INFO - 💾 Added 1 new unique articles (total: 33)
+2025-07-20 23:22:10,096 - INFO - 🔍 API Call: indian_cement_companies (2024-06-06 to 2024-06-13)
+2025-07-20 23:22:10,676 - INFO - ✅ Cached: indian_cement_companies (2024-06-06 to 2024-06-13) - 3 articles
+2025-07-20 23:22:10,678 - INFO - 💾 Added 3 new unique articles (total: 36)
+2025-07-20 23:22:12,180 - INFO - 🔍 API Call: indian_telecom_airtel (2024-06-06 to 2024-06-13)
+2025-07-20 23:22:12,659 - INFO - ✅ Cached: indian_telecom_airtel (2024-06-06 to 2024-06-13) - 3 articles
+2025-07-20 23:22:12,662 - INFO - 💾 Added 2 new unique articles (total: 38)
+2025-07-20 23:22:14,164 - INFO - 📅 Processing: 2024-06-13 to 2024-06-20
+2025-07-20 23:22:14,164 - INFO - 🔍 API Call: general_indian_market (2024-06-13 to 2024-06-20)
+2025-07-20 23:22:14,540 - INFO - ✅ Cached: general_indian_market (2024-06-13 to 2024-06-20) - 3 articles
+2025-07-20 23:22:14,544 - INFO - 💾 Added 3 new unique articles (total: 41)
+2025-07-20 23:22:16,049 - INFO - 🔍 API Call: bse_sensex_trading (2024-06-13 to 2024-06-20)
+2025-07-20 23:22:16,607 - INFO - ✅ Cached: bse_sensex_trading (2024-06-13 to 2024-06-20) - 3 articles
+2025-07-20 23:22:16,609 - INFO - 💾 Added 3 new unique articles (total: 44)
+2025-07-20 23:22:18,114 - INFO - 🔍 API Call: nse_nifty_index (2024-06-13 to 2024-06-20)
+2025-07-20 23:22:18,612 - INFO - ✅ Cached: nse_nifty_index (2024-06-13 to 2024-06-20) - 3 articles
+2025-07-20 23:22:18,615 - INFO - 💾 Added 3 new unique articles (total: 47)
+2025-07-20 23:22:20,118 - INFO - 🔍 API Call: indian_banking_sector (2024-06-13 to 2024-06-20)
+2025-07-20 23:22:20,637 - INFO - ✅ Cached: indian_banking_sector (2024-06-13 to 2024-06-20) - 3 articles
+2025-07-20 23:22:20,640 - INFO - 💾 Added 2 new unique articles (total: 49)
+2025-07-20 23:22:22,145 - INFO - 🔍 API Call: indian_it_companies (2024-06-13 to 2024-06-20)
+2025-07-20 23:22:22,635 - INFO - ✅ Cached: indian_it_companies (2024-06-13 to 2024-06-20) - 3 articles
+2025-07-20 23:22:22,637 - INFO - 💾 Added 3 new unique articles (total: 52)
+2025-07-20 23:22:24,142 - INFO - 🔍 API Call: indian_pharmaceutical (2024-06-13 to 2024-06-20)
+2025-07-20 23:22:24,519 - INFO - ✅ Cached: indian_pharmaceutical (2024-06-13 to 2024-06-20) - 3 articles
+2025-07-20 23:22:24,522 - INFO - 💾 Added 2 new unique articles (total: 54)
+2025-07-20 23:22:26,027 - INFO - 🔍 API Call: indian_automobile (2024-06-13 to 2024-06-20)
+2025-07-20 23:22:26,396 - INFO - ✅ Cached: indian_automobile (2024-06-13 to 2024-06-20) - 3 articles
+2025-07-20 23:22:26,398 - INFO - 💾 Added 3 new unique articles (total: 57)
+2025-07-20 23:22:27,903 - INFO - 🔍 API Call: reliance_industries (2024-06-13 to 2024-06-20)
+2025-07-20 23:22:28,387 - INFO - ✅ Cached: reliance_industries (2024-06-13 to 2024-06-20) - 3 articles
+2025-07-20 23:22:28,390 - INFO - 💾 Added 3 new unique articles (total: 60)
+2025-07-20 23:22:29,891 - INFO - 🔍 API Call: tata_group_companies (2024-06-13 to 2024-06-20)
+2025-07-20 23:22:30,304 - INFO - ✅ Cached: tata_group_companies (2024-06-13 to 2024-06-20) - 0 articles
+2025-07-20 23:22:31,810 - INFO - 🔍 API Call: hdfc_icici_banking (2024-06-13 to 2024-06-20)
+2025-07-20 23:22:32,160 - INFO - ✅ Cached: hdfc_icici_banking (2024-06-13 to 2024-06-20) - 3 articles
+2025-07-20 23:22:32,161 - INFO - 💾 Added 3 new unique articles (total: 63)
+2025-07-20 23:22:33,666 - INFO - 🔍 API Call: infosys_wipro_it (2024-06-13 to 2024-06-20)
+2025-07-20 23:22:34,203 - INFO - ✅ Cached: infosys_wipro_it (2024-06-13 to 2024-06-20) - 3 articles
+2025-07-20 23:22:34,208 - INFO - 💾 Added 3 new unique articles (total: 66)
+2025-07-20 23:22:35,713 - INFO - 🔍 API Call: indian_oil_gas (2024-06-13 to 2024-06-20)
+2025-07-20 23:22:36,248 - INFO - ✅ Cached: indian_oil_gas (2024-06-13 to 2024-06-20) - 3 articles
+2025-07-20 23:22:36,251 - INFO - 💾 Added 3 new unique articles (total: 69)
+2025-07-20 23:22:37,757 - INFO - 🔍 API Call: indian_steel_sector (2024-06-13 to 2024-06-20)
+2025-07-20 23:22:38,196 - INFO - ✅ Cached: indian_steel_sector (2024-06-13 to 2024-06-20) - 1 articles
+2025-07-20 23:22:38,201 - INFO - 💾 Added 1 new unique articles (total: 70)
+2025-07-20 23:22:39,706 - INFO - 🔍 API Call: indian_cement_companies (2024-06-13 to 2024-06-20)
+2025-07-20 23:22:40,207 - INFO - ✅ Cached: indian_cement_companies (2024-06-13 to 2024-06-20) - 3 articles
+2025-07-20 23:22:40,209 - INFO - 💾 Added 2 new unique articles (total: 72)
+2025-07-20 23:22:41,711 - INFO - 🔍 API Call: indian_telecom_airtel (2024-06-13 to 2024-06-20)
+2025-07-20 23:22:42,162 - INFO - ✅ Cached: indian_telecom_airtel (2024-06-13 to 2024-06-20) - 3 articles
+2025-07-20 23:22:42,164 - INFO - 💾 Added 3 new unique articles (total: 75)
+2025-07-20 23:22:43,669 - INFO - 📅 Processing: 2024-06-20 to 2024-06-27
+2025-07-20 23:22:43,669 - INFO - 🔍 API Call: general_indian_market (2024-06-20 to 2024-06-27)
+2025-07-20 23:22:44,028 - INFO - ✅ Cached: general_indian_market (2024-06-20 to 2024-06-27) - 3 articles
+2025-07-20 23:22:44,032 - INFO - 💾 Added 3 new unique articles (total: 78)
+2025-07-20 23:22:45,537 - INFO - 🔍 API Call: bse_sensex_trading (2024-06-20 to 2024-06-27)
+2025-07-20 23:22:45,948 - INFO - ✅ Cached: bse_sensex_trading (2024-06-20 to 2024-06-27) - 3 articles
+2025-07-20 23:22:45,952 - INFO - 💾 Added 3 new unique articles (total: 81)
+2025-07-20 23:22:47,458 - INFO - 🔍 API Call: nse_nifty_index (2024-06-20 to 2024-06-27)
+2025-07-20 23:22:48,020 - INFO - ✅ Cached: nse_nifty_index (2024-06-20 to 2024-06-27) - 3 articles
+2025-07-20 23:22:48,023 - INFO - 💾 Added 3 new unique articles (total: 84)
+2025-07-20 23:22:49,528 - INFO - 🔍 API Call: indian_banking_sector (2024-06-20 to 2024-06-27)
+2025-07-20 23:22:50,025 - INFO - ✅ Cached: indian_banking_sector (2024-06-20 to 2024-06-27) - 3 articles
+2025-07-20 23:22:50,029 - INFO - 💾 Added 3 new unique articles (total: 87)
+2025-07-20 23:22:51,532 - INFO - 🔍 API Call: indian_it_companies (2024-06-20 to 2024-06-27)
+2025-07-20 23:22:52,009 - INFO - ✅ Cached: indian_it_companies (2024-06-20 to 2024-06-27) - 3 articles
+2025-07-20 23:22:52,014 - INFO - 💾 Added 3 new unique articles (total: 90)
+2025-07-20 23:22:53,517 - INFO - 🔍 API Call: indian_pharmaceutical (2024-06-20 to 2024-06-27)
+2025-07-20 23:22:53,887 - INFO - ✅ Cached: indian_pharmaceutical (2024-06-20 to 2024-06-27) - 3 articles
+2025-07-20 23:22:53,893 - INFO - 💾 Added 3 new unique articles (total: 93)
+2025-07-20 23:22:55,398 - INFO - 🔍 API Call: indian_automobile (2024-06-20 to 2024-06-27)
+2025-07-20 23:22:55,645 - INFO - ✅ Cached: indian_automobile (2024-06-20 to 2024-06-27) - 3 articles
+2025-07-20 23:22:55,651 - INFO - 💾 Added 3 new unique articles (total: 96)
+2025-07-20 23:22:57,156 - INFO - 🔍 API Call: reliance_industries (2024-06-20 to 2024-06-27)
+2025-07-20 23:22:57,575 - INFO - ✅ Cached: reliance_industries (2024-06-20 to 2024-06-27) - 3 articles
+2025-07-20 23:22:57,577 - INFO - 💾 Added 3 new unique articles (total: 99)
+2025-07-20 23:22:59,082 - INFO - 🔍 API Call: tata_group_companies (2024-06-20 to 2024-06-27)
+2025-07-20 23:22:59,479 - INFO - ✅ Cached: tata_group_companies (2024-06-20 to 2024-06-27) - 3 articles
+2025-07-20 23:22:59,483 - INFO - 💾 Added 3 new unique articles (total: 102)
+2025-07-20 23:23:00,988 - INFO - 🔍 API Call: hdfc_icici_banking (2024-06-20 to 2024-06-27)
+2025-07-20 23:23:01,653 - INFO - ✅ Cached: hdfc_icici_banking (2024-06-20 to 2024-06-27) - 3 articles
+2025-07-20 23:23:01,658 - INFO - 💾 Added 2 new unique articles (total: 104)
+2025-07-20 23:23:03,168 - INFO - 🔍 API Call: infosys_wipro_it (2024-06-20 to 2024-06-27)
+2025-07-20 23:23:03,849 - INFO - ✅ Cached: infosys_wipro_it (2024-06-20 to 2024-06-27) - 3 articles
+2025-07-20 23:23:03,854 - INFO - 💾 Added 2 new unique articles (total: 106)
+2025-07-20 23:23:05,359 - INFO - 🔍 API Call: indian_oil_gas (2024-06-20 to 2024-06-27)
+2025-07-20 23:23:07,489 - INFO - ✅ Cached: indian_oil_gas (2024-06-20 to 2024-06-27) - 3 articles
+2025-07-20 23:23:07,494 - INFO - 💾 Added 3 new unique articles (total: 109)
+2025-07-20 23:23:08,999 - INFO - 🔍 API Call: indian_steel_sector (2024-06-20 to 2024-06-27)
+2025-07-20 23:23:09,368 - INFO - ✅ Cached: indian_steel_sector (2024-06-20 to 2024-06-27) - 3 articles
+2025-07-20 23:23:09,374 - INFO - 💾 Added 1 new unique articles (total: 110)
+2025-07-20 23:23:10,879 - INFO - 🔍 API Call: indian_cement_companies (2024-06-20 to 2024-06-27)
+2025-07-20 23:23:11,183 - INFO - ✅ Cached: indian_cement_companies (2024-06-20 to 2024-06-27) - 3 articles
+2025-07-20 23:23:11,189 - INFO - 💾 Added 3 new unique articles (total: 113)
+2025-07-20 23:23:12,694 - INFO - 🔍 API Call: indian_telecom_airtel (2024-06-20 to 2024-06-27)
+2025-07-20 23:23:13,343 - INFO - ✅ Cached: indian_telecom_airtel (2024-06-20 to 2024-06-27) - 2 articles
+2025-07-20 23:23:13,351 - INFO - 💾 Added 2 new unique articles (total: 115)
+2025-07-20 23:23:14,856 - INFO - 📅 Processing: 2024-06-27 to 2024-07-04
+2025-07-20 23:23:14,857 - INFO - 🔍 API Call: general_indian_market (2024-06-27 to 2024-07-04)
+2025-07-20 23:23:15,215 - INFO - ✅ Cached: general_indian_market (2024-06-27 to 2024-07-04) - 3 articles
+2025-07-20 23:23:15,222 - INFO - 💾 Added 3 new unique articles (total: 118)
+2025-07-20 23:23:16,728 - INFO - 🔍 API Call: bse_sensex_trading (2024-06-27 to 2024-07-04)
+2025-07-20 23:23:17,350 - INFO - ✅ Cached: bse_sensex_trading (2024-06-27 to 2024-07-04) - 3 articles
+2025-07-20 23:23:17,355 - INFO - 💾 Added 3 new unique articles (total: 121)
+2025-07-20 23:23:18,861 - INFO - 🔍 API Call: nse_nifty_index (2024-06-27 to 2024-07-04)
+2025-07-20 23:23:19,412 - INFO - ✅ Cached: nse_nifty_index (2024-06-27 to 2024-07-04) - 3 articles
+2025-07-20 23:23:19,417 - INFO - 💾 Added 3 new unique articles (total: 124)
+2025-07-20 23:23:20,922 - INFO - 🔍 API Call: indian_banking_sector (2024-06-27 to 2024-07-04)
+2025-07-20 23:23:21,305 - INFO - ✅ Cached: indian_banking_sector (2024-06-27 to 2024-07-04) - 3 articles
+2025-07-20 23:23:21,310 - INFO - 💾 Added 3 new unique articles (total: 127)
+2025-07-20 23:23:22,815 - INFO - 🔍 API Call: indian_it_companies (2024-06-27 to 2024-07-04)
+2025-07-20 23:23:23,264 - INFO - ✅ Cached: indian_it_companies (2024-06-27 to 2024-07-04) - 3 articles
+2025-07-20 23:23:23,271 - INFO - 💾 Added 3 new unique articles (total: 130)
+2025-07-20 23:23:24,776 - INFO - 🔍 API Call: indian_pharmaceutical (2024-06-27 to 2024-07-04)
+2025-07-20 23:23:25,151 - INFO - ✅ Cached: indian_pharmaceutical (2024-06-27 to 2024-07-04) - 3 articles
+2025-07-20 23:23:25,156 - INFO - 💾 Added 3 new unique articles (total: 133)
+2025-07-20 23:23:26,661 - INFO - 🔍 API Call: indian_automobile (2024-06-27 to 2024-07-04)
+2025-07-20 23:23:26,939 - INFO - ✅ Cached: indian_automobile (2024-06-27 to 2024-07-04) - 3 articles
+2025-07-20 23:23:26,946 - INFO - 💾 Added 3 new unique articles (total: 136)
+2025-07-20 23:23:28,451 - INFO - 🔍 API Call: reliance_industries (2024-06-27 to 2024-07-04)
+2025-07-20 23:23:28,910 - INFO - ✅ Cached: reliance_industries (2024-06-27 to 2024-07-04) - 3 articles
+2025-07-20 23:23:28,916 - INFO - 💾 Added 3 new unique articles (total: 139)
+2025-07-20 23:23:30,417 - INFO - 🔍 API Call: tata_group_companies (2024-06-27 to 2024-07-04)
+2025-07-20 23:23:30,749 - INFO - ✅ Cached: tata_group_companies (2024-06-27 to 2024-07-04) - 2 articles
+2025-07-20 23:23:30,754 - INFO - 💾 Added 2 new unique articles (total: 141)
+2025-07-20 23:23:32,256 - INFO - 🔍 API Call: hdfc_icici_banking (2024-06-27 to 2024-07-04)
+2025-07-20 23:23:32,663 - INFO - ✅ Cached: hdfc_icici_banking (2024-06-27 to 2024-07-04) - 3 articles
+2025-07-20 23:23:32,668 - INFO - 💾 Added 3 new unique articles (total: 144)
+2025-07-20 23:23:34,177 - INFO - 🔍 API Call: infosys_wipro_it (2024-06-27 to 2024-07-04)
+2025-07-20 23:23:34,649 - INFO - ✅ Cached: infosys_wipro_it (2024-06-27 to 2024-07-04) - 3 articles
+2025-07-20 23:23:34,658 - INFO - 💾 Added 2 new unique articles (total: 146)
+2025-07-20 23:23:36,166 - INFO - 🔍 API Call: indian_oil_gas (2024-06-27 to 2024-07-04)
+2025-07-20 23:23:36,418 - INFO - ✅ Cached: indian_oil_gas (2024-06-27 to 2024-07-04) - 2 articles
+2025-07-20 23:23:36,424 - INFO - 💾 Added 2 new unique articles (total: 148)
+2025-07-20 23:23:37,929 - INFO - 🔍 API Call: indian_steel_sector (2024-06-27 to 2024-07-04)
+2025-07-20 23:23:38,355 - INFO - ✅ Cached: indian_steel_sector (2024-06-27 to 2024-07-04) - 3 articles
+2025-07-20 23:23:38,361 - INFO - 💾 Added 3 new unique articles (total: 151)
+2025-07-20 23:23:39,866 - INFO - 🔍 API Call: indian_cement_companies (2024-06-27 to 2024-07-04)
+2025-07-20 23:23:40,342 - INFO - ✅ Cached: indian_cement_companies (2024-06-27 to 2024-07-04) - 3 articles
+2025-07-20 23:23:40,346 - INFO - 💾 Added 2 new unique articles (total: 153)
+2025-07-20 23:23:41,851 - INFO - 🔍 API Call: indian_telecom_airtel (2024-06-27 to 2024-07-04)
+2025-07-20 23:23:42,382 - INFO - ✅ Cached: indian_telecom_airtel (2024-06-27 to 2024-07-04) - 3 articles
+2025-07-20 23:23:42,385 - INFO - 💾 Added 3 new unique articles (total: 156)
+2025-07-20 23:23:43,890 - INFO - 📅 Processing: 2024-07-04 to 2024-07-11
+2025-07-20 23:23:43,891 - INFO - 🔍 API Call: general_indian_market (2024-07-04 to 2024-07-11)
+2025-07-20 23:23:44,267 - INFO - ✅ Cached: general_indian_market (2024-07-04 to 2024-07-11) - 3 articles
+2025-07-20 23:23:44,270 - INFO - 💾 Added 3 new unique articles (total: 159)
+2025-07-20 23:23:45,776 - INFO - 🔍 API Call: bse_sensex_trading (2024-07-04 to 2024-07-11)
+2025-07-20 23:23:46,130 - INFO - ✅ Cached: bse_sensex_trading (2024-07-04 to 2024-07-11) - 3 articles
+2025-07-20 23:23:46,138 - INFO - 💾 Added 3 new unique articles (total: 162)
+2025-07-20 23:23:47,643 - INFO - 🔍 API Call: nse_nifty_index (2024-07-04 to 2024-07-11)
+2025-07-20 23:23:47,962 - INFO - ✅ Cached: nse_nifty_index (2024-07-04 to 2024-07-11) - 3 articles
+2025-07-20 23:23:47,967 - INFO - 💾 Added 3 new unique articles (total: 165)
+2025-07-20 23:23:49,469 - INFO - 🔍 API Call: indian_banking_sector (2024-07-04 to 2024-07-11)
+2025-07-20 23:23:49,787 - INFO - ✅ Cached: indian_banking_sector (2024-07-04 to 2024-07-11) - 3 articles
+2025-07-20 23:23:49,796 - INFO - 💾 Added 3 new unique articles (total: 168)
+2025-07-20 23:23:51,301 - INFO - 🔍 API Call: indian_it_companies (2024-07-04 to 2024-07-11)
+2025-07-20 23:23:51,804 - INFO - ✅ Cached: indian_it_companies (2024-07-04 to 2024-07-11) - 3 articles
+2025-07-20 23:23:51,808 - INFO - 💾 Added 3 new unique articles (total: 171)
+2025-07-20 23:23:53,311 - INFO - 🔍 API Call: indian_pharmaceutical (2024-07-04 to 2024-07-11)
+2025-07-20 23:23:53,521 - INFO - ✅ Cached: indian_pharmaceutical (2024-07-04 to 2024-07-11) - 3 articles
+2025-07-20 23:23:53,530 - INFO - 💾 Added 3 new unique articles (total: 174)
+2025-07-20 23:23:55,035 - INFO - 🔍 API Call: indian_automobile (2024-07-04 to 2024-07-11)
+2025-07-20 23:23:55,262 - INFO - ✅ Cached: indian_automobile (2024-07-04 to 2024-07-11) - 3 articles
+2025-07-20 23:23:55,267 - INFO - 💾 Added 2 new unique articles (total: 176)
+2025-07-20 23:23:56,773 - INFO - 🔍 API Call: reliance_industries (2024-07-04 to 2024-07-11)
+2025-07-20 23:23:56,990 - INFO - ✅ Cached: reliance_industries (2024-07-04 to 2024-07-11) - 3 articles
+2025-07-20 23:23:56,998 - INFO - 💾 Added 3 new unique articles (total: 179)
+2025-07-20 23:23:58,503 - INFO - 🔍 API Call: tata_group_companies (2024-07-04 to 2024-07-11)
+2025-07-20 23:23:58,743 - INFO - ✅ Cached: tata_group_companies (2024-07-04 to 2024-07-11) - 1 articles
+2025-07-20 23:23:58,750 - INFO - 💾 Added 1 new unique articles (total: 180)
+2025-07-20 23:24:00,256 - INFO - 🔍 API Call: hdfc_icici_banking (2024-07-04 to 2024-07-11)
+2025-07-20 23:24:00,705 - INFO - ✅ Cached: hdfc_icici_banking (2024-07-04 to 2024-07-11) - 3 articles
+2025-07-20 23:24:00,711 - INFO - 💾 Added 3 new unique articles (total: 183)
+2025-07-20 23:24:02,217 - INFO - 🔍 API Call: infosys_wipro_it (2024-07-04 to 2024-07-11)
+2025-07-20 23:24:02,615 - INFO - ✅ Cached: infosys_wipro_it (2024-07-04 to 2024-07-11) - 3 articles
+2025-07-20 23:24:02,623 - INFO - 💾 Added 3 new unique articles (total: 186)
+2025-07-20 23:24:04,128 - INFO - 🔍 API Call: indian_oil_gas (2024-07-04 to 2024-07-11)
+2025-07-20 23:24:04,425 - INFO - ✅ Cached: indian_oil_gas (2024-07-04 to 2024-07-11) - 0 articles
+2025-07-20 23:24:05,930 - INFO - 🔍 API Call: indian_steel_sector (2024-07-04 to 2024-07-11)
+2025-07-20 23:24:06,388 - INFO - ✅ Cached: indian_steel_sector (2024-07-04 to 2024-07-11) - 3 articles
+2025-07-20 23:24:06,397 - INFO - 💾 Added 2 new unique articles (total: 188)
+2025-07-20 23:24:07,903 - INFO - 🔍 API Call: indian_cement_companies (2024-07-04 to 2024-07-11)
+2025-07-20 23:24:08,332 - INFO - ✅ Cached: indian_cement_companies (2024-07-04 to 2024-07-11) - 3 articles
+2025-07-20 23:24:08,342 - INFO - 💾 Added 1 new unique articles (total: 189)
+2025-07-20 23:24:09,847 - INFO - 🔍 API Call: indian_telecom_airtel (2024-07-04 to 2024-07-11)
+2025-07-20 23:24:10,385 - INFO - ✅ Cached: indian_telecom_airtel (2024-07-04 to 2024-07-11) - 3 articles
+2025-07-20 23:24:10,391 - INFO - 💾 Added 3 new unique articles (total: 192)
+2025-07-20 23:24:11,896 - INFO - 📅 Processing: 2024-07-11 to 2024-07-18
+2025-07-20 23:24:11,897 - INFO - 🔍 API Call: general_indian_market (2024-07-11 to 2024-07-18)
+2025-07-20 23:24:12,256 - INFO - ✅ Cached: general_indian_market (2024-07-11 to 2024-07-18) - 3 articles
+2025-07-20 23:24:12,261 - INFO - 💾 Added 3 new unique articles (total: 195)
+2025-07-20 23:24:13,766 - INFO - 🔍 API Call: bse_sensex_trading (2024-07-11 to 2024-07-18)
+2025-07-20 23:24:14,373 - INFO - ✅ Cached: bse_sensex_trading (2024-07-11 to 2024-07-18) - 3 articles
+2025-07-20 23:24:14,382 - INFO - 💾 Added 3 new unique articles (total: 198)
+2025-07-20 23:24:15,888 - INFO - 🔍 API Call: nse_nifty_index (2024-07-11 to 2024-07-18)
+2025-07-20 23:24:16,421 - INFO - ✅ Cached: nse_nifty_index (2024-07-11 to 2024-07-18) - 3 articles
+2025-07-20 23:24:16,429 - INFO - 💾 Added 3 new unique articles (total: 201)
+2025-07-20 23:24:17,935 - INFO - 🔍 API Call: indian_banking_sector (2024-07-11 to 2024-07-18)
+2025-07-20 23:24:18,431 - INFO - ✅ Cached: indian_banking_sector (2024-07-11 to 2024-07-18) - 3 articles
+2025-07-20 23:24:18,440 - INFO - 💾 Added 3 new unique articles (total: 204)
+2025-07-20 23:24:19,945 - INFO - 🔍 API Call: indian_it_companies (2024-07-11 to 2024-07-18)
+2025-07-20 23:24:20,519 - INFO - ✅ Cached: indian_it_companies (2024-07-11 to 2024-07-18) - 3 articles
+2025-07-20 23:24:20,529 - INFO - 💾 Added 3 new unique articles (total: 207)
+2025-07-20 23:24:22,034 - INFO - 🔍 API Call: indian_pharmaceutical (2024-07-11 to 2024-07-18)
+2025-07-20 23:24:22,426 - INFO - ✅ Cached: indian_pharmaceutical (2024-07-11 to 2024-07-18) - 3 articles
+2025-07-20 23:24:22,435 - INFO - 💾 Added 3 new unique articles (total: 210)
+2025-07-20 23:24:23,941 - INFO - 🔍 API Call: indian_automobile (2024-07-11 to 2024-07-18)
+2025-07-20 23:24:24,410 - INFO - ✅ Cached: indian_automobile (2024-07-11 to 2024-07-18) - 3 articles
+2025-07-20 23:24:24,419 - INFO - 💾 Added 3 new unique articles (total: 213)
+2025-07-20 23:24:25,925 - INFO - 🔍 API Call: reliance_industries (2024-07-11 to 2024-07-18)
+2025-07-20 23:24:26,302 - INFO - ✅ Cached: reliance_industries (2024-07-11 to 2024-07-18) - 3 articles
+2025-07-20 23:24:26,312 - INFO - 💾 Added 3 new unique articles (total: 216)
+2025-07-20 23:24:27,817 - INFO - 🔍 API Call: tata_group_companies (2024-07-11 to 2024-07-18)
+2025-07-20 23:24:28,232 - INFO - ✅ Cached: tata_group_companies (2024-07-11 to 2024-07-18) - 1 articles
+2025-07-20 23:24:28,236 - INFO - 💾 Added 1 new unique articles (total: 217)
+2025-07-20 23:24:29,742 - INFO - 🔍 API Call: hdfc_icici_banking (2024-07-11 to 2024-07-18)
+2025-07-20 23:24:30,040 - INFO - ✅ Cached: hdfc_icici_banking (2024-07-11 to 2024-07-18) - 3 articles
+2025-07-20 23:24:30,047 - INFO - 💾 Added 3 new unique articles (total: 220)
+2025-07-20 23:24:31,552 - INFO - 🔍 API Call: infosys_wipro_it (2024-07-11 to 2024-07-18)
+2025-07-20 23:24:32,162 - INFO - ✅ Cached: infosys_wipro_it (2024-07-11 to 2024-07-18) - 3 articles
+2025-07-20 23:24:32,172 - INFO - 💾 Added 3 new unique articles (total: 223)
+2025-07-20 23:24:33,677 - INFO - 🔍 API Call: indian_oil_gas (2024-07-11 to 2024-07-18)
+2025-07-20 23:24:34,179 - INFO - ✅ Cached: indian_oil_gas (2024-07-11 to 2024-07-18) - 3 articles
+2025-07-20 23:24:34,185 - INFO - 💾 Added 3 new unique articles (total: 226)
+2025-07-20 23:24:35,691 - INFO - 🔍 API Call: indian_steel_sector (2024-07-11 to 2024-07-18)
+2025-07-20 23:24:36,003 - WARNING - ⚠️  API error: 402
+2025-07-20 23:24:36,006 - INFO - ✅ Cached: indian_steel_sector (2024-07-11 to 2024-07-18) - 0 articles
+2025-07-20 23:24:37,512 - INFO - 🔍 API Call: indian_cement_companies (2024-07-11 to 2024-07-18)
+2025-07-20 23:24:37,659 - WARNING - ⚠️  API error: 402
+2025-07-20 23:24:37,662 - INFO - ✅ Cached: indian_cement_companies (2024-07-11 to 2024-07-18) - 0 articles
+2025-07-20 23:24:39,168 - INFO - 🔍 API Call: indian_telecom_airtel (2024-07-11 to 2024-07-18)
+2025-07-20 23:24:39,462 - WARNING - ⚠️  API error: 402
+2025-07-20 23:24:39,464 - INFO - ✅ Cached: indian_telecom_airtel (2024-07-11 to 2024-07-18) - 0 articles
+2025-07-20 23:24:40,973 - INFO - 📅 Processing: 2024-07-18 to 2024-07-25
+2025-07-20 23:24:40,973 - INFO - 🔍 API Call: general_indian_market (2024-07-18 to 2024-07-25)
+2025-07-20 23:24:41,260 - WARNING - ⚠️  API error: 402
+2025-07-20 23:24:41,261 - INFO - ✅ Cached: general_indian_market (2024-07-18 to 2024-07-25) - 0 articles
+2025-07-20 23:24:42,767 - INFO - 🔍 API Call: bse_sensex_trading (2024-07-18 to 2024-07-25)
+2025-07-20 23:24:43,143 - WARNING - ⚠️  API error: 402
+2025-07-20 23:24:43,147 - INFO - ✅ Cached: bse_sensex_trading (2024-07-18 to 2024-07-25) - 0 articles
+2025-07-20 23:24:44,652 - INFO - 🔍 API Call: nse_nifty_index (2024-07-18 to 2024-07-25)
+2025-07-20 23:24:44,794 - WARNING - ⚠️  API error: 402
+2025-07-20 23:24:44,797 - INFO - ✅ Cached: nse_nifty_index (2024-07-18 to 2024-07-25) - 0 articles
+2025-07-20 23:24:46,299 - INFO - 🔍 API Call: indian_banking_sector (2024-07-18 to 2024-07-25)
+2025-07-20 23:24:46,598 - WARNING - ⚠️  API error: 402
+2025-07-20 23:24:46,603 - INFO - ✅ Cached: indian_banking_sector (2024-07-18 to 2024-07-25) - 0 articles
+2025-07-20 23:24:48,105 - INFO - 🔍 API Call: indian_it_companies (2024-07-18 to 2024-07-25)
+2025-07-20 23:24:48,469 - WARNING - ⚠️  API error: 402
+2025-07-20 23:24:48,472 - INFO - ✅ Cached: indian_it_companies (2024-07-18 to 2024-07-25) - 0 articles
+2025-07-20 23:24:49,978 - INFO - 🔍 API Call: indian_pharmaceutical (2024-07-18 to 2024-07-25)
+2025-07-20 23:24:50,131 - WARNING - ⚠️  API error: 402
+2025-07-20 23:24:50,134 - INFO - ✅ Cached: indian_pharmaceutical (2024-07-18 to 2024-07-25) - 0 articles
+2025-07-20 23:24:51,639 - INFO - 🔍 API Call: indian_automobile (2024-07-18 to 2024-07-25)
+2025-07-20 23:24:51,922 - WARNING - ⚠️  API error: 402
+2025-07-20 23:24:51,925 - INFO - ✅ Cached: indian_automobile (2024-07-18 to 2024-07-25) - 0 articles
+2025-07-20 23:24:53,428 - INFO - 🔍 API Call: reliance_industries (2024-07-18 to 2024-07-25)
+2025-07-20 23:24:53,586 - WARNING - ⚠️  API error: 402
+2025-07-20 23:24:53,589 - INFO - ✅ Cached: reliance_industries (2024-07-18 to 2024-07-25) - 0 articles
+2025-07-20 23:24:55,095 - INFO - 🔍 API Call: tata_group_companies (2024-07-18 to 2024-07-25)
+2025-07-20 23:24:55,395 - WARNING - ⚠️  API error: 402
+2025-07-20 23:24:55,399 - INFO - ✅ Cached: tata_group_companies (2024-07-18 to 2024-07-25) - 0 articles
+2025-07-20 23:24:56,904 - INFO - 🔍 API Call: hdfc_icici_banking (2024-07-18 to 2024-07-25)
+2025-07-20 23:24:57,037 - WARNING - ⚠️  API error: 402
+2025-07-20 23:24:57,041 - INFO - ✅ Cached: hdfc_icici_banking (2024-07-18 to 2024-07-25) - 0 articles
+2025-07-20 23:24:58,546 - WARNING - 🛑 Daily API limit reached
+2025-07-20 23:24:58,562 - INFO - 📊 Exported 226 articles to smart_cached_news.csv
+2025-07-20 23:24:58,563 - INFO - 🎉 SMART FETCHING COMPLETED!
+2025-07-20 23:24:58,563 - INFO - ==================================================
+2025-07-20 23:24:58,563 - INFO - 📊 Final Statistics:
+2025-07-20 23:24:58,563 - INFO -    Total articles in storage: 226
+2025-07-20 23:24:58,563 - INFO -    New articles this run: 226
+2025-07-20 23:24:58,563 - INFO -    API calls made: 84
+2025-07-20 23:24:58,563 - INFO -    API calls skipped (cached): 0
+2025-07-20 23:24:58,563 - INFO -    Efficiency: 2.7 articles per API call
+2025-07-20 23:24:58,563 - INFO - 📁 Results saved to: smart_cached_news.csv
+2025-07-20 23:29:01,526 - INFO - Loaded cache: 100 previous API calls
+2025-07-20 23:29:01,528 - INFO - 📚 Loaded 226 existing articles from storage
+2025-07-20 23:29:01,528 - INFO - ✅ Smart Marketaux API initialized
+2025-07-20 23:29:04,280 - INFO - 🧠 SMART CACHING NEWS FETCHER
+2025-07-20 23:29:04,280 - INFO - ==================================================
+2025-07-20 23:29:04,280 - INFO - 📊 Cache Status:
+2025-07-20 23:29:04,280 - INFO -    Previous API calls: 100
+2025-07-20 23:29:04,280 - INFO -    Articles in storage: 226
+2025-07-20 23:29:04,280 - INFO -    Last update: 2025-07-20T23:24:57.038604
+2025-07-20 23:29:04,285 - INFO - 📅 Processing: 2024-06-06 to 2024-06-13
+2025-07-20 23:29:04,285 - INFO - 🔍 API Call: general_indian_market (2024-06-06 to 2024-06-13)
+2025-07-20 23:29:04,785 - INFO - ✅ Cached: general_indian_market (2024-06-06 to 2024-06-13) - 3 articles
+2025-07-20 23:29:06,288 - INFO - 🔍 API Call: bse_sensex_trading (2024-06-06 to 2024-06-13)
+2025-07-20 23:29:06,873 - INFO - ✅ Cached: bse_sensex_trading (2024-06-06 to 2024-06-13) - 3 articles
+2025-07-20 23:29:08,377 - INFO - 🔍 API Call: nse_nifty_index (2024-06-06 to 2024-06-13)
+2025-07-20 23:29:08,883 - INFO - ✅ Cached: nse_nifty_index (2024-06-06 to 2024-06-13) - 0 articles
+2025-07-20 23:29:10,386 - INFO - 🔍 API Call: indian_banking_sector (2024-06-06 to 2024-06-13)
+2025-07-20 23:29:10,999 - INFO - ✅ Cached: indian_banking_sector (2024-06-06 to 2024-06-13) - 3 articles
+2025-07-20 23:29:12,504 - INFO - 🔍 API Call: indian_it_companies (2024-06-06 to 2024-06-13)
+2025-07-20 23:29:13,039 - INFO - ✅ Cached: indian_it_companies (2024-06-06 to 2024-06-13) - 3 articles
+2025-07-20 23:29:14,540 - INFO - 🔍 API Call: indian_pharmaceutical (2024-06-06 to 2024-06-13)
+2025-07-20 23:29:14,928 - INFO - ✅ Cached: indian_pharmaceutical (2024-06-06 to 2024-06-13) - 3 articles
+2025-07-20 23:29:16,433 - INFO - 🔍 API Call: indian_automobile (2024-06-06 to 2024-06-13)
+2025-07-20 23:29:16,834 - INFO - ✅ Cached: indian_automobile (2024-06-06 to 2024-06-13) - 3 articles
+2025-07-20 23:29:18,339 - INFO - 🔍 API Call: reliance_industries (2024-06-06 to 2024-06-13)
+2025-07-20 23:29:18,875 - INFO - ✅ Cached: reliance_industries (2024-06-06 to 2024-06-13) - 3 articles
+2025-07-20 23:29:20,380 - INFO - 🔍 API Call: tata_group_companies (2024-06-06 to 2024-06-13)
+2025-07-20 23:29:20,842 - INFO - ✅ Cached: tata_group_companies (2024-06-06 to 2024-06-13) - 3 articles
+2025-07-20 23:29:22,347 - INFO - 🔍 API Call: hdfc_icici_banking (2024-06-06 to 2024-06-13)
+2025-07-20 23:29:22,913 - INFO - ✅ Cached: hdfc_icici_banking (2024-06-06 to 2024-06-13) - 3 articles
+2025-07-20 23:29:24,419 - INFO - 🔍 API Call: infosys_wipro_it (2024-06-06 to 2024-06-13)
+2025-07-20 23:29:24,993 - INFO - ✅ Cached: infosys_wipro_it (2024-06-06 to 2024-06-13) - 3 articles
+2025-07-20 23:29:26,499 - INFO - 🔍 API Call: indian_oil_gas (2024-06-06 to 2024-06-13)
+2025-07-20 23:29:27,044 - INFO - ✅ Cached: indian_oil_gas (2024-06-06 to 2024-06-13) - 3 articles
+2025-07-20 23:29:28,549 - INFO - 🔍 API Call: indian_steel_sector (2024-06-06 to 2024-06-13)
+2025-07-20 23:29:28,950 - INFO - ✅ Cached: indian_steel_sector (2024-06-06 to 2024-06-13) - 1 articles
+2025-07-20 23:29:30,453 - INFO - 🔍 API Call: indian_cement_companies (2024-06-06 to 2024-06-13)
+2025-07-20 23:29:30,924 - INFO - ✅ Cached: indian_cement_companies (2024-06-06 to 2024-06-13) - 3 articles
+2025-07-20 23:29:32,430 - INFO - 🔍 API Call: indian_telecom_airtel (2024-06-06 to 2024-06-13)
+2025-07-20 23:29:32,989 - INFO - ✅ Cached: indian_telecom_airtel (2024-06-06 to 2024-06-13) - 3 articles
+2025-07-20 23:29:34,492 - INFO - 📅 Processing: 2024-06-13 to 2024-06-20
+2025-07-20 23:29:34,492 - INFO - 🔍 API Call: general_indian_market (2024-06-13 to 2024-06-20)
+2025-07-20 23:29:34,862 - INFO - ✅ Cached: general_indian_market (2024-06-13 to 2024-06-20) - 3 articles
+2025-07-20 23:29:36,367 - INFO - 🔍 API Call: bse_sensex_trading (2024-06-13 to 2024-06-20)
+2025-07-20 23:29:36,936 - INFO - ✅ Cached: bse_sensex_trading (2024-06-13 to 2024-06-20) - 3 articles
+2025-07-20 23:29:38,439 - INFO - 🔍 API Call: nse_nifty_index (2024-06-13 to 2024-06-20)
+2025-07-20 23:29:38,884 - INFO - ✅ Cached: nse_nifty_index (2024-06-13 to 2024-06-20) - 3 articles
+2025-07-20 23:29:40,390 - INFO - 🔍 API Call: indian_banking_sector (2024-06-13 to 2024-06-20)
+2025-07-20 23:29:40,927 - INFO - ✅ Cached: indian_banking_sector (2024-06-13 to 2024-06-20) - 3 articles
+2025-07-20 23:29:42,433 - INFO - 🔍 API Call: indian_it_companies (2024-06-13 to 2024-06-20)
+2025-07-20 23:29:42,980 - INFO - ✅ Cached: indian_it_companies (2024-06-13 to 2024-06-20) - 3 articles
+2025-07-20 23:29:44,482 - INFO - 🔍 API Call: indian_pharmaceutical (2024-06-13 to 2024-06-20)
+2025-07-20 23:29:44,923 - INFO - ✅ Cached: indian_pharmaceutical (2024-06-13 to 2024-06-20) - 3 articles
+2025-07-20 23:29:46,426 - INFO - 🔍 API Call: indian_automobile (2024-06-13 to 2024-06-20)
+2025-07-20 23:29:46,971 - INFO - ✅ Cached: indian_automobile (2024-06-13 to 2024-06-20) - 3 articles
+2025-07-20 23:29:48,473 - INFO - 🔍 API Call: reliance_industries (2024-06-13 to 2024-06-20)
+2025-07-20 23:29:48,916 - INFO - ✅ Cached: reliance_industries (2024-06-13 to 2024-06-20) - 3 articles
+2025-07-20 23:29:50,419 - INFO - 🔍 API Call: tata_group_companies (2024-06-13 to 2024-06-20)
+2025-07-20 23:29:50,892 - INFO - ✅ Cached: tata_group_companies (2024-06-13 to 2024-06-20) - 0 articles
+2025-07-20 23:29:52,398 - INFO - 🔍 API Call: hdfc_icici_banking (2024-06-13 to 2024-06-20)
+2025-07-20 23:29:52,846 - INFO - ✅ Cached: hdfc_icici_banking (2024-06-13 to 2024-06-20) - 3 articles
+2025-07-20 23:29:54,352 - INFO - 🔍 API Call: infosys_wipro_it (2024-06-13 to 2024-06-20)
+2025-07-20 23:29:54,961 - INFO - ✅ Cached: infosys_wipro_it (2024-06-13 to 2024-06-20) - 3 articles
+2025-07-20 23:29:56,466 - INFO - 🔍 API Call: indian_oil_gas (2024-06-13 to 2024-06-20)
+2025-07-20 23:29:56,908 - INFO - ✅ Cached: indian_oil_gas (2024-06-13 to 2024-06-20) - 3 articles
+2025-07-20 23:29:58,413 - INFO - 🔍 API Call: indian_steel_sector (2024-06-13 to 2024-06-20)
+2025-07-20 23:29:58,842 - INFO - ✅ Cached: indian_steel_sector (2024-06-13 to 2024-06-20) - 1 articles
+2025-07-20 23:30:00,345 - INFO - 🔍 API Call: indian_cement_companies (2024-06-13 to 2024-06-20)
+2025-07-20 23:30:00,852 - INFO - ✅ Cached: indian_cement_companies (2024-06-13 to 2024-06-20) - 3 articles
+2025-07-20 23:30:02,358 - INFO - 🔍 API Call: indian_telecom_airtel (2024-06-13 to 2024-06-20)
+2025-07-20 23:30:04,113 - INFO - ✅ Cached: indian_telecom_airtel (2024-06-13 to 2024-06-20) - 3 articles
+2025-07-20 23:30:05,615 - INFO - 📅 Processing: 2024-06-20 to 2024-06-27
+2025-07-20 23:30:05,615 - INFO - 🔍 API Call: general_indian_market (2024-06-20 to 2024-06-27)
+2025-07-20 23:30:05,979 - INFO - ✅ Cached: general_indian_market (2024-06-20 to 2024-06-27) - 3 articles
+2025-07-20 23:30:07,485 - INFO - 🔍 API Call: bse_sensex_trading (2024-06-20 to 2024-06-27)
+2025-07-20 23:30:08,067 - INFO - ✅ Cached: bse_sensex_trading (2024-06-20 to 2024-06-27) - 3 articles
+2025-07-20 23:30:09,573 - INFO - 🔍 API Call: nse_nifty_index (2024-06-20 to 2024-06-27)
+2025-07-20 23:30:10,062 - INFO - ✅ Cached: nse_nifty_index (2024-06-20 to 2024-06-27) - 3 articles
+2025-07-20 23:30:11,567 - INFO - 🔍 API Call: indian_banking_sector (2024-06-20 to 2024-06-27)
+2025-07-20 23:30:12,060 - INFO - ✅ Cached: indian_banking_sector (2024-06-20 to 2024-06-27) - 3 articles
+2025-07-20 23:30:13,565 - INFO - 🔍 API Call: indian_it_companies (2024-06-20 to 2024-06-27)
+2025-07-20 23:30:14,061 - INFO - ✅ Cached: indian_it_companies (2024-06-20 to 2024-06-27) - 3 articles
+2025-07-20 23:30:15,566 - INFO - 🔍 API Call: indian_pharmaceutical (2024-06-20 to 2024-06-27)
+2025-07-20 23:30:15,926 - INFO - ✅ Cached: indian_pharmaceutical (2024-06-20 to 2024-06-27) - 3 articles
+2025-07-20 23:30:17,427 - INFO - 🔍 API Call: indian_automobile (2024-06-20 to 2024-06-27)
+2025-07-20 23:30:17,775 - INFO - ✅ Cached: indian_automobile (2024-06-20 to 2024-06-27) - 3 articles
+2025-07-20 23:30:19,282 - INFO - 🔍 API Call: reliance_industries (2024-06-20 to 2024-06-27)
+2025-07-20 23:30:19,727 - INFO - ✅ Cached: reliance_industries (2024-06-20 to 2024-06-27) - 3 articles
+2025-07-20 23:30:21,233 - INFO - 🔍 API Call: tata_group_companies (2024-06-20 to 2024-06-27)
+2025-07-20 23:30:21,705 - INFO - ✅ Cached: tata_group_companies (2024-06-20 to 2024-06-27) - 3 articles
+2025-07-20 23:30:23,208 - INFO - 🔍 API Call: hdfc_icici_banking (2024-06-20 to 2024-06-27)
+2025-07-20 23:30:23,765 - INFO - ✅ Cached: hdfc_icici_banking (2024-06-20 to 2024-06-27) - 3 articles
+2025-07-20 23:30:25,271 - INFO - 🔍 API Call: infosys_wipro_it (2024-06-20 to 2024-06-27)
+2025-07-20 23:30:25,762 - INFO - ✅ Cached: infosys_wipro_it (2024-06-20 to 2024-06-27) - 3 articles
+2025-07-20 23:30:27,265 - INFO - 🔍 API Call: indian_oil_gas (2024-06-20 to 2024-06-27)
+2025-07-20 23:30:27,765 - INFO - ✅ Cached: indian_oil_gas (2024-06-20 to 2024-06-27) - 3 articles
+2025-07-20 23:30:29,267 - INFO - 🔍 API Call: indian_steel_sector (2024-06-20 to 2024-06-27)
+2025-07-20 23:30:29,775 - INFO - ✅ Cached: indian_steel_sector (2024-06-20 to 2024-06-27) - 3 articles
+2025-07-20 23:30:31,282 - INFO - 🔍 API Call: indian_cement_companies (2024-06-20 to 2024-06-27)
+2025-07-20 23:30:31,719 - INFO - ✅ Cached: indian_cement_companies (2024-06-20 to 2024-06-27) - 3 articles
+2025-07-20 23:30:33,220 - INFO - 🔍 API Call: indian_telecom_airtel (2024-06-20 to 2024-06-27)
+2025-07-20 23:30:33,615 - INFO - ✅ Cached: indian_telecom_airtel (2024-06-20 to 2024-06-27) - 2 articles
+2025-07-20 23:30:35,121 - INFO - 📅 Processing: 2024-06-27 to 2024-07-04
+2025-07-20 23:30:35,121 - INFO - 🔍 API Call: general_indian_market (2024-06-27 to 2024-07-04)
+2025-07-20 23:30:35,486 - INFO - ✅ Cached: general_indian_market (2024-06-27 to 2024-07-04) - 3 articles
+2025-07-20 23:30:36,992 - INFO - 🔍 API Call: bse_sensex_trading (2024-06-27 to 2024-07-04)
+2025-07-20 23:30:37,564 - INFO - ✅ Cached: bse_sensex_trading (2024-06-27 to 2024-07-04) - 3 articles
+2025-07-20 23:30:39,070 - INFO - 🔍 API Call: nse_nifty_index (2024-06-27 to 2024-07-04)
+2025-07-20 23:30:39,603 - INFO - ✅ Cached: nse_nifty_index (2024-06-27 to 2024-07-04) - 3 articles
+2025-07-20 23:30:41,105 - INFO - 🔍 API Call: indian_banking_sector (2024-06-27 to 2024-07-04)
+2025-07-20 23:30:41,522 - INFO - ✅ Cached: indian_banking_sector (2024-06-27 to 2024-07-04) - 3 articles
+2025-07-20 23:30:43,027 - INFO - 🔍 API Call: indian_it_companies (2024-06-27 to 2024-07-04)
+2025-07-20 23:30:43,601 - INFO - ✅ Cached: indian_it_companies (2024-06-27 to 2024-07-04) - 3 articles
+2025-07-20 23:30:45,107 - INFO - 🔍 API Call: indian_pharmaceutical (2024-06-27 to 2024-07-04)
+2025-07-20 23:30:45,547 - INFO - ✅ Cached: indian_pharmaceutical (2024-06-27 to 2024-07-04) - 3 articles
+2025-07-20 23:30:47,053 - INFO - 🔍 API Call: indian_automobile (2024-06-27 to 2024-07-04)
+2025-07-20 23:30:47,389 - INFO - ✅ Cached: indian_automobile (2024-06-27 to 2024-07-04) - 3 articles
+2025-07-20 23:30:48,891 - INFO - 🔍 API Call: reliance_industries (2024-06-27 to 2024-07-04)
+2025-07-20 23:30:49,435 - INFO - ✅ Cached: reliance_industries (2024-06-27 to 2024-07-04) - 3 articles
+2025-07-20 23:30:50,942 - INFO - 🔍 API Call: tata_group_companies (2024-06-27 to 2024-07-04)
+2025-07-20 23:30:51,383 - INFO - ✅ Cached: tata_group_companies (2024-06-27 to 2024-07-04) - 2 articles
+2025-07-20 23:30:52,886 - INFO - 🔍 API Call: hdfc_icici_banking (2024-06-27 to 2024-07-04)
+2025-07-20 23:30:53,385 - INFO - ✅ Cached: hdfc_icici_banking (2024-06-27 to 2024-07-04) - 3 articles
+2025-07-20 23:30:54,888 - INFO - 🔍 API Call: infosys_wipro_it (2024-06-27 to 2024-07-04)
+2025-07-20 23:30:55,382 - INFO - ✅ Cached: infosys_wipro_it (2024-06-27 to 2024-07-04) - 3 articles
+2025-07-20 23:30:56,886 - INFO - 🔍 API Call: indian_oil_gas (2024-06-27 to 2024-07-04)
+2025-07-20 23:30:57,322 - INFO - ✅ Cached: indian_oil_gas (2024-06-27 to 2024-07-04) - 2 articles
+2025-07-20 23:30:58,826 - INFO - 🔍 API Call: indian_steel_sector (2024-06-27 to 2024-07-04)
+2025-07-20 23:30:59,088 - INFO - ✅ Cached: indian_steel_sector (2024-06-27 to 2024-07-04) - 3 articles
+2025-07-20 23:31:00,594 - INFO - 🔍 API Call: indian_cement_companies (2024-06-27 to 2024-07-04)
+2025-07-20 23:31:01,074 - INFO - ✅ Cached: indian_cement_companies (2024-06-27 to 2024-07-04) - 3 articles
+2025-07-20 23:31:02,580 - INFO - 🔍 API Call: indian_telecom_airtel (2024-06-27 to 2024-07-04)
+2025-07-20 23:31:03,215 - INFO - ✅ Cached: indian_telecom_airtel (2024-06-27 to 2024-07-04) - 3 articles
+2025-07-20 23:31:04,721 - INFO - 📅 Processing: 2024-07-04 to 2024-07-11
+2025-07-20 23:31:04,721 - INFO - 🔍 API Call: general_indian_market (2024-07-04 to 2024-07-11)
+2025-07-20 23:31:05,115 - INFO - ✅ Cached: general_indian_market (2024-07-04 to 2024-07-11) - 3 articles
+2025-07-20 23:31:06,621 - INFO - 🔍 API Call: bse_sensex_trading (2024-07-04 to 2024-07-11)
+2025-07-20 23:31:07,217 - INFO - ✅ Cached: bse_sensex_trading (2024-07-04 to 2024-07-11) - 3 articles
+2025-07-20 23:31:08,723 - INFO - 🔍 API Call: nse_nifty_index (2024-07-04 to 2024-07-11)
+2025-07-20 23:31:09,405 - INFO - ✅ Cached: nse_nifty_index (2024-07-04 to 2024-07-11) - 3 articles
+2025-07-20 23:31:10,911 - INFO - 🔍 API Call: indian_banking_sector (2024-07-04 to 2024-07-11)
+2025-07-20 23:31:11,354 - INFO - ✅ Cached: indian_banking_sector (2024-07-04 to 2024-07-11) - 3 articles
+2025-07-20 23:31:12,860 - INFO - 🔍 API Call: indian_it_companies (2024-07-04 to 2024-07-11)
+2025-07-20 23:31:13,297 - INFO - ✅ Cached: indian_it_companies (2024-07-04 to 2024-07-11) - 3 articles
+2025-07-20 23:31:14,803 - INFO - 🔍 API Call: indian_pharmaceutical (2024-07-04 to 2024-07-11)
+2025-07-20 23:31:15,265 - INFO - ✅ Cached: indian_pharmaceutical (2024-07-04 to 2024-07-11) - 3 articles
+2025-07-20 23:31:16,771 - INFO - 🔍 API Call: indian_automobile (2024-07-04 to 2024-07-11)
+2025-07-20 23:31:17,090 - INFO - ✅ Cached: indian_automobile (2024-07-04 to 2024-07-11) - 3 articles
+2025-07-20 23:31:18,596 - INFO - 🔍 API Call: reliance_industries (2024-07-04 to 2024-07-11)
+2025-07-20 23:31:18,928 - INFO - ✅ Cached: reliance_industries (2024-07-04 to 2024-07-11) - 3 articles
+2025-07-20 23:31:20,434 - INFO - 🔍 API Call: tata_group_companies (2024-07-04 to 2024-07-11)
+2025-07-20 23:31:20,976 - INFO - ✅ Cached: tata_group_companies (2024-07-04 to 2024-07-11) - 1 articles
+2025-07-20 23:31:22,477 - INFO - 🔍 API Call: hdfc_icici_banking (2024-07-04 to 2024-07-11)
+2025-07-20 23:31:22,924 - INFO - ✅ Cached: hdfc_icici_banking (2024-07-04 to 2024-07-11) - 3 articles
+2025-07-20 23:31:24,427 - INFO - 🔍 API Call: infosys_wipro_it (2024-07-04 to 2024-07-11)
+2025-07-20 23:31:24,976 - INFO - ✅ Cached: infosys_wipro_it (2024-07-04 to 2024-07-11) - 3 articles
+2025-07-20 23:31:26,481 - INFO - 🔍 API Call: indian_oil_gas (2024-07-04 to 2024-07-11)
+2025-07-20 23:31:26,716 - INFO - ✅ Cached: indian_oil_gas (2024-07-04 to 2024-07-11) - 0 articles
+2025-07-20 23:31:28,218 - INFO - 🔍 API Call: indian_steel_sector (2024-07-04 to 2024-07-11)
+2025-07-20 23:31:28,698 - INFO - ✅ Cached: indian_steel_sector (2024-07-04 to 2024-07-11) - 3 articles
+2025-07-20 23:31:30,204 - INFO - 🔍 API Call: indian_cement_companies (2024-07-04 to 2024-07-11)
+2025-07-20 23:31:30,554 - INFO - ✅ Cached: indian_cement_companies (2024-07-04 to 2024-07-11) - 3 articles
+2025-07-20 23:31:32,060 - INFO - 🔍 API Call: indian_telecom_airtel (2024-07-04 to 2024-07-11)
+2025-07-20 23:31:32,562 - INFO - ✅ Cached: indian_telecom_airtel (2024-07-04 to 2024-07-11) - 3 articles
+2025-07-20 23:31:34,068 - INFO - 📅 Processing: 2024-07-11 to 2024-07-18
+2025-07-20 23:31:34,069 - INFO - 🔍 API Call: general_indian_market (2024-07-11 to 2024-07-18)
+2025-07-20 23:31:34,280 - INFO - ✅ Cached: general_indian_market (2024-07-11 to 2024-07-18) - 3 articles
+2025-07-20 23:31:35,781 - INFO - 🔍 API Call: bse_sensex_trading (2024-07-11 to 2024-07-18)
+2025-07-20 23:31:36,335 - INFO - ✅ Cached: bse_sensex_trading (2024-07-11 to 2024-07-18) - 3 articles
+2025-07-20 23:31:37,838 - INFO - 🔍 API Call: nse_nifty_index (2024-07-11 to 2024-07-18)
+2025-07-20 23:31:38,205 - INFO - ✅ Cached: nse_nifty_index (2024-07-11 to 2024-07-18) - 3 articles
+2025-07-20 23:31:39,711 - INFO - 🔍 API Call: indian_banking_sector (2024-07-11 to 2024-07-18)
+2025-07-20 23:31:40,159 - INFO - ✅ Cached: indian_banking_sector (2024-07-11 to 2024-07-18) - 3 articles
+2025-07-20 23:31:41,660 - INFO - 🔍 API Call: indian_it_companies (2024-07-11 to 2024-07-18)
+2025-07-20 23:31:42,234 - INFO - ✅ Cached: indian_it_companies (2024-07-11 to 2024-07-18) - 3 articles
+2025-07-20 23:31:43,743 - INFO - 🔍 API Call: indian_pharmaceutical (2024-07-11 to 2024-07-18)
+2025-07-20 23:31:44,128 - INFO - ✅ Cached: indian_pharmaceutical (2024-07-11 to 2024-07-18) - 3 articles
+2025-07-20 23:31:45,634 - INFO - 🔍 API Call: indian_automobile (2024-07-11 to 2024-07-18)
+2025-07-20 23:31:46,079 - INFO - ✅ Cached: indian_automobile (2024-07-11 to 2024-07-18) - 3 articles
+2025-07-20 23:31:47,585 - INFO - 🔍 API Call: reliance_industries (2024-07-11 to 2024-07-18)
+2025-07-20 23:31:48,149 - INFO - ✅ Cached: reliance_industries (2024-07-11 to 2024-07-18) - 3 articles
+2025-07-20 23:31:49,655 - INFO - 🔍 API Call: tata_group_companies (2024-07-11 to 2024-07-18)
+2025-07-20 23:31:50,060 - INFO - ✅ Cached: tata_group_companies (2024-07-11 to 2024-07-18) - 1 articles
+2025-07-20 23:31:51,564 - INFO - 🔍 API Call: hdfc_icici_banking (2024-07-11 to 2024-07-18)
+2025-07-20 23:31:52,081 - INFO - ✅ Cached: hdfc_icici_banking (2024-07-11 to 2024-07-18) - 3 articles
+2025-07-20 23:31:53,587 - INFO - 🔍 API Call: infosys_wipro_it (2024-07-11 to 2024-07-18)
+2025-07-20 23:31:54,156 - INFO - ✅ Cached: infosys_wipro_it (2024-07-11 to 2024-07-18) - 3 articles
+2025-07-20 23:31:55,659 - INFO - 🔍 API Call: indian_oil_gas (2024-07-11 to 2024-07-18)
+2025-07-20 23:31:56,101 - INFO - ✅ Cached: indian_oil_gas (2024-07-11 to 2024-07-18) - 3 articles
+2025-07-20 23:31:57,602 - INFO - 🔍 API Call: indian_steel_sector (2024-07-11 to 2024-07-18)
+2025-07-20 23:31:57,944 - INFO - ✅ Cached: indian_steel_sector (2024-07-11 to 2024-07-18) - 3 articles
+2025-07-20 23:31:57,957 - INFO - 💾 Added 3 new unique articles (total: 229)
+2025-07-20 23:31:59,466 - INFO - 🔍 API Call: indian_cement_companies (2024-07-11 to 2024-07-18)
+2025-07-20 23:31:59,742 - INFO - ✅ Cached: indian_cement_companies (2024-07-11 to 2024-07-18) - 3 articles
+2025-07-20 23:31:59,751 - INFO - 💾 Added 3 new unique articles (total: 232)
+2025-07-20 23:32:01,257 - INFO - 🔍 API Call: indian_telecom_airtel (2024-07-11 to 2024-07-18)
+2025-07-20 23:32:01,875 - INFO - ✅ Cached: indian_telecom_airtel (2024-07-11 to 2024-07-18) - 3 articles
+2025-07-20 23:32:01,890 - INFO - 💾 Added 3 new unique articles (total: 235)
+2025-07-20 23:32:03,395 - INFO - 📅 Processing: 2024-07-18 to 2024-07-25
+2025-07-20 23:32:03,396 - INFO - 🔍 API Call: general_indian_market (2024-07-18 to 2024-07-25)
+2025-07-20 23:32:03,781 - INFO - ✅ Cached: general_indian_market (2024-07-18 to 2024-07-25) - 3 articles
+2025-07-20 23:32:03,796 - INFO - 💾 Added 3 new unique articles (total: 238)
+2025-07-20 23:32:05,298 - INFO - 🔍 API Call: bse_sensex_trading (2024-07-18 to 2024-07-25)
+2025-07-20 23:32:05,827 - INFO - ✅ Cached: bse_sensex_trading (2024-07-18 to 2024-07-25) - 3 articles
+2025-07-20 23:32:05,841 - INFO - 💾 Added 3 new unique articles (total: 241)
+2025-07-20 23:32:07,346 - INFO - 🔍 API Call: nse_nifty_index (2024-07-18 to 2024-07-25)
+2025-07-20 23:32:07,622 - INFO - ✅ Cached: nse_nifty_index (2024-07-18 to 2024-07-25) - 3 articles
+2025-07-20 23:32:07,638 - INFO - 💾 Added 3 new unique articles (total: 244)
+2025-07-20 23:32:09,141 - INFO - 🔍 API Call: indian_banking_sector (2024-07-18 to 2024-07-25)
+2025-07-20 23:32:09,495 - INFO - ✅ Cached: indian_banking_sector (2024-07-18 to 2024-07-25) - 3 articles
+2025-07-20 23:32:09,510 - INFO - 💾 Added 3 new unique articles (total: 247)
+2025-07-20 23:32:11,016 - INFO - 🔍 API Call: indian_it_companies (2024-07-18 to 2024-07-25)
+2025-07-20 23:32:11,676 - INFO - ✅ Cached: indian_it_companies (2024-07-18 to 2024-07-25) - 3 articles
+2025-07-20 23:32:11,687 - INFO - 💾 Added 3 new unique articles (total: 250)
+2025-07-20 23:32:13,193 - INFO - 🔍 API Call: indian_pharmaceutical (2024-07-18 to 2024-07-25)
+2025-07-20 23:32:13,511 - INFO - ✅ Cached: indian_pharmaceutical (2024-07-18 to 2024-07-25) - 3 articles
+2025-07-20 23:32:13,523 - INFO - 💾 Added 3 new unique articles (total: 253)
+2025-07-20 23:32:15,028 - INFO - 🔍 API Call: indian_automobile (2024-07-18 to 2024-07-25)
+2025-07-20 23:32:15,801 - INFO - ✅ Cached: indian_automobile (2024-07-18 to 2024-07-25) - 1 articles
+2025-07-20 23:32:15,807 - INFO - 💾 Added 1 new unique articles (total: 254)
+2025-07-20 23:32:17,312 - INFO - 🔍 API Call: reliance_industries (2024-07-18 to 2024-07-25)
+2025-07-20 23:32:18,098 - INFO - ✅ Cached: reliance_industries (2024-07-18 to 2024-07-25) - 3 articles
+2025-07-20 23:32:18,117 - INFO - 💾 Added 3 new unique articles (total: 257)
+2025-07-20 23:32:19,622 - INFO - 🔍 API Call: tata_group_companies (2024-07-18 to 2024-07-25)
+2025-07-20 23:32:20,196 - INFO - ✅ Cached: tata_group_companies (2024-07-18 to 2024-07-25) - 2 articles
+2025-07-20 23:32:20,206 - INFO - 💾 Added 2 new unique articles (total: 259)
+2025-07-20 23:32:21,709 - INFO - 🔍 API Call: hdfc_icici_banking (2024-07-18 to 2024-07-25)
+2025-07-20 23:32:22,195 - INFO - ✅ Cached: hdfc_icici_banking (2024-07-18 to 2024-07-25) - 3 articles
+2025-07-20 23:32:22,205 - INFO - 💾 Added 3 new unique articles (total: 262)
+2025-07-20 23:32:23,711 - WARNING - 🛑 Daily API limit reached
+2025-07-20 23:32:23,726 - INFO - 📊 Exported 262 articles to smart_cached_news.csv
+2025-07-20 23:32:23,726 - INFO - 🎉 SMART FETCHING COMPLETED!
+2025-07-20 23:32:23,726 - INFO - ==================================================
+2025-07-20 23:32:23,726 - INFO - 📊 Final Statistics:
+2025-07-20 23:32:23,726 - INFO -    Total articles in storage: 262
+2025-07-20 23:32:23,726 - INFO -    New articles this run: 36
+2025-07-20 23:32:23,726 - INFO -    API calls made: 97
+2025-07-20 23:32:23,726 - INFO -    API calls skipped (cached): 0
+2025-07-20 23:32:23,726 - INFO -    Efficiency: 0.4 articles per API call
+2025-07-20 23:32:23,726 - INFO - 📁 Results saved to: smart_cached_news.csv
+2025-07-20 23:33:22,640 - INFO - Loaded cache: 200 previous API calls
+2025-07-20 23:33:22,644 - INFO - 📚 Loaded 262 existing articles from storage
+2025-07-20 23:33:22,644 - INFO - ✅ Smart Marketaux API initialized
+2025-07-20 23:33:24,813 - INFO - 🧠 SMART CACHING NEWS FETCHER
+2025-07-20 23:33:24,815 - INFO - ==================================================
+2025-07-20 23:33:24,815 - INFO - 📊 Cache Status:
+2025-07-20 23:33:24,815 - INFO -    Previous API calls: 200
+2025-07-20 23:33:24,815 - INFO -    Articles in storage: 262
+2025-07-20 23:33:24,815 - INFO -    Last update: 2025-07-20T23:32:22.188781
+2025-07-20 23:33:24,819 - INFO - 📅 Processing: 2024-06-06 to 2024-06-13
+2025-07-20 23:33:24,819 - INFO - 🔍 API Call: general_indian_market (2024-06-06 to 2024-06-13)
+2025-07-20 23:33:25,127 - WARNING - ⚠️  API error: 402
+2025-07-20 23:33:26,632 - INFO - 🔍 API Call: bse_sensex_trading (2024-06-06 to 2024-06-13)
+2025-07-20 23:33:26,931 - WARNING - ⚠️  API error: 402
+2025-07-20 23:33:28,436 - INFO - 🔍 API Call: nse_nifty_index (2024-06-06 to 2024-06-13)
+2025-07-20 23:33:28,602 - WARNING - ⚠️  API error: 402
+2025-07-20 23:33:30,103 - INFO - 🔍 API Call: indian_banking_sector (2024-06-06 to 2024-06-13)
+2025-07-20 23:33:30,508 - WARNING - ⚠️  API error: 402

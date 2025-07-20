@@ -1,0 +1,1808 @@
+{
+  "completed_requests": [
+    "8cd4edc7ee285680893189e6350f5514",
+    "b1ab362bd41c9e0ad2a7fb350ddddd92",
+    "a865c0525d7d16a8a92ace077310cd11",
+    "c26eecb88581fb66cc4a81f2e0606968",
+    "cb41c347fa07ea7c1eb4937d7b24ba4c",
+    "bbc16ca7e99c5b45f624e26dbe9fa32f",
+    "f800cf3cfd60901922fc90d4b4b3fc60",
+    "a808feb4bb6704430018506a9bf3aa5b",
+    "210d06d4df93032f39688a72dbbabf87",
+    "eafbb89296b5856d08fba0e7690960b7",
+    "d8d4bcbb110d727340baeb73fba7a550",
+    "24b59c197123eec34765d0617ad35f20",
+    "02e3b9a17adf4625589092fe8df323da",
+    "6c3ed4b7fbd484afc8b9b1f544a9d3fd",
+    "0cdd30a6ae260d57871fb2836da8eb00",
+    "d0ba9c3e0dc53fa310b60284b4ca3c8c",
+    "c34583207938cc32149f326b2a0eb7b5",
+    "e320087da29b269b4bcd589f8c6a08f2",
+    "d629064fc5565183081c4bf8dc3dd9c2",
+    "3f13fa8721534c0105692df4308664bc",
+    "f123fecf1f7939f5849fa7cd048b043b",
+    "5f4d385f9744d403b86686a26c72e0e8",
+    "fd06a79c7b114b65220609c95c0448fb",
+    "2ecd5a641af14093dd69c495e7cd17e9",
+    "aee88c2fb37273efcbd796586b328f18",
+    "d58221559541449b25011b4513fee2ce",
+    "167ffcac19e2b6b29f93853eec020804",
+    "b76a04395e6ce54f63f40939e30a1154",
+    "c7e30d5d637fc93f2d600b279c261e1d",
+    "8706ef303b644b75b0da1cf3b0633dd6",
+    "539391e2042c4651dc4e6a5cda8ce5c7",
+    "47a3f1e245baad880a5f00ec18d5b594",
+    "c42b4cf0f841fb70bfaa09b705f2710b",
+    "b9955cef5a5e02ec0ea397437b05ef36",
+    "9401bcdc2060b818adf3f519cbf03697",
+    "3ab253675673161d419b26e82b6b2981",
+    "083044c2d01dabc45c50d50184958047",
+    "415770344c04f85c519ef6e54cd8c7c1",
+    "fbfb81d22112fc7c3c3de9604de9a3a0",
+    "f966a552d5a97d0e01b0b827962cce89",
+    "4c8615e63e6b60ad2ae76bbb1d47f6d6",
+    "e516730bf407addd7905ece699d93a4f",
+    "a8d6a14c398e4fd65418464d330aac4e",
+    "7417d8430a94d16c2b64149e99a2d882",
+    "f10ea4bbb257a7246bb1ee9285d4ce60",
+    "f9713998108ecd4781da390b1e9805c9",
+    "51596933e941983126f61c4af0450589",
+    "ced7027f9f14b90a9bdfc025fbe2e81c",
+    "99878ac5f4ab618c082b130cf573c2c3",
+    "e82fe6ed29c295264fa149b3fad169b5",
+    "cb7e5a0838fc9d91cf52b1f53766e0ce",
+    "295ee06b3b64e541fb59f65522de4fe3",
+    "3c5f8335483d65b38da4406857548468",
+    "97db3b5f7cf05aa1c7bed6e4a2dbd040",
+    "149f529b358e499c3a004a1fc42a0e74",
+    "fc75f9cd1aada8dcee7bfe76dfd4224f",
+    "2cb7c8739b2fd7fd87a0368c0522a739",
+    "22259ae15cd36ed2a11ef9da0983bdd2",
+    "084e6a0297468247393a962f7ed0da11",
+    "275cc21746e84f1b38282e79770a12d2",
+    "e6b82b7480eff87c6dace4f7acb551f3",
+    "466fe372c336c75b2126b36bd3ad8a6f",
+    "b428497b1217814a85c52b5b93bc5c36",
+    "747c3382aab0b176e9a070bd769cf254",
+    "a035f4583a5db96dfb4ff5ea8012e57b",
+    "82577a6f47a2fb9d824054add6bd602c",
+    "e60e713bdc5d950444535e0e1a13a11d",
+    "2683f3d26522b8633d324d3f8848bb5c",
+    "4ce4d024e223f94374131b323a8343b8",
+    "01ed074669fa2216b205924b84261adc",
+    "952aeb3cc38916003fff96bb4e65029c",
+    "3fbe144e1391df973ecc6cd6c8058f07",
+    "1fa31b12f68500359a5a1b82f962d8cc",
+    "84a381fcb0217c7a2d1d2f5361489fd0",
+    "88fa39e62455270de74628f839786d5d",
+    "c43c2654553caf6b3abdf0247917f1a2",
+    "68d11930060bac7c24e4be2064da10f8",
+    "7ab9207b1314d29573d44624e5397d8f",
+    "d49eb53d76137af1078f28178313494f",
+    "6a9dec83b0b4ce3734d0c60386bbfd15",
+    "7492f08468f7386f3cef102424dc71f5",
+    "26a7a8beeee03a3c9f1d8138995b8360",
+    "1ecd6b8051b08014b073dd8f18cc99ff",
+    "b2719cfab162d070d25f6c6169911942",
+    "27bac818be534b3aaa4a25ca64b2bf1b",
+    "5a12e9465737fcd12d7109bddcd2e342",
+    "02eadbef862cb0e5e9e644b075191eff",
+    "00131c2779d85080996c396c372e785f",
+    "0e9a03b0b7b3eac67dc596015d2c6fc9",
+    "45f89ae62b7bcb3926e0de1cadcf6d8a",
+    "0da6d4f652a973ed13b6f854784066e1",
+    "425e3acc8c68ec3d36333116b6f01589",
+    "dcdd4cebe4b7bec83204336eccad95dc",
+    "f4a85837f9eadbe083d7f94cb15a1aef",
+    "c8938092217bee577654377e22e4690d",
+    "068ae5c75f4d9679e99c98393a92a7c4",
+    "a27f173b3f95c479909eea0d544a8b30",
+    "dae34cae4d4c3d2445d89288e9e9a5f6",
+    "3120a384f51535bcd8dc184165aa8de0",
+    "2e10e3a617a28d1e3efe8bf3d6b1aada",
+    "2368b86f70ee869607afb2f570d76684",
+    "bb88e58bf5cf11ede5ece3420ad468eb",
+    "ae6e0090220387665771ea489eda10d2",
+    "71ed75c72404f35afb95d051dc6b7acc",
+    "5ead859562deb96123f96aaaf523d656",
+    "79612af235b90cef9d5854800ad94baf",
+    "937819fea312eee5e89c99d1fde0387f",
+    "a93a8734b6a72b8ba6e9bf476ee6d529",
+    "0378a7c9a2c061b2c5f91e11d6d885e3",
+    "8cd084040ba5bb0d555bcb903047abba",
+    "6ebe5a36e8a711eacd8d798941e0b86e",
+    "afea4a1ad628ee102f7a583a4b7d1467",
+    "8cd3da23442a4ef4c583b8ad6974664e",
+    "273a945612a89a9f12fcef7f9f146050",
+    "c6b12ea32af83476756347f6c4bbd43d",
+    "f0d09f7fe7f42c7702e85545776215ac",
+    "6cdc36db04bf9babdca444f56b2dd424",
+    "9851d74d08f956c4745533d9092842b8",
+    "581ee9c819d7866b3d79c57d4e6e5749",
+    "33d9697a28e6ff831570ca9dcbe4226d",
+    "3a0880b9c964d586ed8325256eb1e4b5",
+    "732350edd703a5516333218b1eb0678c",
+    "80ec990afc8b23108b16960c5c318f23",
+    "ff00903982753b3aea13bad10214a242",
+    "0f18e3850d74a9be27e221cf30fe118b",
+    "4ec34b4d26d35f57e94459c294d4c7bc",
+    "a1ca403e6cc6adf56cb01d7522dc91a4",
+    "d5e2792830dfe58eedec665df0852fb6",
+    "711fc5111328184a90707d62b3716a41",
+    "5efe8d63ea14c8664d411012c06cc1a4",
+    "bf2852e1f7c4ac2b10d2e56db2c6b342",
+    "2c90baa59cfae1bc1857902738466a58",
+    "eabd89ac18c37d56fb416ea614a16973",
+    "0f8c48a0051cac2ed9299c4952fc30b1",
+    "378bf83da57c3eb3d9d42f892d498b24",
+    "268baab793b4a74f66f4514976572aa2",
+    "d0471186965f4e516d46048d9f95b500",
+    "8bcaf3aca1038f58fe57699f5b9a940e",
+    "f5035e42cb59fc4449569cb1e3086af4",
+    "0e008c3feb6602468846c84dc9ba57f5",
+    "104433df8fc1d6eb9bfebd8fc9bb5a8f",
+    "5467d8c3824e3c30462e7caee19fb25c",
+    "f7f69f926f18649933e175917cb73ce0",
+    "3ac0dc305a0336635a391a7ac0b503bd",
+    "ca0e847ddac89f0293d1acb469b5e543",
+    "4fc9e85dcff2f65493b0248dadbba6ca",
+    "53842d560bdc0cf828334aadbdae4df6",
+    "1668981d221daee3b7a734f121f75e2c",
+    "427ccd6b5e22385a896bd226aee0af41",
+    "947f770c8d70712f5fd0bb55e4c3f963",
+    "908b98b385851c8f4d398aa8fe938a3f",
+    "a5cfc9c7951d0978a7ae50b4b5940838",
+    "9fa72b8678324901e3d0803a95a0b193",
+    "b201dcd46e1055de5ffdf98a895e9b56",
+    "906435f9983a3a66e98e3039f2a865ba",
+    "b3b07fb0725be8cac4e6c23c7bd38e64",
+    "187af43ca4572c374228200e72485a43",
+    "072b9331ce0e7755f35e4b1fd76fd768",
+    "7bf1d94ad096a2d91cd0a0b01e65f1cf",
+    "efa5429050731aaec94537747ad0a556",
+    "53789ba45ac1e2e83bb965513d7e8b74",
+    "fb72b20f7977beac7d9445b4720d55a2",
+    "14a2e3bb77e92d1aa13856475eeef580",
+    "846f9f5870b933cb794caf8093aadd7a",
+    "d0e4727865c002b8c96f66a3511ab185",
+    "08bd840c3925c394709ec40600ed5838",
+    "2570d87585181834fb229f40bde45c37",
+    "5497421a027c674fc638826165676240",
+    "2d3984a85c59857640362518df889b77",
+    "9fa994e41959b9004390ae5a1e038fb2",
+    "2ab2697912da76a04cfa92507126a429",
+    "4fbf73b764e2f81c4d7a26718cd09ab8",
+    "53f7b39a20e25cfbc83fc6b17d4efd4d",
+    "87a63143127c8f396a218fb6bf79458e",
+    "fe4fb460f9432291c7d770eaa075a24a",
+    "6be33ac6449ff59e0e16fe22865b141f",
+    "d0cf447ec9ad0c97341423e1d4aac7d7",
+    "4edb19ad887a7e9842206a18ed359c56",
+    "50daa7f24e88e63fee8f7e8babbe0ebc",
+    "26f64243b83e1c7cb59cd95750f2a59f",
+    "d0d3aaeffd2c3806ce482684038df1d0",
+    "a9adc71d2aa7c4c1b690c3627ec8f395",
+    "9f22cc4e3486481d3dbc3ae0c942afe8",
+    "b74d6c0ff1498161520425c5cd97f42d",
+    "e9771eb84b4399871925cf23c97c15a6",
+    "e06176cd46f8743a8eb273bc2a8dc917",
+    "5da3359456ebb3e844c2c513555b8fb1",
+    "ba8effe24ed0115481a94140d2084f08",
+    "b3f7827f1347ba5d542f070abcbd6e7f",
+    "3509b957e6bc894649c0408d9cde6a06",
+    "699ca753483b52cb7a0286c085b00183",
+    "add518eea6887e8a28a2fd56dd90231f",
+    "1da04a84f8e4f23e5bc4ca9f395d41a1",
+    "3e17365ef15039ded5bafa6c22508311",
+    "a9c273d6e3b6e30c0faf38868a14f6a0",
+    "8a3ab1664cf5ada9f1531547d6e0a7ab",
+    "1b51f0e7feff4b040d27784ab3e1ffcc",
+    "e574995d2463fd02c823eb91733ba3cb",
+    "121cde0b0a2a32e6b48afd3edd487496",
+    "242bcb755243d0c7ff2042634ba8d83a"
+  ],
+  "date_ranges_fetched": [
+    {
+      "api": "marketaux",
+      "strategy": "general_indian_market",
+      "start_date": "2024-06-06",
+      "end_date": "2024-06-13",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:21:45.480287"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "bse_sensex_trading",
+      "start_date": "2024-06-06",
+      "end_date": "2024-06-13",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:21:47.491630"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "nse_nifty_index",
+      "start_date": "2024-06-06",
+      "end_date": "2024-06-13",
+      "articles_found": 0,
+      "timestamp": "2025-07-20T23:21:49.473088"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "indian_banking_sector",
+      "start_date": "2024-06-06",
+      "end_date": "2024-06-13",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:21:51.446380"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "indian_it_companies",
+      "start_date": "2024-06-06",
+      "end_date": "2024-06-13",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:21:53.431567"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "indian_pharmaceutical",
+      "start_date": "2024-06-06",
+      "end_date": "2024-06-13",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:21:55.319938"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "indian_automobile",
+      "start_date": "2024-06-06",
+      "end_date": "2024-06-13",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:21:57.033792"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "reliance_industries",
+      "start_date": "2024-06-06",
+      "end_date": "2024-06-13",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:21:58.933131"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "tata_group_companies",
+      "start_date": "2024-06-06",
+      "end_date": "2024-06-13",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:22:00.866060"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "hdfc_icici_banking",
+      "start_date": "2024-06-06",
+      "end_date": "2024-06-13",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:22:02.656757"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "infosys_wipro_it",
+      "start_date": "2024-06-06",
+      "end_date": "2024-06-13",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:22:04.657524"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "indian_oil_gas",
+      "start_date": "2024-06-06",
+      "end_date": "2024-06-13",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:22:06.628557"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "indian_steel_sector",
+      "start_date": "2024-06-06",
+      "end_date": "2024-06-13",
+      "articles_found": 1,
+      "timestamp": "2025-07-20T23:22:08.586321"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "indian_cement_companies",
+      "start_date": "2024-06-06",
+      "end_date": "2024-06-13",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:22:10.674731"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "indian_telecom_airtel",
+      "start_date": "2024-06-06",
+      "end_date": "2024-06-13",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:22:12.658395"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "general_indian_market",
+      "start_date": "2024-06-13",
+      "end_date": "2024-06-20",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:22:14.539547"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "bse_sensex_trading",
+      "start_date": "2024-06-13",
+      "end_date": "2024-06-20",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:22:16.606964"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "nse_nifty_index",
+      "start_date": "2024-06-13",
+      "end_date": "2024-06-20",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:22:18.610396"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "indian_banking_sector",
+      "start_date": "2024-06-13",
+      "end_date": "2024-06-20",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:22:20.635336"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "indian_it_companies",
+      "start_date": "2024-06-13",
+      "end_date": "2024-06-20",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:22:22.634411"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "indian_pharmaceutical",
+      "start_date": "2024-06-13",
+      "end_date": "2024-06-20",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:22:24.518049"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "indian_automobile",
+      "start_date": "2024-06-13",
+      "end_date": "2024-06-20",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:22:26.394853"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "reliance_industries",
+      "start_date": "2024-06-13",
+      "end_date": "2024-06-20",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:22:28.386839"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "tata_group_companies",
+      "start_date": "2024-06-13",
+      "end_date": "2024-06-20",
+      "articles_found": 0,
+      "timestamp": "2025-07-20T23:22:30.303584"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "hdfc_icici_banking",
+      "start_date": "2024-06-13",
+      "end_date": "2024-06-20",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:22:32.159762"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "infosys_wipro_it",
+      "start_date": "2024-06-13",
+      "end_date": "2024-06-20",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:22:34.202438"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "indian_oil_gas",
+      "start_date": "2024-06-13",
+      "end_date": "2024-06-20",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:22:36.247880"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "indian_steel_sector",
+      "start_date": "2024-06-13",
+      "end_date": "2024-06-20",
+      "articles_found": 1,
+      "timestamp": "2025-07-20T23:22:38.195590"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "indian_cement_companies",
+      "start_date": "2024-06-13",
+      "end_date": "2024-06-20",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:22:40.205910"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "indian_telecom_airtel",
+      "start_date": "2024-06-13",
+      "end_date": "2024-06-20",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:22:42.161879"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "general_indian_market",
+      "start_date": "2024-06-20",
+      "end_date": "2024-06-27",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:22:44.027337"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "bse_sensex_trading",
+      "start_date": "2024-06-20",
+      "end_date": "2024-06-27",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:22:45.947181"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "nse_nifty_index",
+      "start_date": "2024-06-20",
+      "end_date": "2024-06-27",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:22:48.018496"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "indian_banking_sector",
+      "start_date": "2024-06-20",
+      "end_date": "2024-06-27",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:22:50.023700"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "indian_it_companies",
+      "start_date": "2024-06-20",
+      "end_date": "2024-06-27",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:22:52.007521"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "indian_pharmaceutical",
+      "start_date": "2024-06-20",
+      "end_date": "2024-06-27",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:22:53.885723"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "indian_automobile",
+      "start_date": "2024-06-20",
+      "end_date": "2024-06-27",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:22:55.643514"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "reliance_industries",
+      "start_date": "2024-06-20",
+      "end_date": "2024-06-27",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:22:57.574294"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "tata_group_companies",
+      "start_date": "2024-06-20",
+      "end_date": "2024-06-27",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:22:59.478293"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "hdfc_icici_banking",
+      "start_date": "2024-06-20",
+      "end_date": "2024-06-27",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:23:01.650008"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "infosys_wipro_it",
+      "start_date": "2024-06-20",
+      "end_date": "2024-06-27",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:23:03.847998"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "indian_oil_gas",
+      "start_date": "2024-06-20",
+      "end_date": "2024-06-27",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:23:07.488654"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "indian_steel_sector",
+      "start_date": "2024-06-20",
+      "end_date": "2024-06-27",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:23:09.366948"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "indian_cement_companies",
+      "start_date": "2024-06-20",
+      "end_date": "2024-06-27",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:23:11.182132"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "indian_telecom_airtel",
+      "start_date": "2024-06-20",
+      "end_date": "2024-06-27",
+      "articles_found": 2,
+      "timestamp": "2025-07-20T23:23:13.341486"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "general_indian_market",
+      "start_date": "2024-06-27",
+      "end_date": "2024-07-04",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:23:15.213560"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "bse_sensex_trading",
+      "start_date": "2024-06-27",
+      "end_date": "2024-07-04",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:23:17.349863"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "nse_nifty_index",
+      "start_date": "2024-06-27",
+      "end_date": "2024-07-04",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:23:19.410318"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "indian_banking_sector",
+      "start_date": "2024-06-27",
+      "end_date": "2024-07-04",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:23:21.302406"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "indian_it_companies",
+      "start_date": "2024-06-27",
+      "end_date": "2024-07-04",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:23:23.262195"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "indian_pharmaceutical",
+      "start_date": "2024-06-27",
+      "end_date": "2024-07-04",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:23:25.149782"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "indian_automobile",
+      "start_date": "2024-06-27",
+      "end_date": "2024-07-04",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:23:26.938603"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "reliance_industries",
+      "start_date": "2024-06-27",
+      "end_date": "2024-07-04",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:23:28.907924"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "tata_group_companies",
+      "start_date": "2024-06-27",
+      "end_date": "2024-07-04",
+      "articles_found": 2,
+      "timestamp": "2025-07-20T23:23:30.748455"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "hdfc_icici_banking",
+      "start_date": "2024-06-27",
+      "end_date": "2024-07-04",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:23:32.660341"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "infosys_wipro_it",
+      "start_date": "2024-06-27",
+      "end_date": "2024-07-04",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:23:34.647711"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "indian_oil_gas",
+      "start_date": "2024-06-27",
+      "end_date": "2024-07-04",
+      "articles_found": 2,
+      "timestamp": "2025-07-20T23:23:36.415799"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "indian_steel_sector",
+      "start_date": "2024-06-27",
+      "end_date": "2024-07-04",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:23:38.353031"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "indian_cement_companies",
+      "start_date": "2024-06-27",
+      "end_date": "2024-07-04",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:23:40.340235"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "indian_telecom_airtel",
+      "start_date": "2024-06-27",
+      "end_date": "2024-07-04",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:23:42.380226"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "general_indian_market",
+      "start_date": "2024-07-04",
+      "end_date": "2024-07-11",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:23:44.266617"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "bse_sensex_trading",
+      "start_date": "2024-07-04",
+      "end_date": "2024-07-11",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:23:46.128127"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "nse_nifty_index",
+      "start_date": "2024-07-04",
+      "end_date": "2024-07-11",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:23:47.959954"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "indian_banking_sector",
+      "start_date": "2024-07-04",
+      "end_date": "2024-07-11",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:23:49.785116"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "indian_it_companies",
+      "start_date": "2024-07-04",
+      "end_date": "2024-07-11",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:23:51.802282"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "indian_pharmaceutical",
+      "start_date": "2024-07-04",
+      "end_date": "2024-07-11",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:23:53.519718"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "indian_automobile",
+      "start_date": "2024-07-04",
+      "end_date": "2024-07-11",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:23:55.260884"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "reliance_industries",
+      "start_date": "2024-07-04",
+      "end_date": "2024-07-11",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:23:56.987720"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "tata_group_companies",
+      "start_date": "2024-07-04",
+      "end_date": "2024-07-11",
+      "articles_found": 1,
+      "timestamp": "2025-07-20T23:23:58.740326"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "hdfc_icici_banking",
+      "start_date": "2024-07-04",
+      "end_date": "2024-07-11",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:24:00.703188"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "infosys_wipro_it",
+      "start_date": "2024-07-04",
+      "end_date": "2024-07-11",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:24:02.612750"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "indian_oil_gas",
+      "start_date": "2024-07-04",
+      "end_date": "2024-07-11",
+      "articles_found": 0,
+      "timestamp": "2025-07-20T23:24:04.422480"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "indian_steel_sector",
+      "start_date": "2024-07-04",
+      "end_date": "2024-07-11",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:24:06.386706"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "indian_cement_companies",
+      "start_date": "2024-07-04",
+      "end_date": "2024-07-11",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:24:08.330403"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "indian_telecom_airtel",
+      "start_date": "2024-07-04",
+      "end_date": "2024-07-11",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:24:10.384175"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "general_indian_market",
+      "start_date": "2024-07-11",
+      "end_date": "2024-07-18",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:24:12.255931"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "bse_sensex_trading",
+      "start_date": "2024-07-11",
+      "end_date": "2024-07-18",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:24:14.371474"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "nse_nifty_index",
+      "start_date": "2024-07-11",
+      "end_date": "2024-07-18",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:24:16.419020"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "indian_banking_sector",
+      "start_date": "2024-07-11",
+      "end_date": "2024-07-18",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:24:18.428918"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "indian_it_companies",
+      "start_date": "2024-07-11",
+      "end_date": "2024-07-18",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:24:20.516863"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "indian_pharmaceutical",
+      "start_date": "2024-07-11",
+      "end_date": "2024-07-18",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:24:22.423769"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "indian_automobile",
+      "start_date": "2024-07-11",
+      "end_date": "2024-07-18",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:24:24.407928"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "reliance_industries",
+      "start_date": "2024-07-11",
+      "end_date": "2024-07-18",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:24:26.301020"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "tata_group_companies",
+      "start_date": "2024-07-11",
+      "end_date": "2024-07-18",
+      "articles_found": 1,
+      "timestamp": "2025-07-20T23:24:28.229981"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "hdfc_icici_banking",
+      "start_date": "2024-07-11",
+      "end_date": "2024-07-18",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:24:30.037595"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "infosys_wipro_it",
+      "start_date": "2024-07-11",
+      "end_date": "2024-07-18",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:24:32.159986"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "indian_oil_gas",
+      "start_date": "2024-07-11",
+      "end_date": "2024-07-18",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:24:34.176693"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "indian_steel_sector",
+      "start_date": "2024-07-11",
+      "end_date": "2024-07-18",
+      "articles_found": 0,
+      "timestamp": "2025-07-20T23:24:36.004305"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "indian_cement_companies",
+      "start_date": "2024-07-11",
+      "end_date": "2024-07-18",
+      "articles_found": 0,
+      "timestamp": "2025-07-20T23:24:37.659831"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "indian_telecom_airtel",
+      "start_date": "2024-07-11",
+      "end_date": "2024-07-18",
+      "articles_found": 0,
+      "timestamp": "2025-07-20T23:24:39.462753"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "general_indian_market",
+      "start_date": "2024-07-18",
+      "end_date": "2024-07-25",
+      "articles_found": 0,
+      "timestamp": "2025-07-20T23:24:41.260770"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "bse_sensex_trading",
+      "start_date": "2024-07-18",
+      "end_date": "2024-07-25",
+      "articles_found": 0,
+      "timestamp": "2025-07-20T23:24:43.144376"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "nse_nifty_index",
+      "start_date": "2024-07-18",
+      "end_date": "2024-07-25",
+      "articles_found": 0,
+      "timestamp": "2025-07-20T23:24:44.794859"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "indian_banking_sector",
+      "start_date": "2024-07-18",
+      "end_date": "2024-07-25",
+      "articles_found": 0,
+      "timestamp": "2025-07-20T23:24:46.600042"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "indian_it_companies",
+      "start_date": "2024-07-18",
+      "end_date": "2024-07-25",
+      "articles_found": 0,
+      "timestamp": "2025-07-20T23:24:48.469830"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "indian_pharmaceutical",
+      "start_date": "2024-07-18",
+      "end_date": "2024-07-25",
+      "articles_found": 0,
+      "timestamp": "2025-07-20T23:24:50.131761"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "indian_automobile",
+      "start_date": "2024-07-18",
+      "end_date": "2024-07-25",
+      "articles_found": 0,
+      "timestamp": "2025-07-20T23:24:51.923018"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "reliance_industries",
+      "start_date": "2024-07-18",
+      "end_date": "2024-07-25",
+      "articles_found": 0,
+      "timestamp": "2025-07-20T23:24:53.586710"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "tata_group_companies",
+      "start_date": "2024-07-18",
+      "end_date": "2024-07-25",
+      "articles_found": 0,
+      "timestamp": "2025-07-20T23:24:55.396158"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "hdfc_icici_banking",
+      "start_date": "2024-07-18",
+      "end_date": "2024-07-25",
+      "articles_found": 0,
+      "timestamp": "2025-07-20T23:24:57.038579"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "general_indian_market",
+      "start_date": "2024-06-06",
+      "end_date": "2024-06-13",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:29:04.782976"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "bse_sensex_trading",
+      "start_date": "2024-06-06",
+      "end_date": "2024-06-13",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:29:06.865141"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "nse_nifty_index",
+      "start_date": "2024-06-06",
+      "end_date": "2024-06-13",
+      "articles_found": 0,
+      "timestamp": "2025-07-20T23:29:08.880482"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "indian_banking_sector",
+      "start_date": "2024-06-06",
+      "end_date": "2024-06-13",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:29:10.998109"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "indian_it_companies",
+      "start_date": "2024-06-06",
+      "end_date": "2024-06-13",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:29:13.037942"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "indian_pharmaceutical",
+      "start_date": "2024-06-06",
+      "end_date": "2024-06-13",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:29:14.925451"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "indian_automobile",
+      "start_date": "2024-06-06",
+      "end_date": "2024-06-13",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:29:16.831132"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "reliance_industries",
+      "start_date": "2024-06-06",
+      "end_date": "2024-06-13",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:29:18.871285"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "tata_group_companies",
+      "start_date": "2024-06-06",
+      "end_date": "2024-06-13",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:29:20.839043"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "hdfc_icici_banking",
+      "start_date": "2024-06-06",
+      "end_date": "2024-06-13",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:29:22.910285"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "infosys_wipro_it",
+      "start_date": "2024-06-06",
+      "end_date": "2024-06-13",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:29:24.990761"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "indian_oil_gas",
+      "start_date": "2024-06-06",
+      "end_date": "2024-06-13",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:29:27.041290"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "indian_steel_sector",
+      "start_date": "2024-06-06",
+      "end_date": "2024-06-13",
+      "articles_found": 1,
+      "timestamp": "2025-07-20T23:29:28.947183"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "indian_cement_companies",
+      "start_date": "2024-06-06",
+      "end_date": "2024-06-13",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:29:30.923326"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "indian_telecom_airtel",
+      "start_date": "2024-06-06",
+      "end_date": "2024-06-13",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:29:32.985963"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "general_indian_market",
+      "start_date": "2024-06-13",
+      "end_date": "2024-06-20",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:29:34.860138"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "bse_sensex_trading",
+      "start_date": "2024-06-13",
+      "end_date": "2024-06-20",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:29:36.932733"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "nse_nifty_index",
+      "start_date": "2024-06-13",
+      "end_date": "2024-06-20",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:29:38.881801"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "indian_banking_sector",
+      "start_date": "2024-06-13",
+      "end_date": "2024-06-20",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:29:40.925624"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "indian_it_companies",
+      "start_date": "2024-06-13",
+      "end_date": "2024-06-20",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:29:42.977375"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "indian_pharmaceutical",
+      "start_date": "2024-06-13",
+      "end_date": "2024-06-20",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:29:44.920605"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "indian_automobile",
+      "start_date": "2024-06-13",
+      "end_date": "2024-06-20",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:29:46.969321"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "reliance_industries",
+      "start_date": "2024-06-13",
+      "end_date": "2024-06-20",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:29:48.914353"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "tata_group_companies",
+      "start_date": "2024-06-13",
+      "end_date": "2024-06-20",
+      "articles_found": 0,
+      "timestamp": "2025-07-20T23:29:50.890376"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "hdfc_icici_banking",
+      "start_date": "2024-06-13",
+      "end_date": "2024-06-20",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:29:52.843396"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "infosys_wipro_it",
+      "start_date": "2024-06-13",
+      "end_date": "2024-06-20",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:29:54.957802"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "indian_oil_gas",
+      "start_date": "2024-06-13",
+      "end_date": "2024-06-20",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:29:56.905175"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "indian_steel_sector",
+      "start_date": "2024-06-13",
+      "end_date": "2024-06-20",
+      "articles_found": 1,
+      "timestamp": "2025-07-20T23:29:58.838436"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "indian_cement_companies",
+      "start_date": "2024-06-13",
+      "end_date": "2024-06-20",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:30:00.848761"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "indian_telecom_airtel",
+      "start_date": "2024-06-13",
+      "end_date": "2024-06-20",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:30:04.111103"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "general_indian_market",
+      "start_date": "2024-06-20",
+      "end_date": "2024-06-27",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:30:05.972512"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "bse_sensex_trading",
+      "start_date": "2024-06-20",
+      "end_date": "2024-06-27",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:30:08.065805"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "nse_nifty_index",
+      "start_date": "2024-06-20",
+      "end_date": "2024-06-27",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:30:10.059922"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "indian_banking_sector",
+      "start_date": "2024-06-20",
+      "end_date": "2024-06-27",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:30:12.057003"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "indian_it_companies",
+      "start_date": "2024-06-20",
+      "end_date": "2024-06-27",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:30:14.059173"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "indian_pharmaceutical",
+      "start_date": "2024-06-20",
+      "end_date": "2024-06-27",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:30:15.922814"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "indian_automobile",
+      "start_date": "2024-06-20",
+      "end_date": "2024-06-27",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:30:17.773683"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "reliance_industries",
+      "start_date": "2024-06-20",
+      "end_date": "2024-06-27",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:30:19.725395"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "tata_group_companies",
+      "start_date": "2024-06-20",
+      "end_date": "2024-06-27",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:30:21.704901"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "hdfc_icici_banking",
+      "start_date": "2024-06-20",
+      "end_date": "2024-06-27",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:30:23.763764"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "infosys_wipro_it",
+      "start_date": "2024-06-20",
+      "end_date": "2024-06-27",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:30:25.759962"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "indian_oil_gas",
+      "start_date": "2024-06-20",
+      "end_date": "2024-06-27",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:30:27.761094"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "indian_steel_sector",
+      "start_date": "2024-06-20",
+      "end_date": "2024-06-27",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:30:29.771822"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "indian_cement_companies",
+      "start_date": "2024-06-20",
+      "end_date": "2024-06-27",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:30:31.715007"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "indian_telecom_airtel",
+      "start_date": "2024-06-20",
+      "end_date": "2024-06-27",
+      "articles_found": 2,
+      "timestamp": "2025-07-20T23:30:33.613189"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "general_indian_market",
+      "start_date": "2024-06-27",
+      "end_date": "2024-07-04",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:30:35.483022"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "bse_sensex_trading",
+      "start_date": "2024-06-27",
+      "end_date": "2024-07-04",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:30:37.560909"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "nse_nifty_index",
+      "start_date": "2024-06-27",
+      "end_date": "2024-07-04",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:30:39.602191"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "indian_banking_sector",
+      "start_date": "2024-06-27",
+      "end_date": "2024-07-04",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:30:41.519351"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "indian_it_companies",
+      "start_date": "2024-06-27",
+      "end_date": "2024-07-04",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:30:43.597369"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "indian_pharmaceutical",
+      "start_date": "2024-06-27",
+      "end_date": "2024-07-04",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:30:45.541649"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "indian_automobile",
+      "start_date": "2024-06-27",
+      "end_date": "2024-07-04",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:30:47.385486"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "reliance_industries",
+      "start_date": "2024-06-27",
+      "end_date": "2024-07-04",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:30:49.432682"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "tata_group_companies",
+      "start_date": "2024-06-27",
+      "end_date": "2024-07-04",
+      "articles_found": 2,
+      "timestamp": "2025-07-20T23:30:51.378629"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "hdfc_icici_banking",
+      "start_date": "2024-06-27",
+      "end_date": "2024-07-04",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:30:53.381764"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "infosys_wipro_it",
+      "start_date": "2024-06-27",
+      "end_date": "2024-07-04",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:30:55.379756"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "indian_oil_gas",
+      "start_date": "2024-06-27",
+      "end_date": "2024-07-04",
+      "articles_found": 2,
+      "timestamp": "2025-07-20T23:30:57.318320"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "indian_steel_sector",
+      "start_date": "2024-06-27",
+      "end_date": "2024-07-04",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:30:59.083153"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "indian_cement_companies",
+      "start_date": "2024-06-27",
+      "end_date": "2024-07-04",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:31:01.071407"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "indian_telecom_airtel",
+      "start_date": "2024-06-27",
+      "end_date": "2024-07-04",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:31:03.210826"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "general_indian_market",
+      "start_date": "2024-07-04",
+      "end_date": "2024-07-11",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:31:05.111291"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "bse_sensex_trading",
+      "start_date": "2024-07-04",
+      "end_date": "2024-07-11",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:31:07.215747"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "nse_nifty_index",
+      "start_date": "2024-07-04",
+      "end_date": "2024-07-11",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:31:09.401818"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "indian_banking_sector",
+      "start_date": "2024-07-04",
+      "end_date": "2024-07-11",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:31:11.348933"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "indian_it_companies",
+      "start_date": "2024-07-04",
+      "end_date": "2024-07-11",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:31:13.293342"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "indian_pharmaceutical",
+      "start_date": "2024-07-04",
+      "end_date": "2024-07-11",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:31:15.259411"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "indian_automobile",
+      "start_date": "2024-07-04",
+      "end_date": "2024-07-11",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:31:17.087204"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "reliance_industries",
+      "start_date": "2024-07-04",
+      "end_date": "2024-07-11",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:31:18.925053"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "tata_group_companies",
+      "start_date": "2024-07-04",
+      "end_date": "2024-07-11",
+      "articles_found": 1,
+      "timestamp": "2025-07-20T23:31:20.973042"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "hdfc_icici_banking",
+      "start_date": "2024-07-04",
+      "end_date": "2024-07-11",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:31:22.917876"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "infosys_wipro_it",
+      "start_date": "2024-07-04",
+      "end_date": "2024-07-11",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:31:24.971836"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "indian_oil_gas",
+      "start_date": "2024-07-04",
+      "end_date": "2024-07-11",
+      "articles_found": 0,
+      "timestamp": "2025-07-20T23:31:26.715098"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "indian_steel_sector",
+      "start_date": "2024-07-04",
+      "end_date": "2024-07-11",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:31:28.694505"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "indian_cement_companies",
+      "start_date": "2024-07-04",
+      "end_date": "2024-07-11",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:31:30.551327"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "indian_telecom_airtel",
+      "start_date": "2024-07-04",
+      "end_date": "2024-07-11",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:31:32.558887"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "general_indian_market",
+      "start_date": "2024-07-11",
+      "end_date": "2024-07-18",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:31:34.277009"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "bse_sensex_trading",
+      "start_date": "2024-07-11",
+      "end_date": "2024-07-18",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:31:36.332025"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "nse_nifty_index",
+      "start_date": "2024-07-11",
+      "end_date": "2024-07-18",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:31:38.200089"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "indian_banking_sector",
+      "start_date": "2024-07-11",
+      "end_date": "2024-07-18",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:31:40.155570"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "indian_it_companies",
+      "start_date": "2024-07-11",
+      "end_date": "2024-07-18",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:31:42.229642"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "indian_pharmaceutical",
+      "start_date": "2024-07-11",
+      "end_date": "2024-07-18",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:31:44.125475"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "indian_automobile",
+      "start_date": "2024-07-11",
+      "end_date": "2024-07-18",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:31:46.074869"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "reliance_industries",
+      "start_date": "2024-07-11",
+      "end_date": "2024-07-18",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:31:48.117104"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "tata_group_companies",
+      "start_date": "2024-07-11",
+      "end_date": "2024-07-18",
+      "articles_found": 1,
+      "timestamp": "2025-07-20T23:31:50.054477"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "hdfc_icici_banking",
+      "start_date": "2024-07-11",
+      "end_date": "2024-07-18",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:31:52.078121"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "infosys_wipro_it",
+      "start_date": "2024-07-11",
+      "end_date": "2024-07-18",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:31:54.152644"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "indian_oil_gas",
+      "start_date": "2024-07-11",
+      "end_date": "2024-07-18",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:31:56.096361"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "indian_steel_sector",
+      "start_date": "2024-07-11",
+      "end_date": "2024-07-18",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:31:57.939668"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "indian_cement_companies",
+      "start_date": "2024-07-11",
+      "end_date": "2024-07-18",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:31:59.739586"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "indian_telecom_airtel",
+      "start_date": "2024-07-11",
+      "end_date": "2024-07-18",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:32:01.870106"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "general_indian_market",
+      "start_date": "2024-07-18",
+      "end_date": "2024-07-25",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:32:03.776683"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "bse_sensex_trading",
+      "start_date": "2024-07-18",
+      "end_date": "2024-07-25",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:32:05.823276"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "nse_nifty_index",
+      "start_date": "2024-07-18",
+      "end_date": "2024-07-25",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:32:07.616733"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "indian_banking_sector",
+      "start_date": "2024-07-18",
+      "end_date": "2024-07-25",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:32:09.491087"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "indian_it_companies",
+      "start_date": "2024-07-18",
+      "end_date": "2024-07-25",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:32:11.671388"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "indian_pharmaceutical",
+      "start_date": "2024-07-18",
+      "end_date": "2024-07-25",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:32:13.506259"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "indian_automobile",
+      "start_date": "2024-07-18",
+      "end_date": "2024-07-25",
+      "articles_found": 1,
+      "timestamp": "2025-07-20T23:32:15.800082"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "reliance_industries",
+      "start_date": "2024-07-18",
+      "end_date": "2024-07-25",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:32:18.095797"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "tata_group_companies",
+      "start_date": "2024-07-18",
+      "end_date": "2024-07-25",
+      "articles_found": 2,
+      "timestamp": "2025-07-20T23:32:20.193223"
+    },
+    {
+      "api": "marketaux",
+      "strategy": "hdfc_icici_banking",
+      "start_date": "2024-07-18",
+      "end_date": "2024-07-25",
+      "articles_found": 3,
+      "timestamp": "2025-07-20T23:32:22.188753"
+    }
+  ],
+  "last_update": "2025-07-20T23:32:22.188781",
+  "total_articles_found": 518
+}
