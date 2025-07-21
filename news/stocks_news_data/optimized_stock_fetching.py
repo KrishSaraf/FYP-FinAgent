@@ -206,12 +206,67 @@ class SmartMarketauxAPI:
         self.daily_calls = 0
         self.daily_limit = 100
         
+    # def fetch_with_caching(self, strategy: str, start_date: str, end_date: str, params: Dict) -> List[NewsArticle]:
+    #     """Fetch articles with smart caching"""
+        
+    #     # Check if this request was already made
+    #     if self.cache.is_request_completed('marketaux', strategy, start_date, end_date, params):
+    #         return []  # Skip, already fetched
+        
+    #     # Check daily limit
+    #     if self.daily_calls >= self.daily_limit:
+    #         logger.warning("⚠️  Marketaux daily limit reached")
+    #         return []
+        
+    #     # Make the API request
+    #     params.update({
+    #         'api_token': self.api_key,
+    #         'published_after': start_date,
+    #         'published_before': end_date,
+    #         'language': 'en',
+    #         'limit': 3
+    #     })
+        
+    #     try:
+    #         logger.info(f"🔍 API Call: {strategy} ({start_date} to {end_date})")
+    #         response = requests.get(f"{self.base_url}/news/all", params=params, timeout=30)
+    #         self.daily_calls += 1
+            
+    #         if response.status_code == 200:
+    #             data = response.json()
+    #             articles = self._parse_response(data, strategy)
+                
+    #             # Cache this request
+    #             self.cache.mark_request_completed(
+    #                 'marketaux', strategy, start_date, end_date, params, len(articles)
+    #             )
+                
+    #             return articles
+            
+    #         elif response.status_code == 429:
+    #             logger.warning("⚠️  Rate limit hit")
+    #             time.sleep(60)
+    #             return []
+    #         else:
+    #             logger.warning(f"⚠️  API error: {response.status_code}")
+    #             # Still cache failed requests to avoid repeating them
+    #             self.cache.mark_request_completed(
+    #                 'marketaux', strategy, start_date, end_date, params, 0
+    #             )
+    #             return []
+                
+    #     except Exception as e:
+    #         logger.error(f"❌ API error: {str(e)}")
+    #         return []
+
+
     def fetch_with_caching(self, strategy: str, start_date: str, end_date: str, params: Dict) -> List[NewsArticle]:
         """Fetch articles with smart caching"""
         
         # Check if this request was already made
         if self.cache.is_request_completed('marketaux', strategy, start_date, end_date, params):
-            return []  # Skip, already fetched
+            logger.info(f"⏭️  Using cached: {strategy} ({start_date} to {end_date})")
+            return []  # Return empty - articles already in storage from previous run
         
         # Check daily limit
         if self.daily_calls >= self.daily_limit:
@@ -219,7 +274,8 @@ class SmartMarketauxAPI:
             return []
         
         # Make the API request
-        params.update({
+        api_params = params.copy()  # Don't modify original
+        api_params.update({
             'api_token': self.api_key,
             'published_after': start_date,
             'published_before': end_date,
@@ -229,14 +285,16 @@ class SmartMarketauxAPI:
         
         try:
             logger.info(f"🔍 API Call: {strategy} ({start_date} to {end_date})")
-            response = requests.get(f"{self.base_url}/news/all", params=params, timeout=30)
+            response = requests.get(f"{self.base_url}/news/all", params=api_params, timeout=30)
             self.daily_calls += 1
             
             if response.status_code == 200:
                 data = response.json()
                 articles = self._parse_response(data, strategy)
                 
-                # Cache this request
+                logger.info(f"📰 API returned {len(articles)} articles")
+                
+                # Mark as cached ONLY after successful parsing
                 self.cache.mark_request_completed(
                     'marketaux', strategy, start_date, end_date, params, len(articles)
                 )
@@ -385,22 +443,45 @@ class SmartStockNewsFetcher:
             logger.info(f"📅 Processing: {start_str} to {end_str}")
             
             # Try each strategy for this date range
+            # for strategy_name, strategy_params in strategies.items():
+                
+            #     # Check if already cached
+            #     if self.cache.is_request_completed('marketaux', strategy_name, start_str, end_str, strategy_params):
+            #         skipped_requests += 1
+            #         continue
+                
+            #     # Make API call
+            #     articles = self.marketaux_api.fetch_with_caching(
+            #         strategy_name, start_str, end_str, strategy_params
+            #     )
+                
+            #     if articles:
+            #         new_count = self.storage.add_articles(articles)
+            #         total_new_articles += new_count
+            #         api_calls_made += 1
+                
+            #     time.sleep(1.5)  # Respectful delay
+                
+            #     # Check daily limit
+            #     if self.marketaux_api.daily_calls >= self.marketaux_api.daily_limit:
+            #         logger.warning("🛑 Daily API limit reached")
+            #         break
             for strategy_name, strategy_params in strategies.items():
-                
-                # Check if already cached
-                if self.cache.is_request_completed('marketaux', strategy_name, start_str, end_str, strategy_params):
-                    skipped_requests += 1
-                    continue
-                
-                # Make API call
+    
+    # Always try to fetch (let fetch_with_caching handle cache logic)
                 articles = self.marketaux_api.fetch_with_caching(
                     strategy_name, start_str, end_str, strategy_params
                 )
                 
+                # If we got articles from API call, add them to storage
                 if articles:
                     new_count = self.storage.add_articles(articles)
                     total_new_articles += new_count
+                    logger.info(f"💾 Added {new_count} new articles from {strategy_name}")
                     api_calls_made += 1
+                else:
+                    # This could be cached request or empty response
+                    logger.info(f"📭 No new articles from {strategy_name}")
                 
                 time.sleep(1.5)  # Respectful delay
                 
