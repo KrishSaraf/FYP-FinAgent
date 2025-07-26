@@ -1,0 +1,2058 @@
+[
+    {
+        "type": "tweet",
+        "id": "890195169093369859",
+        "url": "https://x.com/NestleIndia/status/890195169093369859",
+        "twitterUrl": "https://twitter.com/NestleIndia/status/890195169093369859",
+        "text": "The Board of Nestl\u00e9 India has announced the results for Q2, 2017.  Total Sales INR 2,469 Crores, Net Profit INR 263 Crores.",
+        "source": "Twitter for iPhone",
+        "retweetCount": 3,
+        "replyCount": 1,
+        "likeCount": 7,
+        "quoteCount": 0,
+        "viewCount": 0,
+        "createdAt": "Wed Jul 26 13:00:41 +0000 2017",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "890195169093369859",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "NestleIndia",
+            "url": "https://x.com/NestleIndia",
+            "twitterUrl": "https://twitter.com/NestleIndia",
+            "id": "942799489",
+            "name": "Nestl\u00e9 India",
+            "isVerified": false,
+            "isBlueVerified": false,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/859613884830945281/d3KFyS3a_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/942799489/1493782915",
+            "description": "",
+            "location": "Gurgaon, India",
+            "followers": 28087,
+            "following": 133,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Mon Nov 12 04:06:10 +0000 2012",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 151,
+            "hasCustomTimelines": true,
+            "isTranslator": true,
+            "mediaCount": 251,
+            "statusesCount": 1667,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "Enhancing Quality of Life and Contributing to a Healthier Future. \n\n(Twitter House Rules: https://t.co/GNGAJurJJK)",
+                "entities": {
+                    "description": {
+                        "urls": [
+                            {
+                                "display_url": "nestle.in/house-rules",
+                                "expanded_url": "https://www.nestle.in/house-rules",
+                                "indices": [
+                                    90,
+                                    113
+                                ],
+                                "url": "https://t.co/GNGAJurJJK"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "nestle.in",
+                                "expanded_url": "http://www.nestle.in",
+                                "indices": [
+                                    0,
+                                    22
+                                ],
+                                "url": "http://t.co/nmiVqBZfx6"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": null,
+        "place": {},
+        "entities": {},
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "879930993024483328",
+        "url": "https://x.com/NestleIndia/status/879930993024483328",
+        "twitterUrl": "https://twitter.com/NestleIndia/status/879930993024483328",
+        "text": "@jvidyasagar We are investigating these claims and have not received any formal notification from the authorities about such test results. (2/3)",
+        "source": "Twitter for iPhone",
+        "retweetCount": 1,
+        "replyCount": 0,
+        "likeCount": 1,
+        "quoteCount": 0,
+        "viewCount": 0,
+        "createdAt": "Wed Jun 28 05:14:31 +0000 2017",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": true,
+        "inReplyToId": "879718792800026624",
+        "conversationId": "879718792800026624",
+        "inReplyToUserId": "74205752",
+        "inReplyToUsername": "jvidyasagar",
+        "author": {
+            "type": "user",
+            "userName": "NestleIndia",
+            "url": "https://x.com/NestleIndia",
+            "twitterUrl": "https://twitter.com/NestleIndia",
+            "id": "942799489",
+            "name": "Nestl\u00e9 India",
+            "isVerified": false,
+            "isBlueVerified": false,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/859613884830945281/d3KFyS3a_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/942799489/1493782915",
+            "description": "",
+            "location": "Gurgaon, India",
+            "followers": 28087,
+            "following": 133,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Mon Nov 12 04:06:10 +0000 2012",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 151,
+            "hasCustomTimelines": true,
+            "isTranslator": true,
+            "mediaCount": 251,
+            "statusesCount": 1667,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "Enhancing Quality of Life and Contributing to a Healthier Future. \n\n(Twitter House Rules: https://t.co/GNGAJurJJK)",
+                "entities": {
+                    "description": {
+                        "urls": [
+                            {
+                                "display_url": "nestle.in/house-rules",
+                                "expanded_url": "https://www.nestle.in/house-rules",
+                                "indices": [
+                                    90,
+                                    113
+                                ],
+                                "url": "https://t.co/GNGAJurJJK"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "nestle.in",
+                                "expanded_url": "http://www.nestle.in",
+                                "indices": [
+                                    0,
+                                    22
+                                ],
+                                "url": "http://t.co/nmiVqBZfx6"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": null,
+        "place": {},
+        "entities": {
+            "user_mentions": [
+                {
+                    "id_str": "74205752",
+                    "indices": [
+                        0,
+                        12
+                    ],
+                    "name": "\ud83c\uddee\ud83c\uddf3 Vidyasagar Jagadeesan\ud83c\uddee\ud83c\uddf3",
+                    "screen_name": "jvidyasagar"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "879930707430187009",
+        "url": "https://x.com/NestleIndia/status/879930707430187009",
+        "twitterUrl": "https://twitter.com/NestleIndia/status/879930707430187009",
+        "text": "@mahajournalist We are investigating these claims and have not received any formal notification from the authorities about such test results. (2/3)",
+        "source": "Twitter for iPhone",
+        "retweetCount": 0,
+        "replyCount": 0,
+        "likeCount": 1,
+        "quoteCount": 0,
+        "viewCount": 0,
+        "createdAt": "Wed Jun 28 05:13:23 +0000 2017",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": true,
+        "inReplyToId": "879705661860233216",
+        "conversationId": "879705661860233216",
+        "inReplyToUserId": "41566493",
+        "inReplyToUsername": "mahajournalist",
+        "author": {
+            "type": "user",
+            "userName": "NestleIndia",
+            "url": "https://x.com/NestleIndia",
+            "twitterUrl": "https://twitter.com/NestleIndia",
+            "id": "942799489",
+            "name": "Nestl\u00e9 India",
+            "isVerified": false,
+            "isBlueVerified": false,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/859613884830945281/d3KFyS3a_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/942799489/1493782915",
+            "description": "",
+            "location": "Gurgaon, India",
+            "followers": 28087,
+            "following": 133,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Mon Nov 12 04:06:10 +0000 2012",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 151,
+            "hasCustomTimelines": true,
+            "isTranslator": true,
+            "mediaCount": 251,
+            "statusesCount": 1667,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "Enhancing Quality of Life and Contributing to a Healthier Future. \n\n(Twitter House Rules: https://t.co/GNGAJurJJK)",
+                "entities": {
+                    "description": {
+                        "urls": [
+                            {
+                                "display_url": "nestle.in/house-rules",
+                                "expanded_url": "https://www.nestle.in/house-rules",
+                                "indices": [
+                                    90,
+                                    113
+                                ],
+                                "url": "https://t.co/GNGAJurJJK"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "nestle.in",
+                                "expanded_url": "http://www.nestle.in",
+                                "indices": [
+                                    0,
+                                    22
+                                ],
+                                "url": "http://t.co/nmiVqBZfx6"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": null,
+        "place": {},
+        "entities": {
+            "user_mentions": [
+                {
+                    "id_str": "41566493",
+                    "indices": [
+                        0,
+                        15
+                    ],
+                    "name": "Mahalingam Ponnusamy",
+                    "screen_name": "mahajournalist"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "879929949892747264",
+        "url": "https://x.com/NestleIndia/status/879929949892747264",
+        "twitterUrl": "https://twitter.com/NestleIndia/status/879929949892747264",
+        "text": "@rbsrajasekar We are investigating these claims and have not received any formal notification from the authorities about such test results. (2/3)",
+        "source": "Twitter for iPhone",
+        "retweetCount": 0,
+        "replyCount": 0,
+        "likeCount": 1,
+        "quoteCount": 0,
+        "viewCount": 0,
+        "createdAt": "Wed Jun 28 05:10:23 +0000 2017",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": true,
+        "inReplyToId": "879830435601174528",
+        "conversationId": "879830435601174528",
+        "inReplyToUserId": "232616974",
+        "inReplyToUsername": "rajutrueindian",
+        "author": {
+            "type": "user",
+            "userName": "NestleIndia",
+            "url": "https://x.com/NestleIndia",
+            "twitterUrl": "https://twitter.com/NestleIndia",
+            "id": "942799489",
+            "name": "Nestl\u00e9 India",
+            "isVerified": false,
+            "isBlueVerified": false,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/859613884830945281/d3KFyS3a_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/942799489/1493782915",
+            "description": "",
+            "location": "Gurgaon, India",
+            "followers": 28087,
+            "following": 133,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Mon Nov 12 04:06:10 +0000 2012",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 151,
+            "hasCustomTimelines": true,
+            "isTranslator": true,
+            "mediaCount": 251,
+            "statusesCount": 1667,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "Enhancing Quality of Life and Contributing to a Healthier Future. \n\n(Twitter House Rules: https://t.co/GNGAJurJJK)",
+                "entities": {
+                    "description": {
+                        "urls": [
+                            {
+                                "display_url": "nestle.in/house-rules",
+                                "expanded_url": "https://www.nestle.in/house-rules",
+                                "indices": [
+                                    90,
+                                    113
+                                ],
+                                "url": "https://t.co/GNGAJurJJK"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "nestle.in",
+                                "expanded_url": "http://www.nestle.in",
+                                "indices": [
+                                    0,
+                                    22
+                                ],
+                                "url": "http://t.co/nmiVqBZfx6"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": null,
+        "place": {},
+        "entities": {},
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "863005205033492482",
+        "url": "https://x.com/NestleIndia/status/863005205033492482",
+        "twitterUrl": "https://twitter.com/NestleIndia/status/863005205033492482",
+        "text": "The Board of Nestl\u00e9 India has announced the results for Q1, 2017.  Total Sales INR 2,576 Crores, Net Profit INR 307 Crores.",
+        "source": "Twitter for iPhone",
+        "retweetCount": 1,
+        "replyCount": 1,
+        "likeCount": 8,
+        "quoteCount": 0,
+        "viewCount": 0,
+        "createdAt": "Fri May 12 12:17:29 +0000 2017",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "863005205033492482",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "NestleIndia",
+            "url": "https://x.com/NestleIndia",
+            "twitterUrl": "https://twitter.com/NestleIndia",
+            "id": "942799489",
+            "name": "Nestl\u00e9 India",
+            "isVerified": false,
+            "isBlueVerified": false,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/859613884830945281/d3KFyS3a_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/942799489/1493782915",
+            "description": "",
+            "location": "Gurgaon, India",
+            "followers": 28087,
+            "following": 133,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Mon Nov 12 04:06:10 +0000 2012",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 151,
+            "hasCustomTimelines": true,
+            "isTranslator": true,
+            "mediaCount": 251,
+            "statusesCount": 1667,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "Enhancing Quality of Life and Contributing to a Healthier Future. \n\n(Twitter House Rules: https://t.co/GNGAJurJJK)",
+                "entities": {
+                    "description": {
+                        "urls": [
+                            {
+                                "display_url": "nestle.in/house-rules",
+                                "expanded_url": "https://www.nestle.in/house-rules",
+                                "indices": [
+                                    90,
+                                    113
+                                ],
+                                "url": "https://t.co/GNGAJurJJK"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "nestle.in",
+                                "expanded_url": "http://www.nestle.in",
+                                "indices": [
+                                    0,
+                                    22
+                                ],
+                                "url": "http://t.co/nmiVqBZfx6"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": null,
+        "place": {},
+        "entities": {},
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "831841925032452096",
+        "url": "https://x.com/NestleIndia/status/831841925032452096",
+        "twitterUrl": "https://twitter.com/NestleIndia/status/831841925032452096",
+        "text": "The Board of Nestl\u00e9 India has announced the results for Full Year 2016.  Net Sales INR 9,159 Crores, Net Profit INR 927 Crores.",
+        "source": "Twitter for iPhone",
+        "retweetCount": 2,
+        "replyCount": 4,
+        "likeCount": 21,
+        "quoteCount": 0,
+        "viewCount": 0,
+        "createdAt": "Wed Feb 15 12:25:44 +0000 2017",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "831841925032452096",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "NestleIndia",
+            "url": "https://x.com/NestleIndia",
+            "twitterUrl": "https://twitter.com/NestleIndia",
+            "id": "942799489",
+            "name": "Nestl\u00e9 India",
+            "isVerified": false,
+            "isBlueVerified": false,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/859613884830945281/d3KFyS3a_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/942799489/1493782915",
+            "description": "",
+            "location": "Gurgaon, India",
+            "followers": 28087,
+            "following": 133,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Mon Nov 12 04:06:10 +0000 2012",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 151,
+            "hasCustomTimelines": true,
+            "isTranslator": true,
+            "mediaCount": 251,
+            "statusesCount": 1667,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "Enhancing Quality of Life and Contributing to a Healthier Future. \n\n(Twitter House Rules: https://t.co/GNGAJurJJK)",
+                "entities": {
+                    "description": {
+                        "urls": [
+                            {
+                                "display_url": "nestle.in/house-rules",
+                                "expanded_url": "https://www.nestle.in/house-rules",
+                                "indices": [
+                                    90,
+                                    113
+                                ],
+                                "url": "https://t.co/GNGAJurJJK"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "nestle.in",
+                                "expanded_url": "http://www.nestle.in",
+                                "indices": [
+                                    0,
+                                    22
+                                ],
+                                "url": "http://t.co/nmiVqBZfx6"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": null,
+        "place": {},
+        "entities": {},
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "791993021038342147",
+        "url": "https://x.com/NestleIndia/status/791993021038342147",
+        "twitterUrl": "https://twitter.com/NestleIndia/status/791993021038342147",
+        "text": "The Board of Nestl\u00e9 India has announced the results for Q3 2016.  Net Sales Rs. 2,346 Crores, Net Profit Rs. 269 Crores.",
+        "source": "Twitter for iPhone",
+        "retweetCount": 2,
+        "replyCount": 1,
+        "likeCount": 7,
+        "quoteCount": 0,
+        "viewCount": 0,
+        "createdAt": "Fri Oct 28 13:20:25 +0000 2016",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "791993021038342147",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "NestleIndia",
+            "url": "https://x.com/NestleIndia",
+            "twitterUrl": "https://twitter.com/NestleIndia",
+            "id": "942799489",
+            "name": "Nestl\u00e9 India",
+            "isVerified": false,
+            "isBlueVerified": false,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/859613884830945281/d3KFyS3a_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/942799489/1493782915",
+            "description": "",
+            "location": "Gurgaon, India",
+            "followers": 28087,
+            "following": 133,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Mon Nov 12 04:06:10 +0000 2012",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 151,
+            "hasCustomTimelines": true,
+            "isTranslator": true,
+            "mediaCount": 251,
+            "statusesCount": 1667,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "Enhancing Quality of Life and Contributing to a Healthier Future. \n\n(Twitter House Rules: https://t.co/GNGAJurJJK)",
+                "entities": {
+                    "description": {
+                        "urls": [
+                            {
+                                "display_url": "nestle.in/house-rules",
+                                "expanded_url": "https://www.nestle.in/house-rules",
+                                "indices": [
+                                    90,
+                                    113
+                                ],
+                                "url": "https://t.co/GNGAJurJJK"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "nestle.in",
+                                "expanded_url": "http://www.nestle.in",
+                                "indices": [
+                                    0,
+                                    22
+                                ],
+                                "url": "http://t.co/nmiVqBZfx6"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": null,
+        "place": {},
+        "entities": {},
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "758991619676704768",
+        "url": "https://x.com/NestleIndia/status/758991619676704768",
+        "twitterUrl": "https://twitter.com/NestleIndia/status/758991619676704768",
+        "text": "The Board of Nestl\u00e9 India has announced the results for the Q2 2016. Net Sales Rs.2256 Crores, Net Profit Rs. 231 Crores.",
+        "source": "Twitter for iPhone",
+        "retweetCount": 5,
+        "replyCount": 1,
+        "likeCount": 15,
+        "quoteCount": 1,
+        "viewCount": 0,
+        "createdAt": "Fri Jul 29 11:44:38 +0000 2016",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "758991619676704768",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "NestleIndia",
+            "url": "https://x.com/NestleIndia",
+            "twitterUrl": "https://twitter.com/NestleIndia",
+            "id": "942799489",
+            "name": "Nestl\u00e9 India",
+            "isVerified": false,
+            "isBlueVerified": false,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/859613884830945281/d3KFyS3a_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/942799489/1493782915",
+            "description": "",
+            "location": "Gurgaon, India",
+            "followers": 28087,
+            "following": 133,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Mon Nov 12 04:06:10 +0000 2012",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 151,
+            "hasCustomTimelines": true,
+            "isTranslator": true,
+            "mediaCount": 251,
+            "statusesCount": 1667,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "Enhancing Quality of Life and Contributing to a Healthier Future. \n\n(Twitter House Rules: https://t.co/GNGAJurJJK)",
+                "entities": {
+                    "description": {
+                        "urls": [
+                            {
+                                "display_url": "nestle.in/house-rules",
+                                "expanded_url": "https://www.nestle.in/house-rules",
+                                "indices": [
+                                    90,
+                                    113
+                                ],
+                                "url": "https://t.co/GNGAJurJJK"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "nestle.in",
+                                "expanded_url": "http://www.nestle.in",
+                                "indices": [
+                                    0,
+                                    22
+                                ],
+                                "url": "http://t.co/nmiVqBZfx6"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": null,
+        "place": {},
+        "entities": {},
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "730710467472064512",
+        "url": "https://x.com/NestleIndia/status/730710467472064512",
+        "twitterUrl": "https://twitter.com/NestleIndia/status/730710467472064512",
+        "text": "The Board of Nestl\u00e9 India has announced the results for the Q1 2016.  Net Sales Rs.2296 Crores, Net Profit Rs.259 Crores.",
+        "source": "Twitter for iPhone",
+        "retweetCount": 2,
+        "replyCount": 2,
+        "likeCount": 6,
+        "quoteCount": 0,
+        "viewCount": 0,
+        "createdAt": "Thu May 12 10:45:26 +0000 2016",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "730710467472064512",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "NestleIndia",
+            "url": "https://x.com/NestleIndia",
+            "twitterUrl": "https://twitter.com/NestleIndia",
+            "id": "942799489",
+            "name": "Nestl\u00e9 India",
+            "isVerified": false,
+            "isBlueVerified": false,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/859613884830945281/d3KFyS3a_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/942799489/1493782915",
+            "description": "",
+            "location": "Gurgaon, India",
+            "followers": 28087,
+            "following": 133,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Mon Nov 12 04:06:10 +0000 2012",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 151,
+            "hasCustomTimelines": true,
+            "isTranslator": true,
+            "mediaCount": 251,
+            "statusesCount": 1667,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "Enhancing Quality of Life and Contributing to a Healthier Future. \n\n(Twitter House Rules: https://t.co/GNGAJurJJK)",
+                "entities": {
+                    "description": {
+                        "urls": [
+                            {
+                                "display_url": "nestle.in/house-rules",
+                                "expanded_url": "https://www.nestle.in/house-rules",
+                                "indices": [
+                                    90,
+                                    113
+                                ],
+                                "url": "https://t.co/GNGAJurJJK"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "nestle.in",
+                                "expanded_url": "http://www.nestle.in",
+                                "indices": [
+                                    0,
+                                    22
+                                ],
+                                "url": "http://t.co/nmiVqBZfx6"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": null,
+        "place": {},
+        "entities": {},
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "626375824996827136",
+        "url": "https://x.com/NestleIndia/status/626375824996827136",
+        "twitterUrl": "https://twitter.com/NestleIndia/status/626375824996827136",
+        "text": "The Board of Nestl\u00e9 India have approved the results for Q2 2015. To view the full press release please go to https://t.co/oTpr63oFAE.",
+        "source": "Twitter for iPhone",
+        "retweetCount": 0,
+        "replyCount": 0,
+        "likeCount": 1,
+        "quoteCount": 0,
+        "viewCount": 0,
+        "createdAt": "Wed Jul 29 12:56:48 +0000 2015",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "626375824996827136",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "NestleIndia",
+            "url": "https://x.com/NestleIndia",
+            "twitterUrl": "https://twitter.com/NestleIndia",
+            "id": "942799489",
+            "name": "Nestl\u00e9 India",
+            "isVerified": false,
+            "isBlueVerified": false,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/859613884830945281/d3KFyS3a_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/942799489/1493782915",
+            "description": "",
+            "location": "Gurgaon, India",
+            "followers": 28087,
+            "following": 133,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Mon Nov 12 04:06:10 +0000 2012",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 151,
+            "hasCustomTimelines": true,
+            "isTranslator": true,
+            "mediaCount": 251,
+            "statusesCount": 1667,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "Enhancing Quality of Life and Contributing to a Healthier Future. \n\n(Twitter House Rules: https://t.co/GNGAJurJJK)",
+                "entities": {
+                    "description": {
+                        "urls": [
+                            {
+                                "display_url": "nestle.in/house-rules",
+                                "expanded_url": "https://www.nestle.in/house-rules",
+                                "indices": [
+                                    90,
+                                    113
+                                ],
+                                "url": "https://t.co/GNGAJurJJK"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "nestle.in",
+                                "expanded_url": "http://www.nestle.in",
+                                "indices": [
+                                    0,
+                                    22
+                                ],
+                                "url": "http://t.co/nmiVqBZfx6"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": null,
+        "place": {},
+        "entities": {
+            "urls": [
+                {
+                    "display_url": "nestle.in/investors/stoc\u2026",
+                    "expanded_url": "https://www.nestle.in/investors/stockandfinancials/financialpressreleases",
+                    "indices": [
+                        109,
+                        132
+                    ],
+                    "url": "https://t.co/oTpr63oFAE"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "599184739409367042",
+        "url": "https://x.com/NestleIndia/status/599184739409367042",
+        "twitterUrl": "https://twitter.com/NestleIndia/status/599184739409367042",
+        "text": "Net Profit for the 1st quarter of the year 2015 Rs.320.3 Crores. (3/3)",
+        "source": "Twitter for iPhone",
+        "retweetCount": 1,
+        "replyCount": 0,
+        "likeCount": 0,
+        "quoteCount": 0,
+        "viewCount": 0,
+        "createdAt": "Fri May 15 12:09:08 +0000 2015",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "599184739409367042",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "NestleIndia",
+            "url": "https://x.com/NestleIndia",
+            "twitterUrl": "https://twitter.com/NestleIndia",
+            "id": "942799489",
+            "name": "Nestl\u00e9 India",
+            "isVerified": false,
+            "isBlueVerified": false,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/859613884830945281/d3KFyS3a_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/942799489/1493782915",
+            "description": "",
+            "location": "Gurgaon, India",
+            "followers": 28087,
+            "following": 133,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Mon Nov 12 04:06:10 +0000 2012",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 151,
+            "hasCustomTimelines": true,
+            "isTranslator": true,
+            "mediaCount": 251,
+            "statusesCount": 1667,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "Enhancing Quality of Life and Contributing to a Healthier Future. \n\n(Twitter House Rules: https://t.co/GNGAJurJJK)",
+                "entities": {
+                    "description": {
+                        "urls": [
+                            {
+                                "display_url": "nestle.in/house-rules",
+                                "expanded_url": "https://www.nestle.in/house-rules",
+                                "indices": [
+                                    90,
+                                    113
+                                ],
+                                "url": "https://t.co/GNGAJurJJK"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "nestle.in",
+                                "expanded_url": "http://www.nestle.in",
+                                "indices": [
+                                    0,
+                                    22
+                                ],
+                                "url": "http://t.co/nmiVqBZfx6"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": null,
+        "place": {},
+        "entities": {},
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "599184675521724416",
+        "url": "https://x.com/NestleIndia/status/599184675521724416",
+        "twitterUrl": "https://twitter.com/NestleIndia/status/599184675521724416",
+        "text": "Net Sales for the 1st quarter of the year 2015 Rs.2506.8 Crores. (2/3)",
+        "source": "Twitter for iPhone",
+        "retweetCount": 0,
+        "replyCount": 1,
+        "likeCount": 0,
+        "quoteCount": 0,
+        "viewCount": 0,
+        "createdAt": "Fri May 15 12:08:53 +0000 2015",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "599184675521724416",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "NestleIndia",
+            "url": "https://x.com/NestleIndia",
+            "twitterUrl": "https://twitter.com/NestleIndia",
+            "id": "942799489",
+            "name": "Nestl\u00e9 India",
+            "isVerified": false,
+            "isBlueVerified": false,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/859613884830945281/d3KFyS3a_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/942799489/1493782915",
+            "description": "",
+            "location": "Gurgaon, India",
+            "followers": 28087,
+            "following": 133,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Mon Nov 12 04:06:10 +0000 2012",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 151,
+            "hasCustomTimelines": true,
+            "isTranslator": true,
+            "mediaCount": 251,
+            "statusesCount": 1667,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "Enhancing Quality of Life and Contributing to a Healthier Future. \n\n(Twitter House Rules: https://t.co/GNGAJurJJK)",
+                "entities": {
+                    "description": {
+                        "urls": [
+                            {
+                                "display_url": "nestle.in/house-rules",
+                                "expanded_url": "https://www.nestle.in/house-rules",
+                                "indices": [
+                                    90,
+                                    113
+                                ],
+                                "url": "https://t.co/GNGAJurJJK"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "nestle.in",
+                                "expanded_url": "http://www.nestle.in",
+                                "indices": [
+                                    0,
+                                    22
+                                ],
+                                "url": "http://t.co/nmiVqBZfx6"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": null,
+        "place": {},
+        "entities": {},
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "599184620991549440",
+        "url": "https://x.com/NestleIndia/status/599184620991549440",
+        "twitterUrl": "https://twitter.com/NestleIndia/status/599184620991549440",
+        "text": "The Board of Nestl\u00e9 India have announced the results for the 1st quarter of the year 2015. (1/3)",
+        "source": "Twitter for iPhone",
+        "retweetCount": 0,
+        "replyCount": 0,
+        "likeCount": 0,
+        "quoteCount": 0,
+        "viewCount": 0,
+        "createdAt": "Fri May 15 12:08:40 +0000 2015",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "599184620991549440",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "NestleIndia",
+            "url": "https://x.com/NestleIndia",
+            "twitterUrl": "https://twitter.com/NestleIndia",
+            "id": "942799489",
+            "name": "Nestl\u00e9 India",
+            "isVerified": false,
+            "isBlueVerified": false,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/859613884830945281/d3KFyS3a_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/942799489/1493782915",
+            "description": "",
+            "location": "Gurgaon, India",
+            "followers": 28087,
+            "following": 133,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Mon Nov 12 04:06:10 +0000 2012",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 151,
+            "hasCustomTimelines": true,
+            "isTranslator": true,
+            "mediaCount": 251,
+            "statusesCount": 1667,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "Enhancing Quality of Life and Contributing to a Healthier Future. \n\n(Twitter House Rules: https://t.co/GNGAJurJJK)",
+                "entities": {
+                    "description": {
+                        "urls": [
+                            {
+                                "display_url": "nestle.in/house-rules",
+                                "expanded_url": "https://www.nestle.in/house-rules",
+                                "indices": [
+                                    90,
+                                    113
+                                ],
+                                "url": "https://t.co/GNGAJurJJK"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "nestle.in",
+                                "expanded_url": "http://www.nestle.in",
+                                "indices": [
+                                    0,
+                                    22
+                                ],
+                                "url": "http://t.co/nmiVqBZfx6"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": null,
+        "place": {},
+        "entities": {},
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "566194878141313024",
+        "url": "https://x.com/NestleIndia/status/566194878141313024",
+        "twitterUrl": "https://twitter.com/NestleIndia/status/566194878141313024",
+        "text": "Net Profit for the Full Year 2014 Rs.1184.7 Crores. (3/3)",
+        "source": "Twitter for iPhone",
+        "retweetCount": 0,
+        "replyCount": 1,
+        "likeCount": 1,
+        "quoteCount": 0,
+        "viewCount": 0,
+        "createdAt": "Fri Feb 13 11:19:12 +0000 2015",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "566194878141313024",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "NestleIndia",
+            "url": "https://x.com/NestleIndia",
+            "twitterUrl": "https://twitter.com/NestleIndia",
+            "id": "942799489",
+            "name": "Nestl\u00e9 India",
+            "isVerified": false,
+            "isBlueVerified": false,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/859613884830945281/d3KFyS3a_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/942799489/1493782915",
+            "description": "",
+            "location": "Gurgaon, India",
+            "followers": 28087,
+            "following": 133,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Mon Nov 12 04:06:10 +0000 2012",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 151,
+            "hasCustomTimelines": true,
+            "isTranslator": true,
+            "mediaCount": 251,
+            "statusesCount": 1667,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "Enhancing Quality of Life and Contributing to a Healthier Future. \n\n(Twitter House Rules: https://t.co/GNGAJurJJK)",
+                "entities": {
+                    "description": {
+                        "urls": [
+                            {
+                                "display_url": "nestle.in/house-rules",
+                                "expanded_url": "https://www.nestle.in/house-rules",
+                                "indices": [
+                                    90,
+                                    113
+                                ],
+                                "url": "https://t.co/GNGAJurJJK"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "nestle.in",
+                                "expanded_url": "http://www.nestle.in",
+                                "indices": [
+                                    0,
+                                    22
+                                ],
+                                "url": "http://t.co/nmiVqBZfx6"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": null,
+        "place": {},
+        "entities": {},
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "566194746435985408",
+        "url": "https://x.com/NestleIndia/status/566194746435985408",
+        "twitterUrl": "https://twitter.com/NestleIndia/status/566194746435985408",
+        "text": "The Board of Nestl\u00e9 India have announced the results for the Full Year 2014. (1/3)",
+        "source": "Twitter for iPhone",
+        "retweetCount": 0,
+        "replyCount": 0,
+        "likeCount": 0,
+        "quoteCount": 0,
+        "viewCount": 0,
+        "createdAt": "Fri Feb 13 11:18:41 +0000 2015",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "566194746435985408",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "NestleIndia",
+            "url": "https://x.com/NestleIndia",
+            "twitterUrl": "https://twitter.com/NestleIndia",
+            "id": "942799489",
+            "name": "Nestl\u00e9 India",
+            "isVerified": false,
+            "isBlueVerified": false,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/859613884830945281/d3KFyS3a_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/942799489/1493782915",
+            "description": "",
+            "location": "Gurgaon, India",
+            "followers": 28087,
+            "following": 133,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Mon Nov 12 04:06:10 +0000 2012",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 151,
+            "hasCustomTimelines": true,
+            "isTranslator": true,
+            "mediaCount": 251,
+            "statusesCount": 1667,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "Enhancing Quality of Life and Contributing to a Healthier Future. \n\n(Twitter House Rules: https://t.co/GNGAJurJJK)",
+                "entities": {
+                    "description": {
+                        "urls": [
+                            {
+                                "display_url": "nestle.in/house-rules",
+                                "expanded_url": "https://www.nestle.in/house-rules",
+                                "indices": [
+                                    90,
+                                    113
+                                ],
+                                "url": "https://t.co/GNGAJurJJK"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "nestle.in",
+                                "expanded_url": "http://www.nestle.in",
+                                "indices": [
+                                    0,
+                                    22
+                                ],
+                                "url": "http://t.co/nmiVqBZfx6"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": null,
+        "place": {},
+        "entities": {},
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "527085232642461698",
+        "url": "https://x.com/NestleIndia/status/527085232642461698",
+        "twitterUrl": "https://twitter.com/NestleIndia/status/527085232642461698",
+        "text": "Net Profit for the 3rd Quarter of year 2014 Rs. 311.3 Crores. \nFor the full press release click http://t.co/dIUVN2OFis",
+        "source": "Twitter for iPhone",
+        "retweetCount": 0,
+        "replyCount": 0,
+        "likeCount": 0,
+        "quoteCount": 0,
+        "viewCount": 0,
+        "createdAt": "Tue Oct 28 13:11:26 +0000 2014",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "527085232642461698",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "NestleIndia",
+            "url": "https://x.com/NestleIndia",
+            "twitterUrl": "https://twitter.com/NestleIndia",
+            "id": "942799489",
+            "name": "Nestl\u00e9 India",
+            "isVerified": false,
+            "isBlueVerified": false,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/859613884830945281/d3KFyS3a_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/942799489/1493782915",
+            "description": "",
+            "location": "Gurgaon, India",
+            "followers": 28087,
+            "following": 133,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Mon Nov 12 04:06:10 +0000 2012",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 151,
+            "hasCustomTimelines": true,
+            "isTranslator": true,
+            "mediaCount": 251,
+            "statusesCount": 1667,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "Enhancing Quality of Life and Contributing to a Healthier Future. \n\n(Twitter House Rules: https://t.co/GNGAJurJJK)",
+                "entities": {
+                    "description": {
+                        "urls": [
+                            {
+                                "display_url": "nestle.in/house-rules",
+                                "expanded_url": "https://www.nestle.in/house-rules",
+                                "indices": [
+                                    90,
+                                    113
+                                ],
+                                "url": "https://t.co/GNGAJurJJK"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "nestle.in",
+                                "expanded_url": "http://www.nestle.in",
+                                "indices": [
+                                    0,
+                                    22
+                                ],
+                                "url": "http://t.co/nmiVqBZfx6"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": null,
+        "place": {},
+        "entities": {
+            "urls": [
+                {
+                    "display_url": "nestle.in/asset-library/\u2026",
+                    "expanded_url": "http://www.nestle.in/asset-library/documents/pressreleases/press-release-q3.pdf",
+                    "indices": [
+                        96,
+                        118
+                    ],
+                    "url": "http://t.co/dIUVN2OFis"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "527085142334910464",
+        "url": "https://x.com/NestleIndia/status/527085142334910464",
+        "twitterUrl": "https://twitter.com/NestleIndia/status/527085142334910464",
+        "text": "Net Sales for the 3rd Quarter of year 2014 Rs. 2557.8 Crores. \nFor the full press release click http://t.co/dIUVN2OFis",
+        "source": "Twitter for iPhone",
+        "retweetCount": 0,
+        "replyCount": 0,
+        "likeCount": 0,
+        "quoteCount": 0,
+        "viewCount": 0,
+        "createdAt": "Tue Oct 28 13:11:05 +0000 2014",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "527085142334910464",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "NestleIndia",
+            "url": "https://x.com/NestleIndia",
+            "twitterUrl": "https://twitter.com/NestleIndia",
+            "id": "942799489",
+            "name": "Nestl\u00e9 India",
+            "isVerified": false,
+            "isBlueVerified": false,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/859613884830945281/d3KFyS3a_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/942799489/1493782915",
+            "description": "",
+            "location": "Gurgaon, India",
+            "followers": 28087,
+            "following": 133,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Mon Nov 12 04:06:10 +0000 2012",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 151,
+            "hasCustomTimelines": true,
+            "isTranslator": true,
+            "mediaCount": 251,
+            "statusesCount": 1667,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "Enhancing Quality of Life and Contributing to a Healthier Future. \n\n(Twitter House Rules: https://t.co/GNGAJurJJK)",
+                "entities": {
+                    "description": {
+                        "urls": [
+                            {
+                                "display_url": "nestle.in/house-rules",
+                                "expanded_url": "https://www.nestle.in/house-rules",
+                                "indices": [
+                                    90,
+                                    113
+                                ],
+                                "url": "https://t.co/GNGAJurJJK"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "nestle.in",
+                                "expanded_url": "http://www.nestle.in",
+                                "indices": [
+                                    0,
+                                    22
+                                ],
+                                "url": "http://t.co/nmiVqBZfx6"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": null,
+        "place": {},
+        "entities": {
+            "urls": [
+                {
+                    "display_url": "nestle.in/asset-library/\u2026",
+                    "expanded_url": "http://www.nestle.in/asset-library/documents/pressreleases/press-release-q3.pdf",
+                    "indices": [
+                        96,
+                        118
+                    ],
+                    "url": "http://t.co/dIUVN2OFis"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "497379258931503104",
+        "url": "https://x.com/NestleIndia/status/497379258931503104",
+        "twitterUrl": "https://twitter.com/NestleIndia/status/497379258931503104",
+        "text": "Net Profit for the 2nd Quarter of year 2014 Rs.288 Crores. For the full press release click http://t.co/lY0AyzpVzZ",
+        "source": "Twitter for iPhone",
+        "retweetCount": 1,
+        "replyCount": 0,
+        "likeCount": 0,
+        "quoteCount": 0,
+        "viewCount": 0,
+        "createdAt": "Thu Aug 07 13:50:30 +0000 2014",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "497379258931503104",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "NestleIndia",
+            "url": "https://x.com/NestleIndia",
+            "twitterUrl": "https://twitter.com/NestleIndia",
+            "id": "942799489",
+            "name": "Nestl\u00e9 India",
+            "isVerified": false,
+            "isBlueVerified": false,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/859613884830945281/d3KFyS3a_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/942799489/1493782915",
+            "description": "",
+            "location": "Gurgaon, India",
+            "followers": 28087,
+            "following": 133,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Mon Nov 12 04:06:10 +0000 2012",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 151,
+            "hasCustomTimelines": true,
+            "isTranslator": true,
+            "mediaCount": 251,
+            "statusesCount": 1667,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "Enhancing Quality of Life and Contributing to a Healthier Future. \n\n(Twitter House Rules: https://t.co/GNGAJurJJK)",
+                "entities": {
+                    "description": {
+                        "urls": [
+                            {
+                                "display_url": "nestle.in/house-rules",
+                                "expanded_url": "https://www.nestle.in/house-rules",
+                                "indices": [
+                                    90,
+                                    113
+                                ],
+                                "url": "https://t.co/GNGAJurJJK"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "nestle.in",
+                                "expanded_url": "http://www.nestle.in",
+                                "indices": [
+                                    0,
+                                    22
+                                ],
+                                "url": "http://t.co/nmiVqBZfx6"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": null,
+        "place": {},
+        "entities": {
+            "urls": [
+                {
+                    "display_url": "goo.gl/18d771",
+                    "expanded_url": "http://goo.gl/18d771",
+                    "indices": [
+                        92,
+                        114
+                    ],
+                    "url": "http://t.co/lY0AyzpVzZ"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "497379173367685120",
+        "url": "https://x.com/NestleIndia/status/497379173367685120",
+        "twitterUrl": "https://twitter.com/NestleIndia/status/497379173367685120",
+        "text": "Net Sales for the 2nd Quarter of year 2014 Rs.2419 Crores. For the full press release click http://t.co/lY0AyzpVzZ",
+        "source": "Twitter for iPhone",
+        "retweetCount": 1,
+        "replyCount": 0,
+        "likeCount": 0,
+        "quoteCount": 0,
+        "viewCount": 0,
+        "createdAt": "Thu Aug 07 13:50:10 +0000 2014",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "497379173367685120",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "NestleIndia",
+            "url": "https://x.com/NestleIndia",
+            "twitterUrl": "https://twitter.com/NestleIndia",
+            "id": "942799489",
+            "name": "Nestl\u00e9 India",
+            "isVerified": false,
+            "isBlueVerified": false,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/859613884830945281/d3KFyS3a_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/942799489/1493782915",
+            "description": "",
+            "location": "Gurgaon, India",
+            "followers": 28087,
+            "following": 133,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Mon Nov 12 04:06:10 +0000 2012",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 151,
+            "hasCustomTimelines": true,
+            "isTranslator": true,
+            "mediaCount": 251,
+            "statusesCount": 1667,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "Enhancing Quality of Life and Contributing to a Healthier Future. \n\n(Twitter House Rules: https://t.co/GNGAJurJJK)",
+                "entities": {
+                    "description": {
+                        "urls": [
+                            {
+                                "display_url": "nestle.in/house-rules",
+                                "expanded_url": "https://www.nestle.in/house-rules",
+                                "indices": [
+                                    90,
+                                    113
+                                ],
+                                "url": "https://t.co/GNGAJurJJK"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "nestle.in",
+                                "expanded_url": "http://www.nestle.in",
+                                "indices": [
+                                    0,
+                                    22
+                                ],
+                                "url": "http://t.co/nmiVqBZfx6"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": null,
+        "place": {},
+        "entities": {
+            "urls": [
+                {
+                    "display_url": "goo.gl/18d771",
+                    "expanded_url": "http://goo.gl/18d771",
+                    "indices": [
+                        92,
+                        114
+                    ],
+                    "url": "http://t.co/lY0AyzpVzZ"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "497378951489019904",
+        "url": "https://x.com/NestleIndia/status/497378951489019904",
+        "twitterUrl": "https://twitter.com/NestleIndia/status/497378951489019904",
+        "text": "The Board of Nestl\u00e9 India have announced the results for the 2nd Quarter of 2014. For the full press release click http://t.co/lY0AyzpVzZ",
+        "source": "Twitter for iPhone",
+        "retweetCount": 0,
+        "replyCount": 0,
+        "likeCount": 0,
+        "quoteCount": 0,
+        "viewCount": 0,
+        "createdAt": "Thu Aug 07 13:49:17 +0000 2014",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "497378951489019904",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "NestleIndia",
+            "url": "https://x.com/NestleIndia",
+            "twitterUrl": "https://twitter.com/NestleIndia",
+            "id": "942799489",
+            "name": "Nestl\u00e9 India",
+            "isVerified": false,
+            "isBlueVerified": false,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/859613884830945281/d3KFyS3a_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/942799489/1493782915",
+            "description": "",
+            "location": "Gurgaon, India",
+            "followers": 28087,
+            "following": 133,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Mon Nov 12 04:06:10 +0000 2012",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 151,
+            "hasCustomTimelines": true,
+            "isTranslator": true,
+            "mediaCount": 251,
+            "statusesCount": 1667,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "Enhancing Quality of Life and Contributing to a Healthier Future. \n\n(Twitter House Rules: https://t.co/GNGAJurJJK)",
+                "entities": {
+                    "description": {
+                        "urls": [
+                            {
+                                "display_url": "nestle.in/house-rules",
+                                "expanded_url": "https://www.nestle.in/house-rules",
+                                "indices": [
+                                    90,
+                                    113
+                                ],
+                                "url": "https://t.co/GNGAJurJJK"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "nestle.in",
+                                "expanded_url": "http://www.nestle.in",
+                                "indices": [
+                                    0,
+                                    22
+                                ],
+                                "url": "http://t.co/nmiVqBZfx6"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": null,
+        "place": {},
+        "entities": {
+            "urls": [
+                {
+                    "display_url": "goo.gl/18d771",
+                    "expanded_url": "http://goo.gl/18d771",
+                    "indices": [
+                        115,
+                        137
+                    ],
+                    "url": "http://t.co/lY0AyzpVzZ"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    }
+]

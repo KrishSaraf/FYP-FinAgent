@@ -1,0 +1,3606 @@
+[
+    {
+        "type": "tweet",
+        "id": "1918711598471889044",
+        "url": "https://x.com/KotakBankLtd/status/1918711598471889044",
+        "twitterUrl": "https://twitter.com/KotakBankLtd/status/1918711598471889044",
+        "text": "Announcing our financial results for Q4FY25. Watch the key highlights to know more. \nThis video is for information purposes only. The complete presentation can be accessed at\u00a0https://t.co/cggjRGLpnz\n\u00a0\n#KotakMahindraBank\u00a0#Kotakquarterresults\u00a0\u00a0#KotakQ4FY25Results\u00a0#QuarterResults https://t.co/zeWAAyjYwB",
+        "source": "Twitter for iPhone",
+        "retweetCount": 2,
+        "replyCount": 8,
+        "likeCount": 2,
+        "quoteCount": 0,
+        "viewCount": 2004,
+        "createdAt": "Sat May 03 16:57:47 +0000 2025",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1918711598471889044",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "KotakBankLtd",
+            "url": "https://x.com/KotakBankLtd",
+            "twitterUrl": "https://twitter.com/KotakBankLtd",
+            "id": "350862570",
+            "name": "Kotak Mahindra Bank",
+            "isVerified": false,
+            "isBlueVerified": true,
+            "verifiedType": "Business",
+            "profilePicture": "https://pbs.twimg.com/profile_images/1905526983192457216/isgAlnEe_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/350862570/1753252394",
+            "description": "",
+            "location": "Mumbai, India",
+            "followers": 325310,
+            "following": 23,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Mon Aug 08 12:35:28 +0000 2011",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 1766,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 1675,
+            "statusesCount": 133705,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [
+                "1948632121129501164"
+            ],
+            "profile_bio": {
+                "description": "Official handle of Kotak Mahindra Bank, India's leading banking & financial services group. For quick resolution of your queries, tweet @KotakCares",
+                "entities": {
+                    "description": {
+                        "user_mentions": [
+                            {
+                                "id_str": "0",
+                                "indices": [
+                                    136,
+                                    147
+                                ],
+                                "name": "",
+                                "screen_name": "KotakCares"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "kotak.com",
+                                "expanded_url": "http://www.kotak.com",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/IZUw9bWiVM"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {
+            "media": [
+                {
+                    "additional_media_info": {
+                        "monetizable": false
+                    },
+                    "display_url": "pic.twitter.com/zeWAAyjYwB",
+                    "expanded_url": "https://twitter.com/KotakBankLtd/status/1918711598471889044/video/1",
+                    "ext_media_availability": {
+                        "status": "Available"
+                    },
+                    "id_str": "1918711524530528256",
+                    "indices": [
+                        278,
+                        301
+                    ],
+                    "media_key": "13_1918711524530528256",
+                    "media_results": {
+                        "id": "QXBpTWVkaWFSZXN1bHRzOgwABAoAARqgofc+FyAAAAA=",
+                        "result": {
+                            "__typename": "ApiMedia",
+                            "id": "QXBpTWVkaWE6DAAECgABGqCh9z4XIAAAAA==",
+                            "media_key": "13_1918711524530528256"
+                        }
+                    },
+                    "media_url_https": "https://pbs.twimg.com/amplify_video_thumb/1918711524530528256/img/K2s1oqLgv6rberoW.jpg",
+                    "original_info": {
+                        "focus_rects": [],
+                        "height": 1080,
+                        "width": 1920
+                    },
+                    "sizes": {
+                        "large": {
+                            "h": 1080,
+                            "w": 1920
+                        }
+                    },
+                    "type": "video",
+                    "url": "https://t.co/zeWAAyjYwB",
+                    "video_info": {
+                        "aspect_ratio": [
+                            16,
+                            9
+                        ],
+                        "duration_millis": 103040,
+                        "variants": [
+                            {
+                                "content_type": "application/x-mpegURL",
+                                "url": "https://video-s.twimg.com/amplify_video/1918711524530528256/pl/W8w976EUtXcefd0N.m3u8?tag=16&v=cfc"
+                            },
+                            {
+                                "bitrate": 288000,
+                                "content_type": "video/mp4",
+                                "url": "https://video-s.twimg.com/amplify_video/1918711524530528256/vid/avc1/480x270/u7dGVei6JaAtOOH8.mp4?tag=16"
+                            },
+                            {
+                                "bitrate": 832000,
+                                "content_type": "video/mp4",
+                                "url": "https://video-s.twimg.com/amplify_video/1918711524530528256/vid/avc1/640x360/TgG5Ioxe1yggidhv.mp4?tag=16"
+                            },
+                            {
+                                "bitrate": 2176000,
+                                "content_type": "video/mp4",
+                                "url": "https://video-s.twimg.com/amplify_video/1918711524530528256/vid/avc1/1280x720/mWMHU7Tfd4ZyjdOY.mp4?tag=16"
+                            },
+                            {
+                                "bitrate": 10368000,
+                                "content_type": "video/mp4",
+                                "url": "https://video-s.twimg.com/amplify_video/1918711524530528256/vid/avc1/1920x1080/AXYyXcfsnCf4GtEM.mp4?tag=16"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "card": null,
+        "place": {},
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        201,
+                        219
+                    ],
+                    "text": "KotakMahindraBank"
+                },
+                {
+                    "indices": [
+                        220,
+                        240
+                    ],
+                    "text": "Kotakquarterresults"
+                },
+                {
+                    "indices": [
+                        242,
+                        261
+                    ],
+                    "text": "KotakQ4FY25Results"
+                },
+                {
+                    "indices": [
+                        262,
+                        277
+                    ],
+                    "text": "QuarterResults"
+                }
+            ],
+            "urls": [
+                {
+                    "display_url": "kotak.com/en/investor-re\u2026",
+                    "expanded_url": "https://www.kotak.com/en/investor-relations/financial-results.html?source=website",
+                    "indices": [
+                        175,
+                        198
+                    ],
+                    "url": "https://t.co/cggjRGLpnz"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1880564958242676947",
+        "url": "https://x.com/KotakBankLtd/status/1880564958242676947",
+        "twitterUrl": "https://twitter.com/KotakBankLtd/status/1880564958242676947",
+        "text": "Announcing our financial results for Q3FY25. Watch the key highlights to know more.\u00a0\n\nThis video is for information purposes only. The complete presentation can be accessed at\u00a0https://t.co/bqLTe3TKfs\n\u00a0\n#KotakMahindraBank\u00a0#QuarterResults\u00a0#Q3FY25Results https://t.co/LUYMgIY1vL",
+        "source": "Twitter for iPhone",
+        "retweetCount": 1,
+        "replyCount": 19,
+        "likeCount": 9,
+        "quoteCount": 0,
+        "viewCount": 3447,
+        "createdAt": "Sat Jan 18 10:36:39 +0000 2025",
+        "lang": "en",
+        "bookmarkCount": 2,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1880564958242676947",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "KotakBankLtd",
+            "url": "https://x.com/KotakBankLtd",
+            "twitterUrl": "https://twitter.com/KotakBankLtd",
+            "id": "350862570",
+            "name": "Kotak Mahindra Bank",
+            "isVerified": false,
+            "isBlueVerified": true,
+            "verifiedType": "Business",
+            "profilePicture": "https://pbs.twimg.com/profile_images/1905526983192457216/isgAlnEe_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/350862570/1753252394",
+            "description": "",
+            "location": "Mumbai, India",
+            "followers": 325310,
+            "following": 23,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Mon Aug 08 12:35:28 +0000 2011",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 1766,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 1675,
+            "statusesCount": 133705,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [
+                "1948632121129501164"
+            ],
+            "profile_bio": {
+                "description": "Official handle of Kotak Mahindra Bank, India's leading banking & financial services group. For quick resolution of your queries, tweet @KotakCares",
+                "entities": {
+                    "description": {
+                        "user_mentions": [
+                            {
+                                "id_str": "0",
+                                "indices": [
+                                    136,
+                                    147
+                                ],
+                                "name": "",
+                                "screen_name": "KotakCares"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "kotak.com",
+                                "expanded_url": "http://www.kotak.com",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/IZUw9bWiVM"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {
+            "media": [
+                {
+                    "additional_media_info": {
+                        "monetizable": false
+                    },
+                    "display_url": "pic.twitter.com/LUYMgIY1vL",
+                    "expanded_url": "https://twitter.com/KotakBankLtd/status/1880564958242676947/video/1",
+                    "ext_media_availability": {
+                        "status": "Available"
+                    },
+                    "id_str": "1880564856014995456",
+                    "indices": [
+                        252,
+                        275
+                    ],
+                    "media_key": "7_1880564856014995456",
+                    "media_results": {
+                        "id": "QXBpTWVkaWFSZXN1bHRzOgwAAwoAARoZG8Xb24AACgACGhkb3akaINMAAA==",
+                        "result": {
+                            "__typename": "ApiMedia",
+                            "id": "QXBpTWVkaWE6DAADCgABGhkbxdvbgAAKAAIaGRvdqRog0wAA",
+                            "media_key": "7_1880564856014995456"
+                        }
+                    },
+                    "media_url_https": "https://pbs.twimg.com/ext_tw_video_thumb/1880564856014995456/pu/img/-60G3KXmZKGv6lVQ.jpg",
+                    "original_info": {
+                        "focus_rects": [],
+                        "height": 720,
+                        "width": 1280
+                    },
+                    "sizes": {
+                        "large": {
+                            "h": 720,
+                            "w": 1280
+                        }
+                    },
+                    "type": "video",
+                    "url": "https://t.co/LUYMgIY1vL",
+                    "video_info": {
+                        "aspect_ratio": [
+                            16,
+                            9
+                        ],
+                        "duration_millis": 103040,
+                        "variants": [
+                            {
+                                "content_type": "application/x-mpegURL",
+                                "url": "https://video-s.twimg.com/ext_tw_video/1880564856014995456/pu/pl/E3aZZb1u1h1cYFok.m3u8?tag=12&v=861"
+                            },
+                            {
+                                "bitrate": 256000,
+                                "content_type": "video/mp4",
+                                "url": "https://video-s.twimg.com/ext_tw_video/1880564856014995456/pu/vid/avc1/480x270/sweE2PWX0ZXYYEfx.mp4?tag=12"
+                            },
+                            {
+                                "bitrate": 832000,
+                                "content_type": "video/mp4",
+                                "url": "https://video-s.twimg.com/ext_tw_video/1880564856014995456/pu/vid/avc1/640x360/Aomda7XKDjbayZIL.mp4?tag=12"
+                            },
+                            {
+                                "bitrate": 2176000,
+                                "content_type": "video/mp4",
+                                "url": "https://video-s.twimg.com/ext_tw_video/1880564856014995456/pu/vid/avc1/1280x720/HTcafkx42VpomixX.mp4?tag=12"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "card": null,
+        "place": {},
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        202,
+                        220
+                    ],
+                    "text": "KotakMahindraBank"
+                },
+                {
+                    "indices": [
+                        221,
+                        236
+                    ],
+                    "text": "QuarterResults"
+                },
+                {
+                    "indices": [
+                        237,
+                        251
+                    ],
+                    "text": "Q3FY25Results"
+                }
+            ],
+            "urls": [
+                {
+                    "display_url": "bit.ly/4d6mokg",
+                    "expanded_url": "https://bit.ly/4d6mokg",
+                    "indices": [
+                        176,
+                        199
+                    ],
+                    "url": "https://t.co/bqLTe3TKfs"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1847567920848576587",
+        "url": "https://x.com/KotakBankLtd/status/1847567920848576587",
+        "twitterUrl": "https://twitter.com/KotakBankLtd/status/1847567920848576587",
+        "text": "Announcing our financial results for Q2FY25. Watch the key highlights to know more.\n\nThis video is for information purposes only. The complete presentation can be accessed at https://t.co/bqLTe3TcpU\n \n#KotakMahindraBank #QuarterResults #Q2FY25Results https://t.co/UgF5okBXyq",
+        "source": "Twitter for iPhone",
+        "retweetCount": 0,
+        "replyCount": 15,
+        "likeCount": 10,
+        "quoteCount": 1,
+        "viewCount": 2126,
+        "createdAt": "Sat Oct 19 09:18:13 +0000 2024",
+        "lang": "en",
+        "bookmarkCount": 1,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1847567920848576587",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "KotakBankLtd",
+            "url": "https://x.com/KotakBankLtd",
+            "twitterUrl": "https://twitter.com/KotakBankLtd",
+            "id": "350862570",
+            "name": "Kotak Mahindra Bank",
+            "isVerified": false,
+            "isBlueVerified": true,
+            "verifiedType": "Business",
+            "profilePicture": "https://pbs.twimg.com/profile_images/1905526983192457216/isgAlnEe_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/350862570/1753252394",
+            "description": "",
+            "location": "Mumbai, India",
+            "followers": 325310,
+            "following": 23,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Mon Aug 08 12:35:28 +0000 2011",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 1766,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 1675,
+            "statusesCount": 133705,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [
+                "1948632121129501164"
+            ],
+            "profile_bio": {
+                "description": "Official handle of Kotak Mahindra Bank, India's leading banking & financial services group. For quick resolution of your queries, tweet @KotakCares",
+                "entities": {
+                    "description": {
+                        "user_mentions": [
+                            {
+                                "id_str": "0",
+                                "indices": [
+                                    136,
+                                    147
+                                ],
+                                "name": "",
+                                "screen_name": "KotakCares"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "kotak.com",
+                                "expanded_url": "http://www.kotak.com",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/IZUw9bWiVM"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {
+            "media": [
+                {
+                    "additional_media_info": {
+                        "monetizable": false
+                    },
+                    "allow_download_status": {
+                        "allow_download": true
+                    },
+                    "display_url": "pic.twitter.com/UgF5okBXyq",
+                    "expanded_url": "https://twitter.com/KotakBankLtd/status/1847567920848576587/video/1",
+                    "ext_media_availability": {
+                        "status": "Available"
+                    },
+                    "id_str": "1847567760626266112",
+                    "indices": [
+                        251,
+                        274
+                    ],
+                    "media_key": "7_1847567760626266112",
+                    "media_results": {
+                        "id": "QXBpTWVkaWFSZXN1bHRzOgwAAwoAARmj4Rbml7AACgACGaPhPDSWIEsAAA==",
+                        "result": {
+                            "__typename": "ApiMedia",
+                            "id": "QXBpTWVkaWE6DAADCgABGaPhFuaXsAAKAAIZo+E8NJYgSwAA",
+                            "media_key": "7_1847567760626266112"
+                        }
+                    },
+                    "media_url_https": "https://pbs.twimg.com/ext_tw_video_thumb/1847567760626266112/pu/img/8iXgxhjispYXp_9K.jpg",
+                    "original_info": {
+                        "focus_rects": [],
+                        "height": 1080,
+                        "width": 1920
+                    },
+                    "sizes": {
+                        "large": {
+                            "h": 1080,
+                            "w": 1920
+                        }
+                    },
+                    "type": "video",
+                    "url": "https://t.co/UgF5okBXyq",
+                    "video_info": {
+                        "aspect_ratio": [
+                            16,
+                            9
+                        ],
+                        "duration_millis": 103040,
+                        "variants": [
+                            {
+                                "content_type": "application/x-mpegURL",
+                                "url": "https://video-s.twimg.com/ext_tw_video/1847567760626266112/pu/pl/2KjiE8vkNo4xutkt.m3u8?tag=12&v=cfc"
+                            },
+                            {
+                                "bitrate": 256000,
+                                "content_type": "video/mp4",
+                                "url": "https://video-s.twimg.com/ext_tw_video/1847567760626266112/pu/vid/avc1/480x270/4DoetvqsojOiXiAR.mp4?tag=12"
+                            },
+                            {
+                                "bitrate": 832000,
+                                "content_type": "video/mp4",
+                                "url": "https://video-s.twimg.com/ext_tw_video/1847567760626266112/pu/vid/avc1/640x360/fGri6obJmsfKiv_S.mp4?tag=12"
+                            },
+                            {
+                                "bitrate": 2176000,
+                                "content_type": "video/mp4",
+                                "url": "https://video-s.twimg.com/ext_tw_video/1847567760626266112/pu/vid/avc1/1280x720/jcSyGZlFgf855vg-.mp4?tag=12"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "card": null,
+        "place": {},
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        201,
+                        219
+                    ],
+                    "text": "KotakMahindraBank"
+                },
+                {
+                    "indices": [
+                        220,
+                        235
+                    ],
+                    "text": "QuarterResults"
+                },
+                {
+                    "indices": [
+                        236,
+                        250
+                    ],
+                    "text": "Q2FY25Results"
+                }
+            ],
+            "urls": [
+                {
+                    "display_url": "bit.ly/4d6mokg",
+                    "expanded_url": "https://bit.ly/4d6mokg",
+                    "indices": [
+                        175,
+                        198
+                    ],
+                    "url": "https://t.co/bqLTe3TcpU"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1814639805747134525",
+        "url": "https://x.com/KotakBankLtd/status/1814639805747134525",
+        "twitterUrl": "https://twitter.com/KotakBankLtd/status/1814639805747134525",
+        "text": "Announcing our financial results for Q1FY25. Watch the key highlights to know more.\n\nThis video is for information purposes only. The complete presentation can be accessed at\u00a0https://t.co/LctI176pOR\n\u00a0\n#KotakMahindraBank\u00a0#QuarterResults\u00a0#Q1FY25Results https://t.co/zkyl2yYoCk",
+        "source": "Twitter for iPhone",
+        "retweetCount": 1,
+        "replyCount": 12,
+        "likeCount": 10,
+        "quoteCount": 1,
+        "viewCount": 2707,
+        "createdAt": "Sat Jul 20 12:33:38 +0000 2024",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1814639805747134525",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "KotakBankLtd",
+            "url": "https://x.com/KotakBankLtd",
+            "twitterUrl": "https://twitter.com/KotakBankLtd",
+            "id": "350862570",
+            "name": "Kotak Mahindra Bank",
+            "isVerified": false,
+            "isBlueVerified": true,
+            "verifiedType": "Business",
+            "profilePicture": "https://pbs.twimg.com/profile_images/1905526983192457216/isgAlnEe_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/350862570/1753252394",
+            "description": "",
+            "location": "Mumbai, India",
+            "followers": 325310,
+            "following": 23,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Mon Aug 08 12:35:28 +0000 2011",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 1766,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 1675,
+            "statusesCount": 133705,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [
+                "1948632121129501164"
+            ],
+            "profile_bio": {
+                "description": "Official handle of Kotak Mahindra Bank, India's leading banking & financial services group. For quick resolution of your queries, tweet @KotakCares",
+                "entities": {
+                    "description": {
+                        "user_mentions": [
+                            {
+                                "id_str": "0",
+                                "indices": [
+                                    136,
+                                    147
+                                ],
+                                "name": "",
+                                "screen_name": "KotakCares"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "kotak.com",
+                                "expanded_url": "http://www.kotak.com",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/IZUw9bWiVM"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {
+            "media": [
+                {
+                    "additional_media_info": {
+                        "monetizable": false
+                    },
+                    "allow_download_status": {
+                        "allow_download": true
+                    },
+                    "display_url": "pic.twitter.com/zkyl2yYoCk",
+                    "expanded_url": "https://twitter.com/KotakBankLtd/status/1814639805747134525/video/1",
+                    "ext_media_availability": {
+                        "status": "Available"
+                    },
+                    "id_str": "1814639728232132608",
+                    "indices": [
+                        251,
+                        274
+                    ],
+                    "media_key": "7_1814639728232132608",
+                    "media_results": {
+                        "id": "QXBpTWVkaWFSZXN1bHRzOgwAAwoAARku5TfslnAACgACGS7lSfjXgD0AAA==",
+                        "result": {
+                            "__typename": "ApiMedia",
+                            "id": "QXBpTWVkaWE6DAADCgABGS7lN+yWcAAKAAIZLuVJ+NeAPQAA",
+                            "media_key": "7_1814639728232132608"
+                        }
+                    },
+                    "media_url_https": "https://pbs.twimg.com/ext_tw_video_thumb/1814639728232132608/pu/img/xRVJrgdRz4GDF3iN.jpg",
+                    "original_info": {
+                        "focus_rects": [],
+                        "height": 1080,
+                        "width": 1920
+                    },
+                    "sizes": {
+                        "large": {
+                            "h": 1080,
+                            "w": 1920
+                        }
+                    },
+                    "type": "video",
+                    "url": "https://t.co/zkyl2yYoCk",
+                    "video_info": {
+                        "aspect_ratio": [
+                            16,
+                            9
+                        ],
+                        "duration_millis": 103040,
+                        "variants": [
+                            {
+                                "content_type": "application/x-mpegURL",
+                                "url": "https://video-s.twimg.com/ext_tw_video/1814639728232132608/pu/pl/X4ZRTYK-YDHawVTX.m3u8?tag=12&v=ad8"
+                            },
+                            {
+                                "bitrate": 256000,
+                                "content_type": "video/mp4",
+                                "url": "https://video-s.twimg.com/ext_tw_video/1814639728232132608/pu/vid/avc1/480x270/ZoSSlM8cstDjSDw1.mp4?tag=12"
+                            },
+                            {
+                                "bitrate": 832000,
+                                "content_type": "video/mp4",
+                                "url": "https://video-s.twimg.com/ext_tw_video/1814639728232132608/pu/vid/avc1/640x360/2tc0fkv-np3xhnCZ.mp4?tag=12"
+                            },
+                            {
+                                "bitrate": 2176000,
+                                "content_type": "video/mp4",
+                                "url": "https://video-s.twimg.com/ext_tw_video/1814639728232132608/pu/vid/avc1/1280x720/_dYruIZA2DyYT3oy.mp4?tag=12"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "card": null,
+        "place": {},
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        201,
+                        219
+                    ],
+                    "text": "KotakMahindraBank"
+                },
+                {
+                    "indices": [
+                        220,
+                        235
+                    ],
+                    "text": "QuarterResults"
+                },
+                {
+                    "indices": [
+                        236,
+                        250
+                    ],
+                    "text": "Q1FY25Results"
+                }
+            ],
+            "urls": [
+                {
+                    "display_url": "bit.ly/4d6mokg",
+                    "expanded_url": "http://bit.ly/4d6mokg",
+                    "indices": [
+                        175,
+                        198
+                    ],
+                    "url": "https://t.co/LctI176pOR"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1786685511895068860",
+        "url": "https://x.com/KotakBankLtd/status/1786685511895068860",
+        "twitterUrl": "https://twitter.com/KotakBankLtd/status/1786685511895068860",
+        "text": "Announcing our financial results for Q4FY24. Watch the key highlights to know more. \n\nThis video is for information purposes only. The complete presentation can be accessed at\u00a0https://t.co/jzSdDhJ2fm\n\n#KotakMahindraBank #QuarterResults #Q4FY24Results https://t.co/jjumDMkPqC",
+        "source": "Twitter for iPhone",
+        "retweetCount": 8,
+        "replyCount": 24,
+        "likeCount": 34,
+        "quoteCount": 3,
+        "viewCount": 7606,
+        "createdAt": "Sat May 04 09:13:15 +0000 2024",
+        "lang": "en",
+        "bookmarkCount": 2,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1786685511895068860",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "KotakBankLtd",
+            "url": "https://x.com/KotakBankLtd",
+            "twitterUrl": "https://twitter.com/KotakBankLtd",
+            "id": "350862570",
+            "name": "Kotak Mahindra Bank",
+            "isVerified": false,
+            "isBlueVerified": true,
+            "verifiedType": "Business",
+            "profilePicture": "https://pbs.twimg.com/profile_images/1905526983192457216/isgAlnEe_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/350862570/1753252394",
+            "description": "",
+            "location": "Mumbai, India",
+            "followers": 325310,
+            "following": 23,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Mon Aug 08 12:35:28 +0000 2011",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 1766,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 1675,
+            "statusesCount": 133705,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [
+                "1948632121129501164"
+            ],
+            "profile_bio": {
+                "description": "Official handle of Kotak Mahindra Bank, India's leading banking & financial services group. For quick resolution of your queries, tweet @KotakCares",
+                "entities": {
+                    "description": {
+                        "user_mentions": [
+                            {
+                                "id_str": "0",
+                                "indices": [
+                                    136,
+                                    147
+                                ],
+                                "name": "",
+                                "screen_name": "KotakCares"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "kotak.com",
+                                "expanded_url": "http://www.kotak.com",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/IZUw9bWiVM"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {
+            "media": [
+                {
+                    "additional_media_info": {
+                        "monetizable": false
+                    },
+                    "display_url": "pic.twitter.com/jjumDMkPqC",
+                    "expanded_url": "https://twitter.com/KotakBankLtd/status/1786685511895068860/video/1",
+                    "ext_media_availability": {
+                        "status": "Available"
+                    },
+                    "id_str": "1786685119283019776",
+                    "indices": [
+                        251,
+                        274
+                    ],
+                    "media_key": "7_1786685119283019776",
+                    "media_results": {
+                        "id": "QXBpTWVkaWFSZXN1bHRzOgwAAwoAARjLlKZUV0AACgACGMuVAb3XsLwAAA==",
+                        "result": {
+                            "__typename": "ApiMedia",
+                            "id": "QXBpTWVkaWE6DAADCgABGMuUplRXQAAKAAIYy5UBvdewvAAA",
+                            "media_key": "7_1786685119283019776"
+                        }
+                    },
+                    "media_url_https": "https://pbs.twimg.com/ext_tw_video_thumb/1786685119283019776/pu/img/-nMeFza_vl-ga28H.jpg",
+                    "original_info": {
+                        "focus_rects": [],
+                        "height": 1080,
+                        "width": 1920
+                    },
+                    "sizes": {
+                        "large": {
+                            "h": 1080,
+                            "w": 1920
+                        }
+                    },
+                    "type": "video",
+                    "url": "https://t.co/jjumDMkPqC",
+                    "video_info": {
+                        "aspect_ratio": [
+                            16,
+                            9
+                        ],
+                        "duration_millis": 103040,
+                        "variants": [
+                            {
+                                "content_type": "application/x-mpegURL",
+                                "url": "https://video-s.twimg.com/ext_tw_video/1786685119283019776/pu/pl/NJ4ZdEI_bMn9KIdM.m3u8?tag=14&v=cfc"
+                            },
+                            {
+                                "bitrate": 256000,
+                                "content_type": "video/mp4",
+                                "url": "https://video-s.twimg.com/ext_tw_video/1786685119283019776/pu/vid/avc1/480x270/wc_ean2xyp1i3syH.mp4?tag=14"
+                            },
+                            {
+                                "bitrate": 832000,
+                                "content_type": "video/mp4",
+                                "url": "https://video-s.twimg.com/ext_tw_video/1786685119283019776/pu/vid/avc1/640x360/lzlpWdmLDNlYr8gg.mp4?tag=14"
+                            },
+                            {
+                                "bitrate": 2176000,
+                                "content_type": "video/mp4",
+                                "url": "https://video-s.twimg.com/ext_tw_video/1786685119283019776/pu/vid/avc1/1280x720/5kKvLmcBzwm0Nw28.mp4?tag=14"
+                            },
+                            {
+                                "bitrate": 10368000,
+                                "content_type": "video/mp4",
+                                "url": "https://video-s.twimg.com/ext_tw_video/1786685119283019776/pu/vid/avc1/1920x1080/3CVotaxhLcLgQSra.mp4?tag=14"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "card": null,
+        "place": {},
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        201,
+                        219
+                    ],
+                    "text": "KotakMahindraBank"
+                },
+                {
+                    "indices": [
+                        220,
+                        235
+                    ],
+                    "text": "QuarterResults"
+                },
+                {
+                    "indices": [
+                        236,
+                        250
+                    ],
+                    "text": "Q4FY24Results"
+                }
+            ],
+            "urls": [
+                {
+                    "display_url": "bit.ly/46DHDal",
+                    "expanded_url": "https://bit.ly/46DHDal",
+                    "indices": [
+                        176,
+                        199
+                    ],
+                    "url": "https://t.co/jzSdDhJ2fm"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1748629451360145863",
+        "url": "https://x.com/KotakBankLtd/status/1748629451360145863",
+        "twitterUrl": "https://twitter.com/KotakBankLtd/status/1748629451360145863",
+        "text": "Announcing our financial results for Q3FY24. Watch the key highlights to know more.\n\nThis video is for information purposes only. The complete presentation can be accessed at\u00a0https://t.co/jzSdDhJA4U\n\n#KotakMahindraBank #QuarterResults #Q3FY24Results https://t.co/IYmQ5fcHvm",
+        "source": "Twitter for iPhone",
+        "retweetCount": 2,
+        "replyCount": 49,
+        "likeCount": 13,
+        "quoteCount": 3,
+        "viewCount": 8332,
+        "createdAt": "Sat Jan 20 08:52:03 +0000 2024",
+        "lang": "en",
+        "bookmarkCount": 1,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1748629451360145863",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "KotakBankLtd",
+            "url": "https://x.com/KotakBankLtd",
+            "twitterUrl": "https://twitter.com/KotakBankLtd",
+            "id": "350862570",
+            "name": "Kotak Mahindra Bank",
+            "isVerified": false,
+            "isBlueVerified": true,
+            "verifiedType": "Business",
+            "profilePicture": "https://pbs.twimg.com/profile_images/1905526983192457216/isgAlnEe_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/350862570/1753252394",
+            "description": "",
+            "location": "Mumbai, India",
+            "followers": 325310,
+            "following": 23,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Mon Aug 08 12:35:28 +0000 2011",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 1766,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 1675,
+            "statusesCount": 133705,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [
+                "1948632121129501164"
+            ],
+            "profile_bio": {
+                "description": "Official handle of Kotak Mahindra Bank, India's leading banking & financial services group. For quick resolution of your queries, tweet @KotakCares",
+                "entities": {
+                    "description": {
+                        "user_mentions": [
+                            {
+                                "id_str": "0",
+                                "indices": [
+                                    136,
+                                    147
+                                ],
+                                "name": "",
+                                "screen_name": "KotakCares"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "kotak.com",
+                                "expanded_url": "http://www.kotak.com",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/IZUw9bWiVM"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {
+            "media": [
+                {
+                    "additional_media_info": {
+                        "monetizable": false
+                    },
+                    "display_url": "pic.twitter.com/IYmQ5fcHvm",
+                    "expanded_url": "https://twitter.com/KotakBankLtd/status/1748629451360145863/video/1",
+                    "ext_media_availability": {
+                        "status": "Available"
+                    },
+                    "id_str": "1748629312117575680",
+                    "indices": [
+                        250,
+                        273
+                    ],
+                    "media_key": "7_1748629312117575680",
+                    "media_results": {
+                        "id": "QXBpTWVkaWFSZXN1bHRzOgwAAwoAARhEYRhAmpAACgACGERhOKwbkccAAA==",
+                        "result": {
+                            "__typename": "ApiMedia",
+                            "id": "QXBpTWVkaWE6DAADCgABGERhGECakAAKAAIYRGE4rBuRxwAA",
+                            "media_key": "7_1748629312117575680"
+                        }
+                    },
+                    "media_url_https": "https://pbs.twimg.com/ext_tw_video_thumb/1748629312117575680/pu/img/-nvCfdpUKhpDpEXt.jpg",
+                    "original_info": {
+                        "focus_rects": [],
+                        "height": 1080,
+                        "width": 1920
+                    },
+                    "sizes": {
+                        "large": {
+                            "h": 1080,
+                            "w": 1920
+                        }
+                    },
+                    "type": "video",
+                    "url": "https://t.co/IYmQ5fcHvm",
+                    "video_info": {
+                        "aspect_ratio": [
+                            16,
+                            9
+                        ],
+                        "duration_millis": 103040,
+                        "variants": [
+                            {
+                                "content_type": "application/x-mpegURL",
+                                "url": "https://video-s.twimg.com/ext_tw_video/1748629312117575680/pu/pl/cYsCKuJtT1_Og4SL.m3u8?tag=14&v=cfc"
+                            },
+                            {
+                                "bitrate": 256000,
+                                "content_type": "video/mp4",
+                                "url": "https://video-s.twimg.com/ext_tw_video/1748629312117575680/pu/vid/avc1/480x270/R2njJbTcfCDT_y0u.mp4?tag=14"
+                            },
+                            {
+                                "bitrate": 832000,
+                                "content_type": "video/mp4",
+                                "url": "https://video-s.twimg.com/ext_tw_video/1748629312117575680/pu/vid/avc1/640x360/ae64aFAl1FKl6lwN.mp4?tag=14"
+                            },
+                            {
+                                "bitrate": 2176000,
+                                "content_type": "video/mp4",
+                                "url": "https://video-s.twimg.com/ext_tw_video/1748629312117575680/pu/vid/avc1/1280x720/nPnPnaisbXYgA25b.mp4?tag=14"
+                            },
+                            {
+                                "bitrate": 10368000,
+                                "content_type": "video/mp4",
+                                "url": "https://video-s.twimg.com/ext_tw_video/1748629312117575680/pu/vid/avc1/1920x1080/m24E-ySIYTPtnR4l.mp4?tag=14"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "card": null,
+        "place": {},
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        200,
+                        218
+                    ],
+                    "text": "KotakMahindraBank"
+                },
+                {
+                    "indices": [
+                        219,
+                        234
+                    ],
+                    "text": "QuarterResults"
+                },
+                {
+                    "indices": [
+                        235,
+                        249
+                    ],
+                    "text": "Q3FY24Results"
+                }
+            ],
+            "urls": [
+                {
+                    "display_url": "bit.ly/46DHDal",
+                    "expanded_url": "https://bit.ly/46DHDal",
+                    "indices": [
+                        175,
+                        198
+                    ],
+                    "url": "https://t.co/jzSdDhJA4U"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1715652041887068573",
+        "url": "https://x.com/KotakBankLtd/status/1715652041887068573",
+        "twitterUrl": "https://twitter.com/KotakBankLtd/status/1715652041887068573",
+        "text": "Announcing our financial results for Q2FY24. Watch the key highlights to know more.\n\nThis video is for information purposes only. The complete presentation can be accessed at\u00a0https://t.co/jzSdDhJA4U\n\n#KotakMahindraBank #QuarterResults #Q2FY24Results https://t.co/kB6uX0kfzw",
+        "source": "Twitter for iPhone",
+        "retweetCount": 3,
+        "replyCount": 12,
+        "likeCount": 9,
+        "quoteCount": 1,
+        "viewCount": 3665,
+        "createdAt": "Sat Oct 21 08:51:36 +0000 2023",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1715652041887068573",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "KotakBankLtd",
+            "url": "https://x.com/KotakBankLtd",
+            "twitterUrl": "https://twitter.com/KotakBankLtd",
+            "id": "350862570",
+            "name": "Kotak Mahindra Bank",
+            "isVerified": false,
+            "isBlueVerified": true,
+            "verifiedType": "Business",
+            "profilePicture": "https://pbs.twimg.com/profile_images/1905526983192457216/isgAlnEe_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/350862570/1753252394",
+            "description": "",
+            "location": "Mumbai, India",
+            "followers": 325310,
+            "following": 23,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Mon Aug 08 12:35:28 +0000 2011",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 1766,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 1675,
+            "statusesCount": 133705,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [
+                "1948632121129501164"
+            ],
+            "profile_bio": {
+                "description": "Official handle of Kotak Mahindra Bank, India's leading banking & financial services group. For quick resolution of your queries, tweet @KotakCares",
+                "entities": {
+                    "description": {
+                        "user_mentions": [
+                            {
+                                "id_str": "0",
+                                "indices": [
+                                    136,
+                                    147
+                                ],
+                                "name": "",
+                                "screen_name": "KotakCares"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "kotak.com",
+                                "expanded_url": "http://www.kotak.com",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/IZUw9bWiVM"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {
+            "media": [
+                {
+                    "additional_media_info": {
+                        "monetizable": false
+                    },
+                    "display_url": "pic.twitter.com/kB6uX0kfzw",
+                    "expanded_url": "https://twitter.com/KotakBankLtd/status/1715652041887068573/video/1",
+                    "ext_media_availability": {
+                        "status": "Available"
+                    },
+                    "id_str": "1715651927567212544",
+                    "indices": [
+                        250,
+                        273
+                    ],
+                    "media_key": "7_1715651927567212544",
+                    "media_results": {
+                        "id": "QXBpTWVkaWFSZXN1bHRzOgwAAwoAARfPOFaU26AACgACF884cTLaMZ0AAA==",
+                        "result": {
+                            "__typename": "ApiMedia",
+                            "id": "QXBpTWVkaWE6DAADCgABF884VpTboAAKAAIXzzhxMtoxnQAA",
+                            "media_key": "7_1715651927567212544"
+                        }
+                    },
+                    "media_url_https": "https://pbs.twimg.com/ext_tw_video_thumb/1715651927567212544/pu/img/uKOgcnBs5YOsEGCS.jpg",
+                    "original_info": {
+                        "focus_rects": [],
+                        "height": 1080,
+                        "width": 1920
+                    },
+                    "sizes": {
+                        "large": {
+                            "h": 1080,
+                            "w": 1920
+                        }
+                    },
+                    "type": "video",
+                    "url": "https://t.co/kB6uX0kfzw",
+                    "video_info": {
+                        "aspect_ratio": [
+                            16,
+                            9
+                        ],
+                        "duration_millis": 110040,
+                        "variants": [
+                            {
+                                "content_type": "application/x-mpegURL",
+                                "url": "https://video-s.twimg.com/ext_tw_video/1715651927567212544/pu/pl/VXzP-i3RumsbXk9U.m3u8?tag=14&v=cfc"
+                            },
+                            {
+                                "bitrate": 256000,
+                                "content_type": "video/mp4",
+                                "url": "https://video-s.twimg.com/ext_tw_video/1715651927567212544/pu/vid/avc1/480x270/dYHEerUkEC36DuuJ.mp4?tag=14"
+                            },
+                            {
+                                "bitrate": 832000,
+                                "content_type": "video/mp4",
+                                "url": "https://video-s.twimg.com/ext_tw_video/1715651927567212544/pu/vid/avc1/640x360/ITvkGc32E68GsmHM.mp4?tag=14"
+                            },
+                            {
+                                "bitrate": 2176000,
+                                "content_type": "video/mp4",
+                                "url": "https://video-s.twimg.com/ext_tw_video/1715651927567212544/pu/vid/avc1/1280x720/B3zMk1XnLLejoNjN.mp4?tag=14"
+                            },
+                            {
+                                "bitrate": 10368000,
+                                "content_type": "video/mp4",
+                                "url": "https://video-s.twimg.com/ext_tw_video/1715651927567212544/pu/vid/avc1/1920x1080/9TWJ5Ct1GY-95Us6.mp4?tag=14"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "card": null,
+        "place": {},
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        200,
+                        218
+                    ],
+                    "text": "KotakMahindraBank"
+                },
+                {
+                    "indices": [
+                        219,
+                        234
+                    ],
+                    "text": "QuarterResults"
+                },
+                {
+                    "indices": [
+                        235,
+                        249
+                    ],
+                    "text": "Q2FY24Results"
+                }
+            ],
+            "urls": [
+                {
+                    "display_url": "bit.ly/46DHDal",
+                    "expanded_url": "https://bit.ly/46DHDal",
+                    "indices": [
+                        175,
+                        198
+                    ],
+                    "url": "https://t.co/jzSdDhJA4U"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1682711701869953024",
+        "url": "https://x.com/KotakBankLtd/status/1682711701869953024",
+        "twitterUrl": "https://twitter.com/KotakBankLtd/status/1682711701869953024",
+        "text": "Announcing our financial results for Q1FY24. Watch the key highlights to know more.\n\nThis video is for information purposes only. The complete presentation can be accessed at\u00a0https://t.co/5v6cEFKZMW\n\u00a0\n#KotakMahindraBank #QuarterResults #Q1FY24Results https://t.co/N5o8ewutJu",
+        "source": "Twitter for iPhone",
+        "retweetCount": 9,
+        "replyCount": 41,
+        "likeCount": 27,
+        "quoteCount": 3,
+        "viewCount": 7745,
+        "createdAt": "Sat Jul 22 11:18:27 +0000 2023",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1682711701869953024",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "KotakBankLtd",
+            "url": "https://x.com/KotakBankLtd",
+            "twitterUrl": "https://twitter.com/KotakBankLtd",
+            "id": "350862570",
+            "name": "Kotak Mahindra Bank",
+            "isVerified": false,
+            "isBlueVerified": true,
+            "verifiedType": "Business",
+            "profilePicture": "https://pbs.twimg.com/profile_images/1905526983192457216/isgAlnEe_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/350862570/1753252394",
+            "description": "",
+            "location": "Mumbai, India",
+            "followers": 325310,
+            "following": 23,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Mon Aug 08 12:35:28 +0000 2011",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 1766,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 1675,
+            "statusesCount": 133705,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [
+                "1948632121129501164"
+            ],
+            "profile_bio": {
+                "description": "Official handle of Kotak Mahindra Bank, India's leading banking & financial services group. For quick resolution of your queries, tweet @KotakCares",
+                "entities": {
+                    "description": {
+                        "user_mentions": [
+                            {
+                                "id_str": "0",
+                                "indices": [
+                                    136,
+                                    147
+                                ],
+                                "name": "",
+                                "screen_name": "KotakCares"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "kotak.com",
+                                "expanded_url": "http://www.kotak.com",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/IZUw9bWiVM"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {
+            "media": [
+                {
+                    "additional_media_info": {
+                        "monetizable": false
+                    },
+                    "display_url": "pic.twitter.com/N5o8ewutJu",
+                    "expanded_url": "https://twitter.com/KotakBankLtd/status/1682711701869953024/video/1",
+                    "ext_media_availability": {
+                        "status": "Available"
+                    },
+                    "id_str": "1682711345698054144",
+                    "indices": [
+                        251,
+                        274
+                    ],
+                    "media_key": "13_1682711345698054144",
+                    "media_results": {
+                        "id": "QXBpTWVkaWFSZXN1bHRzOgwABAoAARdaMQ2z2iAAAAA=",
+                        "result": {
+                            "__typename": "ApiMedia",
+                            "id": "QXBpTWVkaWE6DAAECgABF1oxDbPaIAAAAA==",
+                            "media_key": "13_1682711345698054144"
+                        }
+                    },
+                    "media_url_https": "https://pbs.twimg.com/amplify_video_thumb/1682711345698054144/img/Gy0WPxFsY_89E8cN.jpg",
+                    "original_info": {
+                        "focus_rects": [],
+                        "height": 1080,
+                        "width": 1920
+                    },
+                    "sizes": {
+                        "large": {
+                            "h": 1080,
+                            "w": 1920
+                        }
+                    },
+                    "type": "video",
+                    "url": "https://t.co/N5o8ewutJu",
+                    "video_info": {
+                        "aspect_ratio": [
+                            16,
+                            9
+                        ],
+                        "duration_millis": 110040,
+                        "variants": [
+                            {
+                                "content_type": "application/x-mpegURL",
+                                "url": "https://video-s.twimg.com/amplify_video/1682711345698054144/pl/tebFaqPuw0CA3-Wq.m3u8?tag=14&v=cfc"
+                            },
+                            {
+                                "bitrate": 288000,
+                                "content_type": "video/mp4",
+                                "url": "https://video-s.twimg.com/amplify_video/1682711345698054144/vid/480x270/k7iFPVbxiBosH7TJ.mp4?tag=14"
+                            },
+                            {
+                                "bitrate": 832000,
+                                "content_type": "video/mp4",
+                                "url": "https://video-s.twimg.com/amplify_video/1682711345698054144/vid/640x360/3FutG-trVIWjk6X7.mp4?tag=14"
+                            },
+                            {
+                                "bitrate": 2176000,
+                                "content_type": "video/mp4",
+                                "url": "https://video-s.twimg.com/amplify_video/1682711345698054144/vid/1280x720/xq7hnqBtdgvgvtCC.mp4?tag=14"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "card": null,
+        "place": {},
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        201,
+                        219
+                    ],
+                    "text": "KotakMahindraBank"
+                },
+                {
+                    "indices": [
+                        220,
+                        235
+                    ],
+                    "text": "QuarterResults"
+                },
+                {
+                    "indices": [
+                        236,
+                        250
+                    ],
+                    "text": "Q1FY24Results"
+                }
+            ],
+            "urls": [
+                {
+                    "display_url": "bit.ly/3DtUsH2",
+                    "expanded_url": "https://bit.ly/3DtUsH2",
+                    "indices": [
+                        175,
+                        198
+                    ],
+                    "url": "https://t.co/5v6cEFKZMW"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1652298954896449536",
+        "url": "https://x.com/KotakBankLtd/status/1652298954896449536",
+        "twitterUrl": "https://twitter.com/KotakBankLtd/status/1652298954896449536",
+        "text": "Announcing our financial results for Q4FY23. Watch the key highlights to know more. \n\nThis video is for information purposes only. The complete presentation can be accessed at\u00a0https://t.co/cggjRGLXd7\n\u00a0\n\u00a0#KotakMahindraBank #QuarterResults #Q4FY23Results https://t.co/0yeLV7hF8Q",
+        "source": "Twitter for iPhone",
+        "retweetCount": 4,
+        "replyCount": 46,
+        "likeCount": 23,
+        "quoteCount": 2,
+        "viewCount": 6244,
+        "createdAt": "Sat Apr 29 13:09:03 +0000 2023",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1652298954896449536",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "KotakBankLtd",
+            "url": "https://x.com/KotakBankLtd",
+            "twitterUrl": "https://twitter.com/KotakBankLtd",
+            "id": "350862570",
+            "name": "Kotak Mahindra Bank",
+            "isVerified": false,
+            "isBlueVerified": true,
+            "verifiedType": "Business",
+            "profilePicture": "https://pbs.twimg.com/profile_images/1905526983192457216/isgAlnEe_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/350862570/1753252394",
+            "description": "",
+            "location": "Mumbai, India",
+            "followers": 325310,
+            "following": 23,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Mon Aug 08 12:35:28 +0000 2011",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 1766,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 1675,
+            "statusesCount": 133705,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [
+                "1948632121129501164"
+            ],
+            "profile_bio": {
+                "description": "Official handle of Kotak Mahindra Bank, India's leading banking & financial services group. For quick resolution of your queries, tweet @KotakCares",
+                "entities": {
+                    "description": {
+                        "user_mentions": [
+                            {
+                                "id_str": "0",
+                                "indices": [
+                                    136,
+                                    147
+                                ],
+                                "name": "",
+                                "screen_name": "KotakCares"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "kotak.com",
+                                "expanded_url": "http://www.kotak.com",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/IZUw9bWiVM"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {
+            "media": [
+                {
+                    "additional_media_info": {
+                        "monetizable": false
+                    },
+                    "display_url": "pic.twitter.com/0yeLV7hF8Q",
+                    "expanded_url": "https://twitter.com/KotakBankLtd/status/1652298954896449536/video/1",
+                    "ext_media_availability": {
+                        "status": "Available"
+                    },
+                    "id_str": "1652298626608300033",
+                    "indices": [
+                        253,
+                        276
+                    ],
+                    "media_key": "7_1652298626608300033",
+                    "media_results": {
+                        "id": "QXBpTWVkaWFSZXN1bHRzOgwAAwoAARbuJNi92oABCgACFu4lJS1aIAAAAA==",
+                        "result": {
+                            "__typename": "ApiMedia",
+                            "id": "QXBpTWVkaWE6DAADCgABFu4k2L3agAEKAAIW7iUlLVogAAAA",
+                            "media_key": "7_1652298626608300033"
+                        }
+                    },
+                    "media_url_https": "https://pbs.twimg.com/ext_tw_video_thumb/1652298626608300033/pu/img/_AnG5VpH8yUoDPvX.jpg",
+                    "original_info": {
+                        "focus_rects": [],
+                        "height": 720,
+                        "width": 1280
+                    },
+                    "sizes": {
+                        "large": {
+                            "h": 720,
+                            "w": 1280
+                        }
+                    },
+                    "type": "video",
+                    "url": "https://t.co/0yeLV7hF8Q",
+                    "video_info": {
+                        "aspect_ratio": [
+                            16,
+                            9
+                        ],
+                        "duration_millis": 110040,
+                        "variants": [
+                            {
+                                "content_type": "application/x-mpegURL",
+                                "url": "https://video-s.twimg.com/ext_tw_video/1652298626608300033/pu/pl/wfr3r5cPmWDTXu8D.m3u8?tag=12"
+                            },
+                            {
+                                "bitrate": 256000,
+                                "content_type": "video/mp4",
+                                "url": "https://video-s.twimg.com/ext_tw_video/1652298626608300033/pu/vid/480x270/HtU4d6l0BzmQisvN.mp4?tag=12"
+                            },
+                            {
+                                "bitrate": 832000,
+                                "content_type": "video/mp4",
+                                "url": "https://video-s.twimg.com/ext_tw_video/1652298626608300033/pu/vid/640x360/XaKGC9z1tV2pxH0a.mp4?tag=12"
+                            },
+                            {
+                                "bitrate": 2176000,
+                                "content_type": "video/mp4",
+                                "url": "https://video-s.twimg.com/ext_tw_video/1652298626608300033/pu/vid/1280x720/NLeaVEL8up1xwjPf.mp4?tag=12"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "card": null,
+        "place": {},
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        203,
+                        221
+                    ],
+                    "text": "KotakMahindraBank"
+                },
+                {
+                    "indices": [
+                        222,
+                        237
+                    ],
+                    "text": "QuarterResults"
+                },
+                {
+                    "indices": [
+                        238,
+                        252
+                    ],
+                    "text": "Q4FY23Results"
+                }
+            ],
+            "urls": [
+                {
+                    "display_url": "kotak.com/en/investor-re\u2026",
+                    "expanded_url": "https://www.kotak.com/en/investor-relations/financial-results.html?source=website",
+                    "indices": [
+                        176,
+                        199
+                    ],
+                    "url": "https://t.co/cggjRGLXd7"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1642076954638659585",
+        "url": "https://x.com/KotakBankLtd/status/1642076954638659585",
+        "twitterUrl": "https://twitter.com/KotakBankLtd/status/1642076954638659585",
+        "text": "@Shailessh808 Hi! We wish to inform you that, you hold a EDGE Savings Account with us wherein you need to maintain an Average Monthly Balance (AMB) of Rs.10000/- in your account, failure of which results in a Non-Maintenance Charge (NMC).(1/2)",
+        "source": "Twitter for iPhone",
+        "retweetCount": 0,
+        "replyCount": 0,
+        "likeCount": 0,
+        "quoteCount": 0,
+        "viewCount": 30,
+        "createdAt": "Sat Apr 01 08:10:28 +0000 2023",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": true,
+        "inReplyToId": "1642066733606539265",
+        "conversationId": "1642066733606539265",
+        "inReplyToUserId": "1541217614420004865",
+        "inReplyToUsername": "Shailessh808",
+        "author": {
+            "type": "user",
+            "userName": "KotakBankLtd",
+            "url": "https://x.com/KotakBankLtd",
+            "twitterUrl": "https://twitter.com/KotakBankLtd",
+            "id": "350862570",
+            "name": "Kotak Mahindra Bank",
+            "isVerified": false,
+            "isBlueVerified": true,
+            "verifiedType": "Business",
+            "profilePicture": "https://pbs.twimg.com/profile_images/1905526983192457216/isgAlnEe_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/350862570/1753252394",
+            "description": "",
+            "location": "Mumbai, India",
+            "followers": 325310,
+            "following": 23,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Mon Aug 08 12:35:28 +0000 2011",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 1766,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 1675,
+            "statusesCount": 133705,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [
+                "1948632121129501164"
+            ],
+            "profile_bio": {
+                "description": "Official handle of Kotak Mahindra Bank, India's leading banking & financial services group. For quick resolution of your queries, tweet @KotakCares",
+                "entities": {
+                    "description": {
+                        "user_mentions": [
+                            {
+                                "id_str": "0",
+                                "indices": [
+                                    136,
+                                    147
+                                ],
+                                "name": "",
+                                "screen_name": "KotakCares"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "kotak.com",
+                                "expanded_url": "http://www.kotak.com",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/IZUw9bWiVM"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": null,
+        "place": {},
+        "entities": {
+            "user_mentions": [
+                {
+                    "id_str": "1541217614420004865",
+                    "indices": [
+                        0,
+                        13
+                    ],
+                    "name": "Shailesh BJP",
+                    "screen_name": "Shailessh808"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1638687812722782208",
+        "url": "https://x.com/KotakBankLtd/status/1638687812722782208",
+        "twitterUrl": "https://twitter.com/KotakBankLtd/status/1638687812722782208",
+        "text": "@Asdr14345 We wish to reiterate that, you hold a Pro Savings Account with us wherein you need to maintain an Average Monthly Balance (AMB) of Rs.20000/- in your account, failure of which results in a Non-Maintenance Charge (NMC). (1/2)",
+        "source": "Twitter for iPhone",
+        "retweetCount": 0,
+        "replyCount": 0,
+        "likeCount": 0,
+        "quoteCount": 0,
+        "viewCount": 33,
+        "createdAt": "Wed Mar 22 23:43:14 +0000 2023",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": true,
+        "inReplyToId": "1638613970427969536",
+        "conversationId": "1638613970427969536",
+        "inReplyToUserId": "767441472022982660",
+        "inReplyToUsername": "Asdr14345",
+        "author": {
+            "type": "user",
+            "userName": "KotakBankLtd",
+            "url": "https://x.com/KotakBankLtd",
+            "twitterUrl": "https://twitter.com/KotakBankLtd",
+            "id": "350862570",
+            "name": "Kotak Mahindra Bank",
+            "isVerified": false,
+            "isBlueVerified": true,
+            "verifiedType": "Business",
+            "profilePicture": "https://pbs.twimg.com/profile_images/1905526983192457216/isgAlnEe_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/350862570/1753252394",
+            "description": "",
+            "location": "Mumbai, India",
+            "followers": 325310,
+            "following": 23,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Mon Aug 08 12:35:28 +0000 2011",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 1766,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 1675,
+            "statusesCount": 133705,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [
+                "1948632121129501164"
+            ],
+            "profile_bio": {
+                "description": "Official handle of Kotak Mahindra Bank, India's leading banking & financial services group. For quick resolution of your queries, tweet @KotakCares",
+                "entities": {
+                    "description": {
+                        "user_mentions": [
+                            {
+                                "id_str": "0",
+                                "indices": [
+                                    136,
+                                    147
+                                ],
+                                "name": "",
+                                "screen_name": "KotakCares"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "kotak.com",
+                                "expanded_url": "http://www.kotak.com",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/IZUw9bWiVM"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": null,
+        "place": {},
+        "entities": {
+            "user_mentions": [
+                {
+                    "id_str": "767441472022982660",
+                    "indices": [
+                        0,
+                        10
+                    ],
+                    "name": "Afreen Shaikh",
+                    "screen_name": "Asdr14345"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1616800939180163073",
+        "url": "https://x.com/KotakBankLtd/status/1616800939180163073",
+        "twitterUrl": "https://twitter.com/KotakBankLtd/status/1616800939180163073",
+        "text": "Announcing our financial results for Q3FY23. Watch the key highlights to know more.\nThis video is for information purpose only, the complete presentation can be accessed on https://t.co/XWCV7RZxDT\n#KotakMahindraBank #QuarterlyResults https://t.co/htTrIdcmzd",
+        "source": "Twitter for iPhone",
+        "retweetCount": 16,
+        "replyCount": 46,
+        "likeCount": 47,
+        "quoteCount": 1,
+        "viewCount": 15880,
+        "createdAt": "Sat Jan 21 14:12:37 +0000 2023",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1616800939180163073",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "KotakBankLtd",
+            "url": "https://x.com/KotakBankLtd",
+            "twitterUrl": "https://twitter.com/KotakBankLtd",
+            "id": "350862570",
+            "name": "Kotak Mahindra Bank",
+            "isVerified": false,
+            "isBlueVerified": true,
+            "verifiedType": "Business",
+            "profilePicture": "https://pbs.twimg.com/profile_images/1905526983192457216/isgAlnEe_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/350862570/1753252394",
+            "description": "",
+            "location": "Mumbai, India",
+            "followers": 325310,
+            "following": 23,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Mon Aug 08 12:35:28 +0000 2011",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 1766,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 1675,
+            "statusesCount": 133705,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [
+                "1948632121129501164"
+            ],
+            "profile_bio": {
+                "description": "Official handle of Kotak Mahindra Bank, India's leading banking & financial services group. For quick resolution of your queries, tweet @KotakCares",
+                "entities": {
+                    "description": {
+                        "user_mentions": [
+                            {
+                                "id_str": "0",
+                                "indices": [
+                                    136,
+                                    147
+                                ],
+                                "name": "",
+                                "screen_name": "KotakCares"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "kotak.com",
+                                "expanded_url": "http://www.kotak.com",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/IZUw9bWiVM"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {
+            "media": [
+                {
+                    "additional_media_info": {
+                        "monetizable": false
+                    },
+                    "display_url": "pic.twitter.com/htTrIdcmzd",
+                    "expanded_url": "https://twitter.com/KotakBankLtd/status/1616800939180163073/video/1",
+                    "ext_media_availability": {
+                        "status": "Available"
+                    },
+                    "id_str": "1616799188024717312",
+                    "indices": [
+                        234,
+                        257
+                    ],
+                    "media_key": "7_1616799188024717312",
+                    "media_results": {
+                        "id": "QXBpTWVkaWFSZXN1bHRzOgwAAwoAARZwBkubWnAACgACFnAH41RaAAEAAA==",
+                        "result": {
+                            "__typename": "ApiMedia",
+                            "id": "QXBpTWVkaWE6DAADCgABFnAGS5tacAAKAAIWcAfjVFoAAQAA",
+                            "media_key": "7_1616799188024717312"
+                        }
+                    },
+                    "media_url_https": "https://pbs.twimg.com/ext_tw_video_thumb/1616799188024717312/pu/img/UBz5xLvKE32ssjRO.jpg",
+                    "original_info": {
+                        "focus_rects": [],
+                        "height": 1080,
+                        "width": 1920
+                    },
+                    "sizes": {
+                        "large": {
+                            "h": 1080,
+                            "w": 1920
+                        }
+                    },
+                    "type": "video",
+                    "url": "https://t.co/htTrIdcmzd",
+                    "video_info": {
+                        "aspect_ratio": [
+                            16,
+                            9
+                        ],
+                        "duration_millis": 110040,
+                        "variants": [
+                            {
+                                "content_type": "application/x-mpegURL",
+                                "url": "https://video-s.twimg.com/ext_tw_video/1616799188024717312/pu/pl/kYolXjcDcLrFQQ6M.m3u8?tag=12"
+                            },
+                            {
+                                "bitrate": 256000,
+                                "content_type": "video/mp4",
+                                "url": "https://video-s.twimg.com/ext_tw_video/1616799188024717312/pu/vid/480x270/rqIPPC7YVS4Se1bp.mp4?tag=12"
+                            },
+                            {
+                                "bitrate": 832000,
+                                "content_type": "video/mp4",
+                                "url": "https://video-s.twimg.com/ext_tw_video/1616799188024717312/pu/vid/640x360/4Q1OfWOu-Z16i61A.mp4?tag=12"
+                            },
+                            {
+                                "bitrate": 2176000,
+                                "content_type": "video/mp4",
+                                "url": "https://video-s.twimg.com/ext_tw_video/1616799188024717312/pu/vid/1280x720/vDP0-ytWCiobaM9D.mp4?tag=12"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "card": null,
+        "place": {},
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        197,
+                        215
+                    ],
+                    "text": "KotakMahindraBank"
+                },
+                {
+                    "indices": [
+                        216,
+                        233
+                    ],
+                    "text": "QuarterlyResults"
+                }
+            ],
+            "urls": [
+                {
+                    "display_url": "bit.ly/2AxkNnG",
+                    "expanded_url": "https://bit.ly/2AxkNnG",
+                    "indices": [
+                        173,
+                        196
+                    ],
+                    "url": "https://t.co/XWCV7RZxDT"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1609027320790093824",
+        "url": "https://x.com/KotakBankLtd/status/1609027320790093824",
+        "twitterUrl": "https://twitter.com/KotakBankLtd/status/1609027320790093824",
+        "text": "@Kamlesh65587117 We wish to reiterate that, you hold an EDGE Savings Account with us wherein you need to maintain an Average Monthly Balance (AMB) of Rs.10000/- in your account, failure of which results in a Non-Maintenance Charge (NMC). (1/2)",
+        "source": "Twitter for iPhone",
+        "retweetCount": 0,
+        "replyCount": 0,
+        "likeCount": 0,
+        "quoteCount": 0,
+        "viewCount": 44,
+        "createdAt": "Sat Dec 31 03:23:02 +0000 2022",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": true,
+        "inReplyToId": "1609026792324747264",
+        "conversationId": "1609026792324747264",
+        "inReplyToUserId": "1393488404457811979",
+        "inReplyToUsername": "Kamlesh65587117",
+        "author": {
+            "type": "user",
+            "userName": "KotakBankLtd",
+            "url": "https://x.com/KotakBankLtd",
+            "twitterUrl": "https://twitter.com/KotakBankLtd",
+            "id": "350862570",
+            "name": "Kotak Mahindra Bank",
+            "isVerified": false,
+            "isBlueVerified": true,
+            "verifiedType": "Business",
+            "profilePicture": "https://pbs.twimg.com/profile_images/1905526983192457216/isgAlnEe_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/350862570/1753252394",
+            "description": "",
+            "location": "Mumbai, India",
+            "followers": 325310,
+            "following": 23,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Mon Aug 08 12:35:28 +0000 2011",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 1766,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 1675,
+            "statusesCount": 133705,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [
+                "1948632121129501164"
+            ],
+            "profile_bio": {
+                "description": "Official handle of Kotak Mahindra Bank, India's leading banking & financial services group. For quick resolution of your queries, tweet @KotakCares",
+                "entities": {
+                    "description": {
+                        "user_mentions": [
+                            {
+                                "id_str": "0",
+                                "indices": [
+                                    136,
+                                    147
+                                ],
+                                "name": "",
+                                "screen_name": "KotakCares"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "kotak.com",
+                                "expanded_url": "http://www.kotak.com",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/IZUw9bWiVM"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": null,
+        "place": {},
+        "entities": {
+            "user_mentions": [
+                {
+                    "id_str": "1393488404457811979",
+                    "indices": [
+                        0,
+                        16
+                    ],
+                    "name": "Kamlesh Mishra",
+                    "screen_name": "Kamlesh65587117"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1600504741519409153",
+        "url": "https://x.com/KotakBankLtd/status/1600504741519409153",
+        "twitterUrl": "https://twitter.com/KotakBankLtd/status/1600504741519409153",
+        "text": "@Abhi13774589 We wish to inform you that, you hold a Edge Savings Account with us wherein you need to maintain an Average Monthly Balance (AMB) of Rs.10000/- in your account, failure of which results in a Non-Maintenance Charge (NMC).(1/2)",
+        "source": "Twitter for iPhone",
+        "retweetCount": 0,
+        "replyCount": 0,
+        "likeCount": 0,
+        "quoteCount": 0,
+        "viewCount": 0,
+        "createdAt": "Wed Dec 07 14:57:20 +0000 2022",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": true,
+        "inReplyToId": "1600500718917779458",
+        "conversationId": "1600469306911125504",
+        "inReplyToUserId": "1549384556293197824",
+        "inReplyToUsername": "Abhi13774589",
+        "author": {
+            "type": "user",
+            "userName": "KotakBankLtd",
+            "url": "https://x.com/KotakBankLtd",
+            "twitterUrl": "https://twitter.com/KotakBankLtd",
+            "id": "350862570",
+            "name": "Kotak Mahindra Bank",
+            "isVerified": false,
+            "isBlueVerified": true,
+            "verifiedType": "Business",
+            "profilePicture": "https://pbs.twimg.com/profile_images/1905526983192457216/isgAlnEe_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/350862570/1753252394",
+            "description": "",
+            "location": "Mumbai, India",
+            "followers": 325310,
+            "following": 23,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Mon Aug 08 12:35:28 +0000 2011",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 1766,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 1675,
+            "statusesCount": 133705,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [
+                "1948632121129501164"
+            ],
+            "profile_bio": {
+                "description": "Official handle of Kotak Mahindra Bank, India's leading banking & financial services group. For quick resolution of your queries, tweet @KotakCares",
+                "entities": {
+                    "description": {
+                        "user_mentions": [
+                            {
+                                "id_str": "0",
+                                "indices": [
+                                    136,
+                                    147
+                                ],
+                                "name": "",
+                                "screen_name": "KotakCares"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "kotak.com",
+                                "expanded_url": "http://www.kotak.com",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/IZUw9bWiVM"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": null,
+        "place": {},
+        "entities": {
+            "user_mentions": [
+                {
+                    "id_str": "1549384556293197824",
+                    "indices": [
+                        0,
+                        13
+                    ],
+                    "name": "Abhishek kumar",
+                    "screen_name": "Abhi13774589"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1585170202177802242",
+        "url": "https://x.com/KotakBankLtd/status/1585170202177802242",
+        "twitterUrl": "https://twitter.com/KotakBankLtd/status/1585170202177802242",
+        "text": "@ashutos53726210 Hi! We wish to inform you that, you hold an Edge Savings Account with us wherein you had to maintain an Average Monthly Balance (AMB) of Rs.10000/- in your account, the failure of which results in a Non-Maintenance Charge (NMC).(1/2) ^Team Kotak",
+        "source": "Twitter for iPhone",
+        "retweetCount": 0,
+        "replyCount": 0,
+        "likeCount": 0,
+        "quoteCount": 0,
+        "viewCount": 0,
+        "createdAt": "Wed Oct 26 07:23:21 +0000 2022",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": true,
+        "inReplyToId": "1585148785487142914",
+        "conversationId": "1585148785487142914",
+        "inReplyToUserId": "1418075864936239107",
+        "inReplyToUsername": "ashutos53726210",
+        "author": {
+            "type": "user",
+            "userName": "KotakBankLtd",
+            "url": "https://x.com/KotakBankLtd",
+            "twitterUrl": "https://twitter.com/KotakBankLtd",
+            "id": "350862570",
+            "name": "Kotak Mahindra Bank",
+            "isVerified": false,
+            "isBlueVerified": true,
+            "verifiedType": "Business",
+            "profilePicture": "https://pbs.twimg.com/profile_images/1905526983192457216/isgAlnEe_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/350862570/1753252394",
+            "description": "",
+            "location": "Mumbai, India",
+            "followers": 325310,
+            "following": 23,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Mon Aug 08 12:35:28 +0000 2011",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 1766,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 1675,
+            "statusesCount": 133705,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [
+                "1948632121129501164"
+            ],
+            "profile_bio": {
+                "description": "Official handle of Kotak Mahindra Bank, India's leading banking & financial services group. For quick resolution of your queries, tweet @KotakCares",
+                "entities": {
+                    "description": {
+                        "user_mentions": [
+                            {
+                                "id_str": "0",
+                                "indices": [
+                                    136,
+                                    147
+                                ],
+                                "name": "",
+                                "screen_name": "KotakCares"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "kotak.com",
+                                "expanded_url": "http://www.kotak.com",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/IZUw9bWiVM"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": null,
+        "place": {},
+        "entities": {
+            "user_mentions": [
+                {
+                    "id_str": "1418075864936239107",
+                    "indices": [
+                        0,
+                        16
+                    ],
+                    "name": "ashutosh kumar",
+                    "screen_name": "ashutos53726210"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1452903532273668098",
+        "url": "https://x.com/KotakBankLtd/status/1452903532273668098",
+        "twitterUrl": "https://twitter.com/KotakBankLtd/status/1452903532273668098",
+        "text": "Bank Q2FY22 highlights:\nNII at Rs. 4,021 cr up 2% QoQ\nNIM at 4.45% \nNet Total Income at Rs. 5,833 up 10% QoQ\nOperating Profit at Rs. 3,120 cr up 8% QoQ \nPAT at Rs. 2,032 cr up 24% QoQ\nCAR as per Basel III, as on Sep 30, 2021 is 21.8% &amp; Tier I ratio is 20.8%",
+        "source": "Twitter for iPhone",
+        "retweetCount": 6,
+        "replyCount": 23,
+        "likeCount": 43,
+        "quoteCount": 2,
+        "viewCount": 0,
+        "createdAt": "Tue Oct 26 07:42:50 +0000 2021",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1452903532273668098",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "KotakBankLtd",
+            "url": "https://x.com/KotakBankLtd",
+            "twitterUrl": "https://twitter.com/KotakBankLtd",
+            "id": "350862570",
+            "name": "Kotak Mahindra Bank",
+            "isVerified": false,
+            "isBlueVerified": true,
+            "verifiedType": "Business",
+            "profilePicture": "https://pbs.twimg.com/profile_images/1905526983192457216/isgAlnEe_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/350862570/1753252394",
+            "description": "",
+            "location": "Mumbai, India",
+            "followers": 325310,
+            "following": 23,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Mon Aug 08 12:35:28 +0000 2011",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 1766,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 1675,
+            "statusesCount": 133705,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [
+                "1948632121129501164"
+            ],
+            "profile_bio": {
+                "description": "Official handle of Kotak Mahindra Bank, India's leading banking & financial services group. For quick resolution of your queries, tweet @KotakCares",
+                "entities": {
+                    "description": {
+                        "user_mentions": [
+                            {
+                                "id_str": "0",
+                                "indices": [
+                                    136,
+                                    147
+                                ],
+                                "name": "",
+                                "screen_name": "KotakCares"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "kotak.com",
+                                "expanded_url": "http://www.kotak.com",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/IZUw9bWiVM"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": null,
+        "place": {},
+        "entities": {},
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1421377015064629249",
+        "url": "https://x.com/KotakBankLtd/status/1421377015064629249",
+        "twitterUrl": "https://twitter.com/KotakBankLtd/status/1421377015064629249",
+        "text": "Watch our journey of fuelling infinite possibilities as we navigate through the Never Normal. With an agile team, a digital-first approach &amp; strong governance standards, we're building the bank of the future!\nView our annual report: https://t.co/HfeOZLtvlY\nhttps://t.co/oDROFOsBxI",
+        "source": "Twitter for iPhone",
+        "retweetCount": 3,
+        "replyCount": 11,
+        "likeCount": 15,
+        "quoteCount": 2,
+        "viewCount": 0,
+        "createdAt": "Sat Jul 31 07:47:42 +0000 2021",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1421377015064629249",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "KotakBankLtd",
+            "url": "https://x.com/KotakBankLtd",
+            "twitterUrl": "https://twitter.com/KotakBankLtd",
+            "id": "350862570",
+            "name": "Kotak Mahindra Bank",
+            "isVerified": false,
+            "isBlueVerified": true,
+            "verifiedType": "Business",
+            "profilePicture": "https://pbs.twimg.com/profile_images/1905526983192457216/isgAlnEe_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/350862570/1753252394",
+            "description": "",
+            "location": "Mumbai, India",
+            "followers": 325310,
+            "following": 23,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Mon Aug 08 12:35:28 +0000 2011",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 1766,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 1675,
+            "statusesCount": 133705,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [
+                "1948632121129501164"
+            ],
+            "profile_bio": {
+                "description": "Official handle of Kotak Mahindra Bank, India's leading banking & financial services group. For quick resolution of your queries, tweet @KotakCares",
+                "entities": {
+                    "description": {
+                        "user_mentions": [
+                            {
+                                "id_str": "0",
+                                "indices": [
+                                    136,
+                                    147
+                                ],
+                                "name": "",
+                                "screen_name": "KotakCares"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "kotak.com",
+                                "expanded_url": "http://www.kotak.com",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/IZUw9bWiVM"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": {
+            "binding_values": [
+                {
+                    "key": "photo_image_full_size_large",
+                    "value": {
+                        "image_value": {
+                            "height": 400,
+                            "url": "https://pbs.twimg.com/card_img/1948566635851173888/pCdcDgTN?format=jpg&name=800x419",
+                            "width": 764
+                        }
+                    }
+                },
+                {
+                    "key": "thumbnail_image",
+                    "value": {
+                        "image_value": {
+                            "height": 167,
+                            "url": "https://pbs.twimg.com/card_img/1948566635851173888/pCdcDgTN?format=jpg&name=600x600",
+                            "width": 600
+                        }
+                    }
+                },
+                {
+                    "key": "description",
+                    "value": {
+                        "string_value": "Investor Relations with Kotak Mahindra Bank."
+                    }
+                },
+                {
+                    "key": "domain",
+                    "value": {
+                        "string_value": "www.kotak.com"
+                    }
+                },
+                {
+                    "key": "thumbnail_image_large",
+                    "value": {
+                        "image_value": {
+                            "height": 627,
+                            "url": "https://pbs.twimg.com/card_img/1948566635851173888/pCdcDgTN?format=jpg&name=1200x627",
+                            "width": 1200
+                        }
+                    }
+                },
+                {
+                    "key": "summary_photo_image_small",
+                    "value": {
+                        "image_value": {
+                            "height": 202,
+                            "url": "https://pbs.twimg.com/card_img/1948566635851173888/pCdcDgTN?format=jpg&name=386x202",
+                            "width": 386
+                        }
+                    }
+                },
+                {
+                    "key": "thumbnail_image_original",
+                    "value": {
+                        "image_value": {
+                            "height": 400,
+                            "url": "https://pbs.twimg.com/card_img/1948566635851173888/pCdcDgTN?format=jpg&name=orig",
+                            "width": 1440
+                        }
+                    }
+                },
+                {
+                    "key": "site",
+                    "value": {
+                        "scribe_key": "publisher_id",
+                        "user_value": {
+                            "id_str": "350862570"
+                        }
+                    }
+                },
+                {
+                    "key": "photo_image_full_size_small",
+                    "value": {
+                        "image_value": {
+                            "height": 202,
+                            "url": "https://pbs.twimg.com/card_img/1948566635851173888/pCdcDgTN?format=jpg&name=386x202",
+                            "width": 386
+                        }
+                    }
+                },
+                {
+                    "key": "summary_photo_image_large",
+                    "value": {
+                        "image_value": {
+                            "height": 400,
+                            "url": "https://pbs.twimg.com/card_img/1948566635851173888/pCdcDgTN?format=jpg&name=800x419",
+                            "width": 764
+                        }
+                    }
+                },
+                {
+                    "key": "thumbnail_image_small",
+                    "value": {
+                        "image_value": {
+                            "height": 67,
+                            "url": "https://pbs.twimg.com/card_img/1948566635851173888/pCdcDgTN?format=jpg&name=240x240",
+                            "width": 240
+                        }
+                    }
+                },
+                {
+                    "key": "thumbnail_image_x_large",
+                    "value": {
+                        "image_value": {
+                            "height": 400,
+                            "url": "https://pbs.twimg.com/card_img/1948566635851173888/pCdcDgTN?format=png&name=2048x2048_2_exp",
+                            "width": 1440
+                        }
+                    }
+                },
+                {
+                    "key": "photo_image_full_size_original",
+                    "value": {
+                        "image_value": {
+                            "height": 400,
+                            "url": "https://pbs.twimg.com/card_img/1948566635851173888/pCdcDgTN?format=jpg&name=orig",
+                            "width": 1440
+                        }
+                    }
+                },
+                {
+                    "key": "vanity_url",
+                    "value": {
+                        "scribe_key": "vanity_url",
+                        "string_value": "kotak.com"
+                    }
+                },
+                {
+                    "key": "photo_image_full_size",
+                    "value": {
+                        "image_value": {
+                            "height": 314,
+                            "url": "https://pbs.twimg.com/card_img/1948566635851173888/pCdcDgTN?format=jpg&name=600x314",
+                            "width": 600
+                        }
+                    }
+                },
+                {
+                    "key": "thumbnail_image_color",
+                    "value": {
+                        "image_color_value": {
+                            "palette": [
+                                {
+                                    "percentage": 93.64,
+                                    "rgb": {
+                                        "blue": 229,
+                                        "green": 229,
+                                        "red": 229
+                                    }
+                                },
+                                {
+                                    "percentage": 2.39,
+                                    "rgb": {
+                                        "blue": 112,
+                                        "green": 106,
+                                        "red": 234
+                                    }
+                                },
+                                {
+                                    "percentage": 2.15,
+                                    "rgb": {
+                                        "blue": 160,
+                                        "green": 156,
+                                        "red": 232
+                                    }
+                                },
+                                {
+                                    "percentage": 0.98,
+                                    "rgb": {
+                                        "blue": 186,
+                                        "green": 164,
+                                        "red": 142
+                                    }
+                                },
+                                {
+                                    "percentage": 0.65,
+                                    "rgb": {
+                                        "blue": 73,
+                                        "green": 66,
+                                        "red": 236
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "key": "title",
+                    "value": {
+                        "string_value": "Annual Reports | Investor Relations - Kotak Mahindra Bank"
+                    }
+                },
+                {
+                    "key": "summary_photo_image_color",
+                    "value": {
+                        "image_color_value": {
+                            "palette": [
+                                {
+                                    "percentage": 93.64,
+                                    "rgb": {
+                                        "blue": 229,
+                                        "green": 229,
+                                        "red": 229
+                                    }
+                                },
+                                {
+                                    "percentage": 2.39,
+                                    "rgb": {
+                                        "blue": 112,
+                                        "green": 106,
+                                        "red": 234
+                                    }
+                                },
+                                {
+                                    "percentage": 2.15,
+                                    "rgb": {
+                                        "blue": 160,
+                                        "green": 156,
+                                        "red": 232
+                                    }
+                                },
+                                {
+                                    "percentage": 0.98,
+                                    "rgb": {
+                                        "blue": 186,
+                                        "green": 164,
+                                        "red": 142
+                                    }
+                                },
+                                {
+                                    "percentage": 0.65,
+                                    "rgb": {
+                                        "blue": 73,
+                                        "green": 66,
+                                        "red": 236
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "key": "summary_photo_image_x_large",
+                    "value": {
+                        "image_value": {
+                            "height": 400,
+                            "url": "https://pbs.twimg.com/card_img/1948566635851173888/pCdcDgTN?format=png&name=2048x2048_2_exp",
+                            "width": 1440
+                        }
+                    }
+                },
+                {
+                    "key": "summary_photo_image",
+                    "value": {
+                        "image_value": {
+                            "height": 314,
+                            "url": "https://pbs.twimg.com/card_img/1948566635851173888/pCdcDgTN?format=jpg&name=600x314",
+                            "width": 600
+                        }
+                    }
+                },
+                {
+                    "key": "photo_image_full_size_color",
+                    "value": {
+                        "image_color_value": {
+                            "palette": [
+                                {
+                                    "percentage": 93.64,
+                                    "rgb": {
+                                        "blue": 229,
+                                        "green": 229,
+                                        "red": 229
+                                    }
+                                },
+                                {
+                                    "percentage": 2.39,
+                                    "rgb": {
+                                        "blue": 112,
+                                        "green": 106,
+                                        "red": 234
+                                    }
+                                },
+                                {
+                                    "percentage": 2.15,
+                                    "rgb": {
+                                        "blue": 160,
+                                        "green": 156,
+                                        "red": 232
+                                    }
+                                },
+                                {
+                                    "percentage": 0.98,
+                                    "rgb": {
+                                        "blue": 186,
+                                        "green": 164,
+                                        "red": 142
+                                    }
+                                },
+                                {
+                                    "percentage": 0.65,
+                                    "rgb": {
+                                        "blue": 73,
+                                        "green": 66,
+                                        "red": 236
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "key": "photo_image_full_size_x_large",
+                    "value": {
+                        "image_value": {
+                            "height": 400,
+                            "url": "https://pbs.twimg.com/card_img/1948566635851173888/pCdcDgTN?format=png&name=2048x2048_2_exp",
+                            "width": 1440
+                        }
+                    }
+                },
+                {
+                    "key": "card_url",
+                    "value": {
+                        "scribe_key": "card_url",
+                        "string_value": "https://t.co/HfeOZLtvlY"
+                    }
+                },
+                {
+                    "key": "summary_photo_image_original",
+                    "value": {
+                        "image_value": {
+                            "height": 400,
+                            "url": "https://pbs.twimg.com/card_img/1948566635851173888/pCdcDgTN?format=jpg&name=orig",
+                            "width": 1440
+                        }
+                    }
+                }
+            ],
+            "card_platform": {
+                "platform": {
+                    "audience": {
+                        "name": "production"
+                    },
+                    "device": {
+                        "name": "iPhone",
+                        "version": "13"
+                    }
+                }
+            },
+            "name": "summary_large_image",
+            "url": "https://t.co/HfeOZLtvlY",
+            "user_refs_results": [
+                {
+                    "rest_id": "350862570",
+                    "result": {
+                        "__typename": "User",
+                        "action_counts": {
+                            "favorites_count": 1766
+                        },
+                        "avatar": {
+                            "image_url": "https://pbs.twimg.com/profile_images/1905526983192457216/isgAlnEe_normal.jpg"
+                        },
+                        "banner": {
+                            "image_url": "https://pbs.twimg.com/profile_banners/350862570/1753252394"
+                        },
+                        "core": {
+                            "created_at": "Mon Aug 08 12:35:28 +0000 2011",
+                            "name": "Kotak Mahindra Bank",
+                            "screen_name": "KotakBankLtd"
+                        },
+                        "dm_permissions": {
+                            "can_dm": true
+                        },
+                        "exclusive_tweet_following": false,
+                        "identity_profile_labels_highlighted_label": {},
+                        "location": {
+                            "location": "Mumbai, India"
+                        },
+                        "media_permissions": {
+                            "can_media_tag": true
+                        },
+                        "notifications_settings": {},
+                        "pinned_items": {
+                            "tweet_ids_str": [
+                                "1948632121129501164"
+                            ]
+                        },
+                        "privacy": {},
+                        "private_super_following": false,
+                        "profile_bio": {
+                            "description": "Official handle of Kotak Mahindra Bank, India's leading banking & financial services group. For quick resolution of your queries, tweet @KotakCares",
+                            "entities": {
+                                "description": {
+                                    "user_mentions": [
+                                        {
+                                            "id_str": "0",
+                                            "indices": [
+                                                136,
+                                                147
+                                            ],
+                                            "name": "",
+                                            "screen_name": "KotakCares"
+                                        }
+                                    ]
+                                },
+                                "url": {
+                                    "urls": [
+                                        {
+                                            "display_url": "kotak.com",
+                                            "expanded_url": "http://www.kotak.com",
+                                            "indices": [
+                                                0,
+                                                23
+                                            ],
+                                            "url": "https://t.co/IZUw9bWiVM"
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        "profile_image_shape": "Square",
+                        "profile_metadata": {
+                            "profile_interstitial_type": "",
+                            "profile_link_color": "0084B4"
+                        },
+                        "profile_translation": {
+                            "translator_type_enum": "None"
+                        },
+                        "properties": {
+                            "has_extended_profile": false
+                        },
+                        "relationship_counts": {
+                            "followers": 325310,
+                            "following": 23
+                        },
+                        "relationship_perspectives": {},
+                        "rest_id": "350862570",
+                        "super_follow_eligible": false,
+                        "super_followed_by": false,
+                        "super_following": false,
+                        "tweet_counts": {
+                            "media_tweets": 1675,
+                            "tweets": 133705
+                        },
+                        "website": {
+                            "url": "https://t.co/IZUw9bWiVM"
+                        },
+                        "verification": {
+                            "is_blue_verified": true,
+                            "verified_type": "Business"
+                        }
+                    }
+                }
+            ]
+        },
+        "place": {},
+        "entities": {
+            "urls": [
+                {
+                    "display_url": "bit.ly/3yfwPxK",
+                    "expanded_url": "http://bit.ly/3yfwPxK",
+                    "indices": [
+                        237,
+                        260
+                    ],
+                    "url": "https://t.co/HfeOZLtvlY"
+                },
+                {
+                    "display_url": "bit.ly/3xdSsgH",
+                    "expanded_url": "https://bit.ly/3xdSsgH",
+                    "indices": [
+                        261,
+                        284
+                    ],
+                    "url": "https://t.co/oDROFOsBxI"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1419572534664523776",
+        "url": "https://x.com/KotakBankLtd/status/1419572534664523776",
+        "twitterUrl": "https://twitter.com/KotakBankLtd/status/1419572534664523776",
+        "text": "Bank Q1FY22 highlights:\nPAT at Rs. 1,642 cr up 32% YoY\nOperating Profit at Rs. 3,121 cr up 19% YoY\nNII at Rs. 3,942 cr up 6% YoY\nNIM at 4.60% \nCAR as per Basel III, as on June 30, 2021 is 23.1% &amp; Tier I ratio is 22.2%",
+        "source": "Twitter for iPhone",
+        "retweetCount": 1,
+        "replyCount": 2,
+        "likeCount": 5,
+        "quoteCount": 1,
+        "viewCount": 0,
+        "createdAt": "Mon Jul 26 08:17:21 +0000 2021",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1419572534664523776",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "KotakBankLtd",
+            "url": "https://x.com/KotakBankLtd",
+            "twitterUrl": "https://twitter.com/KotakBankLtd",
+            "id": "350862570",
+            "name": "Kotak Mahindra Bank",
+            "isVerified": false,
+            "isBlueVerified": true,
+            "verifiedType": "Business",
+            "profilePicture": "https://pbs.twimg.com/profile_images/1905526983192457216/isgAlnEe_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/350862570/1753252394",
+            "description": "",
+            "location": "Mumbai, India",
+            "followers": 325310,
+            "following": 23,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Mon Aug 08 12:35:28 +0000 2011",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 1766,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 1675,
+            "statusesCount": 133705,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [
+                "1948632121129501164"
+            ],
+            "profile_bio": {
+                "description": "Official handle of Kotak Mahindra Bank, India's leading banking & financial services group. For quick resolution of your queries, tweet @KotakCares",
+                "entities": {
+                    "description": {
+                        "user_mentions": [
+                            {
+                                "id_str": "0",
+                                "indices": [
+                                    136,
+                                    147
+                                ],
+                                "name": "",
+                                "screen_name": "KotakCares"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "kotak.com",
+                                "expanded_url": "http://www.kotak.com",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/IZUw9bWiVM"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": null,
+        "place": {},
+        "entities": {},
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1389126158889885696",
+        "url": "https://x.com/KotakBankLtd/status/1389126158889885696",
+        "twitterUrl": "https://twitter.com/KotakBankLtd/status/1389126158889885696",
+        "text": "Bank FY21 highlights:\nOperating Profit at Rs. 12,215 cr up 22% YoY\nPAT at Rs. 6,965 cr up 17% YoY \nNII at Rs. 15,340 cr up 14% YoY\nNIM at 4.41%",
+        "source": "Twitter for iPhone",
+        "retweetCount": 6,
+        "replyCount": 13,
+        "likeCount": 26,
+        "quoteCount": 0,
+        "viewCount": 0,
+        "createdAt": "Mon May 03 07:54:19 +0000 2021",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1389126158889885696",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "KotakBankLtd",
+            "url": "https://x.com/KotakBankLtd",
+            "twitterUrl": "https://twitter.com/KotakBankLtd",
+            "id": "350862570",
+            "name": "Kotak Mahindra Bank",
+            "isVerified": false,
+            "isBlueVerified": true,
+            "verifiedType": "Business",
+            "profilePicture": "https://pbs.twimg.com/profile_images/1905526983192457216/isgAlnEe_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/350862570/1753252394",
+            "description": "",
+            "location": "Mumbai, India",
+            "followers": 325310,
+            "following": 23,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Mon Aug 08 12:35:28 +0000 2011",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 1766,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 1675,
+            "statusesCount": 133705,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [
+                "1948632121129501164"
+            ],
+            "profile_bio": {
+                "description": "Official handle of Kotak Mahindra Bank, India's leading banking & financial services group. For quick resolution of your queries, tweet @KotakCares",
+                "entities": {
+                    "description": {
+                        "user_mentions": [
+                            {
+                                "id_str": "0",
+                                "indices": [
+                                    136,
+                                    147
+                                ],
+                                "name": "",
+                                "screen_name": "KotakCares"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "kotak.com",
+                                "expanded_url": "http://www.kotak.com",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/IZUw9bWiVM"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": null,
+        "place": {},
+        "entities": {},
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1389126007467122691",
+        "url": "https://x.com/KotakBankLtd/status/1389126007467122691",
+        "twitterUrl": "https://twitter.com/KotakBankLtd/status/1389126007467122691",
+        "text": "Bank Q4FY21 highlights:\n\nPAT at Rs. 1,682 cr up 33% YoY\nOperating Profit at Rs. 3,407 cr up 25% YoY\nNII at Rs. 3,843 cr up 8% YoY\nNIM at 4.39% \nCAR for the Bank as per Basel III, as on Mar 31, 2021 is 22.3% &amp; Tier I ratio is 21.4%",
+        "source": "Twitter for iPhone",
+        "retweetCount": 5,
+        "replyCount": 16,
+        "likeCount": 33,
+        "quoteCount": 0,
+        "viewCount": 0,
+        "createdAt": "Mon May 03 07:53:43 +0000 2021",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1389126007467122691",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "KotakBankLtd",
+            "url": "https://x.com/KotakBankLtd",
+            "twitterUrl": "https://twitter.com/KotakBankLtd",
+            "id": "350862570",
+            "name": "Kotak Mahindra Bank",
+            "isVerified": false,
+            "isBlueVerified": true,
+            "verifiedType": "Business",
+            "profilePicture": "https://pbs.twimg.com/profile_images/1905526983192457216/isgAlnEe_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/350862570/1753252394",
+            "description": "",
+            "location": "Mumbai, India",
+            "followers": 325310,
+            "following": 23,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Mon Aug 08 12:35:28 +0000 2011",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 1766,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 1675,
+            "statusesCount": 133705,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [
+                "1948632121129501164"
+            ],
+            "profile_bio": {
+                "description": "Official handle of Kotak Mahindra Bank, India's leading banking & financial services group. For quick resolution of your queries, tweet @KotakCares",
+                "entities": {
+                    "description": {
+                        "user_mentions": [
+                            {
+                                "id_str": "0",
+                                "indices": [
+                                    136,
+                                    147
+                                ],
+                                "name": "",
+                                "screen_name": "KotakCares"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "kotak.com",
+                                "expanded_url": "http://www.kotak.com",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/IZUw9bWiVM"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": null,
+        "place": {},
+        "entities": {},
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    }
+]

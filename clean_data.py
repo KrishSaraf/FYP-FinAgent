@@ -484,6 +484,90 @@ def clean_reddit_data():
         df.to_csv(output_csv_path, index=False)
         logger.info(f"Saved cleaned Reddit data to: {output_csv_path}")
 
+def clean_tweets_data():
+    """
+    Function to clean all Twitter JSON files for each stock, combine them, 
+    and save as a single CSV per stock. It extracts relevant fields from the 
+    tweet data, ignoring irrelevant details like profile pictures.
+    """
+    # Define input and output directories.
+    input_dir = Path("social_media_data/uncleaned_data/twitter_scraper")
+    output_dir = Path("social_media_data/cleaned_data")
+
+    # Check if the input directory exists.
+    if not input_dir.exists():
+        logger.warning(f"Twitter input directory not found at {input_dir}, skipping tweet cleaning.")
+        return
+
+    # Group tweet files by stock name.
+    stock_tweet_files = {}
+    # Find all files that seem to be tweet files (containing '_tweets.json').
+    for json_file_path in input_dir.glob("*_tweets.json"):
+        # Extract stock name (part before the first '_').
+        stock_name = json_file_path.stem.split('_')[0]
+        if stock_name not in stock_tweet_files:
+            stock_tweet_files[stock_name] = []
+        stock_tweet_files[stock_name].append(json_file_path)
+
+    # Process each stock's group of tweet files.
+    for stock_name, file_paths in stock_tweet_files.items():
+        logger.info(f"Processing Twitter data for stock: {stock_name}")
+        all_cleaned_tweets = []
+
+        # Iterate over all files for the current stock.
+        for json_file_path in file_paths:
+            logger.info(f"  - Reading file: {json_file_path.name}")
+            try:
+                with open(json_file_path, 'r', encoding='utf-8') as f:
+                    tweets = json.load(f)
+
+                if not tweets:
+                    logger.warning(f"  - No tweets found in {json_file_path}, skipping.")
+                    continue
+
+                for tweet in tweets:
+                    # Extract relevant data.
+                    cleaned_tweet = {
+                        'id': tweet.get('id'),
+                        'text': tweet.get('text'),
+                        'created_at': tweet.get('createdAt'),
+                        'retweet_count': tweet.get('retweetCount'),
+                        'reply_count': tweet.get('replyCount'),
+                        'like_count': tweet.get('likeCount'),
+                        'quote_count': tweet.get('quoteCount'),
+                        'view_count': tweet.get('viewCount'),
+                        'lang': tweet.get('lang'),
+                        'username': tweet.get('author', {}).get('userName'),
+                        'author_name': tweet.get('author', {}).get('name'),
+                        'url': tweet.get('url')
+                    }
+                    all_cleaned_tweets.append(cleaned_tweet)
+
+            except json.JSONDecodeError:
+                logger.error(f"  - Error decoding JSON from file: {json_file_path}")
+            except Exception as e:
+                logger.error(f"  - An error occurred while processing {json_file_path}: {e}")
+
+        # After processing all files for the stock, create a single DataFrame.
+        if not all_cleaned_tweets:
+            logger.warning(f"No combined tweet data found for {stock_name}, skipping CSV creation.")
+            continue
+
+        df = pd.DataFrame(all_cleaned_tweets)
+
+        # Remove duplicate tweets based on 'id' just in case there's overlap.
+        df.drop_duplicates(subset='id', inplace=True)
+
+        # Create the output directory for the stock.
+        stock_output_dir = output_dir / stock_name
+        stock_output_dir.mkdir(parents=True, exist_ok=True)
+
+        # Save the combined DataFrame to a single CSV file named 'tweets.csv'.
+        output_csv_path = stock_output_dir / "tweets.csv"
+        df.to_csv(output_csv_path, index=False)
+        logger.info(f"Saved combined and cleaned Twitter data for {stock_name} to: {output_csv_path}")
+
+
 def main():
     """
     Main function to parse all JSON files and clean the data.
@@ -500,6 +584,7 @@ def main():
     clean_price_shockers()
     clean_trending()
     clean_reddit_data()
+    clean_tweets_data()
 
 if __name__ == "__main__":
     main()

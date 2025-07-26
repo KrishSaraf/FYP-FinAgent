@@ -1,0 +1,2219 @@
+[
+    {
+        "type": "tweet",
+        "id": "1943297384215359867",
+        "url": "https://x.com/TCS/status/1943297384215359867",
+        "twitterUrl": "https://twitter.com/TCS/status/1943297384215359867",
+        "text": "Download links for #TCSQ1 FY 2025-26:\n\nIND AS Consolidated: https://t.co/453g2TbLVr\nIND AS Condensed: https://t.co/2OBXIQFG1S\n\nIFRS (USD): https://t.co/MAXmtk8jvW\nIFRS (INR): https://t.co/8DZPS8t5fu",
+        "source": "Twitter for iPhone",
+        "retweetCount": 2,
+        "replyCount": 1,
+        "likeCount": 12,
+        "quoteCount": 2,
+        "viewCount": 3069,
+        "createdAt": "Thu Jul 10 13:12:55 +0000 2025",
+        "lang": "en",
+        "bookmarkCount": 1,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1943297384215359867",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "TCS",
+            "url": "https://x.com/TCS",
+            "twitterUrl": "https://twitter.com/TCS",
+            "id": "18929773",
+            "name": "Tata Consultancy Services",
+            "isVerified": false,
+            "isBlueVerified": false,
+            "verifiedType": "Business",
+            "profilePicture": "https://pbs.twimg.com/profile_images/1762078108327522304/huMcsvhD_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/18929773/1752558756",
+            "description": "",
+            "location": "Worldwide",
+            "followers": 582985,
+            "following": 289,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Tue Jan 13 05:06:04 +0000 2009",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 3711,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 7876,
+            "statusesCount": 19911,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "Harnessing cutting-edge technology and innovation for sustainable, purpose-driven transformations globally.",
+                "entities": {
+                    "description": {},
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "tcs.com",
+                                "expanded_url": "https://www.tcs.com/",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/VaskwRJ40u"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": null,
+        "place": {},
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        19,
+                        25
+                    ],
+                    "text": "TCSQ1"
+                }
+            ],
+            "urls": [
+                {
+                    "display_url": "on.tcs.com/Q1FY26-Consoli\u2026",
+                    "expanded_url": "https://on.tcs.com/Q1FY26-Consolidated-IND-AS",
+                    "indices": [
+                        60,
+                        83
+                    ],
+                    "url": "https://t.co/453g2TbLVr"
+                },
+                {
+                    "display_url": "on.tcs.com/Q1FY26-Condens\u2026",
+                    "expanded_url": "https://on.tcs.com/Q1FY26-Condensed-IND-AS",
+                    "indices": [
+                        102,
+                        125
+                    ],
+                    "url": "https://t.co/2OBXIQFG1S"
+                },
+                {
+                    "display_url": "on.tcs.com/Q1FY26-IFRS-USD",
+                    "expanded_url": "https://on.tcs.com/Q1FY26-IFRS-USD",
+                    "indices": [
+                        139,
+                        162
+                    ],
+                    "url": "https://t.co/MAXmtk8jvW"
+                },
+                {
+                    "display_url": "on.tcs.com/Q1FY26-IFRS-INR",
+                    "expanded_url": "https://on.tcs.com/Q1FY26-IFRS-INR",
+                    "indices": [
+                        175,
+                        198
+                    ],
+                    "url": "https://t.co/8DZPS8t5fu"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1943287117607788645",
+        "url": "https://x.com/TCS/status/1943287117607788645",
+        "twitterUrl": "https://twitter.com/TCS/status/1943287117607788645",
+        "text": "As on June 30, 2025, TCS applied for 8,987 patents and has been granted 4,939 patents. In the quarter alone, 171 patents were applied of which 119 were granted. #TCSQ1",
+        "source": "Twitter for iPhone",
+        "retweetCount": 5,
+        "replyCount": 2,
+        "likeCount": 38,
+        "quoteCount": 2,
+        "viewCount": 4621,
+        "createdAt": "Thu Jul 10 12:32:08 +0000 2025",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1943287117607788645",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "TCS",
+            "url": "https://x.com/TCS",
+            "twitterUrl": "https://twitter.com/TCS",
+            "id": "18929773",
+            "name": "Tata Consultancy Services",
+            "isVerified": false,
+            "isBlueVerified": false,
+            "verifiedType": "Business",
+            "profilePicture": "https://pbs.twimg.com/profile_images/1762078108327522304/huMcsvhD_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/18929773/1752558756",
+            "description": "",
+            "location": "Worldwide",
+            "followers": 582985,
+            "following": 289,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Tue Jan 13 05:06:04 +0000 2009",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 3711,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 7876,
+            "statusesCount": 19911,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "Harnessing cutting-edge technology and innovation for sustainable, purpose-driven transformations globally.",
+                "entities": {
+                    "description": {},
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "tcs.com",
+                                "expanded_url": "https://www.tcs.com/",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/VaskwRJ40u"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": null,
+        "place": {},
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        161,
+                        167
+                    ],
+                    "text": "TCSQ1"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1943280126738993291",
+        "url": "https://x.com/TCS/status/1943280126738993291",
+        "twitterUrl": "https://twitter.com/TCS/status/1943280126738993291",
+        "text": "The growth for the quarter was led by AI &amp; Data, TCS Interactive and Cybersecurity. Win themes across key deals involved operating model transformation, vendor consolidation, #AI powered intelligent automation, and SAP S4/HANA based transformation deals. #TCSQ1",
+        "source": "Twitter for iPhone",
+        "retweetCount": 4,
+        "replyCount": 2,
+        "likeCount": 86,
+        "quoteCount": 2,
+        "viewCount": 8494,
+        "createdAt": "Thu Jul 10 12:04:21 +0000 2025",
+        "lang": "en",
+        "bookmarkCount": 1,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1943280126738993291",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "TCS",
+            "url": "https://x.com/TCS",
+            "twitterUrl": "https://twitter.com/TCS",
+            "id": "18929773",
+            "name": "Tata Consultancy Services",
+            "isVerified": false,
+            "isBlueVerified": false,
+            "verifiedType": "Business",
+            "profilePicture": "https://pbs.twimg.com/profile_images/1762078108327522304/huMcsvhD_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/18929773/1752558756",
+            "description": "",
+            "location": "Worldwide",
+            "followers": 582985,
+            "following": 289,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Tue Jan 13 05:06:04 +0000 2009",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 3711,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 7876,
+            "statusesCount": 19911,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "Harnessing cutting-edge technology and innovation for sustainable, purpose-driven transformations globally.",
+                "entities": {
+                    "description": {},
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "tcs.com",
+                                "expanded_url": "https://www.tcs.com/",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/VaskwRJ40u"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": null,
+        "place": {},
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        179,
+                        182
+                    ],
+                    "text": "AI"
+                },
+                {
+                    "indices": [
+                        259,
+                        265
+                    ],
+                    "text": "TCSQ1"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1943261467173883997",
+        "url": "https://x.com/TCS/status/1943261467173883997",
+        "twitterUrl": "https://twitter.com/TCS/status/1943261467173883997",
+        "text": "#TCSQ1 FY26 Earnings:\n\nQ1 FY26 Revenue: at Rs.63,437 crore; up 1.3% Y-o-Y\nQ1 FY26 Revenue: In Constant Currency terms down 3.1% Y-o-Y\nQ1 FY26 Revenue at $ 7,421 million; down 1.1 % Y-o-Y\nQ1 FY26 Net Profit Rs.12,760 crore\nQ1 FY26 EPS at Rs.35.27 per share",
+        "source": "Twitter for iPhone",
+        "retweetCount": 22,
+        "replyCount": 13,
+        "likeCount": 301,
+        "quoteCount": 2,
+        "viewCount": 33283,
+        "createdAt": "Thu Jul 10 10:50:12 +0000 2025",
+        "lang": "en",
+        "bookmarkCount": 9,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1943261467173883997",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "TCS",
+            "url": "https://x.com/TCS",
+            "twitterUrl": "https://twitter.com/TCS",
+            "id": "18929773",
+            "name": "Tata Consultancy Services",
+            "isVerified": false,
+            "isBlueVerified": false,
+            "verifiedType": "Business",
+            "profilePicture": "https://pbs.twimg.com/profile_images/1762078108327522304/huMcsvhD_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/18929773/1752558756",
+            "description": "",
+            "location": "Worldwide",
+            "followers": 582985,
+            "following": 289,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Tue Jan 13 05:06:04 +0000 2009",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 3711,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 7876,
+            "statusesCount": 19911,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "Harnessing cutting-edge technology and innovation for sustainable, purpose-driven transformations globally.",
+                "entities": {
+                    "description": {},
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "tcs.com",
+                                "expanded_url": "https://www.tcs.com/",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/VaskwRJ40u"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": null,
+        "place": {},
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        0,
+                        6
+                    ],
+                    "text": "TCSQ1"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1942906678762230006",
+        "url": "https://x.com/TCS/status/1942906678762230006",
+        "twitterUrl": "https://twitter.com/TCS/status/1942906678762230006",
+        "text": "Watch the #TCSQ1 FY 2025-26 Financial Results Press Conference LIVE on July 10, 5:30 PM IST.\n\nYouTube: https://t.co/aRxDsu7IXd\n\nLinkedIn:\u00a0https://t.co/DfTLtCTGLz\n\nFollow @TCS on X for live updates https://t.co/FaLoUQagx0",
+        "source": "Twitter for iPhone",
+        "retweetCount": 7,
+        "replyCount": 6,
+        "likeCount": 77,
+        "quoteCount": 0,
+        "viewCount": 7356,
+        "createdAt": "Wed Jul 09 11:20:24 +0000 2025",
+        "lang": "en",
+        "bookmarkCount": 4,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1942906678762230006",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "TCS",
+            "url": "https://x.com/TCS",
+            "twitterUrl": "https://twitter.com/TCS",
+            "id": "18929773",
+            "name": "Tata Consultancy Services",
+            "isVerified": false,
+            "isBlueVerified": false,
+            "verifiedType": "Business",
+            "profilePicture": "https://pbs.twimg.com/profile_images/1762078108327522304/huMcsvhD_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/18929773/1752558756",
+            "description": "",
+            "location": "Worldwide",
+            "followers": 582985,
+            "following": 289,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Tue Jan 13 05:06:04 +0000 2009",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 3711,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 7876,
+            "statusesCount": 19911,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "Harnessing cutting-edge technology and innovation for sustainable, purpose-driven transformations globally.",
+                "entities": {
+                    "description": {},
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "tcs.com",
+                                "expanded_url": "https://www.tcs.com/",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/VaskwRJ40u"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {
+            "media": [
+                {
+                    "display_url": "pic.twitter.com/FaLoUQagx0",
+                    "expanded_url": "https://twitter.com/TCS/status/1942906678762230006/photo/1",
+                    "ext_media_availability": {
+                        "status": "Available"
+                    },
+                    "features": {
+                        "large": {
+                            "faces": [
+                                {
+                                    "h": 105,
+                                    "w": 105,
+                                    "x": 819,
+                                    "y": 1763
+                                },
+                                {
+                                    "h": 149,
+                                    "w": 149,
+                                    "x": 193,
+                                    "y": 431
+                                },
+                                {
+                                    "h": 167,
+                                    "w": 167,
+                                    "x": 677,
+                                    "y": 441
+                                },
+                                {
+                                    "h": 179,
+                                    "w": 179,
+                                    "x": 1657,
+                                    "y": 439
+                                },
+                                {
+                                    "h": 171,
+                                    "w": 171,
+                                    "x": 1179,
+                                    "y": 427
+                                }
+                            ]
+                        },
+                        "orig": {
+                            "faces": [
+                                {
+                                    "h": 116,
+                                    "w": 116,
+                                    "x": 901,
+                                    "y": 1938
+                                },
+                                {
+                                    "h": 164,
+                                    "w": 164,
+                                    "x": 213,
+                                    "y": 474
+                                },
+                                {
+                                    "h": 184,
+                                    "w": 184,
+                                    "x": 745,
+                                    "y": 485
+                                },
+                                {
+                                    "h": 197,
+                                    "w": 197,
+                                    "x": 1822,
+                                    "y": 483
+                                },
+                                {
+                                    "h": 189,
+                                    "w": 189,
+                                    "x": 1296,
+                                    "y": 470
+                                }
+                            ]
+                        }
+                    },
+                    "id_str": "1942867978615136256",
+                    "indices": [
+                        197,
+                        220
+                    ],
+                    "media_key": "3_1942867978615136256",
+                    "media_results": {
+                        "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAARr2dCH+1iAACgACGvaXVJNbUPYAAA==",
+                        "result": {
+                            "__typename": "ApiMedia",
+                            "id": "QXBpTWVkaWE6DAABCgABGvZ0If7WIAAKAAIa9pdUk1tQ9gAA",
+                            "media_key": "3_1942867978615136256"
+                        }
+                    },
+                    "media_url_https": "https://pbs.twimg.com/media/GvZ0If7WIAAFuOF.jpg",
+                    "original_info": {
+                        "focus_rects": [
+                            {
+                                "h": 1260,
+                                "w": 2250,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 2250,
+                                "w": 2250,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 2251,
+                                "w": 1975,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 2251,
+                                "w": 1126,
+                                "x": 280,
+                                "y": 0
+                            },
+                            {
+                                "h": 2251,
+                                "w": 2250,
+                                "x": 0,
+                                "y": 0
+                            }
+                        ],
+                        "height": 2251,
+                        "width": 2250
+                    },
+                    "sizes": {
+                        "large": {
+                            "h": 2048,
+                            "w": 2047
+                        }
+                    },
+                    "type": "photo",
+                    "url": "https://t.co/FaLoUQagx0"
+                }
+            ]
+        },
+        "card": null,
+        "place": {},
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        10,
+                        16
+                    ],
+                    "text": "TCSQ1"
+                }
+            ],
+            "urls": [
+                {
+                    "display_url": "bit.ly/Q1FY26-Financi\u2026",
+                    "expanded_url": "https://bit.ly/Q1FY26-Financial-Results",
+                    "indices": [
+                        103,
+                        126
+                    ],
+                    "url": "https://t.co/aRxDsu7IXd"
+                },
+                {
+                    "display_url": "bit.ly/LinkedIn-Tata-\u2026",
+                    "expanded_url": "https://bit.ly/LinkedIn-Tata-Consultancy-Services",
+                    "indices": [
+                        138,
+                        161
+                    ],
+                    "url": "https://t.co/DfTLtCTGLz"
+                }
+            ],
+            "user_mentions": [
+                {
+                    "id_str": "18929773",
+                    "indices": [
+                        170,
+                        174
+                    ],
+                    "name": "Tata Consultancy Services",
+                    "screen_name": "TCS"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1920456092682768608",
+        "url": "https://x.com/TCS/status/1920456092682768608",
+        "twitterUrl": "https://twitter.com/TCS/status/1920456092682768608",
+        "text": "We are excited to share that TCS MasterCraft\u2122 is now GenAI and Agentic AI-powered\u2014designed to help enterprises modernize legacy systems faster and smarter, cutting costs by over 70% and delivering results twice as fast as traditional approaches.",
+        "source": "Twitter for iPhone",
+        "retweetCount": 9,
+        "replyCount": 4,
+        "likeCount": 36,
+        "quoteCount": 0,
+        "viewCount": 5775,
+        "createdAt": "Thu May 08 12:29:47 +0000 2025",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1920456092682768608",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "TCS",
+            "url": "https://x.com/TCS",
+            "twitterUrl": "https://twitter.com/TCS",
+            "id": "18929773",
+            "name": "Tata Consultancy Services",
+            "isVerified": false,
+            "isBlueVerified": false,
+            "verifiedType": "Business",
+            "profilePicture": "https://pbs.twimg.com/profile_images/1762078108327522304/huMcsvhD_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/18929773/1752558756",
+            "description": "",
+            "location": "Worldwide",
+            "followers": 582985,
+            "following": 289,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Tue Jan 13 05:06:04 +0000 2009",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 3711,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 7876,
+            "statusesCount": 19911,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "Harnessing cutting-edge technology and innovation for sustainable, purpose-driven transformations globally.",
+                "entities": {
+                    "description": {},
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "tcs.com",
+                                "expanded_url": "https://www.tcs.com/",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/VaskwRJ40u"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": {
+            "binding_values": [
+                {
+                    "key": "unified_card",
+                    "value": {
+                        "string_value": "{\"type\":\"image_carousel_website\",\"component_objects\":{\"details_1\":{\"type\":\"details\",\"data\":{\"title\":{\"content\":\"TCS Launches GenAI and Agentic AI-Powered TCS MasterCraft\\u2122\",\"is_rtl\":false},\"subtitle\":{\"content\":\"tcs.com\",\"is_rtl\":false},\"destination\":\"browser_1\"}},\"swipeable_media_1\":{\"type\":\"swipeable_media\",\"data\":{\"media_list\":[{\"id\":\"3_1920449441212903424\",\"destination\":\"browser_1\"},{\"id\":\"3_1920449470497431552\",\"destination\":\"browser_1\"},{\"id\":\"3_1920449495906570241\",\"destination\":\"browser_1\"},{\"id\":\"3_1920449533634351104\",\"destination\":\"browser_1\"},{\"id\":\"3_1920449562721820672\",\"destination\":\"browser_1\"}]}}},\"destination_objects\":{\"browser_1\":{\"type\":\"browser\",\"data\":{\"url_data\":{\"url\":\"https://bit.ly/4kcosuI\",\"vanity\":\"tcs.com\"}}}},\"components\":[\"swipeable_media_1\",\"details_1\"],\"media_entities\":{\"3_1920449495906570241\":{\"id\":1920449495906570241,\"id_str\":\"1920449495906570241\",\"indices\":[0,0],\"media_url\":\"\",\"media_url_https\":\"https://pbs.twimg.com/media/GqbOpDyW0AEcXLB.jpg\",\"url\":\"\",\"display_url\":\"\",\"expanded_url\":\"\",\"type\":\"photo\",\"original_info\":{\"width\":800,\"height\":800,\"focus_rects\":[{\"x\":0,\"y\":0,\"h\":448,\"w\":800},{\"x\":0,\"y\":0,\"h\":800,\"w\":800},{\"x\":0,\"y\":0,\"h\":800,\"w\":702},{\"x\":0,\"y\":0,\"h\":800,\"w\":400},{\"x\":0,\"y\":0,\"h\":800,\"w\":800}]},\"sizes\":{\"medium\":{\"w\":800,\"h\":800,\"resize\":\"fit\"},\"small\":{\"w\":680,\"h\":680,\"resize\":\"fit\"},\"large\":{\"w\":800,\"h\":800,\"resize\":\"fit\"},\"thumb\":{\"w\":150,\"h\":150,\"resize\":\"crop\"}},\"source_user_id\":18929773,\"source_user_id_str\":\"18929773\",\"media_key\":\"3_1920449495906570241\",\"ext\":{\"mediaColor\":{\"r\":{\"ok\":{\"palette\":[{\"rgb\":{\"red\":248,\"green\":247,\"blue\":245},\"percentage\":49.44},{\"rgb\":{\"red\":246,\"green\":147,\"blue\":18},\"percentage\":19.47},{\"rgb\":{\"red\":61,\"green\":45,\"blue\":69},\"percentage\":6.31},{\"rgb\":{\"red\":98,\"green\":55,\"blue\":53},\"percentage\":5.46},{\"rgb\":{\"red\":51,\"green\":52,\"blue\":109},\"percentage\":5.13}]}},\"ttl\":-1}}},\"3_1920449533634351104\":{\"id\":1920449533634351104,\"id_str\":\"1920449533634351104\",\"indices\":[0,0],\"media_url\":\"\",\"media_url_https\":\"https://pbs.twimg.com/media/GqbOrQVXEAAifav.jpg\",\"url\":\"\",\"display_url\":\"\",\"expanded_url\":\"\",\"type\":\"photo\",\"original_info\":{\"width\":800,\"height\":800,\"focus_rects\":[{\"x\":0,\"y\":0,\"h\":448,\"w\":800},{\"x\":0,\"y\":0,\"h\":800,\"w\":800},{\"x\":98,\"y\":0,\"h\":800,\"w\":702},{\"x\":260,\"y\":0,\"h\":800,\"w\":400},{\"x\":0,\"y\":0,\"h\":800,\"w\":800}]},\"sizes\":{\"medium\":{\"w\":800,\"h\":800,\"resize\":\"fit\"},\"large\":{\"w\":800,\"h\":800,\"resize\":\"fit\"},\"small\":{\"w\":680,\"h\":680,\"resize\":\"fit\"},\"thumb\":{\"w\":150,\"h\":150,\"resize\":\"crop\"}},\"source_user_id\":18929773,\"source_user_id_str\":\"18929773\",\"media_key\":\"3_1920449533634351104\",\"ext\":{\"mediaColor\":{\"r\":{\"ok\":{\"palette\":[{\"rgb\":{\"red\":248,\"green\":247,\"blue\":245},\"percentage\":47.0},{\"rgb\":{\"red\":62,\"green\":71,\"blue\":88},\"percentage\":11.94},{\"rgb\":{\"red\":148,\"green\":87,\"blue\":54},\"percentage\":11.52},{\"rgb\":{\"red\":105,\"green\":123,\"blue\":151},\"percentage\":7.21},{\"rgb\":{\"red\":246,\"green\":147,\"blue\":18},\"percentage\":7.09}]}},\"ttl\":-1}}},\"3_1920449470497431552\":{\"id\":1920449470497431552,\"id_str\":\"1920449470497431552\",\"indices\":[0,0],\"media_url\":\"\",\"media_url_https\":\"https://pbs.twimg.com/media/GqbOnlIWIAAbNKl.jpg\",\"url\":\"\",\"display_url\":\"\",\"expanded_url\":\"\",\"type\":\"photo\",\"original_info\":{\"width\":800,\"height\":800,\"focus_rects\":[{\"x\":0,\"y\":352,\"h\":448,\"w\":800},{\"x\":0,\"y\":0,\"h\":800,\"w\":800},{\"x\":0,\"y\":0,\"h\":800,\"w\":702},{\"x\":0,\"y\":0,\"h\":800,\"w\":400},{\"x\":0,\"y\":0,\"h\":800,\"w\":800}]},\"sizes\":{\"large\":{\"w\":800,\"h\":800,\"resize\":\"fit\"},\"medium\":{\"w\":800,\"h\":800,\"resize\":\"fit\"},\"small\":{\"w\":680,\"h\":680,\"resize\":\"fit\"},\"thumb\":{\"w\":150,\"h\":150,\"resize\":\"crop\"}},\"source_user_id\":18929773,\"source_user_id_str\":\"18929773\",\"media_key\":\"3_1920449470497431552\",\"ext\":{\"mediaColor\":{\"r\":{\"ok\":{\"palette\":[{\"rgb\":{\"red\":248,\"green\":247,\"blue\":245},\"percentage\":51.14},{\"rgb\":{\"red\":11,\"green\":18,\"blue\":20},\"percentage\":19.09},{\"rgb\":{\"red\":85,\"green\":45,\"blue\":29},\"percentage\":5.78},{\"rgb\":{\"red\":246,\"green\":148,\"blue\":22},\"percentage\":5.38},{\"rgb\":{\"red\":8,\"green\":71,\"blue\":93},\"percentage\":4.88}]}},\"ttl\":-1}}},\"3_1920449441212903424\":{\"id\":1920449441212903424,\"id_str\":\"1920449441212903424\",\"indices\":[0,0],\"media_url\":\"\",\"media_url_https\":\"https://pbs.twimg.com/media/GqbOl4CXsAAgT3J.jpg\",\"url\":\"\",\"display_url\":\"\",\"expanded_url\":\"\",\"type\":\"photo\",\"original_info\":{\"width\":800,\"height\":800,\"focus_rects\":[{\"x\":0,\"y\":0,\"h\":448,\"w\":800},{\"x\":0,\"y\":0,\"h\":800,\"w\":800},{\"x\":0,\"y\":0,\"h\":800,\"w\":702},{\"x\":0,\"y\":0,\"h\":800,\"w\":400},{\"x\":0,\"y\":0,\"h\":800,\"w\":800}]},\"sizes\":{\"medium\":{\"w\":800,\"h\":800,\"resize\":\"fit\"},\"small\":{\"w\":680,\"h\":680,\"resize\":\"fit\"},\"large\":{\"w\":800,\"h\":800,\"resize\":\"fit\"},\"thumb\":{\"w\":150,\"h\":150,\"resize\":\"crop\"}},\"source_user_id\":18929773,\"source_user_id_str\":\"18929773\",\"media_key\":\"3_1920449441212903424\",\"ext\":{\"mediaColor\":{\"r\":{\"ok\":{\"palette\":[{\"rgb\":{\"red\":248,\"green\":247,\"blue\":245},\"percentage\":46.13},{\"rgb\":{\"red\":37,\"green\":29,\"blue\":34},\"percentage\":18.12},{\"rgb\":{\"red\":88,\"green\":51,\"blue\":33},\"percentage\":8.76},{\"rgb\":{\"red\":246,\"green\":198,\"blue\":136},\"percentage\":4.76},{\"rgb\":{\"red\":241,\"green\":151,\"blue\":33},\"percentage\":2.75}]}},\"ttl\":-1}}},\"3_1920449562721820672\":{\"id\":1920449562721820672,\"id_str\":\"1920449562721820672\",\"indices\":[0,0],\"media_url\":\"\",\"media_url_https\":\"https://pbs.twimg.com/media/GqbOs8sWoAAATZI.jpg\",\"url\":\"\",\"display_url\":\"\",\"expanded_url\":\"\",\"type\":\"photo\",\"original_info\":{\"width\":800,\"height\":800,\"focus_rects\":[{\"x\":0,\"y\":352,\"h\":448,\"w\":800},{\"x\":0,\"y\":0,\"h\":800,\"w\":800},{\"x\":29,\"y\":0,\"h\":800,\"w\":702},{\"x\":180,\"y\":0,\"h\":800,\"w\":400},{\"x\":0,\"y\":0,\"h\":800,\"w\":800}]},\"sizes\":{\"small\":{\"w\":680,\"h\":680,\"resize\":\"fit\"},\"thumb\":{\"w\":150,\"h\":150,\"resize\":\"crop\"},\"large\":{\"w\":800,\"h\":800,\"resize\":\"fit\"},\"medium\":{\"w\":800,\"h\":800,\"resize\":\"fit\"}},\"source_user_id\":18929773,\"source_user_id_str\":\"18929773\",\"media_key\":\"3_1920449562721820672\",\"ext\":{\"mediaColor\":{\"r\":{\"ok\":{\"palette\":[{\"rgb\":{\"red\":248,\"green\":247,\"blue\":245},\"percentage\":57.54},{\"rgb\":{\"red\":58,\"green\":68,\"blue\":70},\"percentage\":13.26},{\"rgb\":{\"red\":98,\"green\":120,\"blue\":125},\"percentage\":12.73},{\"rgb\":{\"red\":247,\"green\":198,\"blue\":137},\"percentage\":4.17},{\"rgb\":{\"red\":246,\"green\":147,\"blue\":18},\"percentage\":2.73}]}},\"ttl\":-1}}}}}"
+                    }
+                },
+                {
+                    "key": "card_url",
+                    "value": {
+                        "scribe_key": "card_url",
+                        "string_value": "https://twitter.com"
+                    }
+                }
+            ],
+            "card_platform": {
+                "platform": {
+                    "audience": {
+                        "name": "production"
+                    },
+                    "device": {
+                        "name": "iPhone",
+                        "version": "13"
+                    }
+                }
+            },
+            "name": "unified_card",
+            "url": "card://1920456089159553024"
+        },
+        "place": {},
+        "entities": {},
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1910348661315211366",
+        "url": "https://x.com/TCS/status/1910348661315211366",
+        "twitterUrl": "https://twitter.com/TCS/status/1910348661315211366",
+        "text": "Highlights from the #TCSQ4 FY 2024-25 results.",
+        "source": "Twitter for iPhone",
+        "retweetCount": 7,
+        "replyCount": 12,
+        "likeCount": 39,
+        "quoteCount": 2,
+        "viewCount": 10057,
+        "createdAt": "Thu Apr 10 15:06:28 +0000 2025",
+        "lang": "en",
+        "bookmarkCount": 2,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1910348661315211366",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "TCS",
+            "url": "https://x.com/TCS",
+            "twitterUrl": "https://twitter.com/TCS",
+            "id": "18929773",
+            "name": "Tata Consultancy Services",
+            "isVerified": false,
+            "isBlueVerified": false,
+            "verifiedType": "Business",
+            "profilePicture": "https://pbs.twimg.com/profile_images/1762078108327522304/huMcsvhD_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/18929773/1752558756",
+            "description": "",
+            "location": "Worldwide",
+            "followers": 582985,
+            "following": 289,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Tue Jan 13 05:06:04 +0000 2009",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 3711,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 7876,
+            "statusesCount": 19911,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "Harnessing cutting-edge technology and innovation for sustainable, purpose-driven transformations globally.",
+                "entities": {
+                    "description": {},
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "tcs.com",
+                                "expanded_url": "https://www.tcs.com/",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/VaskwRJ40u"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": {
+            "binding_values": [
+                {
+                    "key": "unified_card",
+                    "value": {
+                        "string_value": "{\"type\":\"image_carousel_website\",\"component_objects\":{\"details_1\":{\"type\":\"details\",\"data\":{\"title\":{\"content\":\"TCS Q4 FY24-25\",\"is_rtl\":false},\"subtitle\":{\"content\":\"tcs.com\",\"is_rtl\":false},\"destination\":\"browser_1\"}},\"swipeable_media_1\":{\"type\":\"swipeable_media\",\"data\":{\"media_list\":[{\"id\":\"3_1910346907916091392\",\"destination\":\"browser_1\"},{\"id\":\"3_1910346935199735808\",\"destination\":\"browser_1\"},{\"id\":\"3_1910346954363883520\",\"destination\":\"browser_1\"}]}}},\"destination_objects\":{\"browser_1\":{\"type\":\"browser\",\"data\":{\"url_data\":{\"url\":\"https://on.tcs.com/Q4FY25-PR-USD\",\"vanity\":\"tcs.com\"}}}},\"components\":[\"swipeable_media_1\",\"details_1\"],\"media_entities\":{\"3_1910346954363883520\":{\"id\":1910346954363883520,\"id_str\":\"1910346954363883520\",\"indices\":[0,0],\"media_url\":\"\",\"media_url_https\":\"https://pbs.twimg.com/media/GoLqbvyb0AAWpWf.jpg\",\"url\":\"\",\"display_url\":\"\",\"expanded_url\":\"\",\"type\":\"photo\",\"original_info\":{\"width\":800,\"height\":800,\"focus_rects\":[{\"x\":0,\"y\":352,\"h\":448,\"w\":800},{\"x\":0,\"y\":0,\"h\":800,\"w\":800},{\"x\":98,\"y\":0,\"h\":800,\"w\":702},{\"x\":260,\"y\":0,\"h\":800,\"w\":400},{\"x\":0,\"y\":0,\"h\":800,\"w\":800}]},\"sizes\":{\"small\":{\"w\":680,\"h\":680,\"resize\":\"fit\"},\"thumb\":{\"w\":150,\"h\":150,\"resize\":\"crop\"},\"medium\":{\"w\":800,\"h\":800,\"resize\":\"fit\"},\"large\":{\"w\":800,\"h\":800,\"resize\":\"fit\"}},\"source_user_id\":18929773,\"source_user_id_str\":\"18929773\",\"media_key\":\"3_1910346954363883520\",\"ext\":{\"mediaColor\":{\"r\":{\"ok\":{\"palette\":[{\"rgb\":{\"red\":0,\"green\":0,\"blue\":0},\"percentage\":75.0},{\"rgb\":{\"red\":6,\"green\":50,\"blue\":116},\"percentage\":16.39},{\"rgb\":{\"red\":2,\"green\":17,\"blue\":60},\"percentage\":2.54},{\"rgb\":{\"red\":190,\"green\":190,\"blue\":190},\"percentage\":1.75},{\"rgb\":{\"red\":69,\"green\":52,\"blue\":0},\"percentage\":0.49}]}},\"ttl\":-1}}},\"3_1910346907916091392\":{\"id\":1910346907916091392,\"id_str\":\"1910346907916091392\",\"indices\":[0,0],\"media_url\":\"\",\"media_url_https\":\"https://pbs.twimg.com/media/GoLqZCwawAAlMgA.jpg\",\"url\":\"\",\"display_url\":\"\",\"expanded_url\":\"\",\"type\":\"photo\",\"original_info\":{\"width\":800,\"height\":800,\"focus_rects\":[{\"x\":0,\"y\":236,\"h\":448,\"w\":800},{\"x\":0,\"y\":0,\"h\":800,\"w\":800},{\"x\":98,\"y\":0,\"h\":800,\"w\":702},{\"x\":400,\"y\":0,\"h\":800,\"w\":400},{\"x\":0,\"y\":0,\"h\":800,\"w\":800}]},\"sizes\":{\"medium\":{\"w\":800,\"h\":800,\"resize\":\"fit\"},\"large\":{\"w\":800,\"h\":800,\"resize\":\"fit\"},\"thumb\":{\"w\":150,\"h\":150,\"resize\":\"crop\"},\"small\":{\"w\":680,\"h\":680,\"resize\":\"fit\"}},\"source_user_id\":18929773,\"source_user_id_str\":\"18929773\",\"media_key\":\"3_1910346907916091392\",\"ext\":{\"mediaColor\":{\"r\":{\"ok\":{\"palette\":[{\"rgb\":{\"red\":0,\"green\":0,\"blue\":0},\"percentage\":65.23},{\"rgb\":{\"red\":6,\"green\":50,\"blue\":116},\"percentage\":16.39},{\"rgb\":{\"red\":255,\"green\":255,\"blue\":255},\"percentage\":10.63},{\"rgb\":{\"red\":2,\"green\":17,\"blue\":60},\"percentage\":2.54},{\"rgb\":{\"red\":129,\"green\":95,\"blue\":1},\"percentage\":1.39}]}},\"ttl\":-1}}},\"3_1910346935199735808\":{\"id\":1910346935199735808,\"id_str\":\"1910346935199735808\",\"indices\":[0,0],\"media_url\":\"\",\"media_url_https\":\"https://pbs.twimg.com/media/GoLqaoZWIAAeqqc.jpg\",\"url\":\"\",\"display_url\":\"\",\"expanded_url\":\"\",\"type\":\"photo\",\"original_info\":{\"width\":800,\"height\":800,\"focus_rects\":[{\"x\":0,\"y\":0,\"h\":448,\"w\":800},{\"x\":0,\"y\":0,\"h\":800,\"w\":800},{\"x\":98,\"y\":0,\"h\":800,\"w\":702},{\"x\":400,\"y\":0,\"h\":800,\"w\":400},{\"x\":0,\"y\":0,\"h\":800,\"w\":800}]},\"sizes\":{\"medium\":{\"w\":800,\"h\":800,\"resize\":\"fit\"},\"large\":{\"w\":800,\"h\":800,\"resize\":\"fit\"},\"thumb\":{\"w\":150,\"h\":150,\"resize\":\"crop\"},\"small\":{\"w\":680,\"h\":680,\"resize\":\"fit\"}},\"source_user_id\":18929773,\"source_user_id_str\":\"18929773\",\"media_key\":\"3_1910346935199735808\",\"ext\":{\"mediaColor\":{\"r\":{\"ok\":{\"palette\":[{\"rgb\":{\"red\":0,\"green\":0,\"blue\":0},\"percentage\":72.39},{\"rgb\":{\"red\":6,\"green\":50,\"blue\":116},\"percentage\":16.39},{\"rgb\":{\"red\":254,\"green\":188,\"blue\":1},\"percentage\":4.13},{\"rgb\":{\"red\":2,\"green\":17,\"blue\":60},\"percentage\":2.54},{\"rgb\":{\"red\":156,\"green\":162,\"blue\":178},\"percentage\":1.35}]}},\"ttl\":-1}}}}}"
+                    }
+                },
+                {
+                    "key": "card_url",
+                    "value": {
+                        "scribe_key": "card_url",
+                        "string_value": "https://twitter.com"
+                    }
+                }
+            ],
+            "card_platform": {
+                "platform": {
+                    "audience": {
+                        "name": "production"
+                    },
+                    "device": {
+                        "name": "iPhone",
+                        "version": "13"
+                    }
+                }
+            },
+            "name": "unified_card",
+            "url": "card://1910348658295410688"
+        },
+        "place": {},
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        20,
+                        26
+                    ],
+                    "text": "TCSQ4"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1910317523980919000",
+        "url": "https://x.com/TCS/status/1910317523980919000",
+        "twitterUrl": "https://twitter.com/TCS/status/1910317523980919000",
+        "text": "Download links for #TCSQ4 FY 2024-25:\n\nIND AS Consolidated: https://t.co/0zhMQNXcYp\nIND AS Condensed: https://t.co/OMlYvGGxRY\n\nIFRS (USD): https://t.co/NP15yfAOnr\nIFRS (INR): https://t.co/IH8B50lt1Y",
+        "source": "Twitter for iPhone",
+        "retweetCount": 1,
+        "replyCount": 2,
+        "likeCount": 8,
+        "quoteCount": 0,
+        "viewCount": 5466,
+        "createdAt": "Thu Apr 10 13:02:44 +0000 2025",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1910317523980919000",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "TCS",
+            "url": "https://x.com/TCS",
+            "twitterUrl": "https://twitter.com/TCS",
+            "id": "18929773",
+            "name": "Tata Consultancy Services",
+            "isVerified": false,
+            "isBlueVerified": false,
+            "verifiedType": "Business",
+            "profilePicture": "https://pbs.twimg.com/profile_images/1762078108327522304/huMcsvhD_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/18929773/1752558756",
+            "description": "",
+            "location": "Worldwide",
+            "followers": 582985,
+            "following": 289,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Tue Jan 13 05:06:04 +0000 2009",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 3711,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 7876,
+            "statusesCount": 19911,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "Harnessing cutting-edge technology and innovation for sustainable, purpose-driven transformations globally.",
+                "entities": {
+                    "description": {},
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "tcs.com",
+                                "expanded_url": "https://www.tcs.com/",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/VaskwRJ40u"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": null,
+        "place": {},
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        19,
+                        25
+                    ],
+                    "text": "TCSQ4"
+                }
+            ],
+            "urls": [
+                {
+                    "display_url": "on.tcs.com/Q4FY25-Consoli\u2026",
+                    "expanded_url": "https://on.tcs.com/Q4FY25-Consolidated-IND-AS",
+                    "indices": [
+                        60,
+                        83
+                    ],
+                    "url": "https://t.co/0zhMQNXcYp"
+                },
+                {
+                    "display_url": "on.tcs.com/Q4FY25-Condens\u2026",
+                    "expanded_url": "https://on.tcs.com/Q4FY25-Condensed-IND-AS",
+                    "indices": [
+                        102,
+                        125
+                    ],
+                    "url": "https://t.co/OMlYvGGxRY"
+                },
+                {
+                    "display_url": "on.tcs.com/Q4FY25-IFRS-USD",
+                    "expanded_url": "https://on.tcs.com/Q4FY25-IFRS-USD",
+                    "indices": [
+                        139,
+                        162
+                    ],
+                    "url": "https://t.co/NP15yfAOnr"
+                },
+                {
+                    "display_url": "on.tcs.com/Q4FY25-IFRS-INR",
+                    "expanded_url": "https://on.tcs.com/Q4FY25-IFRS-INR",
+                    "indices": [
+                        175,
+                        198
+                    ],
+                    "url": "https://t.co/IH8B50lt1Y"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1910313462246318205",
+        "url": "https://x.com/TCS/status/1910313462246318205",
+        "twitterUrl": "https://twitter.com/TCS/status/1910313462246318205",
+        "text": "TCS ranked a leader in 25 competitive assessments published by leading research firms in Q4 FY25. #TCSQ4",
+        "source": "Twitter for iPhone",
+        "retweetCount": 3,
+        "replyCount": 1,
+        "likeCount": 39,
+        "quoteCount": 1,
+        "viewCount": 8415,
+        "createdAt": "Thu Apr 10 12:46:35 +0000 2025",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1910313462246318205",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "TCS",
+            "url": "https://x.com/TCS",
+            "twitterUrl": "https://twitter.com/TCS",
+            "id": "18929773",
+            "name": "Tata Consultancy Services",
+            "isVerified": false,
+            "isBlueVerified": false,
+            "verifiedType": "Business",
+            "profilePicture": "https://pbs.twimg.com/profile_images/1762078108327522304/huMcsvhD_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/18929773/1752558756",
+            "description": "",
+            "location": "Worldwide",
+            "followers": 582985,
+            "following": 289,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Tue Jan 13 05:06:04 +0000 2009",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 3711,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 7876,
+            "statusesCount": 19911,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "Harnessing cutting-edge technology and innovation for sustainable, purpose-driven transformations globally.",
+                "entities": {
+                    "description": {},
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "tcs.com",
+                                "expanded_url": "https://www.tcs.com/",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/VaskwRJ40u"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": null,
+        "place": {},
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        98,
+                        104
+                    ],
+                    "text": "TCSQ4"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1910308568047243611",
+        "url": "https://x.com/TCS/status/1910308568047243611",
+        "twitterUrl": "https://twitter.com/TCS/status/1910308568047243611",
+        "text": "As on March 31, 2025, the company applied for 8,816 patents (267 this quarter) and has been granted 4,820 patents (235 this quarter). #TCSQ4",
+        "source": "Twitter for iPhone",
+        "retweetCount": 3,
+        "replyCount": 2,
+        "likeCount": 46,
+        "quoteCount": 2,
+        "viewCount": 5443,
+        "createdAt": "Thu Apr 10 12:27:09 +0000 2025",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1910308568047243611",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "TCS",
+            "url": "https://x.com/TCS",
+            "twitterUrl": "https://twitter.com/TCS",
+            "id": "18929773",
+            "name": "Tata Consultancy Services",
+            "isVerified": false,
+            "isBlueVerified": false,
+            "verifiedType": "Business",
+            "profilePicture": "https://pbs.twimg.com/profile_images/1762078108327522304/huMcsvhD_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/18929773/1752558756",
+            "description": "",
+            "location": "Worldwide",
+            "followers": 582985,
+            "following": 289,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Tue Jan 13 05:06:04 +0000 2009",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 3711,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 7876,
+            "statusesCount": 19911,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "Harnessing cutting-edge technology and innovation for sustainable, purpose-driven transformations globally.",
+                "entities": {
+                    "description": {},
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "tcs.com",
+                                "expanded_url": "https://www.tcs.com/",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/VaskwRJ40u"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": null,
+        "place": {},
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        134,
+                        140
+                    ],
+                    "text": "TCSQ4"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1910302954806014440",
+        "url": "https://x.com/TCS/status/1910302954806014440",
+        "twitterUrl": "https://twitter.com/TCS/status/1910302954806014440",
+        "text": "The growth for the quarter was led by IoT &amp; DE, enterprise solutions and https://t.co/bNJQkWAIEz. #TCSQ4",
+        "source": "Twitter for iPhone",
+        "retweetCount": 2,
+        "replyCount": 1,
+        "likeCount": 38,
+        "quoteCount": 0,
+        "viewCount": 3287,
+        "createdAt": "Thu Apr 10 12:04:50 +0000 2025",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1910302954806014440",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "TCS",
+            "url": "https://x.com/TCS",
+            "twitterUrl": "https://twitter.com/TCS",
+            "id": "18929773",
+            "name": "Tata Consultancy Services",
+            "isVerified": false,
+            "isBlueVerified": false,
+            "verifiedType": "Business",
+            "profilePicture": "https://pbs.twimg.com/profile_images/1762078108327522304/huMcsvhD_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/18929773/1752558756",
+            "description": "",
+            "location": "Worldwide",
+            "followers": 582985,
+            "following": 289,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Tue Jan 13 05:06:04 +0000 2009",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 3711,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 7876,
+            "statusesCount": 19911,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "Harnessing cutting-edge technology and innovation for sustainable, purpose-driven transformations globally.",
+                "entities": {
+                    "description": {},
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "tcs.com",
+                                "expanded_url": "https://www.tcs.com/",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/VaskwRJ40u"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": null,
+        "place": {},
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        102,
+                        108
+                    ],
+                    "text": "TCSQ4"
+                }
+            ],
+            "urls": [
+                {
+                    "display_url": "AI.Cloud",
+                    "expanded_url": "http://AI.Cloud",
+                    "indices": [
+                        77,
+                        100
+                    ],
+                    "url": "https://t.co/bNJQkWAIEz"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1910289461944201436",
+        "url": "https://x.com/TCS/status/1910289461944201436",
+        "twitterUrl": "https://twitter.com/TCS/status/1910289461944201436",
+        "text": "\ud835\udc05\ud835\udc18\ud835\udfd0\ud835\udfd3 \ud835\udc04\ud835\udc1a\ud835\udc2b\ud835\udc27\ud835\udc22\ud835\udc27\ud835\udc20\ud835\udc2c:\nFY25 Revenue at $ 30,179 million; up 3.8 % Y-o-Y\nFY25 Revenue at Rs.2,55,324 crore; up 6.0% Y-o-Y\nFY25 Revenue; In Constant Currency terms; up 4.2% Y-o-Y\nFY25 Net Profit at Rs.48,553 crore",
+        "source": "Twitter for iPhone",
+        "retweetCount": 18,
+        "replyCount": 7,
+        "likeCount": 194,
+        "quoteCount": 2,
+        "viewCount": 15173,
+        "createdAt": "Thu Apr 10 11:11:13 +0000 2025",
+        "lang": "en",
+        "bookmarkCount": 4,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1910289461944201436",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "TCS",
+            "url": "https://x.com/TCS",
+            "twitterUrl": "https://twitter.com/TCS",
+            "id": "18929773",
+            "name": "Tata Consultancy Services",
+            "isVerified": false,
+            "isBlueVerified": false,
+            "verifiedType": "Business",
+            "profilePicture": "https://pbs.twimg.com/profile_images/1762078108327522304/huMcsvhD_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/18929773/1752558756",
+            "description": "",
+            "location": "Worldwide",
+            "followers": 582985,
+            "following": 289,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Tue Jan 13 05:06:04 +0000 2009",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 3711,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 7876,
+            "statusesCount": 19911,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "Harnessing cutting-edge technology and innovation for sustainable, purpose-driven transformations globally.",
+                "entities": {
+                    "description": {},
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "tcs.com",
+                                "expanded_url": "https://www.tcs.com/",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/VaskwRJ40u"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": null,
+        "place": {},
+        "entities": {},
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1910288910036488304",
+        "url": "https://x.com/TCS/status/1910288910036488304",
+        "twitterUrl": "https://twitter.com/TCS/status/1910288910036488304",
+        "text": "#TCS\ud835\udc10\ud835\udfd2 \ud835\udc05\ud835\udc18\ud835\udfd0\ud835\udfd3 \ud835\udc04\ud835\udc1a\ud835\udc2b\ud835\udc27\ud835\udc22\ud835\udc27\ud835\udc20\ud835\udc2c:\nQ4 FY25 Revenue: at Rs.64,479 crore; up 5.3% Y-o-Y\nQ4 FY25 Revenue: In Constant Currency terms up 2.5% Y-o-Y\nQ4 FY25 Revenue at $ 7,465 million; up 1.4 % Y-o-Y\nQ4 FY25 Net Profit Rs.12,224 crore",
+        "source": "Twitter for iPhone",
+        "retweetCount": 6,
+        "replyCount": 1,
+        "likeCount": 80,
+        "quoteCount": 3,
+        "viewCount": 7698,
+        "createdAt": "Thu Apr 10 11:09:02 +0000 2025",
+        "lang": "en",
+        "bookmarkCount": 3,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1910288910036488304",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "TCS",
+            "url": "https://x.com/TCS",
+            "twitterUrl": "https://twitter.com/TCS",
+            "id": "18929773",
+            "name": "Tata Consultancy Services",
+            "isVerified": false,
+            "isBlueVerified": false,
+            "verifiedType": "Business",
+            "profilePicture": "https://pbs.twimg.com/profile_images/1762078108327522304/huMcsvhD_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/18929773/1752558756",
+            "description": "",
+            "location": "Worldwide",
+            "followers": 582985,
+            "following": 289,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Tue Jan 13 05:06:04 +0000 2009",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 3711,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 7876,
+            "statusesCount": 19911,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "Harnessing cutting-edge technology and innovation for sustainable, purpose-driven transformations globally.",
+                "entities": {
+                    "description": {},
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "tcs.com",
+                                "expanded_url": "https://www.tcs.com/",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/VaskwRJ40u"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": null,
+        "place": {},
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        0,
+                        6
+                    ],
+                    "text": "TCS\ud835\udc10\ud835\udfd2"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1909951405856604314",
+        "url": "https://x.com/TCS/status/1909951405856604314",
+        "twitterUrl": "https://twitter.com/TCS/status/1909951405856604314",
+        "text": "Watch the #TCSQ4 FY 2024-25 Financial Results Press Conference LIVE on April 10:\n\nYouTube: https://t.co/6V6Sg4CZG5\nLinkedIn: https://t.co/ItLAMZpHeT\n\nFollow @TCS on X for LIVE updates. https://t.co/6C5pqdFzgp",
+        "source": "Twitter for iPhone",
+        "retweetCount": 1,
+        "replyCount": 2,
+        "likeCount": 29,
+        "quoteCount": 1,
+        "viewCount": 4207,
+        "createdAt": "Wed Apr 09 12:47:54 +0000 2025",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1909951405856604314",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "TCS",
+            "url": "https://x.com/TCS",
+            "twitterUrl": "https://twitter.com/TCS",
+            "id": "18929773",
+            "name": "Tata Consultancy Services",
+            "isVerified": false,
+            "isBlueVerified": false,
+            "verifiedType": "Business",
+            "profilePicture": "https://pbs.twimg.com/profile_images/1762078108327522304/huMcsvhD_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/18929773/1752558756",
+            "description": "",
+            "location": "Worldwide",
+            "followers": 582985,
+            "following": 289,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Tue Jan 13 05:06:04 +0000 2009",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 3711,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 7876,
+            "statusesCount": 19911,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "Harnessing cutting-edge technology and innovation for sustainable, purpose-driven transformations globally.",
+                "entities": {
+                    "description": {},
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "tcs.com",
+                                "expanded_url": "https://www.tcs.com/",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/VaskwRJ40u"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {
+            "media": [
+                {
+                    "display_url": "pic.twitter.com/6C5pqdFzgp",
+                    "expanded_url": "https://twitter.com/TCS/status/1909951405856604314/photo/1",
+                    "ext_media_availability": {
+                        "status": "Available"
+                    },
+                    "features": {
+                        "large": {
+                            "faces": [
+                                {
+                                    "h": 52,
+                                    "w": 52,
+                                    "x": 433,
+                                    "y": 932
+                                },
+                                {
+                                    "h": 86,
+                                    "w": 86,
+                                    "x": 139,
+                                    "y": 209
+                                },
+                                {
+                                    "h": 102,
+                                    "w": 102,
+                                    "x": 478,
+                                    "y": 223
+                                },
+                                {
+                                    "h": 106,
+                                    "w": 106,
+                                    "x": 821,
+                                    "y": 220
+                                }
+                            ]
+                        },
+                        "orig": {
+                            "faces": [
+                                {
+                                    "h": 52,
+                                    "w": 52,
+                                    "x": 433,
+                                    "y": 932
+                                },
+                                {
+                                    "h": 86,
+                                    "w": 86,
+                                    "x": 139,
+                                    "y": 209
+                                },
+                                {
+                                    "h": 102,
+                                    "w": 102,
+                                    "x": 478,
+                                    "y": 223
+                                },
+                                {
+                                    "h": 106,
+                                    "w": 106,
+                                    "x": 821,
+                                    "y": 220
+                                }
+                            ]
+                        }
+                    },
+                    "id_str": "1909951397690286080",
+                    "indices": [
+                        185,
+                        208
+                    ],
+                    "media_key": "3_1909951397690286080",
+                    "media_results": {
+                        "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAARqBgq1FlyAACgACGoGCryxXQJoAAA==",
+                        "result": {
+                            "__typename": "ApiMedia",
+                            "id": "QXBpTWVkaWE6DAABCgABGoGCrUWXIAAKAAIagYKvLFdAmgAA",
+                            "media_key": "3_1909951397690286080"
+                        }
+                    },
+                    "media_url_https": "https://pbs.twimg.com/media/GoGCrUWXIAAVBO4.jpg",
+                    "original_info": {
+                        "focus_rects": [
+                            {
+                                "h": 605,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 475
+                            },
+                            {
+                                "h": 1080,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 947,
+                                "x": 94,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 540,
+                                "x": 297,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 0
+                            }
+                        ],
+                        "height": 1080,
+                        "width": 1080
+                    },
+                    "sizes": {
+                        "large": {
+                            "h": 1080,
+                            "w": 1080
+                        }
+                    },
+                    "type": "photo",
+                    "url": "https://t.co/6C5pqdFzgp"
+                }
+            ]
+        },
+        "card": null,
+        "place": {},
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        10,
+                        16
+                    ],
+                    "text": "TCSQ4"
+                }
+            ],
+            "urls": [
+                {
+                    "display_url": "bit.ly/4j0o5Dd",
+                    "expanded_url": "https://bit.ly/4j0o5Dd",
+                    "indices": [
+                        91,
+                        114
+                    ],
+                    "url": "https://t.co/6V6Sg4CZG5"
+                },
+                {
+                    "display_url": "bit.ly/3SblA5Q",
+                    "expanded_url": "https://bit.ly/3SblA5Q",
+                    "indices": [
+                        125,
+                        148
+                    ],
+                    "url": "https://t.co/ItLAMZpHeT"
+                }
+            ],
+            "user_mentions": [
+                {
+                    "id_str": "18929773",
+                    "indices": [
+                        157,
+                        161
+                    ],
+                    "name": "Tata Consultancy Services",
+                    "screen_name": "TCS"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1877380887870058625",
+        "url": "https://x.com/TCS/status/1877380887870058625",
+        "twitterUrl": "https://twitter.com/TCS/status/1877380887870058625",
+        "text": "Highlights from the #TCSQ3 FY 2024-25 results.",
+        "source": "Twitter for iPhone",
+        "retweetCount": 2,
+        "replyCount": 5,
+        "likeCount": 34,
+        "quoteCount": 0,
+        "viewCount": 7752,
+        "createdAt": "Thu Jan 09 15:44:18 +0000 2025",
+        "lang": "en",
+        "bookmarkCount": 3,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1877380887870058625",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "TCS",
+            "url": "https://x.com/TCS",
+            "twitterUrl": "https://twitter.com/TCS",
+            "id": "18929773",
+            "name": "Tata Consultancy Services",
+            "isVerified": false,
+            "isBlueVerified": false,
+            "verifiedType": "Business",
+            "profilePicture": "https://pbs.twimg.com/profile_images/1762078108327522304/huMcsvhD_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/18929773/1752558756",
+            "description": "",
+            "location": "Worldwide",
+            "followers": 582985,
+            "following": 289,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Tue Jan 13 05:06:04 +0000 2009",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 3711,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 7876,
+            "statusesCount": 19911,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "Harnessing cutting-edge technology and innovation for sustainable, purpose-driven transformations globally.",
+                "entities": {
+                    "description": {},
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "tcs.com",
+                                "expanded_url": "https://www.tcs.com/",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/VaskwRJ40u"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": {
+            "binding_values": [
+                {
+                    "key": "unified_card",
+                    "value": {
+                        "string_value": "{\"type\":\"image_carousel_website\",\"component_objects\":{\"details_1\":{\"type\":\"details\",\"data\":{\"title\":{\"content\":\"Highlights: #TCSQ3 FY 2024-25 results\",\"is_rtl\":false},\"subtitle\":{\"content\":\"tcs.com\",\"is_rtl\":false},\"destination\":\"browser_1\"}},\"swipeable_media_1\":{\"type\":\"swipeable_media\",\"data\":{\"media_list\":[{\"id\":\"3_1877377448733544448\",\"destination\":\"browser_1\"},{\"id\":\"3_1877377491762860032\",\"destination\":\"browser_1\"},{\"id\":\"3_1877377518614818816\",\"destination\":\"browser_1\"}]}}},\"destination_objects\":{\"browser_1\":{\"type\":\"browser\",\"data\":{\"url_data\":{\"url\":\"http://bit.ly/4fSpPMg\",\"vanity\":\"tcs.com\"}}}},\"components\":[\"swipeable_media_1\",\"details_1\"],\"media_entities\":{\"3_1877377491762860032\":{\"id\":1877377491762860032,\"id_str\":\"1877377491762860032\",\"indices\":[0,0],\"media_url\":\"\",\"media_url_https\":\"https://pbs.twimg.com/media/Gg3I4cnW0AAuXOF.jpg\",\"url\":\"\",\"display_url\":\"\",\"expanded_url\":\"\",\"type\":\"photo\",\"original_info\":{\"width\":800,\"height\":800,\"focus_rects\":[{\"x\":0,\"y\":276,\"h\":448,\"w\":800},{\"x\":0,\"y\":0,\"h\":800,\"w\":800},{\"x\":98,\"y\":0,\"h\":800,\"w\":702},{\"x\":300,\"y\":0,\"h\":800,\"w\":400},{\"x\":0,\"y\":0,\"h\":800,\"w\":800}]},\"sizes\":{\"small\":{\"w\":680,\"h\":680,\"resize\":\"fit\"},\"large\":{\"w\":800,\"h\":800,\"resize\":\"fit\"},\"thumb\":{\"w\":150,\"h\":150,\"resize\":\"crop\"},\"medium\":{\"w\":800,\"h\":800,\"resize\":\"fit\"}},\"source_user_id\":18929773,\"source_user_id_str\":\"18929773\",\"media_key\":\"3_1877377491762860032\",\"ext\":{\"mediaColor\":{\"r\":{\"ok\":{\"palette\":[{\"rgb\":{\"red\":0,\"green\":0,\"blue\":0},\"percentage\":72.52},{\"rgb\":{\"red\":7,\"green\":51,\"blue\":118},\"percentage\":16.11},{\"rgb\":{\"red\":254,\"green\":188,\"blue\":1},\"percentage\":4.1},{\"rgb\":{\"red\":1,\"green\":16,\"blue\":59},\"percentage\":2.36},{\"rgb\":{\"red\":178,\"green\":187,\"blue\":205},\"percentage\":1.23}]}},\"ttl\":-1}}},\"3_1877377518614818816\":{\"id\":1877377518614818816,\"id_str\":\"1877377518614818816\",\"indices\":[0,0],\"media_url\":\"\",\"media_url_https\":\"https://pbs.twimg.com/media/Gg3I6ApXMAA2uQm.jpg\",\"url\":\"\",\"display_url\":\"\",\"expanded_url\":\"\",\"type\":\"photo\",\"original_info\":{\"width\":800,\"height\":800,\"focus_rects\":[{\"x\":0,\"y\":352,\"h\":448,\"w\":800},{\"x\":0,\"y\":0,\"h\":800,\"w\":800},{\"x\":98,\"y\":0,\"h\":800,\"w\":702},{\"x\":400,\"y\":0,\"h\":800,\"w\":400},{\"x\":0,\"y\":0,\"h\":800,\"w\":800}]},\"sizes\":{\"large\":{\"w\":800,\"h\":800,\"resize\":\"fit\"},\"medium\":{\"w\":800,\"h\":800,\"resize\":\"fit\"},\"thumb\":{\"w\":150,\"h\":150,\"resize\":\"crop\"},\"small\":{\"w\":680,\"h\":680,\"resize\":\"fit\"}},\"source_user_id\":18929773,\"source_user_id_str\":\"18929773\",\"media_key\":\"3_1877377518614818816\",\"ext\":{\"mediaColor\":{\"r\":{\"ok\":{\"palette\":[{\"rgb\":{\"red\":0,\"green\":0,\"blue\":0},\"percentage\":74.92},{\"rgb\":{\"red\":7,\"green\":51,\"blue\":118},\"percentage\":16.11},{\"rgb\":{\"red\":1,\"green\":16,\"blue\":59},\"percentage\":2.36},{\"rgb\":{\"red\":199,\"green\":199,\"blue\":199},\"percentage\":2.17},{\"rgb\":{\"red\":78,\"green\":56,\"blue\":1},\"percentage\":0.57}]}},\"ttl\":-1}}},\"3_1877377448733544448\":{\"id\":1877377448733544448,\"id_str\":\"1877377448733544448\",\"indices\":[0,0],\"media_url\":\"\",\"media_url_https\":\"https://pbs.twimg.com/media/Gg3I18UXkAAKh7Z.jpg\",\"url\":\"\",\"display_url\":\"\",\"expanded_url\":\"\",\"type\":\"photo\",\"original_info\":{\"width\":800,\"height\":800,\"focus_rects\":[{\"x\":0,\"y\":352,\"h\":448,\"w\":800},{\"x\":0,\"y\":0,\"h\":800,\"w\":800},{\"x\":0,\"y\":0,\"h\":800,\"w\":702},{\"x\":20,\"y\":0,\"h\":800,\"w\":400},{\"x\":0,\"y\":0,\"h\":800,\"w\":800}]},\"sizes\":{\"small\":{\"w\":680,\"h\":680,\"resize\":\"fit\"},\"medium\":{\"w\":800,\"h\":800,\"resize\":\"fit\"},\"thumb\":{\"w\":150,\"h\":150,\"resize\":\"crop\"},\"large\":{\"w\":800,\"h\":800,\"resize\":\"fit\"}},\"source_user_id\":18929773,\"source_user_id_str\":\"18929773\",\"media_key\":\"3_1877377448733544448\",\"ext\":{\"mediaColor\":{\"r\":{\"ok\":{\"palette\":[{\"rgb\":{\"red\":0,\"green\":0,\"blue\":0},\"percentage\":64.45},{\"rgb\":{\"red\":7,\"green\":51,\"blue\":118},\"percentage\":16.11},{\"rgb\":{\"red\":255,\"green\":255,\"blue\":255},\"percentage\":11.38},{\"rgb\":{\"red\":1,\"green\":16,\"blue\":59},\"percentage\":2.36},{\"rgb\":{\"red\":76,\"green\":56,\"blue\":1},\"percentage\":1.56}]}},\"ttl\":-1}}}}}"
+                    }
+                },
+                {
+                    "key": "card_url",
+                    "value": {
+                        "scribe_key": "card_url",
+                        "string_value": "https://twitter.com"
+                    }
+                }
+            ],
+            "card_platform": {
+                "platform": {
+                    "audience": {
+                        "name": "production"
+                    },
+                    "device": {
+                        "name": "iPhone",
+                        "version": "13"
+                    }
+                }
+            },
+            "name": "unified_card",
+            "url": "card://1877380884313092096"
+        },
+        "place": {},
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        20,
+                        26
+                    ],
+                    "text": "TCSQ3"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1877338425864438092",
+        "url": "https://x.com/TCS/status/1877338425864438092",
+        "twitterUrl": "https://twitter.com/TCS/status/1877338425864438092",
+        "text": "TCS ranked a Leader in 62 competitive assessments published by leading research firms in Q3 FY25. #TCSQ3",
+        "source": "Twitter for iPhone",
+        "retweetCount": 4,
+        "replyCount": 3,
+        "likeCount": 42,
+        "quoteCount": 0,
+        "viewCount": 7564,
+        "createdAt": "Thu Jan 09 12:55:34 +0000 2025",
+        "lang": "en",
+        "bookmarkCount": 1,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1877338425864438092",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "TCS",
+            "url": "https://x.com/TCS",
+            "twitterUrl": "https://twitter.com/TCS",
+            "id": "18929773",
+            "name": "Tata Consultancy Services",
+            "isVerified": false,
+            "isBlueVerified": false,
+            "verifiedType": "Business",
+            "profilePicture": "https://pbs.twimg.com/profile_images/1762078108327522304/huMcsvhD_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/18929773/1752558756",
+            "description": "",
+            "location": "Worldwide",
+            "followers": 582985,
+            "following": 289,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Tue Jan 13 05:06:04 +0000 2009",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 3711,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 7876,
+            "statusesCount": 19911,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "Harnessing cutting-edge technology and innovation for sustainable, purpose-driven transformations globally.",
+                "entities": {
+                    "description": {},
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "tcs.com",
+                                "expanded_url": "https://www.tcs.com/",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/VaskwRJ40u"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": null,
+        "place": {},
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        98,
+                        104
+                    ],
+                    "text": "TCSQ3"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1877333595532177513",
+        "url": "https://x.com/TCS/status/1877333595532177513",
+        "twitterUrl": "https://twitter.com/TCS/status/1877333595532177513",
+        "text": "As on 31st December 2024, TCS had applied for 8,549 patents, including 195 which were applied during the quarter. We have been granted 4,585 patents, including 216 which were granted during the quarter. #TCSQ3",
+        "source": "Twitter for iPhone",
+        "retweetCount": 2,
+        "replyCount": 1,
+        "likeCount": 32,
+        "quoteCount": 1,
+        "viewCount": 3631,
+        "createdAt": "Thu Jan 09 12:36:23 +0000 2025",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1877333595532177513",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "TCS",
+            "url": "https://x.com/TCS",
+            "twitterUrl": "https://twitter.com/TCS",
+            "id": "18929773",
+            "name": "Tata Consultancy Services",
+            "isVerified": false,
+            "isBlueVerified": false,
+            "verifiedType": "Business",
+            "profilePicture": "https://pbs.twimg.com/profile_images/1762078108327522304/huMcsvhD_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/18929773/1752558756",
+            "description": "",
+            "location": "Worldwide",
+            "followers": 582985,
+            "following": 289,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Tue Jan 13 05:06:04 +0000 2009",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 3711,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 7876,
+            "statusesCount": 19911,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "Harnessing cutting-edge technology and innovation for sustainable, purpose-driven transformations globally.",
+                "entities": {
+                    "description": {},
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "tcs.com",
+                                "expanded_url": "https://www.tcs.com/",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/VaskwRJ40u"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": null,
+        "place": {},
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        203,
+                        209
+                    ],
+                    "text": "TCSQ3"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1877307234956333248",
+        "url": "https://x.com/TCS/status/1877307234956333248",
+        "twitterUrl": "https://twitter.com/TCS/status/1877307234956333248",
+        "text": "#TCSQ3 FY25 Earnings:\n\nQ3 FY25 Revenue: Rs.63,973 crore; up 5.6% Y-o-Y\nQ3 FY25 Revenue: In Constant Currency terms up 4.5% Y-o-Y\nQ3 FY25 Revenue at $7,539 million; up 3.6 % Y-o-Y\nQ3 FY25 Net Profit at Rs.12,380 crore; up 5.5% Y-o-Y",
+        "source": "Twitter for iPhone",
+        "retweetCount": 12,
+        "replyCount": 0,
+        "likeCount": 136,
+        "quoteCount": 2,
+        "viewCount": 9350,
+        "createdAt": "Thu Jan 09 10:51:38 +0000 2025",
+        "lang": "en",
+        "bookmarkCount": 4,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1877307234956333248",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "TCS",
+            "url": "https://x.com/TCS",
+            "twitterUrl": "https://twitter.com/TCS",
+            "id": "18929773",
+            "name": "Tata Consultancy Services",
+            "isVerified": false,
+            "isBlueVerified": false,
+            "verifiedType": "Business",
+            "profilePicture": "https://pbs.twimg.com/profile_images/1762078108327522304/huMcsvhD_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/18929773/1752558756",
+            "description": "",
+            "location": "Worldwide",
+            "followers": 582985,
+            "following": 289,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Tue Jan 13 05:06:04 +0000 2009",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 3711,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 7876,
+            "statusesCount": 19911,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "Harnessing cutting-edge technology and innovation for sustainable, purpose-driven transformations globally.",
+                "entities": {
+                    "description": {},
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "tcs.com",
+                                "expanded_url": "https://www.tcs.com/",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/VaskwRJ40u"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": null,
+        "place": {},
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        0,
+                        6
+                    ],
+                    "text": "TCSQ3"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    }
+]

@@ -1,0 +1,748 @@
+[
+    {
+        "type": "tweet",
+        "id": "1667781207655063554",
+        "url": "https://x.com/HDFCLIFE/status/1667781207655063554",
+        "twitterUrl": "https://twitter.com/HDFCLIFE/status/1667781207655063554",
+        "text": "Retire with a Bang!\n\nLearn how to turn your passion into profit, identify business opportunities, and overcome common challenges. \nDon't let retirement hold you back - start your next adventure today!\nTap to read more &gt; https://t.co/cMyrkgChRd\n\n#SarUthaKeJiyo https://t.co/EnyY9O0HHp",
+        "source": "Twitter for iPhone",
+        "retweetCount": 0,
+        "replyCount": 5,
+        "likeCount": 8,
+        "quoteCount": 0,
+        "viewCount": 1657,
+        "createdAt": "Sun Jun 11 06:30:00 +0000 2023",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1667781207655063554",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "HDFCLIFE",
+            "url": "https://x.com/HDFCLIFE",
+            "twitterUrl": "https://twitter.com/HDFCLIFE",
+            "id": "111645779",
+            "name": "HDFC Life",
+            "isVerified": false,
+            "isBlueVerified": false,
+            "verifiedType": "Business",
+            "profilePicture": "https://pbs.twimg.com/profile_images/1149973404277080064/EsS_O1DX_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/111645779/1751004242",
+            "description": "",
+            "location": "",
+            "followers": 416048,
+            "following": 1434,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Fri Feb 05 17:22:24 +0000 2010",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 38718,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 3120,
+            "statusesCount": 91821,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "Everyone can chase their dreams and live with their heads held high. We\u2019re making it happen, one financial plan at a time. #SarUthaKeJiyo",
+                "entities": {
+                    "description": {
+                        "hashtags": [
+                            {
+                                "indices": [
+                                    123,
+                                    137
+                                ],
+                                "text": "SarUthaKeJiyo"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "linktr.ee/hdfclife0",
+                                "expanded_url": "https://linktr.ee/hdfclife0",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/j5ImjI2wBP"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {
+            "media": [
+                {
+                    "display_url": "pic.twitter.com/EnyY9O0HHp",
+                    "expanded_url": "https://twitter.com/HDFCLIFE/status/1667781207655063554/photo/1",
+                    "ext_media_availability": {
+                        "status": "Available"
+                    },
+                    "features": {
+                        "large": {
+                            "faces": [
+                                {
+                                    "h": 64,
+                                    "w": 64,
+                                    "x": 740,
+                                    "y": 120
+                                }
+                            ]
+                        },
+                        "orig": {
+                            "faces": [
+                                {
+                                    "h": 64,
+                                    "w": 64,
+                                    "x": 740,
+                                    "y": 120
+                                }
+                            ]
+                        }
+                    },
+                    "id_str": "1667043552705273857",
+                    "indices": [
+                        263,
+                        286
+                    ],
+                    "media_key": "3_1667043552705273857",
+                    "media_results": {
+                        "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAARcih0dgGmABCgACFyUmLA1aIAIAAA==",
+                        "result": {
+                            "__typename": "ApiMedia",
+                            "id": "QXBpTWVkaWE6DAABCgABFyKHR2AaYAEKAAIXJSYsDVogAgAA",
+                            "media_key": "3_1667043552705273857"
+                        }
+                    },
+                    "media_url_https": "https://pbs.twimg.com/media/FyKHR2AaYAEKRV3.jpg",
+                    "original_info": {
+                        "focus_rects": [
+                            {
+                                "h": 672,
+                                "w": 1200,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 675,
+                                "w": 675,
+                                "x": 263,
+                                "y": 0
+                            },
+                            {
+                                "h": 675,
+                                "w": 592,
+                                "x": 304,
+                                "y": 0
+                            },
+                            {
+                                "h": 675,
+                                "w": 338,
+                                "x": 431,
+                                "y": 0
+                            },
+                            {
+                                "h": 675,
+                                "w": 1200,
+                                "x": 0,
+                                "y": 0
+                            }
+                        ],
+                        "height": 675,
+                        "width": 1200
+                    },
+                    "sizes": {
+                        "large": {
+                            "h": 675,
+                            "w": 1200
+                        }
+                    },
+                    "type": "photo",
+                    "url": "https://t.co/EnyY9O0HHp"
+                }
+            ]
+        },
+        "card": null,
+        "place": {},
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        248,
+                        262
+                    ],
+                    "text": "SarUthaKeJiyo"
+                }
+            ],
+            "urls": [
+                {
+                    "display_url": "shorturl.at/kuyM7",
+                    "expanded_url": "https://shorturl.at/kuyM7",
+                    "indices": [
+                        223,
+                        246
+                    ],
+                    "url": "https://t.co/cMyrkgChRd"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1665244492079702017",
+        "url": "https://x.com/HDFCLIFE/status/1665244492079702017",
+        "twitterUrl": "https://twitter.com/HDFCLIFE/status/1665244492079702017",
+        "text": "Ready to turn your passion into profit? From marketing tips to financial planning advice, we've got you covered.\nRead now and start building your dream career! &gt; https://t.co/dU2YaljRQG\n\n#SarUthaKeJiyo https://t.co/7WFpPVBgA3",
+        "source": "Twitter for iPhone",
+        "retweetCount": 0,
+        "replyCount": 3,
+        "likeCount": 4,
+        "quoteCount": 0,
+        "viewCount": 1504,
+        "createdAt": "Sun Jun 04 06:30:00 +0000 2023",
+        "lang": "en",
+        "bookmarkCount": 1,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1665244492079702017",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "HDFCLIFE",
+            "url": "https://x.com/HDFCLIFE",
+            "twitterUrl": "https://twitter.com/HDFCLIFE",
+            "id": "111645779",
+            "name": "HDFC Life",
+            "isVerified": false,
+            "isBlueVerified": false,
+            "verifiedType": "Business",
+            "profilePicture": "https://pbs.twimg.com/profile_images/1149973404277080064/EsS_O1DX_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/111645779/1751004242",
+            "description": "",
+            "location": "",
+            "followers": 416048,
+            "following": 1434,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Fri Feb 05 17:22:24 +0000 2010",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 38718,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 3120,
+            "statusesCount": 91821,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "Everyone can chase their dreams and live with their heads held high. We\u2019re making it happen, one financial plan at a time. #SarUthaKeJiyo",
+                "entities": {
+                    "description": {
+                        "hashtags": [
+                            {
+                                "indices": [
+                                    123,
+                                    137
+                                ],
+                                "text": "SarUthaKeJiyo"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "linktr.ee/hdfclife0",
+                                "expanded_url": "https://linktr.ee/hdfclife0",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/j5ImjI2wBP"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {
+            "media": [
+                {
+                    "display_url": "pic.twitter.com/7WFpPVBgA3",
+                    "expanded_url": "https://twitter.com/HDFCLIFE/status/1665244492079702017/photo/1",
+                    "ext_media_availability": {
+                        "status": "Available"
+                    },
+                    "features": {
+                        "large": {},
+                        "orig": {}
+                    },
+                    "id_str": "1664926754023313408",
+                    "indices": [
+                        205,
+                        228
+                    ],
+                    "media_key": "3_1664926754023313408",
+                    "media_results": {
+                        "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAARcbAg/GmpAACgACFxwjCu6WIAEAAA==",
+                        "result": {
+                            "__typename": "ApiMedia",
+                            "id": "QXBpTWVkaWE6DAABCgABFxsCD8aakAAKAAIXHCMK7pYgAQAA",
+                            "media_key": "3_1664926754023313408"
+                        }
+                    },
+                    "media_url_https": "https://pbs.twimg.com/media/FxsCD8aakAACDn8.jpg",
+                    "original_info": {
+                        "focus_rects": [
+                            {
+                                "h": 672,
+                                "w": 1200,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 675,
+                                "w": 675,
+                                "x": 263,
+                                "y": 0
+                            },
+                            {
+                                "h": 675,
+                                "w": 592,
+                                "x": 304,
+                                "y": 0
+                            },
+                            {
+                                "h": 675,
+                                "w": 338,
+                                "x": 431,
+                                "y": 0
+                            },
+                            {
+                                "h": 675,
+                                "w": 1200,
+                                "x": 0,
+                                "y": 0
+                            }
+                        ],
+                        "height": 675,
+                        "width": 1200
+                    },
+                    "sizes": {
+                        "large": {
+                            "h": 675,
+                            "w": 1200
+                        }
+                    },
+                    "type": "photo",
+                    "url": "https://t.co/7WFpPVBgA3"
+                }
+            ]
+        },
+        "card": null,
+        "place": {},
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        190,
+                        204
+                    ],
+                    "text": "SarUthaKeJiyo"
+                }
+            ],
+            "urls": [
+                {
+                    "display_url": "surl.li/hpian",
+                    "expanded_url": "http://surl.li/hpian",
+                    "indices": [
+                        165,
+                        188
+                    ],
+                    "url": "https://t.co/dU2YaljRQG"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1655097632845598721",
+        "url": "https://x.com/HDFCLIFE/status/1655097632845598721",
+        "twitterUrl": "https://twitter.com/HDFCLIFE/status/1655097632845598721",
+        "text": "\"Master the Gig Economy: Empower Your Finances\"\n\nDiscover effective strategies to manage your finances and thrive in the gig economy. Maximize earnings, optimize savings, and secure your family's future. Unleash your potential today!\n\nRead more&gt; https://t.co/VEASQpzKDj https://t.co/t93dqUEHQq",
+        "source": "Twitter for iPhone",
+        "retweetCount": 1,
+        "replyCount": 7,
+        "likeCount": 4,
+        "quoteCount": 0,
+        "viewCount": 1805,
+        "createdAt": "Sun May 07 06:30:00 +0000 2023",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1655097632845598721",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "HDFCLIFE",
+            "url": "https://x.com/HDFCLIFE",
+            "twitterUrl": "https://twitter.com/HDFCLIFE",
+            "id": "111645779",
+            "name": "HDFC Life",
+            "isVerified": false,
+            "isBlueVerified": false,
+            "verifiedType": "Business",
+            "profilePicture": "https://pbs.twimg.com/profile_images/1149973404277080064/EsS_O1DX_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/111645779/1751004242",
+            "description": "",
+            "location": "",
+            "followers": 416048,
+            "following": 1434,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Fri Feb 05 17:22:24 +0000 2010",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 38718,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 3120,
+            "statusesCount": 91821,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "Everyone can chase their dreams and live with their heads held high. We\u2019re making it happen, one financial plan at a time. #SarUthaKeJiyo",
+                "entities": {
+                    "description": {
+                        "hashtags": [
+                            {
+                                "indices": [
+                                    123,
+                                    137
+                                ],
+                                "text": "SarUthaKeJiyo"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "linktr.ee/hdfclife0",
+                                "expanded_url": "https://linktr.ee/hdfclife0",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/j5ImjI2wBP"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {
+            "media": [
+                {
+                    "display_url": "pic.twitter.com/t93dqUEHQq",
+                    "expanded_url": "https://twitter.com/HDFCLIFE/status/1655097632845598721/photo/1",
+                    "ext_media_availability": {
+                        "status": "Available"
+                    },
+                    "features": {
+                        "large": {},
+                        "orig": {}
+                    },
+                    "id_str": "1653385619618562049",
+                    "indices": [
+                        273,
+                        296
+                    ],
+                    "media_key": "3_1653385619618562049",
+                    "media_results": {
+                        "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAARbyAXYGGoABCgACFvgWhypaEAEAAA==",
+                        "result": {
+                            "__typename": "ApiMedia",
+                            "id": "QXBpTWVkaWE6DAABCgABFvIBdgYagAEKAAIW+BaHKloQAQAA",
+                            "media_key": "3_1653385619618562049"
+                        }
+                    },
+                    "media_url_https": "https://pbs.twimg.com/media/FvIBdgYagAEiAis.jpg",
+                    "original_info": {
+                        "focus_rects": [
+                            {
+                                "h": 672,
+                                "w": 1200,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 675,
+                                "w": 675,
+                                "x": 293,
+                                "y": 0
+                            },
+                            {
+                                "h": 675,
+                                "w": 592,
+                                "x": 334,
+                                "y": 0
+                            },
+                            {
+                                "h": 675,
+                                "w": 338,
+                                "x": 461,
+                                "y": 0
+                            },
+                            {
+                                "h": 675,
+                                "w": 1200,
+                                "x": 0,
+                                "y": 0
+                            }
+                        ],
+                        "height": 675,
+                        "width": 1200
+                    },
+                    "sizes": {
+                        "large": {
+                            "h": 675,
+                            "w": 1200
+                        }
+                    },
+                    "type": "photo",
+                    "url": "https://t.co/t93dqUEHQq"
+                }
+            ]
+        },
+        "card": null,
+        "place": {},
+        "entities": {
+            "urls": [
+                {
+                    "display_url": "t.ly/IGO8",
+                    "expanded_url": "https://t.ly/IGO8",
+                    "indices": [
+                        249,
+                        272
+                    ],
+                    "url": "https://t.co/VEASQpzKDj"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1484762506719805443",
+        "url": "https://x.com/HDFCLIFE/status/1484762506719805443",
+        "twitterUrl": "https://twitter.com/HDFCLIFE/status/1484762506719805443",
+        "text": "Highlights of HDFC Life's 9M FY22 Financial Results. Thank you for your trust in us. https://t.co/iHA6DhGPaV",
+        "source": "Twitter for iPhone",
+        "retweetCount": 2,
+        "replyCount": 4,
+        "likeCount": 12,
+        "quoteCount": 0,
+        "viewCount": 0,
+        "createdAt": "Sat Jan 22 05:39:01 +0000 2022",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1484762506719805443",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "HDFCLIFE",
+            "url": "https://x.com/HDFCLIFE",
+            "twitterUrl": "https://twitter.com/HDFCLIFE",
+            "id": "111645779",
+            "name": "HDFC Life",
+            "isVerified": false,
+            "isBlueVerified": false,
+            "verifiedType": "Business",
+            "profilePicture": "https://pbs.twimg.com/profile_images/1149973404277080064/EsS_O1DX_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/111645779/1751004242",
+            "description": "",
+            "location": "",
+            "followers": 416048,
+            "following": 1434,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Fri Feb 05 17:22:24 +0000 2010",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 38718,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 3120,
+            "statusesCount": 91821,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "Everyone can chase their dreams and live with their heads held high. We\u2019re making it happen, one financial plan at a time. #SarUthaKeJiyo",
+                "entities": {
+                    "description": {
+                        "hashtags": [
+                            {
+                                "indices": [
+                                    123,
+                                    137
+                                ],
+                                "text": "SarUthaKeJiyo"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "linktr.ee/hdfclife0",
+                                "expanded_url": "https://linktr.ee/hdfclife0",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/j5ImjI2wBP"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {
+            "media": [
+                {
+                    "additional_media_info": {
+                        "description": "",
+                        "monetizable": false,
+                        "title": ""
+                    },
+                    "display_url": "pic.twitter.com/iHA6DhGPaV",
+                    "expanded_url": "https://twitter.com/HDFCLIFE/status/1484762506719805443/video/1",
+                    "ext_media_availability": {
+                        "status": "Available"
+                    },
+                    "id_str": "1484761620387868675",
+                    "indices": [
+                        85,
+                        108
+                    ],
+                    "media_key": "13_1484761620387868675",
+                    "media_results": {
+                        "id": "QXBpTWVkaWFSZXN1bHRzOgwABAoAARSa7tO/WjADAAA=",
+                        "result": {
+                            "__typename": "ApiMedia",
+                            "id": "QXBpTWVkaWE6DAAECgABFJru079aMAMAAA==",
+                            "media_key": "13_1484761620387868675"
+                        }
+                    },
+                    "media_url_https": "https://pbs.twimg.com/amplify_video_thumb/1484761620387868675/img/4--Tm9nEFVuWyZ_o.jpg",
+                    "original_info": {
+                        "focus_rects": [],
+                        "height": 1080,
+                        "width": 1920
+                    },
+                    "sizes": {
+                        "large": {
+                            "h": 1080,
+                            "w": 1920
+                        }
+                    },
+                    "type": "video",
+                    "url": "https://t.co/iHA6DhGPaV",
+                    "video_info": {
+                        "aspect_ratio": [
+                            16,
+                            9
+                        ],
+                        "duration_millis": 29000,
+                        "variants": [
+                            {
+                                "content_type": "application/x-mpegURL",
+                                "url": "https://video-s.twimg.com/amplify_video/1484761620387868675/pl/DdbX9h084ESjWqtX.m3u8?tag=14"
+                            },
+                            {
+                                "bitrate": 288000,
+                                "content_type": "video/mp4",
+                                "url": "https://video-s.twimg.com/amplify_video/1484761620387868675/vid/480x270/isM98GiQObA9v84A.mp4?tag=14"
+                            },
+                            {
+                                "bitrate": 832000,
+                                "content_type": "video/mp4",
+                                "url": "https://video-s.twimg.com/amplify_video/1484761620387868675/vid/640x360/_n2cyuAmTT9WYxpH.mp4?tag=14"
+                            },
+                            {
+                                "bitrate": 2176000,
+                                "content_type": "video/mp4",
+                                "url": "https://video-s.twimg.com/amplify_video/1484761620387868675/vid/1280x720/e8sOiBXluoDqkgtH.mp4?tag=14"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "card": null,
+        "place": {},
+        "entities": {},
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    }
+]

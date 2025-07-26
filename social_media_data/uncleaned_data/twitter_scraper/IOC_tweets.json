@@ -1,0 +1,718 @@
+[
+    {
+        "type": "tweet",
+        "id": "1610087037348053001",
+        "url": "https://x.com/MikeMathia/status/1610087037348053001",
+        "twitterUrl": "https://twitter.com/MikeMathia/status/1610087037348053001",
+        "text": "RT @alaric@ioc.exchange\n#bornonthisday #asimov \n\nThere is a cult of ignorance in the United States, and there has always been. The strain of anti-intellectualism has been a constant thread winding its way through our political and cultural life, nurtured by the false (1/2)",
+        "source": "Twitter for iPhone",
+        "retweetCount": 0,
+        "replyCount": 1,
+        "likeCount": 0,
+        "quoteCount": 0,
+        "viewCount": 16,
+        "createdAt": "Tue Jan 03 01:33:58 +0000 2023",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1610087037348053001",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "MikeMathia",
+            "url": "https://x.com/MikeMathia",
+            "twitterUrl": "https://twitter.com/MikeMathia",
+            "id": "16064403",
+            "name": "AceOfBased\ud83c\udf2a MikeMathia.com\ud83d\udce1",
+            "isVerified": false,
+            "isBlueVerified": false,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/1910753854380986368/DMn0jIhQ_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/16064403/1725848477",
+            "description": "",
+            "location": "Park City, Kansas",
+            "followers": 2659,
+            "following": 4251,
+            "status": "",
+            "canDm": false,
+            "canMediaTag": true,
+            "createdAt": "Sun Aug 31 07:25:22 +0000 2008",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 56052,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 4895,
+            "statusesCount": 50139,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [
+                "1888863704525009332"
+            ],
+            "profile_bio": {
+                "description": "Media Personality/Operations/Engineering at Kansas Tornado Chasers, Mathia Enterprises, Lockergnome, MakerDeck, KWLS-FM, Former  KAKE-TV Storm Chase Coordinator",
+                "entities": {
+                    "description": {},
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "live.mikemathia.com",
+                                "expanded_url": "http://live.mikemathia.com",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/vsOeOVYojN"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": null,
+        "place": {},
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        24,
+                        38
+                    ],
+                    "text": "bornonthisday"
+                },
+                {
+                    "indices": [
+                        39,
+                        46
+                    ],
+                    "text": "asimov"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "973092421805445121",
+        "url": "https://x.com/ioc_feed/status/973092421805445121",
+        "twitterUrl": "https://twitter.com/ioc_feed/status/973092421805445121",
+        "text": "RT siri_urz \"craiu Or perhaps it is a real fake false flag \ud83e\udd23\"",
+        "source": "Twitter for iPhone",
+        "retweetCount": 0,
+        "replyCount": 0,
+        "likeCount": 0,
+        "quoteCount": 0,
+        "viewCount": 0,
+        "createdAt": "Mon Mar 12 07:04:47 +0000 2018",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "973092421805445121",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "ioc_feed",
+            "url": "https://x.com/ioc_feed",
+            "twitterUrl": "https://twitter.com/ioc_feed",
+            "id": "968085063241027584",
+            "name": "IOC Feed",
+            "isVerified": false,
+            "isBlueVerified": false,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/968094810635579392/bw2M-ezz_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/968085063241027584/1519646803",
+            "description": "",
+            "location": "",
+            "followers": 108,
+            "following": 34,
+            "status": "",
+            "canDm": false,
+            "canMediaTag": true,
+            "createdAt": "Mon Feb 26 11:27:20 +0000 2018",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 0,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 522,
+            "statusesCount": 1225,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "#malware #infosec #ioc For now, I'm just retweeting Twitter accounts known to share IOCs.  Will make this smarter when I have some free time \ud83d\ude00",
+                "entities": {
+                    "description": {
+                        "hashtags": [
+                            {
+                                "indices": [
+                                    0,
+                                    8
+                                ],
+                                "text": "malware"
+                            },
+                            {
+                                "indices": [
+                                    9,
+                                    17
+                                ],
+                                "text": "infosec"
+                            },
+                            {
+                                "indices": [
+                                    18,
+                                    22
+                                ],
+                                "text": "ioc"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": null,
+        "place": {},
+        "entities": {},
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "973092419913863169",
+        "url": "https://x.com/ioc_feed/status/973092419913863169",
+        "twitterUrl": "https://twitter.com/ioc_feed/status/973092419913863169",
+        "text": "RT siri_urz \"RT craiu: The Devil\u2019s in the Rich Header. Analysis of the Rich header false flag: https://t.co/D8pmOzl5YC #TheSAS2018 #OlympicDestroyer\"",
+        "source": "Twitter for iPhone",
+        "retweetCount": 0,
+        "replyCount": 0,
+        "likeCount": 0,
+        "quoteCount": 0,
+        "viewCount": 0,
+        "createdAt": "Mon Mar 12 07:04:46 +0000 2018",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "973092419913863169",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "ioc_feed",
+            "url": "https://x.com/ioc_feed",
+            "twitterUrl": "https://twitter.com/ioc_feed",
+            "id": "968085063241027584",
+            "name": "IOC Feed",
+            "isVerified": false,
+            "isBlueVerified": false,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/968094810635579392/bw2M-ezz_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/968085063241027584/1519646803",
+            "description": "",
+            "location": "",
+            "followers": 108,
+            "following": 34,
+            "status": "",
+            "canDm": false,
+            "canMediaTag": true,
+            "createdAt": "Mon Feb 26 11:27:20 +0000 2018",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 0,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 522,
+            "statusesCount": 1225,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "#malware #infosec #ioc For now, I'm just retweeting Twitter accounts known to share IOCs.  Will make this smarter when I have some free time \ud83d\ude00",
+                "entities": {
+                    "description": {
+                        "hashtags": [
+                            {
+                                "indices": [
+                                    0,
+                                    8
+                                ],
+                                "text": "malware"
+                            },
+                            {
+                                "indices": [
+                                    9,
+                                    17
+                                ],
+                                "text": "infosec"
+                            },
+                            {
+                                "indices": [
+                                    18,
+                                    22
+                                ],
+                                "text": "ioc"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": null,
+        "place": {},
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        119,
+                        130
+                    ],
+                    "text": "TheSAS2018"
+                },
+                {
+                    "indices": [
+                        131,
+                        148
+                    ],
+                    "text": "OlympicDestroyer"
+                }
+            ],
+            "urls": [
+                {
+                    "display_url": "securelist.com/the-devils-in-\u2026",
+                    "expanded_url": "https://securelist.com/the-devils-in-the-rich-header/84348/",
+                    "indices": [
+                        95,
+                        118
+                    ],
+                    "url": "https://t.co/D8pmOzl5YC"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "973092417598623744",
+        "url": "https://x.com/ioc_feed/status/973092417598623744",
+        "twitterUrl": "https://twitter.com/ioc_feed/status/973092417598623744",
+        "text": "RT siri_urz \"RT craiu: The #OlympicDestroyer wiper\u2019s Rich header is forged to make it look like the Lazarus group. This is a subtle false flag the attackers hoped that the industry will find. #TheSAS2018 https://t.co/QaVDY9uyTo\"",
+        "source": "Twitter for iPhone",
+        "retweetCount": 0,
+        "replyCount": 0,
+        "likeCount": 0,
+        "quoteCount": 0,
+        "viewCount": 0,
+        "createdAt": "Mon Mar 12 07:04:46 +0000 2018",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "973092417598623744",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "ioc_feed",
+            "url": "https://x.com/ioc_feed",
+            "twitterUrl": "https://twitter.com/ioc_feed",
+            "id": "968085063241027584",
+            "name": "IOC Feed",
+            "isVerified": false,
+            "isBlueVerified": false,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/968094810635579392/bw2M-ezz_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/968085063241027584/1519646803",
+            "description": "",
+            "location": "",
+            "followers": 108,
+            "following": 34,
+            "status": "",
+            "canDm": false,
+            "canMediaTag": true,
+            "createdAt": "Mon Feb 26 11:27:20 +0000 2018",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 0,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 522,
+            "statusesCount": 1225,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "#malware #infosec #ioc For now, I'm just retweeting Twitter accounts known to share IOCs.  Will make this smarter when I have some free time \ud83d\ude00",
+                "entities": {
+                    "description": {
+                        "hashtags": [
+                            {
+                                "indices": [
+                                    0,
+                                    8
+                                ],
+                                "text": "malware"
+                            },
+                            {
+                                "indices": [
+                                    9,
+                                    17
+                                ],
+                                "text": "infosec"
+                            },
+                            {
+                                "indices": [
+                                    18,
+                                    22
+                                ],
+                                "text": "ioc"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {
+            "media": [
+                {
+                    "display_url": "pic.twitter.com/QaVDY9uyTo",
+                    "expanded_url": "https://twitter.com/craiu/status/971798698089951232/photo/1",
+                    "ext_media_availability": {
+                        "status": "Available"
+                    },
+                    "features": {
+                        "large": {
+                            "faces": [
+                                {
+                                    "h": 85,
+                                    "w": 85,
+                                    "x": 183,
+                                    "y": 184
+                                }
+                            ]
+                        },
+                        "orig": {
+                            "faces": [
+                                {
+                                    "h": 85,
+                                    "w": 85,
+                                    "x": 183,
+                                    "y": 184
+                                }
+                            ]
+                        }
+                    },
+                    "id_str": "971798676510212096",
+                    "indices": [
+                        204,
+                        227
+                    ],
+                    "media_key": "3_971798676510212096",
+                    "media_results": {
+                        "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAAQ18hb9algAACgACDYEeZeyXkAAAAA==",
+                        "result": {
+                            "__typename": "ApiMedia",
+                            "id": "QXBpTWVkaWE6DAABCgABDXyFv1qWAAAKAAINgR5l7JeQAAAA",
+                            "media_key": "3_971798676510212096"
+                        }
+                    },
+                    "media_url_https": "https://pbs.twimg.com/media/DXyFv1qWAAAeTqG.jpg",
+                    "original_info": {
+                        "focus_rects": [
+                            {
+                                "h": 573,
+                                "w": 1024,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 768,
+                                "w": 768,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 768,
+                                "w": 674,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 768,
+                                "w": 384,
+                                "x": 38,
+                                "y": 0
+                            },
+                            {
+                                "h": 768,
+                                "w": 1024,
+                                "x": 0,
+                                "y": 0
+                            }
+                        ],
+                        "height": 768,
+                        "width": 1024
+                    },
+                    "sizes": {
+                        "large": {
+                            "h": 768,
+                            "w": 1024
+                        }
+                    },
+                    "source_status_id_str": "971798698089951232",
+                    "source_user_id_str": "9349172",
+                    "type": "photo",
+                    "url": "https://t.co/QaVDY9uyTo"
+                }
+            ]
+        },
+        "card": null,
+        "place": {},
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        27,
+                        44
+                    ],
+                    "text": "OlympicDestroyer"
+                },
+                {
+                    "indices": [
+                        192,
+                        203
+                    ],
+                    "text": "TheSAS2018"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "972744525092450305",
+        "url": "https://x.com/ioc_feed/status/972744525092450305",
+        "twitterUrl": "https://twitter.com/ioc_feed/status/972744525092450305",
+        "text": "RT JAMESWT_MHT \"RT DanielGallagher: There are a few false positives, but I feel like I am on to something... \ud83e\udd14 #BotDetection https://t.co/ieT97GNgOF\"",
+        "source": "Twitter for iPhone",
+        "retweetCount": 0,
+        "replyCount": 0,
+        "likeCount": 0,
+        "quoteCount": 0,
+        "viewCount": 0,
+        "createdAt": "Sun Mar 11 08:02:22 +0000 2018",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "972744525092450305",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "ioc_feed",
+            "url": "https://x.com/ioc_feed",
+            "twitterUrl": "https://twitter.com/ioc_feed",
+            "id": "968085063241027584",
+            "name": "IOC Feed",
+            "isVerified": false,
+            "isBlueVerified": false,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/968094810635579392/bw2M-ezz_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/968085063241027584/1519646803",
+            "description": "",
+            "location": "",
+            "followers": 108,
+            "following": 34,
+            "status": "",
+            "canDm": false,
+            "canMediaTag": true,
+            "createdAt": "Mon Feb 26 11:27:20 +0000 2018",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 0,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 522,
+            "statusesCount": 1225,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "#malware #infosec #ioc For now, I'm just retweeting Twitter accounts known to share IOCs.  Will make this smarter when I have some free time \ud83d\ude00",
+                "entities": {
+                    "description": {
+                        "hashtags": [
+                            {
+                                "indices": [
+                                    0,
+                                    8
+                                ],
+                                "text": "malware"
+                            },
+                            {
+                                "indices": [
+                                    9,
+                                    17
+                                ],
+                                "text": "infosec"
+                            },
+                            {
+                                "indices": [
+                                    18,
+                                    22
+                                ],
+                                "text": "ioc"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {
+            "media": [
+                {
+                    "display_url": "pic.twitter.com/ieT97GNgOF",
+                    "expanded_url": "https://twitter.com/DanielGallagher/status/972268113810075648/photo/1",
+                    "ext_media_availability": {
+                        "status": "Available"
+                    },
+                    "features": {
+                        "large": {},
+                        "orig": {}
+                    },
+                    "id_str": "972266625369038848",
+                    "indices": [
+                        125,
+                        148
+                    ],
+                    "media_key": "3_972266625369038848",
+                    "media_results": {
+                        "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAAQ1+L1gwFuAACgACDX/h/eNXcAEAAA==",
+                        "result": {
+                            "__typename": "ApiMedia",
+                            "id": "QXBpTWVkaWE6DAABCgABDX4vWDAW4AAKAAINf+H941dwAQAA",
+                            "media_key": "3_972266625369038848"
+                        }
+                    },
+                    "media_url_https": "https://pbs.twimg.com/media/DX4vWDAW4AAdub1.jpg",
+                    "original_info": {
+                        "focus_rects": [
+                            {
+                                "h": 1264,
+                                "w": 2257,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1264,
+                                "w": 1264,
+                                "x": 244,
+                                "y": 0
+                            },
+                            {
+                                "h": 1264,
+                                "w": 1109,
+                                "x": 322,
+                                "y": 0
+                            },
+                            {
+                                "h": 1264,
+                                "w": 632,
+                                "x": 560,
+                                "y": 0
+                            },
+                            {
+                                "h": 1264,
+                                "w": 2344,
+                                "x": 0,
+                                "y": 0
+                            }
+                        ],
+                        "height": 1264,
+                        "width": 2344
+                    },
+                    "sizes": {
+                        "large": {
+                            "h": 1104,
+                            "w": 2048
+                        }
+                    },
+                    "source_status_id_str": "972268113810075648",
+                    "source_user_id_str": "16796735",
+                    "type": "photo",
+                    "url": "https://t.co/ieT97GNgOF"
+                }
+            ]
+        },
+        "card": null,
+        "place": {},
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        111,
+                        124
+                    ],
+                    "text": "BotDetection"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    }
+]

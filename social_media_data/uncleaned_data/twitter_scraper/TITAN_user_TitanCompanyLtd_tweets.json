@@ -1,0 +1,3359 @@
+[
+    {
+        "type": "tweet",
+        "id": "1920807244091773339",
+        "url": "https://x.com/TitanCompanyLtd/status/1920807244091773339",
+        "twitterUrl": "https://twitter.com/TitanCompanyLtd/status/1920807244091773339",
+        "text": "The new heights of Q4 make for a scintillating close to FY25!\n\nHead to our website for the full picture on the results; click here: https://t.co/I0CnsxdHYF\n\n#Results https://t.co/w50hZlJ09D",
+        "source": "Twitter for iPhone",
+        "retweetCount": 0,
+        "replyCount": 2,
+        "likeCount": 2,
+        "quoteCount": 0,
+        "viewCount": 310,
+        "createdAt": "Fri May 09 11:45:08 +0000 2025",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1920807244091773339",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "TitanCompanyLtd",
+            "url": "https://x.com/TitanCompanyLtd",
+            "twitterUrl": "https://twitter.com/TitanCompanyLtd",
+            "id": "993353389034557440",
+            "name": "Titan Company Limited",
+            "isVerified": false,
+            "isBlueVerified": true,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/1001762703415783424/m6454fgb_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/993353389034557440/1752669607",
+            "description": "",
+            "location": "",
+            "followers": 5387,
+            "following": 32,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Mon May 07 04:54:38 +0000 2018",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 145,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 1072,
+            "statusesCount": 2343,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [
+                "1920320251356422631"
+            ],
+            "profile_bio": {
+                "description": "A strong portfolio of brands and industry-leading capabilities, Titan is driven by the values and ethos of the Tata Group. Visit - https://t.co/OC9aEIVOLc",
+                "entities": {
+                    "description": {
+                        "urls": [
+                            {
+                                "display_url": "titancompany.in",
+                                "expanded_url": "http://titancompany.in",
+                                "indices": [
+                                    131,
+                                    154
+                                ],
+                                "url": "https://t.co/OC9aEIVOLc"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "titancompany.in",
+                                "expanded_url": "http://www.titancompany.in",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/qteKCqTylA"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {
+            "media": [
+                {
+                    "additional_media_info": {
+                        "monetizable": false
+                    },
+                    "display_url": "pic.twitter.com/w50hZlJ09D",
+                    "expanded_url": "https://twitter.com/TitanCompanyLtd/status/1920807244091773339/video/1",
+                    "ext_media_availability": {
+                        "status": "Available"
+                    },
+                    "id_str": "1920806090574331904",
+                    "indices": [
+                        166,
+                        189
+                    ],
+                    "media_key": "13_1920806090574331904",
+                    "media_results": {
+                        "id": "QXBpTWVkaWFSZXN1bHRzOgwABAoAARqoEvZnFwAAAAA=",
+                        "result": {
+                            "__typename": "ApiMedia",
+                            "id": "QXBpTWVkaWE6DAAECgABGqgS9mcXAAAAAA==",
+                            "media_key": "13_1920806090574331904"
+                        }
+                    },
+                    "media_url_https": "https://pbs.twimg.com/amplify_video_thumb/1920806090574331904/img/972VmP8ScfX4zufY.jpg",
+                    "original_info": {
+                        "focus_rects": [],
+                        "height": 1080,
+                        "width": 1080
+                    },
+                    "sizes": {
+                        "large": {
+                            "h": 1080,
+                            "w": 1080
+                        }
+                    },
+                    "type": "video",
+                    "url": "https://t.co/w50hZlJ09D",
+                    "video_info": {
+                        "aspect_ratio": [
+                            1,
+                            1
+                        ],
+                        "duration_millis": 26066,
+                        "variants": [
+                            {
+                                "content_type": "application/x-mpegURL",
+                                "url": "https://video-s.twimg.com/amplify_video/1920806090574331904/pl/jLev01jdaB14VcjO.m3u8?tag=21"
+                            },
+                            {
+                                "bitrate": 432000,
+                                "content_type": "video/mp4",
+                                "url": "https://video-s.twimg.com/amplify_video/1920806090574331904/vid/avc1/320x320/rKhagrx8jYx02fWq.mp4?tag=21"
+                            },
+                            {
+                                "bitrate": 832000,
+                                "content_type": "video/mp4",
+                                "url": "https://video-s.twimg.com/amplify_video/1920806090574331904/vid/avc1/540x540/kelE0TB7m0sUez8a.mp4?tag=21"
+                            },
+                            {
+                                "bitrate": 1280000,
+                                "content_type": "video/mp4",
+                                "url": "https://video-s.twimg.com/amplify_video/1920806090574331904/vid/avc1/720x720/yE3FRvUJhbYa35lq.mp4?tag=21"
+                            },
+                            {
+                                "bitrate": 8768000,
+                                "content_type": "video/mp4",
+                                "url": "https://video-s.twimg.com/amplify_video/1920806090574331904/vid/avc1/1080x1080/5bVoFx7IOY7o_WwV.mp4?tag=21"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "card": null,
+        "place": {},
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        157,
+                        165
+                    ],
+                    "text": "Results"
+                }
+            ],
+            "urls": [
+                {
+                    "display_url": "bit.ly/4dzuHpe",
+                    "expanded_url": "http://bit.ly/4dzuHpe",
+                    "indices": [
+                        132,
+                        155
+                    ],
+                    "url": "https://t.co/I0CnsxdHYF"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1909836539502211569",
+        "url": "https://x.com/TitanCompanyLtd/status/1909836539502211569",
+        "twitterUrl": "https://twitter.com/TitanCompanyLtd/status/1909836539502211569",
+        "text": "We\u2019ve just released our quarterly update for Q4 of FY2025. Steady progress, continued focus, and a clear path forward. Read through for more: https://t.co/y9Jufi3Ueh\n\n#QuarterlyUpdate #FinancialResults",
+        "source": "Twitter for iPhone",
+        "retweetCount": 1,
+        "replyCount": 0,
+        "likeCount": 2,
+        "quoteCount": 0,
+        "viewCount": 237,
+        "createdAt": "Wed Apr 09 05:11:28 +0000 2025",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1909836539502211569",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "TitanCompanyLtd",
+            "url": "https://x.com/TitanCompanyLtd",
+            "twitterUrl": "https://twitter.com/TitanCompanyLtd",
+            "id": "993353389034557440",
+            "name": "Titan Company Limited",
+            "isVerified": false,
+            "isBlueVerified": true,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/1001762703415783424/m6454fgb_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/993353389034557440/1752669607",
+            "description": "",
+            "location": "",
+            "followers": 5387,
+            "following": 32,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Mon May 07 04:54:38 +0000 2018",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 145,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 1072,
+            "statusesCount": 2343,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [
+                "1920320251356422631"
+            ],
+            "profile_bio": {
+                "description": "A strong portfolio of brands and industry-leading capabilities, Titan is driven by the values and ethos of the Tata Group. Visit - https://t.co/OC9aEIVOLc",
+                "entities": {
+                    "description": {
+                        "urls": [
+                            {
+                                "display_url": "titancompany.in",
+                                "expanded_url": "http://titancompany.in",
+                                "indices": [
+                                    131,
+                                    154
+                                ],
+                                "url": "https://t.co/OC9aEIVOLc"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "titancompany.in",
+                                "expanded_url": "http://www.titancompany.in",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/qteKCqTylA"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": null,
+        "place": {},
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        167,
+                        183
+                    ],
+                    "text": "QuarterlyUpdate"
+                },
+                {
+                    "indices": [
+                        184,
+                        201
+                    ],
+                    "text": "FinancialResults"
+                }
+            ],
+            "urls": [
+                {
+                    "display_url": "bit.ly/tcl25q4",
+                    "expanded_url": "https://bit.ly/tcl25q4",
+                    "indices": [
+                        142,
+                        165
+                    ],
+                    "url": "https://t.co/y9Jufi3Ueh"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1886760897013846259",
+        "url": "https://x.com/TitanCompanyLtd/status/1886760897013846259",
+        "twitterUrl": "https://twitter.com/TitanCompanyLtd/status/1886760897013846259",
+        "text": "Another quarter of sustained growth defines Q3FY25! \ud83d\udcc8 \n\nDetailed information on our quarterly results can be found on our website here: https://t.co/jekQVAB6Bd\n\n#LifeAtTitan #QuarterlyResults #Investors https://t.co/vWprqyelB4",
+        "source": "Twitter for iPhone",
+        "retweetCount": 2,
+        "replyCount": 5,
+        "likeCount": 3,
+        "quoteCount": 1,
+        "viewCount": 765,
+        "createdAt": "Tue Feb 04 12:57:06 +0000 2025",
+        "lang": "en",
+        "bookmarkCount": 1,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1886760897013846259",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "TitanCompanyLtd",
+            "url": "https://x.com/TitanCompanyLtd",
+            "twitterUrl": "https://twitter.com/TitanCompanyLtd",
+            "id": "993353389034557440",
+            "name": "Titan Company Limited",
+            "isVerified": false,
+            "isBlueVerified": true,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/1001762703415783424/m6454fgb_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/993353389034557440/1752669607",
+            "description": "",
+            "location": "",
+            "followers": 5387,
+            "following": 32,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Mon May 07 04:54:38 +0000 2018",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 145,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 1072,
+            "statusesCount": 2343,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [
+                "1920320251356422631"
+            ],
+            "profile_bio": {
+                "description": "A strong portfolio of brands and industry-leading capabilities, Titan is driven by the values and ethos of the Tata Group. Visit - https://t.co/OC9aEIVOLc",
+                "entities": {
+                    "description": {
+                        "urls": [
+                            {
+                                "display_url": "titancompany.in",
+                                "expanded_url": "http://titancompany.in",
+                                "indices": [
+                                    131,
+                                    154
+                                ],
+                                "url": "https://t.co/OC9aEIVOLc"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "titancompany.in",
+                                "expanded_url": "http://www.titancompany.in",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/qteKCqTylA"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {
+            "media": [
+                {
+                    "additional_media_info": {
+                        "monetizable": false
+                    },
+                    "display_url": "pic.twitter.com/vWprqyelB4",
+                    "expanded_url": "https://twitter.com/TitanCompanyLtd/status/1886760897013846259/video/1",
+                    "ext_media_availability": {
+                        "status": "Available"
+                    },
+                    "id_str": "1886758941205651456",
+                    "indices": [
+                        203,
+                        226
+                    ],
+                    "media_key": "7_1886758941205651456",
+                    "media_results": {
+                        "id": "QXBpTWVkaWFSZXN1bHRzOgwAAwoAARovHUKzWuAACgACGi8fChKbkPMAAA==",
+                        "result": {
+                            "__typename": "ApiMedia",
+                            "id": "QXBpTWVkaWE6DAADCgABGi8dQrNa4AAKAAIaLx8KEpuQ8wAA",
+                            "media_key": "7_1886758941205651456"
+                        }
+                    },
+                    "media_url_https": "https://pbs.twimg.com/ext_tw_video_thumb/1886758941205651456/pu/img/v4WtCfP6pJpG1HvB.jpg",
+                    "original_info": {
+                        "focus_rects": [],
+                        "height": 1080,
+                        "width": 1080
+                    },
+                    "sizes": {
+                        "large": {
+                            "h": 1080,
+                            "w": 1080
+                        }
+                    },
+                    "type": "video",
+                    "url": "https://t.co/vWprqyelB4",
+                    "video_info": {
+                        "aspect_ratio": [
+                            1,
+                            1
+                        ],
+                        "duration_millis": 26366,
+                        "variants": [
+                            {
+                                "content_type": "application/x-mpegURL",
+                                "url": "https://video-s.twimg.com/ext_tw_video/1886758941205651456/pu/pl/Jv6i4AZLOs6XeYrx.m3u8?tag=12"
+                            },
+                            {
+                                "bitrate": 432000,
+                                "content_type": "video/mp4",
+                                "url": "https://video-s.twimg.com/ext_tw_video/1886758941205651456/pu/vid/avc1/320x320/hojDCFWa0T-Orz4h.mp4?tag=12"
+                            },
+                            {
+                                "bitrate": 832000,
+                                "content_type": "video/mp4",
+                                "url": "https://video-s.twimg.com/ext_tw_video/1886758941205651456/pu/vid/avc1/540x540/ZgKudb--7DBKkCTn.mp4?tag=12"
+                            },
+                            {
+                                "bitrate": 1280000,
+                                "content_type": "video/mp4",
+                                "url": "https://video-s.twimg.com/ext_tw_video/1886758941205651456/pu/vid/avc1/720x720/9ZFmty2sgf1IwwPn.mp4?tag=12"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "card": null,
+        "place": {},
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        161,
+                        173
+                    ],
+                    "text": "LifeAtTitan"
+                },
+                {
+                    "indices": [
+                        174,
+                        191
+                    ],
+                    "text": "QuarterlyResults"
+                },
+                {
+                    "indices": [
+                        192,
+                        202
+                    ],
+                    "text": "Investors"
+                }
+            ],
+            "urls": [
+                {
+                    "display_url": "bit.ly/inve5t0r",
+                    "expanded_url": "http://bit.ly/inve5t0r",
+                    "indices": [
+                        136,
+                        159
+                    ],
+                    "url": "https://t.co/jekQVAB6Bd"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1854058614027145316",
+        "url": "https://x.com/TitanCompanyLtd/status/1854058614027145316",
+        "twitterUrl": "https://twitter.com/TitanCompanyLtd/status/1854058614027145316",
+        "text": "Signing off the second quarter with a smile! \ud83d\ude0a\n\nOur Q2FY25 results reflect our resilience and sustained growth, paving the way for even greater achievements ahead.\n\nHere\u2019s to every milestone we reach and to creating an even brighter future together!\n\n#LifeAtTitan #QuarterlyResults #Q2",
+        "source": "Twitter for iPhone",
+        "retweetCount": 1,
+        "replyCount": 0,
+        "likeCount": 6,
+        "quoteCount": 0,
+        "viewCount": 224,
+        "createdAt": "Wed Nov 06 07:09:54 +0000 2024",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1854058614027145316",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "TitanCompanyLtd",
+            "url": "https://x.com/TitanCompanyLtd",
+            "twitterUrl": "https://twitter.com/TitanCompanyLtd",
+            "id": "993353389034557440",
+            "name": "Titan Company Limited",
+            "isVerified": false,
+            "isBlueVerified": true,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/1001762703415783424/m6454fgb_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/993353389034557440/1752669607",
+            "description": "",
+            "location": "",
+            "followers": 5387,
+            "following": 32,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Mon May 07 04:54:38 +0000 2018",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 145,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 1072,
+            "statusesCount": 2343,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [
+                "1920320251356422631"
+            ],
+            "profile_bio": {
+                "description": "A strong portfolio of brands and industry-leading capabilities, Titan is driven by the values and ethos of the Tata Group. Visit - https://t.co/OC9aEIVOLc",
+                "entities": {
+                    "description": {
+                        "urls": [
+                            {
+                                "display_url": "titancompany.in",
+                                "expanded_url": "http://titancompany.in",
+                                "indices": [
+                                    131,
+                                    154
+                                ],
+                                "url": "https://t.co/OC9aEIVOLc"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "titancompany.in",
+                                "expanded_url": "http://www.titancompany.in",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/qteKCqTylA"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {
+            "media": [
+                {
+                    "additional_media_info": {
+                        "monetizable": false
+                    },
+                    "display_url": "pic.twitter.com/aTzJwPGLlQ",
+                    "expanded_url": "https://twitter.com/TitanCompanyLtd/status/1854058614027145316/video/1",
+                    "ext_media_availability": {
+                        "status": "Available"
+                    },
+                    "id_str": "1854058310686932992",
+                    "indices": [
+                        265,
+                        288
+                    ],
+                    "media_key": "7_1854058310686932992",
+                    "media_results": {
+                        "id": "QXBpTWVkaWFSZXN1bHRzOgwAAwoAARm68DXZWwAACgACGbrwfHnXUGQAAA==",
+                        "result": {
+                            "__typename": "ApiMedia",
+                            "id": "QXBpTWVkaWE6DAADCgABGbrwNdlbAAAKAAIZuvB8eddQZAAA",
+                            "media_key": "7_1854058310686932992"
+                        }
+                    },
+                    "media_url_https": "https://pbs.twimg.com/ext_tw_video_thumb/1854058310686932992/pu/img/KwxGrNQxggInWMHs.jpg",
+                    "original_info": {
+                        "focus_rects": [],
+                        "height": 1350,
+                        "width": 1080
+                    },
+                    "sizes": {
+                        "large": {
+                            "h": 1350,
+                            "w": 1080
+                        }
+                    },
+                    "type": "video",
+                    "url": "https://t.co/aTzJwPGLlQ",
+                    "video_info": {
+                        "aspect_ratio": [
+                            4,
+                            5
+                        ],
+                        "duration_millis": 26366,
+                        "variants": [
+                            {
+                                "content_type": "application/x-mpegURL",
+                                "url": "https://video-s.twimg.com/ext_tw_video/1854058310686932992/pu/pl/yzubkDTCz8302kRC.m3u8?tag=12"
+                            },
+                            {
+                                "bitrate": 632000,
+                                "content_type": "video/mp4",
+                                "url": "https://video-s.twimg.com/ext_tw_video/1854058310686932992/pu/vid/avc1/320x400/s57UthwsElibgqn3.mp4?tag=12"
+                            },
+                            {
+                                "bitrate": 950000,
+                                "content_type": "video/mp4",
+                                "url": "https://video-s.twimg.com/ext_tw_video/1854058310686932992/pu/vid/avc1/480x600/ps_L_fOHtDFJdfQz.mp4?tag=12"
+                            },
+                            {
+                                "bitrate": 2176000,
+                                "content_type": "video/mp4",
+                                "url": "https://video-s.twimg.com/ext_tw_video/1854058310686932992/pu/vid/avc1/720x900/z59y4iTB1fl5yFnE.mp4?tag=12"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "card": null,
+        "place": {},
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        251,
+                        263
+                    ],
+                    "text": "LifeAtTitan"
+                },
+                {
+                    "indices": [
+                        264,
+                        281
+                    ],
+                    "text": "QuarterlyResults"
+                },
+                {
+                    "indices": [
+                        282,
+                        285
+                    ],
+                    "text": "Q2"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1786624879363592334",
+        "url": "https://x.com/TitanCompanyLtd/status/1786624879363592334",
+        "twitterUrl": "https://twitter.com/TitanCompanyLtd/status/1786624879363592334",
+        "text": "Numbers that inspire us to keep going! \ud83d\udcc8 \n\nFrom smashing business goals to sprinkling joy in the lives of our amazing customers, here's to another quarter done right! \ud83d\ude4c\ud83c\udffb\u2728\n\n#LifeAtTitan #Titanians #quarterlyreport #quarterlyresults https://t.co/J31hJfWd7l",
+        "source": "Twitter for iPhone",
+        "retweetCount": 0,
+        "replyCount": 2,
+        "likeCount": 6,
+        "quoteCount": 0,
+        "viewCount": 335,
+        "createdAt": "Sat May 04 05:12:19 +0000 2024",
+        "lang": "en",
+        "bookmarkCount": 2,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1786624879363592334",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "TitanCompanyLtd",
+            "url": "https://x.com/TitanCompanyLtd",
+            "twitterUrl": "https://twitter.com/TitanCompanyLtd",
+            "id": "993353389034557440",
+            "name": "Titan Company Limited",
+            "isVerified": false,
+            "isBlueVerified": true,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/1001762703415783424/m6454fgb_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/993353389034557440/1752669607",
+            "description": "",
+            "location": "",
+            "followers": 5387,
+            "following": 32,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Mon May 07 04:54:38 +0000 2018",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 145,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 1072,
+            "statusesCount": 2343,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [
+                "1920320251356422631"
+            ],
+            "profile_bio": {
+                "description": "A strong portfolio of brands and industry-leading capabilities, Titan is driven by the values and ethos of the Tata Group. Visit - https://t.co/OC9aEIVOLc",
+                "entities": {
+                    "description": {
+                        "urls": [
+                            {
+                                "display_url": "titancompany.in",
+                                "expanded_url": "http://titancompany.in",
+                                "indices": [
+                                    131,
+                                    154
+                                ],
+                                "url": "https://t.co/OC9aEIVOLc"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "titancompany.in",
+                                "expanded_url": "http://www.titancompany.in",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/qteKCqTylA"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {
+            "media": [
+                {
+                    "additional_media_info": {
+                        "monetizable": false
+                    },
+                    "display_url": "pic.twitter.com/J31hJfWd7l",
+                    "expanded_url": "https://twitter.com/TitanCompanyLtd/status/1786624879363592334/video/1",
+                    "ext_media_availability": {
+                        "status": "Available"
+                    },
+                    "id_str": "1786624790326845440",
+                    "indices": [
+                        231,
+                        254
+                    ],
+                    "media_key": "7_1786624790326845440",
+                    "media_results": {
+                        "id": "QXBpTWVkaWFSZXN1bHRzOgwAAwoAARjLXcfmVqAACgACGMtd3KFXkI4AAA==",
+                        "result": {
+                            "__typename": "ApiMedia",
+                            "id": "QXBpTWVkaWE6DAADCgABGMtdx+ZWoAAKAAIYy13coVeQjgAA",
+                            "media_key": "7_1786624790326845440"
+                        }
+                    },
+                    "media_url_https": "https://pbs.twimg.com/ext_tw_video_thumb/1786624790326845440/pu/img/aMl3XT7_x1_6uLjf.jpg",
+                    "original_info": {
+                        "focus_rects": [],
+                        "height": 1350,
+                        "width": 1080
+                    },
+                    "sizes": {
+                        "large": {
+                            "h": 1350,
+                            "w": 1080
+                        }
+                    },
+                    "type": "video",
+                    "url": "https://t.co/J31hJfWd7l",
+                    "video_info": {
+                        "aspect_ratio": [
+                            4,
+                            5
+                        ],
+                        "duration_millis": 26233,
+                        "variants": [
+                            {
+                                "content_type": "application/x-mpegURL",
+                                "url": "https://video-s.twimg.com/ext_tw_video/1786624790326845440/pu/pl/Syjwf6_hen4ZX8K5.m3u8?tag=12"
+                            },
+                            {
+                                "bitrate": 632000,
+                                "content_type": "video/mp4",
+                                "url": "https://video-s.twimg.com/ext_tw_video/1786624790326845440/pu/vid/avc1/320x400/vK3toM1jmkPhbbQh.mp4?tag=12"
+                            },
+                            {
+                                "bitrate": 950000,
+                                "content_type": "video/mp4",
+                                "url": "https://video-s.twimg.com/ext_tw_video/1786624790326845440/pu/vid/avc1/480x600/EVTWiYx5Wy8iRm9C.mp4?tag=12"
+                            },
+                            {
+                                "bitrate": 2176000,
+                                "content_type": "video/mp4",
+                                "url": "https://video-s.twimg.com/ext_tw_video/1786624790326845440/pu/vid/avc1/720x900/5gZfy4-WZUS76I05.mp4?tag=12"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "card": null,
+        "place": {},
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        172,
+                        184
+                    ],
+                    "text": "LifeAtTitan"
+                },
+                {
+                    "indices": [
+                        185,
+                        195
+                    ],
+                    "text": "Titanians"
+                },
+                {
+                    "indices": [
+                        196,
+                        212
+                    ],
+                    "text": "quarterlyreport"
+                },
+                {
+                    "indices": [
+                        213,
+                        230
+                    ],
+                    "text": "quarterlyresults"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1753059731898315174",
+        "url": "https://x.com/TitanCompanyLtd/status/1753059731898315174",
+        "twitterUrl": "https://twitter.com/TitanCompanyLtd/status/1753059731898315174",
+        "text": "Another quarter, another reason to celebrate! \n\nMarking consolidated growth and steady progress within divisions, our MD, Mr. @venkyckv said, \"We will continue to pursue market share growth and are actively investing in capabilities across all our business segments.\" \n\n(1/2) https://t.co/7HtqyU5T7m",
+        "source": "Twitter for iPhone",
+        "retweetCount": 0,
+        "replyCount": 2,
+        "likeCount": 6,
+        "quoteCount": 0,
+        "viewCount": 335,
+        "createdAt": "Thu Feb 01 14:16:25 +0000 2024",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1753059731898315174",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "TitanCompanyLtd",
+            "url": "https://x.com/TitanCompanyLtd",
+            "twitterUrl": "https://twitter.com/TitanCompanyLtd",
+            "id": "993353389034557440",
+            "name": "Titan Company Limited",
+            "isVerified": false,
+            "isBlueVerified": true,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/1001762703415783424/m6454fgb_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/993353389034557440/1752669607",
+            "description": "",
+            "location": "",
+            "followers": 5387,
+            "following": 32,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Mon May 07 04:54:38 +0000 2018",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 145,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 1072,
+            "statusesCount": 2343,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [
+                "1920320251356422631"
+            ],
+            "profile_bio": {
+                "description": "A strong portfolio of brands and industry-leading capabilities, Titan is driven by the values and ethos of the Tata Group. Visit - https://t.co/OC9aEIVOLc",
+                "entities": {
+                    "description": {
+                        "urls": [
+                            {
+                                "display_url": "titancompany.in",
+                                "expanded_url": "http://titancompany.in",
+                                "indices": [
+                                    131,
+                                    154
+                                ],
+                                "url": "https://t.co/OC9aEIVOLc"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "titancompany.in",
+                                "expanded_url": "http://www.titancompany.in",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/qteKCqTylA"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {
+            "media": [
+                {
+                    "additional_media_info": {
+                        "monetizable": false
+                    },
+                    "display_url": "pic.twitter.com/7HtqyU5T7m",
+                    "expanded_url": "https://twitter.com/TitanCompanyLtd/status/1753059731898315174/video/1",
+                    "ext_media_availability": {
+                        "status": "Available"
+                    },
+                    "id_str": "1753057508426452992",
+                    "indices": [
+                        276,
+                        299
+                    ],
+                    "media_key": "7_1753057508426452992",
+                    "media_results": {
+                        "id": "QXBpTWVkaWFSZXN1bHRzOgwAAwoAARhUHIQMlxAACgACGFQeib3XMaYAAA==",
+                        "result": {
+                            "__typename": "ApiMedia",
+                            "id": "QXBpTWVkaWE6DAADCgABGFQchAyXEAAKAAIYVB6JvdcxpgAA",
+                            "media_key": "7_1753057508426452992"
+                        }
+                    },
+                    "media_url_https": "https://pbs.twimg.com/ext_tw_video_thumb/1753057508426452992/pu/img/OrGzioMukn_fwmXx.jpg",
+                    "original_info": {
+                        "focus_rects": [],
+                        "height": 1350,
+                        "width": 1080
+                    },
+                    "sizes": {
+                        "large": {
+                            "h": 1350,
+                            "w": 1080
+                        }
+                    },
+                    "type": "video",
+                    "url": "https://t.co/7HtqyU5T7m",
+                    "video_info": {
+                        "aspect_ratio": [
+                            4,
+                            5
+                        ],
+                        "duration_millis": 26400,
+                        "variants": [
+                            {
+                                "content_type": "application/x-mpegURL",
+                                "url": "https://video-s.twimg.com/ext_tw_video/1753057508426452992/pu/pl/fAjJkFqDSgDpJowO.m3u8?tag=12"
+                            },
+                            {
+                                "bitrate": 632000,
+                                "content_type": "video/mp4",
+                                "url": "https://video-s.twimg.com/ext_tw_video/1753057508426452992/pu/vid/avc1/320x400/ljkYGpDBjJS7lbtq.mp4?tag=12"
+                            },
+                            {
+                                "bitrate": 950000,
+                                "content_type": "video/mp4",
+                                "url": "https://video-s.twimg.com/ext_tw_video/1753057508426452992/pu/vid/avc1/480x600/k3CvYKu5bv1zzlSG.mp4?tag=12"
+                            },
+                            {
+                                "bitrate": 2176000,
+                                "content_type": "video/mp4",
+                                "url": "https://video-s.twimg.com/ext_tw_video/1753057508426452992/pu/vid/avc1/720x900/vVtyeoo_tSlT2eMa.mp4?tag=12"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "card": null,
+        "place": {},
+        "entities": {
+            "user_mentions": [
+                {
+                    "id_str": "483822999",
+                    "indices": [
+                        126,
+                        135
+                    ],
+                    "name": "C K Venkataraman",
+                    "screen_name": "venkyckv"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1737809109951606787",
+        "url": "https://x.com/TitanCompanyLtd/status/1737809109951606787",
+        "twitterUrl": "https://twitter.com/TitanCompanyLtd/status/1737809109951606787",
+        "text": "With innovative courses like Mobile Repair, Tailoring, and more, those from tribal or rural backgrounds can step into urban living with ease, esteem and exponential earnings. \n\n#TitanLeAP #SVYM #SwamiVivekananda #Skilling\n\n(2/n)",
+        "source": "Twitter for iPhone",
+        "retweetCount": 0,
+        "replyCount": 1,
+        "likeCount": 0,
+        "quoteCount": 0,
+        "viewCount": 24,
+        "createdAt": "Thu Dec 21 12:15:53 +0000 2023",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": true,
+        "inReplyToId": "1737808844234080438",
+        "conversationId": "1737808844234080438",
+        "inReplyToUserId": "993353389034557440",
+        "inReplyToUsername": "TitanCompanyLtd",
+        "author": {
+            "type": "user",
+            "userName": "TitanCompanyLtd",
+            "url": "https://x.com/TitanCompanyLtd",
+            "twitterUrl": "https://twitter.com/TitanCompanyLtd",
+            "id": "993353389034557440",
+            "name": "Titan Company Limited",
+            "isVerified": false,
+            "isBlueVerified": true,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/1001762703415783424/m6454fgb_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/993353389034557440/1752669607",
+            "description": "",
+            "location": "",
+            "followers": 5387,
+            "following": 32,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Mon May 07 04:54:38 +0000 2018",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 145,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 1072,
+            "statusesCount": 2343,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [
+                "1920320251356422631"
+            ],
+            "profile_bio": {
+                "description": "A strong portfolio of brands and industry-leading capabilities, Titan is driven by the values and ethos of the Tata Group. Visit - https://t.co/OC9aEIVOLc",
+                "entities": {
+                    "description": {
+                        "urls": [
+                            {
+                                "display_url": "titancompany.in",
+                                "expanded_url": "http://titancompany.in",
+                                "indices": [
+                                    131,
+                                    154
+                                ],
+                                "url": "https://t.co/OC9aEIVOLc"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "titancompany.in",
+                                "expanded_url": "http://www.titancompany.in",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/qteKCqTylA"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": null,
+        "place": {},
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        177,
+                        187
+                    ],
+                    "text": "TitanLeAP"
+                },
+                {
+                    "indices": [
+                        188,
+                        193
+                    ],
+                    "text": "SVYM"
+                },
+                {
+                    "indices": [
+                        194,
+                        211
+                    ],
+                    "text": "SwamiVivekananda"
+                },
+                {
+                    "indices": [
+                        212,
+                        221
+                    ],
+                    "text": "Skilling"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1720443012638282111",
+        "url": "https://x.com/TitanCompanyLtd/status/1720443012638282111",
+        "twitterUrl": "https://twitter.com/TitanCompanyLtd/status/1720443012638282111",
+        "text": "Going places and how!\n\nWe keep soaring and making a difference in the lives of our customers! Proudly presenting our figures from the 2nd quarter of 2023-24.\n\n#Titan #quarterlyresults https://t.co/j9GQnVLIzG",
+        "source": "Twitter for iPhone",
+        "retweetCount": 5,
+        "replyCount": 0,
+        "likeCount": 18,
+        "quoteCount": 1,
+        "viewCount": 903,
+        "createdAt": "Fri Nov 03 14:09:13 +0000 2023",
+        "lang": "en",
+        "bookmarkCount": 1,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1720443012638282111",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "TitanCompanyLtd",
+            "url": "https://x.com/TitanCompanyLtd",
+            "twitterUrl": "https://twitter.com/TitanCompanyLtd",
+            "id": "993353389034557440",
+            "name": "Titan Company Limited",
+            "isVerified": false,
+            "isBlueVerified": true,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/1001762703415783424/m6454fgb_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/993353389034557440/1752669607",
+            "description": "",
+            "location": "",
+            "followers": 5387,
+            "following": 32,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Mon May 07 04:54:38 +0000 2018",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 145,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 1072,
+            "statusesCount": 2343,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [
+                "1920320251356422631"
+            ],
+            "profile_bio": {
+                "description": "A strong portfolio of brands and industry-leading capabilities, Titan is driven by the values and ethos of the Tata Group. Visit - https://t.co/OC9aEIVOLc",
+                "entities": {
+                    "description": {
+                        "urls": [
+                            {
+                                "display_url": "titancompany.in",
+                                "expanded_url": "http://titancompany.in",
+                                "indices": [
+                                    131,
+                                    154
+                                ],
+                                "url": "https://t.co/OC9aEIVOLc"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "titancompany.in",
+                                "expanded_url": "http://www.titancompany.in",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/qteKCqTylA"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {
+            "media": [
+                {
+                    "additional_media_info": {
+                        "monetizable": false
+                    },
+                    "display_url": "pic.twitter.com/j9GQnVLIzG",
+                    "expanded_url": "https://twitter.com/TitanCompanyLtd/status/1720443012638282111/video/1",
+                    "ext_media_availability": {
+                        "status": "Available"
+                    },
+                    "id_str": "1720442250864603136",
+                    "indices": [
+                        184,
+                        207
+                    ],
+                    "media_key": "7_1720442250864603136",
+                    "media_results": {
+                        "id": "QXBpTWVkaWFSZXN1bHRzOgwAAwoAARfgPRyjW7AACgACF+A9zgCbkX8AAA==",
+                        "result": {
+                            "__typename": "ApiMedia",
+                            "id": "QXBpTWVkaWE6DAADCgABF+A9HKNbsAAKAAIX4D3OAJuRfwAA",
+                            "media_key": "7_1720442250864603136"
+                        }
+                    },
+                    "media_url_https": "https://pbs.twimg.com/ext_tw_video_thumb/1720442250864603136/pu/img/Ouu2QfKHZhjnI-Vp.jpg",
+                    "original_info": {
+                        "focus_rects": [],
+                        "height": 1080,
+                        "width": 1080
+                    },
+                    "sizes": {
+                        "large": {
+                            "h": 1080,
+                            "w": 1080
+                        }
+                    },
+                    "type": "video",
+                    "url": "https://t.co/j9GQnVLIzG",
+                    "video_info": {
+                        "aspect_ratio": [
+                            1,
+                            1
+                        ],
+                        "duration_millis": 14347,
+                        "variants": [
+                            {
+                                "content_type": "application/x-mpegURL",
+                                "url": "https://video-s.twimg.com/ext_tw_video/1720442250864603136/pu/pl/KuTdHfvYRRlly4IV.m3u8?tag=12"
+                            },
+                            {
+                                "bitrate": 432000,
+                                "content_type": "video/mp4",
+                                "url": "https://video-s.twimg.com/ext_tw_video/1720442250864603136/pu/vid/avc1/320x320/pINXjw5Z6819Jn3J.mp4?tag=12"
+                            },
+                            {
+                                "bitrate": 832000,
+                                "content_type": "video/mp4",
+                                "url": "https://video-s.twimg.com/ext_tw_video/1720442250864603136/pu/vid/avc1/540x540/LkfYI7GRjXzwcZR_.mp4?tag=12"
+                            },
+                            {
+                                "bitrate": 1280000,
+                                "content_type": "video/mp4",
+                                "url": "https://video-s.twimg.com/ext_tw_video/1720442250864603136/pu/vid/avc1/720x720/ZPr6k40eg1l4RJYP.mp4?tag=12"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "card": null,
+        "place": {},
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        159,
+                        165
+                    ],
+                    "text": "Titan"
+                },
+                {
+                    "indices": [
+                        166,
+                        183
+                    ],
+                    "text": "quarterlyresults"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1686764502698631168",
+        "url": "https://x.com/TitanCompanyLtd/status/1686764502698631168",
+        "twitterUrl": "https://twitter.com/TitanCompanyLtd/status/1686764502698631168",
+        "text": "Titan records a remarkable quarter and achieves strong results and steady growth by being the choice\u00a0of\u00a0consumers. https://t.co/ZdMiaW4Cln",
+        "source": "Twitter for iPhone",
+        "retweetCount": 4,
+        "replyCount": 1,
+        "likeCount": 27,
+        "quoteCount": 1,
+        "viewCount": 1712,
+        "createdAt": "Wed Aug 02 15:42:50 +0000 2023",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1686764502698631168",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "TitanCompanyLtd",
+            "url": "https://x.com/TitanCompanyLtd",
+            "twitterUrl": "https://twitter.com/TitanCompanyLtd",
+            "id": "993353389034557440",
+            "name": "Titan Company Limited",
+            "isVerified": false,
+            "isBlueVerified": true,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/1001762703415783424/m6454fgb_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/993353389034557440/1752669607",
+            "description": "",
+            "location": "",
+            "followers": 5387,
+            "following": 32,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Mon May 07 04:54:38 +0000 2018",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 145,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 1072,
+            "statusesCount": 2343,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [
+                "1920320251356422631"
+            ],
+            "profile_bio": {
+                "description": "A strong portfolio of brands and industry-leading capabilities, Titan is driven by the values and ethos of the Tata Group. Visit - https://t.co/OC9aEIVOLc",
+                "entities": {
+                    "description": {
+                        "urls": [
+                            {
+                                "display_url": "titancompany.in",
+                                "expanded_url": "http://titancompany.in",
+                                "indices": [
+                                    131,
+                                    154
+                                ],
+                                "url": "https://t.co/OC9aEIVOLc"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "titancompany.in",
+                                "expanded_url": "http://www.titancompany.in",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/qteKCqTylA"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {
+            "media": [
+                {
+                    "display_url": "pic.twitter.com/ZdMiaW4Cln",
+                    "expanded_url": "https://twitter.com/TitanCompanyLtd/status/1686764502698631168/photo/1",
+                    "ext_media_availability": {
+                        "status": "Available"
+                    },
+                    "features": {
+                        "large": {
+                            "faces": [
+                                {
+                                    "h": 166,
+                                    "w": 166,
+                                    "x": 737,
+                                    "y": 583
+                                }
+                            ]
+                        },
+                        "orig": {
+                            "faces": [
+                                {
+                                    "h": 166,
+                                    "w": 166,
+                                    "x": 737,
+                                    "y": 583
+                                }
+                            ]
+                        }
+                    },
+                    "id_str": "1686764491432738818",
+                    "indices": [
+                        115,
+                        138
+                    ],
+                    "media_key": "3_1686764491432738818",
+                    "media_results": {
+                        "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAARdol147l0ACCgACF2iXYNsXIAAAAA==",
+                        "result": {
+                            "__typename": "ApiMedia",
+                            "id": "QXBpTWVkaWE6DAABCgABF2iXXjuXQAIKAAIXaJdg2xcgAAAA",
+                            "media_key": "3_1686764491432738818"
+                        }
+                    },
+                    "media_url_https": "https://pbs.twimg.com/media/F2iXXjuXQAIRMCS.jpg",
+                    "original_info": {
+                        "focus_rects": [
+                            {
+                                "h": 605,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 947,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 540,
+                                "x": 81,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 0
+                            }
+                        ],
+                        "height": 1080,
+                        "width": 1080
+                    },
+                    "sizes": {
+                        "large": {
+                            "h": 1080,
+                            "w": 1080
+                        }
+                    },
+                    "type": "photo",
+                    "url": "https://t.co/ZdMiaW4Cln"
+                },
+                {
+                    "display_url": "pic.twitter.com/ZdMiaW4Cln",
+                    "expanded_url": "https://twitter.com/TitanCompanyLtd/status/1686764502698631168/photo/1",
+                    "ext_media_availability": {
+                        "status": "Available"
+                    },
+                    "features": {
+                        "large": {},
+                        "orig": {}
+                    },
+                    "id_str": "1686764491436904448",
+                    "indices": [
+                        115,
+                        138
+                    ],
+                    "media_key": "3_1686764491436904448",
+                    "media_results": {
+                        "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAARdol1471tAACgACF2iXYNsXIAAAAA==",
+                        "result": {
+                            "__typename": "ApiMedia",
+                            "id": "QXBpTWVkaWE6DAABCgABF2iXXjvW0AAKAAIXaJdg2xcgAAAA",
+                            "media_key": "3_1686764491436904448"
+                        }
+                    },
+                    "media_url_https": "https://pbs.twimg.com/media/F2iXXjvW0AAIwSy.jpg",
+                    "original_info": {
+                        "focus_rects": [
+                            {
+                                "h": 672,
+                                "w": 1200,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1200,
+                                "w": 1200,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1200,
+                                "w": 1053,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1200,
+                                "w": 600,
+                                "x": 90,
+                                "y": 0
+                            },
+                            {
+                                "h": 1200,
+                                "w": 1200,
+                                "x": 0,
+                                "y": 0
+                            }
+                        ],
+                        "height": 1200,
+                        "width": 1200
+                    },
+                    "sizes": {
+                        "large": {
+                            "h": 1200,
+                            "w": 1200
+                        }
+                    },
+                    "type": "photo",
+                    "url": "https://t.co/ZdMiaW4Cln"
+                }
+            ]
+        },
+        "card": null,
+        "place": {},
+        "entities": {},
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1653731700298612736",
+        "url": "https://x.com/TitanCompanyLtd/status/1653731700298612736",
+        "twitterUrl": "https://twitter.com/TitanCompanyLtd/status/1653731700298612736",
+        "text": "Titan Company recorded a strong performance in Q4, reaffirming our position as the top pick amongst\u00a0consumers. https://t.co/eNebIfGiMr",
+        "source": "Twitter for iPhone",
+        "retweetCount": 4,
+        "replyCount": 0,
+        "likeCount": 27,
+        "quoteCount": 1,
+        "viewCount": 1095,
+        "createdAt": "Wed May 03 12:02:16 +0000 2023",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1653731700298612736",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "TitanCompanyLtd",
+            "url": "https://x.com/TitanCompanyLtd",
+            "twitterUrl": "https://twitter.com/TitanCompanyLtd",
+            "id": "993353389034557440",
+            "name": "Titan Company Limited",
+            "isVerified": false,
+            "isBlueVerified": true,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/1001762703415783424/m6454fgb_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/993353389034557440/1752669607",
+            "description": "",
+            "location": "",
+            "followers": 5387,
+            "following": 32,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Mon May 07 04:54:38 +0000 2018",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 145,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 1072,
+            "statusesCount": 2343,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [
+                "1920320251356422631"
+            ],
+            "profile_bio": {
+                "description": "A strong portfolio of brands and industry-leading capabilities, Titan is driven by the values and ethos of the Tata Group. Visit - https://t.co/OC9aEIVOLc",
+                "entities": {
+                    "description": {
+                        "urls": [
+                            {
+                                "display_url": "titancompany.in",
+                                "expanded_url": "http://titancompany.in",
+                                "indices": [
+                                    131,
+                                    154
+                                ],
+                                "url": "https://t.co/OC9aEIVOLc"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "titancompany.in",
+                                "expanded_url": "http://www.titancompany.in",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/qteKCqTylA"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {
+            "media": [
+                {
+                    "display_url": "pic.twitter.com/eNebIfGiMr",
+                    "expanded_url": "https://twitter.com/TitanCompanyLtd/status/1653731700298612736/photo/1",
+                    "ext_media_availability": {
+                        "status": "Available"
+                    },
+                    "features": {
+                        "large": {},
+                        "orig": {}
+                    },
+                    "id_str": "1653731622615908353",
+                    "indices": [
+                        111,
+                        134
+                    ],
+                    "media_key": "3_1653731622615908353",
+                    "media_results": {
+                        "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAARbzPCYf2gABCgACFvM8ODYaAAAAAA==",
+                        "result": {
+                            "__typename": "ApiMedia",
+                            "id": "QXBpTWVkaWE6DAABCgABFvM8Jh/aAAEKAAIW8zw4NhoAAAAA",
+                            "media_key": "3_1653731622615908353"
+                        }
+                    },
+                    "media_url_https": "https://pbs.twimg.com/media/FvM8Jh_aAAENfV3.jpg",
+                    "original_info": {
+                        "focus_rects": [
+                            {
+                                "h": 714,
+                                "w": 1275,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1275,
+                                "w": 1275,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1454,
+                                "w": 1275,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1650,
+                                "w": 825,
+                                "x": 225,
+                                "y": 0
+                            },
+                            {
+                                "h": 1650,
+                                "w": 1275,
+                                "x": 0,
+                                "y": 0
+                            }
+                        ],
+                        "height": 1650,
+                        "width": 1275
+                    },
+                    "sizes": {
+                        "large": {
+                            "h": 1650,
+                            "w": 1275
+                        }
+                    },
+                    "type": "photo",
+                    "url": "https://t.co/eNebIfGiMr"
+                },
+                {
+                    "display_url": "pic.twitter.com/eNebIfGiMr",
+                    "expanded_url": "https://twitter.com/TitanCompanyLtd/status/1653731700298612736/photo/1",
+                    "ext_media_availability": {
+                        "status": "Available"
+                    },
+                    "features": {
+                        "large": {},
+                        "orig": {}
+                    },
+                    "id_str": "1653731642123616258",
+                    "indices": [
+                        111,
+                        134
+                    ],
+                    "media_key": "3_1653731642123616258",
+                    "media_results": {
+                        "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAARbzPCqqmgACCgACFvM8ODYaAAAAAA==",
+                        "result": {
+                            "__typename": "ApiMedia",
+                            "id": "QXBpTWVkaWE6DAABCgABFvM8KqqaAAIKAAIW8zw4NhoAAAAA",
+                            "media_key": "3_1653731642123616258"
+                        }
+                    },
+                    "media_url_https": "https://pbs.twimg.com/media/FvM8KqqaAAIXQda.jpg",
+                    "original_info": {
+                        "focus_rects": [
+                            {
+                                "h": 714,
+                                "w": 1275,
+                                "x": 0,
+                                "y": 261
+                            },
+                            {
+                                "h": 1275,
+                                "w": 1275,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1454,
+                                "w": 1275,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1650,
+                                "w": 825,
+                                "x": 225,
+                                "y": 0
+                            },
+                            {
+                                "h": 1650,
+                                "w": 1275,
+                                "x": 0,
+                                "y": 0
+                            }
+                        ],
+                        "height": 1650,
+                        "width": 1275
+                    },
+                    "sizes": {
+                        "large": {
+                            "h": 1650,
+                            "w": 1275
+                        }
+                    },
+                    "type": "photo",
+                    "url": "https://t.co/eNebIfGiMr"
+                },
+                {
+                    "display_url": "pic.twitter.com/eNebIfGiMr",
+                    "expanded_url": "https://twitter.com/TitanCompanyLtd/status/1653731700298612736/photo/1",
+                    "ext_media_availability": {
+                        "status": "Available"
+                    },
+                    "features": {
+                        "large": {},
+                        "orig": {}
+                    },
+                    "id_str": "1653731657588043776",
+                    "indices": [
+                        111,
+                        134
+                    ],
+                    "media_key": "3_1653731657588043776",
+                    "media_results": {
+                        "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAARbzPC5EWnAACgACFvM8ODYaAAAAAA==",
+                        "result": {
+                            "__typename": "ApiMedia",
+                            "id": "QXBpTWVkaWE6DAABCgABFvM8LkRacAAKAAIW8zw4NhoAAAAA",
+                            "media_key": "3_1653731657588043776"
+                        }
+                    },
+                    "media_url_https": "https://pbs.twimg.com/media/FvM8LkRacAARZT5.jpg",
+                    "original_info": {
+                        "focus_rects": [
+                            {
+                                "h": 714,
+                                "w": 1275,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1275,
+                                "w": 1275,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1454,
+                                "w": 1275,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1650,
+                                "w": 825,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1650,
+                                "w": 1275,
+                                "x": 0,
+                                "y": 0
+                            }
+                        ],
+                        "height": 1650,
+                        "width": 1275
+                    },
+                    "sizes": {
+                        "large": {
+                            "h": 1650,
+                            "w": 1275
+                        }
+                    },
+                    "type": "photo",
+                    "url": "https://t.co/eNebIfGiMr"
+                }
+            ]
+        },
+        "card": null,
+        "place": {},
+        "entities": {},
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1621369026944577536",
+        "url": "https://x.com/TitanCompanyLtd/status/1621369026944577536",
+        "twitterUrl": "https://twitter.com/TitanCompanyLtd/status/1621369026944577536",
+        "text": "Titan recorded a robust quarter by being the choice of consumers once again. https://t.co/wu2yfErh5O",
+        "source": "Twitter for iPhone",
+        "retweetCount": 4,
+        "replyCount": 1,
+        "likeCount": 29,
+        "quoteCount": 0,
+        "viewCount": 1271,
+        "createdAt": "Fri Feb 03 04:44:34 +0000 2023",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1621369026944577536",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "TitanCompanyLtd",
+            "url": "https://x.com/TitanCompanyLtd",
+            "twitterUrl": "https://twitter.com/TitanCompanyLtd",
+            "id": "993353389034557440",
+            "name": "Titan Company Limited",
+            "isVerified": false,
+            "isBlueVerified": true,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/1001762703415783424/m6454fgb_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/993353389034557440/1752669607",
+            "description": "",
+            "location": "",
+            "followers": 5387,
+            "following": 32,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Mon May 07 04:54:38 +0000 2018",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 145,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 1072,
+            "statusesCount": 2343,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [
+                "1920320251356422631"
+            ],
+            "profile_bio": {
+                "description": "A strong portfolio of brands and industry-leading capabilities, Titan is driven by the values and ethos of the Tata Group. Visit - https://t.co/OC9aEIVOLc",
+                "entities": {
+                    "description": {
+                        "urls": [
+                            {
+                                "display_url": "titancompany.in",
+                                "expanded_url": "http://titancompany.in",
+                                "indices": [
+                                    131,
+                                    154
+                                ],
+                                "url": "https://t.co/OC9aEIVOLc"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "titancompany.in",
+                                "expanded_url": "http://www.titancompany.in",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/qteKCqTylA"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {
+            "media": [
+                {
+                    "display_url": "pic.twitter.com/wu2yfErh5O",
+                    "expanded_url": "https://twitter.com/TitanCompanyLtd/status/1621369026944577536/photo/1",
+                    "ext_media_availability": {
+                        "status": "Available"
+                    },
+                    "features": {
+                        "large": {},
+                        "orig": {}
+                    },
+                    "id_str": "1621368885336481793",
+                    "indices": [
+                        77,
+                        100
+                    ],
+                    "media_key": "3_1621368885336481793",
+                    "media_results": {
+                        "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAARaAQmksWiABCgACFoBCiiTaMAAAAA==",
+                        "result": {
+                            "__typename": "ApiMedia",
+                            "id": "QXBpTWVkaWE6DAABCgABFoBCaSxaIAEKAAIWgEKKJNowAAAA",
+                            "media_key": "3_1621368885336481793"
+                        }
+                    },
+                    "media_url_https": "https://pbs.twimg.com/media/FoBCaSxaIAEZWhf.jpg",
+                    "original_info": {
+                        "focus_rects": [
+                            {
+                                "h": 714,
+                                "w": 1275,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1275,
+                                "w": 1275,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1454,
+                                "w": 1275,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1650,
+                                "w": 825,
+                                "x": 225,
+                                "y": 0
+                            },
+                            {
+                                "h": 1650,
+                                "w": 1275,
+                                "x": 0,
+                                "y": 0
+                            }
+                        ],
+                        "height": 1650,
+                        "width": 1275
+                    },
+                    "sizes": {
+                        "large": {
+                            "h": 1650,
+                            "w": 1275
+                        }
+                    },
+                    "type": "photo",
+                    "url": "https://t.co/wu2yfErh5O"
+                },
+                {
+                    "display_url": "pic.twitter.com/wu2yfErh5O",
+                    "expanded_url": "https://twitter.com/TitanCompanyLtd/status/1621369026944577536/photo/1",
+                    "ext_media_availability": {
+                        "status": "Available"
+                    },
+                    "features": {
+                        "large": {},
+                        "orig": {}
+                    },
+                    "id_str": "1621368914642087936",
+                    "indices": [
+                        77,
+                        100
+                    ],
+                    "media_key": "3_1621368914642087936",
+                    "media_results": {
+                        "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAARaAQm//GjAACgACFoBCiiTaMAAAAA==",
+                        "result": {
+                            "__typename": "ApiMedia",
+                            "id": "QXBpTWVkaWE6DAABCgABFoBCb/8aMAAKAAIWgEKKJNowAAAA",
+                            "media_key": "3_1621368914642087936"
+                        }
+                    },
+                    "media_url_https": "https://pbs.twimg.com/media/FoBCb_8aMAAOvcM.jpg",
+                    "original_info": {
+                        "focus_rects": [
+                            {
+                                "h": 714,
+                                "w": 1275,
+                                "x": 0,
+                                "y": 426
+                            },
+                            {
+                                "h": 1275,
+                                "w": 1275,
+                                "x": 0,
+                                "y": 146
+                            },
+                            {
+                                "h": 1454,
+                                "w": 1275,
+                                "x": 0,
+                                "y": 56
+                            },
+                            {
+                                "h": 1650,
+                                "w": 825,
+                                "x": 450,
+                                "y": 0
+                            },
+                            {
+                                "h": 1650,
+                                "w": 1275,
+                                "x": 0,
+                                "y": 0
+                            }
+                        ],
+                        "height": 1650,
+                        "width": 1275
+                    },
+                    "sizes": {
+                        "large": {
+                            "h": 1650,
+                            "w": 1275
+                        }
+                    },
+                    "type": "photo",
+                    "url": "https://t.co/wu2yfErh5O"
+                },
+                {
+                    "display_url": "pic.twitter.com/wu2yfErh5O",
+                    "expanded_url": "https://twitter.com/TitanCompanyLtd/status/1621369026944577536/photo/1",
+                    "ext_media_availability": {
+                        "status": "Available"
+                    },
+                    "features": {
+                        "large": {},
+                        "orig": {}
+                    },
+                    "id_str": "1621368937618472962",
+                    "indices": [
+                        77,
+                        100
+                    ],
+                    "media_key": "3_1621368937618472962",
+                    "media_results": {
+                        "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAARaAQnVYmgACCgACFoBCiiTaMAAAAA==",
+                        "result": {
+                            "__typename": "ApiMedia",
+                            "id": "QXBpTWVkaWE6DAABCgABFoBCdViaAAIKAAIWgEKKJNowAAAA",
+                            "media_key": "3_1621368937618472962"
+                        }
+                    },
+                    "media_url_https": "https://pbs.twimg.com/media/FoBCdViaAAIN3sR.jpg",
+                    "original_info": {
+                        "focus_rects": [
+                            {
+                                "h": 714,
+                                "w": 1275,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1275,
+                                "w": 1275,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1454,
+                                "w": 1275,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1650,
+                                "w": 825,
+                                "x": 206,
+                                "y": 0
+                            },
+                            {
+                                "h": 1650,
+                                "w": 1275,
+                                "x": 0,
+                                "y": 0
+                            }
+                        ],
+                        "height": 1650,
+                        "width": 1275
+                    },
+                    "sizes": {
+                        "large": {
+                            "h": 1650,
+                            "w": 1275
+                        }
+                    },
+                    "type": "photo",
+                    "url": "https://t.co/wu2yfErh5O"
+                }
+            ]
+        },
+        "card": null,
+        "place": {},
+        "entities": {},
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1588488530074173440",
+        "url": "https://x.com/TitanCompanyLtd/status/1588488530074173440",
+        "twitterUrl": "https://twitter.com/TitanCompanyLtd/status/1588488530074173440",
+        "text": "Titan recorded a robust quarter by being the choice of consumers. https://t.co/mKg0upnOXX",
+        "source": "Twitter for iPhone",
+        "retweetCount": 11,
+        "replyCount": 0,
+        "likeCount": 54,
+        "quoteCount": 1,
+        "viewCount": 0,
+        "createdAt": "Fri Nov 04 11:09:12 +0000 2022",
+        "lang": "en",
+        "bookmarkCount": 1,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1588488530074173440",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "TitanCompanyLtd",
+            "url": "https://x.com/TitanCompanyLtd",
+            "twitterUrl": "https://twitter.com/TitanCompanyLtd",
+            "id": "993353389034557440",
+            "name": "Titan Company Limited",
+            "isVerified": false,
+            "isBlueVerified": true,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/1001762703415783424/m6454fgb_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/993353389034557440/1752669607",
+            "description": "",
+            "location": "",
+            "followers": 5387,
+            "following": 32,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Mon May 07 04:54:38 +0000 2018",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 145,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 1072,
+            "statusesCount": 2343,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [
+                "1920320251356422631"
+            ],
+            "profile_bio": {
+                "description": "A strong portfolio of brands and industry-leading capabilities, Titan is driven by the values and ethos of the Tata Group. Visit - https://t.co/OC9aEIVOLc",
+                "entities": {
+                    "description": {
+                        "urls": [
+                            {
+                                "display_url": "titancompany.in",
+                                "expanded_url": "http://titancompany.in",
+                                "indices": [
+                                    131,
+                                    154
+                                ],
+                                "url": "https://t.co/OC9aEIVOLc"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "titancompany.in",
+                                "expanded_url": "http://www.titancompany.in",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/qteKCqTylA"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {
+            "media": [
+                {
+                    "display_url": "pic.twitter.com/mKg0upnOXX",
+                    "expanded_url": "https://twitter.com/TitanCompanyLtd/status/1588488530074173440/photo/1",
+                    "ext_media_availability": {
+                        "status": "Available"
+                    },
+                    "features": {
+                        "large": {},
+                        "orig": {}
+                    },
+                    "id_str": "1588488510709059584",
+                    "indices": [
+                        66,
+                        89
+                    ],
+                    "media_key": "3_1588488510709059584",
+                    "media_results": {
+                        "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAARYLceJimlAACgACFgtx5uTagAAAAA==",
+                        "result": {
+                            "__typename": "ApiMedia",
+                            "id": "QXBpTWVkaWE6DAABCgABFgtx4mKaUAAKAAIWC3Hm5NqAAAAA",
+                            "media_key": "3_1588488510709059584"
+                        }
+                    },
+                    "media_url_https": "https://pbs.twimg.com/media/Fgtx4mKaUAAZ9xq.jpg",
+                    "original_info": {
+                        "focus_rects": [
+                            {
+                                "h": 714,
+                                "w": 1275,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1275,
+                                "w": 1275,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1454,
+                                "w": 1275,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1650,
+                                "w": 825,
+                                "x": 450,
+                                "y": 0
+                            },
+                            {
+                                "h": 1650,
+                                "w": 1275,
+                                "x": 0,
+                                "y": 0
+                            }
+                        ],
+                        "height": 1650,
+                        "width": 1275
+                    },
+                    "sizes": {
+                        "large": {
+                            "h": 1650,
+                            "w": 1275
+                        }
+                    },
+                    "type": "photo",
+                    "url": "https://t.co/mKg0upnOXX"
+                },
+                {
+                    "display_url": "pic.twitter.com/mKg0upnOXX",
+                    "expanded_url": "https://twitter.com/TitanCompanyLtd/status/1588488530074173440/photo/1",
+                    "ext_media_availability": {
+                        "status": "Available"
+                    },
+                    "features": {
+                        "large": {},
+                        "orig": {}
+                    },
+                    "id_str": "1588488510709063680",
+                    "indices": [
+                        66,
+                        89
+                    ],
+                    "media_key": "3_1588488510709063680",
+                    "media_results": {
+                        "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAARYLceJimmAACgACFgtx5uTagAAAAA==",
+                        "result": {
+                            "__typename": "ApiMedia",
+                            "id": "QXBpTWVkaWE6DAABCgABFgtx4mKaYAAKAAIWC3Hm5NqAAAAA",
+                            "media_key": "3_1588488510709063680"
+                        }
+                    },
+                    "media_url_https": "https://pbs.twimg.com/media/Fgtx4mKaYAAonXE.jpg",
+                    "original_info": {
+                        "focus_rects": [
+                            {
+                                "h": 714,
+                                "w": 1275,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1275,
+                                "w": 1275,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1454,
+                                "w": 1275,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1650,
+                                "w": 825,
+                                "x": 206,
+                                "y": 0
+                            },
+                            {
+                                "h": 1650,
+                                "w": 1275,
+                                "x": 0,
+                                "y": 0
+                            }
+                        ],
+                        "height": 1650,
+                        "width": 1275
+                    },
+                    "sizes": {
+                        "large": {
+                            "h": 1650,
+                            "w": 1275
+                        }
+                    },
+                    "type": "photo",
+                    "url": "https://t.co/mKg0upnOXX"
+                }
+            ]
+        },
+        "card": null,
+        "place": {},
+        "entities": {},
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1489190286488080387",
+        "url": "https://x.com/TitanCompanyLtd/status/1489190286488080387",
+        "twitterUrl": "https://twitter.com/TitanCompanyLtd/status/1489190286488080387",
+        "text": "Titan has been going strong and continues to grow during the pandemic with great support from the consumers. Here is the Press release for Q3 results- https://t.co/1fzP9jFVcT",
+        "source": "Twitter for iPhone",
+        "retweetCount": 6,
+        "replyCount": 0,
+        "likeCount": 25,
+        "quoteCount": 0,
+        "viewCount": 0,
+        "createdAt": "Thu Feb 03 10:53:26 +0000 2022",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1489190286488080387",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "TitanCompanyLtd",
+            "url": "https://x.com/TitanCompanyLtd",
+            "twitterUrl": "https://twitter.com/TitanCompanyLtd",
+            "id": "993353389034557440",
+            "name": "Titan Company Limited",
+            "isVerified": false,
+            "isBlueVerified": true,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/1001762703415783424/m6454fgb_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/993353389034557440/1752669607",
+            "description": "",
+            "location": "",
+            "followers": 5387,
+            "following": 32,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Mon May 07 04:54:38 +0000 2018",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 145,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 1072,
+            "statusesCount": 2343,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [
+                "1920320251356422631"
+            ],
+            "profile_bio": {
+                "description": "A strong portfolio of brands and industry-leading capabilities, Titan is driven by the values and ethos of the Tata Group. Visit - https://t.co/OC9aEIVOLc",
+                "entities": {
+                    "description": {
+                        "urls": [
+                            {
+                                "display_url": "titancompany.in",
+                                "expanded_url": "http://titancompany.in",
+                                "indices": [
+                                    131,
+                                    154
+                                ],
+                                "url": "https://t.co/OC9aEIVOLc"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "titancompany.in",
+                                "expanded_url": "http://www.titancompany.in",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/qteKCqTylA"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {
+            "media": [
+                {
+                    "display_url": "pic.twitter.com/1fzP9jFVcT",
+                    "expanded_url": "https://twitter.com/TitanCompanyLtd/status/1489190286488080387/photo/1",
+                    "ext_media_availability": {
+                        "status": "Available"
+                    },
+                    "features": {
+                        "large": {
+                            "faces": [
+                                {
+                                    "h": 74,
+                                    "w": 74,
+                                    "x": 2,
+                                    "y": 296
+                                }
+                            ]
+                        },
+                        "orig": {
+                            "faces": [
+                                {
+                                    "h": 74,
+                                    "w": 74,
+                                    "x": 2,
+                                    "y": 296
+                                }
+                            ]
+                        }
+                    },
+                    "id_str": "1489190272843993091",
+                    "indices": [
+                        151,
+                        174
+                    ],
+                    "media_key": "3_1489190272843993091",
+                    "media_results": {
+                        "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAARSqqqm/1VADCgACFKqqrO0VkAMAAA==",
+                        "result": {
+                            "__typename": "ApiMedia",
+                            "id": "QXBpTWVkaWE6DAABCgABFKqqqb/VUAMKAAIUqqqs7RWQAwAA",
+                            "media_key": "3_1489190272843993091"
+                        }
+                    },
+                    "media_url_https": "https://pbs.twimg.com/media/FKqqqb_VUAM3_7G.jpg",
+                    "original_info": {
+                        "focus_rects": [
+                            {
+                                "h": 812,
+                                "w": 1450,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1450,
+                                "w": 1450,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1653,
+                                "w": 1450,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 2048,
+                                "w": 1024,
+                                "x": 254,
+                                "y": 0
+                            },
+                            {
+                                "h": 2048,
+                                "w": 1450,
+                                "x": 0,
+                                "y": 0
+                            }
+                        ],
+                        "height": 2048,
+                        "width": 1450
+                    },
+                    "sizes": {
+                        "large": {
+                            "h": 2048,
+                            "w": 1450
+                        }
+                    },
+                    "type": "photo",
+                    "url": "https://t.co/1fzP9jFVcT"
+                },
+                {
+                    "display_url": "pic.twitter.com/1fzP9jFVcT",
+                    "expanded_url": "https://twitter.com/TitanCompanyLtd/status/1489190286488080387/photo/1",
+                    "ext_media_availability": {
+                        "status": "Available"
+                    },
+                    "features": {
+                        "large": {
+                            "faces": [
+                                {
+                                    "h": 110,
+                                    "w": 110,
+                                    "x": 22,
+                                    "y": 1204
+                                }
+                            ]
+                        },
+                        "orig": {
+                            "faces": [
+                                {
+                                    "h": 110,
+                                    "w": 110,
+                                    "x": 22,
+                                    "y": 1204
+                                }
+                            ]
+                        }
+                    },
+                    "id_str": "1489190282767716356",
+                    "indices": [
+                        151,
+                        174
+                    ],
+                    "media_key": "3_1489190282767716356",
+                    "media_results": {
+                        "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAARSqqqwPVVAECgACFKqqrO0VkAMAAA==",
+                        "result": {
+                            "__typename": "ApiMedia",
+                            "id": "QXBpTWVkaWE6DAABCgABFKqqrA9VUAQKAAIUqqqs7RWQAwAA",
+                            "media_key": "3_1489190282767716356"
+                        }
+                    },
+                    "media_url_https": "https://pbs.twimg.com/media/FKqqrA9VUAQLLVl.jpg",
+                    "original_info": {
+                        "focus_rects": [
+                            {
+                                "h": 812,
+                                "w": 1450,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1450,
+                                "w": 1450,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1653,
+                                "w": 1450,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 2048,
+                                "w": 1024,
+                                "x": 254,
+                                "y": 0
+                            },
+                            {
+                                "h": 2048,
+                                "w": 1450,
+                                "x": 0,
+                                "y": 0
+                            }
+                        ],
+                        "height": 2048,
+                        "width": 1450
+                    },
+                    "sizes": {
+                        "large": {
+                            "h": 2048,
+                            "w": 1450
+                        }
+                    },
+                    "type": "photo",
+                    "url": "https://t.co/1fzP9jFVcT"
+                }
+            ]
+        },
+        "card": null,
+        "place": {},
+        "entities": {},
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1314507740581105664",
+        "url": "https://x.com/TitanCompanyLtd/status/1314507740581105664",
+        "twitterUrl": "https://twitter.com/TitanCompanyLtd/status/1314507740581105664",
+        "text": "At Titan, we believe in celebrating sight all year round, as proven by our #HappyEyes project! Our CSR wing has enabled the screening of over 3600+ people and has provided visual aid to more than 1000 recipients over just a quarter. https://t.co/3jYHU861a8",
+        "source": "Twitter for iPhone",
+        "retweetCount": 0,
+        "replyCount": 0,
+        "likeCount": 8,
+        "quoteCount": 0,
+        "viewCount": 0,
+        "createdAt": "Fri Oct 09 10:07:22 +0000 2020",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1314507740581105664",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "TitanCompanyLtd",
+            "url": "https://x.com/TitanCompanyLtd",
+            "twitterUrl": "https://twitter.com/TitanCompanyLtd",
+            "id": "993353389034557440",
+            "name": "Titan Company Limited",
+            "isVerified": false,
+            "isBlueVerified": true,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/1001762703415783424/m6454fgb_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/993353389034557440/1752669607",
+            "description": "",
+            "location": "",
+            "followers": 5387,
+            "following": 32,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Mon May 07 04:54:38 +0000 2018",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 145,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 1072,
+            "statusesCount": 2343,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [
+                "1920320251356422631"
+            ],
+            "profile_bio": {
+                "description": "A strong portfolio of brands and industry-leading capabilities, Titan is driven by the values and ethos of the Tata Group. Visit - https://t.co/OC9aEIVOLc",
+                "entities": {
+                    "description": {
+                        "urls": [
+                            {
+                                "display_url": "titancompany.in",
+                                "expanded_url": "http://titancompany.in",
+                                "indices": [
+                                    131,
+                                    154
+                                ],
+                                "url": "https://t.co/OC9aEIVOLc"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "titancompany.in",
+                                "expanded_url": "http://www.titancompany.in",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/qteKCqTylA"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {
+            "media": [
+                {
+                    "display_url": "pic.twitter.com/3jYHU861a8",
+                    "expanded_url": "https://twitter.com/TitanCompanyLtd/status/1314507740581105664/photo/1",
+                    "ext_media_availability": {
+                        "status": "Available"
+                    },
+                    "features": {
+                        "large": {
+                            "faces": [
+                                {
+                                    "h": 52,
+                                    "w": 52,
+                                    "x": 653,
+                                    "y": 361
+                                },
+                                {
+                                    "h": 165,
+                                    "w": 165,
+                                    "x": 855,
+                                    "y": 194
+                                }
+                            ]
+                        },
+                        "orig": {
+                            "faces": [
+                                {
+                                    "h": 52,
+                                    "w": 52,
+                                    "x": 653,
+                                    "y": 361
+                                },
+                                {
+                                    "h": 165,
+                                    "w": 165,
+                                    "x": 855,
+                                    "y": 194
+                                }
+                            ]
+                        }
+                    },
+                    "id_str": "1314507414360604672",
+                    "indices": [
+                        233,
+                        256
+                    ],
+                    "media_key": "3_1314507414360604672",
+                    "media_results": {
+                        "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAARI+EYdflMAACgACEj4R01PWkAAAAA==",
+                        "result": {
+                            "__typename": "ApiMedia",
+                            "id": "QXBpTWVkaWE6DAABCgABEj4Rh1+UwAAKAAISPhHTU9aQAAAA",
+                            "media_key": "3_1314507414360604672"
+                        }
+                    },
+                    "media_url_https": "https://pbs.twimg.com/media/Ej4Rh1-UwAAbpY3.jpg",
+                    "original_info": {
+                        "focus_rects": [
+                            {
+                                "h": 605,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 475
+                            },
+                            {
+                                "h": 1080,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 947,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 540,
+                                "x": 135,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 0
+                            }
+                        ],
+                        "height": 1080,
+                        "width": 1080
+                    },
+                    "sizes": {
+                        "large": {
+                            "h": 1080,
+                            "w": 1080
+                        }
+                    },
+                    "type": "photo",
+                    "url": "https://t.co/3jYHU861a8"
+                },
+                {
+                    "display_url": "pic.twitter.com/3jYHU861a8",
+                    "expanded_url": "https://twitter.com/TitanCompanyLtd/status/1314507740581105664/photo/1",
+                    "ext_media_availability": {
+                        "status": "Available"
+                    },
+                    "features": {
+                        "large": {
+                            "faces": [
+                                {
+                                    "h": 50,
+                                    "w": 50,
+                                    "x": 232,
+                                    "y": 657
+                                },
+                                {
+                                    "h": 153,
+                                    "w": 153,
+                                    "x": 473,
+                                    "y": 654
+                                }
+                            ]
+                        },
+                        "orig": {
+                            "faces": [
+                                {
+                                    "h": 50,
+                                    "w": 50,
+                                    "x": 232,
+                                    "y": 657
+                                },
+                                {
+                                    "h": 153,
+                                    "w": 153,
+                                    "x": 473,
+                                    "y": 654
+                                }
+                            ]
+                        }
+                    },
+                    "id_str": "1314507429451685888",
+                    "indices": [
+                        233,
+                        256
+                    ],
+                    "media_key": "3_1314507429451685888",
+                    "media_results": {
+                        "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAARI+EYrjFGAACgACEj4R01PWkAAAAA==",
+                        "result": {
+                            "__typename": "ApiMedia",
+                            "id": "QXBpTWVkaWE6DAABCgABEj4RiuMUYAAKAAISPhHTU9aQAAAA",
+                            "media_key": "3_1314507429451685888"
+                        }
+                    },
+                    "media_url_https": "https://pbs.twimg.com/media/Ej4RiuMUYAAVrp3.jpg",
+                    "original_info": {
+                        "focus_rects": [
+                            {
+                                "h": 605,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 475
+                            },
+                            {
+                                "h": 1080,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 947,
+                                "x": 40,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 540,
+                                "x": 243,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 0
+                            }
+                        ],
+                        "height": 1080,
+                        "width": 1080
+                    },
+                    "sizes": {
+                        "large": {
+                            "h": 1080,
+                            "w": 1080
+                        }
+                    },
+                    "type": "photo",
+                    "url": "https://t.co/3jYHU861a8"
+                },
+                {
+                    "display_url": "pic.twitter.com/3jYHU861a8",
+                    "expanded_url": "https://twitter.com/TitanCompanyLtd/status/1314507740581105664/photo/1",
+                    "ext_media_availability": {
+                        "status": "Available"
+                    },
+                    "features": {
+                        "large": {
+                            "faces": [
+                                {
+                                    "h": 79,
+                                    "w": 79,
+                                    "x": 402,
+                                    "y": 348
+                                },
+                                {
+                                    "h": 188,
+                                    "w": 188,
+                                    "x": 728,
+                                    "y": 362
+                                }
+                            ]
+                        },
+                        "orig": {
+                            "faces": [
+                                {
+                                    "h": 79,
+                                    "w": 79,
+                                    "x": 402,
+                                    "y": 348
+                                },
+                                {
+                                    "h": 188,
+                                    "w": 188,
+                                    "x": 728,
+                                    "y": 362
+                                }
+                            ]
+                        }
+                    },
+                    "id_str": "1314507448422526977",
+                    "indices": [
+                        233,
+                        256
+                    ],
+                    "media_key": "3_1314507448422526977",
+                    "media_results": {
+                        "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAARI+EY9N1HABCgACEj4R01PWkAAAAA==",
+                        "result": {
+                            "__typename": "ApiMedia",
+                            "id": "QXBpTWVkaWE6DAABCgABEj4Rj03UcAEKAAISPhHTU9aQAAAA",
+                            "media_key": "3_1314507448422526977"
+                        }
+                    },
+                    "media_url_https": "https://pbs.twimg.com/media/Ej4Rj03UcAEC2Tc.jpg",
+                    "original_info": {
+                        "focus_rects": [
+                            {
+                                "h": 605,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 157
+                            },
+                            {
+                                "h": 1080,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 947,
+                                "x": 133,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 540,
+                                "x": 540,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 0
+                            }
+                        ],
+                        "height": 1080,
+                        "width": 1080
+                    },
+                    "sizes": {
+                        "large": {
+                            "h": 1080,
+                            "w": 1080
+                        }
+                    },
+                    "type": "photo",
+                    "url": "https://t.co/3jYHU861a8"
+                }
+            ]
+        },
+        "card": null,
+        "place": {},
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        75,
+                        85
+                    ],
+                    "text": "HappyEyes"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1303209716194082816",
+        "url": "https://x.com/TitanCompanyLtd/status/1303209716194082816",
+        "twitterUrl": "https://twitter.com/TitanCompanyLtd/status/1303209716194082816",
+        "text": "3. It does that by not only addressing the needs of Kanyas in the Academic Support Centres &amp; ensuring attendance &amp; good results, but by also engaging with their families &amp; other stakeholders to build ownership among the community. #InternationalLiteracyDay #LifeAtTitan",
+        "source": "Twitter for iPhone",
+        "retweetCount": 0,
+        "replyCount": 1,
+        "likeCount": 1,
+        "quoteCount": 0,
+        "viewCount": 0,
+        "createdAt": "Tue Sep 08 05:53:03 +0000 2020",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": true,
+        "inReplyToId": "1303209713648238592",
+        "conversationId": "1303209710406033410",
+        "inReplyToUserId": "993353389034557440",
+        "inReplyToUsername": "TitanCompanyLtd",
+        "author": {
+            "type": "user",
+            "userName": "TitanCompanyLtd",
+            "url": "https://x.com/TitanCompanyLtd",
+            "twitterUrl": "https://twitter.com/TitanCompanyLtd",
+            "id": "993353389034557440",
+            "name": "Titan Company Limited",
+            "isVerified": false,
+            "isBlueVerified": true,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/1001762703415783424/m6454fgb_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/993353389034557440/1752669607",
+            "description": "",
+            "location": "",
+            "followers": 5387,
+            "following": 32,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Mon May 07 04:54:38 +0000 2018",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 145,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 1072,
+            "statusesCount": 2343,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [
+                "1920320251356422631"
+            ],
+            "profile_bio": {
+                "description": "A strong portfolio of brands and industry-leading capabilities, Titan is driven by the values and ethos of the Tata Group. Visit - https://t.co/OC9aEIVOLc",
+                "entities": {
+                    "description": {
+                        "urls": [
+                            {
+                                "display_url": "titancompany.in",
+                                "expanded_url": "http://titancompany.in",
+                                "indices": [
+                                    131,
+                                    154
+                                ],
+                                "url": "https://t.co/OC9aEIVOLc"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "titancompany.in",
+                                "expanded_url": "http://www.titancompany.in",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/qteKCqTylA"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": null,
+        "place": {},
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        243,
+                        268
+                    ],
+                    "text": "InternationalLiteracyDay"
+                },
+                {
+                    "indices": [
+                        269,
+                        281
+                    ],
+                    "text": "LifeAtTitan"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    }
+]

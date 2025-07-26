@@ -1,0 +1,514 @@
+[
+    {
+        "type": "tweet",
+        "id": "975069156872720391",
+        "url": "https://x.com/deepadoc/status/975069156872720391",
+        "twitterUrl": "https://twitter.com/deepadoc/status/975069156872720391",
+        "text": "@durjoydatta @asianpaints I'm a victim of #AsianPaint company's bad services,false promises,worst #customersupport\nIt's been already 1year,3 months of my complaint,I've called minimum 100 times,sent many mails,dont even think for them.\nPlz RT &amp; tag them,it would be helpful for me\ud83d\ude4f\nhttps://t.co/7YHZ0gG0FU https://t.co/GJK5qp3tuq",
+        "source": "Twitter for iPhone",
+        "retweetCount": 1,
+        "replyCount": 0,
+        "likeCount": 2,
+        "quoteCount": 1,
+        "viewCount": 0,
+        "createdAt": "Sat Mar 17 17:59:37 +0000 2018",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": true,
+        "inReplyToId": "974981262762004483",
+        "conversationId": "974981262762004483",
+        "inReplyToUserId": "20491941",
+        "inReplyToUsername": "durjoydatta",
+        "author": {
+            "type": "user",
+            "userName": "deepadoc",
+            "url": "https://x.com/deepadoc",
+            "twitterUrl": "https://twitter.com/deepadoc",
+            "id": "135102232",
+            "name": "Dr.Deepa Sharma",
+            "isVerified": false,
+            "isBlueVerified": false,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/1403039101868142594/Q4lWEuiM_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/135102232/1516216818",
+            "description": "",
+            "location": "Jaipur, India",
+            "followers": 23642,
+            "following": 975,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": false,
+            "createdAt": "Tue Apr 20 10:13:09 +0000 2010",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 19164,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 5214,
+            "statusesCount": 37866,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [
+                "1291623147943256065"
+            ],
+            "profile_bio": {
+                "description": "Ordinary human but Unique | Evolving daily | Writer |\nAyurveda Dr|\nPG in Panchkarma|\nMSc\nClinical Nutrition &Dietetics|\nFor Consultation- d2sayurveda@gmail.com",
+                "entities": {
+                    "description": {},
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "drdeepasharma.com",
+                                "expanded_url": "http://www.drdeepasharma.com",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/o1ytWQw6Pj"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {
+            "media": [
+                {
+                    "display_url": "pic.twitter.com/GJK5qp3tuq",
+                    "expanded_url": "https://twitter.com/deepadoc/status/975069156872720391/photo/1",
+                    "ext_media_availability": {
+                        "status": "Available"
+                    },
+                    "features": {
+                        "large": {
+                            "faces": [
+                                {
+                                    "h": 164,
+                                    "w": 164,
+                                    "x": 84,
+                                    "y": 1068
+                                }
+                            ]
+                        },
+                        "orig": {
+                            "faces": [
+                                {
+                                    "h": 164,
+                                    "w": 164,
+                                    "x": 84,
+                                    "y": 1068
+                                }
+                            ]
+                        }
+                    },
+                    "id_str": "975069076199477248",
+                    "indices": [
+                        310,
+                        333
+                    ],
+                    "media_key": "3_975069076199477248",
+                    "media_results": {
+                        "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAAQ2IJCieVpAACgACDYgkO2bWkAcAAA==",
+                        "result": {
+                            "__typename": "ApiMedia",
+                            "id": "QXBpTWVkaWE6DAABCgABDYgkKJ5WkAAKAAINiCQ7ZtaQBwAA",
+                            "media_key": "3_975069076199477248"
+                        }
+                    },
+                    "media_url_https": "https://pbs.twimg.com/media/DYgkKJ5WkAAcCDG.jpg",
+                    "original_info": {
+                        "focus_rects": [
+                            {
+                                "h": 1147,
+                                "w": 2048,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1838,
+                                "w": 1838,
+                                "x": 210,
+                                "y": 0
+                            },
+                            {
+                                "h": 1838,
+                                "w": 1612,
+                                "x": 436,
+                                "y": 0
+                            },
+                            {
+                                "h": 1838,
+                                "w": 919,
+                                "x": 923,
+                                "y": 0
+                            },
+                            {
+                                "h": 1838,
+                                "w": 2048,
+                                "x": 0,
+                                "y": 0
+                            }
+                        ],
+                        "height": 1838,
+                        "width": 2048
+                    },
+                    "sizes": {
+                        "large": {
+                            "h": 1838,
+                            "w": 2048
+                        }
+                    },
+                    "type": "photo",
+                    "url": "https://t.co/GJK5qp3tuq"
+                }
+            ]
+        },
+        "card": null,
+        "place": {},
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        42,
+                        53
+                    ],
+                    "text": "AsianPaint"
+                },
+                {
+                    "indices": [
+                        98,
+                        114
+                    ],
+                    "text": "customersupport"
+                }
+            ],
+            "urls": [
+                {
+                    "display_url": "twitter.com/deepadoc/statu\u2026",
+                    "expanded_url": "https://twitter.com/deepadoc/status/973790436933492737?s=19",
+                    "indices": [
+                        286,
+                        309
+                    ],
+                    "url": "https://t.co/7YHZ0gG0FU"
+                }
+            ],
+            "user_mentions": [
+                {
+                    "id_str": "20491941",
+                    "indices": [
+                        0,
+                        12
+                    ],
+                    "name": "Durjoy Datta",
+                    "screen_name": "durjoydatta"
+                },
+                {
+                    "id_str": "368183460",
+                    "indices": [
+                        13,
+                        25
+                    ],
+                    "name": "Asian Paints",
+                    "screen_name": "asianpaints"
+                }
+            ]
+        },
+        "quoted_tweet": {
+            "type": "tweet",
+            "id": "973790436933492737",
+            "url": "https://x.com/deepadoc/status/973790436933492737",
+            "twitterUrl": "https://twitter.com/deepadoc/status/973790436933492737",
+            "text": "@asianpaints shame.Even after 1year3 months,so many calls, many mails &amp; complaints u haven't solve my issue.\ud83d\ude2d\n@asianpaints_pr you don't hv any value of #Customer,no value of #CustomerCare \ud83d\ude21 @jagograhakjago @JagoGrahakJago_ @mygovindia @inconsumerforum @consaff\n@priyankasambhav https://t.co/1JZvmRO692",
+            "source": "Twitter for iPhone",
+            "retweetCount": 2,
+            "replyCount": 2,
+            "likeCount": 4,
+            "quoteCount": 2,
+            "viewCount": 0,
+            "createdAt": "Wed Mar 14 05:18:26 +0000 2018",
+            "lang": "en",
+            "bookmarkCount": 0,
+            "isReply": false,
+            "inReplyToId": null,
+            "conversationId": "973790436933492737",
+            "inReplyToUserId": null,
+            "inReplyToUsername": null,
+            "author": {
+                "type": "user",
+                "userName": "deepadoc",
+                "url": "https://x.com/deepadoc",
+                "twitterUrl": "https://twitter.com/deepadoc",
+                "id": "135102232",
+                "name": "Dr.Deepa Sharma",
+                "isVerified": false,
+                "isBlueVerified": false,
+                "verifiedType": null,
+                "profilePicture": "https://pbs.twimg.com/profile_images/1403039101868142594/Q4lWEuiM_normal.jpg",
+                "coverPicture": "https://pbs.twimg.com/profile_banners/135102232/1516216818",
+                "description": "",
+                "location": "Jaipur, India",
+                "followers": 23642,
+                "following": 975,
+                "status": "",
+                "canDm": true,
+                "canMediaTag": false,
+                "createdAt": "Tue Apr 20 10:13:09 +0000 2010",
+                "entities": {
+                    "description": {
+                        "urls": []
+                    },
+                    "url": {}
+                },
+                "fastFollowersCount": 0,
+                "favouritesCount": 19164,
+                "hasCustomTimelines": true,
+                "isTranslator": false,
+                "mediaCount": 5214,
+                "statusesCount": 37866,
+                "withheldInCountries": [],
+                "affiliatesHighlightedLabel": {},
+                "possiblySensitive": false,
+                "pinnedTweetIds": [
+                    "1291623147943256065"
+                ],
+                "profile_bio": {
+                    "description": "Ordinary human but Unique | Evolving daily | Writer |\nAyurveda Dr|\nPG in Panchkarma|\nMSc\nClinical Nutrition &Dietetics|\nFor Consultation- d2sayurveda@gmail.com",
+                    "entities": {
+                        "description": {},
+                        "url": {
+                            "urls": [
+                                {
+                                    "display_url": "drdeepasharma.com",
+                                    "expanded_url": "http://www.drdeepasharma.com",
+                                    "indices": [
+                                        0,
+                                        23
+                                    ],
+                                    "url": "https://t.co/o1ytWQw6Pj"
+                                }
+                            ]
+                        }
+                    }
+                },
+                "isAutomated": false,
+                "automatedBy": null
+            },
+            "extendedEntities": {
+                "media": [
+                    {
+                        "display_url": "pic.twitter.com/1JZvmRO692",
+                        "expanded_url": "https://twitter.com/deepadoc/status/973790436933492737/photo/1",
+                        "ext_media_availability": {
+                            "status": "Available"
+                        },
+                        "features": {
+                            "all": {
+                                "tags": [
+                                    {
+                                        "name": "Priyanka Sambhav",
+                                        "screen_name": "priyankasambhav",
+                                        "type": "user",
+                                        "user_id": "1227324462"
+                                    },
+                                    {
+                                        "name": "Brand Awareness",
+                                        "screen_name": "UfterYou",
+                                        "type": "user",
+                                        "user_id": "604291342"
+                                    }
+                                ]
+                            },
+                            "large": {
+                                "faces": [
+                                    {
+                                        "h": 164,
+                                        "w": 164,
+                                        "x": 84,
+                                        "y": 1068
+                                    }
+                                ]
+                            },
+                            "orig": {
+                                "faces": [
+                                    {
+                                        "h": 164,
+                                        "w": 164,
+                                        "x": 84,
+                                        "y": 1068
+                                    }
+                                ]
+                            }
+                        },
+                        "id_str": "973790369782648833",
+                        "indices": [
+                            282,
+                            305
+                        ],
+                        "media_key": "3_973790369782648833",
+                        "media_results": {
+                            "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAAQ2DmS6Ul1ABCgACDYOZPjcX4AEAAA==",
+                            "result": {
+                                "__typename": "ApiMedia",
+                                "id": "QXBpTWVkaWE6DAABCgABDYOZLpSXUAEKAAINg5k+NxfgAQAA",
+                                "media_key": "3_973790369782648833"
+                            }
+                        },
+                        "media_url_https": "https://pbs.twimg.com/media/DYOZLpSXUAEo67I.jpg",
+                        "original_info": {
+                            "focus_rects": [
+                                {
+                                    "h": 1147,
+                                    "w": 2048,
+                                    "x": 0,
+                                    "y": 0
+                                },
+                                {
+                                    "h": 1838,
+                                    "w": 1838,
+                                    "x": 210,
+                                    "y": 0
+                                },
+                                {
+                                    "h": 1838,
+                                    "w": 1612,
+                                    "x": 436,
+                                    "y": 0
+                                },
+                                {
+                                    "h": 1838,
+                                    "w": 919,
+                                    "x": 923,
+                                    "y": 0
+                                },
+                                {
+                                    "h": 1838,
+                                    "w": 2048,
+                                    "x": 0,
+                                    "y": 0
+                                }
+                            ],
+                            "height": 1838,
+                            "width": 2048
+                        },
+                        "sizes": {
+                            "large": {
+                                "h": 1838,
+                                "w": 2048
+                            }
+                        },
+                        "type": "photo",
+                        "url": "https://t.co/1JZvmRO692"
+                    }
+                ]
+            },
+            "card": null,
+            "place": {},
+            "entities": {
+                "hashtags": [
+                    {
+                        "indices": [
+                            156,
+                            165
+                        ],
+                        "text": "Customer"
+                    },
+                    {
+                        "indices": [
+                            178,
+                            191
+                        ],
+                        "text": "CustomerCare"
+                    }
+                ],
+                "user_mentions": [
+                    {
+                        "id_str": "368183460",
+                        "indices": [
+                            0,
+                            12
+                        ],
+                        "name": "Asian Paints",
+                        "screen_name": "asianpaints"
+                    },
+                    {
+                        "id_str": "188254231",
+                        "indices": [
+                            114,
+                            129
+                        ],
+                        "name": "Asian Paints Limited",
+                        "screen_name": "asianpaints_pr"
+                    },
+                    {
+                        "id_str": "772674808878342144",
+                        "indices": [
+                            194,
+                            209
+                        ],
+                        "name": "Consumer Affairs",
+                        "screen_name": "jagograhakjago"
+                    },
+                    {
+                        "id_str": "759419005790744576",
+                        "indices": [
+                            210,
+                            226
+                        ],
+                        "name": "Jago Grahak Jago",
+                        "screen_name": "JagoGrahakJago_"
+                    },
+                    {
+                        "id_str": "2686834802",
+                        "indices": [
+                            227,
+                            238
+                        ],
+                        "name": "MyGovIndia",
+                        "screen_name": "mygovindia"
+                    },
+                    {
+                        "id_str": "74950364",
+                        "indices": [
+                            239,
+                            255
+                        ],
+                        "name": "India Consumer Forum",
+                        "screen_name": "inconsumerforum"
+                    },
+                    {
+                        "id_str": "4863566772",
+                        "indices": [
+                            256,
+                            264
+                        ],
+                        "name": "Consumer Affairs",
+                        "screen_name": "consaff"
+                    },
+                    {
+                        "id_str": "1227324462",
+                        "indices": [
+                            265,
+                            281
+                        ],
+                        "name": "Priyanka Sambhav",
+                        "screen_name": "priyankasambhav"
+                    }
+                ]
+            },
+            "quoted_tweet": null,
+            "retweeted_tweet": null,
+            "article": null
+        },
+        "retweeted_tweet": null,
+        "article": null
+    }
+]

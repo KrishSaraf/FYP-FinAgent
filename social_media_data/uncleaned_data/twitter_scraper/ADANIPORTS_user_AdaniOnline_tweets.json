@@ -1,0 +1,3266 @@
+[
+    {
+        "type": "tweet",
+        "id": "1849684349920370944",
+        "url": "https://x.com/AdaniOnline/status/1849684349920370944",
+        "twitterUrl": "https://twitter.com/AdaniOnline/status/1849684349920370944",
+        "text": "Adani Total Gas records a 15% YoY volume growth in Q2 FY25 with a strong EBITDA of Rs. 313 Cr.",
+        "source": "Twitter for iPhone",
+        "retweetCount": 1,
+        "replyCount": 6,
+        "likeCount": 25,
+        "quoteCount": 1,
+        "viewCount": 3506,
+        "createdAt": "Fri Oct 25 05:28:09 +0000 2024",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1849684349920370944",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "AdaniOnline",
+            "url": "https://x.com/AdaniOnline",
+            "twitterUrl": "https://twitter.com/AdaniOnline",
+            "id": "980145571",
+            "name": "Adani Group",
+            "isVerified": false,
+            "isBlueVerified": true,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/1064450431752052738/ailjWIRR_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/980145571/1751978664",
+            "description": "",
+            "location": "India",
+            "followers": 358540,
+            "following": 92,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Fri Nov 30 09:46:15 +0000 2012",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 5781,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 2199,
+            "statusesCount": 3921,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [
+                "1942487619939516723"
+            ],
+            "profile_bio": {
+                "description": "A leading business conglomerate enriching lives, creating sustainable value and empowering India through #GrowthWithGoodness.",
+                "entities": {
+                    "description": {
+                        "hashtags": [
+                            {
+                                "indices": [
+                                    105,
+                                    124
+                                ],
+                                "text": "GrowthWithGoodness"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "adani.com",
+                                "expanded_url": "http://www.adani.com/",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/witDmCsKpF"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": {
+            "binding_values": [
+                {
+                    "key": "unified_card",
+                    "value": {
+                        "string_value": "{\"type\":\"image_website\",\"component_objects\":{\"details_1\":{\"type\":\"details\",\"data\":{\"title\":{\"content\":\"Read more\",\"is_rtl\":false},\"subtitle\":{\"content\":\"adani.com\",\"is_rtl\":false},\"destination\":\"browser_1\"}},\"media_1\":{\"type\":\"media\",\"data\":{\"id\":\"3_1849684250330791936\",\"destination\":\"browser_1\"}}},\"destination_objects\":{\"browser_1\":{\"type\":\"browser\",\"data\":{\"url_data\":{\"url\":\"https://www.adani.com/Newsroom/Media-Release/adani-total-gas-h1fy25--q2-results\",\"vanity\":\"adani.com\"}}}},\"components\":[\"media_1\",\"details_1\"],\"media_entities\":{\"3_1849684250330791936\":{\"id\":1849684250330791936,\"id_str\":\"1849684250330791936\",\"indices\":[0,0],\"media_url\":\"\",\"media_url_https\":\"https://pbs.twimg.com/media/GatmBo-aAAAt4lx.png\",\"url\":\"\",\"display_url\":\"\",\"expanded_url\":\"\",\"type\":\"photo\",\"original_info\":{\"width\":800,\"height\":800,\"focus_rects\":[{\"x\":0,\"y\":316,\"h\":448,\"w\":800},{\"x\":0,\"y\":0,\"h\":800,\"w\":800},{\"x\":49,\"y\":0,\"h\":800,\"w\":702},{\"x\":200,\"y\":0,\"h\":800,\"w\":400},{\"x\":0,\"y\":0,\"h\":800,\"w\":800}]},\"sizes\":{\"large\":{\"w\":800,\"h\":800,\"resize\":\"fit\"},\"small\":{\"w\":680,\"h\":680,\"resize\":\"fit\"},\"thumb\":{\"w\":150,\"h\":150,\"resize\":\"crop\"},\"medium\":{\"w\":800,\"h\":800,\"resize\":\"fit\"}},\"source_user_id\":980145571,\"source_user_id_str\":\"980145571\",\"media_key\":\"3_1849684250330791936\",\"ext\":{\"mediaColor\":{\"r\":{\"ok\":{\"palette\":[{\"rgb\":{\"red\":142,\"green\":40,\"blue\":142},\"percentage\":47.56},{\"rgb\":{\"red\":255,\"green\":255,\"blue\":255},\"percentage\":47.22},{\"rgb\":{\"red\":196,\"green\":142,\"blue\":196},\"percentage\":2.1},{\"rgb\":{\"red\":239,\"green\":77,\"blue\":37},\"percentage\":0.93},{\"rgb\":{\"red\":244,\"green\":134,\"blue\":107},\"percentage\":0.53}]}},\"ttl\":-1}}}}}"
+                    }
+                },
+                {
+                    "key": "card_url",
+                    "value": {
+                        "scribe_key": "card_url",
+                        "string_value": "https://twitter.com"
+                    }
+                }
+            ],
+            "card_platform": {
+                "platform": {
+                    "audience": {
+                        "name": "production"
+                    },
+                    "device": {
+                        "name": "iPhone",
+                        "version": "13"
+                    }
+                }
+            },
+            "name": "unified_card",
+            "url": "card://1849684347902926848"
+        },
+        "place": {},
+        "entities": {},
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1848723628315353556",
+        "url": "https://x.com/AdaniOnline/status/1848723628315353556",
+        "twitterUrl": "https://twitter.com/AdaniOnline/status/1848723628315353556",
+        "text": "Adani Energy Solutions reports an impressive 172% YoY growth in PAT in Q2 FY25.",
+        "source": "Twitter for iPhone",
+        "retweetCount": 5,
+        "replyCount": 5,
+        "likeCount": 40,
+        "quoteCount": 0,
+        "viewCount": 3305,
+        "createdAt": "Tue Oct 22 13:50:35 +0000 2024",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1848723628315353556",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "AdaniOnline",
+            "url": "https://x.com/AdaniOnline",
+            "twitterUrl": "https://twitter.com/AdaniOnline",
+            "id": "980145571",
+            "name": "Adani Group",
+            "isVerified": false,
+            "isBlueVerified": true,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/1064450431752052738/ailjWIRR_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/980145571/1751978664",
+            "description": "",
+            "location": "India",
+            "followers": 358540,
+            "following": 92,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Fri Nov 30 09:46:15 +0000 2012",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 5781,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 2199,
+            "statusesCount": 3921,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [
+                "1942487619939516723"
+            ],
+            "profile_bio": {
+                "description": "A leading business conglomerate enriching lives, creating sustainable value and empowering India through #GrowthWithGoodness.",
+                "entities": {
+                    "description": {
+                        "hashtags": [
+                            {
+                                "indices": [
+                                    105,
+                                    124
+                                ],
+                                "text": "GrowthWithGoodness"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "adani.com",
+                                "expanded_url": "http://www.adani.com/",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/witDmCsKpF"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": {
+            "binding_values": [
+                {
+                    "key": "unified_card",
+                    "value": {
+                        "string_value": "{\"type\":\"image_website\",\"component_objects\":{\"details_1\":{\"type\":\"details\",\"data\":{\"title\":{\"content\":\"Read more\",\"is_rtl\":false},\"subtitle\":{\"content\":\"adani.com\",\"is_rtl\":false},\"destination\":\"browser_1\"}},\"media_1\":{\"type\":\"media\",\"data\":{\"id\":\"3_1848723251641626624\",\"destination\":\"browser_1\"}}},\"destination_objects\":{\"browser_1\":{\"type\":\"browser\",\"data\":{\"url_data\":{\"url\":\"https://www.adani.com/en/Newsroom/Media-Release/adani-energy-solutions-reports-strong-growth-in-q2-fy25\",\"vanity\":\"adani.com\"}}}},\"components\":[\"media_1\",\"details_1\"],\"media_entities\":{\"3_1848723251641626624\":{\"id\":1848723251641626624,\"id_str\":\"1848723251641626624\",\"indices\":[0,0],\"media_url\":\"\",\"media_url_https\":\"https://pbs.twimg.com/media/Gaf8AJ4asAACoQe.jpg\",\"url\":\"\",\"display_url\":\"\",\"expanded_url\":\"\",\"type\":\"photo\",\"original_info\":{\"width\":800,\"height\":800,\"focus_rects\":[{\"x\":0,\"y\":316,\"h\":448,\"w\":800},{\"x\":0,\"y\":0,\"h\":800,\"w\":800},{\"x\":49,\"y\":0,\"h\":800,\"w\":702},{\"x\":200,\"y\":0,\"h\":800,\"w\":400},{\"x\":0,\"y\":0,\"h\":800,\"w\":800}]},\"sizes\":{\"medium\":{\"w\":800,\"h\":800,\"resize\":\"fit\"},\"large\":{\"w\":800,\"h\":800,\"resize\":\"fit\"},\"thumb\":{\"w\":150,\"h\":150,\"resize\":\"crop\"},\"small\":{\"w\":680,\"h\":680,\"resize\":\"fit\"}},\"source_user_id\":980145571,\"source_user_id_str\":\"980145571\",\"media_key\":\"3_1848723251641626624\",\"ext\":{\"mediaColor\":{\"r\":{\"ok\":{\"palette\":[{\"rgb\":{\"red\":142,\"green\":40,\"blue\":142},\"percentage\":47.56},{\"rgb\":{\"red\":255,\"green\":255,\"blue\":255},\"percentage\":47.02},{\"rgb\":{\"red\":196,\"green\":143,\"blue\":197},\"percentage\":2.26},{\"rgb\":{\"red\":239,\"green\":77,\"blue\":37},\"percentage\":0.93},{\"rgb\":{\"red\":245,\"green\":134,\"blue\":108},\"percentage\":0.53}]}},\"ttl\":-1}}}}}"
+                    }
+                },
+                {
+                    "key": "card_url",
+                    "value": {
+                        "scribe_key": "card_url",
+                        "string_value": "https://twitter.com"
+                    }
+                }
+            ],
+            "card_platform": {
+                "platform": {
+                    "audience": {
+                        "name": "production"
+                    },
+                    "device": {
+                        "name": "iPhone",
+                        "version": "13"
+                    }
+                }
+            },
+            "name": "unified_card",
+            "url": "card://1848723626293661696"
+        },
+        "place": {},
+        "entities": {},
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1819252049210478700",
+        "url": "https://x.com/AdaniOnline/status/1819252049210478700",
+        "twitterUrl": "https://twitter.com/AdaniOnline/status/1819252049210478700",
+        "text": "Adani Enterprises Ltd announces consolidated results for Q1 FY25, reporting a 48% increase in EBITDA.",
+        "source": "Twitter for iPhone",
+        "retweetCount": 5,
+        "replyCount": 4,
+        "likeCount": 27,
+        "quoteCount": 0,
+        "viewCount": 2901,
+        "createdAt": "Fri Aug 02 06:01:03 +0000 2024",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1819252049210478700",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "AdaniOnline",
+            "url": "https://x.com/AdaniOnline",
+            "twitterUrl": "https://twitter.com/AdaniOnline",
+            "id": "980145571",
+            "name": "Adani Group",
+            "isVerified": false,
+            "isBlueVerified": true,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/1064450431752052738/ailjWIRR_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/980145571/1751978664",
+            "description": "",
+            "location": "India",
+            "followers": 358540,
+            "following": 92,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Fri Nov 30 09:46:15 +0000 2012",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 5781,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 2199,
+            "statusesCount": 3921,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [
+                "1942487619939516723"
+            ],
+            "profile_bio": {
+                "description": "A leading business conglomerate enriching lives, creating sustainable value and empowering India through #GrowthWithGoodness.",
+                "entities": {
+                    "description": {
+                        "hashtags": [
+                            {
+                                "indices": [
+                                    105,
+                                    124
+                                ],
+                                "text": "GrowthWithGoodness"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "adani.com",
+                                "expanded_url": "http://www.adani.com/",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/witDmCsKpF"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": {
+            "binding_values": [
+                {
+                    "key": "unified_card",
+                    "value": {
+                        "string_value": "{\"type\":\"image_website\",\"component_objects\":{\"details_1\":{\"type\":\"details\",\"data\":{\"title\":{\"content\":\"Read more\",\"is_rtl\":false},\"subtitle\":{\"content\":\"adani.com\",\"is_rtl\":false},\"destination\":\"browser_1\"}},\"media_1\":{\"type\":\"media\",\"data\":{\"id\":\"3_1819251804263034881\",\"destination\":\"browser_1\"}}},\"destination_objects\":{\"browser_1\":{\"type\":\"browser\",\"data\":{\"url_data\":{\"url\":\"https://www.adani.com/Newsroom/Media-Release/Adani-Enterprises-Ltd-announces-Consolidated-Results-for-the-quarter-ending-June-30-2024\",\"vanity\":\"adani.com\"}}}},\"components\":[\"media_1\",\"details_1\"],\"media_entities\":{\"3_1819251804263034881\":{\"id\":1819251804263034881,\"id_str\":\"1819251804263034881\",\"indices\":[0,0],\"media_url\":\"\",\"media_url_https\":\"https://pbs.twimg.com/media/GT9H4I4WMAEFwYo.jpg\",\"url\":\"\",\"display_url\":\"\",\"expanded_url\":\"\",\"type\":\"photo\",\"original_info\":{\"width\":4500,\"height\":4500,\"focus_rects\":[{\"x\":0,\"y\":1980,\"h\":2520,\"w\":4500},{\"x\":0,\"y\":0,\"h\":4500,\"w\":4500},{\"x\":277,\"y\":0,\"h\":4500,\"w\":3947},{\"x\":1125,\"y\":0,\"h\":4500,\"w\":2250},{\"x\":0,\"y\":0,\"h\":4500,\"w\":4500}]},\"sizes\":{\"medium\":{\"w\":1200,\"h\":1200,\"resize\":\"fit\"},\"large\":{\"w\":2048,\"h\":2048,\"resize\":\"fit\"},\"small\":{\"w\":680,\"h\":680,\"resize\":\"fit\"},\"thumb\":{\"w\":150,\"h\":150,\"resize\":\"crop\"}},\"source_user_id\":980145571,\"source_user_id_str\":\"980145571\",\"media_key\":\"3_1819251804263034881\",\"ext\":{\"mediaColor\":{\"r\":{\"ok\":{\"palette\":[{\"rgb\":{\"red\":142,\"green\":40,\"blue\":142},\"percentage\":48.28},{\"rgb\":{\"red\":255,\"green\":255,\"blue\":255},\"percentage\":47.64},{\"rgb\":{\"red\":202,\"green\":154,\"blue\":202},\"percentage\":1.57},{\"rgb\":{\"red\":239,\"green\":76,\"blue\":35},\"percentage\":1.06},{\"rgb\":{\"red\":211,\"green\":113,\"blue\":97},\"percentage\":0.34}]}},\"ttl\":-1}}}}}"
+                    }
+                },
+                {
+                    "key": "card_url",
+                    "value": {
+                        "scribe_key": "card_url",
+                        "string_value": "https://twitter.com"
+                    }
+                }
+            ],
+            "card_platform": {
+                "platform": {
+                    "audience": {
+                        "name": "production"
+                    },
+                    "device": {
+                        "name": "iPhone",
+                        "version": "13"
+                    }
+                }
+            },
+            "name": "unified_card",
+            "url": "card://1819252044928024576"
+        },
+        "place": {},
+        "entities": {},
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1819011166431002632",
+        "url": "https://x.com/AdaniOnline/status/1819011166431002632",
+        "twitterUrl": "https://twitter.com/AdaniOnline/status/1819011166431002632",
+        "text": "APSEZ achieves an impressive 47% PAT growth in Q1 FY25, reporting an 8% increase in volume and the highest ever quarterly revenue.",
+        "source": "Twitter for iPhone",
+        "retweetCount": 2,
+        "replyCount": 3,
+        "likeCount": 24,
+        "quoteCount": 1,
+        "viewCount": 2782,
+        "createdAt": "Thu Aug 01 14:03:52 +0000 2024",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1819011166431002632",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "AdaniOnline",
+            "url": "https://x.com/AdaniOnline",
+            "twitterUrl": "https://twitter.com/AdaniOnline",
+            "id": "980145571",
+            "name": "Adani Group",
+            "isVerified": false,
+            "isBlueVerified": true,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/1064450431752052738/ailjWIRR_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/980145571/1751978664",
+            "description": "",
+            "location": "India",
+            "followers": 358540,
+            "following": 92,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Fri Nov 30 09:46:15 +0000 2012",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 5781,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 2199,
+            "statusesCount": 3921,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [
+                "1942487619939516723"
+            ],
+            "profile_bio": {
+                "description": "A leading business conglomerate enriching lives, creating sustainable value and empowering India through #GrowthWithGoodness.",
+                "entities": {
+                    "description": {
+                        "hashtags": [
+                            {
+                                "indices": [
+                                    105,
+                                    124
+                                ],
+                                "text": "GrowthWithGoodness"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "adani.com",
+                                "expanded_url": "http://www.adani.com/",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/witDmCsKpF"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": {
+            "binding_values": [
+                {
+                    "key": "unified_card",
+                    "value": {
+                        "string_value": "{\"type\":\"image_website\",\"component_objects\":{\"details_1\":{\"type\":\"details\",\"data\":{\"title\":{\"content\":\"Read more\",\"is_rtl\":false},\"subtitle\":{\"content\":\"adani.com\",\"is_rtl\":false},\"destination\":\"browser_1\"}},\"media_1\":{\"type\":\"media\",\"data\":{\"id\":\"3_1818991668059676672\",\"destination\":\"browser_1\"}}},\"destination_objects\":{\"browser_1\":{\"type\":\"browser\",\"data\":{\"url_data\":{\"url\":\"https://www.adani.com/Newsroom/Media-Release/APSEZ-kicks-off-FY25-with-a-strong-47-PAT-growth-in-Q1\",\"vanity\":\"adani.com\"}}}},\"components\":[\"media_1\",\"details_1\"],\"media_entities\":{\"3_1818991668059676672\":{\"id\":1818991668059676672,\"id_str\":\"1818991668059676672\",\"indices\":[0,0],\"media_url\":\"\",\"media_url_https\":\"https://pbs.twimg.com/media/GT5bSOAXoAAnpdI.jpg\",\"url\":\"\",\"display_url\":\"\",\"expanded_url\":\"\",\"type\":\"photo\",\"original_info\":{\"width\":4500,\"height\":4500,\"focus_rects\":[{\"x\":0,\"y\":1777,\"h\":2520,\"w\":4500},{\"x\":0,\"y\":0,\"h\":4500,\"w\":4500},{\"x\":277,\"y\":0,\"h\":4500,\"w\":3947},{\"x\":1125,\"y\":0,\"h\":4500,\"w\":2250},{\"x\":0,\"y\":0,\"h\":4500,\"w\":4500}]},\"sizes\":{\"large\":{\"w\":2048,\"h\":2048,\"resize\":\"fit\"},\"medium\":{\"w\":1200,\"h\":1200,\"resize\":\"fit\"},\"thumb\":{\"w\":150,\"h\":150,\"resize\":\"crop\"},\"small\":{\"w\":680,\"h\":680,\"resize\":\"fit\"}},\"source_user_id\":980145571,\"source_user_id_str\":\"980145571\",\"media_key\":\"3_1818991668059676672\",\"ext\":{\"mediaColor\":{\"r\":{\"ok\":{\"palette\":[{\"rgb\":{\"red\":142,\"green\":40,\"blue\":142},\"percentage\":48.3},{\"rgb\":{\"red\":255,\"green\":255,\"blue\":255},\"percentage\":47.74},{\"rgb\":{\"red\":200,\"green\":151,\"blue\":200},\"percentage\":1.32},{\"rgb\":{\"red\":239,\"green\":76,\"blue\":35},\"percentage\":1.06},{\"rgb\":{\"red\":211,\"green\":113,\"blue\":97},\"percentage\":0.34}]}},\"ttl\":-1}}}}}"
+                    }
+                },
+                {
+                    "key": "card_url",
+                    "value": {
+                        "scribe_key": "card_url",
+                        "string_value": "https://twitter.com"
+                    }
+                }
+            ],
+            "card_platform": {
+                "platform": {
+                    "audience": {
+                        "name": "production"
+                    },
+                    "device": {
+                        "name": "iPhone",
+                        "version": "13"
+                    }
+                }
+            },
+            "name": "unified_card",
+            "url": "card://1819011163214000128"
+        },
+        "place": {},
+        "entities": {},
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1817833637079093758",
+        "url": "https://x.com/AdaniOnline/status/1817833637079093758",
+        "twitterUrl": "https://twitter.com/AdaniOnline/status/1817833637079093758",
+        "text": "We're pleased to share that Adani Green Energy has achieved an impressive Q1 FY25 financial performance!",
+        "source": "Twitter for iPhone",
+        "retweetCount": 1,
+        "replyCount": 3,
+        "likeCount": 21,
+        "quoteCount": 0,
+        "viewCount": 3999,
+        "createdAt": "Mon Jul 29 08:04:47 +0000 2024",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1817833637079093758",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "AdaniOnline",
+            "url": "https://x.com/AdaniOnline",
+            "twitterUrl": "https://twitter.com/AdaniOnline",
+            "id": "980145571",
+            "name": "Adani Group",
+            "isVerified": false,
+            "isBlueVerified": true,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/1064450431752052738/ailjWIRR_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/980145571/1751978664",
+            "description": "",
+            "location": "India",
+            "followers": 358540,
+            "following": 92,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Fri Nov 30 09:46:15 +0000 2012",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 5781,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 2199,
+            "statusesCount": 3921,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [
+                "1942487619939516723"
+            ],
+            "profile_bio": {
+                "description": "A leading business conglomerate enriching lives, creating sustainable value and empowering India through #GrowthWithGoodness.",
+                "entities": {
+                    "description": {
+                        "hashtags": [
+                            {
+                                "indices": [
+                                    105,
+                                    124
+                                ],
+                                "text": "GrowthWithGoodness"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "adani.com",
+                                "expanded_url": "http://www.adani.com/",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/witDmCsKpF"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": {
+            "binding_values": [
+                {
+                    "key": "unified_card",
+                    "value": {
+                        "string_value": "{\"type\":\"image_website\",\"component_objects\":{\"details_1\":{\"type\":\"details\",\"data\":{\"title\":{\"content\":\"Know more\",\"is_rtl\":false},\"subtitle\":{\"content\":\"adani.com\",\"is_rtl\":false},\"destination\":\"browser_1\"}},\"media_1\":{\"type\":\"media\",\"data\":{\"id\":\"3_1817832930971967488\",\"destination\":\"browser_1\"}}},\"destination_objects\":{\"browser_1\":{\"type\":\"browser\",\"data\":{\"url_data\":{\"url\":\"https://www.adani.com/en/Newsroom/Media-Release/Adani-Green-Energy-Announces-Strong-Q1-FY25-Results-with-EBITDA-of-Rs-2374-crore-up-by-23-percentage\",\"vanity\":\"adani.com\"}}}},\"components\":[\"media_1\",\"details_1\"],\"media_entities\":{\"3_1817832930971967488\":{\"id\":1817832930971967488,\"id_str\":\"1817832930971967488\",\"indices\":[0,0],\"media_url\":\"\",\"media_url_https\":\"https://pbs.twimg.com/media/GTo9a1-XYAAgWqH.jpg\",\"url\":\"\",\"display_url\":\"\",\"expanded_url\":\"\",\"type\":\"photo\",\"original_info\":{\"width\":1080,\"height\":1080,\"focus_rects\":[{\"x\":0,\"y\":427,\"h\":605,\"w\":1080},{\"x\":0,\"y\":0,\"h\":1080,\"w\":1080},{\"x\":67,\"y\":0,\"h\":1080,\"w\":947},{\"x\":270,\"y\":0,\"h\":1080,\"w\":540},{\"x\":0,\"y\":0,\"h\":1080,\"w\":1080}]},\"sizes\":{\"small\":{\"w\":680,\"h\":680,\"resize\":\"fit\"},\"large\":{\"w\":1080,\"h\":1080,\"resize\":\"fit\"},\"thumb\":{\"w\":150,\"h\":150,\"resize\":\"crop\"},\"medium\":{\"w\":1080,\"h\":1080,\"resize\":\"fit\"}},\"source_user_id\":980145571,\"source_user_id_str\":\"980145571\",\"media_key\":\"3_1817832930971967488\",\"ext\":{\"mediaColor\":{\"r\":{\"ok\":{\"palette\":[{\"rgb\":{\"red\":142,\"green\":40,\"blue\":142},\"percentage\":47.56},{\"rgb\":{\"red\":255,\"green\":255,\"blue\":255},\"percentage\":47.28},{\"rgb\":{\"red\":202,\"green\":153,\"blue\":202},\"percentage\":1.98},{\"rgb\":{\"red\":240,\"green\":77,\"blue\":38},\"percentage\":1.04},{\"rgb\":{\"red\":10,\"green\":129,\"blue\":145},\"percentage\":0.48}]}},\"ttl\":-1}}}}}"
+                    }
+                },
+                {
+                    "key": "card_url",
+                    "value": {
+                        "scribe_key": "card_url",
+                        "string_value": "https://twitter.com"
+                    }
+                }
+            ],
+            "card_platform": {
+                "platform": {
+                    "audience": {
+                        "name": "production"
+                    },
+                    "device": {
+                        "name": "iPhone",
+                        "version": "13"
+                    }
+                }
+            },
+            "name": "unified_card",
+            "url": "card://1817833632947716096"
+        },
+        "place": {},
+        "entities": {},
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1711712891144163560",
+        "url": "https://x.com/AdaniOnline/status/1711712891144163560",
+        "twitterUrl": "https://twitter.com/AdaniOnline/status/1711712891144163560",
+        "text": "Mundra, a small village a quarter-century ago, is now home to India's largest private port. From a modest jetty, it has now welcomed the largest container vessel ever to grace Indian shores. Celebrating this remarkable success story with a sense of pride and accomplishment. https://t.co/OGBkgw2B2g",
+        "source": "Twitter for iPhone",
+        "retweetCount": 13,
+        "replyCount": 7,
+        "likeCount": 98,
+        "quoteCount": 2,
+        "viewCount": 6336,
+        "createdAt": "Tue Oct 10 11:58:49 +0000 2023",
+        "lang": "en",
+        "bookmarkCount": 1,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1711712891144163560",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "AdaniOnline",
+            "url": "https://x.com/AdaniOnline",
+            "twitterUrl": "https://twitter.com/AdaniOnline",
+            "id": "980145571",
+            "name": "Adani Group",
+            "isVerified": false,
+            "isBlueVerified": true,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/1064450431752052738/ailjWIRR_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/980145571/1751978664",
+            "description": "",
+            "location": "India",
+            "followers": 358540,
+            "following": 92,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Fri Nov 30 09:46:15 +0000 2012",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 5781,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 2199,
+            "statusesCount": 3921,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [
+                "1942487619939516723"
+            ],
+            "profile_bio": {
+                "description": "A leading business conglomerate enriching lives, creating sustainable value and empowering India through #GrowthWithGoodness.",
+                "entities": {
+                    "description": {
+                        "hashtags": [
+                            {
+                                "indices": [
+                                    105,
+                                    124
+                                ],
+                                "text": "GrowthWithGoodness"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "adani.com",
+                                "expanded_url": "http://www.adani.com/",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/witDmCsKpF"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {
+            "media": [
+                {
+                    "additional_media_info": {
+                        "monetizable": false
+                    },
+                    "display_url": "pic.twitter.com/OGBkgw2B2g",
+                    "expanded_url": "https://twitter.com/AdaniOnline/status/1711712891144163560/video/1",
+                    "ext_media_availability": {
+                        "status": "Available"
+                    },
+                    "id_str": "1711710074132205568",
+                    "indices": [
+                        275,
+                        298
+                    ],
+                    "media_key": "7_1711710074132205568",
+                    "media_results": {
+                        "id": "QXBpTWVkaWFSZXN1bHRzOgwAAwoAARfBNz5PG5AACgACF8E5zjIa0OgAAA==",
+                        "result": {
+                            "__typename": "ApiMedia",
+                            "id": "QXBpTWVkaWE6DAADCgABF8E3Pk8bkAAKAAIXwTnOMhrQ6AAA",
+                            "media_key": "7_1711710074132205568"
+                        }
+                    },
+                    "media_url_https": "https://pbs.twimg.com/ext_tw_video_thumb/1711710074132205568/pu/img/yLNsLOcAqzOe8Tfw.jpg",
+                    "original_info": {
+                        "focus_rects": [],
+                        "height": 1080,
+                        "width": 1920
+                    },
+                    "sizes": {
+                        "large": {
+                            "h": 1080,
+                            "w": 1920
+                        }
+                    },
+                    "type": "video",
+                    "url": "https://t.co/OGBkgw2B2g",
+                    "video_info": {
+                        "aspect_ratio": [
+                            16,
+                            9
+                        ],
+                        "duration_millis": 100600,
+                        "variants": [
+                            {
+                                "content_type": "application/x-mpegURL",
+                                "url": "https://video-s.twimg.com/ext_tw_video/1711710074132205568/pu/pl/haC7C0zUa3omoIU0.m3u8?tag=12&v=985"
+                            },
+                            {
+                                "bitrate": 256000,
+                                "content_type": "video/mp4",
+                                "url": "https://video-s.twimg.com/ext_tw_video/1711710074132205568/pu/vid/avc1/480x270/wvd1PhePkVmh1Nix.mp4?tag=12"
+                            },
+                            {
+                                "bitrate": 832000,
+                                "content_type": "video/mp4",
+                                "url": "https://video-s.twimg.com/ext_tw_video/1711710074132205568/pu/vid/avc1/640x360/ZgXg7WH3sYoxXt_4.mp4?tag=12"
+                            },
+                            {
+                                "bitrate": 2176000,
+                                "content_type": "video/mp4",
+                                "url": "https://video-s.twimg.com/ext_tw_video/1711710074132205568/pu/vid/avc1/1280x720/2oGjkFRfPQoFU4u8.mp4?tag=12"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "card": null,
+        "place": {},
+        "entities": {},
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1681264155746246656",
+        "url": "https://x.com/AdaniOnline/status/1681264155746246656",
+        "twitterUrl": "https://twitter.com/AdaniOnline/status/1681264155746246656",
+        "text": "\"Our FY22-23 operational and financial results are testimony to our success and to the continued expansion of our customer base. Our balance sheet, our assets, and our operating cashflows continue to get stronger and are now healthier than ever before.\"\n#GrowthWithGoodness",
+        "source": "Twitter for iPhone",
+        "retweetCount": 18,
+        "replyCount": 11,
+        "likeCount": 127,
+        "quoteCount": 0,
+        "viewCount": 7729,
+        "createdAt": "Tue Jul 18 11:26:25 +0000 2023",
+        "lang": "en",
+        "bookmarkCount": 3,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1681264155746246656",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "AdaniOnline",
+            "url": "https://x.com/AdaniOnline",
+            "twitterUrl": "https://twitter.com/AdaniOnline",
+            "id": "980145571",
+            "name": "Adani Group",
+            "isVerified": false,
+            "isBlueVerified": true,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/1064450431752052738/ailjWIRR_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/980145571/1751978664",
+            "description": "",
+            "location": "India",
+            "followers": 358540,
+            "following": 92,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Fri Nov 30 09:46:15 +0000 2012",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 5781,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 2199,
+            "statusesCount": 3921,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [
+                "1942487619939516723"
+            ],
+            "profile_bio": {
+                "description": "A leading business conglomerate enriching lives, creating sustainable value and empowering India through #GrowthWithGoodness.",
+                "entities": {
+                    "description": {
+                        "hashtags": [
+                            {
+                                "indices": [
+                                    105,
+                                    124
+                                ],
+                                "text": "GrowthWithGoodness"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "adani.com",
+                                "expanded_url": "http://www.adani.com/",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/witDmCsKpF"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": {
+            "binding_values": [
+                {
+                    "key": "unified_card",
+                    "value": {
+                        "string_value": "{\"type\":\"image_website\",\"component_objects\":{\"details_1\":{\"type\":\"details\",\"data\":{\"title\":{\"content\":\"Annual General Meeting 2023 | Watch Chairman Gautam Adani\",\"is_rtl\":false},\"subtitle\":{\"content\":\"youtube.com\",\"is_rtl\":false},\"destination\":\"browser_1\"}},\"media_1\":{\"type\":\"media\",\"data\":{\"id\":\"3_1681255390036762624\",\"destination\":\"browser_1\"}}},\"destination_objects\":{\"browser_1\":{\"type\":\"browser\",\"data\":{\"url_data\":{\"url\":\"https://www.youtube.com/live/O4LQvz2wT0w?feature=share\",\"vanity\":\"youtube.com\"}}}},\"components\":[\"media_1\",\"details_1\"],\"media_entities\":{\"3_1681255390036762624\":{\"id\":1681255390036762624,\"id_str\":\"1681255390036762624\",\"indices\":[0,0],\"media_url\":\"\",\"media_url_https\":\"https://pbs.twimg.com/media/F1UE3pvaIAAV6ZW.jpg\",\"url\":\"\",\"display_url\":\"\",\"expanded_url\":\"\",\"type\":\"photo\",\"original_info\":{\"width\":800,\"height\":800,\"focus_rects\":[{\"x\":0,\"y\":116,\"h\":448,\"w\":800},{\"x\":0,\"y\":0,\"h\":800,\"w\":800},{\"x\":98,\"y\":0,\"h\":800,\"w\":702},{\"x\":340,\"y\":0,\"h\":800,\"w\":400},{\"x\":0,\"y\":0,\"h\":800,\"w\":800}]},\"sizes\":{\"small\":{\"w\":680,\"h\":680,\"resize\":\"fit\"},\"large\":{\"w\":800,\"h\":800,\"resize\":\"fit\"},\"thumb\":{\"w\":150,\"h\":150,\"resize\":\"crop\"},\"medium\":{\"w\":800,\"h\":800,\"resize\":\"fit\"}},\"source_user_id\":980145571,\"source_user_id_str\":\"980145571\",\"media_key\":\"3_1681255390036762624\",\"ext\":{\"mediaColor\":{\"r\":{\"ok\":{\"palette\":[{\"rgb\":{\"red\":60,\"green\":93,\"blue\":170},\"percentage\":58.73},{\"rgb\":{\"red\":42,\"green\":56,\"blue\":83},\"percentage\":20.63},{\"rgb\":{\"red\":232,\"green\":197,\"blue\":194},\"percentage\":5.16},{\"rgb\":{\"red\":38,\"green\":158,\"blue\":216},\"percentage\":4.28},{\"rgb\":{\"red\":94,\"green\":60,\"blue\":60},\"percentage\":2.8}]}},\"ttl\":-1}}}}}"
+                    }
+                },
+                {
+                    "key": "card_url",
+                    "value": {
+                        "scribe_key": "card_url",
+                        "string_value": "https://twitter.com"
+                    }
+                }
+            ],
+            "card_platform": {
+                "platform": {
+                    "audience": {
+                        "name": "production"
+                    },
+                    "device": {
+                        "name": "iPhone",
+                        "version": "13"
+                    }
+                }
+            },
+            "name": "unified_card",
+            "url": "card://1681264153309360128"
+        },
+        "place": {},
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        254,
+                        273
+                    ],
+                    "text": "GrowthWithGoodness"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1522431677318180864",
+        "url": "https://x.com/AdaniOnline/status/1522431677318180864",
+        "twitterUrl": "https://twitter.com/AdaniOnline/status/1522431677318180864",
+        "text": "#AdaniTransmission consolidated results for Q4FY22 and #FY22.",
+        "source": "Twitter for iPhone",
+        "retweetCount": 10,
+        "replyCount": 10,
+        "likeCount": 61,
+        "quoteCount": 1,
+        "viewCount": 0,
+        "createdAt": "Fri May 06 04:22:51 +0000 2022",
+        "lang": "en",
+        "bookmarkCount": 1,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1522431677318180864",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "AdaniOnline",
+            "url": "https://x.com/AdaniOnline",
+            "twitterUrl": "https://twitter.com/AdaniOnline",
+            "id": "980145571",
+            "name": "Adani Group",
+            "isVerified": false,
+            "isBlueVerified": true,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/1064450431752052738/ailjWIRR_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/980145571/1751978664",
+            "description": "",
+            "location": "India",
+            "followers": 358540,
+            "following": 92,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Fri Nov 30 09:46:15 +0000 2012",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 5781,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 2199,
+            "statusesCount": 3921,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [
+                "1942487619939516723"
+            ],
+            "profile_bio": {
+                "description": "A leading business conglomerate enriching lives, creating sustainable value and empowering India through #GrowthWithGoodness.",
+                "entities": {
+                    "description": {
+                        "hashtags": [
+                            {
+                                "indices": [
+                                    105,
+                                    124
+                                ],
+                                "text": "GrowthWithGoodness"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "adani.com",
+                                "expanded_url": "http://www.adani.com/",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/witDmCsKpF"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": {
+            "binding_values": [
+                {
+                    "key": "unified_card",
+                    "value": {
+                        "string_value": "{\"type\":\"image_website\",\"component_objects\":{\"details_1\":{\"type\":\"details\",\"data\":{\"title\":{\"content\":\"Adani Transmission Q4FY22 \",\"is_rtl\":false},\"subtitle\":{\"content\":\"adanitransmission.com\",\"is_rtl\":false},\"destination\":\"browser_1\"}},\"media_1\":{\"type\":\"media\",\"data\":{\"id\":\"3_1522431190699225088\",\"destination\":\"browser_1\"}}},\"destination_objects\":{\"browser_1\":{\"type\":\"browser\",\"data\":{\"url_data\":{\"url\":\"https://www.adanitransmission.com/newsroom/media-releases/Adani-Transmission-Limited-Consolidated-Results-for-Q4FY22-and-FY22\",\"vanity\":\"adanitransmission.com\"}}}},\"components\":[\"media_1\",\"details_1\"],\"media_entities\":{\"3_1522431190699225088\":{\"id\":1522431190699225088,\"id_str\":\"1522431190699225088\",\"indices\":[0,0],\"media_url\":\"\",\"media_url_https\":\"https://pbs.twimg.com/media/FSDDGgyaMAAsnMl.jpg\",\"url\":\"\",\"display_url\":\"\",\"expanded_url\":\"\",\"type\":\"photo\",\"original_info\":{\"width\":800,\"height\":418,\"focus_rects\":[{\"x\":54,\"y\":0,\"h\":418,\"w\":746},{\"x\":382,\"y\":0,\"h\":418,\"w\":418},{\"x\":433,\"y\":0,\"h\":418,\"w\":367},{\"x\":591,\"y\":0,\"h\":418,\"w\":209},{\"x\":0,\"y\":0,\"h\":418,\"w\":800}]},\"sizes\":{\"small\":{\"w\":680,\"h\":355,\"resize\":\"fit\"},\"large\":{\"w\":800,\"h\":418,\"resize\":\"fit\"},\"thumb\":{\"w\":150,\"h\":150,\"resize\":\"crop\"},\"medium\":{\"w\":800,\"h\":418,\"resize\":\"fit\"}},\"source_user_id\":980145571,\"source_user_id_str\":\"980145571\",\"media_key\":\"3_1522431190699225088\",\"ext\":{\"mediaColor\":{\"r\":{\"ok\":{\"palette\":[{\"rgb\":{\"red\":195,\"green\":210,\"blue\":221},\"percentage\":61.82},{\"rgb\":{\"red\":202,\"green\":179,\"blue\":82},\"percentage\":20.73},{\"rgb\":{\"red\":108,\"green\":110,\"blue\":69},\"percentage\":7.07},{\"rgb\":{\"red\":109,\"green\":108,\"blue\":102},\"percentage\":5.84},{\"rgb\":{\"red\":166,\"green\":167,\"blue\":134},\"percentage\":1.48}]}},\"ttl\":-1}}}}}"
+                    }
+                },
+                {
+                    "key": "card_url",
+                    "value": {
+                        "scribe_key": "card_url",
+                        "string_value": "https://twitter.com"
+                    }
+                }
+            ],
+            "card_platform": {
+                "platform": {
+                    "audience": {
+                        "name": "production"
+                    },
+                    "device": {
+                        "name": "iPhone",
+                        "version": "13"
+                    }
+                }
+            },
+            "name": "unified_card",
+            "url": "card://1522431675397197826"
+        },
+        "place": {},
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        0,
+                        18
+                    ],
+                    "text": "AdaniTransmission"
+                },
+                {
+                    "indices": [
+                        55,
+                        60
+                    ],
+                    "text": "FY22"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1521751471909654530",
+        "url": "https://x.com/AdaniOnline/status/1521751471909654530",
+        "twitterUrl": "https://twitter.com/AdaniOnline/status/1521751471909654530",
+        "text": "Adani Enterprises Ltd (AEL), part of the Adani Group, announced its results for the year and quarter ended March 31, 2022.\n#Adani #FinancialResults #FY22",
+        "source": "Twitter for iPhone",
+        "retweetCount": 10,
+        "replyCount": 8,
+        "likeCount": 81,
+        "quoteCount": 2,
+        "viewCount": 0,
+        "createdAt": "Wed May 04 07:19:58 +0000 2022",
+        "lang": "en",
+        "bookmarkCount": 1,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1521751471909654530",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "AdaniOnline",
+            "url": "https://x.com/AdaniOnline",
+            "twitterUrl": "https://twitter.com/AdaniOnline",
+            "id": "980145571",
+            "name": "Adani Group",
+            "isVerified": false,
+            "isBlueVerified": true,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/1064450431752052738/ailjWIRR_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/980145571/1751978664",
+            "description": "",
+            "location": "India",
+            "followers": 358540,
+            "following": 92,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Fri Nov 30 09:46:15 +0000 2012",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 5781,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 2199,
+            "statusesCount": 3921,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [
+                "1942487619939516723"
+            ],
+            "profile_bio": {
+                "description": "A leading business conglomerate enriching lives, creating sustainable value and empowering India through #GrowthWithGoodness.",
+                "entities": {
+                    "description": {
+                        "hashtags": [
+                            {
+                                "indices": [
+                                    105,
+                                    124
+                                ],
+                                "text": "GrowthWithGoodness"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "adani.com",
+                                "expanded_url": "http://www.adani.com/",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/witDmCsKpF"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": {
+            "binding_values": [
+                {
+                    "key": "unified_card",
+                    "value": {
+                        "string_value": "{\"type\":\"image_website\",\"component_objects\":{\"details_1\":{\"type\":\"details\",\"data\":{\"title\":{\"content\":\"Adani Enterprises Ltd FY22 Results\",\"is_rtl\":false},\"subtitle\":{\"content\":\"adanienterprises.com\",\"is_rtl\":false},\"destination\":\"browser_1\"}},\"media_1\":{\"type\":\"media\",\"data\":{\"id\":\"3_1521751287398014976\",\"destination\":\"browser_1\"}}},\"destination_objects\":{\"browser_1\":{\"type\":\"browser\",\"data\":{\"url_data\":{\"url\":\"https://www.adanienterprises.com/newsroom/media-releases/Adani-Enterprises-Ltd-FY22-Results\",\"vanity\":\"adanienterprises.com\"}}}},\"components\":[\"media_1\",\"details_1\"],\"media_entities\":{\"3_1521751287398014976\":{\"id\":1521751287398014976,\"id_str\":\"1521751287398014976\",\"indices\":[0,0],\"media_url\":\"\",\"media_url_https\":\"https://pbs.twimg.com/media/FR5Yu7naIAA9QAT.jpg\",\"url\":\"\",\"display_url\":\"\",\"expanded_url\":\"\",\"type\":\"photo\",\"original_info\":{\"width\":800,\"height\":418,\"focus_rects\":[{\"x\":54,\"y\":0,\"h\":418,\"w\":746},{\"x\":382,\"y\":0,\"h\":418,\"w\":418},{\"x\":433,\"y\":0,\"h\":418,\"w\":367},{\"x\":591,\"y\":0,\"h\":418,\"w\":209},{\"x\":0,\"y\":0,\"h\":418,\"w\":800}]},\"sizes\":{\"medium\":{\"w\":800,\"h\":418,\"resize\":\"fit\"},\"thumb\":{\"w\":150,\"h\":150,\"resize\":\"crop\"},\"large\":{\"w\":800,\"h\":418,\"resize\":\"fit\"},\"small\":{\"w\":680,\"h\":355,\"resize\":\"fit\"}},\"source_user_id\":980145571,\"source_user_id_str\":\"980145571\",\"media_key\":\"3_1521751287398014976\",\"ext\":{\"mediaColor\":{\"r\":{\"ok\":{\"palette\":[{\"rgb\":{\"red\":14,\"green\":17,\"blue\":36},\"percentage\":37.12},{\"rgb\":{\"red\":180,\"green\":197,\"blue\":218},\"percentage\":26.53},{\"rgb\":{\"red\":104,\"green\":122,\"blue\":137},\"percentage\":21.07},{\"rgb\":{\"red\":82,\"green\":150,\"blue\":210},\"percentage\":6.01},{\"rgb\":{\"red\":174,\"green\":182,\"blue\":127},\"percentage\":1.45}]}},\"ttl\":-1}}}}}"
+                    }
+                },
+                {
+                    "key": "card_url",
+                    "value": {
+                        "scribe_key": "card_url",
+                        "string_value": "https://twitter.com"
+                    }
+                }
+            ],
+            "card_platform": {
+                "platform": {
+                    "audience": {
+                        "name": "production"
+                    },
+                    "device": {
+                        "name": "iPhone",
+                        "version": "13"
+                    }
+                }
+            },
+            "name": "unified_card",
+            "url": "card://1521751469904785408"
+        },
+        "place": {},
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        123,
+                        129
+                    ],
+                    "text": "Adani"
+                },
+                {
+                    "indices": [
+                        130,
+                        147
+                    ],
+                    "text": "FinancialResults"
+                },
+                {
+                    "indices": [
+                        148,
+                        153
+                    ],
+                    "text": "FY22"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1493448155156807681",
+        "url": "https://x.com/AdaniOnline/status/1493448155156807681",
+        "twitterUrl": "https://twitter.com/AdaniOnline/status/1493448155156807681",
+        "text": "Adani Enterprises announces 9M FY22 results. \n\n#Adani #FinancialResults",
+        "source": "Twitter for iPhone",
+        "retweetCount": 13,
+        "replyCount": 7,
+        "likeCount": 42,
+        "quoteCount": 0,
+        "viewCount": 0,
+        "createdAt": "Tue Feb 15 04:52:41 +0000 2022",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1493448155156807681",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "AdaniOnline",
+            "url": "https://x.com/AdaniOnline",
+            "twitterUrl": "https://twitter.com/AdaniOnline",
+            "id": "980145571",
+            "name": "Adani Group",
+            "isVerified": false,
+            "isBlueVerified": true,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/1064450431752052738/ailjWIRR_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/980145571/1751978664",
+            "description": "",
+            "location": "India",
+            "followers": 358540,
+            "following": 92,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Fri Nov 30 09:46:15 +0000 2012",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 5781,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 2199,
+            "statusesCount": 3921,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [
+                "1942487619939516723"
+            ],
+            "profile_bio": {
+                "description": "A leading business conglomerate enriching lives, creating sustainable value and empowering India through #GrowthWithGoodness.",
+                "entities": {
+                    "description": {
+                        "hashtags": [
+                            {
+                                "indices": [
+                                    105,
+                                    124
+                                ],
+                                "text": "GrowthWithGoodness"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "adani.com",
+                                "expanded_url": "http://www.adani.com/",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/witDmCsKpF"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": {
+            "binding_values": [
+                {
+                    "key": "unified_card",
+                    "value": {
+                        "string_value": "{\"type\":\"image_website\",\"component_objects\":{\"details_1\":{\"type\":\"details\",\"data\":{\"title\":{\"content\":\"Adani Enterprises announces 9M FY22 results. \",\"is_rtl\":false},\"subtitle\":{\"content\":\"adanienterprises.com\",\"is_rtl\":false},\"destination\":\"browser_1\"}},\"media_1\":{\"type\":\"media\",\"data\":{\"id\":\"3_1493447964903178240\",\"destination\":\"browser_1\"}}},\"destination_objects\":{\"browser_1\":{\"type\":\"browser\",\"data\":{\"url_data\":{\"url\":\"https://www.adanienterprises.com/newsroom/media-releases/Adani-Enterprises-Ltd-9M-FY22-Results\",\"vanity\":\"adanienterprises.com\"}}}},\"components\":[\"media_1\",\"details_1\"],\"media_entities\":{\"3_1493447964903178240\":{\"id\":1493447964903178240,\"id_str\":\"1493447964903178240\",\"indices\":[0,0],\"media_url\":\"\",\"media_url_https\":\"https://pbs.twimg.com/media/FLnLAu6VgAAEcoH.jpg\",\"url\":\"\",\"display_url\":\"\",\"expanded_url\":\"\",\"type\":\"photo\",\"original_info\":{\"width\":800,\"height\":418,\"focus_rects\":[{\"x\":54,\"y\":0,\"h\":418,\"w\":746},{\"x\":382,\"y\":0,\"h\":418,\"w\":418},{\"x\":433,\"y\":0,\"h\":418,\"w\":367},{\"x\":591,\"y\":0,\"h\":418,\"w\":209},{\"x\":0,\"y\":0,\"h\":418,\"w\":800}]},\"sizes\":{\"medium\":{\"w\":800,\"h\":418,\"resize\":\"fit\"},\"thumb\":{\"w\":150,\"h\":150,\"resize\":\"crop\"},\"large\":{\"w\":800,\"h\":418,\"resize\":\"fit\"},\"small\":{\"w\":680,\"h\":355,\"resize\":\"fit\"}},\"source_user_id\":980145571,\"source_user_id_str\":\"980145571\",\"media_key\":\"3_1493447964903178240\",\"ext\":{\"mediaColor\":{\"r\":{\"ok\":{\"palette\":[{\"rgb\":{\"red\":14,\"green\":17,\"blue\":35},\"percentage\":37.28},{\"rgb\":{\"red\":183,\"green\":199,\"blue\":219},\"percentage\":26.34},{\"rgb\":{\"red\":105,\"green\":123,\"blue\":139},\"percentage\":21.49},{\"rgb\":{\"red\":81,\"green\":150,\"blue\":211},\"percentage\":6.17},{\"rgb\":{\"red\":179,\"green\":183,\"blue\":90},\"percentage\":1.26}]}},\"ttl\":-1}}}}}"
+                    }
+                },
+                {
+                    "key": "card_url",
+                    "value": {
+                        "scribe_key": "card_url",
+                        "string_value": "https://twitter.com"
+                    }
+                }
+            ],
+            "card_platform": {
+                "platform": {
+                    "audience": {
+                        "name": "production"
+                    },
+                    "device": {
+                        "name": "iPhone",
+                        "version": "13"
+                    }
+                }
+            },
+            "name": "unified_card",
+            "url": "card://1493448151046316033"
+        },
+        "place": {},
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        47,
+                        53
+                    ],
+                    "text": "Adani"
+                },
+                {
+                    "indices": [
+                        54,
+                        71
+                    ],
+                    "text": "FinancialResults"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1489223861770256386",
+        "url": "https://x.com/AdaniOnline/status/1489223861770256386",
+        "twitterUrl": "https://twitter.com/AdaniOnline/status/1489223861770256386",
+        "text": "#AdaniTransmission consolidated results for 9MFY22 and Q3FY22.\n#AdaniGroup #Q3FY22 #FinancialResults",
+        "source": "Twitter for iPhone",
+        "retweetCount": 6,
+        "replyCount": 8,
+        "likeCount": 42,
+        "quoteCount": 0,
+        "viewCount": 0,
+        "createdAt": "Thu Feb 03 13:06:51 +0000 2022",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1489223861770256386",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "AdaniOnline",
+            "url": "https://x.com/AdaniOnline",
+            "twitterUrl": "https://twitter.com/AdaniOnline",
+            "id": "980145571",
+            "name": "Adani Group",
+            "isVerified": false,
+            "isBlueVerified": true,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/1064450431752052738/ailjWIRR_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/980145571/1751978664",
+            "description": "",
+            "location": "India",
+            "followers": 358540,
+            "following": 92,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Fri Nov 30 09:46:15 +0000 2012",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 5781,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 2199,
+            "statusesCount": 3921,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [
+                "1942487619939516723"
+            ],
+            "profile_bio": {
+                "description": "A leading business conglomerate enriching lives, creating sustainable value and empowering India through #GrowthWithGoodness.",
+                "entities": {
+                    "description": {
+                        "hashtags": [
+                            {
+                                "indices": [
+                                    105,
+                                    124
+                                ],
+                                "text": "GrowthWithGoodness"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "adani.com",
+                                "expanded_url": "http://www.adani.com/",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/witDmCsKpF"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": {
+            "binding_values": [
+                {
+                    "key": "unified_card",
+                    "value": {
+                        "string_value": "{\"type\":\"image_website\",\"component_objects\":{\"details_1\":{\"type\":\"details\",\"data\":{\"title\":{\"content\":\"#AdaniTransmission consolidated results for 9MFY22 and Q3FY22.\",\"is_rtl\":false},\"subtitle\":{\"content\":\"lnkd.in\",\"is_rtl\":false},\"destination\":\"browser_1\"}},\"media_1\":{\"type\":\"media\",\"data\":{\"id\":\"3_1489223631322644480\",\"destination\":\"browser_1\"}}},\"destination_objects\":{\"browser_1\":{\"type\":\"browser\",\"data\":{\"url_data\":{\"url\":\"https://lnkd.in/duAk4GyT\",\"vanity\":\"lnkd.in\"}}}},\"components\":[\"media_1\",\"details_1\"],\"media_entities\":{\"3_1489223631322644480\":{\"id\":1489223631322644480,\"id_str\":\"1489223631322644480\",\"indices\":[0,0],\"media_url\":\"\",\"media_url_https\":\"https://pbs.twimg.com/media/FKrJAKAagAAgJHt.jpg\",\"url\":\"\",\"display_url\":\"\",\"expanded_url\":\"\",\"type\":\"photo\",\"original_info\":{\"width\":800,\"height\":418,\"focus_rects\":[{\"x\":54,\"y\":0,\"h\":418,\"w\":746},{\"x\":382,\"y\":0,\"h\":418,\"w\":418},{\"x\":433,\"y\":0,\"h\":418,\"w\":367},{\"x\":591,\"y\":0,\"h\":418,\"w\":209},{\"x\":0,\"y\":0,\"h\":418,\"w\":800}]},\"sizes\":{\"medium\":{\"w\":800,\"h\":418,\"resize\":\"fit\"},\"small\":{\"w\":680,\"h\":355,\"resize\":\"fit\"},\"large\":{\"w\":800,\"h\":418,\"resize\":\"fit\"},\"thumb\":{\"w\":150,\"h\":150,\"resize\":\"crop\"}},\"source_user_id\":980145571,\"source_user_id_str\":\"980145571\",\"media_key\":\"3_1489223631322644480\",\"ext\":{\"mediaColor\":{\"r\":{\"ok\":{\"palette\":[{\"rgb\":{\"red\":194,\"green\":211,\"blue\":221},\"percentage\":62.01},{\"rgb\":{\"red\":201,\"green\":177,\"blue\":82},\"percentage\":20.88},{\"rgb\":{\"red\":105,\"green\":106,\"blue\":70},\"percentage\":6.7},{\"rgb\":{\"red\":109,\"green\":108,\"blue\":102},\"percentage\":5.73},{\"rgb\":{\"red\":167,\"green\":172,\"blue\":132},\"percentage\":1.52}]}},\"ttl\":-1}}}}}"
+                    }
+                },
+                {
+                    "key": "card_url",
+                    "value": {
+                        "scribe_key": "card_url",
+                        "string_value": "https://twitter.com"
+                    }
+                }
+            ],
+            "card_platform": {
+                "platform": {
+                    "audience": {
+                        "name": "production"
+                    },
+                    "device": {
+                        "name": "iPhone",
+                        "version": "13"
+                    }
+                }
+            },
+            "name": "unified_card",
+            "url": "card://1489223857999589376"
+        },
+        "place": {},
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        0,
+                        18
+                    ],
+                    "text": "AdaniTransmission"
+                },
+                {
+                    "indices": [
+                        63,
+                        74
+                    ],
+                    "text": "AdaniGroup"
+                },
+                {
+                    "indices": [
+                        75,
+                        82
+                    ],
+                    "text": "Q3FY22"
+                },
+                {
+                    "indices": [
+                        83,
+                        100
+                    ],
+                    "text": "FinancialResults"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1454122403060060160",
+        "url": "https://x.com/AdaniOnline/status/1454122403060060160",
+        "twitterUrl": "https://twitter.com/AdaniOnline/status/1454122403060060160",
+        "text": "#AdaniTransmission  consolidated results for Q2FY22 and 1HY22\n\n#Adani #FinancialResults #Q2FY22 #1HY22\n\nhttps://t.co/eVN5KChmGp",
+        "source": "Twitter for iPhone",
+        "retweetCount": 3,
+        "replyCount": 3,
+        "likeCount": 32,
+        "quoteCount": 1,
+        "viewCount": 0,
+        "createdAt": "Fri Oct 29 16:26:11 +0000 2021",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1454122403060060160",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "AdaniOnline",
+            "url": "https://x.com/AdaniOnline",
+            "twitterUrl": "https://twitter.com/AdaniOnline",
+            "id": "980145571",
+            "name": "Adani Group",
+            "isVerified": false,
+            "isBlueVerified": true,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/1064450431752052738/ailjWIRR_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/980145571/1751978664",
+            "description": "",
+            "location": "India",
+            "followers": 358540,
+            "following": 92,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Fri Nov 30 09:46:15 +0000 2012",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 5781,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 2199,
+            "statusesCount": 3921,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [
+                "1942487619939516723"
+            ],
+            "profile_bio": {
+                "description": "A leading business conglomerate enriching lives, creating sustainable value and empowering India through #GrowthWithGoodness.",
+                "entities": {
+                    "description": {
+                        "hashtags": [
+                            {
+                                "indices": [
+                                    105,
+                                    124
+                                ],
+                                "text": "GrowthWithGoodness"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "adani.com",
+                                "expanded_url": "http://www.adani.com/",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/witDmCsKpF"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": null,
+        "place": {},
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        0,
+                        18
+                    ],
+                    "text": "AdaniTransmission"
+                },
+                {
+                    "indices": [
+                        63,
+                        69
+                    ],
+                    "text": "Adani"
+                },
+                {
+                    "indices": [
+                        70,
+                        87
+                    ],
+                    "text": "FinancialResults"
+                },
+                {
+                    "indices": [
+                        88,
+                        95
+                    ],
+                    "text": "Q2FY22"
+                },
+                {
+                    "indices": [
+                        96,
+                        102
+                    ],
+                    "text": "1HY22"
+                }
+            ],
+            "urls": [
+                {
+                    "display_url": "adanitransmission.com/newsroom/media\u2026",
+                    "expanded_url": "https://www.adanitransmission.com/newsroom/media-releases/Adani-Transmission-Limited-Consolidated-Results-for-Q2FY22-and-1HFY22",
+                    "indices": [
+                        104,
+                        127
+                    ],
+                    "url": "https://t.co/eVN5KChmGp"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1440234486147387401",
+        "url": "https://x.com/AdaniOnline/status/1440234486147387401",
+        "twitterUrl": "https://twitter.com/AdaniOnline/status/1440234486147387401",
+        "text": "\u201cIn my country, more than a quarter billion households and millions of small businesses that generate jobs rely on the availability of cheaply produced electricity.\u201d - Mr. @Gautam_Adani, Chairman, Adani Group https://t.co/oN0RDkZKkA",
+        "source": "Twitter for iPhone",
+        "retweetCount": 1,
+        "replyCount": 1,
+        "likeCount": 23,
+        "quoteCount": 0,
+        "viewCount": 0,
+        "createdAt": "Tue Sep 21 08:40:34 +0000 2021",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": true,
+        "inReplyToId": "1440232445400338438",
+        "conversationId": "1440213137869860864",
+        "inReplyToUserId": "980145571",
+        "inReplyToUsername": "AdaniOnline",
+        "author": {
+            "type": "user",
+            "userName": "AdaniOnline",
+            "url": "https://x.com/AdaniOnline",
+            "twitterUrl": "https://twitter.com/AdaniOnline",
+            "id": "980145571",
+            "name": "Adani Group",
+            "isVerified": false,
+            "isBlueVerified": true,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/1064450431752052738/ailjWIRR_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/980145571/1751978664",
+            "description": "",
+            "location": "India",
+            "followers": 358540,
+            "following": 92,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Fri Nov 30 09:46:15 +0000 2012",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 5781,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 2199,
+            "statusesCount": 3921,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [
+                "1942487619939516723"
+            ],
+            "profile_bio": {
+                "description": "A leading business conglomerate enriching lives, creating sustainable value and empowering India through #GrowthWithGoodness.",
+                "entities": {
+                    "description": {
+                        "hashtags": [
+                            {
+                                "indices": [
+                                    105,
+                                    124
+                                ],
+                                "text": "GrowthWithGoodness"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "adani.com",
+                                "expanded_url": "http://www.adani.com/",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/witDmCsKpF"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {
+            "media": [
+                {
+                    "additional_media_info": {
+                        "monetizable": false
+                    },
+                    "display_url": "pic.twitter.com/oN0RDkZKkA",
+                    "expanded_url": "https://twitter.com/AdaniOnline/status/1440234486147387401/video/1",
+                    "ext_media_availability": {
+                        "status": "Available"
+                    },
+                    "id_str": "1440232659070771209",
+                    "indices": [
+                        209,
+                        232
+                    ],
+                    "media_key": "7_1440232659070771209",
+                    "media_results": {
+                        "id": "QXBpTWVkaWFSZXN1bHRzOgwAAwoAARP8u/kF1GAJCgACE/y9omwVEAkAAA==",
+                        "result": {
+                            "__typename": "ApiMedia",
+                            "id": "QXBpTWVkaWE6DAADCgABE/y7+QXUYAkKAAIT/L2ibBUQCQAA",
+                            "media_key": "7_1440232659070771209"
+                        }
+                    },
+                    "media_url_https": "https://pbs.twimg.com/ext_tw_video_thumb/1440232659070771209/pu/img/OZRaYq8tITT5xCjy.jpg",
+                    "original_info": {
+                        "focus_rects": [],
+                        "height": 720,
+                        "width": 1280
+                    },
+                    "sizes": {
+                        "large": {
+                            "h": 720,
+                            "w": 1280
+                        }
+                    },
+                    "type": "video",
+                    "url": "https://t.co/oN0RDkZKkA",
+                    "video_info": {
+                        "aspect_ratio": [
+                            16,
+                            9
+                        ],
+                        "duration_millis": 50220,
+                        "variants": [
+                            {
+                                "content_type": "application/x-mpegURL",
+                                "url": "https://video-s.twimg.com/ext_tw_video/1440232659070771209/pu/pl/_uxYDE2_zL1nMB9O.m3u8?tag=12"
+                            },
+                            {
+                                "bitrate": 256000,
+                                "content_type": "video/mp4",
+                                "url": "https://video-s.twimg.com/ext_tw_video/1440232659070771209/pu/vid/480x270/wj5GDvD7BbCXjjzT.mp4?tag=12"
+                            },
+                            {
+                                "bitrate": 832000,
+                                "content_type": "video/mp4",
+                                "url": "https://video-s.twimg.com/ext_tw_video/1440232659070771209/pu/vid/640x360/liZQsHXCrZgTERhX.mp4?tag=12"
+                            },
+                            {
+                                "bitrate": 2176000,
+                                "content_type": "video/mp4",
+                                "url": "https://video-s.twimg.com/ext_tw_video/1440232659070771209/pu/vid/1280x720/FiksEfzy-VR9m9sL.mp4?tag=12"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "card": null,
+        "place": {},
+        "entities": {
+            "user_mentions": [
+                {
+                    "id_str": "2378585124",
+                    "indices": [
+                        172,
+                        185
+                    ],
+                    "name": "Gautam Adani",
+                    "screen_name": "gautam_adani"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1423511368938844161",
+        "url": "https://x.com/AdaniOnline/status/1423511368938844161",
+        "twitterUrl": "https://twitter.com/AdaniOnline/status/1423511368938844161",
+        "text": "#AdaniPower Ltd Q1 FY22 Results.\n\n#Adani #FinancialResults #Q1FY22",
+        "source": "Twitter for iPhone",
+        "retweetCount": 58,
+        "replyCount": 19,
+        "likeCount": 664,
+        "quoteCount": 0,
+        "viewCount": 0,
+        "createdAt": "Fri Aug 06 05:08:52 +0000 2021",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1423511368938844161",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "AdaniOnline",
+            "url": "https://x.com/AdaniOnline",
+            "twitterUrl": "https://twitter.com/AdaniOnline",
+            "id": "980145571",
+            "name": "Adani Group",
+            "isVerified": false,
+            "isBlueVerified": true,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/1064450431752052738/ailjWIRR_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/980145571/1751978664",
+            "description": "",
+            "location": "India",
+            "followers": 358540,
+            "following": 92,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Fri Nov 30 09:46:15 +0000 2012",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 5781,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 2199,
+            "statusesCount": 3921,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [
+                "1942487619939516723"
+            ],
+            "profile_bio": {
+                "description": "A leading business conglomerate enriching lives, creating sustainable value and empowering India through #GrowthWithGoodness.",
+                "entities": {
+                    "description": {
+                        "hashtags": [
+                            {
+                                "indices": [
+                                    105,
+                                    124
+                                ],
+                                "text": "GrowthWithGoodness"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "adani.com",
+                                "expanded_url": "http://www.adani.com/",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/witDmCsKpF"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": {
+            "binding_values": [
+                {
+                    "key": "unified_card",
+                    "value": {
+                        "string_value": "{\"type\":\"image_website\",\"component_objects\":{\"details_1\":{\"type\":\"details\",\"data\":{\"title\":{\"content\":\"Adani Power Ltd Q1 FY22 Results\",\"is_rtl\":false},\"subtitle\":{\"content\":\"adanipower.com\",\"is_rtl\":false},\"destination\":\"browser_1\"}},\"media_1\":{\"type\":\"media\",\"data\":{\"id\":\"19_1423509269614186500\",\"destination\":\"browser_1\"}}},\"destination_objects\":{\"browser_1\":{\"type\":\"browser\",\"data\":{\"url_data\":{\"url\":\"https://www.adanipower.com/newsroom/media-releases/Adani-Power-Ltd-Q4-FY21-Results\",\"vanity\":\"adanipower.com\"}}}},\"components\":[\"media_1\",\"details_1\"],\"media_entities\":{\"19_1423509269614186500\":{\"id\":1423509269614186500,\"id_str\":\"1423509269614186500\",\"indices\":[0,0],\"media_url\":\"\",\"media_url_https\":\"https://pbs.twimg.com/ad_img/1423509269614186500/iaUJiu-Q?format=jpg&name=orig\",\"url\":\"\",\"display_url\":\"\",\"expanded_url\":\"\",\"type\":\"photo\",\"original_info\":{\"width\":800,\"height\":418},\"sizes\":{},\"source_user_id\":980145571,\"source_user_id_str\":\"980145571\",\"media_key\":\"19_1423509269614186500\",\"ext\":{\"mediaColor\":{\"r\":{\"ok\":{\"palette\":[{\"rgb\":{\"red\":88,\"green\":50,\"blue\":28},\"percentage\":58.55},{\"rgb\":{\"red\":134,\"green\":75,\"blue\":23},\"percentage\":15.76},{\"rgb\":{\"red\":79,\"green\":60,\"blue\":54},\"percentage\":7.75},{\"rgb\":{\"red\":150,\"green\":110,\"blue\":85},\"percentage\":4.52},{\"rgb\":{\"red\":220,\"green\":158,\"blue\":50},\"percentage\":1.68}]}},\"ttl\":-1}}}}}"
+                    }
+                },
+                {
+                    "key": "card_url",
+                    "value": {
+                        "scribe_key": "card_url",
+                        "string_value": "https://twitter.com"
+                    }
+                }
+            ],
+            "card_platform": {
+                "platform": {
+                    "audience": {
+                        "name": "production"
+                    },
+                    "device": {
+                        "name": "iPhone",
+                        "version": "13"
+                    }
+                }
+            },
+            "name": "unified_card",
+            "url": "card://1423509357908545539"
+        },
+        "place": {},
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        0,
+                        11
+                    ],
+                    "text": "AdaniPower"
+                },
+                {
+                    "indices": [
+                        34,
+                        40
+                    ],
+                    "text": "Adani"
+                },
+                {
+                    "indices": [
+                        41,
+                        58
+                    ],
+                    "text": "FinancialResults"
+                },
+                {
+                    "indices": [
+                        59,
+                        66
+                    ],
+                    "text": "Q1FY22"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1423251869644726273",
+        "url": "https://x.com/AdaniOnline/status/1423251869644726273",
+        "twitterUrl": "https://twitter.com/AdaniOnline/status/1423251869644726273",
+        "text": "#AdaniTransmission Limited consolidated results for Q1FY22.\n\n#Adani #FinancialResults #Q1FY22",
+        "source": "Twitter for iPhone",
+        "retweetCount": 40,
+        "replyCount": 2,
+        "likeCount": 334,
+        "quoteCount": 1,
+        "viewCount": 0,
+        "createdAt": "Thu Aug 05 11:57:43 +0000 2021",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1423251869644726273",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "AdaniOnline",
+            "url": "https://x.com/AdaniOnline",
+            "twitterUrl": "https://twitter.com/AdaniOnline",
+            "id": "980145571",
+            "name": "Adani Group",
+            "isVerified": false,
+            "isBlueVerified": true,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/1064450431752052738/ailjWIRR_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/980145571/1751978664",
+            "description": "",
+            "location": "India",
+            "followers": 358540,
+            "following": 92,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Fri Nov 30 09:46:15 +0000 2012",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 5781,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 2199,
+            "statusesCount": 3921,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [
+                "1942487619939516723"
+            ],
+            "profile_bio": {
+                "description": "A leading business conglomerate enriching lives, creating sustainable value and empowering India through #GrowthWithGoodness.",
+                "entities": {
+                    "description": {
+                        "hashtags": [
+                            {
+                                "indices": [
+                                    105,
+                                    124
+                                ],
+                                "text": "GrowthWithGoodness"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "adani.com",
+                                "expanded_url": "http://www.adani.com/",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/witDmCsKpF"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": {
+            "binding_values": [
+                {
+                    "key": "unified_card",
+                    "value": {
+                        "string_value": "{\"type\":\"image_website\",\"component_objects\":{\"details_1\":{\"type\":\"details\",\"data\":{\"title\":{\"content\":\"Adani Transmission Limited Consolidated Results For Q1FY22\",\"is_rtl\":false},\"subtitle\":{\"content\":\"adanitransmission.com\",\"is_rtl\":false},\"destination\":\"browser_1\"}},\"media_1\":{\"type\":\"media\",\"data\":{\"id\":\"19_1423249145482027009\",\"destination\":\"browser_1\"}}},\"destination_objects\":{\"browser_1\":{\"type\":\"browser\",\"data\":{\"url_data\":{\"url\":\"https://www.adanitransmission.com/newsroom/media-releases/Adani-Transmission-Limited-Consolidated-Results-for-Q1FY22\",\"vanity\":\"adanitransmission.com\"}}}},\"components\":[\"media_1\",\"details_1\"],\"media_entities\":{\"19_1423249145482027009\":{\"id\":1423249145482027009,\"id_str\":\"1423249145482027009\",\"indices\":[0,0],\"media_url\":\"\",\"media_url_https\":\"https://pbs.twimg.com/ad_img/1423249145482027009/rKA-uCXe?format=jpg&name=orig\",\"url\":\"\",\"display_url\":\"\",\"expanded_url\":\"\",\"type\":\"photo\",\"original_info\":{\"width\":800,\"height\":418},\"sizes\":{},\"source_user_id\":980145571,\"source_user_id_str\":\"980145571\",\"media_key\":\"19_1423249145482027009\",\"ext\":{\"mediaColor\":{\"r\":{\"ok\":{\"palette\":[{\"rgb\":{\"red\":172,\"green\":96,\"blue\":10},\"percentage\":33.06},{\"rgb\":{\"red\":95,\"green\":48,\"blue\":10},\"percentage\":27.05},{\"rgb\":{\"red\":8,\"green\":5,\"blue\":3},\"percentage\":25.65},{\"rgb\":{\"red\":232,\"green\":138,\"blue\":4},\"percentage\":6.68},{\"rgb\":{\"red\":207,\"green\":99,\"blue\":2},\"percentage\":5.33}]}},\"ttl\":-1}}}}}"
+                    }
+                },
+                {
+                    "key": "card_url",
+                    "value": {
+                        "scribe_key": "card_url",
+                        "string_value": "https://twitter.com"
+                    }
+                }
+            ],
+            "card_platform": {
+                "platform": {
+                    "audience": {
+                        "name": "production"
+                    },
+                    "device": {
+                        "name": "iPhone",
+                        "version": "13"
+                    }
+                }
+            },
+            "name": "unified_card",
+            "url": "card://1423249399963021317"
+        },
+        "place": {},
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        0,
+                        18
+                    ],
+                    "text": "AdaniTransmission"
+                },
+                {
+                    "indices": [
+                        61,
+                        67
+                    ],
+                    "text": "Adani"
+                },
+                {
+                    "indices": [
+                        68,
+                        85
+                    ],
+                    "text": "FinancialResults"
+                },
+                {
+                    "indices": [
+                        86,
+                        93
+                    ],
+                    "text": "Q1FY22"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1422864944836399113",
+        "url": "https://x.com/AdaniOnline/status/1422864944836399113",
+        "twitterUrl": "https://twitter.com/AdaniOnline/status/1422864944836399113",
+        "text": "#AdaniGreenEnergy Q1 FY22 Results.\n\n#Adani #FinancialResults #Q1FY22",
+        "source": "Twitter for iPhone",
+        "retweetCount": 153,
+        "replyCount": 24,
+        "likeCount": 1825,
+        "quoteCount": 6,
+        "viewCount": 0,
+        "createdAt": "Wed Aug 04 10:20:13 +0000 2021",
+        "lang": "en",
+        "bookmarkCount": 3,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1422864944836399113",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "AdaniOnline",
+            "url": "https://x.com/AdaniOnline",
+            "twitterUrl": "https://twitter.com/AdaniOnline",
+            "id": "980145571",
+            "name": "Adani Group",
+            "isVerified": false,
+            "isBlueVerified": true,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/1064450431752052738/ailjWIRR_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/980145571/1751978664",
+            "description": "",
+            "location": "India",
+            "followers": 358540,
+            "following": 92,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Fri Nov 30 09:46:15 +0000 2012",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 5781,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 2199,
+            "statusesCount": 3921,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [
+                "1942487619939516723"
+            ],
+            "profile_bio": {
+                "description": "A leading business conglomerate enriching lives, creating sustainable value and empowering India through #GrowthWithGoodness.",
+                "entities": {
+                    "description": {
+                        "hashtags": [
+                            {
+                                "indices": [
+                                    105,
+                                    124
+                                ],
+                                "text": "GrowthWithGoodness"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "adani.com",
+                                "expanded_url": "http://www.adani.com/",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/witDmCsKpF"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": {
+            "binding_values": [
+                {
+                    "key": "unified_card",
+                    "value": {
+                        "string_value": "{\"type\":\"image_website\",\"component_objects\":{\"details_1\":{\"type\":\"details\",\"data\":{\"title\":{\"content\":\"Adani Green Energy Q1 FY22 Results\",\"is_rtl\":false},\"subtitle\":{\"content\":\"adanigreenenergy.com\",\"is_rtl\":false},\"destination\":\"browser_1\"}},\"media_1\":{\"type\":\"media\",\"data\":{\"id\":\"19_1422864259046805510\",\"destination\":\"browser_1\"}}},\"destination_objects\":{\"browser_1\":{\"type\":\"browser\",\"data\":{\"url_data\":{\"url\":\"https://www.adanigreenenergy.com/newsroom/media-releases/AGEL-Q1-FY22-Results\",\"vanity\":\"adanigreenenergy.com\"}}}},\"components\":[\"media_1\",\"details_1\"],\"media_entities\":{\"19_1422864259046805510\":{\"id\":1422864259046805510,\"id_str\":\"1422864259046805510\",\"indices\":[0,0],\"media_url\":\"\",\"media_url_https\":\"https://pbs.twimg.com/ad_img/1422864259046805510/-Kh_cQRS?format=jpg&name=orig\",\"url\":\"\",\"display_url\":\"\",\"expanded_url\":\"\",\"type\":\"photo\",\"original_info\":{\"width\":800,\"height\":418},\"sizes\":{},\"source_user_id\":980145571,\"source_user_id_str\":\"980145571\",\"media_key\":\"19_1422864259046805510\",\"ext\":{\"mediaColor\":{\"r\":{\"ok\":{\"palette\":[{\"rgb\":{\"red\":83,\"green\":105,\"blue\":123},\"percentage\":48.74},{\"rgb\":{\"red\":184,\"green\":214,\"blue\":225},\"percentage\":21.82},{\"rgb\":{\"red\":160,\"green\":144,\"blue\":108},\"percentage\":12.42},{\"rgb\":{\"red\":37,\"green\":80,\"blue\":121},\"percentage\":5.27},{\"rgb\":{\"red\":174,\"green\":148,\"blue\":86},\"percentage\":1.9}]}},\"ttl\":-1}}}}}"
+                    }
+                },
+                {
+                    "key": "card_url",
+                    "value": {
+                        "scribe_key": "card_url",
+                        "string_value": "https://twitter.com"
+                    }
+                }
+            ],
+            "card_platform": {
+                "platform": {
+                    "audience": {
+                        "name": "production"
+                    },
+                    "device": {
+                        "name": "iPhone",
+                        "version": "13"
+                    }
+                }
+            },
+            "name": "unified_card",
+            "url": "card://1422864322271735809"
+        },
+        "place": {},
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        0,
+                        17
+                    ],
+                    "text": "AdaniGreenEnergy"
+                },
+                {
+                    "indices": [
+                        36,
+                        42
+                    ],
+                    "text": "Adani"
+                },
+                {
+                    "indices": [
+                        43,
+                        60
+                    ],
+                    "text": "FinancialResults"
+                },
+                {
+                    "indices": [
+                        61,
+                        68
+                    ],
+                    "text": "Q1FY22"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1373205625832755202",
+        "url": "https://x.com/AdaniOnline/status/1373205625832755202",
+        "twitterUrl": "https://twitter.com/AdaniOnline/status/1373205625832755202",
+        "text": "\ud83d\ude00Happiness is... a cup of chai, a bite of chocolate. At #Adani, we take happiness quite seriously. So this #InternationalDayOfHappiness, #Adanians share what Happiness means to them. And the results are making everyone pretty happy! Take a look.\n\n#HappyDay #HappinessAtWork https://t.co/bxxxkooOCD",
+        "source": "Twitter for iPhone",
+        "retweetCount": 10,
+        "replyCount": 2,
+        "likeCount": 113,
+        "quoteCount": 1,
+        "viewCount": 0,
+        "createdAt": "Sat Mar 20 09:31:48 +0000 2021",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1373205625832755202",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "AdaniOnline",
+            "url": "https://x.com/AdaniOnline",
+            "twitterUrl": "https://twitter.com/AdaniOnline",
+            "id": "980145571",
+            "name": "Adani Group",
+            "isVerified": false,
+            "isBlueVerified": true,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/1064450431752052738/ailjWIRR_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/980145571/1751978664",
+            "description": "",
+            "location": "India",
+            "followers": 358540,
+            "following": 92,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Fri Nov 30 09:46:15 +0000 2012",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 5781,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 2199,
+            "statusesCount": 3921,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [
+                "1942487619939516723"
+            ],
+            "profile_bio": {
+                "description": "A leading business conglomerate enriching lives, creating sustainable value and empowering India through #GrowthWithGoodness.",
+                "entities": {
+                    "description": {
+                        "hashtags": [
+                            {
+                                "indices": [
+                                    105,
+                                    124
+                                ],
+                                "text": "GrowthWithGoodness"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "adani.com",
+                                "expanded_url": "http://www.adani.com/",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/witDmCsKpF"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {
+            "media": [
+                {
+                    "display_url": "pic.twitter.com/bxxxkooOCD",
+                    "expanded_url": "https://twitter.com/AdaniOnline/status/1373205625832755202/photo/1",
+                    "ext_media_availability": {
+                        "status": "Available"
+                    },
+                    "features": {
+                        "large": {
+                            "faces": [
+                                {
+                                    "h": 87,
+                                    "w": 87,
+                                    "x": 768,
+                                    "y": 301
+                                },
+                                {
+                                    "h": 102,
+                                    "w": 102,
+                                    "x": 187,
+                                    "y": 393
+                                }
+                            ]
+                        },
+                        "orig": {
+                            "faces": [
+                                {
+                                    "h": 87,
+                                    "w": 87,
+                                    "x": 768,
+                                    "y": 301
+                                },
+                                {
+                                    "h": 102,
+                                    "w": 102,
+                                    "x": 187,
+                                    "y": 393
+                                }
+                            ]
+                        }
+                    },
+                    "id_str": "1373191091638341634",
+                    "indices": [
+                        274,
+                        297
+                    ],
+                    "media_key": "3_1373191091638341634",
+                    "media_results": {
+                        "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAARMOjgW51ZACCgACEw6bPbtUUAIAAA==",
+                        "result": {
+                            "__typename": "ApiMedia",
+                            "id": "QXBpTWVkaWE6DAABCgABEw6OBbnVkAIKAAITDps9u1RQAgAA",
+                            "media_key": "3_1373191091638341634"
+                        }
+                    },
+                    "media_url_https": "https://pbs.twimg.com/media/Ew6OBbnVkAI5X60.jpg",
+                    "original_info": {
+                        "focus_rects": [
+                            {
+                                "h": 717,
+                                "w": 1280,
+                                "x": 0,
+                                "y": 122
+                            },
+                            {
+                                "h": 960,
+                                "w": 960,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 960,
+                                "w": 842,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 960,
+                                "w": 480,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 960,
+                                "w": 1280,
+                                "x": 0,
+                                "y": 0
+                            }
+                        ],
+                        "height": 960,
+                        "width": 1280
+                    },
+                    "sizes": {
+                        "large": {
+                            "h": 960,
+                            "w": 1280
+                        }
+                    },
+                    "type": "photo",
+                    "url": "https://t.co/bxxxkooOCD"
+                },
+                {
+                    "display_url": "pic.twitter.com/bxxxkooOCD",
+                    "expanded_url": "https://twitter.com/AdaniOnline/status/1373205625832755202/photo/1",
+                    "ext_media_availability": {
+                        "status": "Available"
+                    },
+                    "features": {
+                        "large": {
+                            "faces": [
+                                {
+                                    "h": 77,
+                                    "w": 77,
+                                    "x": 451,
+                                    "y": 286
+                                }
+                            ]
+                        },
+                        "orig": {
+                            "faces": [
+                                {
+                                    "h": 77,
+                                    "w": 77,
+                                    "x": 451,
+                                    "y": 286
+                                }
+                            ]
+                        }
+                    },
+                    "id_str": "1373191091634139139",
+                    "indices": [
+                        274,
+                        297
+                    ],
+                    "media_key": "3_1373191091634139139",
+                    "media_results": {
+                        "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAARMOjgW5lXADCgACEw6bPbtUUAIAAA==",
+                        "result": {
+                            "__typename": "ApiMedia",
+                            "id": "QXBpTWVkaWE6DAABCgABEw6OBbmVcAMKAAITDps9u1RQAgAA",
+                            "media_key": "3_1373191091634139139"
+                        }
+                    },
+                    "media_url_https": "https://pbs.twimg.com/media/Ew6OBbmVcAMyUsO.jpg",
+                    "original_info": {
+                        "focus_rects": [
+                            {
+                                "h": 627,
+                                "w": 1120,
+                                "x": 160,
+                                "y": 0
+                            },
+                            {
+                                "h": 627,
+                                "w": 627,
+                                "x": 485,
+                                "y": 0
+                            },
+                            {
+                                "h": 627,
+                                "w": 550,
+                                "x": 523,
+                                "y": 0
+                            },
+                            {
+                                "h": 627,
+                                "w": 314,
+                                "x": 641,
+                                "y": 0
+                            },
+                            {
+                                "h": 627,
+                                "w": 1280,
+                                "x": 0,
+                                "y": 0
+                            }
+                        ],
+                        "height": 627,
+                        "width": 1280
+                    },
+                    "sizes": {
+                        "large": {
+                            "h": 627,
+                            "w": 1280
+                        }
+                    },
+                    "type": "photo",
+                    "url": "https://t.co/bxxxkooOCD"
+                },
+                {
+                    "display_url": "pic.twitter.com/bxxxkooOCD",
+                    "expanded_url": "https://twitter.com/AdaniOnline/status/1373205625832755202/photo/1",
+                    "ext_media_availability": {
+                        "status": "Available"
+                    },
+                    "features": {
+                        "large": {
+                            "faces": [
+                                {
+                                    "h": 82,
+                                    "w": 82,
+                                    "x": 691,
+                                    "y": 396
+                                },
+                                {
+                                    "h": 216,
+                                    "w": 216,
+                                    "x": 504,
+                                    "y": 273
+                                }
+                            ]
+                        },
+                        "orig": {
+                            "faces": [
+                                {
+                                    "h": 82,
+                                    "w": 82,
+                                    "x": 691,
+                                    "y": 396
+                                },
+                                {
+                                    "h": 216,
+                                    "w": 216,
+                                    "x": 504,
+                                    "y": 273
+                                }
+                            ]
+                        }
+                    },
+                    "id_str": "1373191091638333441",
+                    "indices": [
+                        274,
+                        297
+                    ],
+                    "media_key": "3_1373191091638333441",
+                    "media_results": {
+                        "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAARMOjgW51XABCgACEw6bPbtUUAIAAA==",
+                        "result": {
+                            "__typename": "ApiMedia",
+                            "id": "QXBpTWVkaWE6DAABCgABEw6OBbnVcAEKAAITDps9u1RQAgAA",
+                            "media_key": "3_1373191091638333441"
+                        }
+                    },
+                    "media_url_https": "https://pbs.twimg.com/media/Ew6OBbnVcAENsWI.jpg",
+                    "original_info": {
+                        "focus_rects": [
+                            {
+                                "h": 537,
+                                "w": 959,
+                                "x": 0,
+                                "y": 167
+                            },
+                            {
+                                "h": 959,
+                                "w": 959,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1093,
+                                "w": 959,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1162,
+                                "w": 581,
+                                "x": 320,
+                                "y": 0
+                            },
+                            {
+                                "h": 1162,
+                                "w": 959,
+                                "x": 0,
+                                "y": 0
+                            }
+                        ],
+                        "height": 1162,
+                        "width": 959
+                    },
+                    "sizes": {
+                        "large": {
+                            "h": 1162,
+                            "w": 959
+                        }
+                    },
+                    "type": "photo",
+                    "url": "https://t.co/bxxxkooOCD"
+                },
+                {
+                    "display_url": "pic.twitter.com/bxxxkooOCD",
+                    "expanded_url": "https://twitter.com/AdaniOnline/status/1373205625832755202/photo/1",
+                    "ext_media_availability": {
+                        "status": "Available"
+                    },
+                    "features": {
+                        "large": {
+                            "faces": [
+                                {
+                                    "h": 92,
+                                    "w": 92,
+                                    "x": 497,
+                                    "y": 370
+                                }
+                            ]
+                        },
+                        "orig": {
+                            "faces": [
+                                {
+                                    "h": 92,
+                                    "w": 92,
+                                    "x": 497,
+                                    "y": 370
+                                }
+                            ]
+                        }
+                    },
+                    "id_str": "1373191091650842624",
+                    "indices": [
+                        274,
+                        297
+                    ],
+                    "media_key": "3_1373191091650842624",
+                    "media_results": {
+                        "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAARMOjgW6lFAACgACEw6bPbtUUAIAAA==",
+                        "result": {
+                            "__typename": "ApiMedia",
+                            "id": "QXBpTWVkaWE6DAABCgABEw6OBbqUUAAKAAITDps9u1RQAgAA",
+                            "media_key": "3_1373191091650842624"
+                        }
+                    },
+                    "media_url_https": "https://pbs.twimg.com/media/Ew6OBbqUUAAsOMD.jpg",
+                    "original_info": {
+                        "focus_rects": [
+                            {
+                                "h": 538,
+                                "w": 960,
+                                "x": 0,
+                                "y": 531
+                            },
+                            {
+                                "h": 960,
+                                "w": 960,
+                                "x": 0,
+                                "y": 320
+                            },
+                            {
+                                "h": 1094,
+                                "w": 960,
+                                "x": 0,
+                                "y": 186
+                            },
+                            {
+                                "h": 1280,
+                                "w": 640,
+                                "x": 32,
+                                "y": 0
+                            },
+                            {
+                                "h": 1280,
+                                "w": 960,
+                                "x": 0,
+                                "y": 0
+                            }
+                        ],
+                        "height": 1280,
+                        "width": 960
+                    },
+                    "sizes": {
+                        "large": {
+                            "h": 1280,
+                            "w": 960
+                        }
+                    },
+                    "type": "photo",
+                    "url": "https://t.co/bxxxkooOCD"
+                }
+            ]
+        },
+        "card": null,
+        "place": {},
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        56,
+                        62
+                    ],
+                    "text": "Adani"
+                },
+                {
+                    "indices": [
+                        107,
+                        135
+                    ],
+                    "text": "InternationalDayOfHappiness"
+                },
+                {
+                    "indices": [
+                        137,
+                        146
+                    ],
+                    "text": "Adanians"
+                },
+                {
+                    "indices": [
+                        247,
+                        256
+                    ],
+                    "text": "HappyDay"
+                },
+                {
+                    "indices": [
+                        257,
+                        273
+                    ],
+                    "text": "HappinessAtWork"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1364541441528262659",
+        "url": "https://x.com/AdaniOnline/status/1364541441528262659",
+        "twitterUrl": "https://twitter.com/AdaniOnline/status/1364541441528262659",
+        "text": "Contributing to consistent and robust value creation for the nation is key to our strategy of #GrowthWithGoodness. We are delighted that analysts &amp; the investors' community have noticed this unique growth narrative.\n\nhttps://t.co/lGVw4ucwp0",
+        "source": "Twitter for iPhone",
+        "retweetCount": 6,
+        "replyCount": 1,
+        "likeCount": 39,
+        "quoteCount": 0,
+        "viewCount": 0,
+        "createdAt": "Wed Feb 24 11:43:26 +0000 2021",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1364541441528262659",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "AdaniOnline",
+            "url": "https://x.com/AdaniOnline",
+            "twitterUrl": "https://twitter.com/AdaniOnline",
+            "id": "980145571",
+            "name": "Adani Group",
+            "isVerified": false,
+            "isBlueVerified": true,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/1064450431752052738/ailjWIRR_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/980145571/1751978664",
+            "description": "",
+            "location": "India",
+            "followers": 358540,
+            "following": 92,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Fri Nov 30 09:46:15 +0000 2012",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 5781,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 2199,
+            "statusesCount": 3921,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [
+                "1942487619939516723"
+            ],
+            "profile_bio": {
+                "description": "A leading business conglomerate enriching lives, creating sustainable value and empowering India through #GrowthWithGoodness.",
+                "entities": {
+                    "description": {
+                        "hashtags": [
+                            {
+                                "indices": [
+                                    105,
+                                    124
+                                ],
+                                "text": "GrowthWithGoodness"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "adani.com",
+                                "expanded_url": "http://www.adani.com/",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/witDmCsKpF"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": null,
+        "place": {},
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        94,
+                        113
+                    ],
+                    "text": "GrowthWithGoodness"
+                }
+            ],
+            "urls": [
+                {
+                    "display_url": "bit.ly/adani-group-q3\u2026",
+                    "expanded_url": "http://bit.ly/adani-group-q3-results",
+                    "indices": [
+                        221,
+                        244
+                    ],
+                    "url": "https://t.co/lGVw4ucwp0"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1357321821746434048",
+        "url": "https://x.com/AdaniOnline/status/1357321821746434048",
+        "twitterUrl": "https://twitter.com/AdaniOnline/status/1357321821746434048",
+        "text": "Adani Transmission Limited announces Q3 FY21 Results.\n\n#AdaniTransmission #AdaniElectricity #Adani #FinancialResults #ATL\n\nhttps://t.co/QM3zm4aXxc",
+        "source": "Twitter for iPhone",
+        "retweetCount": 5,
+        "replyCount": 0,
+        "likeCount": 27,
+        "quoteCount": 0,
+        "viewCount": 0,
+        "createdAt": "Thu Feb 04 13:35:14 +0000 2021",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1357321821746434048",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "AdaniOnline",
+            "url": "https://x.com/AdaniOnline",
+            "twitterUrl": "https://twitter.com/AdaniOnline",
+            "id": "980145571",
+            "name": "Adani Group",
+            "isVerified": false,
+            "isBlueVerified": true,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/1064450431752052738/ailjWIRR_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/980145571/1751978664",
+            "description": "",
+            "location": "India",
+            "followers": 358540,
+            "following": 92,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Fri Nov 30 09:46:15 +0000 2012",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 5781,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 2199,
+            "statusesCount": 3921,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [
+                "1942487619939516723"
+            ],
+            "profile_bio": {
+                "description": "A leading business conglomerate enriching lives, creating sustainable value and empowering India through #GrowthWithGoodness.",
+                "entities": {
+                    "description": {
+                        "hashtags": [
+                            {
+                                "indices": [
+                                    105,
+                                    124
+                                ],
+                                "text": "GrowthWithGoodness"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "adani.com",
+                                "expanded_url": "http://www.adani.com/",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/witDmCsKpF"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": null,
+        "place": {},
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        55,
+                        73
+                    ],
+                    "text": "AdaniTransmission"
+                },
+                {
+                    "indices": [
+                        74,
+                        91
+                    ],
+                    "text": "AdaniElectricity"
+                },
+                {
+                    "indices": [
+                        92,
+                        98
+                    ],
+                    "text": "Adani"
+                },
+                {
+                    "indices": [
+                        99,
+                        116
+                    ],
+                    "text": "FinancialResults"
+                },
+                {
+                    "indices": [
+                        117,
+                        121
+                    ],
+                    "text": "ATL"
+                }
+            ],
+            "urls": [
+                {
+                    "display_url": "adanitransmission.com/newsroom/media\u2026",
+                    "expanded_url": "https://www.adanitransmission.com/newsroom/media-releases/Adani-Transmission-Limited-Consolidated-Results-for-Q3-FY21",
+                    "indices": [
+                        123,
+                        146
+                    ],
+                    "url": "https://t.co/QM3zm4aXxc"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1356976988922261506",
+        "url": "https://x.com/AdaniOnline/status/1356976988922261506",
+        "twitterUrl": "https://twitter.com/AdaniOnline/status/1356976988922261506",
+        "text": "Adani Green Energy Limited announces Q3 FY21 Results.\n\n#AdaniGreenEnergy #RenewableEnergy #Adani #FinancialResults #AGEL\n\nhttps://t.co/fLCElFaPSo",
+        "source": "Twitter for iPhone",
+        "retweetCount": 8,
+        "replyCount": 1,
+        "likeCount": 30,
+        "quoteCount": 0,
+        "viewCount": 0,
+        "createdAt": "Wed Feb 03 14:45:00 +0000 2021",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1356976988922261506",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "AdaniOnline",
+            "url": "https://x.com/AdaniOnline",
+            "twitterUrl": "https://twitter.com/AdaniOnline",
+            "id": "980145571",
+            "name": "Adani Group",
+            "isVerified": false,
+            "isBlueVerified": true,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/1064450431752052738/ailjWIRR_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/980145571/1751978664",
+            "description": "",
+            "location": "India",
+            "followers": 358540,
+            "following": 92,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Fri Nov 30 09:46:15 +0000 2012",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 5781,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 2199,
+            "statusesCount": 3921,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [
+                "1942487619939516723"
+            ],
+            "profile_bio": {
+                "description": "A leading business conglomerate enriching lives, creating sustainable value and empowering India through #GrowthWithGoodness.",
+                "entities": {
+                    "description": {
+                        "hashtags": [
+                            {
+                                "indices": [
+                                    105,
+                                    124
+                                ],
+                                "text": "GrowthWithGoodness"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "adani.com",
+                                "expanded_url": "http://www.adani.com/",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/witDmCsKpF"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": null,
+        "place": {},
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        55,
+                        72
+                    ],
+                    "text": "AdaniGreenEnergy"
+                },
+                {
+                    "indices": [
+                        73,
+                        89
+                    ],
+                    "text": "RenewableEnergy"
+                },
+                {
+                    "indices": [
+                        90,
+                        96
+                    ],
+                    "text": "Adani"
+                },
+                {
+                    "indices": [
+                        97,
+                        114
+                    ],
+                    "text": "FinancialResults"
+                },
+                {
+                    "indices": [
+                        115,
+                        120
+                    ],
+                    "text": "AGEL"
+                }
+            ],
+            "urls": [
+                {
+                    "display_url": "adanigreenenergy.com/newsroom/media\u2026",
+                    "expanded_url": "https://www.adanigreenenergy.com/newsroom/media-releases/AGEL-announces-Q3FY21-Result",
+                    "indices": [
+                        122,
+                        145
+                    ],
+                    "url": "https://t.co/fLCElFaPSo"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    }
+]

@@ -1,0 +1,330 @@
+2025-07-26 13:18:49,857 - INFO - Fetching tweets for stock: RELIANCE with query: "RELIANCE"
+2025-07-26 13:18:51,574 - INFO - Saved 0 tweets for stock RELIANCE to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/RELIANCE_tweets.json
+2025-07-26 13:18:51,574 - INFO - Fetching tweets for stock: TCS with query: "TCS"
+2025-07-26 13:18:53,023 - INFO - Saved 0 tweets for stock TCS to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/TCS_tweets.json
+2025-07-26 13:18:53,023 - INFO - Fetching tweets for stock: HDFCBANK with query: "HDFCBANK"
+2025-07-26 13:18:54,404 - INFO - Saved 0 tweets for stock HDFCBANK to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/HDFCBANK_tweets.json
+2025-07-26 13:18:54,404 - INFO - Fetching tweets for stock: INFY with query: "INFY"
+2025-07-26 13:18:56,312 - INFO - Saved 0 tweets for stock INFY to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/INFY_tweets.json
+2025-07-26 13:18:56,312 - INFO - Fetching tweets for stock: ICICIBANK with query: "ICICIBANK"
+2025-07-26 13:18:57,672 - INFO - Saved 0 tweets for stock ICICIBANK to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/ICICIBANK_tweets.json
+2025-07-26 13:18:57,672 - INFO - Fetching tweets for stock: HINDUNILVR with query: "HINDUNILVR"
+2025-07-26 13:18:59,479 - INFO - Saved 0 tweets for stock HINDUNILVR to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/HINDUNILVR_tweets.json
+2025-07-26 13:18:59,479 - INFO - Fetching tweets for stock: HDFC with query: "HDFC"
+2025-07-26 13:19:01,324 - INFO - Saved 0 tweets for stock HDFC to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/HDFC_tweets.json
+2025-07-26 13:19:01,325 - INFO - Fetching tweets for stock: SBIN with query: "SBIN"
+2025-07-26 13:19:02,682 - INFO - Saved 0 tweets for stock SBIN to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/SBIN_tweets.json
+2025-07-26 13:19:02,682 - INFO - Fetching tweets for stock: BHARTIARTL with query: "BHARTIARTL"
+2025-07-26 13:19:04,676 - INFO - Saved 0 tweets for stock BHARTIARTL to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/BHARTIARTL_tweets.json
+2025-07-26 13:19:04,676 - INFO - Fetching tweets for stock: KOTAKBANK with query: "KOTAKBANK"
+2025-07-26 13:36:45,444 - INFO - Fetching tweets for stock: RELIANCE with query: "RELIANCE", start_date: 2024-06-06T00:00:00Z, end_date: 2025-06-06T23:59:59Z
+2025-07-26 13:36:47,346 - INFO - Saved 0 tweets for stock RELIANCE to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/RELIANCE_tweets.json
+2025-07-26 13:36:47,346 - INFO - Fetching tweets for stock: TCS with query: "TCS", start_date: 2024-06-06T00:00:00Z, end_date: 2025-06-06T23:59:59Z
+2025-07-26 13:36:48,803 - INFO - Saved 0 tweets for stock TCS to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/TCS_tweets.json
+2025-07-26 13:36:48,803 - INFO - Fetching tweets for stock: HDFCBANK with query: "HDFCBANK", start_date: 2024-06-06T00:00:00Z, end_date: 2025-06-06T23:59:59Z
+2025-07-26 13:36:50,182 - INFO - Saved 0 tweets for stock HDFCBANK to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/HDFCBANK_tweets.json
+2025-07-26 13:36:50,182 - INFO - Fetching tweets for stock: INFY with query: "INFY", start_date: 2024-06-06T00:00:00Z, end_date: 2025-06-06T23:59:59Z
+2025-07-26 13:36:53,922 - INFO - Saved 0 tweets for stock INFY to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/INFY_tweets.json
+2025-07-26 13:36:53,922 - INFO - Fetching tweets for stock: ICICIBANK with query: "ICICIBANK", start_date: 2024-06-06T00:00:00Z, end_date: 2025-06-06T23:59:59Z
+2025-07-26 13:45:00,666 - INFO - Fetching tweets for stock: RELIANCE with query: (RELIANCE OR $RELIANCE) lang:en filter:retweets false, start_date: 2024-06-06T00:00:00Z, end_date: 2025-06-06T23:59:59Z
+2025-07-26 13:45:02,209 - INFO - Saved 3 tweets for stock RELIANCE to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/RELIANCE_tweets.json
+2025-07-26 13:45:02,209 - INFO - Fetching tweets for stock: TCS with query: (TCS OR $TCS) lang:en filter:retweets false, start_date: 2024-06-06T00:00:00Z, end_date: 2025-06-06T23:59:59Z
+2025-07-26 13:45:03,667 - INFO - Saved 2 tweets for stock TCS to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/TCS_tweets.json
+2025-07-26 13:45:03,668 - INFO - Fetching tweets for stock: HDFCBANK with query: (HDFCBANK OR $HDFCBANK) lang:en filter:retweets false, start_date: 2024-06-06T00:00:00Z, end_date: 2025-06-06T23:59:59Z
+2025-07-26 13:45:05,134 - INFO - Saved 1 tweets for stock HDFCBANK to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/HDFCBANK_tweets.json
+2025-07-26 13:45:05,134 - INFO - Fetching tweets for stock: INFY with query: (INFY OR $INFY) lang:en filter:retweets false, start_date: 2024-06-06T00:00:00Z, end_date: 2025-06-06T23:59:59Z
+2025-07-26 13:45:06,509 - INFO - Saved 0 tweets for stock INFY to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/INFY_tweets.json
+2025-07-26 13:45:06,510 - INFO - Fetching tweets for stock: ICICIBANK with query: (ICICIBANK OR $ICICIBANK) lang:en filter:retweets false, start_date: 2024-06-06T00:00:00Z, end_date: 2025-06-06T23:59:59Z
+2025-07-26 13:45:08,079 - INFO - Saved 2 tweets for stock ICICIBANK to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/ICICIBANK_tweets.json
+2025-07-26 13:45:08,079 - INFO - Fetching tweets for stock: HINDUNILVR with query: (HINDUNILVR OR $HINDUNILVR) lang:en filter:retweets false, start_date: 2024-06-06T00:00:00Z, end_date: 2025-06-06T23:59:59Z
+2025-07-26 13:45:09,434 - INFO - Saved 0 tweets for stock HINDUNILVR to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/HINDUNILVR_tweets.json
+2025-07-26 13:45:09,434 - INFO - Fetching tweets for stock: HDFC with query: (HDFC OR $HDFC) lang:en filter:retweets false, start_date: 2024-06-06T00:00:00Z, end_date: 2025-06-06T23:59:59Z
+2025-07-26 13:45:10,891 - INFO - Saved 3 tweets for stock HDFC to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/HDFC_tweets.json
+2025-07-26 13:45:10,891 - INFO - Fetching tweets for stock: SBIN with query: (SBIN OR $SBIN) lang:en filter:retweets false, start_date: 2024-06-06T00:00:00Z, end_date: 2025-06-06T23:59:59Z
+2025-07-26 13:45:12,223 - INFO - Saved 0 tweets for stock SBIN to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/SBIN_tweets.json
+2025-07-26 13:45:12,223 - INFO - Fetching tweets for stock: BHARTIARTL with query: (BHARTIARTL OR $BHARTIARTL) lang:en filter:retweets false, start_date: 2024-06-06T00:00:00Z, end_date: 2025-06-06T23:59:59Z
+2025-07-26 13:45:13,434 - INFO - Saved 0 tweets for stock BHARTIARTL to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/BHARTIARTL_tweets.json
+2025-07-26 13:45:13,434 - INFO - Fetching tweets for stock: KOTAKBANK with query: (KOTAKBANK OR $KOTAKBANK) lang:en filter:retweets false, start_date: 2024-06-06T00:00:00Z, end_date: 2025-06-06T23:59:59Z
+2025-07-26 13:45:14,687 - INFO - Saved 0 tweets for stock KOTAKBANK to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/KOTAKBANK_tweets.json
+2025-07-26 13:45:14,687 - INFO - Fetching tweets for stock: LT with query: (LT OR $LT) lang:en filter:retweets false, start_date: 2024-06-06T00:00:00Z, end_date: 2025-06-06T23:59:59Z
+2025-07-26 13:45:17,155 - INFO - Saved 18 tweets for stock LT to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/LT_tweets.json
+2025-07-26 13:45:17,155 - INFO - Fetching tweets for stock: ASIANPAINT with query: (ASIANPAINT OR $ASIANPAINT) lang:en filter:retweets false, start_date: 2024-06-06T00:00:00Z, end_date: 2025-06-06T23:59:59Z
+2025-07-26 13:45:18,523 - INFO - Saved 1 tweets for stock ASIANPAINT to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/ASIANPAINT_tweets.json
+2025-07-26 13:45:18,523 - INFO - Fetching tweets for stock: AXISBANK with query: (AXISBANK OR $AXISBANK) lang:en filter:retweets false, start_date: 2024-06-06T00:00:00Z, end_date: 2025-06-06T23:59:59Z
+2025-07-26 13:45:20,004 - INFO - Saved 3 tweets for stock AXISBANK to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/AXISBANK_tweets.json
+2025-07-26 13:45:20,004 - INFO - Fetching tweets for stock: MARUTI with query: (MARUTI OR $MARUTI) lang:en filter:retweets false, start_date: 2024-06-06T00:00:00Z, end_date: 2025-06-06T23:59:59Z
+2025-07-26 13:45:21,429 - INFO - Saved 1 tweets for stock MARUTI to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/MARUTI_tweets.json
+2025-07-26 13:45:21,429 - INFO - Fetching tweets for stock: ULTRACEMCO with query: (ULTRACEMCO OR $ULTRACEMCO) lang:en filter:retweets false, start_date: 2024-06-06T00:00:00Z, end_date: 2025-06-06T23:59:59Z
+2025-07-26 13:45:22,702 - INFO - Saved 0 tweets for stock ULTRACEMCO to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/ULTRACEMCO_tweets.json
+2025-07-26 13:45:22,702 - INFO - Fetching tweets for stock: TITAN with query: (TITAN OR $TITAN) lang:en filter:retweets false, start_date: 2024-06-06T00:00:00Z, end_date: 2025-06-06T23:59:59Z
+2025-07-26 13:45:25,426 - INFO - Saved 12 tweets for stock TITAN to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/TITAN_tweets.json
+2025-07-26 13:45:25,426 - INFO - Fetching tweets for stock: BAJFINANCE with query: (BAJFINANCE OR $BAJFINANCE) lang:en filter:retweets false, start_date: 2024-06-06T00:00:00Z, end_date: 2025-06-06T23:59:59Z
+2025-07-26 13:45:26,563 - INFO - Saved 0 tweets for stock BAJFINANCE to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/BAJFINANCE_tweets.json
+2025-07-26 13:45:26,564 - INFO - Fetching tweets for stock: NESTLEIND with query: (NESTLEIND OR $NESTLEIND) lang:en filter:retweets false, start_date: 2024-06-06T00:00:00Z, end_date: 2025-06-06T23:59:59Z
+2025-07-26 13:45:27,714 - INFO - Saved 0 tweets for stock NESTLEIND to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/NESTLEIND_tweets.json
+2025-07-26 13:45:27,715 - INFO - Fetching tweets for stock: ONGC with query: (ONGC OR $ONGC) lang:en filter:retweets false, start_date: 2024-06-06T00:00:00Z, end_date: 2025-06-06T23:59:59Z
+2025-07-26 13:45:29,070 - INFO - Saved 0 tweets for stock ONGC to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/ONGC_tweets.json
+2025-07-26 13:45:29,071 - INFO - Fetching tweets for stock: POWERGRID with query: (POWERGRID OR $POWERGRID) lang:en filter:retweets false, start_date: 2024-06-06T00:00:00Z, end_date: 2025-06-06T23:59:59Z
+2025-07-26 13:45:30,010 - INFO - Saved 1 tweets for stock POWERGRID to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/POWERGRID_tweets.json
+2025-07-26 13:45:30,011 - INFO - Fetching tweets for stock: NTPC with query: (NTPC OR $NTPC) lang:en filter:retweets false, start_date: 2024-06-06T00:00:00Z, end_date: 2025-06-06T23:59:59Z
+2025-07-26 13:45:31,368 - INFO - Saved 0 tweets for stock NTPC to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/NTPC_tweets.json
+2025-07-26 13:45:31,368 - INFO - Fetching tweets for stock: ITC with query: (ITC OR $ITC) lang:en filter:retweets false, start_date: 2024-06-06T00:00:00Z, end_date: 2025-06-06T23:59:59Z
+2025-07-26 13:45:32,417 - INFO - Saved 1 tweets for stock ITC to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/ITC_tweets.json
+2025-07-26 13:45:32,417 - INFO - Fetching tweets for stock: BAJAJFINSV with query: (BAJAJFINSV OR $BAJAJFINSV) lang:en filter:retweets false, start_date: 2024-06-06T00:00:00Z, end_date: 2025-06-06T23:59:59Z
+2025-07-26 13:45:33,561 - INFO - Saved 0 tweets for stock BAJAJFINSV to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/BAJAJFINSV_tweets.json
+2025-07-26 13:45:33,562 - INFO - Fetching tweets for stock: SUNPHARMA with query: (SUNPHARMA OR $SUNPHARMA) lang:en filter:retweets false, start_date: 2024-06-06T00:00:00Z, end_date: 2025-06-06T23:59:59Z
+2025-07-26 13:45:34,917 - INFO - Saved 1 tweets for stock SUNPHARMA to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/SUNPHARMA_tweets.json
+2025-07-26 13:45:34,917 - INFO - Fetching tweets for stock: TECHM with query: (TECHM OR $TECHM) lang:en filter:retweets false, start_date: 2024-06-06T00:00:00Z, end_date: 2025-06-06T23:59:59Z
+2025-07-26 13:45:36,277 - INFO - Saved 0 tweets for stock TECHM to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/TECHM_tweets.json
+2025-07-26 13:45:36,277 - INFO - Fetching tweets for stock: WIPRO with query: (WIPRO OR $WIPRO) lang:en filter:retweets false, start_date: 2024-06-06T00:00:00Z, end_date: 2025-06-06T23:59:59Z
+2025-07-26 13:45:37,831 - INFO - Saved 2 tweets for stock WIPRO to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/WIPRO_tweets.json
+2025-07-26 13:45:37,831 - INFO - Fetching tweets for stock: HCLTECH with query: (HCLTECH OR $HCLTECH) lang:en filter:retweets false, start_date: 2024-06-06T00:00:00Z, end_date: 2025-06-06T23:59:59Z
+2025-07-26 13:45:39,308 - INFO - Saved 2 tweets for stock HCLTECH to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/HCLTECH_tweets.json
+2025-07-26 13:45:39,308 - INFO - Fetching tweets for stock: JSWSTEEL with query: (JSWSTEEL OR $JSWSTEEL) lang:en filter:retweets false, start_date: 2024-06-06T00:00:00Z, end_date: 2025-06-06T23:59:59Z
+2025-07-26 13:45:40,143 - INFO - Saved 0 tweets for stock JSWSTEEL to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/JSWSTEEL_tweets.json
+2025-07-26 13:45:40,144 - INFO - Fetching tweets for stock: TATAMOTORS with query: (TATAMOTORS OR $TATAMOTORS) lang:en filter:retweets false, start_date: 2024-06-06T00:00:00Z, end_date: 2025-06-06T23:59:59Z
+2025-07-26 13:45:40,980 - INFO - Saved 0 tweets for stock TATAMOTORS to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/TATAMOTORS_tweets.json
+2025-07-26 13:45:40,980 - INFO - Fetching tweets for stock: ADANIPORTS with query: (ADANIPORTS OR $ADANIPORTS) lang:en filter:retweets false, start_date: 2024-06-06T00:00:00Z, end_date: 2025-06-06T23:59:59Z
+2025-07-26 13:45:42,193 - INFO - Saved 0 tweets for stock ADANIPORTS to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/ADANIPORTS_tweets.json
+2025-07-26 13:45:42,193 - INFO - Fetching tweets for stock: BRITANNIA with query: (BRITANNIA OR $BRITANNIA) lang:en filter:retweets false, start_date: 2024-06-06T00:00:00Z, end_date: 2025-06-06T23:59:59Z
+2025-07-26 13:45:43,954 - INFO - Saved 8 tweets for stock BRITANNIA to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/BRITANNIA_tweets.json
+2025-07-26 13:45:43,954 - INFO - Fetching tweets for stock: SHREECEM with query: (SHREECEM OR $SHREECEM) lang:en filter:retweets false, start_date: 2024-06-06T00:00:00Z, end_date: 2025-06-06T23:59:59Z
+2025-07-26 13:45:45,053 - INFO - Saved 0 tweets for stock SHREECEM to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/SHREECEM_tweets.json
+2025-07-26 13:45:45,053 - INFO - Fetching tweets for stock: TATACONSUM with query: (TATACONSUM OR $TATACONSUM) lang:en filter:retweets false, start_date: 2024-06-06T00:00:00Z, end_date: 2025-06-06T23:59:59Z
+2025-07-26 13:45:45,677 - INFO - Saved 0 tweets for stock TATACONSUM to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/TATACONSUM_tweets.json
+2025-07-26 13:45:45,678 - INFO - Fetching tweets for stock: BPCL with query: (BPCL OR $BPCL) lang:en filter:retweets false, start_date: 2024-06-06T00:00:00Z, end_date: 2025-06-06T23:59:59Z
+2025-07-26 13:45:47,035 - INFO - Saved 0 tweets for stock BPCL to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/BPCL_tweets.json
+2025-07-26 13:45:47,035 - INFO - Fetching tweets for stock: INDUSINDBK with query: (INDUSINDBK OR $INDUSINDBK) lang:en filter:retweets false, start_date: 2024-06-06T00:00:00Z, end_date: 2025-06-06T23:59:59Z
+2025-07-26 13:45:47,662 - INFO - Saved 0 tweets for stock INDUSINDBK to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/INDUSINDBK_tweets.json
+2025-07-26 13:45:47,662 - INFO - Fetching tweets for stock: GRASIM with query: (GRASIM OR $GRASIM) lang:en filter:retweets false, start_date: 2024-06-06T00:00:00Z, end_date: 2025-06-06T23:59:59Z
+2025-07-26 13:45:48,916 - INFO - Saved 0 tweets for stock GRASIM to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/GRASIM_tweets.json
+2025-07-26 13:45:48,916 - INFO - Fetching tweets for stock: EICHERMOT with query: (EICHERMOT OR $EICHERMOT) lang:en filter:retweets false, start_date: 2024-06-06T00:00:00Z, end_date: 2025-06-06T23:59:59Z
+2025-07-26 13:45:50,022 - INFO - Saved 0 tweets for stock EICHERMOT to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/EICHERMOT_tweets.json
+2025-07-26 13:45:50,022 - INFO - Fetching tweets for stock: DRREDDY with query: (DRREDDY OR $DRREDDY) lang:en filter:retweets false, start_date: 2024-06-06T00:00:00Z, end_date: 2025-06-06T23:59:59Z
+2025-07-26 13:45:51,214 - INFO - Saved 0 tweets for stock DRREDDY to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/DRREDDY_tweets.json
+2025-07-26 13:45:51,214 - INFO - Fetching tweets for stock: COALINDIA with query: (COALINDIA OR $COALINDIA) lang:en filter:retweets false, start_date: 2024-06-06T00:00:00Z, end_date: 2025-06-06T23:59:59Z
+2025-07-26 13:45:52,467 - INFO - Saved 0 tweets for stock COALINDIA to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/COALINDIA_tweets.json
+2025-07-26 13:45:52,467 - INFO - Fetching tweets for stock: HEROMOTOCO with query: (HEROMOTOCO OR $HEROMOTOCO) lang:en filter:retweets false, start_date: 2024-06-06T00:00:00Z, end_date: 2025-06-06T23:59:59Z
+2025-07-26 13:45:53,616 - INFO - Saved 0 tweets for stock HEROMOTOCO to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/HEROMOTOCO_tweets.json
+2025-07-26 13:45:53,616 - INFO - Fetching tweets for stock: IOC with query: (IOC OR $IOC) lang:en filter:retweets false, start_date: 2024-06-06T00:00:00Z, end_date: 2025-06-06T23:59:59Z
+2025-07-26 13:45:55,183 - INFO - Saved 5 tweets for stock IOC to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/IOC_tweets.json
+2025-07-26 13:45:55,183 - INFO - Fetching tweets for stock: UPL with query: (UPL OR $UPL) lang:en filter:retweets false, start_date: 2024-06-06T00:00:00Z, end_date: 2025-06-06T23:59:59Z
+2025-07-26 13:45:57,148 - INFO - Saved 2 tweets for stock UPL to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/UPL_tweets.json
+2025-07-26 13:45:57,148 - INFO - Fetching tweets for stock: CIPLA with query: (CIPLA OR $CIPLA) lang:en filter:retweets false, start_date: 2024-06-06T00:00:00Z, end_date: 2025-06-06T23:59:59Z
+2025-07-26 13:45:58,417 - INFO - Saved 1 tweets for stock CIPLA to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/CIPLA_tweets.json
+2025-07-26 13:45:58,417 - INFO - Fetching tweets for stock: TATASTEEL with query: (TATASTEEL OR $TATASTEEL) lang:en filter:retweets false, start_date: 2024-06-06T00:00:00Z, end_date: 2025-06-06T23:59:59Z
+2025-07-26 13:45:59,721 - INFO - Saved 0 tweets for stock TATASTEEL to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/TATASTEEL_tweets.json
+2025-07-26 13:45:59,722 - INFO - Fetching tweets for stock: HDFCLIFE with query: (HDFCLIFE OR $HDFCLIFE) lang:en filter:retweets false, start_date: 2024-06-06T00:00:00Z, end_date: 2025-06-06T23:59:59Z
+2025-07-26 13:46:00,515 - INFO - Saved 0 tweets for stock HDFCLIFE to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/HDFCLIFE_tweets.json
+2025-07-26 13:46:00,516 - INFO - Fetching tweets for stock: SHREECEM with query: (SHREECEM OR $SHREECEM) lang:en filter:retweets false, start_date: 2024-06-06T00:00:00Z, end_date: 2025-06-06T23:59:59Z
+2025-07-26 13:46:01,566 - INFO - Saved 0 tweets for stock SHREECEM to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/SHREECEM_tweets.json
+2025-07-26 13:46:01,566 - INFO - Fetching tweets for stock: BAJAJ-AUTO with query: (BAJAJ-AUTO OR $BAJAJ-AUTO) lang:en filter:retweets false, start_date: 2024-06-06T00:00:00Z, end_date: 2025-06-06T23:59:59Z
+2025-07-26 13:46:02,417 - INFO - Saved 0 tweets for stock BAJAJ-AUTO to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/BAJAJ-AUTO_tweets.json
+2025-07-26 13:46:02,417 - INFO - Fetching tweets for stock: TATACONSUM with query: (TATACONSUM OR $TATACONSUM) lang:en filter:retweets false, start_date: 2024-06-06T00:00:00Z, end_date: 2025-06-06T23:59:59Z
+2025-07-26 13:46:03,463 - INFO - Saved 0 tweets for stock TATACONSUM to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/TATACONSUM_tweets.json
+2025-07-26 13:46:03,464 - INFO - Fetching tweets for stock: ONGC with query: (ONGC OR $ONGC) lang:en filter:retweets false, start_date: 2024-06-06T00:00:00Z, end_date: 2025-06-06T23:59:59Z
+2025-07-26 13:46:04,899 - INFO - Saved 1 tweets for stock ONGC to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/ONGC_tweets.json
+2025-07-26 13:46:04,899 - INFO - Fetching tweets for stock: NTPC with query: (NTPC OR $NTPC) lang:en filter:retweets false, start_date: 2024-06-06T00:00:00Z, end_date: 2025-06-06T23:59:59Z
+2025-07-26 13:46:06,227 - INFO - Saved 0 tweets for stock NTPC to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/NTPC_tweets.json
+2025-07-26 13:46:06,228 - INFO - Twitter scraping completed successfully.
+2025-07-26 14:28:19,421 - INFO - Fetching public tweets for stock: RELIANCE
+2025-07-26 14:28:20,469 - INFO - Saved 3 public tweets for stock RELIANCE to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/RELIANCE_tweets.json
+2025-07-26 14:28:20,469 - INFO - Searching tweets from @reliancegroup with keywords: ['results', 'profit', 'earnings', 'quarter', 'q1', 'q2', 'q3', 'q4']
+2025-07-26 14:28:21,814 - INFO - Saved 0 tweets from @reliancegroup to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/RELIANCE_user_reliancegroup_tweets.json
+2025-07-26 14:28:21,814 - INFO - Searching tweets from @reliancejio with keywords: ['results', 'profit', 'earnings', 'quarter', 'q1', 'q2', 'q3', 'q4']
+2025-07-26 14:28:23,135 - INFO - Saved 0 tweets from @reliancejio to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/RELIANCE_user_reliancejio_tweets.json
+2025-07-26 14:28:23,136 - INFO - Fetching public tweets for stock: TCS
+2025-07-26 14:28:24,553 - INFO - Saved 4 public tweets for stock TCS to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/TCS_tweets.json
+2025-07-26 14:28:24,554 - INFO - Searching tweets from @TCS with keywords: ['results', 'profit', 'earnings', 'quarter', 'q1', 'q2', 'q3', 'q4']
+2025-07-26 14:28:26,352 - INFO - Saved 18 tweets from @TCS to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/TCS_user_TCS_tweets.json
+2025-07-26 14:28:26,352 - INFO - Fetching public tweets for stock: HDFCBANK
+2025-07-26 14:28:27,258 - INFO - Saved 1 public tweets for stock HDFCBANK to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/HDFCBANK_tweets.json
+2025-07-26 14:28:27,258 - INFO - Searching tweets from @HDFC_Bank with keywords: ['results', 'profit', 'earnings', 'quarter', 'q1', 'q2', 'q3', 'q4']
+2025-07-26 14:28:30,848 - INFO - Saved 4 tweets from @HDFC_Bank to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/HDFCBANK_user_HDFC_Bank_tweets.json
+2025-07-26 14:28:30,848 - INFO - Fetching public tweets for stock: INFY
+2025-07-26 14:28:32,308 - INFO - Saved 0 public tweets for stock INFY to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/INFY_tweets.json
+2025-07-26 14:28:32,309 - INFO - Searching tweets from @Infosys with keywords: ['results', 'profit', 'earnings', 'quarter', 'q1', 'q2', 'q3', 'q4']
+2025-07-26 14:28:34,440 - INFO - Saved 18 tweets from @Infosys to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/INFY_user_Infosys_tweets.json
+2025-07-26 14:28:34,440 - INFO - Fetching public tweets for stock: ICICIBANK
+2025-07-26 14:28:35,965 - INFO - Saved 2 public tweets for stock ICICIBANK to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/ICICIBANK_tweets.json
+2025-07-26 14:28:35,966 - INFO - Searching tweets from @ICICIBank with keywords: ['results', 'profit', 'earnings', 'quarter', 'q1', 'q2', 'q3', 'q4']
+2025-07-26 14:28:38,587 - INFO - Saved 19 tweets from @ICICIBank to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/ICICIBANK_user_ICICIBank_tweets.json
+2025-07-26 14:28:38,587 - INFO - Fetching public tweets for stock: HINDUNILVR
+2025-07-26 14:28:39,649 - INFO - Saved 0 public tweets for stock HINDUNILVR to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/HINDUNILVR_tweets.json
+2025-07-26 14:28:39,650 - INFO - Searching tweets from @HUL_News with keywords: ['results', 'profit', 'earnings', 'quarter', 'q1', 'q2', 'q3', 'q4']
+2025-07-26 14:28:41,085 - INFO - Saved 2 tweets from @HUL_News to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/HINDUNILVR_user_HUL_News_tweets.json
+2025-07-26 14:28:41,085 - INFO - Fetching public tweets for stock: HDFC
+2025-07-26 14:28:42,651 - INFO - Saved 3 public tweets for stock HDFC to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/HDFC_tweets.json
+2025-07-26 14:28:42,651 - INFO - Searching tweets from @HDFC_Ltd with keywords: ['results', 'profit', 'earnings', 'quarter', 'q1', 'q2', 'q3', 'q4']
+2025-07-26 14:28:43,812 - INFO - Saved 0 tweets from @HDFC_Ltd to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/HDFC_user_HDFC_Ltd_tweets.json
+2025-07-26 14:28:43,812 - INFO - Fetching public tweets for stock: SBIN
+2025-07-26 14:28:45,194 - INFO - Saved 0 public tweets for stock SBIN to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/SBIN_tweets.json
+2025-07-26 14:28:45,195 - INFO - Searching tweets from @TheOfficialSBI with keywords: ['results', 'profit', 'earnings', 'quarter', 'q1', 'q2', 'q3', 'q4']
+2025-07-26 14:28:46,515 - INFO - Saved 1 tweets from @TheOfficialSBI to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/SBIN_user_TheOfficialSBI_tweets.json
+2025-07-26 14:28:46,516 - INFO - Fetching public tweets for stock: BHARTIARTL
+2025-07-26 14:28:47,862 - INFO - Saved 0 public tweets for stock BHARTIARTL to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/BHARTIARTL_tweets.json
+2025-07-26 14:28:47,863 - INFO - Searching tweets from @Airtel_Presence with keywords: ['results', 'profit', 'earnings', 'quarter', 'q1', 'q2', 'q3', 'q4']
+2025-07-26 14:28:49,548 - INFO - Saved 4 tweets from @Airtel_Presence to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/BHARTIARTL_user_Airtel_Presence_tweets.json
+2025-07-26 14:28:49,548 - INFO - Fetching public tweets for stock: KOTAKBANK
+2025-07-26 14:28:50,244 - INFO - Saved 0 public tweets for stock KOTAKBANK to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/KOTAKBANK_tweets.json
+2025-07-26 14:28:50,244 - INFO - Searching tweets from @KotakBankLtd with keywords: ['results', 'profit', 'earnings', 'quarter', 'q1', 'q2', 'q3', 'q4']
+2025-07-26 14:28:52,476 - INFO - Saved 20 tweets from @KotakBankLtd to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/KOTAKBANK_user_KotakBankLtd_tweets.json
+2025-07-26 14:28:52,477 - INFO - Fetching public tweets for stock: LT
+2025-07-26 14:28:54,773 - INFO - Saved 18 public tweets for stock LT to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/LT_tweets.json
+2025-07-26 14:28:54,773 - INFO - Searching tweets from @larsentoubro with keywords: ['results', 'profit', 'earnings', 'quarter', 'q1', 'q2', 'q3', 'q4']
+2025-07-26 14:28:57,067 - INFO - Saved 18 tweets from @larsentoubro to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/LT_user_larsentoubro_tweets.json
+2025-07-26 14:28:57,067 - INFO - Fetching public tweets for stock: ASIANPAINT
+2025-07-26 14:28:58,317 - INFO - Saved 1 public tweets for stock ASIANPAINT to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/ASIANPAINT_tweets.json
+2025-07-26 14:28:58,317 - INFO - Searching tweets from @asianpaints with keywords: ['results', 'profit', 'earnings', 'quarter', 'q1', 'q2', 'q3', 'q4']
+2025-07-26 14:28:59,556 - INFO - Saved 9 tweets from @asianpaints to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/ASIANPAINT_user_asianpaints_tweets.json
+2025-07-26 14:28:59,557 - INFO - Fetching public tweets for stock: AXISBANK
+2025-07-26 14:29:01,034 - INFO - Saved 3 public tweets for stock AXISBANK to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/AXISBANK_tweets.json
+2025-07-26 14:29:01,034 - INFO - Searching tweets from @AxisBank with keywords: ['results', 'profit', 'earnings', 'quarter', 'q1', 'q2', 'q3', 'q4']
+2025-07-26 14:29:01,974 - INFO - Saved 4 tweets from @AxisBank to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/AXISBANK_user_AxisBank_tweets.json
+2025-07-26 14:29:01,974 - INFO - Fetching public tweets for stock: MARUTI
+2025-07-26 14:29:03,643 - INFO - Saved 8 public tweets for stock MARUTI to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/MARUTI_tweets.json
+2025-07-26 14:29:03,644 - INFO - Searching tweets from @Maruti_Corp with keywords: ['results', 'profit', 'earnings', 'quarter', 'q1', 'q2', 'q3', 'q4']
+2025-07-26 14:29:04,948 - INFO - Saved 0 tweets from @Maruti_Corp to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/MARUTI_user_Maruti_Corp_tweets.json
+2025-07-26 14:29:04,948 - INFO - Fetching public tweets for stock: ULTRACEMCO
+2025-07-26 14:29:05,583 - INFO - Saved 0 public tweets for stock ULTRACEMCO to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/ULTRACEMCO_tweets.json
+2025-07-26 14:29:05,583 - INFO - Searching tweets from @UltraTechCement with keywords: ['results', 'profit', 'earnings', 'quarter', 'q1', 'q2', 'q3', 'q4']
+2025-07-26 14:29:07,719 - INFO - Saved 20 tweets from @UltraTechCement to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/ULTRACEMCO_user_UltraTechCement_tweets.json
+2025-07-26 14:29:07,719 - INFO - Fetching public tweets for stock: TITAN
+2025-07-26 14:29:10,122 - INFO - Saved 12 public tweets for stock TITAN to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/TITAN_tweets.json
+2025-07-26 14:29:10,122 - INFO - Searching tweets from @TitanCompanyLtd with keywords: ['results', 'profit', 'earnings', 'quarter', 'q1', 'q2', 'q3', 'q4']
+2025-07-26 14:29:12,356 - INFO - Saved 15 tweets from @TitanCompanyLtd to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/TITAN_user_TitanCompanyLtd_tweets.json
+2025-07-26 14:29:12,357 - INFO - Fetching public tweets for stock: BAJFINANCE
+2025-07-26 14:29:13,466 - INFO - Saved 0 public tweets for stock BAJFINANCE to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/BAJFINANCE_tweets.json
+2025-07-26 14:29:13,466 - INFO - Searching tweets from @Bajaj_Finserv with keywords: ['results', 'profit', 'earnings', 'quarter', 'q1', 'q2', 'q3', 'q4']
+2025-07-26 14:29:15,664 - INFO - Saved 20 tweets from @Bajaj_Finserv to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/BAJFINANCE_user_Bajaj_Finserv_tweets.json
+2025-07-26 14:29:15,664 - INFO - Fetching public tweets for stock: NESTLEIND
+2025-07-26 14:29:16,910 - INFO - Saved 0 public tweets for stock NESTLEIND to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/NESTLEIND_tweets.json
+2025-07-26 14:29:16,910 - INFO - Searching tweets from @NestleIndia with keywords: ['results', 'profit', 'earnings', 'quarter', 'q1', 'q2', 'q3', 'q4']
+2025-07-26 14:29:19,005 - INFO - Saved 20 tweets from @NestleIndia to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/NESTLEIND_user_NestleIndia_tweets.json
+2025-07-26 14:29:19,005 - INFO - Fetching public tweets for stock: ONGC
+2025-07-26 14:29:20,429 - INFO - Saved 4 public tweets for stock ONGC to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/ONGC_tweets.json
+2025-07-26 14:29:20,429 - INFO - Searching tweets from @ONGC_ with keywords: ['results', 'profit', 'earnings', 'quarter', 'q1', 'q2', 'q3', 'q4']
+2025-07-26 14:29:22,479 - INFO - Saved 7 tweets from @ONGC_ to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/ONGC_user_ONGC__tweets.json
+2025-07-26 14:29:22,479 - INFO - Fetching public tweets for stock: POWERGRID
+2025-07-26 14:29:23,766 - INFO - Saved 1 public tweets for stock POWERGRID to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/POWERGRID_tweets.json
+2025-07-26 14:29:23,766 - INFO - Searching tweets from @pgcilindia with keywords: ['results', 'profit', 'earnings', 'quarter', 'q1', 'q2', 'q3', 'q4']
+2025-07-26 14:29:25,835 - INFO - Saved 15 tweets from @pgcilindia to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/POWERGRID_user_pgcilindia_tweets.json
+2025-07-26 14:29:25,836 - INFO - Fetching public tweets for stock: NTPC
+2025-07-26 14:29:27,188 - INFO - Saved 1 public tweets for stock NTPC to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/NTPC_tweets.json
+2025-07-26 14:29:27,189 - INFO - Searching tweets from @ntpclimited with keywords: ['results', 'profit', 'earnings', 'quarter', 'q1', 'q2', 'q3', 'q4']
+2025-07-26 14:29:29,463 - INFO - Saved 14 tweets from @ntpclimited to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/NTPC_user_ntpclimited_tweets.json
+2025-07-26 14:29:29,464 - INFO - Fetching public tweets for stock: ITC
+2025-07-26 14:29:30,425 - INFO - Saved 1 public tweets for stock ITC to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/ITC_tweets.json
+2025-07-26 14:29:30,425 - INFO - Searching tweets from @ITCCorpCom with keywords: ['results', 'profit', 'earnings', 'quarter', 'q1', 'q2', 'q3', 'q4']
+2025-07-26 14:29:32,032 - INFO - Saved 20 tweets from @ITCCorpCom to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/ITC_user_ITCCorpCom_tweets.json
+2025-07-26 14:29:32,032 - INFO - Fetching public tweets for stock: BAJAJFINSV
+2025-07-26 14:29:32,677 - INFO - Saved 0 public tweets for stock BAJAJFINSV to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/BAJAJFINSV_tweets.json
+2025-07-26 14:29:32,677 - INFO - Fetching public tweets for stock: SUNPHARMA
+2025-07-26 14:29:33,935 - INFO - Saved 1 public tweets for stock SUNPHARMA to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/SUNPHARMA_tweets.json
+2025-07-26 14:29:33,935 - INFO - Searching tweets from @SunPharma_Live with keywords: ['results', 'profit', 'earnings', 'quarter', 'q1', 'q2', 'q3', 'q4']
+2025-07-26 14:29:36,088 - INFO - Saved 20 tweets from @SunPharma_Live to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/SUNPHARMA_user_SunPharma_Live_tweets.json
+2025-07-26 14:29:36,088 - INFO - Fetching public tweets for stock: TECHM
+2025-07-26 14:29:37,380 - INFO - Saved 0 public tweets for stock TECHM to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/TECHM_tweets.json
+2025-07-26 14:29:37,380 - INFO - Searching tweets from @tech_mahindra with keywords: ['results', 'profit', 'earnings', 'quarter', 'q1', 'q2', 'q3', 'q4']
+2025-07-26 14:29:39,384 - INFO - Saved 20 tweets from @tech_mahindra to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/TECHM_user_tech_mahindra_tweets.json
+2025-07-26 14:29:39,384 - INFO - Fetching public tweets for stock: WIPRO
+2025-07-26 14:29:40,276 - INFO - Saved 5 public tweets for stock WIPRO to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/WIPRO_tweets.json
+2025-07-26 14:29:40,276 - INFO - Searching tweets from @Wipro with keywords: ['results', 'profit', 'earnings', 'quarter', 'q1', 'q2', 'q3', 'q4']
+2025-07-26 14:29:42,401 - INFO - Saved 20 tweets from @Wipro to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/WIPRO_user_Wipro_tweets.json
+2025-07-26 14:29:42,402 - INFO - Fetching public tweets for stock: HCLTECH
+2025-07-26 14:29:43,335 - INFO - Saved 2 public tweets for stock HCLTECH to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/HCLTECH_tweets.json
+2025-07-26 14:29:43,336 - INFO - Searching tweets from @hcltech with keywords: ['results', 'profit', 'earnings', 'quarter', 'q1', 'q2', 'q3', 'q4']
+2025-07-26 14:29:45,328 - INFO - Saved 20 tweets from @hcltech to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/HCLTECH_user_hcltech_tweets.json
+2025-07-26 14:29:45,329 - INFO - Fetching public tweets for stock: JSWSTEEL
+2025-07-26 14:29:46,572 - INFO - Saved 0 public tweets for stock JSWSTEEL to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/JSWSTEEL_tweets.json
+2025-07-26 14:29:46,573 - INFO - Searching tweets from @jswsteel with keywords: ['results', 'profit', 'earnings', 'quarter', 'q1', 'q2', 'q3', 'q4']
+2025-07-26 14:29:48,265 - INFO - Saved 6 tweets from @jswsteel to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/JSWSTEEL_user_jswsteel_tweets.json
+2025-07-26 14:29:48,266 - INFO - Fetching public tweets for stock: TATAMOTORS
+2025-07-26 14:29:49,699 - INFO - Saved 0 public tweets for stock TATAMOTORS to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/TATAMOTORS_tweets.json
+2025-07-26 14:29:49,699 - INFO - Searching tweets from @TataMotors with keywords: ['results', 'profit', 'earnings', 'quarter', 'q1', 'q2', 'q3', 'q4']
+2025-07-26 14:29:51,076 - INFO - Saved 19 tweets from @TataMotors to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/TATAMOTORS_user_TataMotors_tweets.json
+2025-07-26 14:29:51,076 - INFO - Fetching public tweets for stock: ADANIPORTS
+2025-07-26 14:29:52,106 - INFO - Saved 0 public tweets for stock ADANIPORTS to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/ADANIPORTS_tweets.json
+2025-07-26 14:29:52,106 - INFO - Searching tweets from @AdaniOnline with keywords: ['results', 'profit', 'earnings', 'quarter', 'q1', 'q2', 'q3', 'q4']
+2025-07-26 14:29:54,204 - INFO - Saved 20 tweets from @AdaniOnline to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/ADANIPORTS_user_AdaniOnline_tweets.json
+2025-07-26 14:29:54,204 - INFO - Fetching public tweets for stock: BRITANNIA
+2025-07-26 14:29:55,522 - INFO - Saved 13 public tweets for stock BRITANNIA to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/BRITANNIA_tweets.json
+2025-07-26 14:29:55,522 - INFO - Searching tweets from @BritanniaIndLtd with keywords: ['results', 'profit', 'earnings', 'quarter', 'q1', 'q2', 'q3', 'q4']
+2025-07-26 14:29:56,962 - INFO - Saved 2 tweets from @BritanniaIndLtd to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/BRITANNIA_user_BritanniaIndLtd_tweets.json
+2025-07-26 14:29:56,962 - INFO - Fetching public tweets for stock: SHREECEM
+2025-07-26 14:29:58,061 - INFO - Saved 0 public tweets for stock SHREECEM to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/SHREECEM_tweets.json
+2025-07-26 14:29:58,061 - INFO - Searching tweets from @shreecementltd with keywords: ['results', 'profit', 'earnings', 'quarter', 'q1', 'q2', 'q3', 'q4']
+2025-07-26 14:30:00,156 - INFO - Saved 12 tweets from @shreecementltd to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/SHREECEM_user_shreecementltd_tweets.json
+2025-07-26 14:30:00,156 - INFO - Fetching public tweets for stock: TATACONSUM
+2025-07-26 14:30:01,154 - INFO - Saved 0 public tweets for stock TATACONSUM to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/TATACONSUM_tweets.json
+2025-07-26 14:30:01,155 - INFO - Searching tweets from @TataConsumer with keywords: ['results', 'profit', 'earnings', 'quarter', 'q1', 'q2', 'q3', 'q4']
+2025-07-26 14:30:02,877 - INFO - Saved 19 tweets from @TataConsumer to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/TATACONSUM_user_TataConsumer_tweets.json
+2025-07-26 14:30:02,877 - INFO - Fetching public tweets for stock: BPCL
+2025-07-26 14:30:04,023 - INFO - Saved 0 public tweets for stock BPCL to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/BPCL_tweets.json
+2025-07-26 14:30:04,023 - INFO - Searching tweets from @BPCLimited with keywords: ['results', 'profit', 'earnings', 'quarter', 'q1', 'q2', 'q3', 'q4']
+2025-07-26 14:30:05,576 - INFO - Saved 14 tweets from @BPCLimited to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/BPCL_user_BPCLimited_tweets.json
+2025-07-26 14:30:05,577 - INFO - Fetching public tweets for stock: INDUSINDBK
+2025-07-26 14:30:06,196 - INFO - Saved 0 public tweets for stock INDUSINDBK to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/INDUSINDBK_tweets.json
+2025-07-26 14:30:06,196 - INFO - Searching tweets from @MyIndusIndBank with keywords: ['results', 'profit', 'earnings', 'quarter', 'q1', 'q2', 'q3', 'q4']
+2025-07-26 14:30:08,316 - INFO - Saved 20 tweets from @MyIndusIndBank to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/INDUSINDBK_user_MyIndusIndBank_tweets.json
+2025-07-26 14:30:08,316 - INFO - Fetching public tweets for stock: GRASIM
+2025-07-26 14:30:08,891 - INFO - Saved 0 public tweets for stock GRASIM to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/GRASIM_tweets.json
+2025-07-26 14:30:08,892 - INFO - Searching tweets from @GrasimInd with keywords: ['results', 'profit', 'earnings', 'quarter', 'q1', 'q2', 'q3', 'q4']
+2025-07-26 14:30:10,985 - INFO - Saved 16 tweets from @GrasimInd to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/GRASIM_user_GrasimInd_tweets.json
+2025-07-26 14:30:10,986 - INFO - Fetching public tweets for stock: EICHERMOT
+2025-07-26 14:30:11,527 - INFO - Saved 0 public tweets for stock EICHERMOT to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/EICHERMOT_tweets.json
+2025-07-26 14:30:11,527 - INFO - Searching tweets from @EicherMotors with keywords: ['results', 'profit', 'earnings', 'quarter', 'q1', 'q2', 'q3', 'q4']
+2025-07-26 14:30:12,838 - INFO - Saved 0 tweets from @EicherMotors to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/EICHERMOT_user_EicherMotors_tweets.json
+2025-07-26 14:30:12,839 - INFO - Fetching public tweets for stock: DRREDDY
+2025-07-26 14:30:13,958 - INFO - Saved 0 public tweets for stock DRREDDY to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/DRREDDY_tweets.json
+2025-07-26 14:30:13,958 - INFO - Searching tweets from @drreddys with keywords: ['results', 'profit', 'earnings', 'quarter', 'q1', 'q2', 'q3', 'q4']
+2025-07-26 14:30:16,416 - INFO - Saved 19 tweets from @drreddys to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/DRREDDY_user_drreddys_tweets.json
+2025-07-26 14:30:16,417 - INFO - Fetching public tweets for stock: COALINDIA
+2025-07-26 14:30:17,491 - INFO - Saved 0 public tweets for stock COALINDIA to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/COALINDIA_tweets.json
+2025-07-26 14:30:17,491 - INFO - Searching tweets from @CoalIndiaHQ with keywords: ['results', 'profit', 'earnings', 'quarter', 'q1', 'q2', 'q3', 'q4']
+2025-07-26 14:30:19,744 - INFO - Saved 15 tweets from @CoalIndiaHQ to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/COALINDIA_user_CoalIndiaHQ_tweets.json
+2025-07-26 14:30:19,744 - INFO - Fetching public tweets for stock: HEROMOTOCO
+2025-07-26 14:30:20,773 - INFO - Saved 0 public tweets for stock HEROMOTOCO to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/HEROMOTOCO_tweets.json
+2025-07-26 14:30:20,773 - INFO - Searching tweets from @HeroMotoCorp with keywords: ['results', 'profit', 'earnings', 'quarter', 'q1', 'q2', 'q3', 'q4']
+2025-07-26 14:30:23,139 - INFO - Saved 16 tweets from @HeroMotoCorp to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/HEROMOTOCO_user_HeroMotoCorp_tweets.json
+2025-07-26 14:30:23,139 - INFO - Fetching public tweets for stock: IOC
+2025-07-26 14:30:24,094 - INFO - Saved 5 public tweets for stock IOC to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/IOC_tweets.json
+2025-07-26 14:30:24,095 - INFO - Searching tweets from @IndianOilcl with keywords: ['results', 'profit', 'earnings', 'quarter', 'q1', 'q2', 'q3', 'q4']
+2025-07-26 14:30:26,344 - INFO - Saved 12 tweets from @IndianOilcl to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/IOC_user_IndianOilcl_tweets.json
+2025-07-26 14:30:26,344 - INFO - Fetching public tweets for stock: UPL
+2025-07-26 14:30:27,446 - INFO - Saved 0 public tweets for stock UPL to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/UPL_tweets.json
+2025-07-26 14:30:27,447 - INFO - Searching tweets from @UPLGlobal with keywords: ['results', 'profit', 'earnings', 'quarter', 'q1', 'q2', 'q3', 'q4']
+2025-07-26 14:30:28,592 - INFO - Saved 0 tweets from @UPLGlobal to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/UPL_user_UPLGlobal_tweets.json
+2025-07-26 14:30:28,593 - INFO - Fetching public tweets for stock: CIPLA
+2025-07-26 14:30:29,753 - INFO - Saved 1 public tweets for stock CIPLA to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/CIPLA_tweets.json
+2025-07-26 14:30:29,753 - INFO - Searching tweets from @Cipla_Global with keywords: ['results', 'profit', 'earnings', 'quarter', 'q1', 'q2', 'q3', 'q4']
+2025-07-26 14:30:31,879 - INFO - Saved 20 tweets from @Cipla_Global to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/CIPLA_user_Cipla_Global_tweets.json
+2025-07-26 14:30:31,879 - INFO - Fetching public tweets for stock: TATASTEEL
+2025-07-26 14:30:32,527 - INFO - Saved 0 public tweets for stock TATASTEEL to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/TATASTEEL_tweets.json
+2025-07-26 14:30:32,528 - INFO - Searching tweets from @TataSteelLtd with keywords: ['results', 'profit', 'earnings', 'quarter', 'q1', 'q2', 'q3', 'q4']
+2025-07-26 14:30:34,201 - INFO - Saved 15 tweets from @TataSteelLtd to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/TATASTEEL_user_TataSteelLtd_tweets.json
+2025-07-26 14:30:34,202 - INFO - Fetching public tweets for stock: HDFCLIFE
+2025-07-26 14:30:35,248 - INFO - Saved 0 public tweets for stock HDFCLIFE to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/HDFCLIFE_tweets.json
+2025-07-26 14:30:35,248 - INFO - Searching tweets from @HDFCLIFE with keywords: ['results', 'profit', 'earnings', 'quarter', 'q1', 'q2', 'q3', 'q4']
+2025-07-26 14:30:36,711 - INFO - Saved 4 tweets from @HDFCLIFE to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/HDFCLIFE_user_HDFCLIFE_tweets.json
+2025-07-26 14:30:36,711 - INFO - Fetching public tweets for stock: SHREECEM
+2025-07-26 14:30:37,752 - INFO - Saved 0 public tweets for stock SHREECEM to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/SHREECEM_tweets.json
+2025-07-26 14:30:37,752 - INFO - Searching tweets from @shreecementltd with keywords: ['results', 'profit', 'earnings', 'quarter', 'q1', 'q2', 'q3', 'q4']
+2025-07-26 14:30:39,937 - INFO - Saved 12 tweets from @shreecementltd to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/SHREECEM_user_shreecementltd_tweets.json
+2025-07-26 14:30:39,937 - INFO - Fetching public tweets for stock: BAJAJ-AUTO
+2025-07-26 14:30:41,261 - INFO - Saved 0 public tweets for stock BAJAJ-AUTO to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/BAJAJ-AUTO_tweets.json
+2025-07-26 14:30:41,261 - INFO - Searching tweets from @bajaj_ltd with keywords: ['results', 'profit', 'earnings', 'quarter', 'q1', 'q2', 'q3', 'q4']
+2025-07-26 14:30:41,913 - INFO - Saved 0 tweets from @bajaj_ltd to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/BAJAJ-AUTO_user_bajaj_ltd_tweets.json
+2025-07-26 14:30:41,914 - INFO - Fetching public tweets for stock: TATACONSUM
+2025-07-26 14:30:42,961 - INFO - Saved 0 public tweets for stock TATACONSUM to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/TATACONSUM_tweets.json
+2025-07-26 14:30:42,961 - INFO - Searching tweets from @TataConsumer with keywords: ['results', 'profit', 'earnings', 'quarter', 'q1', 'q2', 'q3', 'q4']
+2025-07-26 14:30:44,971 - INFO - Saved 19 tweets from @TataConsumer to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/TATACONSUM_user_TataConsumer_tweets.json
+2025-07-26 14:30:44,971 - INFO - Fetching public tweets for stock: ONGC
+2025-07-26 14:30:46,410 - INFO - Saved 1 public tweets for stock ONGC to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/ONGC_tweets.json
+2025-07-26 14:30:46,410 - INFO - Searching tweets from @ONGC_ with keywords: ['results', 'profit', 'earnings', 'quarter', 'q1', 'q2', 'q3', 'q4']
+2025-07-26 14:30:49,053 - INFO - Saved 13 tweets from @ONGC_ to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/ONGC_user_ONGC__tweets.json
+2025-07-26 14:30:49,054 - INFO - Fetching public tweets for stock: NTPC
+2025-07-26 14:30:49,854 - INFO - Saved 0 public tweets for stock NTPC to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/NTPC_tweets.json
+2025-07-26 14:30:49,854 - INFO - Searching tweets from @ntpclimited with keywords: ['results', 'profit', 'earnings', 'quarter', 'q1', 'q2', 'q3', 'q4']
+2025-07-26 14:30:52,125 - INFO - Saved 14 tweets from @ntpclimited to /Users/puneetgarg/Documents/Pranav Material/FYP/Indian_FinAgent/social_media_data/uncleaned_data/twitter_scraper/NTPC_user_ntpclimited_tweets.json
+2025-07-26 14:30:52,125 - INFO - Twitter scraping completed successfully.

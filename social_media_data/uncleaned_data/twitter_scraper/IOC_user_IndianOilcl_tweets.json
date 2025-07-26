@@ -1,0 +1,3072 @@
+[
+    {
+        "type": "tweet",
+        "id": "1924729304560370064",
+        "url": "https://x.com/IndianOilcl/status/1924729304560370064",
+        "twitterUrl": "https://twitter.com/IndianOilcl/status/1924729304560370064",
+        "text": "Mr. Mukul Maheshwari\u2019s distinguished journey has spanned critical advancements in sustainable energy and lubricants research. His leadership has driven remarkable results in IndianOil\u2019s advanced sustainable endeavours including Hydrogen production and Biodiesel. We extend our best wishes for his continued success in journey ahead.\n#IndianOil #ForeverAnIOCian",
+        "source": "Twitter for iPhone",
+        "retweetCount": 1,
+        "replyCount": 4,
+        "likeCount": 15,
+        "quoteCount": 0,
+        "viewCount": 937,
+        "createdAt": "Tue May 20 07:30:00 +0000 2025",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1924729304560370064",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "IndianOilcl",
+            "url": "https://x.com/IndianOilcl",
+            "twitterUrl": "https://twitter.com/IndianOilcl",
+            "id": "2597794454",
+            "name": "Indian Oil Corp Ltd",
+            "isVerified": false,
+            "isBlueVerified": true,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/1559508875824414721/cuo7XXxh_normal.png",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/2597794454/1724134824",
+            "description": "",
+            "location": "India",
+            "followers": 434401,
+            "following": 143,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Tue Jul 01 10:46:54 +0000 2014",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 5445,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 17785,
+            "statusesCount": 47138,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "The official handle of IndianOil.  IndianOil is ranked 116th among the world's largest corporate in Fortune \u2018Global 500' listing for the year 2024.",
+                "entities": {
+                    "description": {},
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "iocl.com",
+                                "expanded_url": "http://www.iocl.com",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/6Ivnfmdc1S"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {
+            "media": [
+                {
+                    "display_url": "pic.twitter.com/tUVBAQtuF1",
+                    "expanded_url": "https://twitter.com/IndianOilcl/status/1924729304560370064/photo/1",
+                    "ext_media_availability": {
+                        "status": "Available"
+                    },
+                    "features": {
+                        "large": {
+                            "faces": [
+                                {
+                                    "h": 120,
+                                    "w": 120,
+                                    "x": 42,
+                                    "y": 565
+                                },
+                                {
+                                    "h": 229,
+                                    "w": 229,
+                                    "x": 252,
+                                    "y": 253
+                                }
+                            ]
+                        },
+                        "orig": {
+                            "faces": [
+                                {
+                                    "h": 120,
+                                    "w": 120,
+                                    "x": 42,
+                                    "y": 565
+                                },
+                                {
+                                    "h": 229,
+                                    "w": 229,
+                                    "x": 252,
+                                    "y": 253
+                                }
+                            ]
+                        }
+                    },
+                    "id_str": "1924723655625650176",
+                    "indices": [
+                        278,
+                        301
+                    ],
+                    "media_key": "3_1924723655625650176",
+                    "media_results": {
+                        "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAARq1/feYW7AACgACGrYDGtcbAZAAAA==",
+                        "result": {
+                            "__typename": "ApiMedia",
+                            "id": "QXBpTWVkaWE6DAABCgABGrX995hbsAAKAAIatgMa1xsBkAAA",
+                            "media_key": "3_1924723655625650176"
+                        }
+                    },
+                    "media_url_https": "https://pbs.twimg.com/media/GrX995hbsAAzZH4.jpg",
+                    "original_info": {
+                        "focus_rects": [
+                            {
+                                "h": 605,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 319
+                            },
+                            {
+                                "h": 1080,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 947,
+                                "x": 133,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 540,
+                                "x": 540,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 0
+                            }
+                        ],
+                        "height": 1080,
+                        "width": 1080
+                    },
+                    "sizes": {
+                        "large": {
+                            "h": 1080,
+                            "w": 1080
+                        }
+                    },
+                    "type": "photo",
+                    "url": "https://t.co/tUVBAQtuF1"
+                }
+            ]
+        },
+        "card": null,
+        "place": {},
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        333,
+                        343
+                    ],
+                    "text": "IndianOil"
+                },
+                {
+                    "indices": [
+                        344,
+                        360
+                    ],
+                    "text": "ForeverAnIOCian"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1883911815761101135",
+        "url": "https://x.com/IndianOilcl/status/1883911815761101135",
+        "twitterUrl": "https://twitter.com/IndianOilcl/status/1883911815761101135",
+        "text": "At the end of the third quarter of FY 2024-25, we have set new benchmarks in #OperationalExcellence, powered by our #IndianOil family and the trust of our stakeholders. #IndianOilHighlights #Q3Results https://t.co/5ItiVsCPOY",
+        "source": "Twitter for iPhone",
+        "retweetCount": 10,
+        "replyCount": 2,
+        "likeCount": 33,
+        "quoteCount": 0,
+        "viewCount": 1661,
+        "createdAt": "Mon Jan 27 16:15:52 +0000 2025",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1883911815761101135",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "IndianOilcl",
+            "url": "https://x.com/IndianOilcl",
+            "twitterUrl": "https://twitter.com/IndianOilcl",
+            "id": "2597794454",
+            "name": "Indian Oil Corp Ltd",
+            "isVerified": false,
+            "isBlueVerified": true,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/1559508875824414721/cuo7XXxh_normal.png",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/2597794454/1724134824",
+            "description": "",
+            "location": "India",
+            "followers": 434401,
+            "following": 143,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Tue Jul 01 10:46:54 +0000 2014",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 5445,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 17785,
+            "statusesCount": 47138,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "The official handle of IndianOil.  IndianOil is ranked 116th among the world's largest corporate in Fortune \u2018Global 500' listing for the year 2024.",
+                "entities": {
+                    "description": {},
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "iocl.com",
+                                "expanded_url": "http://www.iocl.com",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/6Ivnfmdc1S"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {
+            "media": [
+                {
+                    "additional_media_info": {
+                        "monetizable": false
+                    },
+                    "display_url": "pic.twitter.com/5ItiVsCPOY",
+                    "expanded_url": "https://twitter.com/IndianOilcl/status/1883911815761101135/video/1",
+                    "ext_media_availability": {
+                        "status": "Available"
+                    },
+                    "id_str": "1883911673058091008",
+                    "indices": [
+                        201,
+                        224
+                    ],
+                    "media_key": "13_1883911673058091008",
+                    "media_results": {
+                        "id": "QXBpTWVkaWFSZXN1bHRzOgwABAoAARok/69s1uAAAAA=",
+                        "result": {
+                            "__typename": "ApiMedia",
+                            "id": "QXBpTWVkaWE6DAAECgABGiT/r2zW4AAAAA==",
+                            "media_key": "13_1883911673058091008"
+                        }
+                    },
+                    "media_url_https": "https://pbs.twimg.com/amplify_video_thumb/1883911673058091008/img/MHTnMeo3kOOuIj-l.jpg",
+                    "original_info": {
+                        "focus_rects": [],
+                        "height": 720,
+                        "width": 1280
+                    },
+                    "sizes": {
+                        "large": {
+                            "h": 720,
+                            "w": 1280
+                        }
+                    },
+                    "type": "video",
+                    "url": "https://t.co/5ItiVsCPOY",
+                    "video_info": {
+                        "aspect_ratio": [
+                            16,
+                            9
+                        ],
+                        "duration_millis": 29766,
+                        "variants": [
+                            {
+                                "content_type": "application/x-mpegURL",
+                                "url": "https://video-s.twimg.com/amplify_video/1883911673058091008/pl/zet6crf3LErUBZKk.m3u8?tag=16&v=cfc"
+                            },
+                            {
+                                "bitrate": 288000,
+                                "content_type": "video/mp4",
+                                "url": "https://video-s.twimg.com/amplify_video/1883911673058091008/vid/avc1/480x270/HHUmEgvXdVbzExpw.mp4?tag=16"
+                            },
+                            {
+                                "bitrate": 832000,
+                                "content_type": "video/mp4",
+                                "url": "https://video-s.twimg.com/amplify_video/1883911673058091008/vid/avc1/640x360/HMPlMVbJn_Sjn7AT.mp4?tag=16"
+                            },
+                            {
+                                "bitrate": 2176000,
+                                "content_type": "video/mp4",
+                                "url": "https://video-s.twimg.com/amplify_video/1883911673058091008/vid/avc1/1280x720/HssEayuoy6qZLqNq.mp4?tag=16"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "card": null,
+        "place": {},
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        77,
+                        99
+                    ],
+                    "text": "OperationalExcellence"
+                },
+                {
+                    "indices": [
+                        116,
+                        126
+                    ],
+                    "text": "IndianOil"
+                },
+                {
+                    "indices": [
+                        169,
+                        189
+                    ],
+                    "text": "IndianOilHighlights"
+                },
+                {
+                    "indices": [
+                        190,
+                        200
+                    ],
+                    "text": "Q3Results"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1820441633286234117",
+        "url": "https://x.com/IndianOilcl/status/1820441633286234117",
+        "twitterUrl": "https://twitter.com/IndianOilcl/status/1820441633286234117",
+        "text": "Immensely proud of our amazing gal trio, IOCian @manikabatra_TT , @SreejaAkula31 and IOCian Archana Kamath on smashing their way to the #TableTennis Quarter-Finals at #Paris2024! \n\nWhat a fabulous win for #TeamIndia in Women's Team Round of 16 against Romania by 3 - 2!\n\nGo gals, India is rooting for you! \n\n#IndiaAtParis2024 \n#Cheer4Bharat \n#IndianOilSportstar\n#IndiaShines \n#TheRoadToGlory \n#FuelingTheChampionships",
+        "source": "Twitter for iPhone",
+        "retweetCount": 5,
+        "replyCount": 3,
+        "likeCount": 19,
+        "quoteCount": 0,
+        "viewCount": 1721,
+        "createdAt": "Mon Aug 05 12:48:02 +0000 2024",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1820441633286234117",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "IndianOilcl",
+            "url": "https://x.com/IndianOilcl",
+            "twitterUrl": "https://twitter.com/IndianOilcl",
+            "id": "2597794454",
+            "name": "Indian Oil Corp Ltd",
+            "isVerified": false,
+            "isBlueVerified": true,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/1559508875824414721/cuo7XXxh_normal.png",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/2597794454/1724134824",
+            "description": "",
+            "location": "India",
+            "followers": 434401,
+            "following": 143,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Tue Jul 01 10:46:54 +0000 2014",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 5445,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 17785,
+            "statusesCount": 47138,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "The official handle of IndianOil.  IndianOil is ranked 116th among the world's largest corporate in Fortune \u2018Global 500' listing for the year 2024.",
+                "entities": {
+                    "description": {},
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "iocl.com",
+                                "expanded_url": "http://www.iocl.com",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/6Ivnfmdc1S"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": null,
+        "place": {},
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        136,
+                        148
+                    ],
+                    "text": "TableTennis"
+                },
+                {
+                    "indices": [
+                        167,
+                        177
+                    ],
+                    "text": "Paris2024"
+                },
+                {
+                    "indices": [
+                        205,
+                        215
+                    ],
+                    "text": "TeamIndia"
+                },
+                {
+                    "indices": [
+                        308,
+                        325
+                    ],
+                    "text": "IndiaAtParis2024"
+                },
+                {
+                    "indices": [
+                        327,
+                        340
+                    ],
+                    "text": "Cheer4Bharat"
+                },
+                {
+                    "indices": [
+                        342,
+                        361
+                    ],
+                    "text": "IndianOilSportstar"
+                },
+                {
+                    "indices": [
+                        362,
+                        374
+                    ],
+                    "text": "IndiaShines"
+                },
+                {
+                    "indices": [
+                        376,
+                        391
+                    ],
+                    "text": "TheRoadToGlory"
+                },
+                {
+                    "indices": [
+                        393,
+                        417
+                    ],
+                    "text": "FuelingTheChampionships"
+                }
+            ],
+            "user_mentions": [
+                {
+                    "id_str": "988671212216897537",
+                    "indices": [
+                        48,
+                        63
+                    ],
+                    "name": "Manika Batra",
+                    "screen_name": "manikabatra_TT"
+                },
+                {
+                    "id_str": "1576863352365940736",
+                    "indices": [
+                        66,
+                        80
+                    ],
+                    "name": "Sreeja Akula",
+                    "screen_name": "SreejaAkula31"
+                }
+            ]
+        },
+        "quoted_tweet": {
+            "type": "tweet",
+            "id": "1820420415266893917",
+            "url": "https://x.com/Media_SAI/status/1820420415266893917",
+            "twitterUrl": "https://twitter.com/Media_SAI/status/1820420415266893917",
+            "text": "Women's Team Round of 16  \ud83d\udc47\ud83c\udffb\n\n#TableTennis\ud83c\udfd3\n\nThe Indian\ud83c\uddee\ud83c\uddf3 team consisting of Manika Batra, Sreeja Akula, and Archana Kamath defeats Romania 3-2 to advance to the Quarter-Finals.\n\nTake a look at the results:\n\nSreeja/Archana defeated Adina Diaconu/Elizabeta Samara 11-9, 12-10, 11-7.\n\n@manikabatra_TT defeated Bernadette Szocs 11-5, 11-7, 11-7.\n\n@SreejaAkula31 lost to Elizabeta Samara 11-8, 4-11, 11-7, 6-11, 8-11.\n\nArchana lost to Bernadette Szocs 5-11, 11-8, 7-11, 9-11.\n\nManika Batra defeated Adina Diaconu 11-5, 11-9, 11-9.\n\nIndian team will face the winner of the match between United States and Germany on August 6 at 6.30 pm IST.\n\nSuper proud of you girls!\ud83e\udd29\ud83d\udc4f\ud83c\udffb\n\nLet #Cheer4Bharat chants continue and support #TeamIndia\u2611\ufe0f\ud83e\udd73",
+            "source": "Twitter for iPhone",
+            "retweetCount": 23,
+            "replyCount": 1,
+            "likeCount": 67,
+            "quoteCount": 1,
+            "viewCount": 6958,
+            "createdAt": "Mon Aug 05 11:23:43 +0000 2024",
+            "lang": "en",
+            "bookmarkCount": 2,
+            "isReply": false,
+            "inReplyToId": null,
+            "conversationId": "1820420415266893917",
+            "inReplyToUserId": null,
+            "inReplyToUsername": null,
+            "author": {
+                "type": "user",
+                "userName": "Media_SAI",
+                "url": "https://x.com/Media_SAI",
+                "twitterUrl": "https://twitter.com/Media_SAI",
+                "id": "2798742273",
+                "name": "SAI Media",
+                "isVerified": false,
+                "isBlueVerified": true,
+                "verifiedType": null,
+                "profilePicture": "https://pbs.twimg.com/profile_images/1554862927232258048/sjQk2nqx_normal.jpg",
+                "coverPicture": "https://pbs.twimg.com/profile_banners/2798742273/1751035202",
+                "description": "",
+                "location": "New Delhi, India",
+                "followers": 201756,
+                "following": 680,
+                "status": "",
+                "canDm": true,
+                "canMediaTag": true,
+                "createdAt": "Wed Oct 01 19:35:20 +0000 2014",
+                "entities": {
+                    "description": {
+                        "urls": []
+                    },
+                    "url": {}
+                },
+                "fastFollowersCount": 0,
+                "favouritesCount": 22907,
+                "hasCustomTimelines": true,
+                "isTranslator": false,
+                "mediaCount": 15507,
+                "statusesCount": 44249,
+                "withheldInCountries": [],
+                "affiliatesHighlightedLabel": {},
+                "possiblySensitive": false,
+                "pinnedTweetIds": [
+                    "1946946507162190056"
+                ],
+                "profile_bio": {
+                    "description": "Official Twitter handle of Sports Authority of India.All sports news break here.Follow us here to know the latest on Indian Sports.#KheloIndia #FitIndiaMovement",
+                    "entities": {
+                        "description": {
+                            "hashtags": [
+                                {
+                                    "indices": [
+                                        131,
+                                        142
+                                    ],
+                                    "text": "KheloIndia"
+                                },
+                                {
+                                    "indices": [
+                                        143,
+                                        160
+                                    ],
+                                    "text": "FitIndiaMovement"
+                                }
+                            ]
+                        },
+                        "url": {
+                            "urls": [
+                                {
+                                    "display_url": "sportsauthorityofindia.nic.in/sai/",
+                                    "expanded_url": "https://sportsauthorityofindia.nic.in/sai/",
+                                    "indices": [
+                                        0,
+                                        23
+                                    ],
+                                    "url": "https://t.co/DZ7uhPxKrB"
+                                }
+                            ]
+                        }
+                    }
+                },
+                "isAutomated": false,
+                "automatedBy": null
+            },
+            "extendedEntities": {
+                "media": [
+                    {
+                        "display_url": "pic.twitter.com/T7TsPOA957",
+                        "expanded_url": "https://twitter.com/Media_SAI/status/1820420415266893917/photo/1",
+                        "ext_media_availability": {
+                            "status": "Available"
+                        },
+                        "features": {
+                            "all": {
+                                "tags": [
+                                    {
+                                        "name": "Dr Mansukh Mandaviya",
+                                        "screen_name": "mansukhmandviya",
+                                        "type": "user",
+                                        "user_id": "432697203"
+                                    },
+                                    {
+                                        "name": "Raksha Khadse",
+                                        "screen_name": "khadseraksha",
+                                        "type": "user",
+                                        "user_id": "2413574533"
+                                    },
+                                    {
+                                        "name": "Dept of Sports MYAS",
+                                        "screen_name": "IndiaSports",
+                                        "type": "user",
+                                        "user_id": "742306410092990464"
+                                    },
+                                    {
+                                        "name": "YAS Ministry",
+                                        "screen_name": "YASMinistry",
+                                        "type": "user",
+                                        "user_id": "2364049800"
+                                    },
+                                    {
+                                        "name": "PIB India",
+                                        "screen_name": "PIB_India",
+                                        "type": "user",
+                                        "user_id": "231033118"
+                                    },
+                                    {
+                                        "name": "Table Tennis Federation of India",
+                                        "screen_name": "ttfitweet",
+                                        "type": "user",
+                                        "user_id": "194565986"
+                                    },
+                                    {
+                                        "name": "Doordarshan Sports",
+                                        "screen_name": "ddsportschannel",
+                                        "type": "user",
+                                        "user_id": "2663131136"
+                                    },
+                                    {
+                                        "name": "All India Radio Sports",
+                                        "screen_name": "akashvanisports",
+                                        "type": "user",
+                                        "user_id": "961505515573428224"
+                                    }
+                                ]
+                            },
+                            "large": {
+                                "faces": [
+                                    {
+                                        "h": 101,
+                                        "w": 101,
+                                        "x": 611,
+                                        "y": 476
+                                    },
+                                    {
+                                        "h": 98,
+                                        "w": 98,
+                                        "x": 907,
+                                        "y": 552
+                                    },
+                                    {
+                                        "h": 131,
+                                        "w": 131,
+                                        "x": 791,
+                                        "y": 638
+                                    }
+                                ]
+                            },
+                            "orig": {
+                                "faces": [
+                                    {
+                                        "h": 101,
+                                        "w": 101,
+                                        "x": 611,
+                                        "y": 476
+                                    },
+                                    {
+                                        "h": 98,
+                                        "w": 98,
+                                        "x": 907,
+                                        "y": 552
+                                    },
+                                    {
+                                        "h": 131,
+                                        "w": 131,
+                                        "x": 791,
+                                        "y": 638
+                                    }
+                                ]
+                            }
+                        },
+                        "id_str": "1820419322055155712",
+                        "indices": [
+                            277,
+                            300
+                        ],
+                        "media_key": "3_1820419322055155712",
+                        "media_results": {
+                            "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAARlDbbp5WuAACgACGUNuuQHaMF0AAA==",
+                            "result": {
+                                "__typename": "ApiMedia",
+                                "id": "QXBpTWVkaWE6DAABCgABGUNtunla4AAKAAIZQ265AdowXQAA",
+                                "media_key": "3_1820419322055155712"
+                            }
+                        },
+                        "media_url_https": "https://pbs.twimg.com/media/GUNtunla4AAsBrv.jpg",
+                        "original_info": {
+                            "focus_rects": [
+                                {
+                                    "h": 605,
+                                    "w": 1080,
+                                    "x": 0,
+                                    "y": 0
+                                },
+                                {
+                                    "h": 1080,
+                                    "w": 1080,
+                                    "x": 0,
+                                    "y": 0
+                                },
+                                {
+                                    "h": 1080,
+                                    "w": 947,
+                                    "x": 0,
+                                    "y": 0
+                                },
+                                {
+                                    "h": 1080,
+                                    "w": 540,
+                                    "x": 135,
+                                    "y": 0
+                                },
+                                {
+                                    "h": 1080,
+                                    "w": 1080,
+                                    "x": 0,
+                                    "y": 0
+                                }
+                            ],
+                            "height": 1080,
+                            "width": 1080
+                        },
+                        "sizes": {
+                            "large": {
+                                "h": 1080,
+                                "w": 1080
+                            }
+                        },
+                        "type": "photo",
+                        "url": "https://t.co/T7TsPOA957"
+                    }
+                ]
+            },
+            "card": null,
+            "place": {},
+            "entities": {
+                "hashtags": [
+                    {
+                        "indices": [
+                            30,
+                            42
+                        ],
+                        "text": "TableTennis"
+                    },
+                    {
+                        "indices": [
+                            671,
+                            684
+                        ],
+                        "text": "Cheer4Bharat"
+                    },
+                    {
+                        "indices": [
+                            713,
+                            723
+                        ],
+                        "text": "TeamIndia"
+                    }
+                ],
+                "user_mentions": [
+                    {
+                        "id_str": "988671212216897537",
+                        "indices": [
+                            283,
+                            298
+                        ],
+                        "name": "Manika Batra",
+                        "screen_name": "manikabatra_TT"
+                    },
+                    {
+                        "id_str": "1576863352365940736",
+                        "indices": [
+                            344,
+                            358
+                        ],
+                        "name": "Sreeja Akula",
+                        "screen_name": "SreejaAkula31"
+                    }
+                ]
+            },
+            "quoted_tweet": null,
+            "retweeted_tweet": null,
+            "article": null
+        },
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1819435889786781749",
+        "url": "https://x.com/IndianOilcl/status/1819435889786781749",
+        "twitterUrl": "https://twitter.com/IndianOilcl/status/1819435889786781749",
+        "text": "So proud of our IOCian the SENsational Lakshya for creating history and storming into the Semi-Finals @Paris2024!\n\n1st #Indian male shuttler to smash this breakthrough with an awe-inspiring performance in the Quarter Finals \ud83d\udcaa\n\nIn a display of sheer brilliance, he conquered Chou Tien Chen, with an impressive score of 19-21, 21-15, 21-12.\n\n@lakshya_sen , We are rooting for your incredible ascent! \n\nIndia's heart swells with immense joy & pride! \ud83c\uddee\ud83c\uddf3\n\n#IndiaAtParis2024\n#Cheer4Bharat\n#IndiaShines #TheRoadToGlory #FuelingTheChampionships #IndianOilSportstar #BadmintonHero",
+        "source": "Twitter for iPhone",
+        "retweetCount": 32,
+        "replyCount": 3,
+        "likeCount": 95,
+        "quoteCount": 2,
+        "viewCount": 5310,
+        "createdAt": "Fri Aug 02 18:11:34 +0000 2024",
+        "lang": "en",
+        "bookmarkCount": 1,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1819435889786781749",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "IndianOilcl",
+            "url": "https://x.com/IndianOilcl",
+            "twitterUrl": "https://twitter.com/IndianOilcl",
+            "id": "2597794454",
+            "name": "Indian Oil Corp Ltd",
+            "isVerified": false,
+            "isBlueVerified": true,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/1559508875824414721/cuo7XXxh_normal.png",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/2597794454/1724134824",
+            "description": "",
+            "location": "India",
+            "followers": 434401,
+            "following": 143,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Tue Jul 01 10:46:54 +0000 2014",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 5445,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 17785,
+            "statusesCount": 47138,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "The official handle of IndianOil.  IndianOil is ranked 116th among the world's largest corporate in Fortune \u2018Global 500' listing for the year 2024.",
+                "entities": {
+                    "description": {},
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "iocl.com",
+                                "expanded_url": "http://www.iocl.com",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/6Ivnfmdc1S"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {
+            "media": [
+                {
+                    "display_url": "pic.twitter.com/1XErKofac9",
+                    "expanded_url": "https://twitter.com/IndianOilcl/status/1819435889786781749/photo/1",
+                    "ext_media_availability": {
+                        "status": "Available"
+                    },
+                    "features": {
+                        "all": {
+                            "tags": [
+                                {
+                                    "name": "Lakshya Sen",
+                                    "screen_name": "lakshya_sen",
+                                    "type": "user",
+                                    "user_id": "932617429208915969"
+                                },
+                                {
+                                    "name": "Ministry of Petroleum and Natural Gas #MoPNG",
+                                    "screen_name": "PetroleumMin",
+                                    "type": "user",
+                                    "user_id": "2583583465"
+                                },
+                                {
+                                    "name": "ChairmanIOC",
+                                    "screen_name": "ChairmanIOCL",
+                                    "type": "user",
+                                    "user_id": "760407290331607040"
+                                },
+                                {
+                                    "name": "Director (Planning & Business Dev.), IndianOil",
+                                    "screen_name": "DirPBD_iocl",
+                                    "type": "user",
+                                    "user_id": "1526899747281244160"
+                                },
+                                {
+                                    "name": "Director IndianOil Research & Development",
+                                    "screen_name": "DirRnD_iocl",
+                                    "type": "user",
+                                    "user_id": "1122813468279627776"
+                                },
+                                {
+                                    "name": "Director (HR), IndianOil",
+                                    "screen_name": "DirHR_iocl",
+                                    "type": "user",
+                                    "user_id": "1080033842642239488"
+                                },
+                                {
+                                    "name": "Director (Marketing), IndianOil",
+                                    "screen_name": "DirMktg_iocl",
+                                    "type": "user",
+                                    "user_id": "1023186699919208453"
+                                },
+                                {
+                                    "name": "Director (Refineries), IndianOil",
+                                    "screen_name": "DirR_iocl",
+                                    "type": "user",
+                                    "user_id": "1040516308146810881"
+                                }
+                            ]
+                        },
+                        "large": {
+                            "faces": [
+                                {
+                                    "h": 68,
+                                    "w": 68,
+                                    "x": 311,
+                                    "y": 347
+                                },
+                                {
+                                    "h": 104,
+                                    "w": 104,
+                                    "x": 276,
+                                    "y": 378
+                                }
+                            ]
+                        },
+                        "orig": {
+                            "faces": [
+                                {
+                                    "h": 68,
+                                    "w": 68,
+                                    "x": 311,
+                                    "y": 347
+                                },
+                                {
+                                    "h": 104,
+                                    "w": 104,
+                                    "x": 276,
+                                    "y": 378
+                                }
+                            ]
+                        }
+                    },
+                    "id_str": "1819435878852276224",
+                    "indices": [
+                        280,
+                        303
+                    ],
+                    "media_key": "3_1819435878852276224",
+                    "media_results": {
+                        "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAARk/70rClzAACgACGT/vTU5WgDUAAA==",
+                        "result": {
+                            "__typename": "ApiMedia",
+                            "id": "QXBpTWVkaWE6DAABCgABGT/vSsKXMAAKAAIZP+9NTlaANQAA",
+                            "media_key": "3_1819435878852276224"
+                        }
+                    },
+                    "media_url_https": "https://pbs.twimg.com/media/GT_vSsKXMAAnHBr.jpg",
+                    "original_info": {
+                        "focus_rects": [
+                            {
+                                "h": 404,
+                                "w": 721,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 720,
+                                "w": 720,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 720,
+                                "w": 632,
+                                "x": 26,
+                                "y": 0
+                            },
+                            {
+                                "h": 720,
+                                "w": 360,
+                                "x": 162,
+                                "y": 0
+                            },
+                            {
+                                "h": 720,
+                                "w": 721,
+                                "x": 0,
+                                "y": 0
+                            }
+                        ],
+                        "height": 720,
+                        "width": 721
+                    },
+                    "sizes": {
+                        "large": {
+                            "h": 720,
+                            "w": 721
+                        }
+                    },
+                    "type": "photo",
+                    "url": "https://t.co/1XErKofac9"
+                }
+            ]
+        },
+        "card": null,
+        "place": {},
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        119,
+                        126
+                    ],
+                    "text": "Indian"
+                },
+                {
+                    "indices": [
+                        451,
+                        468
+                    ],
+                    "text": "IndiaAtParis2024"
+                },
+                {
+                    "indices": [
+                        469,
+                        482
+                    ],
+                    "text": "Cheer4Bharat"
+                },
+                {
+                    "indices": [
+                        483,
+                        495
+                    ],
+                    "text": "IndiaShines"
+                },
+                {
+                    "indices": [
+                        496,
+                        511
+                    ],
+                    "text": "TheRoadToGlory"
+                },
+                {
+                    "indices": [
+                        512,
+                        536
+                    ],
+                    "text": "FuelingTheChampionships"
+                },
+                {
+                    "indices": [
+                        537,
+                        556
+                    ],
+                    "text": "IndianOilSportstar"
+                },
+                {
+                    "indices": [
+                        557,
+                        571
+                    ],
+                    "text": "BadmintonHero"
+                }
+            ],
+            "user_mentions": [
+                {
+                    "id_str": "951849552",
+                    "indices": [
+                        102,
+                        112
+                    ],
+                    "name": "Paris 2024",
+                    "screen_name": "Paris2024"
+                },
+                {
+                    "id_str": "932617429208915969",
+                    "indices": [
+                        340,
+                        352
+                    ],
+                    "name": "Lakshya Sen",
+                    "screen_name": "lakshya_sen"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1818500026999402850",
+        "url": "https://x.com/IndianOilcl/status/1818500026999402850",
+        "twitterUrl": "https://twitter.com/IndianOilcl/status/1818500026999402850",
+        "text": "MAKING #INDIA PROUD! \n\n#IndianOilSpotstar Chirag-Satwik won their final group-stage match in the Men's #Badminton Doubles at #Paris2024 with a convincing 2-0 win, sailing to #quarter-finals! \n\nHeartiest congratulations to the dynamic duo on this remarkable feat!\n\nRoot for them as they strive for glory!\n\n#IndiaAtParis2024\n#Cheer4Bharat\n#IndianOil\n@Shettychirag04 @satwiksairaj",
+        "source": "Twitter for iPhone",
+        "retweetCount": 8,
+        "replyCount": 0,
+        "likeCount": 35,
+        "quoteCount": 0,
+        "viewCount": 4032,
+        "createdAt": "Wed Jul 31 04:12:47 +0000 2024",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1818500026999402850",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "IndianOilcl",
+            "url": "https://x.com/IndianOilcl",
+            "twitterUrl": "https://twitter.com/IndianOilcl",
+            "id": "2597794454",
+            "name": "Indian Oil Corp Ltd",
+            "isVerified": false,
+            "isBlueVerified": true,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/1559508875824414721/cuo7XXxh_normal.png",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/2597794454/1724134824",
+            "description": "",
+            "location": "India",
+            "followers": 434401,
+            "following": 143,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Tue Jul 01 10:46:54 +0000 2014",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 5445,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 17785,
+            "statusesCount": 47138,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "The official handle of IndianOil.  IndianOil is ranked 116th among the world's largest corporate in Fortune \u2018Global 500' listing for the year 2024.",
+                "entities": {
+                    "description": {},
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "iocl.com",
+                                "expanded_url": "http://www.iocl.com",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/6Ivnfmdc1S"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {
+            "media": [
+                {
+                    "display_url": "pic.twitter.com/H6YKegaVf7",
+                    "expanded_url": "https://twitter.com/IndianOilcl/status/1818500026999402850/photo/1",
+                    "ext_media_availability": {
+                        "status": "Available"
+                    },
+                    "features": {
+                        "large": {},
+                        "orig": {}
+                    },
+                    "id_str": "1818500014848593920",
+                    "indices": [
+                        282,
+                        305
+                    ],
+                    "media_key": "3_1818500014848593920",
+                    "media_results": {
+                        "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAARk8nCDxF9AACgACGTycI8VWcWIAAA==",
+                        "result": {
+                            "__typename": "ApiMedia",
+                            "id": "QXBpTWVkaWE6DAABCgABGTycIPEX0AAKAAIZPJwjxVZxYgAA",
+                            "media_key": "3_1818500014848593920"
+                        }
+                    },
+                    "media_url_https": "https://pbs.twimg.com/media/GTycIPEX0AAwEGh.jpg",
+                    "original_info": {
+                        "focus_rects": [
+                            {
+                                "h": 717,
+                                "w": 1280,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 870,
+                                "w": 870,
+                                "x": 410,
+                                "y": 0
+                            },
+                            {
+                                "h": 870,
+                                "w": 763,
+                                "x": 517,
+                                "y": 0
+                            },
+                            {
+                                "h": 870,
+                                "w": 435,
+                                "x": 845,
+                                "y": 0
+                            },
+                            {
+                                "h": 870,
+                                "w": 1280,
+                                "x": 0,
+                                "y": 0
+                            }
+                        ],
+                        "height": 870,
+                        "width": 1280
+                    },
+                    "sizes": {
+                        "large": {
+                            "h": 870,
+                            "w": 1280
+                        }
+                    },
+                    "type": "photo",
+                    "url": "https://t.co/H6YKegaVf7"
+                },
+                {
+                    "display_url": "pic.twitter.com/H6YKegaVf7",
+                    "expanded_url": "https://twitter.com/IndianOilcl/status/1818500026999402850/photo/1",
+                    "ext_media_availability": {
+                        "status": "Available"
+                    },
+                    "features": {
+                        "large": {
+                            "faces": [
+                                {
+                                    "h": 162,
+                                    "w": 162,
+                                    "x": 753,
+                                    "y": 101
+                                }
+                            ]
+                        },
+                        "orig": {
+                            "faces": [
+                                {
+                                    "h": 162,
+                                    "w": 162,
+                                    "x": 753,
+                                    "y": 101
+                                }
+                            ]
+                        }
+                    },
+                    "id_str": "1818500015788060672",
+                    "indices": [
+                        282,
+                        305
+                    ],
+                    "media_key": "3_1818500015788060672",
+                    "media_results": {
+                        "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAARk8nCEpFvAACgACGTycI8VWcWIAAA==",
+                        "result": {
+                            "__typename": "ApiMedia",
+                            "id": "QXBpTWVkaWE6DAABCgABGTycISkW8AAKAAIZPJwjxVZxYgAA",
+                            "media_key": "3_1818500015788060672"
+                        }
+                    },
+                    "media_url_https": "https://pbs.twimg.com/media/GTycISkW8AARk1n.jpg",
+                    "original_info": {
+                        "focus_rects": [
+                            {
+                                "h": 675,
+                                "w": 1205,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 797,
+                                "w": 797,
+                                "x": 408,
+                                "y": 0
+                            },
+                            {
+                                "h": 797,
+                                "w": 699,
+                                "x": 506,
+                                "y": 0
+                            },
+                            {
+                                "h": 797,
+                                "w": 399,
+                                "x": 806,
+                                "y": 0
+                            },
+                            {
+                                "h": 797,
+                                "w": 1205,
+                                "x": 0,
+                                "y": 0
+                            }
+                        ],
+                        "height": 797,
+                        "width": 1205
+                    },
+                    "sizes": {
+                        "large": {
+                            "h": 797,
+                            "w": 1205
+                        }
+                    },
+                    "type": "photo",
+                    "url": "https://t.co/H6YKegaVf7"
+                }
+            ]
+        },
+        "card": null,
+        "place": {},
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        7,
+                        13
+                    ],
+                    "text": "INDIA"
+                },
+                {
+                    "indices": [
+                        23,
+                        41
+                    ],
+                    "text": "IndianOilSpotstar"
+                },
+                {
+                    "indices": [
+                        103,
+                        113
+                    ],
+                    "text": "Badminton"
+                },
+                {
+                    "indices": [
+                        125,
+                        135
+                    ],
+                    "text": "Paris2024"
+                },
+                {
+                    "indices": [
+                        174,
+                        182
+                    ],
+                    "text": "quarter"
+                },
+                {
+                    "indices": [
+                        305,
+                        322
+                    ],
+                    "text": "IndiaAtParis2024"
+                },
+                {
+                    "indices": [
+                        323,
+                        336
+                    ],
+                    "text": "Cheer4Bharat"
+                },
+                {
+                    "indices": [
+                        337,
+                        347
+                    ],
+                    "text": "IndianOil"
+                }
+            ],
+            "user_mentions": [
+                {
+                    "id_str": "773182484003586050",
+                    "indices": [
+                        348,
+                        363
+                    ],
+                    "name": "Chirag Shetty",
+                    "screen_name": "Shettychirag04"
+                },
+                {
+                    "id_str": "818425553850077185",
+                    "indices": [
+                        364,
+                        377
+                    ],
+                    "name": "Satwik SaiRaj Rankireddy",
+                    "screen_name": "satwiksairaj"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1818296538529157184",
+        "url": "https://x.com/IndianOilcl/status/1818296538529157184",
+        "twitterUrl": "https://twitter.com/IndianOilcl/status/1818296538529157184",
+        "text": "#IndianOil reports Revenue from Operations of \u20b92,15,989 Crores and a Net Profit of \u20b92,643 Crores for the first quarter of FY 2024-25. We remain steadfast in our commitment to fueling India\u2019s growth and continuously enhancing our performance. #EnergyOfIndia #QuarterlyResults #Q1 https://t.co/CJF6wneyqo",
+        "source": "Twitter for iPhone",
+        "retweetCount": 13,
+        "replyCount": 3,
+        "likeCount": 65,
+        "quoteCount": 0,
+        "viewCount": 3665,
+        "createdAt": "Tue Jul 30 14:44:11 +0000 2024",
+        "lang": "en",
+        "bookmarkCount": 1,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1818296538529157184",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "IndianOilcl",
+            "url": "https://x.com/IndianOilcl",
+            "twitterUrl": "https://twitter.com/IndianOilcl",
+            "id": "2597794454",
+            "name": "Indian Oil Corp Ltd",
+            "isVerified": false,
+            "isBlueVerified": true,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/1559508875824414721/cuo7XXxh_normal.png",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/2597794454/1724134824",
+            "description": "",
+            "location": "India",
+            "followers": 434401,
+            "following": 143,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Tue Jul 01 10:46:54 +0000 2014",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 5445,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 17785,
+            "statusesCount": 47138,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "The official handle of IndianOil.  IndianOil is ranked 116th among the world's largest corporate in Fortune \u2018Global 500' listing for the year 2024.",
+                "entities": {
+                    "description": {},
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "iocl.com",
+                                "expanded_url": "http://www.iocl.com",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/6Ivnfmdc1S"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {
+            "media": [
+                {
+                    "additional_media_info": {
+                        "monetizable": false
+                    },
+                    "display_url": "pic.twitter.com/CJF6wneyqo",
+                    "expanded_url": "https://twitter.com/IndianOilcl/status/1818296538529157184/video/1",
+                    "ext_media_availability": {
+                        "status": "Available"
+                    },
+                    "id_str": "1818296459491430400",
+                    "indices": [
+                        279,
+                        302
+                    ],
+                    "media_key": "7_1818296459491430400",
+                    "media_results": {
+                        "id": "QXBpTWVkaWFSZXN1bHRzOgwAAwoAARk74v8EVlAACgACGTvjEWtaUEAAAA==",
+                        "result": {
+                            "__typename": "ApiMedia",
+                            "id": "QXBpTWVkaWE6DAADCgABGTvi/wRWUAAKAAIZO+MRa1pQQAAA",
+                            "media_key": "7_1818296459491430400"
+                        }
+                    },
+                    "media_url_https": "https://pbs.twimg.com/ext_tw_video_thumb/1818296459491430400/pu/img/ssRPB4kfaEpjSHl-.jpg",
+                    "original_info": {
+                        "focus_rects": [],
+                        "height": 720,
+                        "width": 1280
+                    },
+                    "sizes": {
+                        "large": {
+                            "h": 720,
+                            "w": 1280
+                        }
+                    },
+                    "type": "video",
+                    "url": "https://t.co/CJF6wneyqo",
+                    "video_info": {
+                        "aspect_ratio": [
+                            16,
+                            9
+                        ],
+                        "duration_millis": 32051,
+                        "variants": [
+                            {
+                                "content_type": "application/x-mpegURL",
+                                "url": "https://video-s.twimg.com/ext_tw_video/1818296459491430400/pu/pl/M_zjhj2pUt5XWImH.m3u8?tag=12&v=975"
+                            },
+                            {
+                                "bitrate": 256000,
+                                "content_type": "video/mp4",
+                                "url": "https://video-s.twimg.com/ext_tw_video/1818296459491430400/pu/vid/avc1/480x270/ry4Gp_jZtm6PaqF-.mp4?tag=12"
+                            },
+                            {
+                                "bitrate": 832000,
+                                "content_type": "video/mp4",
+                                "url": "https://video-s.twimg.com/ext_tw_video/1818296459491430400/pu/vid/avc1/640x360/Ji-YtHQ-mJdmKEs3.mp4?tag=12"
+                            },
+                            {
+                                "bitrate": 2176000,
+                                "content_type": "video/mp4",
+                                "url": "https://video-s.twimg.com/ext_tw_video/1818296459491430400/pu/vid/avc1/1280x720/_BA7GmqGK6V1vqxZ.mp4?tag=12"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "card": null,
+        "place": {},
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        0,
+                        10
+                    ],
+                    "text": "IndianOil"
+                },
+                {
+                    "indices": [
+                        242,
+                        256
+                    ],
+                    "text": "EnergyOfIndia"
+                },
+                {
+                    "indices": [
+                        257,
+                        274
+                    ],
+                    "text": "QuarterlyResults"
+                },
+                {
+                    "indices": [
+                        275,
+                        278
+                    ],
+                    "text": "Q1"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1817235033523880062",
+        "url": "https://x.com/IndianOilcl/status/1817235033523880062",
+        "twitterUrl": "https://twitter.com/IndianOilcl/status/1817235033523880062",
+        "text": "Olympics update!\n\nBADMINTON MEN'S SINGLES GROUP STAGE Results \n@lakshya_sen triumphs over Guatemala's Kevin Cordon 21-8, 22-20 in his first #ParisOlympics2024 match!\n\nWhat'n incredible start! \n\n #RiseWithPassion #FuelingChampionship\n#IndianOilSportstar\n#IndiaAtParis\n#GloryIsOurs",
+        "source": "Twitter for iPhone",
+        "retweetCount": 5,
+        "replyCount": 1,
+        "likeCount": 19,
+        "quoteCount": 0,
+        "viewCount": 1894,
+        "createdAt": "Sat Jul 27 16:26:09 +0000 2024",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1817235033523880062",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "IndianOilcl",
+            "url": "https://x.com/IndianOilcl",
+            "twitterUrl": "https://twitter.com/IndianOilcl",
+            "id": "2597794454",
+            "name": "Indian Oil Corp Ltd",
+            "isVerified": false,
+            "isBlueVerified": true,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/1559508875824414721/cuo7XXxh_normal.png",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/2597794454/1724134824",
+            "description": "",
+            "location": "India",
+            "followers": 434401,
+            "following": 143,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Tue Jul 01 10:46:54 +0000 2014",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 5445,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 17785,
+            "statusesCount": 47138,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "The official handle of IndianOil.  IndianOil is ranked 116th among the world's largest corporate in Fortune \u2018Global 500' listing for the year 2024.",
+                "entities": {
+                    "description": {},
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "iocl.com",
+                                "expanded_url": "http://www.iocl.com",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/6Ivnfmdc1S"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": null,
+        "place": {},
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        140,
+                        158
+                    ],
+                    "text": "ParisOlympics2024"
+                },
+                {
+                    "indices": [
+                        195,
+                        211
+                    ],
+                    "text": "RiseWithPassion"
+                },
+                {
+                    "indices": [
+                        212,
+                        232
+                    ],
+                    "text": "FuelingChampionship"
+                },
+                {
+                    "indices": [
+                        233,
+                        252
+                    ],
+                    "text": "IndianOilSportstar"
+                },
+                {
+                    "indices": [
+                        253,
+                        266
+                    ],
+                    "text": "IndiaAtParis"
+                },
+                {
+                    "indices": [
+                        267,
+                        279
+                    ],
+                    "text": "GloryIsOurs"
+                }
+            ],
+            "user_mentions": [
+                {
+                    "id_str": "932617429208915969",
+                    "indices": [
+                        63,
+                        75
+                    ],
+                    "name": "Lakshya Sen",
+                    "screen_name": "lakshya_sen"
+                }
+            ]
+        },
+        "quoted_tweet": {
+            "type": "tweet",
+            "id": "1817213418744709256",
+            "url": "https://x.com/Media_SAI/status/1817213418744709256",
+            "twitterUrl": "https://twitter.com/Media_SAI/status/1817213418744709256",
+            "text": "\ud83c\uddee\ud83c\uddf3Update: BADMINTON MEN'S SINGLES GROUP STAGE Results \ud83d\udc47\ud83c\udffc\n\nEyes on the prize!! Lakshya sab ka ek hai\ud83d\udd25\u2611\ufe0f That's some way to make your #Olympics debut\ud83d\ude0d\n\nShuttler \ud83c\udff8@lakshya_sen overcomes \ud83c\uddec\ud83c\uddf9Guatemala's Kevin Cordon 21-8, 22-20 in his first outing at #ParisOlympics2024!\n\n@BAI_Media https://t.co/JXCTUSCKWd",
+            "source": "Twitter for iPhone",
+            "retweetCount": 26,
+            "replyCount": 3,
+            "likeCount": 101,
+            "quoteCount": 2,
+            "viewCount": 8396,
+            "createdAt": "Sat Jul 27 15:00:15 +0000 2024",
+            "lang": "en",
+            "bookmarkCount": 2,
+            "isReply": false,
+            "inReplyToId": null,
+            "conversationId": "1817213418744709256",
+            "inReplyToUserId": null,
+            "inReplyToUsername": null,
+            "author": {
+                "type": "user",
+                "userName": "Media_SAI",
+                "url": "https://x.com/Media_SAI",
+                "twitterUrl": "https://twitter.com/Media_SAI",
+                "id": "2798742273",
+                "name": "SAI Media",
+                "isVerified": false,
+                "isBlueVerified": true,
+                "verifiedType": null,
+                "profilePicture": "https://pbs.twimg.com/profile_images/1554862927232258048/sjQk2nqx_normal.jpg",
+                "coverPicture": "https://pbs.twimg.com/profile_banners/2798742273/1751035202",
+                "description": "",
+                "location": "New Delhi, India",
+                "followers": 201756,
+                "following": 680,
+                "status": "",
+                "canDm": true,
+                "canMediaTag": true,
+                "createdAt": "Wed Oct 01 19:35:20 +0000 2014",
+                "entities": {
+                    "description": {
+                        "urls": []
+                    },
+                    "url": {}
+                },
+                "fastFollowersCount": 0,
+                "favouritesCount": 22907,
+                "hasCustomTimelines": true,
+                "isTranslator": false,
+                "mediaCount": 15507,
+                "statusesCount": 44249,
+                "withheldInCountries": [],
+                "affiliatesHighlightedLabel": {},
+                "possiblySensitive": false,
+                "pinnedTweetIds": [
+                    "1946946507162190056"
+                ],
+                "profile_bio": {
+                    "description": "Official Twitter handle of Sports Authority of India.All sports news break here.Follow us here to know the latest on Indian Sports.#KheloIndia #FitIndiaMovement",
+                    "entities": {
+                        "description": {
+                            "hashtags": [
+                                {
+                                    "indices": [
+                                        131,
+                                        142
+                                    ],
+                                    "text": "KheloIndia"
+                                },
+                                {
+                                    "indices": [
+                                        143,
+                                        160
+                                    ],
+                                    "text": "FitIndiaMovement"
+                                }
+                            ]
+                        },
+                        "url": {
+                            "urls": [
+                                {
+                                    "display_url": "sportsauthorityofindia.nic.in/sai/",
+                                    "expanded_url": "https://sportsauthorityofindia.nic.in/sai/",
+                                    "indices": [
+                                        0,
+                                        23
+                                    ],
+                                    "url": "https://t.co/DZ7uhPxKrB"
+                                }
+                            ]
+                        }
+                    }
+                },
+                "isAutomated": false,
+                "automatedBy": null
+            },
+            "extendedEntities": {
+                "media": [
+                    {
+                        "display_url": "pic.twitter.com/JXCTUSCKWd",
+                        "expanded_url": "https://twitter.com/Media_SAI/status/1817213418744709256/photo/1",
+                        "ext_media_availability": {
+                            "status": "Available"
+                        },
+                        "features": {
+                            "all": {
+                                "tags": [
+                                    {
+                                        "name": "Dr Mansukh Mandaviya",
+                                        "screen_name": "mansukhmandviya",
+                                        "type": "user",
+                                        "user_id": "432697203"
+                                    },
+                                    {
+                                        "name": "Raksha Khadse",
+                                        "screen_name": "khadseraksha",
+                                        "type": "user",
+                                        "user_id": "2413574533"
+                                    },
+                                    {
+                                        "name": "Dept of Sports MYAS",
+                                        "screen_name": "IndiaSports",
+                                        "type": "user",
+                                        "user_id": "742306410092990464"
+                                    },
+                                    {
+                                        "name": "YAS Ministry",
+                                        "screen_name": "YASMinistry",
+                                        "type": "user",
+                                        "user_id": "2364049800"
+                                    },
+                                    {
+                                        "name": "PIB India",
+                                        "screen_name": "PIB_India",
+                                        "type": "user",
+                                        "user_id": "231033118"
+                                    },
+                                    {
+                                        "name": "Doordarshan Sports",
+                                        "screen_name": "ddsportschannel",
+                                        "type": "user",
+                                        "user_id": "2663131136"
+                                    },
+                                    {
+                                        "name": "All India Radio Sports",
+                                        "screen_name": "akashvanisports",
+                                        "type": "user",
+                                        "user_id": "961505515573428224"
+                                    }
+                                ]
+                            },
+                            "large": {
+                                "faces": [
+                                    {
+                                        "h": 168,
+                                        "w": 168,
+                                        "x": 712,
+                                        "y": 397
+                                    }
+                                ]
+                            },
+                            "orig": {
+                                "faces": [
+                                    {
+                                        "h": 168,
+                                        "w": 168,
+                                        "x": 712,
+                                        "y": 397
+                                    }
+                                ]
+                            }
+                        },
+                        "id_str": "1817212664525053952",
+                        "indices": [
+                            277,
+                            300
+                        ],
+                        "media_key": "3_1817212664525053952",
+                        "media_results": {
+                            "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAARk4CUpWW2AACgACGTgJ+fFaAIgAAA==",
+                            "result": {
+                                "__typename": "ApiMedia",
+                                "id": "QXBpTWVkaWE6DAABCgABGTgJSlZbYAAKAAIZOAn58VoAiAAA",
+                                "media_key": "3_1817212664525053952"
+                            }
+                        },
+                        "media_url_https": "https://pbs.twimg.com/media/GTgJSlZbYAAtvoa.jpg",
+                        "original_info": {
+                            "focus_rects": [
+                                {
+                                    "h": 605,
+                                    "w": 1080,
+                                    "x": 0,
+                                    "y": 0
+                                },
+                                {
+                                    "h": 1080,
+                                    "w": 1080,
+                                    "x": 0,
+                                    "y": 0
+                                },
+                                {
+                                    "h": 1080,
+                                    "w": 947,
+                                    "x": 0,
+                                    "y": 0
+                                },
+                                {
+                                    "h": 1080,
+                                    "w": 540,
+                                    "x": 135,
+                                    "y": 0
+                                },
+                                {
+                                    "h": 1080,
+                                    "w": 1080,
+                                    "x": 0,
+                                    "y": 0
+                                }
+                            ],
+                            "height": 1080,
+                            "width": 1080
+                        },
+                        "sizes": {
+                            "large": {
+                                "h": 1080,
+                                "w": 1080
+                            }
+                        },
+                        "type": "photo",
+                        "url": "https://t.co/JXCTUSCKWd"
+                    }
+                ]
+            },
+            "card": null,
+            "place": {},
+            "entities": {
+                "hashtags": [
+                    {
+                        "indices": [
+                            132,
+                            141
+                        ],
+                        "text": "Olympics"
+                    },
+                    {
+                        "indices": [
+                            245,
+                            263
+                        ],
+                        "text": "ParisOlympics2024"
+                    }
+                ],
+                "user_mentions": [
+                    {
+                        "id_str": "932617429208915969",
+                        "indices": [
+                            160,
+                            172
+                        ],
+                        "name": "Lakshya Sen",
+                        "screen_name": "lakshya_sen"
+                    },
+                    {
+                        "id_str": "2494203362",
+                        "indices": [
+                            266,
+                            276
+                        ],
+                        "name": "BAI Media",
+                        "screen_name": "BAI_Media"
+                    }
+                ]
+            },
+            "quoted_tweet": null,
+            "retweeted_tweet": null,
+            "article": null
+        },
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1750111456606261570",
+        "url": "https://x.com/IndianOilcl/status/1750111456606261570",
+        "twitterUrl": "https://twitter.com/IndianOilcl/status/1750111456606261570",
+        "text": "#IndianOil reports a robust Q3 results in FY 2023-24 with a Revenue from Operations of \u20b92,23,012 crores and a Net Profit of \u20b98,063 crores. Our strong sustained performance reiterates our resolve to fuel India's ascendant economy. \n#QuarterlyResults\n#EnergyOfIndia https://t.co/ErBxqFqs3b",
+        "source": "Twitter for iPhone",
+        "retweetCount": 17,
+        "replyCount": 1,
+        "likeCount": 49,
+        "quoteCount": 1,
+        "viewCount": 2721,
+        "createdAt": "Wed Jan 24 11:01:01 +0000 2024",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1750111456606261570",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "IndianOilcl",
+            "url": "https://x.com/IndianOilcl",
+            "twitterUrl": "https://twitter.com/IndianOilcl",
+            "id": "2597794454",
+            "name": "Indian Oil Corp Ltd",
+            "isVerified": false,
+            "isBlueVerified": true,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/1559508875824414721/cuo7XXxh_normal.png",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/2597794454/1724134824",
+            "description": "",
+            "location": "India",
+            "followers": 434401,
+            "following": 143,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Tue Jul 01 10:46:54 +0000 2014",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 5445,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 17785,
+            "statusesCount": 47138,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "The official handle of IndianOil.  IndianOil is ranked 116th among the world's largest corporate in Fortune \u2018Global 500' listing for the year 2024.",
+                "entities": {
+                    "description": {},
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "iocl.com",
+                                "expanded_url": "http://www.iocl.com",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/6Ivnfmdc1S"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {
+            "media": [
+                {
+                    "additional_media_info": {
+                        "monetizable": false
+                    },
+                    "display_url": "pic.twitter.com/ErBxqFqs3b",
+                    "expanded_url": "https://twitter.com/IndianOilcl/status/1750111456606261570/video/1",
+                    "ext_media_availability": {
+                        "status": "Available"
+                    },
+                    "id_str": "1750111151223181313",
+                    "indices": [
+                        264,
+                        287
+                    ],
+                    "media_key": "7_1750111151223181313",
+                    "media_results": {
+                        "id": "QXBpTWVkaWFSZXN1bHRzOgwAAwoAARhJpNHOG5ABCgACGEmlGOhbkUIAAA==",
+                        "result": {
+                            "__typename": "ApiMedia",
+                            "id": "QXBpTWVkaWE6DAADCgABGEmk0c4bkAEKAAIYSaUY6FuRQgAA",
+                            "media_key": "7_1750111151223181313"
+                        }
+                    },
+                    "media_url_https": "https://pbs.twimg.com/ext_tw_video_thumb/1750111151223181313/pu/img/vYDGHiC3bBN02XZz.jpg",
+                    "original_info": {
+                        "focus_rects": [],
+                        "height": 1280,
+                        "width": 1280
+                    },
+                    "sizes": {
+                        "large": {
+                            "h": 1280,
+                            "w": 1280
+                        }
+                    },
+                    "type": "video",
+                    "url": "https://t.co/ErBxqFqs3b",
+                    "video_info": {
+                        "aspect_ratio": [
+                            1,
+                            1
+                        ],
+                        "duration_millis": 21013,
+                        "variants": [
+                            {
+                                "content_type": "application/x-mpegURL",
+                                "url": "https://video-s.twimg.com/ext_tw_video/1750111151223181313/pu/pl/M0SNroJDR0oCNsAi.m3u8?tag=12&v=fb6"
+                            },
+                            {
+                                "bitrate": 432000,
+                                "content_type": "video/mp4",
+                                "url": "https://video-s.twimg.com/ext_tw_video/1750111151223181313/pu/vid/avc1/320x320/766rcGmPk6iOcVjc.mp4?tag=12"
+                            },
+                            {
+                                "bitrate": 832000,
+                                "content_type": "video/mp4",
+                                "url": "https://video-s.twimg.com/ext_tw_video/1750111151223181313/pu/vid/avc1/540x540/wdQHjpAnJh_xxXi9.mp4?tag=12"
+                            },
+                            {
+                                "bitrate": 1280000,
+                                "content_type": "video/mp4",
+                                "url": "https://video-s.twimg.com/ext_tw_video/1750111151223181313/pu/vid/avc1/720x720/NUa_eU7KC1Lx5Nmc.mp4?tag=12"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "card": null,
+        "place": {},
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        0,
+                        10
+                    ],
+                    "text": "IndianOil"
+                },
+                {
+                    "indices": [
+                        231,
+                        248
+                    ],
+                    "text": "QuarterlyResults"
+                },
+                {
+                    "indices": [
+                        249,
+                        263
+                    ],
+                    "text": "EnergyOfIndia"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1728025931330245110",
+        "url": "https://x.com/IndianOilcl/status/1728025931330245110",
+        "twitterUrl": "https://twitter.com/IndianOilcl/status/1728025931330245110",
+        "text": "Breathing exercises are not only beneficial in maintaining fitness, but also help build resistance against toxins. Adopt this tip by IndianOil Rhino in your routine and witness good results.#GreenForTheWin https://t.co/dLVLVfWhKp",
+        "source": "Twitter for iPhone",
+        "retweetCount": 6,
+        "replyCount": 0,
+        "likeCount": 17,
+        "quoteCount": 0,
+        "viewCount": 1605,
+        "createdAt": "Fri Nov 24 12:21:01 +0000 2023",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1728025931330245110",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "IndianOilcl",
+            "url": "https://x.com/IndianOilcl",
+            "twitterUrl": "https://twitter.com/IndianOilcl",
+            "id": "2597794454",
+            "name": "Indian Oil Corp Ltd",
+            "isVerified": false,
+            "isBlueVerified": true,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/1559508875824414721/cuo7XXxh_normal.png",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/2597794454/1724134824",
+            "description": "",
+            "location": "India",
+            "followers": 434401,
+            "following": 143,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Tue Jul 01 10:46:54 +0000 2014",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 5445,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 17785,
+            "statusesCount": 47138,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "The official handle of IndianOil.  IndianOil is ranked 116th among the world's largest corporate in Fortune \u2018Global 500' listing for the year 2024.",
+                "entities": {
+                    "description": {},
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "iocl.com",
+                                "expanded_url": "http://www.iocl.com",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/6Ivnfmdc1S"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {
+            "media": [
+                {
+                    "allow_download_status": {
+                        "allow_download": true
+                    },
+                    "display_url": "pic.twitter.com/dLVLVfWhKp",
+                    "expanded_url": "https://twitter.com/IndianOilcl/status/1728025931330245110/photo/1",
+                    "ext_media_availability": {
+                        "status": "Available"
+                    },
+                    "features": {
+                        "large": {
+                            "faces": [
+                                {
+                                    "h": 91,
+                                    "w": 91,
+                                    "x": 430,
+                                    "y": 551
+                                },
+                                {
+                                    "h": 350,
+                                    "w": 350,
+                                    "x": 30,
+                                    "y": 596
+                                }
+                            ]
+                        },
+                        "orig": {
+                            "faces": [
+                                {
+                                    "h": 91,
+                                    "w": 91,
+                                    "x": 430,
+                                    "y": 551
+                                },
+                                {
+                                    "h": 350,
+                                    "w": 350,
+                                    "x": 30,
+                                    "y": 596
+                                }
+                            ]
+                        }
+                    },
+                    "id_str": "1728025923696676864",
+                    "indices": [
+                        206,
+                        229
+                    ],
+                    "media_key": "3_1728025923696676864",
+                    "media_results": {
+                        "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAARf7LmwQm1AACgACF/subdeaUfYAAA==",
+                        "result": {
+                            "__typename": "ApiMedia",
+                            "id": "QXBpTWVkaWE6DAABCgABF/subBCbUAAKAAIX+y5t15pR9gAA",
+                            "media_key": "3_1728025923696676864"
+                        }
+                    },
+                    "media_url_https": "https://pbs.twimg.com/media/F_subBCbUAAUhy3.jpg",
+                    "original_info": {
+                        "focus_rects": [
+                            {
+                                "h": 717,
+                                "w": 1280,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1280,
+                                "w": 1280,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1280,
+                                "w": 1123,
+                                "x": 111,
+                                "y": 0
+                            },
+                            {
+                                "h": 1280,
+                                "w": 640,
+                                "x": 352,
+                                "y": 0
+                            },
+                            {
+                                "h": 1280,
+                                "w": 1280,
+                                "x": 0,
+                                "y": 0
+                            }
+                        ],
+                        "height": 1280,
+                        "width": 1280
+                    },
+                    "sizes": {
+                        "large": {
+                            "h": 1280,
+                            "w": 1280
+                        }
+                    },
+                    "type": "photo",
+                    "url": "https://t.co/dLVLVfWhKp"
+                }
+            ]
+        },
+        "card": null,
+        "place": {},
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        190,
+                        205
+                    ],
+                    "text": "GreenForTheWin"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1719319048947912994",
+        "url": "https://x.com/IndianOilcl/status/1719319048947912994",
+        "twitterUrl": "https://twitter.com/IndianOilcl/status/1719319048947912994",
+        "text": "With a record Standalone Net Profit of \u20b912,967 crore in Q2 (FY 2023-24) &amp; the highest ever half yearly profit of \u20b926,718 crore, #IndianOil reaffirms our commitment to powering India's economic ascent. #Performance #Growth #QuarterlyResults #EnergyOfIndia https://t.co/O2GrUWor3Z",
+        "source": "Twitter for iPhone",
+        "retweetCount": 37,
+        "replyCount": 7,
+        "likeCount": 124,
+        "quoteCount": 0,
+        "viewCount": 9278,
+        "createdAt": "Tue Oct 31 11:42:59 +0000 2023",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1719319048947912994",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "IndianOilcl",
+            "url": "https://x.com/IndianOilcl",
+            "twitterUrl": "https://twitter.com/IndianOilcl",
+            "id": "2597794454",
+            "name": "Indian Oil Corp Ltd",
+            "isVerified": false,
+            "isBlueVerified": true,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/1559508875824414721/cuo7XXxh_normal.png",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/2597794454/1724134824",
+            "description": "",
+            "location": "India",
+            "followers": 434401,
+            "following": 143,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Tue Jul 01 10:46:54 +0000 2014",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 5445,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 17785,
+            "statusesCount": 47138,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "The official handle of IndianOil.  IndianOil is ranked 116th among the world's largest corporate in Fortune \u2018Global 500' listing for the year 2024.",
+                "entities": {
+                    "description": {},
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "iocl.com",
+                                "expanded_url": "http://www.iocl.com",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/6Ivnfmdc1S"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {
+            "media": [
+                {
+                    "additional_media_info": {
+                        "monetizable": false
+                    },
+                    "display_url": "pic.twitter.com/O2GrUWor3Z",
+                    "expanded_url": "https://twitter.com/IndianOilcl/status/1719319048947912994/video/1",
+                    "ext_media_availability": {
+                        "status": "Available"
+                    },
+                    "id_str": "1719318989094936576",
+                    "indices": [
+                        259,
+                        282
+                    ],
+                    "media_key": "7_1719318989094936576",
+                    "media_results": {
+                        "id": "QXBpTWVkaWFSZXN1bHRzOgwAAwoAARfcP4LglmAACgACF9w/kNAaUSIAAA==",
+                        "result": {
+                            "__typename": "ApiMedia",
+                            "id": "QXBpTWVkaWE6DAADCgABF9w/guCWYAAKAAIX3D+Q0BpRIgAA",
+                            "media_key": "7_1719318989094936576"
+                        }
+                    },
+                    "media_url_https": "https://pbs.twimg.com/ext_tw_video_thumb/1719318989094936576/pu/img/CjMaR9vbWBAQ0SiO.jpg",
+                    "original_info": {
+                        "focus_rects": [],
+                        "height": 720,
+                        "width": 720
+                    },
+                    "sizes": {
+                        "large": {
+                            "h": 720,
+                            "w": 720
+                        }
+                    },
+                    "type": "video",
+                    "url": "https://t.co/O2GrUWor3Z",
+                    "video_info": {
+                        "aspect_ratio": [
+                            1,
+                            1
+                        ],
+                        "duration_millis": 20107,
+                        "variants": [
+                            {
+                                "content_type": "application/x-mpegURL",
+                                "url": "https://video-s.twimg.com/ext_tw_video/1719318989094936576/pu/pl/sV3bhRoSkyBBe79W.m3u8?tag=12&v=7a4"
+                            },
+                            {
+                                "bitrate": 432000,
+                                "content_type": "video/mp4",
+                                "url": "https://video-s.twimg.com/ext_tw_video/1719318989094936576/pu/vid/avc1/320x320/Bs-5lfuTz9J36-Vh.mp4?tag=12"
+                            },
+                            {
+                                "bitrate": 832000,
+                                "content_type": "video/mp4",
+                                "url": "https://video-s.twimg.com/ext_tw_video/1719318989094936576/pu/vid/avc1/540x540/tlyG10LDPeNPLCAj.mp4?tag=12"
+                            },
+                            {
+                                "bitrate": 1280000,
+                                "content_type": "video/mp4",
+                                "url": "https://video-s.twimg.com/ext_tw_video/1719318989094936576/pu/vid/avc1/720x720/C9BFAfEST5htrTSx.mp4?tag=12"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "card": null,
+        "place": {},
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        132,
+                        142
+                    ],
+                    "text": "IndianOil"
+                },
+                {
+                    "indices": [
+                        205,
+                        217
+                    ],
+                    "text": "Performance"
+                },
+                {
+                    "indices": [
+                        218,
+                        225
+                    ],
+                    "text": "Growth"
+                },
+                {
+                    "indices": [
+                        226,
+                        243
+                    ],
+                    "text": "QuarterlyResults"
+                },
+                {
+                    "indices": [
+                        244,
+                        258
+                    ],
+                    "text": "EnergyOfIndia"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1684911602082979842",
+        "url": "https://x.com/IndianOilcl/status/1684911602082979842",
+        "twitterUrl": "https://twitter.com/IndianOilcl/status/1684911602082979842",
+        "text": "#IndianOil's Q1 (FY 2023-24) underscores the exceptional performance with a Standalone Net Profit of \u20b913,750 crore, reiterating our unwavering commitment to fueling India's growth. #Resilience #Growth #FY2024 #EnergyOfIndia https://t.co/8HOo9gpq7r",
+        "source": "Twitter for iPhone",
+        "retweetCount": 54,
+        "replyCount": 13,
+        "likeCount": 223,
+        "quoteCount": 2,
+        "viewCount": 57371,
+        "createdAt": "Fri Jul 28 13:00:04 +0000 2023",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1684911602082979842",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "IndianOilcl",
+            "url": "https://x.com/IndianOilcl",
+            "twitterUrl": "https://twitter.com/IndianOilcl",
+            "id": "2597794454",
+            "name": "Indian Oil Corp Ltd",
+            "isVerified": false,
+            "isBlueVerified": true,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/1559508875824414721/cuo7XXxh_normal.png",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/2597794454/1724134824",
+            "description": "",
+            "location": "India",
+            "followers": 434401,
+            "following": 143,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Tue Jul 01 10:46:54 +0000 2014",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 5445,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 17785,
+            "statusesCount": 47138,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "The official handle of IndianOil.  IndianOil is ranked 116th among the world's largest corporate in Fortune \u2018Global 500' listing for the year 2024.",
+                "entities": {
+                    "description": {},
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "iocl.com",
+                                "expanded_url": "http://www.iocl.com",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/6Ivnfmdc1S"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {
+            "media": [
+                {
+                    "additional_media_info": {
+                        "monetizable": false
+                    },
+                    "display_url": "pic.twitter.com/8HOo9gpq7r",
+                    "expanded_url": "https://twitter.com/IndianOilcl/status/1684911602082979842/video/1",
+                    "ext_media_availability": {
+                        "status": "Available"
+                    },
+                    "id_str": "1684911558445375489",
+                    "indices": [
+                        224,
+                        247
+                    ],
+                    "media_key": "7_1684911558445375489",
+                    "media_results": {
+                        "id": "QXBpTWVkaWFSZXN1bHRzOgwAAwoAARdiAiKnFiABCgACF2ICLNAXIAIAAA==",
+                        "result": {
+                            "__typename": "ApiMedia",
+                            "id": "QXBpTWVkaWE6DAADCgABF2ICIqcWIAEKAAIXYgIs0BcgAgAA",
+                            "media_key": "7_1684911558445375489"
+                        }
+                    },
+                    "media_url_https": "https://pbs.twimg.com/ext_tw_video_thumb/1684911558445375489/pu/img/OzUDPkUpo7dOStLU.jpg",
+                    "original_info": {
+                        "focus_rects": [],
+                        "height": 720,
+                        "width": 720
+                    },
+                    "sizes": {
+                        "large": {
+                            "h": 720,
+                            "w": 720
+                        }
+                    },
+                    "type": "video",
+                    "url": "https://t.co/8HOo9gpq7r",
+                    "video_info": {
+                        "aspect_ratio": [
+                            1,
+                            1
+                        ],
+                        "duration_millis": 28040,
+                        "variants": [
+                            {
+                                "content_type": "application/x-mpegURL",
+                                "url": "https://video-s.twimg.com/ext_tw_video/1684911558445375489/pu/pl/3Ia5RnwbRm8rw-gx.m3u8?tag=12&v=cfc"
+                            },
+                            {
+                                "bitrate": 432000,
+                                "content_type": "video/mp4",
+                                "url": "https://video-s.twimg.com/ext_tw_video/1684911558445375489/pu/vid/320x320/otmKFycBRNQlgVk3.mp4?tag=12"
+                            },
+                            {
+                                "bitrate": 832000,
+                                "content_type": "video/mp4",
+                                "url": "https://video-s.twimg.com/ext_tw_video/1684911558445375489/pu/vid/540x540/2HCOp6cOyL2PJO38.mp4?tag=12"
+                            },
+                            {
+                                "bitrate": 1280000,
+                                "content_type": "video/mp4",
+                                "url": "https://video-s.twimg.com/ext_tw_video/1684911558445375489/pu/vid/720x720/_pOweLbojT2PsMIR.mp4?tag=12"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "card": null,
+        "place": {},
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        0,
+                        10
+                    ],
+                    "text": "IndianOil"
+                },
+                {
+                    "indices": [
+                        181,
+                        192
+                    ],
+                    "text": "Resilience"
+                },
+                {
+                    "indices": [
+                        193,
+                        200
+                    ],
+                    "text": "Growth"
+                },
+                {
+                    "indices": [
+                        201,
+                        208
+                    ],
+                    "text": "FY2024"
+                },
+                {
+                    "indices": [
+                        209,
+                        223
+                    ],
+                    "text": "EnergyOfIndia"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1658474099075878915",
+        "url": "https://x.com/IndianOilcl/status/1658474099075878915",
+        "twitterUrl": "https://twitter.com/IndianOilcl/status/1658474099075878915",
+        "text": "Thrilled to announce a record breaking year! #IndianOilFY23 results redefined excellence with highest ever revenue from operations, best ever sales volume &amp; record crude processed. We remain committed to fueling India's dreams &amp; powering the nation's progress.  #EnergyofIndia https://t.co/Evgg0soRgF",
+        "source": "Twitter for iPhone",
+        "retweetCount": 75,
+        "replyCount": 9,
+        "likeCount": 239,
+        "quoteCount": 4,
+        "viewCount": 98462,
+        "createdAt": "Tue May 16 14:06:52 +0000 2023",
+        "lang": "en",
+        "bookmarkCount": 2,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1658474099075878915",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "IndianOilcl",
+            "url": "https://x.com/IndianOilcl",
+            "twitterUrl": "https://twitter.com/IndianOilcl",
+            "id": "2597794454",
+            "name": "Indian Oil Corp Ltd",
+            "isVerified": false,
+            "isBlueVerified": true,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/1559508875824414721/cuo7XXxh_normal.png",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/2597794454/1724134824",
+            "description": "",
+            "location": "India",
+            "followers": 434401,
+            "following": 143,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Tue Jul 01 10:46:54 +0000 2014",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 5445,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 17785,
+            "statusesCount": 47138,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "The official handle of IndianOil.  IndianOil is ranked 116th among the world's largest corporate in Fortune \u2018Global 500' listing for the year 2024.",
+                "entities": {
+                    "description": {},
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "iocl.com",
+                                "expanded_url": "http://www.iocl.com",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/6Ivnfmdc1S"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {
+            "media": [
+                {
+                    "additional_media_info": {
+                        "monetizable": false
+                    },
+                    "display_url": "pic.twitter.com/Evgg0soRgF",
+                    "expanded_url": "https://twitter.com/IndianOilcl/status/1658474099075878915/video/1",
+                    "ext_media_availability": {
+                        "status": "Available"
+                    },
+                    "id_str": "1658474011867910148",
+                    "indices": [
+                        285,
+                        308
+                    ],
+                    "media_key": "7_1658474011867910148",
+                    "media_results": {
+                        "id": "QXBpTWVkaWFSZXN1bHRzOgwAAwoAARcEFVOqmpAECgACFwQVZ/iakAMAAA==",
+                        "result": {
+                            "__typename": "ApiMedia",
+                            "id": "QXBpTWVkaWE6DAADCgABFwQVU6qakAQKAAIXBBVn+JqQAwAA",
+                            "media_key": "7_1658474011867910148"
+                        }
+                    },
+                    "media_url_https": "https://pbs.twimg.com/ext_tw_video_thumb/1658474011867910148/pu/img/uE3NN4g-ZKAs2dXB.jpg",
+                    "original_info": {
+                        "focus_rects": [],
+                        "height": 720,
+                        "width": 720
+                    },
+                    "sizes": {
+                        "large": {
+                            "h": 720,
+                            "w": 720
+                        }
+                    },
+                    "type": "video",
+                    "url": "https://t.co/Evgg0soRgF",
+                    "video_info": {
+                        "aspect_ratio": [
+                            1,
+                            1
+                        ],
+                        "duration_millis": 38079,
+                        "variants": [
+                            {
+                                "content_type": "application/x-mpegURL",
+                                "url": "https://video-s.twimg.com/ext_tw_video/1658474011867910148/pu/pl/NLNiWPextOHTh2xO.m3u8?tag=12"
+                            },
+                            {
+                                "bitrate": 432000,
+                                "content_type": "video/mp4",
+                                "url": "https://video-s.twimg.com/ext_tw_video/1658474011867910148/pu/vid/320x320/Az5OIHRvYcok0zKC.mp4?tag=12"
+                            },
+                            {
+                                "bitrate": 832000,
+                                "content_type": "video/mp4",
+                                "url": "https://video-s.twimg.com/ext_tw_video/1658474011867910148/pu/vid/540x540/gpr8c-8_Uj3BnZrm.mp4?tag=12"
+                            },
+                            {
+                                "bitrate": 1280000,
+                                "content_type": "video/mp4",
+                                "url": "https://video-s.twimg.com/ext_tw_video/1658474011867910148/pu/vid/720x720/ybM_ys6k6NN9eLhJ.mp4?tag=12"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "card": null,
+        "place": {},
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        45,
+                        59
+                    ],
+                    "text": "IndianOilFY23"
+                },
+                {
+                    "indices": [
+                        270,
+                        284
+                    ],
+                    "text": "EnergyofIndia"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    }
+]

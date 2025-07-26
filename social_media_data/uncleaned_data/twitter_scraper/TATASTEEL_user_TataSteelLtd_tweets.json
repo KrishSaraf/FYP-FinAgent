@@ -1,0 +1,2528 @@
+[
+    {
+        "type": "tweet",
+        "id": "1848936007170986115",
+        "url": "https://x.com/TataSteelLtd/status/1848936007170986115",
+        "twitterUrl": "https://twitter.com/TataSteelLtd/status/1848936007170986115",
+        "text": "@janasena2K24 @PbGovtIndia Dear Praveen,\n\nWe would like to inform you that the Tata Steel AEP 2024 results will be released by this Friday, October 25th.\n\nRegards,\nTeam Tata Steel\nhttps://t.co/CZsIix56bK",
+        "source": "Twitter for iPhone",
+        "retweetCount": 0,
+        "replyCount": 1,
+        "likeCount": 1,
+        "quoteCount": 0,
+        "viewCount": 157,
+        "createdAt": "Wed Oct 23 03:54:30 +0000 2024",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": true,
+        "inReplyToId": "1848219033859998210",
+        "conversationId": "1847277716627714366",
+        "inReplyToUserId": "1172806818831056896",
+        "inReplyToUsername": "janasena2K24",
+        "author": {
+            "type": "user",
+            "userName": "TataSteelLtd",
+            "url": "https://x.com/TataSteelLtd",
+            "twitterUrl": "https://twitter.com/TataSteelLtd",
+            "id": "285498906",
+            "name": "Tata Steel",
+            "isVerified": false,
+            "isBlueVerified": true,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/1825785770235273216/YtIFqitH_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/285498906/1749738145",
+            "description": "",
+            "location": "",
+            "followers": 128080,
+            "following": 39,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Thu Apr 21 08:02:20 +0000 2011",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 10132,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 5020,
+            "statusesCount": 11127,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "Official Twitter Channel of Tata Steel Limited. @TataSteelLtd keeps you informed and updated on what\u2019s happening in Tata Steel.",
+                "entities": {
+                    "description": {
+                        "user_mentions": [
+                            {
+                                "id_str": "0",
+                                "indices": [
+                                    48,
+                                    61
+                                ],
+                                "name": "",
+                                "screen_name": "TataSteelLtd"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "tatasteel.com",
+                                "expanded_url": "http://www.tatasteel.com",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/VtRqVnRuzB"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": null,
+        "place": {},
+        "entities": {
+            "urls": [
+                {
+                    "display_url": "tatasteel.com",
+                    "expanded_url": "http://www.tatasteel.com",
+                    "indices": [
+                        180,
+                        203
+                    ],
+                    "url": "https://t.co/CZsIix56bK"
+                }
+            ],
+            "user_mentions": [
+                {
+                    "id_str": "1172806818831056896",
+                    "indices": [
+                        0,
+                        13
+                    ],
+                    "name": "praveenpspk",
+                    "screen_name": "janasena2K24"
+                },
+                {
+                    "id_str": "1805157099317391360",
+                    "indices": [
+                        14,
+                        26
+                    ],
+                    "name": "Government of Punjab",
+                    "screen_name": "PbGovtIndia"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1827002014087430305",
+        "url": "https://x.com/TataSteelLtd/status/1827002014087430305",
+        "twitterUrl": "https://twitter.com/TataSteelLtd/status/1827002014087430305",
+        "text": "We are honoured to receive the Gold Award by the #BrandonHallGroup for the Best #TalentAcquisition Process.\n\nBrandon Hall Group awards organisations human capital management programmes, strategies, processes and technologies that have achieved measurable results.\n\n#TataSteel #WeAlsoMakeTomorrow\u00a0#HRM",
+        "source": "Twitter for iPhone",
+        "retweetCount": 2,
+        "replyCount": 2,
+        "likeCount": 16,
+        "quoteCount": 1,
+        "viewCount": 1177,
+        "createdAt": "Fri Aug 23 15:16:38 +0000 2024",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1827002014087430305",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "TataSteelLtd",
+            "url": "https://x.com/TataSteelLtd",
+            "twitterUrl": "https://twitter.com/TataSteelLtd",
+            "id": "285498906",
+            "name": "Tata Steel",
+            "isVerified": false,
+            "isBlueVerified": true,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/1825785770235273216/YtIFqitH_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/285498906/1749738145",
+            "description": "",
+            "location": "",
+            "followers": 128080,
+            "following": 39,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Thu Apr 21 08:02:20 +0000 2011",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 10132,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 5020,
+            "statusesCount": 11127,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "Official Twitter Channel of Tata Steel Limited. @TataSteelLtd keeps you informed and updated on what\u2019s happening in Tata Steel.",
+                "entities": {
+                    "description": {
+                        "user_mentions": [
+                            {
+                                "id_str": "0",
+                                "indices": [
+                                    48,
+                                    61
+                                ],
+                                "name": "",
+                                "screen_name": "TataSteelLtd"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "tatasteel.com",
+                                "expanded_url": "http://www.tatasteel.com",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/VtRqVnRuzB"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {
+            "media": [
+                {
+                    "display_url": "pic.twitter.com/kH6gGyfKCu",
+                    "expanded_url": "https://twitter.com/TataSteelLtd/status/1827002014087430305/photo/1",
+                    "ext_media_availability": {
+                        "status": "Available"
+                    },
+                    "features": {
+                        "large": {},
+                        "orig": {}
+                    },
+                    "id_str": "1827001929719054337",
+                    "indices": [
+                        277,
+                        300
+                    ],
+                    "media_key": "3_1827001929719054337",
+                    "media_results": {
+                        "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAARla0JNA24ABCgACGVrQpuWawKEAAA==",
+                        "result": {
+                            "__typename": "ApiMedia",
+                            "id": "QXBpTWVkaWE6DAABCgABGVrQk0DbgAEKAAIZWtCm5ZrAoQAA",
+                            "media_key": "3_1827001929719054337"
+                        }
+                    },
+                    "media_url_https": "https://pbs.twimg.com/media/GVrQk0DbgAEqsja.jpg",
+                    "original_info": {
+                        "focus_rects": [
+                            {
+                                "h": 605,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 947,
+                                "x": 67,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 540,
+                                "x": 270,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 0
+                            }
+                        ],
+                        "height": 1080,
+                        "width": 1080
+                    },
+                    "sizes": {
+                        "large": {
+                            "h": 1080,
+                            "w": 1080
+                        }
+                    },
+                    "type": "photo",
+                    "url": "https://t.co/kH6gGyfKCu"
+                }
+            ]
+        },
+        "card": null,
+        "place": {},
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        49,
+                        66
+                    ],
+                    "text": "BrandonHallGroup"
+                },
+                {
+                    "indices": [
+                        80,
+                        98
+                    ],
+                    "text": "TalentAcquisition"
+                },
+                {
+                    "indices": [
+                        265,
+                        275
+                    ],
+                    "text": "TataSteel"
+                },
+                {
+                    "indices": [
+                        276,
+                        295
+                    ],
+                    "text": "WeAlsoMakeTomorrow"
+                },
+                {
+                    "indices": [
+                        296,
+                        300
+                    ],
+                    "text": "HRM"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1818712645337235892",
+        "url": "https://x.com/TataSteelLtd/status/1818712645337235892",
+        "twitterUrl": "https://twitter.com/TataSteelLtd/status/1818712645337235892",
+        "text": "Sustainable operations are integral to our strategic goals and Tata Steel has launched the first carbon bank in India.\u201d \u2013 T. V. Narendran, CEO &amp; MD, #TataSteel.\n\nRead More: https://t.co/S09PwT1P83\n\n#1QFY25\n\n(2/2)",
+        "source": "Twitter for iPhone",
+        "retweetCount": 0,
+        "replyCount": 0,
+        "likeCount": 1,
+        "quoteCount": 0,
+        "viewCount": 1641,
+        "createdAt": "Wed Jul 31 18:17:39 +0000 2024",
+        "lang": "en",
+        "bookmarkCount": 1,
+        "isReply": true,
+        "inReplyToId": "1818712642128670753",
+        "conversationId": "1818712642128670753",
+        "inReplyToUserId": "285498906",
+        "inReplyToUsername": "TataSteelLtd",
+        "author": {
+            "type": "user",
+            "userName": "TataSteelLtd",
+            "url": "https://x.com/TataSteelLtd",
+            "twitterUrl": "https://twitter.com/TataSteelLtd",
+            "id": "285498906",
+            "name": "Tata Steel",
+            "isVerified": false,
+            "isBlueVerified": true,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/1825785770235273216/YtIFqitH_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/285498906/1749738145",
+            "description": "",
+            "location": "",
+            "followers": 128080,
+            "following": 39,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Thu Apr 21 08:02:20 +0000 2011",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 10132,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 5020,
+            "statusesCount": 11127,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "Official Twitter Channel of Tata Steel Limited. @TataSteelLtd keeps you informed and updated on what\u2019s happening in Tata Steel.",
+                "entities": {
+                    "description": {
+                        "user_mentions": [
+                            {
+                                "id_str": "0",
+                                "indices": [
+                                    48,
+                                    61
+                                ],
+                                "name": "",
+                                "screen_name": "TataSteelLtd"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "tatasteel.com",
+                                "expanded_url": "http://www.tatasteel.com",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/VtRqVnRuzB"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": null,
+        "place": {},
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        153,
+                        163
+                    ],
+                    "text": "TataSteel"
+                },
+                {
+                    "indices": [
+                        202,
+                        209
+                    ],
+                    "text": "1QFY25"
+                }
+            ],
+            "urls": [
+                {
+                    "display_url": "bit.ly/3Swzq2D",
+                    "expanded_url": "https://bit.ly/3Swzq2D",
+                    "indices": [
+                        177,
+                        200
+                    ],
+                    "url": "https://t.co/S09PwT1P83"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1750194259012223231",
+        "url": "https://x.com/TataSteelLtd/status/1750194259012223231",
+        "twitterUrl": "https://twitter.com/TataSteelLtd/status/1750194259012223231",
+        "text": "Tata Steel India has delivered better margins aided by higher deliveries as well as realisations on a QoQ basis. Our domestic deliveries for the quarter stood at 4.78 million tons and were up 3% QoQ and 10% YoY.\n\n(1/3) https://t.co/XY2dac8Kpc",
+        "source": "Twitter for iPhone",
+        "retweetCount": 0,
+        "replyCount": 2,
+        "likeCount": 12,
+        "quoteCount": 0,
+        "viewCount": 1138,
+        "createdAt": "Wed Jan 24 16:30:03 +0000 2024",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1750194259012223231",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "TataSteelLtd",
+            "url": "https://x.com/TataSteelLtd",
+            "twitterUrl": "https://twitter.com/TataSteelLtd",
+            "id": "285498906",
+            "name": "Tata Steel",
+            "isVerified": false,
+            "isBlueVerified": true,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/1825785770235273216/YtIFqitH_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/285498906/1749738145",
+            "description": "",
+            "location": "",
+            "followers": 128080,
+            "following": 39,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Thu Apr 21 08:02:20 +0000 2011",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 10132,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 5020,
+            "statusesCount": 11127,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "Official Twitter Channel of Tata Steel Limited. @TataSteelLtd keeps you informed and updated on what\u2019s happening in Tata Steel.",
+                "entities": {
+                    "description": {
+                        "user_mentions": [
+                            {
+                                "id_str": "0",
+                                "indices": [
+                                    48,
+                                    61
+                                ],
+                                "name": "",
+                                "screen_name": "TataSteelLtd"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "tatasteel.com",
+                                "expanded_url": "http://www.tatasteel.com",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/VtRqVnRuzB"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {
+            "media": [
+                {
+                    "display_url": "pic.twitter.com/XY2dac8Kpc",
+                    "expanded_url": "https://twitter.com/TataSteelLtd/status/1750194259012223231/photo/1",
+                    "ext_media_availability": {
+                        "status": "Available"
+                    },
+                    "features": {
+                        "large": {
+                            "faces": [
+                                {
+                                    "h": 36,
+                                    "w": 36,
+                                    "x": 141,
+                                    "y": 476
+                                },
+                                {
+                                    "h": 135,
+                                    "w": 135,
+                                    "x": 198,
+                                    "y": 201
+                                }
+                            ]
+                        },
+                        "orig": {
+                            "faces": [
+                                {
+                                    "h": 36,
+                                    "w": 36,
+                                    "x": 141,
+                                    "y": 476
+                                },
+                                {
+                                    "h": 135,
+                                    "w": 135,
+                                    "x": 198,
+                                    "y": 201
+                                }
+                            ]
+                        }
+                    },
+                    "id_str": "1750191361352200192",
+                    "indices": [
+                        219,
+                        242
+                    ],
+                    "media_key": "3_1750191361352200192",
+                    "media_results": {
+                        "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAARhJ7cUuWvAACgACGEnwZ9haAP8AAA==",
+                        "result": {
+                            "__typename": "ApiMedia",
+                            "id": "QXBpTWVkaWE6DAABCgABGEntxS5a8AAKAAIYSfBn2FoA/wAA",
+                            "media_key": "3_1750191361352200192"
+                        }
+                    },
+                    "media_url_https": "https://pbs.twimg.com/media/GEntxS5a8AAS0ow.jpg",
+                    "original_info": {
+                        "focus_rects": [
+                            {
+                                "h": 605,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 427
+                            },
+                            {
+                                "h": 1080,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 947,
+                                "x": 67,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 540,
+                                "x": 270,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 0
+                            }
+                        ],
+                        "height": 1080,
+                        "width": 1080
+                    },
+                    "sizes": {
+                        "large": {
+                            "h": 1080,
+                            "w": 1080
+                        }
+                    },
+                    "type": "photo",
+                    "url": "https://t.co/XY2dac8Kpc"
+                },
+                {
+                    "display_url": "pic.twitter.com/XY2dac8Kpc",
+                    "expanded_url": "https://twitter.com/TataSteelLtd/status/1750194259012223231/photo/1",
+                    "ext_media_availability": {
+                        "status": "Available"
+                    },
+                    "features": {
+                        "large": {},
+                        "orig": {}
+                    },
+                    "id_str": "1750191412870852608",
+                    "indices": [
+                        219,
+                        242
+                    ],
+                    "media_key": "3_1750191412870852608",
+                    "media_results": {
+                        "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAARhJ7dEtGzAACgACGEnwZ9haAP8AAA==",
+                        "result": {
+                            "__typename": "ApiMedia",
+                            "id": "QXBpTWVkaWE6DAABCgABGEnt0S0bMAAKAAIYSfBn2FoA/wAA",
+                            "media_key": "3_1750191412870852608"
+                        }
+                    },
+                    "media_url_https": "https://pbs.twimg.com/media/GEnt0S0bMAAYd3p.jpg",
+                    "original_info": {
+                        "focus_rects": [
+                            {
+                                "h": 605,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 157
+                            },
+                            {
+                                "h": 1080,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 947,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 540,
+                                "x": 81,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 0
+                            }
+                        ],
+                        "height": 1080,
+                        "width": 1080
+                    },
+                    "sizes": {
+                        "large": {
+                            "h": 1080,
+                            "w": 1080
+                        }
+                    },
+                    "type": "photo",
+                    "url": "https://t.co/XY2dac8Kpc"
+                }
+            ]
+        },
+        "card": null,
+        "place": {},
+        "entities": {},
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1720046521687642151",
+        "url": "https://x.com/TataSteelLtd/status/1720046521687642151",
+        "twitterUrl": "https://twitter.com/TataSteelLtd/status/1720046521687642151",
+        "text": "I am happy to share that Tata Steel has received Safety and Health Excellence recognition for 2023 by worldsteel.\u201d \u2013 T. V. Narendran, CEO &amp; MD, #TataSteel.\n\nRead More: https://t.co/XmJBs44qaA\n\n#2QFY24\n\n(2/2)",
+        "source": "Twitter for iPhone",
+        "retweetCount": 0,
+        "replyCount": 0,
+        "likeCount": 9,
+        "quoteCount": 1,
+        "viewCount": 718,
+        "createdAt": "Thu Nov 02 11:53:42 +0000 2023",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": true,
+        "inReplyToId": "1720046518986559757",
+        "conversationId": "1720046518986559757",
+        "inReplyToUserId": "285498906",
+        "inReplyToUsername": "TataSteelLtd",
+        "author": {
+            "type": "user",
+            "userName": "TataSteelLtd",
+            "url": "https://x.com/TataSteelLtd",
+            "twitterUrl": "https://twitter.com/TataSteelLtd",
+            "id": "285498906",
+            "name": "Tata Steel",
+            "isVerified": false,
+            "isBlueVerified": true,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/1825785770235273216/YtIFqitH_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/285498906/1749738145",
+            "description": "",
+            "location": "",
+            "followers": 128080,
+            "following": 39,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Thu Apr 21 08:02:20 +0000 2011",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 10132,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 5020,
+            "statusesCount": 11127,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "Official Twitter Channel of Tata Steel Limited. @TataSteelLtd keeps you informed and updated on what\u2019s happening in Tata Steel.",
+                "entities": {
+                    "description": {
+                        "user_mentions": [
+                            {
+                                "id_str": "0",
+                                "indices": [
+                                    48,
+                                    61
+                                ],
+                                "name": "",
+                                "screen_name": "TataSteelLtd"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "tatasteel.com",
+                                "expanded_url": "http://www.tatasteel.com",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/VtRqVnRuzB"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": null,
+        "place": {},
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        148,
+                        158
+                    ],
+                    "text": "TataSteel"
+                },
+                {
+                    "indices": [
+                        197,
+                        204
+                    ],
+                    "text": "2QFY24"
+                }
+            ],
+            "urls": [
+                {
+                    "display_url": "bit.ly/3MlJTL1",
+                    "expanded_url": "https://bit.ly/3MlJTL1",
+                    "indices": [
+                        172,
+                        195
+                    ],
+                    "url": "https://t.co/XmJBs44qaA"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1720046518986559757",
+        "url": "https://x.com/TataSteelLtd/status/1720046518986559757",
+        "twitterUrl": "https://twitter.com/TataSteelLtd/status/1720046518986559757",
+        "text": "\u201cTata Steel India delivered steady performance, with crude steel production of around 5 million tons. Domestic deliveries were up 6% YoY, despite renewed volatility and seasonal factors during the quarter.\n\n(1/2) https://t.co/CpUvOKW5Ef",
+        "source": "Twitter for iPhone",
+        "retweetCount": 0,
+        "replyCount": 1,
+        "likeCount": 21,
+        "quoteCount": 0,
+        "viewCount": 1515,
+        "createdAt": "Thu Nov 02 11:53:41 +0000 2023",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1720046518986559757",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "TataSteelLtd",
+            "url": "https://x.com/TataSteelLtd",
+            "twitterUrl": "https://twitter.com/TataSteelLtd",
+            "id": "285498906",
+            "name": "Tata Steel",
+            "isVerified": false,
+            "isBlueVerified": true,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/1825785770235273216/YtIFqitH_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/285498906/1749738145",
+            "description": "",
+            "location": "",
+            "followers": 128080,
+            "following": 39,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Thu Apr 21 08:02:20 +0000 2011",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 10132,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 5020,
+            "statusesCount": 11127,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "Official Twitter Channel of Tata Steel Limited. @TataSteelLtd keeps you informed and updated on what\u2019s happening in Tata Steel.",
+                "entities": {
+                    "description": {
+                        "user_mentions": [
+                            {
+                                "id_str": "0",
+                                "indices": [
+                                    48,
+                                    61
+                                ],
+                                "name": "",
+                                "screen_name": "TataSteelLtd"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "tatasteel.com",
+                                "expanded_url": "http://www.tatasteel.com",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/VtRqVnRuzB"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {
+            "media": [
+                {
+                    "display_url": "pic.twitter.com/CpUvOKW5Ef",
+                    "expanded_url": "https://twitter.com/TataSteelLtd/status/1720046518986559757/photo/1",
+                    "ext_media_availability": {
+                        "status": "Available"
+                    },
+                    "features": {
+                        "large": {
+                            "faces": [
+                                {
+                                    "h": 41,
+                                    "w": 41,
+                                    "x": 641,
+                                    "y": 698
+                                },
+                                {
+                                    "h": 129,
+                                    "w": 129,
+                                    "x": 293,
+                                    "y": 579
+                                }
+                            ]
+                        },
+                        "orig": {
+                            "faces": [
+                                {
+                                    "h": 41,
+                                    "w": 41,
+                                    "x": 641,
+                                    "y": 698
+                                },
+                                {
+                                    "h": 129,
+                                    "w": 129,
+                                    "x": 293,
+                                    "y": 579
+                                }
+                            ]
+                        }
+                    },
+                    "id_str": "1720046370436820992",
+                    "indices": [
+                        213,
+                        236
+                    ],
+                    "media_key": "3_1720046370436820992",
+                    "media_results": {
+                        "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAARfe1Q+LFjAACgACF97VMiFXUQ0AAA==",
+                        "result": {
+                            "__typename": "ApiMedia",
+                            "id": "QXBpTWVkaWE6DAABCgABF97VD4sWMAAKAAIX3tUyIVdRDQAA",
+                            "media_key": "3_1720046370436820992"
+                        }
+                    },
+                    "media_url_https": "https://pbs.twimg.com/media/F97VD4sWMAAFvK5.jpg",
+                    "original_info": {
+                        "focus_rects": [
+                            {
+                                "h": 605,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 103
+                            },
+                            {
+                                "h": 1080,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 947,
+                                "x": 94,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 540,
+                                "x": 297,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 0
+                            }
+                        ],
+                        "height": 1080,
+                        "width": 1080
+                    },
+                    "sizes": {
+                        "large": {
+                            "h": 1080,
+                            "w": 1080
+                        }
+                    },
+                    "type": "photo",
+                    "url": "https://t.co/CpUvOKW5Ef"
+                },
+                {
+                    "display_url": "pic.twitter.com/CpUvOKW5Ef",
+                    "expanded_url": "https://twitter.com/TataSteelLtd/status/1720046518986559757/photo/1",
+                    "ext_media_availability": {
+                        "status": "Available"
+                    },
+                    "features": {
+                        "large": {
+                            "faces": [
+                                {
+                                    "h": 60,
+                                    "w": 60,
+                                    "x": 499,
+                                    "y": 621
+                                }
+                            ]
+                        },
+                        "orig": {
+                            "faces": [
+                                {
+                                    "h": 60,
+                                    "w": 60,
+                                    "x": 499,
+                                    "y": 621
+                                }
+                            ]
+                        }
+                    },
+                    "id_str": "1720046401114038272",
+                    "indices": [
+                        213,
+                        236
+                    ],
+                    "media_key": "3_1720046401114038272",
+                    "media_results": {
+                        "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAARfe1Ravl2AACgACF97VMiFXUQ0AAA==",
+                        "result": {
+                            "__typename": "ApiMedia",
+                            "id": "QXBpTWVkaWE6DAABCgABF97VFq+XYAAKAAIX3tUyIVdRDQAA",
+                            "media_key": "3_1720046401114038272"
+                        }
+                    },
+                    "media_url_https": "https://pbs.twimg.com/media/F97VFq-XYAAKyvR.jpg",
+                    "original_info": {
+                        "focus_rects": [
+                            {
+                                "h": 605,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 103
+                            },
+                            {
+                                "h": 1080,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 947,
+                                "x": 133,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 540,
+                                "x": 540,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 0
+                            }
+                        ],
+                        "height": 1080,
+                        "width": 1080
+                    },
+                    "sizes": {
+                        "large": {
+                            "h": 1080,
+                            "w": 1080
+                        }
+                    },
+                    "type": "photo",
+                    "url": "https://t.co/CpUvOKW5Ef"
+                }
+            ]
+        },
+        "card": null,
+        "place": {},
+        "entities": {},
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1719766903093174295",
+        "url": "https://x.com/TataSteelLtd/status/1719766903093174295",
+        "twitterUrl": "https://twitter.com/TataSteelLtd/status/1719766903093174295",
+        "text": "#2QFY24 Financial Results: Our consolidated revenues for the quarter stood at \u20b9 55,682 crores, while consolidated EBITDA stood at \u20b9 4,315 crores. Despite seasonal factors, broad-based improvement was witnessed across key end use segments.\n\nhttps://t.co/XmJBs44qaA\n\n#TataSteel",
+        "source": "Twitter for iPhone",
+        "retweetCount": 7,
+        "replyCount": 4,
+        "likeCount": 26,
+        "quoteCount": 0,
+        "viewCount": 4129,
+        "createdAt": "Wed Nov 01 17:22:36 +0000 2023",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1719766903093174295",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "TataSteelLtd",
+            "url": "https://x.com/TataSteelLtd",
+            "twitterUrl": "https://twitter.com/TataSteelLtd",
+            "id": "285498906",
+            "name": "Tata Steel",
+            "isVerified": false,
+            "isBlueVerified": true,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/1825785770235273216/YtIFqitH_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/285498906/1749738145",
+            "description": "",
+            "location": "",
+            "followers": 128080,
+            "following": 39,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Thu Apr 21 08:02:20 +0000 2011",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 10132,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 5020,
+            "statusesCount": 11127,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "Official Twitter Channel of Tata Steel Limited. @TataSteelLtd keeps you informed and updated on what\u2019s happening in Tata Steel.",
+                "entities": {
+                    "description": {
+                        "user_mentions": [
+                            {
+                                "id_str": "0",
+                                "indices": [
+                                    48,
+                                    61
+                                ],
+                                "name": "",
+                                "screen_name": "TataSteelLtd"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "tatasteel.com",
+                                "expanded_url": "http://www.tatasteel.com",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/VtRqVnRuzB"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": null,
+        "place": {},
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        0,
+                        7
+                    ],
+                    "text": "2QFY24"
+                },
+                {
+                    "indices": [
+                        265,
+                        275
+                    ],
+                    "text": "TataSteel"
+                }
+            ],
+            "urls": [
+                {
+                    "display_url": "bit.ly/3MlJTL1",
+                    "expanded_url": "https://bit.ly/3MlJTL1",
+                    "indices": [
+                        240,
+                        263
+                    ],
+                    "url": "https://t.co/XmJBs44qaA"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1683509630226538499",
+        "url": "https://x.com/TataSteelLtd/status/1683509630226538499",
+        "twitterUrl": "https://twitter.com/TataSteelLtd/status/1683509630226538499",
+        "text": "We continue to progress on our sustainability journey and multiple initiatives are underway, calibrated to each operating location.\" \u2013 T. V. Narendran, CEO &amp; MD, #TataSteel.\n\nRead More: https://t.co/jiLoM1vCwJ\n\n#1QFY24 #WeAlsoMakeTomorrow #FinancialResults  \n\n(3/3)",
+        "source": "Twitter for iPhone",
+        "retweetCount": 2,
+        "replyCount": 0,
+        "likeCount": 6,
+        "quoteCount": 0,
+        "viewCount": 1916,
+        "createdAt": "Mon Jul 24 16:09:08 +0000 2023",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": true,
+        "inReplyToId": "1683509627529613314",
+        "conversationId": "1683509624593588225",
+        "inReplyToUserId": "285498906",
+        "inReplyToUsername": "TataSteelLtd",
+        "author": {
+            "type": "user",
+            "userName": "TataSteelLtd",
+            "url": "https://x.com/TataSteelLtd",
+            "twitterUrl": "https://twitter.com/TataSteelLtd",
+            "id": "285498906",
+            "name": "Tata Steel",
+            "isVerified": false,
+            "isBlueVerified": true,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/1825785770235273216/YtIFqitH_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/285498906/1749738145",
+            "description": "",
+            "location": "",
+            "followers": 128080,
+            "following": 39,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Thu Apr 21 08:02:20 +0000 2011",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 10132,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 5020,
+            "statusesCount": 11127,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "Official Twitter Channel of Tata Steel Limited. @TataSteelLtd keeps you informed and updated on what\u2019s happening in Tata Steel.",
+                "entities": {
+                    "description": {
+                        "user_mentions": [
+                            {
+                                "id_str": "0",
+                                "indices": [
+                                    48,
+                                    61
+                                ],
+                                "name": "",
+                                "screen_name": "TataSteelLtd"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "tatasteel.com",
+                                "expanded_url": "http://www.tatasteel.com",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/VtRqVnRuzB"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": null,
+        "place": {},
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        166,
+                        176
+                    ],
+                    "text": "TataSteel"
+                },
+                {
+                    "indices": [
+                        215,
+                        222
+                    ],
+                    "text": "1QFY24"
+                },
+                {
+                    "indices": [
+                        223,
+                        242
+                    ],
+                    "text": "WeAlsoMakeTomorrow"
+                },
+                {
+                    "indices": [
+                        243,
+                        260
+                    ],
+                    "text": "FinancialResults"
+                }
+            ],
+            "urls": [
+                {
+                    "display_url": "bit.ly/3QaujVE",
+                    "expanded_url": "https://bit.ly/3QaujVE",
+                    "indices": [
+                        190,
+                        213
+                    ],
+                    "url": "https://t.co/jiLoM1vCwJ"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1683509624593588225",
+        "url": "https://x.com/TataSteelLtd/status/1683509624593588225",
+        "twitterUrl": "https://twitter.com/TataSteelLtd/status/1683509624593588225",
+        "text": "\u201cDuring the quarter, global economic recovery continued to face headwinds affecting commodity prices including steel. In India, domestic steel demand continued to grow and was up around 10% on YoY basis but steel spot prices moderated in line with global cues.\n\n(1/3) https://t.co/DMzmdKI89g",
+        "source": "Twitter for iPhone",
+        "retweetCount": 3,
+        "replyCount": 3,
+        "likeCount": 39,
+        "quoteCount": 0,
+        "viewCount": 4088,
+        "createdAt": "Mon Jul 24 16:09:07 +0000 2023",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1683509624593588225",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "TataSteelLtd",
+            "url": "https://x.com/TataSteelLtd",
+            "twitterUrl": "https://twitter.com/TataSteelLtd",
+            "id": "285498906",
+            "name": "Tata Steel",
+            "isVerified": false,
+            "isBlueVerified": true,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/1825785770235273216/YtIFqitH_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/285498906/1749738145",
+            "description": "",
+            "location": "",
+            "followers": 128080,
+            "following": 39,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Thu Apr 21 08:02:20 +0000 2011",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 10132,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 5020,
+            "statusesCount": 11127,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "Official Twitter Channel of Tata Steel Limited. @TataSteelLtd keeps you informed and updated on what\u2019s happening in Tata Steel.",
+                "entities": {
+                    "description": {
+                        "user_mentions": [
+                            {
+                                "id_str": "0",
+                                "indices": [
+                                    48,
+                                    61
+                                ],
+                                "name": "",
+                                "screen_name": "TataSteelLtd"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "tatasteel.com",
+                                "expanded_url": "http://www.tatasteel.com",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/VtRqVnRuzB"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {
+            "media": [
+                {
+                    "display_url": "pic.twitter.com/DMzmdKI89g",
+                    "expanded_url": "https://twitter.com/TataSteelLtd/status/1683509624593588225/photo/1",
+                    "ext_media_availability": {
+                        "status": "Available"
+                    },
+                    "features": {
+                        "large": {},
+                        "orig": {}
+                    },
+                    "id_str": "1683507663693545473",
+                    "indices": [
+                        268,
+                        291
+                    ],
+                    "media_key": "3_1683507663693545473",
+                    "media_results": {
+                        "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAARddBUzvGgABCgACF10HFX3aIAEAAA==",
+                        "result": {
+                            "__typename": "ApiMedia",
+                            "id": "QXBpTWVkaWE6DAABCgABF10FTO8aAAEKAAIXXQcVfdogAQAA",
+                            "media_key": "3_1683507663693545473"
+                        }
+                    },
+                    "media_url_https": "https://pbs.twimg.com/media/F10FTO8aAAE6jny.jpg",
+                    "original_info": {
+                        "focus_rects": [
+                            {
+                                "h": 605,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 49
+                            },
+                            {
+                                "h": 1080,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 947,
+                                "x": 67,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 540,
+                                "x": 270,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 0
+                            }
+                        ],
+                        "height": 1080,
+                        "width": 1080
+                    },
+                    "sizes": {
+                        "large": {
+                            "h": 1080,
+                            "w": 1080
+                        }
+                    },
+                    "type": "photo",
+                    "url": "https://t.co/DMzmdKI89g"
+                },
+                {
+                    "display_url": "pic.twitter.com/DMzmdKI89g",
+                    "expanded_url": "https://twitter.com/TataSteelLtd/status/1683509624593588225/photo/1",
+                    "ext_media_availability": {
+                        "status": "Available"
+                    },
+                    "features": {
+                        "large": {},
+                        "orig": {}
+                    },
+                    "id_str": "1683507663672594432",
+                    "indices": [
+                        268,
+                        291
+                    ],
+                    "media_key": "3_1683507663672594432",
+                    "media_results": {
+                        "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAARddBUzt2lAACgACF10HFX3aIAEAAA==",
+                        "result": {
+                            "__typename": "ApiMedia",
+                            "id": "QXBpTWVkaWE6DAABCgABF10FTO3aUAAKAAIXXQcVfdogAQAA",
+                            "media_key": "3_1683507663672594432"
+                        }
+                    },
+                    "media_url_https": "https://pbs.twimg.com/media/F10FTO3aUAAXwog.jpg",
+                    "original_info": {
+                        "focus_rects": [
+                            {
+                                "h": 605,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 947,
+                                "x": 67,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 540,
+                                "x": 270,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 0
+                            }
+                        ],
+                        "height": 1080,
+                        "width": 1080
+                    },
+                    "sizes": {
+                        "large": {
+                            "h": 1080,
+                            "w": 1080
+                        }
+                    },
+                    "type": "photo",
+                    "url": "https://t.co/DMzmdKI89g"
+                }
+            ]
+        },
+        "card": null,
+        "place": {},
+        "entities": {},
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1654477411164246018",
+        "url": "https://x.com/TataSteelLtd/status/1654477411164246018",
+        "twitterUrl": "https://twitter.com/TataSteelLtd/status/1654477411164246018",
+        "text": "We remain focused on cost optimisation, operational improvements and working capital management to maximise cashflows and will aim to resume our deleveraging journey in FY2024.\u201d \u2013 Koushik Chatterjee, ED &amp; CFO, #TataSteel\n\nRead More: https://t.co/cke0VJogiw\n\n#4QFY23Results\n\n(2/2)",
+        "source": "Twitter for iPhone",
+        "retweetCount": 0,
+        "replyCount": 0,
+        "likeCount": 6,
+        "quoteCount": 0,
+        "viewCount": 897,
+        "createdAt": "Fri May 05 13:25:28 +0000 2023",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": true,
+        "inReplyToId": "1654477407838146561",
+        "conversationId": "1654477407838146561",
+        "inReplyToUserId": "285498906",
+        "inReplyToUsername": "TataSteelLtd",
+        "author": {
+            "type": "user",
+            "userName": "TataSteelLtd",
+            "url": "https://x.com/TataSteelLtd",
+            "twitterUrl": "https://twitter.com/TataSteelLtd",
+            "id": "285498906",
+            "name": "Tata Steel",
+            "isVerified": false,
+            "isBlueVerified": true,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/1825785770235273216/YtIFqitH_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/285498906/1749738145",
+            "description": "",
+            "location": "",
+            "followers": 128080,
+            "following": 39,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Thu Apr 21 08:02:20 +0000 2011",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 10132,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 5020,
+            "statusesCount": 11127,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "Official Twitter Channel of Tata Steel Limited. @TataSteelLtd keeps you informed and updated on what\u2019s happening in Tata Steel.",
+                "entities": {
+                    "description": {
+                        "user_mentions": [
+                            {
+                                "id_str": "0",
+                                "indices": [
+                                    48,
+                                    61
+                                ],
+                                "name": "",
+                                "screen_name": "TataSteelLtd"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "tatasteel.com",
+                                "expanded_url": "http://www.tatasteel.com",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/VtRqVnRuzB"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": null,
+        "place": {},
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        214,
+                        224
+                    ],
+                    "text": "TataSteel"
+                },
+                {
+                    "indices": [
+                        262,
+                        276
+                    ],
+                    "text": "4QFY23Results"
+                }
+            ],
+            "urls": [
+                {
+                    "display_url": "bit.ly/3LLgcDu",
+                    "expanded_url": "https://bit.ly/3LLgcDu",
+                    "indices": [
+                        237,
+                        260
+                    ],
+                    "url": "https://t.co/cke0VJogiw"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1653658098815455232",
+        "url": "https://x.com/TataSteelLtd/status/1653658098815455232",
+        "twitterUrl": "https://twitter.com/TataSteelLtd/status/1653658098815455232",
+        "text": "We continue to pursue multiple initiatives to reduce our emissions including a recently initiated trial for injecting large quantity of hydrogen into one of our blast furnaces at Jamshedpur, a global first.\" \u2013 T. V. Narendran, CEO &amp; MD, #TataSteel. \n\nRead: https://t.co/cke0VJnIsY",
+        "source": "Twitter for iPhone",
+        "retweetCount": 0,
+        "replyCount": 1,
+        "likeCount": 12,
+        "quoteCount": 0,
+        "viewCount": 1072,
+        "createdAt": "Wed May 03 07:09:48 +0000 2023",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": true,
+        "inReplyToId": "1653658096093331463",
+        "conversationId": "1653658096093331463",
+        "inReplyToUserId": "285498906",
+        "inReplyToUsername": "TataSteelLtd",
+        "author": {
+            "type": "user",
+            "userName": "TataSteelLtd",
+            "url": "https://x.com/TataSteelLtd",
+            "twitterUrl": "https://twitter.com/TataSteelLtd",
+            "id": "285498906",
+            "name": "Tata Steel",
+            "isVerified": false,
+            "isBlueVerified": true,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/1825785770235273216/YtIFqitH_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/285498906/1749738145",
+            "description": "",
+            "location": "",
+            "followers": 128080,
+            "following": 39,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Thu Apr 21 08:02:20 +0000 2011",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 10132,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 5020,
+            "statusesCount": 11127,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "Official Twitter Channel of Tata Steel Limited. @TataSteelLtd keeps you informed and updated on what\u2019s happening in Tata Steel.",
+                "entities": {
+                    "description": {
+                        "user_mentions": [
+                            {
+                                "id_str": "0",
+                                "indices": [
+                                    48,
+                                    61
+                                ],
+                                "name": "",
+                                "screen_name": "TataSteelLtd"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "tatasteel.com",
+                                "expanded_url": "http://www.tatasteel.com",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/VtRqVnRuzB"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": null,
+        "place": {},
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        241,
+                        251
+                    ],
+                    "text": "TataSteel"
+                }
+            ],
+            "urls": [
+                {
+                    "display_url": "bit.ly/3LLgcDu",
+                    "expanded_url": "https://bit.ly/3LLgcDu",
+                    "indices": [
+                        261,
+                        284
+                    ],
+                    "url": "https://t.co/cke0VJnIsY"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1653658096093331463",
+        "url": "https://x.com/TataSteelLtd/status/1653658096093331463",
+        "twitterUrl": "https://twitter.com/TataSteelLtd/status/1653658096093331463",
+        "text": "\u201cFY2023 saw our India crude steel production growing to around 19.9 million tons, with a 65% share of our overall volumes. The quarter also saw strong momentum with deliveries growing by 9% QoQ to 5.15 million tons.\n\n(1/2) https://t.co/pdNmfkMBCr",
+        "source": "Twitter for iPhone",
+        "retweetCount": 5,
+        "replyCount": 3,
+        "likeCount": 31,
+        "quoteCount": 0,
+        "viewCount": 3061,
+        "createdAt": "Wed May 03 07:09:48 +0000 2023",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1653658096093331463",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "TataSteelLtd",
+            "url": "https://x.com/TataSteelLtd",
+            "twitterUrl": "https://twitter.com/TataSteelLtd",
+            "id": "285498906",
+            "name": "Tata Steel",
+            "isVerified": false,
+            "isBlueVerified": true,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/1825785770235273216/YtIFqitH_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/285498906/1749738145",
+            "description": "",
+            "location": "",
+            "followers": 128080,
+            "following": 39,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Thu Apr 21 08:02:20 +0000 2011",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 10132,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 5020,
+            "statusesCount": 11127,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "Official Twitter Channel of Tata Steel Limited. @TataSteelLtd keeps you informed and updated on what\u2019s happening in Tata Steel.",
+                "entities": {
+                    "description": {
+                        "user_mentions": [
+                            {
+                                "id_str": "0",
+                                "indices": [
+                                    48,
+                                    61
+                                ],
+                                "name": "",
+                                "screen_name": "TataSteelLtd"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "tatasteel.com",
+                                "expanded_url": "http://www.tatasteel.com",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/VtRqVnRuzB"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {
+            "media": [
+                {
+                    "display_url": "pic.twitter.com/pdNmfkMBCr",
+                    "expanded_url": "https://twitter.com/TataSteelLtd/status/1653658096093331463/photo/1",
+                    "ext_media_availability": {
+                        "status": "Available"
+                    },
+                    "features": {
+                        "large": {
+                            "faces": [
+                                {
+                                    "h": 36,
+                                    "w": 36,
+                                    "x": 992,
+                                    "y": 23
+                                },
+                                {
+                                    "h": 37,
+                                    "w": 37,
+                                    "x": 1019,
+                                    "y": 510
+                                },
+                                {
+                                    "h": 281,
+                                    "w": 281,
+                                    "x": 394,
+                                    "y": 373
+                                }
+                            ]
+                        },
+                        "orig": {
+                            "faces": [
+                                {
+                                    "h": 36,
+                                    "w": 36,
+                                    "x": 992,
+                                    "y": 23
+                                },
+                                {
+                                    "h": 37,
+                                    "w": 37,
+                                    "x": 1019,
+                                    "y": 510
+                                },
+                                {
+                                    "h": 281,
+                                    "w": 281,
+                                    "x": 394,
+                                    "y": 373
+                                }
+                            ]
+                        }
+                    },
+                    "id_str": "1653657517900066816",
+                    "indices": [
+                        223,
+                        246
+                    ],
+                    "media_key": "3_1653657517900066816",
+                    "media_results": {
+                        "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAARby+MBGlnAACgACFvL5RuWXgAcAAA==",
+                        "result": {
+                            "__typename": "ApiMedia",
+                            "id": "QXBpTWVkaWE6DAABCgABFvL4wEaWcAAKAAIW8vlG5ZeABwAA",
+                            "media_key": "3_1653657517900066816"
+                        }
+                    },
+                    "media_url_https": "https://pbs.twimg.com/media/FvL4wEaWcAAzoC3.jpg",
+                    "original_info": {
+                        "focus_rects": [
+                            {
+                                "h": 605,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 947,
+                                "x": 67,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 540,
+                                "x": 270,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 0
+                            }
+                        ],
+                        "height": 1080,
+                        "width": 1080
+                    },
+                    "sizes": {
+                        "large": {
+                            "h": 1080,
+                            "w": 1080
+                        }
+                    },
+                    "type": "photo",
+                    "url": "https://t.co/pdNmfkMBCr"
+                },
+                {
+                    "display_url": "pic.twitter.com/pdNmfkMBCr",
+                    "expanded_url": "https://twitter.com/TataSteelLtd/status/1653658096093331463/photo/1",
+                    "ext_media_availability": {
+                        "status": "Available"
+                    },
+                    "features": {
+                        "large": {},
+                        "orig": {}
+                    },
+                    "id_str": "1653657517984034817",
+                    "indices": [
+                        223,
+                        246
+                    ],
+                    "media_key": "3_1653657517984034817",
+                    "media_results": {
+                        "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAARby+MBLl7ABCgACFvL5RuWXgAcAAA==",
+                        "result": {
+                            "__typename": "ApiMedia",
+                            "id": "QXBpTWVkaWE6DAABCgABFvL4wEuXsAEKAAIW8vlG5ZeABwAA",
+                            "media_key": "3_1653657517984034817"
+                        }
+                    },
+                    "media_url_https": "https://pbs.twimg.com/media/FvL4wEuXsAEzE4-.jpg",
+                    "original_info": {
+                        "focus_rects": [
+                            {
+                                "h": 605,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 373
+                            },
+                            {
+                                "h": 1080,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 947,
+                                "x": 67,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 540,
+                                "x": 270,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 0
+                            }
+                        ],
+                        "height": 1080,
+                        "width": 1080
+                    },
+                    "sizes": {
+                        "large": {
+                            "h": 1080,
+                            "w": 1080
+                        }
+                    },
+                    "type": "photo",
+                    "url": "https://t.co/pdNmfkMBCr"
+                }
+            ]
+        },
+        "card": null,
+        "place": {},
+        "entities": {},
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1653416068935761921",
+        "url": "https://x.com/TataSteelLtd/status/1653416068935761921",
+        "twitterUrl": "https://twitter.com/TataSteelLtd/status/1653416068935761921",
+        "text": "#4QFY23 Financial Results: Our Consolidated Revenues for FY23 stood at \u20b9 2,43,353 Cr., broadly similiar on YoY basis despite volatile operating environment across geographies. FY23 Consolidated EBITDA stood at \u20b9 32,698 Cr. &amp; Consolidated PAT stood at \u20b9 8,075 Cr.\n\n#TataSteel",
+        "source": "Twitter for iPhone",
+        "retweetCount": 10,
+        "replyCount": 3,
+        "likeCount": 63,
+        "quoteCount": 0,
+        "viewCount": 6763,
+        "createdAt": "Tue May 02 15:08:04 +0000 2023",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1653416068935761921",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "TataSteelLtd",
+            "url": "https://x.com/TataSteelLtd",
+            "twitterUrl": "https://twitter.com/TataSteelLtd",
+            "id": "285498906",
+            "name": "Tata Steel",
+            "isVerified": false,
+            "isBlueVerified": true,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/1825785770235273216/YtIFqitH_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/285498906/1749738145",
+            "description": "",
+            "location": "",
+            "followers": 128080,
+            "following": 39,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Thu Apr 21 08:02:20 +0000 2011",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 10132,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 5020,
+            "statusesCount": 11127,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "Official Twitter Channel of Tata Steel Limited. @TataSteelLtd keeps you informed and updated on what\u2019s happening in Tata Steel.",
+                "entities": {
+                    "description": {
+                        "user_mentions": [
+                            {
+                                "id_str": "0",
+                                "indices": [
+                                    48,
+                                    61
+                                ],
+                                "name": "",
+                                "screen_name": "TataSteelLtd"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "tatasteel.com",
+                                "expanded_url": "http://www.tatasteel.com",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/VtRqVnRuzB"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": null,
+        "place": {},
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        0,
+                        7
+                    ],
+                    "text": "4QFY23"
+                },
+                {
+                    "indices": [
+                        268,
+                        278
+                    ],
+                    "text": "TataSteel"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1622809654169595904",
+        "url": "https://x.com/TataSteelLtd/status/1622809654169595904",
+        "twitterUrl": "https://twitter.com/TataSteelLtd/status/1622809654169595904",
+        "text": "We are presently expanding our capacities across multiple sites at Tata Steel Kalinganagar, NINL and the Electric Arc Furnace at Ludhiana in Punjab and at our downstream plants across India.\" \u2013 T. V. Narendran, CEO &amp; MD, Tata Steel.\n\nRead more: https://t.co/HBYVA2JMbt\n\n(2/2)",
+        "source": "Twitter for iPhone",
+        "retweetCount": 0,
+        "replyCount": 0,
+        "likeCount": 14,
+        "quoteCount": 0,
+        "viewCount": 1700,
+        "createdAt": "Tue Feb 07 04:09:06 +0000 2023",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": true,
+        "inReplyToId": "1622809651040653312",
+        "conversationId": "1622809651040653312",
+        "inReplyToUserId": "285498906",
+        "inReplyToUsername": "TataSteelLtd",
+        "author": {
+            "type": "user",
+            "userName": "TataSteelLtd",
+            "url": "https://x.com/TataSteelLtd",
+            "twitterUrl": "https://twitter.com/TataSteelLtd",
+            "id": "285498906",
+            "name": "Tata Steel",
+            "isVerified": false,
+            "isBlueVerified": true,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/1825785770235273216/YtIFqitH_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/285498906/1749738145",
+            "description": "",
+            "location": "",
+            "followers": 128080,
+            "following": 39,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Thu Apr 21 08:02:20 +0000 2011",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 10132,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 5020,
+            "statusesCount": 11127,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "Official Twitter Channel of Tata Steel Limited. @TataSteelLtd keeps you informed and updated on what\u2019s happening in Tata Steel.",
+                "entities": {
+                    "description": {
+                        "user_mentions": [
+                            {
+                                "id_str": "0",
+                                "indices": [
+                                    48,
+                                    61
+                                ],
+                                "name": "",
+                                "screen_name": "TataSteelLtd"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "tatasteel.com",
+                                "expanded_url": "http://www.tatasteel.com",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/VtRqVnRuzB"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": null,
+        "place": {},
+        "entities": {
+            "urls": [
+                {
+                    "display_url": "bit.ly/3HwSiZ0",
+                    "expanded_url": "https://bit.ly/3HwSiZ0",
+                    "indices": [
+                        249,
+                        272
+                    ],
+                    "url": "https://t.co/HBYVA2JMbt"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1622607343145058305",
+        "url": "https://x.com/TataSteelLtd/status/1622607343145058305",
+        "twitterUrl": "https://twitter.com/TataSteelLtd/status/1622607343145058305",
+        "text": "#3QFY23 Financial Results: Our consolidated revenues for the first 9 months of FY23 stood at \u20b9 1,80,391 Cr. (3% Growth YoY) and consolidated EBITDA stood at \u20b9 25,472 Cr. with an EBITDA margin of ~14% despite volatile operating environment across geographies.\n\n#TataSteel",
+        "source": "Twitter for iPhone",
+        "retweetCount": 9,
+        "replyCount": 3,
+        "likeCount": 70,
+        "quoteCount": 1,
+        "viewCount": 8049,
+        "createdAt": "Mon Feb 06 14:45:11 +0000 2023",
+        "lang": "en",
+        "bookmarkCount": 1,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1622607343145058305",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "TataSteelLtd",
+            "url": "https://x.com/TataSteelLtd",
+            "twitterUrl": "https://twitter.com/TataSteelLtd",
+            "id": "285498906",
+            "name": "Tata Steel",
+            "isVerified": false,
+            "isBlueVerified": true,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/1825785770235273216/YtIFqitH_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/285498906/1749738145",
+            "description": "",
+            "location": "",
+            "followers": 128080,
+            "following": 39,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Thu Apr 21 08:02:20 +0000 2011",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 10132,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 5020,
+            "statusesCount": 11127,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "Official Twitter Channel of Tata Steel Limited. @TataSteelLtd keeps you informed and updated on what\u2019s happening in Tata Steel.",
+                "entities": {
+                    "description": {
+                        "user_mentions": [
+                            {
+                                "id_str": "0",
+                                "indices": [
+                                    48,
+                                    61
+                                ],
+                                "name": "",
+                                "screen_name": "TataSteelLtd"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "tatasteel.com",
+                                "expanded_url": "http://www.tatasteel.com",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/VtRqVnRuzB"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": null,
+        "place": {},
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        0,
+                        7
+                    ],
+                    "text": "3QFY23"
+                },
+                {
+                    "indices": [
+                        260,
+                        270
+                    ],
+                    "text": "TataSteel"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    }
+]

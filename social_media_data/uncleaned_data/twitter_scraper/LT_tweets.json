@@ -1,0 +1,2840 @@
+[
+    {
+        "type": "tweet",
+        "id": "1945712897264591177",
+        "url": "https://x.com/thatonedude02/status/1945712897264591177",
+        "twitterUrl": "https://twitter.com/thatonedude02/status/1945712897264591177",
+        "text": "@tswiftdeliverie I\u2019m super happy to have Creed and Trey extended.  We\u2019ve got 2 good options at LT and kicking  previously projected LT to LG seems great.  RT is the only spot on the line I don\u2019t like.  I feel like Jawaan could still be good without false starting all the time?",
+        "source": "Twitter for iPhone",
+        "retweetCount": 0,
+        "replyCount": 0,
+        "likeCount": 2,
+        "quoteCount": 0,
+        "viewCount": 133,
+        "createdAt": "Thu Jul 17 05:11:18 +0000 2025",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": true,
+        "inReplyToId": "1945710926373519420",
+        "conversationId": "1945579537506410754",
+        "inReplyToUserId": "1829798459597053952",
+        "inReplyToUsername": "tswiftdeliverie",
+        "author": {
+            "type": "user",
+            "userName": "thatonedude02",
+            "url": "https://x.com/thatonedude02",
+            "twitterUrl": "https://twitter.com/thatonedude02",
+            "id": "17552834",
+            "name": "Brad Fuckin Leary",
+            "isVerified": false,
+            "isBlueVerified": false,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/1188987450548510725/9-MD7mjW_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/17552834/1582381367",
+            "description": "",
+            "location": "Montana",
+            "followers": 524,
+            "following": 711,
+            "status": "",
+            "canDm": false,
+            "canMediaTag": true,
+            "createdAt": "Sat Nov 22 04:32:16 +0000 2008",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 16277,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 938,
+            "statusesCount": 6675,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "Go KC Chiefs, SF Giants, ATL Hawks, MSU Bobcats and TSwizzle! (90% will be Chiefs or TayTay cuz she\u2019s Chiefs now)",
+                "entities": {
+                    "description": {}
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": null,
+        "place": {},
+        "entities": {
+            "user_mentions": [
+                {
+                    "id_str": "1829798459597053952",
+                    "indices": [
+                        0,
+                        16
+                    ],
+                    "name": "swiftdelivery",
+                    "screen_name": "tswiftdeliverie"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1941909357471404148",
+        "url": "https://x.com/Hoobito97/status/1941909357471404148",
+        "twitterUrl": "https://twitter.com/Hoobito97/status/1941909357471404148",
+        "text": "That's completely false as well. Fautanu, the starting RT, missed last year. Jones, who should have been at LT to start, is finally going back to his side of the line. It's a young, top-of-the-league line that has the correct pieces in the correct spots. The Steelers under Omar Khan have drafted very well and have spent this offseason building around those guys. Don't speak as if you know when, in fact, you know nothing. It's embarrassing for you.",
+        "source": "Twitter for iPhone",
+        "retweetCount": 0,
+        "replyCount": 2,
+        "likeCount": 1,
+        "quoteCount": 0,
+        "viewCount": 29,
+        "createdAt": "Sun Jul 06 17:17:24 +0000 2025",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": true,
+        "inReplyToId": "1941908580069724552",
+        "conversationId": "1941880611632709872",
+        "inReplyToUserId": "1749840542286954496",
+        "inReplyToUsername": "CLE216SPO",
+        "author": {
+            "type": "user",
+            "userName": "Hoobito97",
+            "url": "https://x.com/Hoobito97",
+            "twitterUrl": "https://twitter.com/Hoobito97",
+            "id": "1680661153276387328",
+            "name": "Hoobito",
+            "isVerified": false,
+            "isBlueVerified": true,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/1904205386854354945/8yh7im8s_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/1680661153276387328/1746639837",
+            "description": "",
+            "location": "",
+            "followers": 745,
+            "following": 989,
+            "status": "",
+            "canDm": false,
+            "canMediaTag": true,
+            "createdAt": "Sun Jul 16 19:30:36 +0000 2023",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 226740,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 841,
+            "statusesCount": 10142,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [
+                "1947003779083096319"
+            ],
+            "profile_bio": {
+                "description": "Your friendly neighborhood Twitter GM.\nThe Steelers play way too much of a role in my life \ud83d\ude05\nI am an avid ball knower with 0 bad takes \ud83d\ude24\n#Herewego Steelers \ud83d\udc10",
+                "entities": {
+                    "description": {
+                        "hashtags": [
+                            {
+                                "indices": [
+                                    137,
+                                    146
+                                ],
+                                "text": "Herewego"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": null,
+        "place": {},
+        "entities": {},
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1940742932920951198",
+        "url": "https://x.com/Ookie218/status/1940742932920951198",
+        "twitterUrl": "https://twitter.com/Ookie218/status/1940742932920951198",
+        "text": "@Eagles I think we all agree on \nC: Kelce\nRG: Brooks\nRT: Johnson\n\nI'd give JP the nod over Maliata at LT (as long as he stop false starting lol)\n\nAnd LG is either Mathis or Andrews, but I'd take Andrews",
+        "source": "Twitter for iPhone",
+        "retweetCount": 0,
+        "replyCount": 0,
+        "likeCount": 0,
+        "quoteCount": 0,
+        "viewCount": 32,
+        "createdAt": "Thu Jul 03 12:02:27 +0000 2025",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": true,
+        "inReplyToId": "1940485668301623484",
+        "conversationId": "1940485668301623484",
+        "inReplyToUserId": "180503626",
+        "inReplyToUsername": "Eagles",
+        "author": {
+            "type": "user",
+            "userName": "Ookie218",
+            "url": "https://x.com/Ookie218",
+            "twitterUrl": "https://twitter.com/Ookie218",
+            "id": "624391951",
+            "name": "Ookie",
+            "isVerified": false,
+            "isBlueVerified": false,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/579761323275362304/DJHLxKIV_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/624391951/1427060910",
+            "description": "",
+            "location": "Albany NY- Richmond VA",
+            "followers": 833,
+            "following": 2247,
+            "status": "",
+            "canDm": false,
+            "canMediaTag": true,
+            "createdAt": "Mon Jul 02 05:23:23 +0000 2012",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 156438,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 1352,
+            "statusesCount": 34297,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "~Acts 20:24~\n\n~Christ Urbanite~ Servant for the Lord Jesus Christ",
+                "entities": {
+                    "description": {}
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": null,
+        "place": {},
+        "entities": {
+            "user_mentions": [
+                {
+                    "id_str": "180503626",
+                    "indices": [
+                        0,
+                        7
+                    ],
+                    "name": "Philadelphia Eagles",
+                    "screen_name": "Eagles"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1939376325619249638",
+        "url": "https://x.com/unnipillairam/status/1939376325619249638",
+        "twitterUrl": "https://twitter.com/unnipillairam/status/1939376325619249638",
+        "text": "@ElstKoenraad There are similar chariot processions in Kerala.  False Buddhist origins are hoisted on them too. In fact there are a whole caste called Rathakarar who are Panchals- Lt hand. These are the people who make these chariots. As opposed to the Bull effigy processions of Rt hand",
+        "source": "Twitter for iPhone",
+        "retweetCount": 0,
+        "replyCount": 0,
+        "likeCount": 1,
+        "quoteCount": 0,
+        "viewCount": 46,
+        "createdAt": "Sun Jun 29 17:32:02 +0000 2025",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": true,
+        "inReplyToId": "1939364542301274549",
+        "conversationId": "1939364542301274549",
+        "inReplyToUserId": "1585841010889760768",
+        "inReplyToUsername": "ElstKoenraad",
+        "author": {
+            "type": "user",
+            "userName": "unnipillairam",
+            "url": "https://x.com/unnipillairam",
+            "twitterUrl": "https://twitter.com/unnipillairam",
+            "id": "1546160248293048320",
+            "name": "Ramkumar Unnipillai",
+            "isVerified": false,
+            "isBlueVerified": false,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/1680390605480812550/Tq_tcp0I_normal.jpg",
+            "coverPicture": "",
+            "description": "",
+            "location": "",
+            "followers": 38,
+            "following": 366,
+            "status": "",
+            "canDm": false,
+            "canMediaTag": true,
+            "createdAt": "Sun Jul 10 15:51:57 +0000 2022",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 42,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 17,
+            "statusesCount": 1727,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [
+                "1691431700054540288"
+            ],
+            "profile_bio": {
+                "description": "Doctor . Collector of random facts of no particular use",
+                "entities": {
+                    "description": {}
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": null,
+        "place": {},
+        "entities": {
+            "user_mentions": [
+                {
+                    "id_str": "1585841010889760768",
+                    "indices": [
+                        0,
+                        13
+                    ],
+                    "name": "Koenraad Elst",
+                    "screen_name": "ElstKoenraad"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1934319671307812921",
+        "url": "https://x.com/1trapflavasos/status/1934319671307812921",
+        "twitterUrl": "https://twitter.com/1trapflavasos/status/1934319671307812921",
+        "text": "@chris_pierre024 @TheEagleTimes_ Don\u2019t forget about lane Johnson being a false start merchant and a average bum but the eagles still have the best OLine in football although they don\u2019t have a good RT,center or Lt\ud83d\ude2dthe media is frustrating",
+        "source": "Twitter for iPhone",
+        "retweetCount": 0,
+        "replyCount": 1,
+        "likeCount": 1,
+        "quoteCount": 0,
+        "viewCount": 43,
+        "createdAt": "Sun Jun 15 18:38:42 +0000 2025",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": true,
+        "inReplyToId": "1934300382420766836",
+        "conversationId": "1934293702937108790",
+        "inReplyToUserId": "1865865082132914177",
+        "inReplyToUsername": "chris_pierre024",
+        "author": {
+            "type": "user",
+            "userName": "1trapflavasos",
+            "url": "https://x.com/1trapflavasos",
+            "twitterUrl": "https://twitter.com/1trapflavasos",
+            "id": "1577421012928438274",
+            "name": "sosa",
+            "isVerified": false,
+            "isBlueVerified": false,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/1795504229299163137/fTOJ8ZaN_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/1577421012928438274/1664922739",
+            "description": "",
+            "location": "Washington, DC",
+            "followers": 262,
+            "following": 209,
+            "status": "",
+            "canDm": false,
+            "canMediaTag": true,
+            "createdAt": "Tue Oct 04 22:11:35 +0000 2022",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 81803,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 880,
+            "statusesCount": 32045,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [
+                "1804563148097151404"
+            ],
+            "profile_bio": {
+                "description": "Trapflava\ud83d\udcb0 DC\u2b50\ufe0f YouTuber: https://t.co/5vgLd5InRv check me out on TikTok & YouTube https://t.co/KrdDizXtA0",
+                "entities": {
+                    "description": {
+                        "urls": [
+                            {
+                                "display_url": "youtube.com/@Trapflavasosa\u2026",
+                                "expanded_url": "http://www.youtube.com/@TrapflavasosaGaming",
+                                "indices": [
+                                    26,
+                                    49
+                                ],
+                                "url": "https://t.co/5vgLd5InRv"
+                            },
+                            {
+                                "display_url": "tiktok.com/@countup.sosa?\u2026",
+                                "expanded_url": "https://www.tiktok.com/@countup.sosa?_t=8pGZvFFaXnP&_r=1",
+                                "indices": [
+                                    83,
+                                    106
+                                ],
+                                "url": "https://t.co/KrdDizXtA0"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": null,
+        "place": {},
+        "entities": {
+            "user_mentions": [
+                {
+                    "id_str": "1865865082132914177",
+                    "indices": [
+                        0,
+                        16
+                    ],
+                    "name": "Christian Pierre",
+                    "screen_name": "chris_pierre024"
+                },
+                {
+                    "id_str": "1706323282620780544",
+                    "indices": [
+                        17,
+                        32
+                    ],
+                    "name": "The Eagle Times",
+                    "screen_name": "TheEagleTimes_"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1932241555990954375",
+        "url": "https://x.com/MayoTransplant/status/1932241555990954375",
+        "twitterUrl": "https://twitter.com/MayoTransplant/status/1932241555990954375",
+        "text": "RT @MCTransplntSurg: This paper rethinks the false dichotomy between pharmacotherapy and surgical intervention in #livertransplant candidate with #obesity. #TransplantSurgery #MedEd @JulieHeimbach @LTxJournal\nhttps://t.co/8fHNRVJajX https://t.co/SX3LIhoWjk",
+        "source": "Twitter for iPhone",
+        "retweetCount": 1,
+        "replyCount": 0,
+        "likeCount": 2,
+        "quoteCount": 0,
+        "viewCount": 449,
+        "createdAt": "Tue Jun 10 01:01:00 +0000 2025",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1932241555990954375",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "MayoTransplant",
+            "url": "https://x.com/MayoTransplant",
+            "twitterUrl": "https://twitter.com/MayoTransplant",
+            "id": "1457790854257643520",
+            "name": "Mayo Clinic Transplant",
+            "isVerified": false,
+            "isBlueVerified": false,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/1752064747996942336/H14wWIO1_normal.png",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/1457790854257643520/1746191023",
+            "description": "",
+            "location": "@Arizona, Florida, Minnesota",
+            "followers": 2485,
+            "following": 522,
+            "status": "",
+            "canDm": false,
+            "canMediaTag": true,
+            "createdAt": "Mon Nov 08 19:24:05 +0000 2021",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 100,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 983,
+            "statusesCount": 1630,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "An integrated clinical practice, education and research center specializing in solid organ, bone marrow and vascular composite transplants.",
+                "entities": {
+                    "description": {},
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "mayoclinic.org/departments-ce\u2026",
+                                "expanded_url": "https://www.mayoclinic.org/departments-centers/transplant-center/home/orc-20203891",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/LIkP2KKBSm"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {
+            "media": [
+                {
+                    "display_url": "pic.twitter.com/SX3LIhoWjk",
+                    "expanded_url": "https://twitter.com/MayoTransplant/status/1932241555990954375/photo/1",
+                    "ext_media_availability": {
+                        "status": "Available"
+                    },
+                    "features": {
+                        "large": {},
+                        "orig": {}
+                    },
+                    "id_str": "1932241553826656256",
+                    "indices": [
+                        233,
+                        256
+                    ],
+                    "media_key": "3_1932241553826656256",
+                    "media_results": {
+                        "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAARrQs3SsFjAACgACGtCzdS0WwYcAAA==",
+                        "result": {
+                            "__typename": "ApiMedia",
+                            "id": "QXBpTWVkaWE6DAABCgABGtCzdKwWMAAKAAIa0LN1LRbBhwAA",
+                            "media_key": "3_1932241553826656256"
+                        }
+                    },
+                    "media_url_https": "https://pbs.twimg.com/media/GtCzdKwWMAAWQxU.png",
+                    "original_info": {
+                        "focus_rects": [
+                            {
+                                "h": 400,
+                                "w": 714,
+                                "x": 7,
+                                "y": 0
+                            },
+                            {
+                                "h": 400,
+                                "w": 400,
+                                "x": 249,
+                                "y": 0
+                            },
+                            {
+                                "h": 400,
+                                "w": 351,
+                                "x": 274,
+                                "y": 0
+                            },
+                            {
+                                "h": 400,
+                                "w": 200,
+                                "x": 349,
+                                "y": 0
+                            },
+                            {
+                                "h": 400,
+                                "w": 721,
+                                "x": 0,
+                                "y": 0
+                            }
+                        ],
+                        "height": 400,
+                        "width": 721
+                    },
+                    "sizes": {
+                        "large": {
+                            "h": 400,
+                            "w": 721
+                        }
+                    },
+                    "type": "photo",
+                    "url": "https://t.co/SX3LIhoWjk"
+                }
+            ]
+        },
+        "card": null,
+        "place": {},
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        114,
+                        130
+                    ],
+                    "text": "livertransplant"
+                },
+                {
+                    "indices": [
+                        146,
+                        154
+                    ],
+                    "text": "obesity"
+                },
+                {
+                    "indices": [
+                        156,
+                        174
+                    ],
+                    "text": "TransplantSurgery"
+                },
+                {
+                    "indices": [
+                        175,
+                        181
+                    ],
+                    "text": "MedEd"
+                }
+            ],
+            "urls": [
+                {
+                    "display_url": "bit.ly/43U91AA",
+                    "expanded_url": "https://bit.ly/43U91AA",
+                    "indices": [
+                        209,
+                        232
+                    ],
+                    "url": "https://t.co/8fHNRVJajX"
+                }
+            ],
+            "user_mentions": [
+                {
+                    "id_str": "1458126552554692618",
+                    "indices": [
+                        3,
+                        19
+                    ],
+                    "name": "Mayo Clinic Transplantation Surgery",
+                    "screen_name": "MCTransplntSurg"
+                },
+                {
+                    "id_str": "952218779928297472",
+                    "indices": [
+                        182,
+                        196
+                    ],
+                    "name": "Julie Heimbach",
+                    "screen_name": "JulieHeimbach"
+                },
+                {
+                    "id_str": "786204331582173185",
+                    "indices": [
+                        197,
+                        208
+                    ],
+                    "name": "Liver Transplantation Journal (LTxJournal)",
+                    "screen_name": "LTxJournal"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1924010674629288051",
+        "url": "https://x.com/ZKGopang/status/1924010674629288051",
+        "twitterUrl": "https://twitter.com/ZKGopang/status/1924010674629288051",
+        "text": "DG ISPR Lt Gen Ahmed Sharif\u2019s Exclusive Interview with RT Arabic\n\nTensions with India must be viewed in context. India is backing terrorism in Pakistan and hiding behind false narratives. \n\nWithin minutes of the Pahalgam incident, Indian media blamed Pakistan without evidence. \n\nLater, India\u2019s own spokesperson admitted investigations were ongoing.\n\nPakistan offered cooperation via a neutral body if India had proof, but India rejected this and attacked Pakistani mosques, killing civilians. \n\nIndia supports terrorism in Pakistan, from TTP to Baloch groups.\n\nPakistan Armed Forces are bound to protect sovereignty\u2014and did so, fully and decisively. \n\nOn May 6\u20137, India fired missiles targeting civilians; Pakistan downed 6 jets. \n\nOn May 9\u201310, India launched more attacks. On May 10, Pakistan responded with precision, targeting only military sites, avoiding civilians\u2014a balanced and responsible reply.\n\n#India then requested a ceasefire. #Pakistan, seeking peace and stability, agreed.\n\nPakistan\u2019s diplomacy played a key global role. We are a peaceful, serious nation. Our priority is always peace. Even major powers like the U.S. understand the spirit of the Pakistani people.\n\n#Pakistan #India #Trump #Modi",
+        "source": "Twitter for iPhone",
+        "retweetCount": 1,
+        "replyCount": 0,
+        "likeCount": 1,
+        "quoteCount": 0,
+        "viewCount": 159,
+        "createdAt": "Sun May 18 07:54:25 +0000 2025",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1924010674629288051",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "ZKGopang",
+            "url": "https://x.com/ZKGopang",
+            "twitterUrl": "https://twitter.com/ZKGopang",
+            "id": "1361539212",
+            "name": "Zubair Khan Gopang",
+            "isVerified": false,
+            "isBlueVerified": false,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/1920025081763225601/VT4m0Jln_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/1361539212/1648999482",
+            "description": "",
+            "location": "London, England",
+            "followers": 756,
+            "following": 502,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Thu Apr 18 10:20:46 +0000 2013",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 1698,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 1036,
+            "statusesCount": 5483,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "Debater, Writer, Columnist, Researcher, Blogger",
+                "entities": {
+                    "description": {}
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": null,
+        "place": {},
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        906,
+                        912
+                    ],
+                    "text": "India"
+                },
+                {
+                    "indices": [
+                        941,
+                        950
+                    ],
+                    "text": "Pakistan"
+                },
+                {
+                    "indices": [
+                        1182,
+                        1191
+                    ],
+                    "text": "Pakistan"
+                },
+                {
+                    "indices": [
+                        1192,
+                        1198
+                    ],
+                    "text": "India"
+                },
+                {
+                    "indices": [
+                        1199,
+                        1205
+                    ],
+                    "text": "Trump"
+                },
+                {
+                    "indices": [
+                        1206,
+                        1211
+                    ],
+                    "text": "Modi"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1924007092039389227",
+        "url": "https://x.com/zarrar_11PK/status/1924007092039389227",
+        "twitterUrl": "https://twitter.com/zarrar_11PK/status/1924007092039389227",
+        "text": "DG ISPR Lt Gen Ahmed Sharif\u2019s Exclusive Interview with RT Arabic\n\nTensions with India must be viewed in context. India is backing terrorism in Pakistan and hiding behind false narratives. \n\nWithin minutes of the Pahalgam incident, Indian media blamed Pakistan without evidence. \n\nLater, India\u2019s own spokesperson admitted investigations were ongoing.\n\nPakistan offered cooperation via a neutral body if India had proof, but India rejected this and attacked Pakistani mosques, killing civilians. \n\nIndia supports terrorism in Pakistan, from TTP to Baloch groups.\n\nPakistan Armed Forces are bound to protect sovereignty\u2014and did so, fully and decisively. \n\nOn May 6\u20137, India fired missiles targeting civilians; Pakistan downed 6 jets. \n\nOn May 9\u201310, India launched more attacks. On May 10, Pakistan responded with precision, targeting only military sites, avoiding civilians\u2014a balanced and responsible reply.\n\n#India then requested a ceasefire. #Pakistan, seeking peace and stability, agreed.\n\nPakistan\u2019s diplomacy played a key global role. We are a peaceful, serious nation. Our priority is always peace. Even major powers like the U.S. understand the spirit of the Pakistani people.\n\n#Pakistan #India #Trump #Modi",
+        "source": "Twitter for iPhone",
+        "retweetCount": 133,
+        "replyCount": 10,
+        "likeCount": 361,
+        "quoteCount": 4,
+        "viewCount": 18514,
+        "createdAt": "Sun May 18 07:40:11 +0000 2025",
+        "lang": "en",
+        "bookmarkCount": 47,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1924007092039389227",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "zarrar_11PK",
+            "url": "https://x.com/zarrar_11PK",
+            "twitterUrl": "https://twitter.com/zarrar_11PK",
+            "id": "911892598373175296",
+            "name": "Eagle Eye",
+            "isVerified": false,
+            "isBlueVerified": true,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/1664690930111193088/_EjxUKNk_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/911892598373175296/1672037942",
+            "description": "",
+            "location": "Islamic Republic Of Pakistan",
+            "followers": 97840,
+            "following": 1841,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Sun Sep 24 09:58:32 +0000 2017",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 24836,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 12940,
+            "statusesCount": 26094,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [
+                "1948674663543881847"
+            ],
+            "profile_bio": {
+                "description": "Counter Terrorism, Intelligence, Monitoring, National Security, Defence, Threat Matrix, 5GW, Diplomacy & War",
+                "entities": {
+                    "description": {},
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "theeagleeyeintel.com",
+                                "expanded_url": "http://www.theeagleeyeintel.com",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/1KzyZPb1Ij"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {
+            "media": [
+                {
+                    "additional_media_info": {
+                        "monetizable": false
+                    },
+                    "display_url": "pic.twitter.com/eN3jmyRFbS",
+                    "expanded_url": "https://twitter.com/zarrar_11PK/status/1924007092039389227/video/1",
+                    "ext_media_availability": {
+                        "status": "Available"
+                    },
+                    "id_str": "1924006890071068672",
+                    "indices": [
+                        279,
+                        302
+                    ],
+                    "media_key": "7_1924006890071068672",
+                    "media_results": {
+                        "id": "QXBpTWVkaWFSZXN1bHRzOgwAAwoAARqzchKcFxAACgACGrNyQaJXECsAAA==",
+                        "result": {
+                            "__typename": "ApiMedia",
+                            "id": "QXBpTWVkaWE6DAADCgABGrNyEpwXEAAKAAIas3JBolcQKwAA",
+                            "media_key": "7_1924006890071068672"
+                        }
+                    },
+                    "media_url_https": "https://pbs.twimg.com/ext_tw_video_thumb/1924006890071068672/pu/img/2J-ug-TdI6Mj_ON1.jpg",
+                    "original_info": {
+                        "focus_rects": [],
+                        "height": 1080,
+                        "width": 1920
+                    },
+                    "sizes": {
+                        "large": {
+                            "h": 1080,
+                            "w": 1920
+                        }
+                    },
+                    "type": "video",
+                    "url": "https://t.co/eN3jmyRFbS",
+                    "video_info": {
+                        "aspect_ratio": [
+                            16,
+                            9
+                        ],
+                        "duration_millis": 346602,
+                        "variants": [
+                            {
+                                "content_type": "application/x-mpegURL",
+                                "url": "https://video-s.twimg.com/ext_tw_video/1924006890071068672/pu/pl/jScLW9_kKnBVpbdW.m3u8?tag=12&v=529"
+                            },
+                            {
+                                "bitrate": 256000,
+                                "content_type": "video/mp4",
+                                "url": "https://video-s.twimg.com/ext_tw_video/1924006890071068672/pu/vid/avc1/480x270/h_rPhFNhLzSxPWsY.mp4?tag=12"
+                            },
+                            {
+                                "bitrate": 832000,
+                                "content_type": "video/mp4",
+                                "url": "https://video-s.twimg.com/ext_tw_video/1924006890071068672/pu/vid/avc1/640x360/5BS2XYrfDsssX7Vk.mp4?tag=12"
+                            },
+                            {
+                                "bitrate": 2176000,
+                                "content_type": "video/mp4",
+                                "url": "https://video-s.twimg.com/ext_tw_video/1924006890071068672/pu/vid/avc1/1280x720/gowOGs4cXaN-F3YO.mp4?tag=12"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "card": null,
+        "place": {},
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        906,
+                        912
+                    ],
+                    "text": "India"
+                },
+                {
+                    "indices": [
+                        941,
+                        950
+                    ],
+                    "text": "Pakistan"
+                },
+                {
+                    "indices": [
+                        1182,
+                        1191
+                    ],
+                    "text": "Pakistan"
+                },
+                {
+                    "indices": [
+                        1192,
+                        1198
+                    ],
+                    "text": "India"
+                },
+                {
+                    "indices": [
+                        1199,
+                        1205
+                    ],
+                    "text": "Trump"
+                },
+                {
+                    "indices": [
+                        1206,
+                        1211
+                    ],
+                    "text": "Modi"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1915613178626519302",
+        "url": "https://x.com/Tyler_Lennon/status/1915613178626519302",
+        "twitterUrl": "https://twitter.com/Tyler_Lennon/status/1915613178626519302",
+        "text": "The first thing they need to teach Simmons when he gets to KC is how to do that false start that Jawaan Taylor does every single snap lmao\n\nGet an actually good LT, and now he and your RT are getting away with false starts every snap?\n\nCould be a move",
+        "source": "Twitter for iPhone",
+        "retweetCount": 0,
+        "replyCount": 0,
+        "likeCount": 1,
+        "quoteCount": 0,
+        "viewCount": 85,
+        "createdAt": "Fri Apr 25 03:45:46 +0000 2025",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1915613178626519302",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "Tyler_Lennon",
+            "url": "https://x.com/Tyler_Lennon",
+            "twitterUrl": "https://twitter.com/Tyler_Lennon",
+            "id": "416831585",
+            "name": "Tyler",
+            "isVerified": false,
+            "isBlueVerified": false,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/1802902444365484032/6jRwNqTP_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/416831585/1538109472",
+            "description": "",
+            "location": "THE 903",
+            "followers": 2781,
+            "following": 2110,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Sun Nov 20 05:59:14 +0000 2011",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 231917,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 4069,
+            "statusesCount": 143597,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [
+                "1393049139496247296"
+            ],
+            "profile_bio": {
+                "description": "Aka NRFI Brown, aka NRFI Lee... broadcaster and host for @chadsmediass \u2026 1/3 of @downandout903 \u2026 regular guest on @HaveYouScenePod",
+                "entities": {
+                    "description": {
+                        "user_mentions": [
+                            {
+                                "id_str": "0",
+                                "indices": [
+                                    57,
+                                    70
+                                ],
+                                "name": "",
+                                "screen_name": "chadsmediass"
+                            },
+                            {
+                                "id_str": "0",
+                                "indices": [
+                                    80,
+                                    94
+                                ],
+                                "name": "",
+                                "screen_name": "downandout903"
+                            },
+                            {
+                                "id_str": "0",
+                                "indices": [
+                                    114,
+                                    130
+                                ],
+                                "name": "",
+                                "screen_name": "HaveYouScenePod"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "open.spotify.com/episode/6kUwlv\u2026",
+                                "expanded_url": "https://open.spotify.com/episode/6kUwlv5zyEh6JPJELIF2Ca?si=qZg634cuRiGdiXO02X8H2g",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/r5aSR8dPcO"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": null,
+        "place": {},
+        "entities": {},
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1913701781064065057",
+        "url": "https://x.com/WayneMichaelDe1/status/1913701781064065057",
+        "twitterUrl": "https://twitter.com/WayneMichaelDe1/status/1913701781064065057",
+        "text": "@NotoriousCal_ @GPN_Gaming @LosTalksPats @FitzyGFY @AshtonJeanty2 \"and both guys have been rotated around the line in college.\" Sorry, but that is completely false. Membou played 29 games at RT and 6 games at Guard, never once at LT. Campbell played ONLY at Left Tackle, 38 games worth. They don't need an RT, just signed one.",
+        "source": "Twitter for iPhone",
+        "retweetCount": 0,
+        "replyCount": 1,
+        "likeCount": 0,
+        "quoteCount": 0,
+        "viewCount": 25,
+        "createdAt": "Sat Apr 19 21:10:34 +0000 2025",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": true,
+        "inReplyToId": "1913482512220754008",
+        "conversationId": "1913334576338055612",
+        "inReplyToUserId": "996113683469217794",
+        "inReplyToUsername": "NotoriousCal_",
+        "author": {
+            "type": "user",
+            "userName": "WayneMichaelDe1",
+            "url": "https://x.com/WayneMichaelDe1",
+            "twitterUrl": "https://twitter.com/WayneMichaelDe1",
+            "id": "1508165058236456980",
+            "name": "Wayne Michael DeHart",
+            "isVerified": false,
+            "isBlueVerified": false,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/1763841444995887104/nyZTjt4E_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/1508165058236456980/1704095574",
+            "description": "",
+            "location": "Franklin, NH",
+            "followers": 238,
+            "following": 33,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Sun Mar 27 19:33:19 +0000 2022",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 87251,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 10,
+            "statusesCount": 188,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "NH Vietnam Vet (Army), MBA - Louisiana State University, 32- year member of Mensa, Have a secure, no-ads, creative writing website: https://t.co/VsX2g72glL",
+                "entities": {
+                    "description": {
+                        "urls": [
+                            {
+                                "display_url": "wordsyoucantouch.com",
+                                "expanded_url": "https://wordsyoucantouch.com",
+                                "indices": [
+                                    132,
+                                    155
+                                ],
+                                "url": "https://t.co/VsX2g72glL"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "wordsyoucantouch.com",
+                                "expanded_url": "https://wordsyoucantouch.com/",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/PCKhITkZSz"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": null,
+        "place": {},
+        "entities": {
+            "user_mentions": [
+                {
+                    "id_str": "996113683469217794",
+                    "indices": [
+                        0,
+                        14
+                    ],
+                    "name": "girl dad fitty",
+                    "screen_name": "NotoriousCal_"
+                },
+                {
+                    "id_str": "1389623509",
+                    "indices": [
+                        15,
+                        26
+                    ],
+                    "name": "GPNgaming on youtube",
+                    "screen_name": "GPN_Gaming"
+                },
+                {
+                    "id_str": "752728998942085122",
+                    "indices": [
+                        27,
+                        40
+                    ],
+                    "name": "Carlos A. Lopez",
+                    "screen_name": "LosTalksPats"
+                },
+                {
+                    "id_str": "42405873",
+                    "indices": [
+                        41,
+                        50
+                    ],
+                    "name": "FitzyGFY \ud83c\udf7a (brew checkmark)",
+                    "screen_name": "FitzyGFY"
+                },
+                {
+                    "id_str": "1175131827964719104",
+                    "indices": [
+                        51,
+                        65
+                    ],
+                    "name": "Deuce 2\ufe0f\u20e3",
+                    "screen_name": "AshtonJeanty2"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1908011962916864391",
+        "url": "https://x.com/NVSportsNews/status/1908011962916864391",
+        "twitterUrl": "https://twitter.com/NVSportsNews/status/1908011962916864391",
+        "text": "@Oaklraiders1976 @JDdaSCRaider That\u2019s false look at any website any NFL website here\n\nhttps://t.co/QrJG1rwDnA\nHenry Lawerence was drafted in 1974 as a RT, Vella played at USC, started at LT, but was moved to Rt. It\u2019s all in raiders media. It\u2019s not hard to find but the lazy Raiders history guy never does.",
+        "source": "Twitter for iPhone",
+        "retweetCount": 0,
+        "replyCount": 1,
+        "likeCount": 1,
+        "quoteCount": 1,
+        "viewCount": 847,
+        "createdAt": "Fri Apr 04 04:21:15 +0000 2025",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": true,
+        "inReplyToId": "1907882040684392767",
+        "conversationId": "1907576765666517488",
+        "inReplyToUserId": "445913320",
+        "inReplyToUsername": "Oaklraiders1976",
+        "author": {
+            "type": "user",
+            "userName": "NVSportsNews",
+            "url": "https://x.com/NVSportsNews",
+            "twitterUrl": "https://twitter.com/NVSportsNews",
+            "id": "1749653076569620480",
+            "name": "NVSportsNews",
+            "isVerified": false,
+            "isBlueVerified": false,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/1749658519123685376/flmmE8s1_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/1749653076569620480/1705986027",
+            "description": "",
+            "location": "Nevada, USA",
+            "followers": 84,
+            "following": 397,
+            "status": "",
+            "canDm": false,
+            "canMediaTag": true,
+            "createdAt": "Tue Jan 23 04:39:51 +0000 2024",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 166,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 33,
+            "statusesCount": 9524,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "Follow and support NV Sports",
+                "entities": {
+                    "description": {}
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": {
+            "binding_values": [
+                {
+                    "key": "thumbnail_image",
+                    "value": {
+                        "image_value": {
+                            "height": 144,
+                            "url": "https://pbs.twimg.com/card_img/1947642719674806272/KZcqyjcJ?format=png&name=144x144_2",
+                            "width": 144
+                        }
+                    }
+                },
+                {
+                    "key": "description",
+                    "value": {
+                        "string_value": "Checkout the latest stats for John Vella. Get info about his position, age, height, weight, college, draft, and more on Pro-football-reference.com."
+                    }
+                },
+                {
+                    "key": "domain",
+                    "value": {
+                        "string_value": "www.pro-football-reference.com"
+                    }
+                },
+                {
+                    "key": "thumbnail_image_large",
+                    "value": {
+                        "image_value": {
+                            "height": 228,
+                            "url": "https://pbs.twimg.com/card_img/1947642719674806272/KZcqyjcJ?format=png&name=280x280_2",
+                            "width": 228
+                        }
+                    }
+                },
+                {
+                    "key": "thumbnail_image_original",
+                    "value": {
+                        "image_value": {
+                            "height": 228,
+                            "url": "https://pbs.twimg.com/card_img/1947642719674806272/KZcqyjcJ?format=png&name=orig",
+                            "width": 228
+                        }
+                    }
+                },
+                {
+                    "key": "site",
+                    "value": {
+                        "scribe_key": "publisher_id",
+                        "user_value": {
+                            "id_str": "68450080"
+                        }
+                    }
+                },
+                {
+                    "key": "thumbnail_image_small",
+                    "value": {
+                        "image_value": {
+                            "height": 100,
+                            "url": "https://pbs.twimg.com/card_img/1947642719674806272/KZcqyjcJ?format=png&name=100x100_2",
+                            "width": 100
+                        }
+                    }
+                },
+                {
+                    "key": "thumbnail_image_x_large",
+                    "value": {
+                        "image_value": {
+                            "height": 228,
+                            "url": "https://pbs.twimg.com/card_img/1947642719674806272/KZcqyjcJ?format=png&name=2048x2048_2_exp",
+                            "width": 228
+                        }
+                    }
+                },
+                {
+                    "key": "vanity_url",
+                    "value": {
+                        "scribe_key": "vanity_url",
+                        "string_value": "pro-football-reference.com"
+                    }
+                },
+                {
+                    "key": "thumbnail_image_color",
+                    "value": {
+                        "image_color_value": {
+                            "palette": [
+                                {
+                                    "percentage": 79.77,
+                                    "rgb": {
+                                        "blue": 69,
+                                        "green": 133,
+                                        "red": 0
+                                    }
+                                },
+                                {
+                                    "percentage": 18.7,
+                                    "rgb": {
+                                        "blue": 255,
+                                        "green": 255,
+                                        "red": 255
+                                    }
+                                },
+                                {
+                                    "percentage": 1.54,
+                                    "rgb": {
+                                        "blue": 171,
+                                        "green": 200,
+                                        "red": 142
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "key": "title",
+                    "value": {
+                        "string_value": "John Vella Stats, Height, Weight, Position, Draft, College | Pro-Football-Reference.com"
+                    }
+                },
+                {
+                    "key": "card_url",
+                    "value": {
+                        "scribe_key": "card_url",
+                        "string_value": "https://t.co/QrJG1rwDnA"
+                    }
+                }
+            ],
+            "card_platform": {
+                "platform": {
+                    "audience": {
+                        "name": "production"
+                    },
+                    "device": {
+                        "name": "iPhone",
+                        "version": "13"
+                    }
+                }
+            },
+            "name": "summary",
+            "url": "https://t.co/QrJG1rwDnA",
+            "user_refs_results": [
+                {
+                    "rest_id": "68450080",
+                    "result": {
+                        "__typename": "User",
+                        "action_counts": {
+                            "favorites_count": 7303
+                        },
+                        "avatar": {
+                            "image_url": "https://pbs.twimg.com/profile_images/698242575514341377/1bTytRpL_normal.png"
+                        },
+                        "banner": {
+                            "image_url": "https://pbs.twimg.com/profile_banners/68450080/1454703619"
+                        },
+                        "core": {
+                            "created_at": "Mon Aug 24 16:47:56 +0000 2009",
+                            "name": "Pro Football Reference",
+                            "screen_name": "pfref"
+                        },
+                        "dm_permissions": {
+                            "can_dm": false
+                        },
+                        "exclusive_tweet_following": false,
+                        "identity_profile_labels_highlighted_label": {},
+                        "location": {
+                            "location": "Philadelphia"
+                        },
+                        "media_permissions": {
+                            "can_media_tag": true
+                        },
+                        "notifications_settings": {},
+                        "pinned_items": {
+                            "tweet_ids_str": [
+                                "1887938944248991898"
+                            ]
+                        },
+                        "privacy": {},
+                        "private_super_following": false,
+                        "profile_bio": {
+                            "description": "Football stats & history database \ud83c\udfc8\n\nAccount is largely unmonitored\u2014find us here https://t.co/h0rVufh90Z or contact us at https://t.co/91rV9C3fxG",
+                            "entities": {
+                                "description": {
+                                    "urls": [
+                                        {
+                                            "display_url": "tinysr.com/social-media",
+                                            "expanded_url": "https://tinysr.com/social-media",
+                                            "indices": [
+                                                81,
+                                                104
+                                            ],
+                                            "url": "https://t.co/h0rVufh90Z"
+                                        },
+                                        {
+                                            "display_url": "sports-reference.com/feedback",
+                                            "expanded_url": "http://sports-reference.com/feedback",
+                                            "indices": [
+                                                122,
+                                                145
+                                            ],
+                                            "url": "https://t.co/91rV9C3fxG"
+                                        }
+                                    ]
+                                },
+                                "url": {
+                                    "urls": [
+                                        {
+                                            "display_url": "pro-football-reference.com",
+                                            "expanded_url": "http://www.pro-football-reference.com/",
+                                            "indices": [
+                                                0,
+                                                23
+                                            ],
+                                            "url": "https://t.co/qTFmivZd89"
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        "profile_metadata": {
+                            "profile_interstitial_type": "",
+                            "profile_link_color": "00834C"
+                        },
+                        "profile_translation": {
+                            "translator_type_enum": "None"
+                        },
+                        "properties": {
+                            "has_extended_profile": true
+                        },
+                        "relationship_counts": {
+                            "followers": 68900,
+                            "following": 1135
+                        },
+                        "relationship_perspectives": {},
+                        "rest_id": "68450080",
+                        "super_follow_eligible": false,
+                        "super_followed_by": false,
+                        "super_following": false,
+                        "tweet_counts": {
+                            "media_tweets": 12507,
+                            "tweets": 42790
+                        },
+                        "website": {
+                            "url": "https://t.co/qTFmivZd89"
+                        },
+                        "verification": {
+                            "is_blue_verified": false
+                        }
+                    }
+                }
+            ]
+        },
+        "place": {},
+        "entities": {
+            "urls": [
+                {
+                    "display_url": "pro-football-reference.com/players/V/Vell\u2026",
+                    "expanded_url": "https://www.pro-football-reference.com/players/V/VellJo20.htm",
+                    "indices": [
+                        86,
+                        109
+                    ],
+                    "url": "https://t.co/QrJG1rwDnA"
+                }
+            ],
+            "user_mentions": [
+                {
+                    "id_str": "445913320",
+                    "indices": [
+                        0,
+                        16
+                    ],
+                    "name": "Raiders History",
+                    "screen_name": "Oaklraiders1976"
+                },
+                {
+                    "id_str": "754466646",
+                    "indices": [
+                        17,
+                        30
+                    ],
+                    "name": "JD from SC",
+                    "screen_name": "JDdaSCRaider"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1901022297684931066",
+        "url": "https://x.com/jacki_bloo/status/1901022297684931066",
+        "twitterUrl": "https://twitter.com/jacki_bloo/status/1901022297684931066",
+        "text": "@AreOhEssEyeEe Carter is the older bro on the LT. Anderson is in the RT photo.  Totally false comparison. Moot point, and completely false premise. Id delete this post as it removes credibility from the poster.",
+        "source": "Twitter for iPhone",
+        "retweetCount": 0,
+        "replyCount": 0,
+        "likeCount": 0,
+        "quoteCount": 0,
+        "viewCount": 15,
+        "createdAt": "Sat Mar 15 21:26:49 +0000 2025",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": true,
+        "inReplyToId": "1900722481985401272",
+        "conversationId": "1900722481985401272",
+        "inReplyToUserId": "466145821",
+        "inReplyToUsername": "AreOhEssEyeEe",
+        "author": {
+            "type": "user",
+            "userName": "jacki_bloo",
+            "url": "https://x.com/jacki_bloo",
+            "twitterUrl": "https://twitter.com/jacki_bloo",
+            "id": "1480953126043598850",
+            "name": "Jacki Bloo \ud83c\uddfa\ud83c\uddf8\ud83c\uddf7\ud83c\uddfa",
+            "isVerified": false,
+            "isBlueVerified": false,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/1480960413080510467/Qw31gvPt_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/1480953126043598850/1744430168",
+            "description": "",
+            "location": "",
+            "followers": 665,
+            "following": 1736,
+            "status": "",
+            "canDm": false,
+            "canMediaTag": true,
+            "createdAt": "Tue Jan 11 17:24:27 +0000 2022",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 62063,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 496,
+            "statusesCount": 17930,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [
+                "1532770275170717698"
+            ],
+            "profile_bio": {
+                "description": "Patriot, constitutionalist, pure blood, truth seeker. Trump 2024 let\u2019s finish off the evil in high places.",
+                "entities": {
+                    "description": {}
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": null,
+        "place": {},
+        "entities": {
+            "user_mentions": [
+                {
+                    "id_str": "466145821",
+                    "indices": [
+                        0,
+                        14
+                    ],
+                    "name": "\ud83c\udde8\ud83c\udde6Unacceptable Canadian Girl\ud83c\udde8\ud83c\udde6",
+                    "screen_name": "AreOhEssEyeEe"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1900942960033751532",
+        "url": "https://x.com/MrPatsVigilante/status/1900942960033751532",
+        "twitterUrl": "https://twitter.com/MrPatsVigilante/status/1900942960033751532",
+        "text": "@SavageSports_ False! Because now they got rid of nost of the holes or upgraded in defense ALSO shored up RT with Morgan Moses. They left themselves primarily with WR and LT and can hyperfocus on finding the best talent at each position in round 1 and 2.",
+        "source": "Twitter for iPhone",
+        "retweetCount": 0,
+        "replyCount": 1,
+        "likeCount": 0,
+        "quoteCount": 0,
+        "viewCount": 175,
+        "createdAt": "Sat Mar 15 16:11:34 +0000 2025",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": true,
+        "inReplyToId": "1900942612996989142",
+        "conversationId": "1900942612996989142",
+        "inReplyToUserId": "1149355281123553285",
+        "inReplyToUsername": "SavageSports_",
+        "author": {
+            "type": "user",
+            "userName": "MrPatsVigilante",
+            "url": "https://x.com/MrPatsVigilante",
+            "twitterUrl": "https://twitter.com/MrPatsVigilante",
+            "id": "1593800723191455747",
+            "name": "The Patriots Vigilante",
+            "isVerified": false,
+            "isBlueVerified": false,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/1914814867833315328/5rBjgVRA_normal.jpg",
+            "coverPicture": "",
+            "description": "",
+            "location": "",
+            "followers": 53,
+            "following": 149,
+            "status": "",
+            "canDm": false,
+            "canMediaTag": true,
+            "createdAt": "Sat Nov 19 02:58:25 +0000 2022",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 35693,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 69,
+            "statusesCount": 6469,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "I detect Patriot hate and then I come set the record straight! The #1 Patriots Enthusiast on Twitter/X. All facts with a sprinkle of confirmation bias!",
+                "entities": {
+                    "description": {}
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": null,
+        "place": {},
+        "entities": {
+            "user_mentions": [
+                {
+                    "id_str": "1149355281123553285",
+                    "indices": [
+                        0,
+                        14
+                    ],
+                    "name": "Savage",
+                    "screen_name": "SavageSports_"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1889286714528588115",
+        "url": "https://x.com/3volutionBBQ/status/1889286714528588115",
+        "twitterUrl": "https://twitter.com/3volutionBBQ/status/1889286714528588115",
+        "text": "@geoffschwartz Uhm.  No.  Offensive line first and foremost.  Mr false start, illegal motion RT needs to go.  they need to address #65 and they need to address LT.  \nJust like they did after they got stomped by TB12.",
+        "source": "Twitter for iPhone",
+        "retweetCount": 0,
+        "replyCount": 0,
+        "likeCount": 0,
+        "quoteCount": 0,
+        "viewCount": 3,
+        "createdAt": "Tue Feb 11 12:13:48 +0000 2025",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": true,
+        "inReplyToId": "1888918479392391200",
+        "conversationId": "1888918479392391200",
+        "inReplyToUserId": "251232208",
+        "inReplyToUsername": "geoffschwartz",
+        "author": {
+            "type": "user",
+            "userName": "3volutionBBQ",
+            "url": "https://x.com/3volutionBBQ",
+            "twitterUrl": "https://twitter.com/3volutionBBQ",
+            "id": "1880220802957582336",
+            "name": "Ben Garrett",
+            "isVerified": false,
+            "isBlueVerified": false,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/1880226877282947072/y6X0EfFM_normal.jpg",
+            "coverPicture": "",
+            "description": "",
+            "location": "",
+            "followers": 109,
+            "following": 48,
+            "status": "",
+            "canDm": false,
+            "canMediaTag": true,
+            "createdAt": "Fri Jan 17 11:49:34 +0000 2025",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 1545,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 39,
+            "statusesCount": 827,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "",
+                "entities": {
+                    "description": {}
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": null,
+        "place": {},
+        "entities": {
+            "user_mentions": [
+                {
+                    "id_str": "251232208",
+                    "indices": [
+                        0,
+                        14
+                    ],
+                    "name": "Geoff Schwartz",
+                    "screen_name": "geoffschwartz"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1886994002693775502",
+        "url": "https://x.com/The_FantasyGold/status/1886994002693775502",
+        "twitterUrl": "https://twitter.com/The_FantasyGold/status/1886994002693775502",
+        "text": "@KC_Sec_302 @LoechnerNFL @SamMonsonNFL First off a LT false start is something your RT is allowed to do every game so really??? Also the facemask was hard to see but ya that's a miss but the two plays in question were both reviewed and still held.",
+        "source": "Twitter for iPhone",
+        "retweetCount": 0,
+        "replyCount": 2,
+        "likeCount": 1,
+        "quoteCount": 0,
+        "viewCount": 93,
+        "createdAt": "Wed Feb 05 04:23:23 +0000 2025",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": true,
+        "inReplyToId": "1886933858660016358",
+        "conversationId": "1886927378338697489",
+        "inReplyToUserId": "1505554453683965960",
+        "inReplyToUsername": "KC_Sec_302",
+        "author": {
+            "type": "user",
+            "userName": "The_FantasyGold",
+            "url": "https://x.com/The_FantasyGold",
+            "twitterUrl": "https://twitter.com/The_FantasyGold",
+            "id": "1508491506117595136",
+            "name": "Peter Cardinale",
+            "isVerified": false,
+            "isBlueVerified": false,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/1525907645768470529/Q5vKBcpI_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/1508491506117595136/1652639812",
+            "description": "",
+            "location": "Sacramento, CA",
+            "followers": 569,
+            "following": 397,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Mon Mar 28 17:11:21 +0000 2022",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 9863,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 903,
+            "statusesCount": 14579,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [
+                "1817682926374629391"
+            ],
+            "profile_bio": {
+                "description": "",
+                "entities": {
+                    "description": {}
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": null,
+        "place": {},
+        "entities": {
+            "user_mentions": [
+                {
+                    "id_str": "1505554453683965960",
+                    "indices": [
+                        0,
+                        11
+                    ],
+                    "name": "KC Sec 302",
+                    "screen_name": "KC_Sec_302"
+                },
+                {
+                    "id_str": "130258583",
+                    "indices": [
+                        12,
+                        24
+                    ],
+                    "name": "Tyler Loechner",
+                    "screen_name": "LoechnerNFL"
+                },
+                {
+                    "id_str": "27862658",
+                    "indices": [
+                        25,
+                        38
+                    ],
+                    "name": "Sam Monson",
+                    "screen_name": "SamMonsonNFL"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1885899404978078033",
+        "url": "https://x.com/ThaBowlerr/status/1885899404978078033",
+        "twitterUrl": "https://twitter.com/ThaBowlerr/status/1885899404978078033",
+        "text": "Chiefs had to move their LG to LT\u2026. Their RT consistently false starts.. this is wild lmaoo",
+        "source": "Twitter for iPhone",
+        "retweetCount": 0,
+        "replyCount": 0,
+        "likeCount": 0,
+        "quoteCount": 0,
+        "viewCount": 88,
+        "createdAt": "Sun Feb 02 03:53:51 +0000 2025",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1885899404978078033",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "ThaBowlerr",
+            "url": "https://x.com/ThaBowlerr",
+            "twitterUrl": "https://twitter.com/ThaBowlerr",
+            "id": "1443350961020358663",
+            "name": "Are U Sure?\ud83e\udd85",
+            "isVerified": false,
+            "isBlueVerified": false,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/1918750117433110528/FSy3jvIQ_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/1443350961020358663/1717443810",
+            "description": "",
+            "location": "New Jersey, USA",
+            "followers": 1987,
+            "following": 2827,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": false,
+            "createdAt": "Wed Sep 29 23:04:31 +0000 2021",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 201725,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 1604,
+            "statusesCount": 91775,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [
+                "1850976140359311765"
+            ],
+            "profile_bio": {
+                "description": "2x SB champ. 1x Bowling league champ. 2x flag football league champ. 1x Men\u2019s Bball league champ. Squirt connoisseur. #Eagles #Nets",
+                "entities": {
+                    "description": {
+                        "hashtags": [
+                            {
+                                "indices": [
+                                    118,
+                                    125
+                                ],
+                                "text": "Eagles"
+                            },
+                            {
+                                "indices": [
+                                    126,
+                                    131
+                                ],
+                                "text": "Nets"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": null,
+        "place": {},
+        "entities": {},
+        "quoted_tweet": {
+            "type": "tweet",
+            "id": "1885749961448661452",
+            "url": "https://x.com/FDSportsbook/status/1885749961448661452",
+            "twitterUrl": "https://twitter.com/FDSportsbook/status/1885749961448661452",
+            "text": "Chiefs: Better QB \u2705\nEagles: Better defense \u2705\n\nWhat would you change here? \ud83e\udd14 https://t.co/Z5nRpr3DBx",
+            "source": "Twitter for iPhone",
+            "retweetCount": 14,
+            "replyCount": 135,
+            "likeCount": 138,
+            "quoteCount": 52,
+            "viewCount": 71684,
+            "createdAt": "Sat Feb 01 18:00:01 +0000 2025",
+            "lang": "en",
+            "bookmarkCount": 4,
+            "isReply": false,
+            "inReplyToId": null,
+            "conversationId": "1885749961448661452",
+            "inReplyToUserId": null,
+            "inReplyToUsername": null,
+            "author": {
+                "type": "user",
+                "userName": "FDSportsbook",
+                "url": "https://x.com/FDSportsbook",
+                "twitterUrl": "https://twitter.com/FDSportsbook",
+                "id": "2160790669",
+                "name": "FanDuel Sportsbook",
+                "isVerified": false,
+                "isBlueVerified": true,
+                "verifiedType": "Business",
+                "profilePicture": "https://pbs.twimg.com/profile_images/1625155563750404096/EdqJU8rg_normal.jpg",
+                "coverPicture": "https://pbs.twimg.com/profile_banners/2160790669/1676302258",
+                "description": "",
+                "location": "",
+                "followers": 411380,
+                "following": 1164,
+                "status": "",
+                "canDm": true,
+                "canMediaTag": false,
+                "createdAt": "Mon Oct 28 12:14:33 +0000 2013",
+                "entities": {
+                    "description": {
+                        "urls": []
+                    },
+                    "url": {}
+                },
+                "fastFollowersCount": 0,
+                "favouritesCount": 75760,
+                "hasCustomTimelines": true,
+                "isTranslator": false,
+                "mediaCount": 55236,
+                "statusesCount": 97470,
+                "withheldInCountries": [],
+                "affiliatesHighlightedLabel": {
+                    "label": {
+                        "badge": {
+                            "url": "https://pbs.twimg.com/profile_images/1562073119233376256/xi2OPUMe_bigger.jpg"
+                        },
+                        "description": "FanDuel",
+                        "url": {
+                            "url": "https://twitter.com/FanDuel",
+                            "url_type": "DeepLink"
+                        },
+                        "user_label_type": "BusinessLabel",
+                        "user_label_display_type": "Badge"
+                    }
+                },
+                "possiblySensitive": false,
+                "pinnedTweetIds": [
+                    "1948901077606101346"
+                ],
+                "profile_bio": {
+                    "description": "America's #1 Sportsbook! 21+ in select states (18+ in DC, KY, WY). Gambling Problem? Call 1-800-GAMBLER or visit https://t.co/5xElVVARkW. Need help? DM @FanDuel_Support",
+                    "entities": {
+                        "description": {
+                            "urls": [
+                                {
+                                    "display_url": "fanduel.com/rg",
+                                    "expanded_url": "http://fanduel.com/rg",
+                                    "indices": [
+                                        113,
+                                        136
+                                    ],
+                                    "url": "https://t.co/5xElVVARkW"
+                                }
+                            ],
+                            "user_mentions": [
+                                {
+                                    "id_str": "0",
+                                    "indices": [
+                                        152,
+                                        168
+                                    ],
+                                    "name": "",
+                                    "screen_name": "FanDuel_Support"
+                                }
+                            ]
+                        },
+                        "url": {
+                            "urls": [
+                                {
+                                    "display_url": "bit.ly/FD-Sportsbook",
+                                    "expanded_url": "http://bit.ly/FD-Sportsbook",
+                                    "indices": [
+                                        0,
+                                        23
+                                    ],
+                                    "url": "https://t.co/VVKAVKS8Oc"
+                                }
+                            ]
+                        }
+                    }
+                },
+                "isAutomated": false,
+                "automatedBy": null
+            },
+            "extendedEntities": {
+                "media": [
+                    {
+                        "allow_download_status": {
+                            "allow_download": true
+                        },
+                        "display_url": "pic.twitter.com/Z5nRpr3DBx",
+                        "expanded_url": "https://twitter.com/FDSportsbook/status/1885749961448661452/photo/1",
+                        "ext_media_availability": {
+                            "status": "Available"
+                        },
+                        "features": {
+                            "large": {},
+                            "orig": {}
+                        },
+                        "id_str": "1885709920164577280",
+                        "indices": [
+                            76,
+                            99
+                        ],
+                        "media_key": "3_1885709920164577280",
+                        "media_results": {
+                            "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAARorYy501wAACgACGiuHmUtaocwAAA==",
+                            "result": {
+                                "__typename": "ApiMedia",
+                                "id": "QXBpTWVkaWE6DAABCgABGitjLnTXAAAKAAIaK4eZS1qhzAAA",
+                                "media_key": "3_1885709920164577280"
+                            }
+                        },
+                        "media_url_https": "https://pbs.twimg.com/media/GitjLnTXAAALHY3.jpg",
+                        "original_info": {
+                            "focus_rects": [
+                                {
+                                    "h": 605,
+                                    "w": 1080,
+                                    "x": 0,
+                                    "y": 745
+                                },
+                                {
+                                    "h": 1080,
+                                    "w": 1080,
+                                    "x": 0,
+                                    "y": 270
+                                },
+                                {
+                                    "h": 1231,
+                                    "w": 1080,
+                                    "x": 0,
+                                    "y": 119
+                                },
+                                {
+                                    "h": 1350,
+                                    "w": 675,
+                                    "x": 236,
+                                    "y": 0
+                                },
+                                {
+                                    "h": 1350,
+                                    "w": 1080,
+                                    "x": 0,
+                                    "y": 0
+                                }
+                            ],
+                            "height": 1350,
+                            "width": 1080
+                        },
+                        "sizes": {
+                            "large": {
+                                "h": 1350,
+                                "w": 1080
+                            }
+                        },
+                        "type": "photo",
+                        "url": "https://t.co/Z5nRpr3DBx"
+                    }
+                ]
+            },
+            "card": null,
+            "place": {},
+            "entities": {},
+            "quoted_tweet": null,
+            "retweeted_tweet": null,
+            "article": null
+        },
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1881073149334389068",
+        "url": "https://x.com/chiefs_Alpha/status/1881073149334389068",
+        "twitterUrl": "https://twitter.com/chiefs_Alpha/status/1881073149334389068",
+        "text": "Trey Smith never developed his Pass Pro\u2026.whom is gonna rest the market first him?\ud83d\ude02\nMahomes is playing with \ud83d\uddd1\ufe0fweapons, NO LT, the worst RT in the league, practice Squad LG but Veach\u2019s Team are paying @Schultz_Report to spread false information like a Russian propaganda machine. https://t.co/a3aOg0Ur2B",
+        "source": "Twitter for iPhone",
+        "retweetCount": 0,
+        "replyCount": 0,
+        "likeCount": 0,
+        "quoteCount": 1,
+        "viewCount": 389,
+        "createdAt": "Sun Jan 19 20:16:02 +0000 2025",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1881073149334389068",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "chiefs_Alpha",
+            "url": "https://x.com/chiefs_Alpha",
+            "twitterUrl": "https://twitter.com/chiefs_Alpha",
+            "id": "1733509694684082176",
+            "name": "Clark Hunt & Brett Veach are terrorists \ud83e\udee5",
+            "isVerified": false,
+            "isBlueVerified": false,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/1932466204062498816/T1hvaEgk_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/1733509694684082176/1738848200",
+            "description": "",
+            "location": "Kansas City, Missouri",
+            "followers": 213,
+            "following": 733,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": false,
+            "createdAt": "Sat Dec 09 15:31:55 +0000 2023",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 38225,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 1617,
+            "statusesCount": 15068,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "Former Chiefs fan until Brett Veach & Andy Heck are fired\ud83d\udea8| Former Mavs fan until Nico Harrison is d3ad\ud83d\udea8| Royals please give me a good season\ud83d\ude4f\ud83c\udffb",
+                "entities": {
+                    "description": {}
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {
+            "media": [
+                {
+                    "allow_download_status": {
+                        "allow_download": true
+                    },
+                    "display_url": "pic.twitter.com/a3aOg0Ur2B",
+                    "expanded_url": "https://twitter.com/chiefs_Alpha/status/1881073149334389068/photo/1",
+                    "ext_media_availability": {
+                        "status": "Available"
+                    },
+                    "features": {
+                        "large": {},
+                        "orig": {}
+                    },
+                    "id_str": "1881073145458626560",
+                    "indices": [
+                        278,
+                        301
+                    ],
+                    "media_key": "3_1881073145458626560",
+                    "media_results": {
+                        "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAARoa6g83lpAACgACGhrqEB6aAUwAAA==",
+                        "result": {
+                            "__typename": "ApiMedia",
+                            "id": "QXBpTWVkaWE6DAABCgABGhrqDzeWkAAKAAIaGuoQHpoBTAAA",
+                            "media_key": "3_1881073145458626560"
+                        }
+                    },
+                    "media_url_https": "https://pbs.twimg.com/media/GhrqDzeWkAAK4Oe.jpg",
+                    "original_info": {
+                        "focus_rects": [
+                            {
+                                "h": 660,
+                                "w": 1179,
+                                "x": 0,
+                                "y": 53
+                            },
+                            {
+                                "h": 1028,
+                                "w": 1028,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1028,
+                                "w": 902,
+                                "x": 50,
+                                "y": 0
+                            },
+                            {
+                                "h": 1028,
+                                "w": 514,
+                                "x": 244,
+                                "y": 0
+                            },
+                            {
+                                "h": 1028,
+                                "w": 1179,
+                                "x": 0,
+                                "y": 0
+                            }
+                        ],
+                        "height": 1028,
+                        "width": 1179
+                    },
+                    "sizes": {
+                        "large": {
+                            "h": 1028,
+                            "w": 1179
+                        }
+                    },
+                    "type": "photo",
+                    "url": "https://t.co/a3aOg0Ur2B"
+                }
+            ]
+        },
+        "card": null,
+        "place": {},
+        "entities": {
+            "user_mentions": [
+                {
+                    "id_str": "52712735",
+                    "indices": [
+                        199,
+                        214
+                    ],
+                    "name": "Jordan Schultz",
+                    "screen_name": "Schultz_Report"
+                }
+            ]
+        },
+        "quoted_tweet": {
+            "type": "tweet",
+            "id": "1881060509195419685",
+            "url": "https://x.com/AcccountStat/status/1881060509195419685",
+            "twitterUrl": "https://twitter.com/AcccountStat/status/1881060509195419685",
+            "text": "Interior lineman pass pro during true pass sets (centers in red &amp; guards in blue)\n\nx = Pressure % Allowed\ny = Blown Block %\nUp = good | Right = good https://t.co/hGYb6G92G4",
+            "source": "Twitter for iPhone",
+            "retweetCount": 16,
+            "replyCount": 23,
+            "likeCount": 174,
+            "quoteCount": 56,
+            "viewCount": 121517,
+            "createdAt": "Sun Jan 19 19:25:48 +0000 2025",
+            "lang": "en",
+            "bookmarkCount": 40,
+            "isReply": false,
+            "inReplyToId": null,
+            "conversationId": "1881060509195419685",
+            "inReplyToUserId": null,
+            "inReplyToUsername": null,
+            "author": {
+                "type": "user",
+                "userName": "AcccountStat",
+                "url": "https://x.com/AcccountStat",
+                "twitterUrl": "https://twitter.com/AcccountStat",
+                "id": "1588217429661999104",
+                "name": "Stat Acccount",
+                "isVerified": false,
+                "isBlueVerified": false,
+                "verifiedType": null,
+                "profilePicture": "https://pbs.twimg.com/profile_images/1588217506132549632/frzOy4ur_normal.png",
+                "coverPicture": "",
+                "description": "",
+                "location": "",
+                "followers": 7350,
+                "following": 75,
+                "status": "",
+                "canDm": false,
+                "canMediaTag": false,
+                "createdAt": "Thu Nov 03 17:12:15 +0000 2022",
+                "entities": {
+                    "description": {
+                        "urls": []
+                    },
+                    "url": {}
+                },
+                "fastFollowersCount": 0,
+                "favouritesCount": 3549,
+                "hasCustomTimelines": true,
+                "isTranslator": false,
+                "mediaCount": 532,
+                "statusesCount": 1732,
+                "withheldInCountries": [],
+                "affiliatesHighlightedLabel": {},
+                "possiblySensitive": false,
+                "pinnedTweetIds": [
+                    "1734023787593503168"
+                ],
+                "profile_bio": {
+                    "description": "",
+                    "entities": {
+                        "description": {}
+                    }
+                },
+                "isAutomated": false,
+                "automatedBy": null
+            },
+            "extendedEntities": {
+                "media": [
+                    {
+                        "allow_download_status": {
+                            "allow_download": true
+                        },
+                        "display_url": "pic.twitter.com/hGYb6G92G4",
+                        "expanded_url": "https://twitter.com/AcccountStat/status/1881060509195419685/photo/1",
+                        "ext_media_availability": {
+                            "status": "Available"
+                        },
+                        "features": {
+                            "large": {},
+                            "orig": {}
+                        },
+                        "id_str": "1881060427318145024",
+                        "indices": [
+                            153,
+                            176
+                        ],
+                        "media_key": "3_1881060427318145024",
+                        "media_results": {
+                            "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAARoa3n4LV7AACgACGhrekRubwCUAAA==",
+                            "result": {
+                                "__typename": "ApiMedia",
+                                "id": "QXBpTWVkaWE6DAABCgABGhrefgtXsAAKAAIaGt6RG5vAJQAA",
+                                "media_key": "3_1881060427318145024"
+                            }
+                        },
+                        "media_url_https": "https://pbs.twimg.com/media/GhrefgtXsAAVMBq.jpg",
+                        "original_info": {
+                            "focus_rects": [
+                                {
+                                    "h": 1613,
+                                    "w": 2880,
+                                    "x": 0,
+                                    "y": 0
+                                },
+                                {
+                                    "h": 1800,
+                                    "w": 1800,
+                                    "x": 756,
+                                    "y": 0
+                                },
+                                {
+                                    "h": 1800,
+                                    "w": 1579,
+                                    "x": 867,
+                                    "y": 0
+                                },
+                                {
+                                    "h": 1800,
+                                    "w": 900,
+                                    "x": 1206,
+                                    "y": 0
+                                },
+                                {
+                                    "h": 1800,
+                                    "w": 2880,
+                                    "x": 0,
+                                    "y": 0
+                                }
+                            ],
+                            "height": 1800,
+                            "width": 2880
+                        },
+                        "sizes": {
+                            "large": {
+                                "h": 1280,
+                                "w": 2048
+                            }
+                        },
+                        "type": "photo",
+                        "url": "https://t.co/hGYb6G92G4"
+                    }
+                ]
+            },
+            "card": null,
+            "place": {},
+            "entities": {},
+            "quoted_tweet": null,
+            "retweeted_tweet": null,
+            "article": null
+        },
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1881027362642600296",
+        "url": "https://x.com/gringosuavex/status/1881027362642600296",
+        "twitterUrl": "https://twitter.com/gringosuavex/status/1881027362642600296",
+        "text": "This is why people hate Mahomes and the bias he gets from the refs. This nonsense right here. Refs call absurd fouls on the Chiefs opponents but never call the LT or RT holding or false starts. Just unbelievable how low the NFL product has fallen.",
+        "source": "Twitter for iPhone",
+        "retweetCount": 0,
+        "replyCount": 0,
+        "likeCount": 0,
+        "quoteCount": 0,
+        "viewCount": 95,
+        "createdAt": "Sun Jan 19 17:14:05 +0000 2025",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1881027362642600296",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "gringosuavex",
+            "url": "https://x.com/gringosuavex",
+            "twitterUrl": "https://twitter.com/gringosuavex",
+            "id": "3013771807",
+            "name": "Kuug",
+            "isVerified": false,
+            "isBlueVerified": false,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/1874836771907026944/oYXaOdh6_normal.jpg",
+            "coverPicture": "",
+            "description": "",
+            "location": "",
+            "followers": 667,
+            "following": 1588,
+            "status": "",
+            "canDm": false,
+            "canMediaTag": true,
+            "createdAt": "Sun Feb 08 20:28:24 +0000 2015",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 148500,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 3413,
+            "statusesCount": 56200,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [
+                "1770111889122726256"
+            ],
+            "profile_bio": {
+                "description": "",
+                "entities": {
+                    "description": {}
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": null,
+        "place": {},
+        "entities": {},
+        "quoted_tweet": {
+            "type": "tweet",
+            "id": "1880780504473190868",
+            "url": "https://x.com/ESPNNFL/status/1880780504473190868",
+            "twitterUrl": "https://twitter.com/ESPNNFL/status/1880780504473190868",
+            "text": "The Texans are the first team in NFL postseason history to outgain their opponent by 100 yards, have 0 turnovers, and lose. \n\nPrior to the Texans, teams were 49-0 in such games. Unreal. \ud83e\udd2f https://t.co/NUI6eSEb7g",
+            "source": "Twitter for iPhone",
+            "retweetCount": 5971,
+            "replyCount": 3954,
+            "likeCount": 74533,
+            "quoteCount": 1574,
+            "viewCount": 5052003,
+            "createdAt": "Sun Jan 19 00:53:10 +0000 2025",
+            "lang": "en",
+            "bookmarkCount": 2775,
+            "isReply": false,
+            "inReplyToId": null,
+            "conversationId": "1880780504473190868",
+            "inReplyToUserId": null,
+            "inReplyToUsername": null,
+            "author": {
+                "type": "user",
+                "userName": "ESPNNFL",
+                "url": "https://x.com/ESPNNFL",
+                "twitterUrl": "https://twitter.com/ESPNNFL",
+                "id": "123417995",
+                "name": "NFL on ESPN",
+                "isVerified": false,
+                "isBlueVerified": true,
+                "verifiedType": "Business",
+                "profilePicture": "https://pbs.twimg.com/profile_images/1701371190286434304/V2vVQ7LQ_normal.jpg",
+                "coverPicture": "https://pbs.twimg.com/profile_banners/123417995/1694473479",
+                "description": "",
+                "location": "Bristol, CT",
+                "followers": 4230620,
+                "following": 1303,
+                "status": "",
+                "canDm": false,
+                "canMediaTag": true,
+                "createdAt": "Tue Mar 16 01:37:58 +0000 2010",
+                "entities": {
+                    "description": {
+                        "urls": []
+                    },
+                    "url": {}
+                },
+                "fastFollowersCount": 0,
+                "favouritesCount": 2984,
+                "hasCustomTimelines": true,
+                "isTranslator": false,
+                "mediaCount": 32585,
+                "statusesCount": 126054,
+                "withheldInCountries": [],
+                "affiliatesHighlightedLabel": {
+                    "label": {
+                        "badge": {
+                            "url": "https://pbs.twimg.com/profile_images/1170690523201527808/FriNRiir_bigger.png"
+                        },
+                        "description": "ESPN",
+                        "url": {
+                            "url": "https://twitter.com/espn",
+                            "url_type": "DeepLink"
+                        },
+                        "user_label_type": "BusinessLabel",
+                        "user_label_display_type": "Badge"
+                    }
+                },
+                "possiblySensitive": false,
+                "pinnedTweetIds": [],
+                "profile_bio": {
+                    "description": "ESPN\u2019s official NFL coverage.",
+                    "entities": {
+                        "description": {},
+                        "url": {
+                            "urls": [
+                                {
+                                    "display_url": "instagram.com/espnnfl/",
+                                    "expanded_url": "https://www.instagram.com/espnnfl/",
+                                    "indices": [
+                                        0,
+                                        23
+                                    ],
+                                    "url": "https://t.co/n0GgwURB62"
+                                }
+                            ]
+                        }
+                    }
+                },
+                "isAutomated": false,
+                "automatedBy": null
+            },
+            "extendedEntities": {
+                "media": [
+                    {
+                        "display_url": "pic.twitter.com/NUI6eSEb7g",
+                        "expanded_url": "https://twitter.com/ESPNNFL/status/1880780504473190868/photo/1",
+                        "ext_media_availability": {
+                            "status": "Available"
+                        },
+                        "features": {
+                            "large": {},
+                            "orig": {}
+                        },
+                        "id_str": "1880780313246277632",
+                        "indices": [
+                            188,
+                            211
+                        ],
+                        "media_key": "3_1880780313246277632",
+                        "media_results": {
+                            "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAARoZ37rnl6AACgACGhnf522awdQAAA==",
+                            "result": {
+                                "__typename": "ApiMedia",
+                                "id": "QXBpTWVkaWE6DAABCgABGhnfuueXoAAKAAIaGd/nbZrB1AAA",
+                                "media_key": "3_1880780313246277632"
+                            }
+                        },
+                        "media_url_https": "https://pbs.twimg.com/media/GhnfuueXoAAYzB_.jpg",
+                        "original_info": {
+                            "focus_rects": [
+                                {
+                                    "h": 605,
+                                    "w": 1080,
+                                    "x": 0,
+                                    "y": 211
+                                },
+                                {
+                                    "h": 1080,
+                                    "w": 1080,
+                                    "x": 0,
+                                    "y": 0
+                                },
+                                {
+                                    "h": 1080,
+                                    "w": 947,
+                                    "x": 133,
+                                    "y": 0
+                                },
+                                {
+                                    "h": 1080,
+                                    "w": 540,
+                                    "x": 351,
+                                    "y": 0
+                                },
+                                {
+                                    "h": 1080,
+                                    "w": 1080,
+                                    "x": 0,
+                                    "y": 0
+                                }
+                            ],
+                            "height": 1080,
+                            "width": 1080
+                        },
+                        "sizes": {
+                            "large": {
+                                "h": 1080,
+                                "w": 1080
+                            }
+                        },
+                        "type": "photo",
+                        "url": "https://t.co/NUI6eSEb7g"
+                    }
+                ]
+            },
+            "card": null,
+            "place": {},
+            "entities": {},
+            "quoted_tweet": null,
+            "retweeted_tweet": null,
+            "article": null
+        },
+        "retweeted_tweet": null,
+        "article": null
+    }
+]

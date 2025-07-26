@@ -1,0 +1,3104 @@
+[
+    {
+        "type": "tweet",
+        "id": "1925579259256373445",
+        "url": "https://x.com/GrasimInd/status/1925579259256373445",
+        "twitterUrl": "https://twitter.com/GrasimInd/status/1925579259256373445",
+        "text": "The company reported highest-ever quarterly consolidated Revenue and EBITDA at \u20b944,267 Cr., up 17% YoY and \u20b96,548 Cr., up 6% YoY respectively.\n\nhttps://t.co/Z2cj0B7PHe https://t.co/zN2tojeWVT",
+        "source": "Twitter for iPhone",
+        "retweetCount": 1,
+        "replyCount": 8,
+        "likeCount": 7,
+        "quoteCount": 0,
+        "viewCount": 336,
+        "createdAt": "Thu May 22 15:47:25 +0000 2025",
+        "lang": "en",
+        "bookmarkCount": 1,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1925579259256373445",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "GrasimInd",
+            "url": "https://x.com/GrasimInd",
+            "twitterUrl": "https://twitter.com/GrasimInd",
+            "id": "881434551284895744",
+            "name": "Grasim Industries",
+            "isVerified": false,
+            "isBlueVerified": false,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/903566620546576384/L7qAMcnr_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/881434551284895744/1620302759",
+            "description": "",
+            "location": "Mumbai, India",
+            "followers": 9120,
+            "following": 16,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Sun Jul 02 08:49:08 +0000 2017",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 369,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 268,
+            "statusesCount": 927,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "Official twitter account of Grasim Industries Ltd., a part of @adityabirlagrp, ranks among India's largest private sector companies",
+                "entities": {
+                    "description": {
+                        "user_mentions": [
+                            {
+                                "id_str": "0",
+                                "indices": [
+                                    62,
+                                    77
+                                ],
+                                "name": "",
+                                "screen_name": "adityabirlagrp"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "grasim.com",
+                                "expanded_url": "http://www.grasim.com",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/2xeWKPNfpB"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {
+            "media": [
+                {
+                    "display_url": "pic.twitter.com/zN2tojeWVT",
+                    "expanded_url": "https://twitter.com/GrasimInd/status/1925579259256373445/photo/1",
+                    "ext_media_availability": {
+                        "status": "Available"
+                    },
+                    "features": {
+                        "large": {
+                            "faces": [
+                                {
+                                    "h": 47,
+                                    "w": 47,
+                                    "x": 910,
+                                    "y": 300
+                                },
+                                {
+                                    "h": 40,
+                                    "w": 40,
+                                    "x": 462,
+                                    "y": 308
+                                },
+                                {
+                                    "h": 39,
+                                    "w": 39,
+                                    "x": 610,
+                                    "y": 310
+                                },
+                                {
+                                    "h": 42,
+                                    "w": 42,
+                                    "x": 531,
+                                    "y": 313
+                                },
+                                {
+                                    "h": 46,
+                                    "w": 46,
+                                    "x": 142,
+                                    "y": 315
+                                },
+                                {
+                                    "h": 43,
+                                    "w": 43,
+                                    "x": 299,
+                                    "y": 315
+                                },
+                                {
+                                    "h": 42,
+                                    "w": 42,
+                                    "x": 216,
+                                    "y": 318
+                                },
+                                {
+                                    "h": 42,
+                                    "w": 42,
+                                    "x": 675,
+                                    "y": 322
+                                },
+                                {
+                                    "h": 41,
+                                    "w": 41,
+                                    "x": 370,
+                                    "y": 325
+                                },
+                                {
+                                    "h": 42,
+                                    "w": 42,
+                                    "x": 840,
+                                    "y": 316
+                                },
+                                {
+                                    "h": 61,
+                                    "w": 61,
+                                    "x": 367,
+                                    "y": 124
+                                },
+                                {
+                                    "h": 125,
+                                    "w": 125,
+                                    "x": 997,
+                                    "y": 329
+                                }
+                            ]
+                        },
+                        "orig": {
+                            "faces": [
+                                {
+                                    "h": 47,
+                                    "w": 47,
+                                    "x": 910,
+                                    "y": 300
+                                },
+                                {
+                                    "h": 40,
+                                    "w": 40,
+                                    "x": 462,
+                                    "y": 308
+                                },
+                                {
+                                    "h": 39,
+                                    "w": 39,
+                                    "x": 610,
+                                    "y": 310
+                                },
+                                {
+                                    "h": 42,
+                                    "w": 42,
+                                    "x": 531,
+                                    "y": 313
+                                },
+                                {
+                                    "h": 46,
+                                    "w": 46,
+                                    "x": 142,
+                                    "y": 315
+                                },
+                                {
+                                    "h": 43,
+                                    "w": 43,
+                                    "x": 299,
+                                    "y": 315
+                                },
+                                {
+                                    "h": 42,
+                                    "w": 42,
+                                    "x": 216,
+                                    "y": 318
+                                },
+                                {
+                                    "h": 42,
+                                    "w": 42,
+                                    "x": 675,
+                                    "y": 322
+                                },
+                                {
+                                    "h": 41,
+                                    "w": 41,
+                                    "x": 370,
+                                    "y": 325
+                                },
+                                {
+                                    "h": 42,
+                                    "w": 42,
+                                    "x": 840,
+                                    "y": 316
+                                },
+                                {
+                                    "h": 61,
+                                    "w": 61,
+                                    "x": 367,
+                                    "y": 124
+                                },
+                                {
+                                    "h": 125,
+                                    "w": 125,
+                                    "x": 997,
+                                    "y": 329
+                                }
+                            ]
+                        }
+                    },
+                    "id_str": "1925579250813239296",
+                    "indices": [
+                        168,
+                        191
+                    ],
+                    "media_key": "3_1925579250813239296",
+                    "media_results": {
+                        "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAARq5CCBflgAACgACGrkIIlbWAMUAAA==",
+                        "result": {
+                            "__typename": "ApiMedia",
+                            "id": "QXBpTWVkaWE6DAABCgABGrkIIF+WAAAKAAIauQgiVtYAxQAA",
+                            "media_key": "3_1925579250813239296"
+                        }
+                    },
+                    "media_url_https": "https://pbs.twimg.com/media/GrkIIF-WAAAl3ie.jpg",
+                    "original_info": {
+                        "focus_rects": [
+                            {
+                                "h": 660,
+                                "w": 1179,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 702,
+                                "w": 702,
+                                "x": 148,
+                                "y": 0
+                            },
+                            {
+                                "h": 702,
+                                "w": 616,
+                                "x": 191,
+                                "y": 0
+                            },
+                            {
+                                "h": 702,
+                                "w": 351,
+                                "x": 324,
+                                "y": 0
+                            },
+                            {
+                                "h": 702,
+                                "w": 1179,
+                                "x": 0,
+                                "y": 0
+                            }
+                        ],
+                        "height": 702,
+                        "width": 1179
+                    },
+                    "sizes": {
+                        "large": {
+                            "h": 702,
+                            "w": 1179
+                        }
+                    },
+                    "type": "photo",
+                    "url": "https://t.co/zN2tojeWVT"
+                }
+            ]
+        },
+        "card": null,
+        "place": {},
+        "entities": {
+            "urls": [
+                {
+                    "display_url": "grasim.com/media/press-re\u2026",
+                    "expanded_url": "https://www.grasim.com/media/press-releases/grasim-results-q4fy-2024-25",
+                    "indices": [
+                        144,
+                        167
+                    ],
+                    "url": "https://t.co/Z2cj0B7PHe"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1888975308834873849",
+        "url": "https://x.com/GrasimInd/status/1888975308834873849",
+        "twitterUrl": "https://twitter.com/GrasimInd/status/1888975308834873849",
+        "text": "Grasim Industries Limited today announced its financial results for the quarter ended 31st December 2024 (#Q3FY25). Consolidated revenue stood at \u20b934,793 Cr., up by 9% YoY, driven by all-round growth across key businesses. \nRead more : https://t.co/5H9C3ufWVu https://t.co/TvXFCcVK6M",
+        "source": "Twitter for iPhone",
+        "retweetCount": 1,
+        "replyCount": 0,
+        "likeCount": 8,
+        "quoteCount": 0,
+        "viewCount": 315,
+        "createdAt": "Mon Feb 10 15:36:23 +0000 2025",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1888975308834873849",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "GrasimInd",
+            "url": "https://x.com/GrasimInd",
+            "twitterUrl": "https://twitter.com/GrasimInd",
+            "id": "881434551284895744",
+            "name": "Grasim Industries",
+            "isVerified": false,
+            "isBlueVerified": false,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/903566620546576384/L7qAMcnr_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/881434551284895744/1620302759",
+            "description": "",
+            "location": "Mumbai, India",
+            "followers": 9120,
+            "following": 16,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Sun Jul 02 08:49:08 +0000 2017",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 369,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 268,
+            "statusesCount": 927,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "Official twitter account of Grasim Industries Ltd., a part of @adityabirlagrp, ranks among India's largest private sector companies",
+                "entities": {
+                    "description": {
+                        "user_mentions": [
+                            {
+                                "id_str": "0",
+                                "indices": [
+                                    62,
+                                    77
+                                ],
+                                "name": "",
+                                "screen_name": "adityabirlagrp"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "grasim.com",
+                                "expanded_url": "http://www.grasim.com",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/2xeWKPNfpB"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {
+            "media": [
+                {
+                    "display_url": "pic.twitter.com/TvXFCcVK6M",
+                    "expanded_url": "https://twitter.com/GrasimInd/status/1888975308834873849/photo/1",
+                    "ext_media_availability": {
+                        "status": "Available"
+                    },
+                    "features": {
+                        "large": {
+                            "faces": [
+                                {
+                                    "h": 48,
+                                    "w": 48,
+                                    "x": 1083,
+                                    "y": 495
+                                },
+                                {
+                                    "h": 56,
+                                    "w": 56,
+                                    "x": 125,
+                                    "y": 457
+                                },
+                                {
+                                    "h": 59,
+                                    "w": 59,
+                                    "x": 917,
+                                    "y": 491
+                                },
+                                {
+                                    "h": 69,
+                                    "w": 69,
+                                    "x": 574,
+                                    "y": 477
+                                },
+                                {
+                                    "h": 218,
+                                    "w": 218,
+                                    "x": 622,
+                                    "y": 849
+                                }
+                            ]
+                        },
+                        "orig": {
+                            "faces": [
+                                {
+                                    "h": 48,
+                                    "w": 48,
+                                    "x": 1083,
+                                    "y": 495
+                                },
+                                {
+                                    "h": 56,
+                                    "w": 56,
+                                    "x": 125,
+                                    "y": 457
+                                },
+                                {
+                                    "h": 59,
+                                    "w": 59,
+                                    "x": 917,
+                                    "y": 491
+                                },
+                                {
+                                    "h": 69,
+                                    "w": 69,
+                                    "x": 574,
+                                    "y": 477
+                                },
+                                {
+                                    "h": 218,
+                                    "w": 218,
+                                    "x": 622,
+                                    "y": 849
+                                }
+                            ]
+                        }
+                    },
+                    "id_str": "1888975302623391744",
+                    "indices": [
+                        260,
+                        283
+                    ],
+                    "media_key": "3_1888975302623391744",
+                    "media_results": {
+                        "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAARo2/QeOWnAACgACGjb9CQCWIfkAAA==",
+                        "result": {
+                            "__typename": "ApiMedia",
+                            "id": "QXBpTWVkaWE6DAABCgABGjb9B45acAAKAAIaNv0JAJYh+QAA",
+                            "media_key": "3_1888975302623391744"
+                        }
+                    },
+                    "media_url_https": "https://pbs.twimg.com/media/Gjb9B45acAAQWnq.jpg",
+                    "original_info": {
+                        "focus_rects": [
+                            {
+                                "h": 660,
+                                "w": 1179,
+                                "x": 0,
+                                "y": 405
+                            },
+                            {
+                                "h": 1170,
+                                "w": 1170,
+                                "x": 4,
+                                "y": 0
+                            },
+                            {
+                                "h": 1170,
+                                "w": 1026,
+                                "x": 76,
+                                "y": 0
+                            },
+                            {
+                                "h": 1170,
+                                "w": 585,
+                                "x": 297,
+                                "y": 0
+                            },
+                            {
+                                "h": 1170,
+                                "w": 1179,
+                                "x": 0,
+                                "y": 0
+                            }
+                        ],
+                        "height": 1170,
+                        "width": 1179
+                    },
+                    "sizes": {
+                        "large": {
+                            "h": 1170,
+                            "w": 1179
+                        }
+                    },
+                    "type": "photo",
+                    "url": "https://t.co/TvXFCcVK6M"
+                }
+            ]
+        },
+        "card": null,
+        "place": {},
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        106,
+                        113
+                    ],
+                    "text": "Q3FY25"
+                }
+            ],
+            "urls": [
+                {
+                    "display_url": "grasim.com/media/press-re\u2026",
+                    "expanded_url": "https://www.grasim.com/media/press-releases/creating-and-scaling-growth-engines-viksit-bharat",
+                    "indices": [
+                        236,
+                        259
+                    ],
+                    "url": "https://t.co/5H9C3ufWVu"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1857089452931194966",
+        "url": "https://x.com/GrasimInd/status/1857089452931194966",
+        "twitterUrl": "https://twitter.com/GrasimInd/status/1857089452931194966",
+        "text": "Grasim Industries Limited today announced its financial results for the quarter ended 30th September 2024 (#Q2FY25). Consolidated revenue stood at \u20b933,563 Cr\nVisit : https://t.co/8nfH1DrpoT https://t.co/uCPuJkZ9Ju",
+        "source": "Twitter for iPhone",
+        "retweetCount": 1,
+        "replyCount": 1,
+        "likeCount": 5,
+        "quoteCount": 0,
+        "viewCount": 434,
+        "createdAt": "Thu Nov 14 15:53:23 +0000 2024",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1857089452931194966",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "GrasimInd",
+            "url": "https://x.com/GrasimInd",
+            "twitterUrl": "https://twitter.com/GrasimInd",
+            "id": "881434551284895744",
+            "name": "Grasim Industries",
+            "isVerified": false,
+            "isBlueVerified": false,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/903566620546576384/L7qAMcnr_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/881434551284895744/1620302759",
+            "description": "",
+            "location": "Mumbai, India",
+            "followers": 9120,
+            "following": 16,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Sun Jul 02 08:49:08 +0000 2017",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 369,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 268,
+            "statusesCount": 927,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "Official twitter account of Grasim Industries Ltd., a part of @adityabirlagrp, ranks among India's largest private sector companies",
+                "entities": {
+                    "description": {
+                        "user_mentions": [
+                            {
+                                "id_str": "0",
+                                "indices": [
+                                    62,
+                                    77
+                                ],
+                                "name": "",
+                                "screen_name": "adityabirlagrp"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "grasim.com",
+                                "expanded_url": "http://www.grasim.com",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/2xeWKPNfpB"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {
+            "media": [
+                {
+                    "display_url": "pic.twitter.com/uCPuJkZ9Ju",
+                    "expanded_url": "https://twitter.com/GrasimInd/status/1857089452931194966/photo/1",
+                    "ext_media_availability": {
+                        "status": "Available"
+                    },
+                    "features": {
+                        "large": {
+                            "faces": [
+                                {
+                                    "h": 165,
+                                    "w": 165,
+                                    "x": 687,
+                                    "y": 610
+                                }
+                            ]
+                        },
+                        "orig": {
+                            "faces": [
+                                {
+                                    "h": 165,
+                                    "w": 165,
+                                    "x": 687,
+                                    "y": 610
+                                }
+                            ]
+                        }
+                    },
+                    "id_str": "1857089429749284864",
+                    "indices": [
+                        190,
+                        213
+                    ],
+                    "media_key": "3_1857089429749284864",
+                    "media_results": {
+                        "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAARnFtP9AVsAACgACGcW1BKYWoFYAAA==",
+                        "result": {
+                            "__typename": "ApiMedia",
+                            "id": "QXBpTWVkaWE6DAABCgABGcW0/0BWwAAKAAIZxbUEphagVgAA",
+                            "media_key": "3_1857089429749284864"
+                        }
+                    },
+                    "media_url_https": "https://pbs.twimg.com/media/GcW0_0BWwAAvshD.jpg",
+                    "original_info": {
+                        "focus_rects": [
+                            {
+                                "h": 660,
+                                "w": 1179,
+                                "x": 0,
+                                "y": 347
+                            },
+                            {
+                                "h": 1150,
+                                "w": 1150,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1150,
+                                "w": 1009,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1150,
+                                "w": 575,
+                                "x": 155,
+                                "y": 0
+                            },
+                            {
+                                "h": 1150,
+                                "w": 1179,
+                                "x": 0,
+                                "y": 0
+                            }
+                        ],
+                        "height": 1150,
+                        "width": 1179
+                    },
+                    "sizes": {
+                        "large": {
+                            "h": 1150,
+                            "w": 1179
+                        }
+                    },
+                    "type": "photo",
+                    "url": "https://t.co/uCPuJkZ9Ju"
+                }
+            ]
+        },
+        "card": null,
+        "place": {},
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        107,
+                        114
+                    ],
+                    "text": "Q2FY25"
+                }
+            ],
+            "urls": [
+                {
+                    "display_url": "grasim.com",
+                    "expanded_url": "http://www.grasim.com",
+                    "indices": [
+                        166,
+                        189
+                    ],
+                    "url": "https://t.co/8nfH1DrpoT"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1821850785908473940",
+        "url": "https://x.com/GrasimInd/status/1821850785908473940",
+        "twitterUrl": "https://twitter.com/GrasimInd/status/1821850785908473940",
+        "text": "Grasim Industries Limited today announced its Financial Results for the quarter ended 30th June 2024. #Q1FY25\n\nConsolidated revenue stood at \u20b933,861 Cr., up by 9% YoY\n\n#pressrelease \n\nhttps://t.co/fR0Zm0FN1R https://t.co/V1YbuUyAD5",
+        "source": "Twitter for iPhone",
+        "retweetCount": 0,
+        "replyCount": 1,
+        "likeCount": 3,
+        "quoteCount": 0,
+        "viewCount": 469,
+        "createdAt": "Fri Aug 09 10:07:30 +0000 2024",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1821850785908473940",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "GrasimInd",
+            "url": "https://x.com/GrasimInd",
+            "twitterUrl": "https://twitter.com/GrasimInd",
+            "id": "881434551284895744",
+            "name": "Grasim Industries",
+            "isVerified": false,
+            "isBlueVerified": false,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/903566620546576384/L7qAMcnr_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/881434551284895744/1620302759",
+            "description": "",
+            "location": "Mumbai, India",
+            "followers": 9120,
+            "following": 16,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Sun Jul 02 08:49:08 +0000 2017",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 369,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 268,
+            "statusesCount": 927,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "Official twitter account of Grasim Industries Ltd., a part of @adityabirlagrp, ranks among India's largest private sector companies",
+                "entities": {
+                    "description": {
+                        "user_mentions": [
+                            {
+                                "id_str": "0",
+                                "indices": [
+                                    62,
+                                    77
+                                ],
+                                "name": "",
+                                "screen_name": "adityabirlagrp"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "grasim.com",
+                                "expanded_url": "http://www.grasim.com",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/2xeWKPNfpB"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {
+            "media": [
+                {
+                    "display_url": "pic.twitter.com/V1YbuUyAD5",
+                    "expanded_url": "https://twitter.com/GrasimInd/status/1821850785908473940/photo/1",
+                    "ext_media_availability": {
+                        "status": "Available"
+                    },
+                    "features": {
+                        "large": {},
+                        "orig": {}
+                    },
+                    "id_str": "1821850778736185344",
+                    "indices": [
+                        208,
+                        231
+                    ],
+                    "media_key": "3_1821850778736185344",
+                    "media_results": {
+                        "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAARlIg6F0VtAACgACGUiDox/XQFQAAA==",
+                        "result": {
+                            "__typename": "ApiMedia",
+                            "id": "QXBpTWVkaWE6DAABCgABGUiDoXRW0AAKAAIZSIOjH9dAVAAA",
+                            "media_key": "3_1821850778736185344"
+                        }
+                    },
+                    "media_url_https": "https://pbs.twimg.com/media/GUiDoXRW0AA-GTP.jpg",
+                    "original_info": {
+                        "focus_rects": [
+                            {
+                                "h": 660,
+                                "w": 1179,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1179,
+                                "w": 1179,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1187,
+                                "w": 1041,
+                                "x": 69,
+                                "y": 0
+                            },
+                            {
+                                "h": 1187,
+                                "w": 594,
+                                "x": 292,
+                                "y": 0
+                            },
+                            {
+                                "h": 1187,
+                                "w": 1179,
+                                "x": 0,
+                                "y": 0
+                            }
+                        ],
+                        "height": 1187,
+                        "width": 1179
+                    },
+                    "sizes": {
+                        "large": {
+                            "h": 1187,
+                            "w": 1179
+                        }
+                    },
+                    "type": "photo",
+                    "url": "https://t.co/V1YbuUyAD5"
+                }
+            ]
+        },
+        "card": null,
+        "place": {},
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        102,
+                        109
+                    ],
+                    "text": "Q1FY25"
+                },
+                {
+                    "indices": [
+                        168,
+                        181
+                    ],
+                    "text": "pressrelease"
+                }
+            ],
+            "urls": [
+                {
+                    "display_url": "grasim.com/media/press-re\u2026",
+                    "expanded_url": "https://www.grasim.com/media/press-releases/q1fy25-creating-and-scaling-growth-engines-for-a-growing-economy",
+                    "indices": [
+                        184,
+                        207
+                    ],
+                    "url": "https://t.co/fR0Zm0FN1R"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1788813145844097210",
+        "url": "https://x.com/GrasimInd/status/1788813145844097210",
+        "twitterUrl": "https://twitter.com/GrasimInd/status/1788813145844097210",
+        "text": "A meeting of the Board of Directors of Grasim Industries Limited will be held on Wednesday, 22nd May 2024\n#results #fy24 https://t.co/ZEikWqurNq",
+        "source": "Twitter for iPhone",
+        "retweetCount": 0,
+        "replyCount": 0,
+        "likeCount": 3,
+        "quoteCount": 0,
+        "viewCount": 554,
+        "createdAt": "Fri May 10 06:07:43 +0000 2024",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1788813145844097210",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "GrasimInd",
+            "url": "https://x.com/GrasimInd",
+            "twitterUrl": "https://twitter.com/GrasimInd",
+            "id": "881434551284895744",
+            "name": "Grasim Industries",
+            "isVerified": false,
+            "isBlueVerified": false,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/903566620546576384/L7qAMcnr_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/881434551284895744/1620302759",
+            "description": "",
+            "location": "Mumbai, India",
+            "followers": 9120,
+            "following": 16,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Sun Jul 02 08:49:08 +0000 2017",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 369,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 268,
+            "statusesCount": 927,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "Official twitter account of Grasim Industries Ltd., a part of @adityabirlagrp, ranks among India's largest private sector companies",
+                "entities": {
+                    "description": {
+                        "user_mentions": [
+                            {
+                                "id_str": "0",
+                                "indices": [
+                                    62,
+                                    77
+                                ],
+                                "name": "",
+                                "screen_name": "adityabirlagrp"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "grasim.com",
+                                "expanded_url": "http://www.grasim.com",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/2xeWKPNfpB"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {
+            "media": [
+                {
+                    "display_url": "pic.twitter.com/ZEikWqurNq",
+                    "expanded_url": "https://twitter.com/GrasimInd/status/1788813145844097210/photo/1",
+                    "ext_media_availability": {
+                        "status": "Available"
+                    },
+                    "features": {
+                        "large": {},
+                        "orig": {}
+                    },
+                    "id_str": "1788813138940370945",
+                    "indices": [
+                        121,
+                        144
+                    ],
+                    "media_key": "3_1788813138940370945",
+                    "media_results": {
+                        "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAARjTJBKEF6ABCgACGNMkFB+WILoAAA==",
+                        "result": {
+                            "__typename": "ApiMedia",
+                            "id": "QXBpTWVkaWE6DAABCgABGNMkEoQXoAEKAAIY0yQUH5YgugAA",
+                            "media_key": "3_1788813138940370945"
+                        }
+                    },
+                    "media_url_https": "https://pbs.twimg.com/media/GNMkEoQXoAEChnx.jpg",
+                    "original_info": {
+                        "focus_rects": [
+                            {
+                                "h": 660,
+                                "w": 1179,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 781,
+                                "w": 781,
+                                "x": 169,
+                                "y": 0
+                            },
+                            {
+                                "h": 781,
+                                "w": 685,
+                                "x": 217,
+                                "y": 0
+                            },
+                            {
+                                "h": 781,
+                                "w": 391,
+                                "x": 364,
+                                "y": 0
+                            },
+                            {
+                                "h": 781,
+                                "w": 1179,
+                                "x": 0,
+                                "y": 0
+                            }
+                        ],
+                        "height": 781,
+                        "width": 1179
+                    },
+                    "sizes": {
+                        "large": {
+                            "h": 781,
+                            "w": 1179
+                        }
+                    },
+                    "type": "photo",
+                    "url": "https://t.co/ZEikWqurNq"
+                }
+            ]
+        },
+        "card": null,
+        "place": {},
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        106,
+                        114
+                    ],
+                    "text": "results"
+                },
+                {
+                    "indices": [
+                        115,
+                        120
+                    ],
+                    "text": "fy24"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1755762162604110131",
+        "url": "https://x.com/GrasimInd/status/1755762162604110131",
+        "twitterUrl": "https://twitter.com/GrasimInd/status/1755762162604110131",
+        "text": "#Q3FY24\n\nGrasim Industries Limited has reported strong financial results for the quarter and 9 months ended 31st December 2023. Consolidated Revenue is up by 12% YoY to \u20b931,965 Cr. driven by the performance of key subsidiaries \nRead more : https://t.co/ZvwpsVVmyO",
+        "source": "Twitter for iPhone",
+        "retweetCount": 1,
+        "replyCount": 0,
+        "likeCount": 5,
+        "quoteCount": 0,
+        "viewCount": 487,
+        "createdAt": "Fri Feb 09 01:14:54 +0000 2024",
+        "lang": "en",
+        "bookmarkCount": 1,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1755762162604110131",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "GrasimInd",
+            "url": "https://x.com/GrasimInd",
+            "twitterUrl": "https://twitter.com/GrasimInd",
+            "id": "881434551284895744",
+            "name": "Grasim Industries",
+            "isVerified": false,
+            "isBlueVerified": false,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/903566620546576384/L7qAMcnr_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/881434551284895744/1620302759",
+            "description": "",
+            "location": "Mumbai, India",
+            "followers": 9120,
+            "following": 16,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Sun Jul 02 08:49:08 +0000 2017",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 369,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 268,
+            "statusesCount": 927,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "Official twitter account of Grasim Industries Ltd., a part of @adityabirlagrp, ranks among India's largest private sector companies",
+                "entities": {
+                    "description": {
+                        "user_mentions": [
+                            {
+                                "id_str": "0",
+                                "indices": [
+                                    62,
+                                    77
+                                ],
+                                "name": "",
+                                "screen_name": "adityabirlagrp"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "grasim.com",
+                                "expanded_url": "http://www.grasim.com",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/2xeWKPNfpB"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": {
+            "binding_values": [
+                {
+                    "key": "description",
+                    "value": {
+                        "string_value": "Grasim Industries Ltd has reported a strong quarterly performance. Consolidated Revenue is up by 12% YoY to \u20b931,965 Cr. driven by the performance of key subsidiaries: UltraTech Cement and Aditya..."
+                    }
+                },
+                {
+                    "key": "domain",
+                    "value": {
+                        "string_value": "www.grasim.com"
+                    }
+                },
+                {
+                    "key": "vanity_url",
+                    "value": {
+                        "scribe_key": "vanity_url",
+                        "string_value": "grasim.com"
+                    }
+                },
+                {
+                    "key": "title",
+                    "value": {
+                        "string_value": "Q3FY24 - Next Phase of Transformational Growth Journey - Grasim Industries"
+                    }
+                },
+                {
+                    "key": "card_url",
+                    "value": {
+                        "scribe_key": "card_url",
+                        "string_value": "https://t.co/ZvwpsVVmyO"
+                    }
+                }
+            ],
+            "card_platform": {
+                "platform": {
+                    "audience": {
+                        "name": "production"
+                    },
+                    "device": {
+                        "name": "iPhone",
+                        "version": "13"
+                    }
+                }
+            },
+            "name": "summary_large_image",
+            "url": "https://t.co/ZvwpsVVmyO"
+        },
+        "place": {},
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        0,
+                        7
+                    ],
+                    "text": "Q3FY24"
+                }
+            ],
+            "urls": [
+                {
+                    "display_url": "grasim.com/media/press-re\u2026",
+                    "expanded_url": "https://www.grasim.com/media/press-releases/q3fy24-next-phase-of-transformational-growth-journey",
+                    "indices": [
+                        240,
+                        263
+                    ],
+                    "url": "https://t.co/ZvwpsVVmyO"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1724089071092240415",
+        "url": "https://x.com/GrasimInd/status/1724089071092240415",
+        "twitterUrl": "https://twitter.com/GrasimInd/status/1724089071092240415",
+        "text": "Grasim Industries Limited today announced its financial results for the quarter and half year ended 30th September 2023. Consolidated Revenue is up by 10% YoY to \u20b930,221 Cr. driven by the performance of key subsidiaries #Q2FY24\nhttps://t.co/AlploIN1r3",
+        "source": "Twitter for iPhone",
+        "retweetCount": 0,
+        "replyCount": 0,
+        "likeCount": 6,
+        "quoteCount": 0,
+        "viewCount": 551,
+        "createdAt": "Mon Nov 13 15:37:21 +0000 2023",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1724089071092240415",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "GrasimInd",
+            "url": "https://x.com/GrasimInd",
+            "twitterUrl": "https://twitter.com/GrasimInd",
+            "id": "881434551284895744",
+            "name": "Grasim Industries",
+            "isVerified": false,
+            "isBlueVerified": false,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/903566620546576384/L7qAMcnr_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/881434551284895744/1620302759",
+            "description": "",
+            "location": "Mumbai, India",
+            "followers": 9120,
+            "following": 16,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Sun Jul 02 08:49:08 +0000 2017",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 369,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 268,
+            "statusesCount": 927,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "Official twitter account of Grasim Industries Ltd., a part of @adityabirlagrp, ranks among India's largest private sector companies",
+                "entities": {
+                    "description": {
+                        "user_mentions": [
+                            {
+                                "id_str": "0",
+                                "indices": [
+                                    62,
+                                    77
+                                ],
+                                "name": "",
+                                "screen_name": "adityabirlagrp"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "grasim.com",
+                                "expanded_url": "http://www.grasim.com",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/2xeWKPNfpB"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": {
+            "binding_values": [
+                {
+                    "key": "description",
+                    "value": {
+                        "string_value": "Grasim Industries Limited today announced its financial results for the quarter and half year ended 30th September 2023. Consolidated Revenue is up by 10% YoY to \u20b9 30,221 Cr. driven by the performa..."
+                    }
+                },
+                {
+                    "key": "domain",
+                    "value": {
+                        "string_value": "www.grasim.com"
+                    }
+                },
+                {
+                    "key": "vanity_url",
+                    "value": {
+                        "scribe_key": "vanity_url",
+                        "string_value": "grasim.com"
+                    }
+                },
+                {
+                    "key": "title",
+                    "value": {
+                        "string_value": "Implementing Next Phase of Transformational Growth Journey"
+                    }
+                },
+                {
+                    "key": "card_url",
+                    "value": {
+                        "scribe_key": "card_url",
+                        "string_value": "https://t.co/AlploIN1r3"
+                    }
+                }
+            ],
+            "card_platform": {
+                "platform": {
+                    "audience": {
+                        "name": "production"
+                    },
+                    "device": {
+                        "name": "iPhone",
+                        "version": "13"
+                    }
+                }
+            },
+            "name": "summary_large_image",
+            "url": "https://t.co/AlploIN1r3"
+        },
+        "place": {},
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        220,
+                        227
+                    ],
+                    "text": "Q2FY24"
+                }
+            ],
+            "urls": [
+                {
+                    "display_url": "grasim.com/media/press-re\u2026",
+                    "expanded_url": "https://www.grasim.com/media/press-releases/Implementing-Next-Phase-of-Transformational-Growth-Journey-13nov23",
+                    "indices": [
+                        228,
+                        251
+                    ],
+                    "url": "https://t.co/AlploIN1r3"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1680832285011070980",
+        "url": "https://x.com/GrasimInd/status/1680832285011070980",
+        "twitterUrl": "https://twitter.com/GrasimInd/status/1680832285011070980",
+        "text": "A meeting of the Board of Directors of Grasim Industries Limited will be held on Thursday, 10th August 2023, inter-alia, to consider and approve the unaudited financial results of the Company for the quarter ended 30th June 2023. #Q1FY24 https://t.co/HNeepJmdmh",
+        "source": "Twitter for iPhone",
+        "retweetCount": 0,
+        "replyCount": 1,
+        "likeCount": 4,
+        "quoteCount": 0,
+        "viewCount": 684,
+        "createdAt": "Mon Jul 17 06:50:19 +0000 2023",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1680832285011070980",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "GrasimInd",
+            "url": "https://x.com/GrasimInd",
+            "twitterUrl": "https://twitter.com/GrasimInd",
+            "id": "881434551284895744",
+            "name": "Grasim Industries",
+            "isVerified": false,
+            "isBlueVerified": false,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/903566620546576384/L7qAMcnr_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/881434551284895744/1620302759",
+            "description": "",
+            "location": "Mumbai, India",
+            "followers": 9120,
+            "following": 16,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Sun Jul 02 08:49:08 +0000 2017",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 369,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 268,
+            "statusesCount": 927,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "Official twitter account of Grasim Industries Ltd., a part of @adityabirlagrp, ranks among India's largest private sector companies",
+                "entities": {
+                    "description": {
+                        "user_mentions": [
+                            {
+                                "id_str": "0",
+                                "indices": [
+                                    62,
+                                    77
+                                ],
+                                "name": "",
+                                "screen_name": "adityabirlagrp"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "grasim.com",
+                                "expanded_url": "http://www.grasim.com",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/2xeWKPNfpB"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {
+            "media": [
+                {
+                    "display_url": "pic.twitter.com/HNeepJmdmh",
+                    "expanded_url": "https://twitter.com/GrasimInd/status/1680832285011070980/photo/1",
+                    "ext_media_availability": {
+                        "status": "Available"
+                    },
+                    "features": {
+                        "large": {},
+                        "orig": {}
+                    },
+                    "id_str": "1680832136725577728",
+                    "indices": [
+                        238,
+                        261
+                    ],
+                    "media_key": "3_1680832136725577728",
+                    "media_results": {
+                        "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAARdTg+xElsAACgACF1OEDssX0AQAAA==",
+                        "result": {
+                            "__typename": "ApiMedia",
+                            "id": "QXBpTWVkaWE6DAABCgABF1OD7ESWwAAKAAIXU4QOyxfQBAAA",
+                            "media_key": "3_1680832136725577728"
+                        }
+                    },
+                    "media_url_https": "https://pbs.twimg.com/media/F1OD7ESWwAAtRir.jpg",
+                    "original_info": {
+                        "focus_rects": [
+                            {
+                                "h": 812,
+                                "w": 1450,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 962,
+                                "w": 962,
+                                "x": 135,
+                                "y": 0
+                            },
+                            {
+                                "h": 962,
+                                "w": 844,
+                                "x": 194,
+                                "y": 0
+                            },
+                            {
+                                "h": 962,
+                                "w": 481,
+                                "x": 376,
+                                "y": 0
+                            },
+                            {
+                                "h": 962,
+                                "w": 1450,
+                                "x": 0,
+                                "y": 0
+                            }
+                        ],
+                        "height": 962,
+                        "width": 1450
+                    },
+                    "sizes": {
+                        "large": {
+                            "h": 962,
+                            "w": 1450
+                        }
+                    },
+                    "type": "photo",
+                    "url": "https://t.co/HNeepJmdmh"
+                }
+            ]
+        },
+        "card": null,
+        "place": {},
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        230,
+                        237
+                    ],
+                    "text": "Q1FY24"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1660620687407722496",
+        "url": "https://x.com/GrasimInd/status/1660620687407722496",
+        "twitterUrl": "https://twitter.com/GrasimInd/status/1660620687407722496",
+        "text": "A meeting of the Board of Directors of Grasim Industries Ltd will be held on Friday, 26th May 2023, inter-alia, to consider and approve the Standalone and Consolidated Audited Financial Results of the Company for the quarter / financial year ended 31st March 2023 \n#q4fy23 #fy23 https://t.co/Zhx9q7XZA9",
+        "source": "Twitter for iPhone",
+        "retweetCount": 0,
+        "replyCount": 1,
+        "likeCount": 2,
+        "quoteCount": 0,
+        "viewCount": 401,
+        "createdAt": "Mon May 22 12:16:39 +0000 2023",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1660620687407722496",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "GrasimInd",
+            "url": "https://x.com/GrasimInd",
+            "twitterUrl": "https://twitter.com/GrasimInd",
+            "id": "881434551284895744",
+            "name": "Grasim Industries",
+            "isVerified": false,
+            "isBlueVerified": false,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/903566620546576384/L7qAMcnr_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/881434551284895744/1620302759",
+            "description": "",
+            "location": "Mumbai, India",
+            "followers": 9120,
+            "following": 16,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Sun Jul 02 08:49:08 +0000 2017",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 369,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 268,
+            "statusesCount": 927,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "Official twitter account of Grasim Industries Ltd., a part of @adityabirlagrp, ranks among India's largest private sector companies",
+                "entities": {
+                    "description": {
+                        "user_mentions": [
+                            {
+                                "id_str": "0",
+                                "indices": [
+                                    62,
+                                    77
+                                ],
+                                "name": "",
+                                "screen_name": "adityabirlagrp"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "grasim.com",
+                                "expanded_url": "http://www.grasim.com",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/2xeWKPNfpB"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {
+            "media": [
+                {
+                    "display_url": "pic.twitter.com/Zhx9q7XZA9",
+                    "expanded_url": "https://twitter.com/GrasimInd/status/1660620687407722496/photo/1",
+                    "ext_media_availability": {
+                        "status": "Available"
+                    },
+                    "features": {
+                        "large": {
+                            "faces": [
+                                {
+                                    "h": 112,
+                                    "w": 112,
+                                    "x": 1912,
+                                    "y": 1192
+                                }
+                            ]
+                        },
+                        "orig": {
+                            "faces": [
+                                {
+                                    "h": 112,
+                                    "w": 112,
+                                    "x": 1912,
+                                    "y": 1192
+                                }
+                            ]
+                        }
+                    },
+                    "id_str": "1660620591836307457",
+                    "indices": [
+                        279,
+                        302
+                    ],
+                    "media_key": "3_1660620591836307457",
+                    "media_results": {
+                        "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAARcLtaFDGiABCgACFwu1t4OaMAAAAA==",
+                        "result": {
+                            "__typename": "ApiMedia",
+                            "id": "QXBpTWVkaWE6DAABCgABFwu1oUMaIAEKAAIXC7W3g5owAAAA",
+                            "media_key": "3_1660620591836307457"
+                        }
+                    },
+                    "media_url_https": "https://pbs.twimg.com/media/Fwu1oUMaIAEwL0C.jpg",
+                    "original_info": {
+                        "focus_rects": [
+                            {
+                                "h": 1147,
+                                "w": 2048,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1527,
+                                "w": 1527,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1527,
+                                "w": 1339,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1527,
+                                "w": 764,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1527,
+                                "w": 2048,
+                                "x": 0,
+                                "y": 0
+                            }
+                        ],
+                        "height": 1527,
+                        "width": 2048
+                    },
+                    "sizes": {
+                        "large": {
+                            "h": 1527,
+                            "w": 2048
+                        }
+                    },
+                    "type": "photo",
+                    "url": "https://t.co/Zhx9q7XZA9"
+                }
+            ]
+        },
+        "card": null,
+        "place": {},
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        265,
+                        272
+                    ],
+                    "text": "q4fy23"
+                },
+                {
+                    "indices": [
+                        273,
+                        278
+                    ],
+                    "text": "fy23"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1649758068304142336",
+        "url": "https://x.com/GrasimInd/status/1649758068304142336",
+        "twitterUrl": "https://twitter.com/GrasimInd/status/1649758068304142336",
+        "text": "Sustainability is a way of life at Grasim's #BirlaCellulose.  From responsible wood sourcing  to delivering lasting social value, we straddle the people, planet, profit verticals with equal emphasis.\n#WorldEarthDay #PulpAndFibre #Sustainability #Grasim #AdityaBirlaGroup https://t.co/2Vs3waovdx",
+        "source": "Twitter for iPhone",
+        "retweetCount": 1,
+        "replyCount": 0,
+        "likeCount": 8,
+        "quoteCount": 0,
+        "viewCount": 403,
+        "createdAt": "Sat Apr 22 12:52:29 +0000 2023",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1649758068304142336",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "GrasimInd",
+            "url": "https://x.com/GrasimInd",
+            "twitterUrl": "https://twitter.com/GrasimInd",
+            "id": "881434551284895744",
+            "name": "Grasim Industries",
+            "isVerified": false,
+            "isBlueVerified": false,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/903566620546576384/L7qAMcnr_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/881434551284895744/1620302759",
+            "description": "",
+            "location": "Mumbai, India",
+            "followers": 9120,
+            "following": 16,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Sun Jul 02 08:49:08 +0000 2017",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 369,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 268,
+            "statusesCount": 927,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "Official twitter account of Grasim Industries Ltd., a part of @adityabirlagrp, ranks among India's largest private sector companies",
+                "entities": {
+                    "description": {
+                        "user_mentions": [
+                            {
+                                "id_str": "0",
+                                "indices": [
+                                    62,
+                                    77
+                                ],
+                                "name": "",
+                                "screen_name": "adityabirlagrp"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "grasim.com",
+                                "expanded_url": "http://www.grasim.com",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/2xeWKPNfpB"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {
+            "media": [
+                {
+                    "display_url": "pic.twitter.com/2Vs3waovdx",
+                    "expanded_url": "https://twitter.com/GrasimInd/status/1649758068304142336/photo/1",
+                    "ext_media_availability": {
+                        "status": "Available"
+                    },
+                    "features": {
+                        "large": {},
+                        "orig": {}
+                    },
+                    "id_str": "1649758006442360832",
+                    "indices": [
+                        271,
+                        294
+                    ],
+                    "media_key": "3_1649758006442360832",
+                    "media_results": {
+                        "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAARblHiqDWoAACgACFuUeOOqaYAAAAA==",
+                        "result": {
+                            "__typename": "ApiMedia",
+                            "id": "QXBpTWVkaWE6DAABCgABFuUeKoNagAAKAAIW5R446ppgAAAA",
+                            "media_key": "3_1649758006442360832"
+                        }
+                    },
+                    "media_url_https": "https://pbs.twimg.com/media/FuUeKoNagAAd4SI.jpg",
+                    "original_info": {
+                        "focus_rects": [
+                            {
+                                "h": 448,
+                                "w": 800,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 800,
+                                "w": 800,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 800,
+                                "w": 702,
+                                "x": 69,
+                                "y": 0
+                            },
+                            {
+                                "h": 800,
+                                "w": 400,
+                                "x": 220,
+                                "y": 0
+                            },
+                            {
+                                "h": 800,
+                                "w": 800,
+                                "x": 0,
+                                "y": 0
+                            }
+                        ],
+                        "height": 800,
+                        "width": 800
+                    },
+                    "sizes": {
+                        "large": {
+                            "h": 800,
+                            "w": 800
+                        }
+                    },
+                    "type": "photo",
+                    "url": "https://t.co/2Vs3waovdx"
+                }
+            ]
+        },
+        "card": null,
+        "place": {},
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        44,
+                        59
+                    ],
+                    "text": "BirlaCellulose"
+                },
+                {
+                    "indices": [
+                        200,
+                        214
+                    ],
+                    "text": "WorldEarthDay"
+                },
+                {
+                    "indices": [
+                        215,
+                        228
+                    ],
+                    "text": "PulpAndFibre"
+                },
+                {
+                    "indices": [
+                        229,
+                        244
+                    ],
+                    "text": "Sustainability"
+                },
+                {
+                    "indices": [
+                        245,
+                        252
+                    ],
+                    "text": "Grasim"
+                },
+                {
+                    "indices": [
+                        253,
+                        270
+                    ],
+                    "text": "AdityaBirlaGroup"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1625449544438939648",
+        "url": "https://x.com/GrasimInd/status/1625449544438939648",
+        "twitterUrl": "https://twitter.com/GrasimInd/status/1625449544438939648",
+        "text": "Grasim Industries Limited today announced its Financial Results for the Quarter ended 31st December 2022 (Q3FY23). Consolidated revenue for #Q3FY23 grew 17% to \u20b928,638 Cr. \nPress Release : https://t.co/oFZDYsXQ0R",
+        "source": "Twitter for iPhone",
+        "retweetCount": 0,
+        "replyCount": 1,
+        "likeCount": 5,
+        "quoteCount": 0,
+        "viewCount": 368,
+        "createdAt": "Tue Feb 14 10:59:05 +0000 2023",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1625449544438939648",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "GrasimInd",
+            "url": "https://x.com/GrasimInd",
+            "twitterUrl": "https://twitter.com/GrasimInd",
+            "id": "881434551284895744",
+            "name": "Grasim Industries",
+            "isVerified": false,
+            "isBlueVerified": false,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/903566620546576384/L7qAMcnr_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/881434551284895744/1620302759",
+            "description": "",
+            "location": "Mumbai, India",
+            "followers": 9120,
+            "following": 16,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Sun Jul 02 08:49:08 +0000 2017",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 369,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 268,
+            "statusesCount": 927,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "Official twitter account of Grasim Industries Ltd., a part of @adityabirlagrp, ranks among India's largest private sector companies",
+                "entities": {
+                    "description": {
+                        "user_mentions": [
+                            {
+                                "id_str": "0",
+                                "indices": [
+                                    62,
+                                    77
+                                ],
+                                "name": "",
+                                "screen_name": "adityabirlagrp"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "grasim.com",
+                                "expanded_url": "http://www.grasim.com",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/2xeWKPNfpB"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": {
+            "binding_values": [
+                {
+                    "key": "description",
+                    "value": {
+                        "string_value": "Partner in Nation Building for 75 Years Implementing Next Phase of Transformational Growth Journey"
+                    }
+                },
+                {
+                    "key": "domain",
+                    "value": {
+                        "string_value": "www.grasim.com"
+                    }
+                },
+                {
+                    "key": "vanity_url",
+                    "value": {
+                        "scribe_key": "vanity_url",
+                        "string_value": "grasim.com"
+                    }
+                },
+                {
+                    "key": "title",
+                    "value": {
+                        "string_value": "Partner in Nation Building for 75 Years Implementing Next Phase of Transformational Growth Journey"
+                    }
+                },
+                {
+                    "key": "card_url",
+                    "value": {
+                        "scribe_key": "card_url",
+                        "string_value": "https://t.co/oFZDYsXQ0R"
+                    }
+                }
+            ],
+            "card_platform": {
+                "platform": {
+                    "audience": {
+                        "name": "production"
+                    },
+                    "device": {
+                        "name": "iPhone",
+                        "version": "13"
+                    }
+                }
+            },
+            "name": "summary_large_image",
+            "url": "https://t.co/oFZDYsXQ0R"
+        },
+        "place": {},
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        140,
+                        147
+                    ],
+                    "text": "Q3FY23"
+                }
+            ],
+            "urls": [
+                {
+                    "display_url": "grasim.com/media/press-re\u2026",
+                    "expanded_url": "https://www.grasim.com/media/press-releases/partner-in-nation-building-for-75-years-implementing-next-phase-of-transformational-growth-journey",
+                    "indices": [
+                        189,
+                        212
+                    ],
+                    "url": "https://t.co/oFZDYsXQ0R"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1592104636655505409",
+        "url": "https://x.com/GrasimInd/status/1592104636655505409",
+        "twitterUrl": "https://twitter.com/GrasimInd/status/1592104636655505409",
+        "text": "#Q2FY23 Revenue for the quarter grew 22% YoY to Rs. 22,567 Cr at the Consolidated level and 37% YoY at the Standalone level to Rs. 4,933 Cr.\n\nHighest ever Quarterly EBITDA Rs.1,712 Cr. &amp; PAT Rs.1,052 Cr. at Standalone Level\n#PressRelease https://t.co/ykHaurZRQ3",
+        "source": "Twitter for iPhone",
+        "retweetCount": 2,
+        "replyCount": 1,
+        "likeCount": 4,
+        "quoteCount": 0,
+        "viewCount": 0,
+        "createdAt": "Mon Nov 14 10:38:19 +0000 2022",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1592104636655505409",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "GrasimInd",
+            "url": "https://x.com/GrasimInd",
+            "twitterUrl": "https://twitter.com/GrasimInd",
+            "id": "881434551284895744",
+            "name": "Grasim Industries",
+            "isVerified": false,
+            "isBlueVerified": false,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/903566620546576384/L7qAMcnr_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/881434551284895744/1620302759",
+            "description": "",
+            "location": "Mumbai, India",
+            "followers": 9120,
+            "following": 16,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Sun Jul 02 08:49:08 +0000 2017",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 369,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 268,
+            "statusesCount": 927,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "Official twitter account of Grasim Industries Ltd., a part of @adityabirlagrp, ranks among India's largest private sector companies",
+                "entities": {
+                    "description": {
+                        "user_mentions": [
+                            {
+                                "id_str": "0",
+                                "indices": [
+                                    62,
+                                    77
+                                ],
+                                "name": "",
+                                "screen_name": "adityabirlagrp"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "grasim.com",
+                                "expanded_url": "http://www.grasim.com",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/2xeWKPNfpB"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": {
+            "binding_values": [
+                {
+                    "key": "description",
+                    "value": {
+                        "string_value": "Partner in Nation Building for 75 Years Implementing Next Phase of Transformational Growth Journey"
+                    }
+                },
+                {
+                    "key": "domain",
+                    "value": {
+                        "string_value": "www.grasim.com"
+                    }
+                },
+                {
+                    "key": "vanity_url",
+                    "value": {
+                        "scribe_key": "vanity_url",
+                        "string_value": "grasim.com"
+                    }
+                },
+                {
+                    "key": "title",
+                    "value": {
+                        "string_value": "Partner in Nation Building for 75 Years Implementing Next Phase of Transformational Growth Journey"
+                    }
+                },
+                {
+                    "key": "card_url",
+                    "value": {
+                        "scribe_key": "card_url",
+                        "string_value": "https://t.co/ykHaurZRQ3"
+                    }
+                }
+            ],
+            "card_platform": {
+                "platform": {
+                    "audience": {
+                        "name": "production"
+                    },
+                    "device": {
+                        "name": "iPhone",
+                        "version": "13"
+                    }
+                }
+            },
+            "name": "summary_large_image",
+            "url": "https://t.co/ykHaurZRQ3"
+        },
+        "place": {},
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        0,
+                        7
+                    ],
+                    "text": "Q2FY23"
+                },
+                {
+                    "indices": [
+                        228,
+                        241
+                    ],
+                    "text": "PressRelease"
+                }
+            ],
+            "urls": [
+                {
+                    "display_url": "grasim.com/media/press-re\u2026",
+                    "expanded_url": "https://www.grasim.com/media/press-releases/partner-in-nation-building-for-75-years-implementing-next-phase-of-transformational-growth-journey-14-nov-22",
+                    "indices": [
+                        242,
+                        265
+                    ],
+                    "url": "https://t.co/ykHaurZRQ3"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1493161259638071301",
+        "url": "https://x.com/GrasimInd/status/1493161259638071301",
+        "twitterUrl": "https://twitter.com/GrasimInd/status/1493161259638071301",
+        "text": "#Q3FY22  Results: Grasim continues with the momentum of Strong Performance \nConsolidated Revenue was up 16% YoY at \u20b924,402 Cr. and Consolidated PAT was up 26% YoY to \u20b91,746 Cr.\nlink to #pressrelease -  https://t.co/MzIWhhmBYK https://t.co/xe2oT2eGdV",
+        "source": "Twitter for iPhone",
+        "retweetCount": 2,
+        "replyCount": 0,
+        "likeCount": 9,
+        "quoteCount": 1,
+        "viewCount": 0,
+        "createdAt": "Mon Feb 14 09:52:40 +0000 2022",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1493161259638071301",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "GrasimInd",
+            "url": "https://x.com/GrasimInd",
+            "twitterUrl": "https://twitter.com/GrasimInd",
+            "id": "881434551284895744",
+            "name": "Grasim Industries",
+            "isVerified": false,
+            "isBlueVerified": false,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/903566620546576384/L7qAMcnr_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/881434551284895744/1620302759",
+            "description": "",
+            "location": "Mumbai, India",
+            "followers": 9120,
+            "following": 16,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Sun Jul 02 08:49:08 +0000 2017",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 369,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 268,
+            "statusesCount": 927,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "Official twitter account of Grasim Industries Ltd., a part of @adityabirlagrp, ranks among India's largest private sector companies",
+                "entities": {
+                    "description": {
+                        "user_mentions": [
+                            {
+                                "id_str": "0",
+                                "indices": [
+                                    62,
+                                    77
+                                ],
+                                "name": "",
+                                "screen_name": "adityabirlagrp"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "grasim.com",
+                                "expanded_url": "http://www.grasim.com",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/2xeWKPNfpB"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {
+            "media": [
+                {
+                    "display_url": "pic.twitter.com/xe2oT2eGdV",
+                    "expanded_url": "https://twitter.com/GrasimInd/status/1493161259638071301/photo/1",
+                    "ext_media_availability": {
+                        "status": "Available"
+                    },
+                    "features": {
+                        "large": {
+                            "faces": [
+                                {
+                                    "h": 68,
+                                    "w": 68,
+                                    "x": 723,
+                                    "y": 252
+                                }
+                            ]
+                        },
+                        "orig": {
+                            "faces": [
+                                {
+                                    "h": 68,
+                                    "w": 68,
+                                    "x": 723,
+                                    "y": 252
+                                }
+                            ]
+                        }
+                    },
+                    "id_str": "1493161070944714754",
+                    "indices": [
+                        226,
+                        249
+                    ],
+                    "media_key": "3_1493161070944714754",
+                    "media_results": {
+                        "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAARS4xhU6GgACCgACFLjGQSkaIAUAAA==",
+                        "result": {
+                            "__typename": "ApiMedia",
+                            "id": "QXBpTWVkaWE6DAABCgABFLjGFToaAAIKAAIUuMZBKRogBQAA",
+                            "media_key": "3_1493161070944714754"
+                        }
+                    },
+                    "media_url_https": "https://pbs.twimg.com/media/FLjGFToaAAInkR7.jpg",
+                    "original_info": {
+                        "focus_rects": [
+                            {
+                                "h": 460,
+                                "w": 821,
+                                "x": 0,
+                                "y": 2
+                            },
+                            {
+                                "h": 462,
+                                "w": 462,
+                                "x": 282,
+                                "y": 0
+                            },
+                            {
+                                "h": 462,
+                                "w": 405,
+                                "x": 311,
+                                "y": 0
+                            },
+                            {
+                                "h": 462,
+                                "w": 231,
+                                "x": 398,
+                                "y": 0
+                            },
+                            {
+                                "h": 462,
+                                "w": 821,
+                                "x": 0,
+                                "y": 0
+                            }
+                        ],
+                        "height": 462,
+                        "width": 821
+                    },
+                    "sizes": {
+                        "large": {
+                            "h": 462,
+                            "w": 821
+                        }
+                    },
+                    "type": "photo",
+                    "url": "https://t.co/xe2oT2eGdV"
+                }
+            ]
+        },
+        "card": null,
+        "place": {},
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        0,
+                        7
+                    ],
+                    "text": "Q3FY22"
+                },
+                {
+                    "indices": [
+                        185,
+                        198
+                    ],
+                    "text": "pressrelease"
+                }
+            ],
+            "urls": [
+                {
+                    "display_url": "grasim.com/media/press-re\u2026",
+                    "expanded_url": "https://www.grasim.com/media/press-releases/grasim-continues-with-the-momentum-of-strong-performance-q3fy22",
+                    "indices": [
+                        202,
+                        225
+                    ],
+                    "url": "https://t.co/MzIWhhmBYK"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1326864115764260864",
+        "url": "https://x.com/GrasimInd/status/1326864115764260864",
+        "twitterUrl": "https://twitter.com/GrasimInd/status/1326864115764260864",
+        "text": "#Q2FY21 Consolidated Revenue up 35%, EBITDA up 40%, Total PAT up 94% (all on Q-o-Q basis) \nIn a sign of confidence in the recovery, #capex guidance for #FY21 revised upwards to Rs.1,852 Cr.\nPress release Link: https://t.co/IaUzFj36UL",
+        "source": "Twitter for iPhone",
+        "retweetCount": 1,
+        "replyCount": 0,
+        "likeCount": 8,
+        "quoteCount": 1,
+        "viewCount": 0,
+        "createdAt": "Thu Nov 12 12:27:11 +0000 2020",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1326864115764260864",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "GrasimInd",
+            "url": "https://x.com/GrasimInd",
+            "twitterUrl": "https://twitter.com/GrasimInd",
+            "id": "881434551284895744",
+            "name": "Grasim Industries",
+            "isVerified": false,
+            "isBlueVerified": false,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/903566620546576384/L7qAMcnr_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/881434551284895744/1620302759",
+            "description": "",
+            "location": "Mumbai, India",
+            "followers": 9120,
+            "following": 16,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Sun Jul 02 08:49:08 +0000 2017",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 369,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 268,
+            "statusesCount": 927,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "Official twitter account of Grasim Industries Ltd., a part of @adityabirlagrp, ranks among India's largest private sector companies",
+                "entities": {
+                    "description": {
+                        "user_mentions": [
+                            {
+                                "id_str": "0",
+                                "indices": [
+                                    62,
+                                    77
+                                ],
+                                "name": "",
+                                "screen_name": "adityabirlagrp"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "grasim.com",
+                                "expanded_url": "http://www.grasim.com",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/2xeWKPNfpB"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": null,
+        "place": {},
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        0,
+                        7
+                    ],
+                    "text": "Q2FY21"
+                },
+                {
+                    "indices": [
+                        132,
+                        138
+                    ],
+                    "text": "capex"
+                },
+                {
+                    "indices": [
+                        152,
+                        157
+                    ],
+                    "text": "FY21"
+                }
+            ],
+            "urls": [
+                {
+                    "display_url": "grasim.com/media/press-re\u2026",
+                    "expanded_url": "https://www.grasim.com/media/press-releases/grasim-Industries-announces-financial-results-for-quarter-and-half-year-ended-sep-2020",
+                    "indices": [
+                        210,
+                        233
+                    ],
+                    "url": "https://t.co/IaUzFj36UL"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1293898265650331651",
+        "url": "https://x.com/GrasimInd/status/1293898265650331651",
+        "twitterUrl": "https://twitter.com/GrasimInd/status/1293898265650331651",
+        "text": "With the easing of lockdown conditions and the gradual resumption of economic activities, demand for the company\u2019s products is expected to rise in the coming quarters. #Q1FY21 Consolidated Revenue Rs 13,621 Cr. EBITDA Rs 2,613 Cr. \nLink to press release : https://t.co/zIHc8zL952",
+        "source": "Twitter for iPhone",
+        "retweetCount": 3,
+        "replyCount": 0,
+        "likeCount": 8,
+        "quoteCount": 0,
+        "viewCount": 0,
+        "createdAt": "Thu Aug 13 13:12:40 +0000 2020",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1293898265650331651",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "GrasimInd",
+            "url": "https://x.com/GrasimInd",
+            "twitterUrl": "https://twitter.com/GrasimInd",
+            "id": "881434551284895744",
+            "name": "Grasim Industries",
+            "isVerified": false,
+            "isBlueVerified": false,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/903566620546576384/L7qAMcnr_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/881434551284895744/1620302759",
+            "description": "",
+            "location": "Mumbai, India",
+            "followers": 9120,
+            "following": 16,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Sun Jul 02 08:49:08 +0000 2017",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 369,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 268,
+            "statusesCount": 927,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "Official twitter account of Grasim Industries Ltd., a part of @adityabirlagrp, ranks among India's largest private sector companies",
+                "entities": {
+                    "description": {
+                        "user_mentions": [
+                            {
+                                "id_str": "0",
+                                "indices": [
+                                    62,
+                                    77
+                                ],
+                                "name": "",
+                                "screen_name": "adityabirlagrp"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "grasim.com",
+                                "expanded_url": "http://www.grasim.com",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/2xeWKPNfpB"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": {
+            "binding_values": [
+                {
+                    "key": "description",
+                    "value": {
+                        "string_value": "Grasim Industries Limited announces its financial results for the quarter ended 30 June 2020"
+                    }
+                },
+                {
+                    "key": "domain",
+                    "value": {
+                        "string_value": "www.grasim.com"
+                    }
+                },
+                {
+                    "key": "vanity_url",
+                    "value": {
+                        "scribe_key": "vanity_url",
+                        "string_value": "grasim.com"
+                    }
+                },
+                {
+                    "key": "title",
+                    "value": {
+                        "string_value": "Grasim Industries Limited announces its financial results for the quarter ended 30 June 2020"
+                    }
+                },
+                {
+                    "key": "card_url",
+                    "value": {
+                        "scribe_key": "card_url",
+                        "string_value": "https://t.co/zIHc8zL952"
+                    }
+                }
+            ],
+            "card_platform": {
+                "platform": {
+                    "audience": {
+                        "name": "production"
+                    },
+                    "device": {
+                        "name": "iPhone",
+                        "version": "13"
+                    }
+                }
+            },
+            "name": "summary_large_image",
+            "url": "https://t.co/zIHc8zL952"
+        },
+        "place": {},
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        168,
+                        175
+                    ],
+                    "text": "Q1FY21"
+                }
+            ],
+            "urls": [
+                {
+                    "display_url": "grasim.com/media/press-re\u2026",
+                    "expanded_url": "https://www.grasim.com/media/press-releases/grasim-q1fy21-financial-results",
+                    "indices": [
+                        256,
+                        279
+                    ],
+                    "url": "https://t.co/zIHc8zL952"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1226825947707371523",
+        "url": "https://x.com/GrasimInd/status/1226825947707371523",
+        "twitterUrl": "https://twitter.com/GrasimInd/status/1226825947707371523",
+        "text": "Grasim  Consolidated  #Q3FY20 revenue for quarter is Rs.19205 Cr, EBITDA is Rs.2968 and PBT is Rs.1454 Cr. For 9 months ended 31st Dec 19, Consolidated revenue was up by 5% at Rs. 57,724 Cr. Consolidated PBT at Rs. 6,387 Cr. recorded a growth of 23% YoY https://t.co/INvAnDBX7i",
+        "source": "Twitter for iPhone",
+        "retweetCount": 3,
+        "replyCount": 0,
+        "likeCount": 13,
+        "quoteCount": 0,
+        "viewCount": 0,
+        "createdAt": "Mon Feb 10 11:11:13 +0000 2020",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1226825947707371523",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "GrasimInd",
+            "url": "https://x.com/GrasimInd",
+            "twitterUrl": "https://twitter.com/GrasimInd",
+            "id": "881434551284895744",
+            "name": "Grasim Industries",
+            "isVerified": false,
+            "isBlueVerified": false,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/903566620546576384/L7qAMcnr_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/881434551284895744/1620302759",
+            "description": "",
+            "location": "Mumbai, India",
+            "followers": 9120,
+            "following": 16,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Sun Jul 02 08:49:08 +0000 2017",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 369,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 268,
+            "statusesCount": 927,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "Official twitter account of Grasim Industries Ltd., a part of @adityabirlagrp, ranks among India's largest private sector companies",
+                "entities": {
+                    "description": {
+                        "user_mentions": [
+                            {
+                                "id_str": "0",
+                                "indices": [
+                                    62,
+                                    77
+                                ],
+                                "name": "",
+                                "screen_name": "adityabirlagrp"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "grasim.com",
+                                "expanded_url": "http://www.grasim.com",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/2xeWKPNfpB"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": null,
+        "place": {},
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        22,
+                        29
+                    ],
+                    "text": "Q3FY20"
+                }
+            ],
+            "urls": [
+                {
+                    "display_url": "grasim.com/media/press-re\u2026",
+                    "expanded_url": "https://www.grasim.com/media/press-releases/grasim-unaudited-financial-results-q3fy20",
+                    "indices": [
+                        254,
+                        277
+                    ],
+                    "url": "https://t.co/INvAnDBX7i"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    }
+]

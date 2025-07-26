@@ -1,0 +1,341 @@
+[
+    {
+        "type": "tweet",
+        "id": "1858887656865980422",
+        "url": "https://x.com/HUL_News/status/1858887656865980422",
+        "twitterUrl": "https://twitter.com/HUL_News/status/1858887656865980422",
+        "text": "At HUL, we are innovating to meet evolving hair &amp; beauty trends. \ud83d\udc99\n\nWith a rise in demand for glossy hair, we\u2019ve introduced TRESemm\u00e9\u2019s Lamellar Gloss range to India\u2014powered by advanced science to deliver salon-quality results at home. \u2728",
+        "source": "Twitter for iPhone",
+        "retweetCount": 0,
+        "replyCount": 1,
+        "likeCount": 2,
+        "quoteCount": 0,
+        "viewCount": 561,
+        "createdAt": "Tue Nov 19 14:58:48 +0000 2024",
+        "lang": "en",
+        "bookmarkCount": 1,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1858887656865980422",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "HUL_News",
+            "url": "https://x.com/HUL_News",
+            "twitterUrl": "https://twitter.com/HUL_News",
+            "id": "1703704490",
+            "name": "Hindustan Unilever",
+            "isVerified": false,
+            "isBlueVerified": false,
+            "verifiedType": "Business",
+            "profilePicture": "https://pbs.twimg.com/profile_images/778884220903104512/HzxN3b_J_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/1703704490/1751045486",
+            "description": "",
+            "location": "Mumbai, India",
+            "followers": 101601,
+            "following": 99,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Tue Aug 27 04:17:55 +0000 2013",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 3487,
+            "hasCustomTimelines": true,
+            "isTranslator": true,
+            "mediaCount": 2107,
+            "statusesCount": 12361,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "Welcome to the Hindustan Unilever Limited Newsroom. The home of purpose-led, future-fit business \ud83d\udc99 #DoingWellByDoingGood",
+                "entities": {
+                    "description": {
+                        "hashtags": [
+                            {
+                                "indices": [
+                                    99,
+                                    120
+                                ],
+                                "text": "DoingWellByDoingGood"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "hul.co.in",
+                                "expanded_url": "https://www.hul.co.in",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/tI1GLrkxnS"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": {
+            "binding_values": [
+                {
+                    "key": "unified_card",
+                    "value": {
+                        "string_value": "{\"type\":\"image_website\",\"component_objects\":{\"details_1\":{\"type\":\"details\",\"data\":{\"title\":{\"content\":\"click to read more \",\"is_rtl\":false},\"subtitle\":{\"content\":\"hul.co.in\",\"is_rtl\":false},\"destination\":\"browser_1\"}},\"media_1\":{\"type\":\"media\",\"data\":{\"id\":\"3_1858887444248272896\",\"destination\":\"browser_1\"}}},\"destination_objects\":{\"browser_1\":{\"type\":\"browser\",\"data\":{\"url_data\":{\"url\":\"https://www.hul.co.in/news/2024/tresemme-haircare-range-with-lamellar-gloss-now-in-india/\",\"vanity\":\"hul.co.in\"}}}},\"components\":[\"media_1\",\"details_1\"],\"media_entities\":{\"3_1858887444248272896\":{\"id\":1858887444248272896,\"id_str\":\"1858887444248272896\",\"indices\":[0,0],\"media_url\":\"\",\"media_url_https\":\"https://pbs.twimg.com/media/GcwYSB_aIAAc0O3.jpg\",\"url\":\"\",\"display_url\":\"\",\"expanded_url\":\"\",\"type\":\"photo\",\"original_info\":{\"width\":800,\"height\":800,\"focus_rects\":[{\"x\":0,\"y\":0,\"h\":448,\"w\":800},{\"x\":0,\"y\":0,\"h\":800,\"w\":800},{\"x\":0,\"y\":0,\"h\":800,\"w\":702},{\"x\":0,\"y\":0,\"h\":800,\"w\":400},{\"x\":0,\"y\":0,\"h\":800,\"w\":800}]},\"sizes\":{\"small\":{\"w\":680,\"h\":680,\"resize\":\"fit\"},\"large\":{\"w\":800,\"h\":800,\"resize\":\"fit\"},\"medium\":{\"w\":800,\"h\":800,\"resize\":\"fit\"},\"thumb\":{\"w\":150,\"h\":150,\"resize\":\"crop\"}},\"source_user_id\":1703704490,\"source_user_id_str\":\"1703704490\",\"media_key\":\"3_1858887444248272896\",\"ext\":{\"mediaColor\":{\"r\":{\"ok\":{\"palette\":[{\"rgb\":{\"red\":32,\"green\":54,\"blue\":199},\"percentage\":40.84},{\"rgb\":{\"red\":108,\"green\":69,\"blue\":24},\"percentage\":14.89},{\"rgb\":{\"red\":62,\"green\":64,\"blue\":144},\"percentage\":8.42},{\"rgb\":{\"red\":59,\"green\":54,\"blue\":54},\"percentage\":7.97},{\"rgb\":{\"red\":208,\"green\":158,\"blue\":95},\"percentage\":6.67}]}},\"ttl\":-1}}}}}"
+                    }
+                },
+                {
+                    "key": "card_url",
+                    "value": {
+                        "scribe_key": "card_url",
+                        "string_value": "https://twitter.com"
+                    }
+                }
+            ],
+            "card_platform": {
+                "platform": {
+                    "audience": {
+                        "name": "production"
+                    },
+                    "device": {
+                        "name": "iPhone",
+                        "version": "13"
+                    }
+                }
+            },
+            "name": "unified_card",
+            "url": "card://1858887654550745088"
+        },
+        "place": {},
+        "entities": {},
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1727962500099129670",
+        "url": "https://x.com/HUL_News/status/1727962500099129670",
+        "twitterUrl": "https://twitter.com/HUL_News/status/1727962500099129670",
+        "text": "HUF, our not-for-profit subsidiary, set up in 2010, has delivered a cumulative &amp; collective water potential of \ud835\udfda.\ud835\udfde+ \ud835\udd65\ud835\udd63\ud835\udd5a\ud835\udd5d\ud835\udd5d\ud835\udd5a\ud835\udd60\ud835\udd5f \ud835\udd5d\ud835\udd5a\ud835\udd65\ud835\udd63\ud835\udd56\ud835\udd64. \n\nThis is approximately the quantity required to meet the drinking water needs of India\u2019s population for: \n\n#HUF #JalAajAurKal",
+        "source": "Twitter for iPhone",
+        "retweetCount": 1,
+        "replyCount": 0,
+        "likeCount": 4,
+        "quoteCount": 1,
+        "viewCount": 948,
+        "createdAt": "Fri Nov 24 08:08:58 +0000 2023",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1727962500099129670",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "HUL_News",
+            "url": "https://x.com/HUL_News",
+            "twitterUrl": "https://twitter.com/HUL_News",
+            "id": "1703704490",
+            "name": "Hindustan Unilever",
+            "isVerified": false,
+            "isBlueVerified": false,
+            "verifiedType": "Business",
+            "profilePicture": "https://pbs.twimg.com/profile_images/778884220903104512/HzxN3b_J_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/1703704490/1751045486",
+            "description": "",
+            "location": "Mumbai, India",
+            "followers": 101601,
+            "following": 99,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Tue Aug 27 04:17:55 +0000 2013",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 3487,
+            "hasCustomTimelines": true,
+            "isTranslator": true,
+            "mediaCount": 2107,
+            "statusesCount": 12361,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "Welcome to the Hindustan Unilever Limited Newsroom. The home of purpose-led, future-fit business \ud83d\udc99 #DoingWellByDoingGood",
+                "entities": {
+                    "description": {
+                        "hashtags": [
+                            {
+                                "indices": [
+                                    99,
+                                    120
+                                ],
+                                "text": "DoingWellByDoingGood"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "hul.co.in",
+                                "expanded_url": "https://www.hul.co.in",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/tI1GLrkxnS"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": {
+            "binding_values": [
+                {
+                    "key": "choice1_label",
+                    "value": {
+                        "string_value": "6 months"
+                    }
+                },
+                {
+                    "key": "choice2_label",
+                    "value": {
+                        "string_value": "1 year"
+                    }
+                },
+                {
+                    "key": "end_datetime_utc",
+                    "value": {
+                        "string_value": "2023-11-26T08:08:58Z"
+                    }
+                },
+                {
+                    "key": "counts_are_final",
+                    "value": {
+                        "boolean_value": true
+                    }
+                },
+                {
+                    "key": "choice2_count",
+                    "value": {
+                        "string_value": "4"
+                    }
+                },
+                {
+                    "key": "choice1_count",
+                    "value": {
+                        "string_value": "3"
+                    }
+                },
+                {
+                    "key": "choice4_label",
+                    "value": {
+                        "string_value": "5 years"
+                    }
+                },
+                {
+                    "key": "last_updated_datetime_utc",
+                    "value": {
+                        "string_value": "2023-11-26T08:09:02Z"
+                    }
+                },
+                {
+                    "key": "duration_minutes",
+                    "value": {
+                        "string_value": "2880"
+                    }
+                },
+                {
+                    "key": "choice3_count",
+                    "value": {
+                        "string_value": "5"
+                    }
+                },
+                {
+                    "key": "choice4_count",
+                    "value": {
+                        "string_value": "0"
+                    }
+                },
+                {
+                    "key": "choice3_label",
+                    "value": {
+                        "string_value": "2 years"
+                    }
+                },
+                {
+                    "key": "api",
+                    "value": {
+                        "string_value": "capi://passthrough/1"
+                    }
+                },
+                {
+                    "key": "card_url",
+                    "value": {
+                        "scribe_key": "card_url",
+                        "string_value": "https://twitter.com"
+                    }
+                }
+            ],
+            "card_platform": {
+                "platform": {
+                    "audience": {
+                        "name": "production"
+                    },
+                    "device": {
+                        "name": "iPhone",
+                        "version": "13"
+                    }
+                }
+            },
+            "name": "poll4choice_text_only",
+            "url": "card://1727962498618597376"
+        },
+        "place": {},
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        245,
+                        249
+                    ],
+                    "text": "HUF"
+                },
+                {
+                    "indices": [
+                        250,
+                        263
+                    ],
+                    "text": "JalAajAurKal"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    }
+]

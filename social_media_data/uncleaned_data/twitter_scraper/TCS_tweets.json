@@ -1,0 +1,486 @@
+[
+    {
+        "type": "tweet",
+        "id": "1883933049190244588",
+        "url": "https://x.com/nanduMe123/status/1883933049190244588",
+        "twitterUrl": "https://twitter.com/nanduMe123/status/1883933049190244588",
+        "text": "@RT_ZOOMIN @AndhraNexus @nidhi_sharma Jagan government lo TCS development center vachinda? Shame on you for spreading false news",
+        "source": "Twitter for iPhone",
+        "retweetCount": 0,
+        "replyCount": 1,
+        "likeCount": 0,
+        "quoteCount": 0,
+        "viewCount": 17,
+        "createdAt": "Mon Jan 27 17:40:15 +0000 2025",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": true,
+        "inReplyToId": "1883733806626287840",
+        "conversationId": "1883727721173504364",
+        "inReplyToUserId": "1104635325895397377",
+        "inReplyToUsername": "RT_ZOOMIN",
+        "author": {
+            "type": "user",
+            "userName": "nanduMe123",
+            "url": "https://x.com/nanduMe123",
+            "twitterUrl": "https://twitter.com/nanduMe123",
+            "id": "148685813",
+            "name": "Nandu\ud83c\uddee\ud83c\uddf3\ud83c\udde8\ud83c\udde6",
+            "isVerified": false,
+            "isBlueVerified": false,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/1744232152877957120/ZdepUnP-_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/148685813/1736065264",
+            "description": "",
+            "location": "Vancouver, British Columbia",
+            "followers": 323,
+            "following": 780,
+            "status": "",
+            "canDm": false,
+            "canMediaTag": true,
+            "createdAt": "Thu May 27 10:15:55 +0000 2010",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 75678,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 2529,
+            "statusesCount": 56586,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [
+                "1018607227446255616"
+            ],
+            "profile_bio": {
+                "description": "# Fan of @ncbn @tarak9999 @Pawankalyan # Surviving IT Professional # Vizag",
+                "entities": {
+                    "description": {
+                        "user_mentions": [
+                            {
+                                "id_str": "0",
+                                "indices": [
+                                    9,
+                                    14
+                                ],
+                                "name": "",
+                                "screen_name": "ncbn"
+                            },
+                            {
+                                "id_str": "0",
+                                "indices": [
+                                    15,
+                                    25
+                                ],
+                                "name": "",
+                                "screen_name": "tarak9999"
+                            },
+                            {
+                                "id_str": "0",
+                                "indices": [
+                                    26,
+                                    38
+                                ],
+                                "name": "",
+                                "screen_name": "Pawankalyan"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": null,
+        "place": {},
+        "entities": {
+            "user_mentions": [
+                {
+                    "id_str": "1104635325895397377",
+                    "indices": [
+                        0,
+                        10
+                    ],
+                    "name": "R T \u264e\ufe0f",
+                    "screen_name": "RT_ZOOMIN"
+                },
+                {
+                    "id_str": "1518880264549658624",
+                    "indices": [
+                        11,
+                        23
+                    ],
+                    "name": "Andhra Nexus",
+                    "screen_name": "AndhraNexus"
+                },
+                {
+                    "id_str": "16103355",
+                    "indices": [
+                        24,
+                        37
+                    ],
+                    "name": "Nidhi",
+                    "screen_name": "nidhi_sharma"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1300111065506811906",
+        "url": "https://x.com/Shivnsh8/status/1300111065506811906",
+        "twitterUrl": "https://twitter.com/Shivnsh8/status/1300111065506811906",
+        "text": "IMPORTANT:\nRT ASAP-\nThis time make sure whenever u upload any photo of TCS-iON centre(mismnagements;traffic;violation of govt. Norms) pls try to write the exact centre name\nFor eg. tcs ion dil road NH17 bharwa,UP\n *this would make ur argument  stronger nd nobdy can claim as false",
+        "source": "Twitter for iPhone",
+        "retweetCount": 0,
+        "replyCount": 0,
+        "likeCount": 1,
+        "quoteCount": 1,
+        "viewCount": 0,
+        "createdAt": "Sun Aug 30 16:40:07 +0000 2020",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1300111065506811906",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "Shivnsh8",
+            "url": "https://x.com/Shivnsh8",
+            "twitterUrl": "https://twitter.com/Shivnsh8",
+            "id": "1291279177660891136",
+            "name": "Shivnsh",
+            "isVerified": false,
+            "isBlueVerified": false,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/1291353510030856198/SqOYExpX_normal.jpg",
+            "coverPicture": "",
+            "description": "",
+            "location": "",
+            "followers": 33,
+            "following": 44,
+            "status": "",
+            "canDm": false,
+            "canMediaTag": true,
+            "createdAt": "Thu Aug 06 07:45:31 +0000 2020",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 335,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 13,
+            "statusesCount": 239,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [
+                "1300030984801251333"
+            ],
+            "profile_bio": {
+                "description": "An IIT JEE 2020 ASPIRANT WHO IS FORCED TO WRITE EXAMS IN COVID",
+                "entities": {
+                    "description": {}
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": null,
+        "place": {},
+        "entities": {},
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1093786330503565312",
+        "url": "https://x.com/IndritVucaj/status/1093786330503565312",
+        "twitterUrl": "https://twitter.com/IndritVucaj/status/1093786330503565312",
+        "text": "RT IndritVucaj \"RT IndritVucaj \"Is Bigfoot real? Help your students find the truth and separate fact from fiction to solve this and other myths with the True or False lesson from tcs_na #IgniteMyFuture! https://t.co/j8qPr5NNak https://t.co/ni1gRtSjBp #education #learning #trai\u2026",
+        "source": "Twitter for iPhone",
+        "retweetCount": 0,
+        "replyCount": 0,
+        "likeCount": 0,
+        "quoteCount": 0,
+        "viewCount": 0,
+        "createdAt": "Fri Feb 08 08:19:17 +0000 2019",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1093786330503565312",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "IndritVucaj",
+            "url": "https://x.com/IndritVucaj",
+            "twitterUrl": "https://twitter.com/IndritVucaj",
+            "id": "195773598",
+            "name": "Indrit Vucaj, Ph.D.",
+            "isVerified": false,
+            "isBlueVerified": false,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/1278177228451348480/BoyMrW4o_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/195773598/1640666845",
+            "description": "",
+            "location": "",
+            "followers": 520,
+            "following": 685,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Mon Sep 27 15:02:59 +0000 2010",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 14,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 19159,
+            "statusesCount": 56574,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "",
+                "entities": {
+                    "description": {},
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "indritvucaj.com",
+                                "expanded_url": "http://www.indritvucaj.com",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/AayJvhvTaE"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": null,
+        "place": {},
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        186,
+                        201
+                    ],
+                    "text": "IgniteMyFuture"
+                },
+                {
+                    "indices": [
+                        251,
+                        261
+                    ],
+                    "text": "education"
+                },
+                {
+                    "indices": [
+                        262,
+                        271
+                    ],
+                    "text": "learning"
+                },
+                {
+                    "indices": [
+                        272,
+                        277
+                    ],
+                    "text": "trai"
+                }
+            ],
+            "urls": [
+                {
+                    "display_url": "bit.ly/2Wu6NEB",
+                    "expanded_url": "https://bit.ly/2Wu6NEB",
+                    "indices": [
+                        203,
+                        226
+                    ],
+                    "url": "https://t.co/j8qPr5NNak"
+                },
+                {
+                    "display_url": "pic.twitter.com/ni1gRtSjBp",
+                    "expanded_url": "https://twitter.com/DiscoveryEd/status/1093527314007244800/photo/1",
+                    "indices": [
+                        227,
+                        250
+                    ],
+                    "url": "https://t.co/ni1gRtSjBp"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1093782876884271104",
+        "url": "https://x.com/IndritVucaj/status/1093782876884271104",
+        "twitterUrl": "https://twitter.com/IndritVucaj/status/1093782876884271104",
+        "text": "RT IndritVucaj \"Is Bigfoot real? Help your students find the truth and separate fact from fiction to solve this and other myths with the True or False lesson from tcs_na #IgniteMyFuture! https://t.co/j8qPr5NNak https://t.co/ni1gRtSjBp #education #learning #training in\u2026 \u2026",
+        "source": "Twitter for iPhone",
+        "retweetCount": 0,
+        "replyCount": 0,
+        "likeCount": 0,
+        "quoteCount": 0,
+        "viewCount": 0,
+        "createdAt": "Fri Feb 08 08:05:34 +0000 2019",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1093782876884271104",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "IndritVucaj",
+            "url": "https://x.com/IndritVucaj",
+            "twitterUrl": "https://twitter.com/IndritVucaj",
+            "id": "195773598",
+            "name": "Indrit Vucaj, Ph.D.",
+            "isVerified": false,
+            "isBlueVerified": false,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/1278177228451348480/BoyMrW4o_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/195773598/1640666845",
+            "description": "",
+            "location": "",
+            "followers": 520,
+            "following": 685,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Mon Sep 27 15:02:59 +0000 2010",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 14,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 19159,
+            "statusesCount": 56574,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "",
+                "entities": {
+                    "description": {},
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "indritvucaj.com",
+                                "expanded_url": "http://www.indritvucaj.com",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/AayJvhvTaE"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": null,
+        "place": {},
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        170,
+                        185
+                    ],
+                    "text": "IgniteMyFuture"
+                },
+                {
+                    "indices": [
+                        235,
+                        245
+                    ],
+                    "text": "education"
+                },
+                {
+                    "indices": [
+                        246,
+                        255
+                    ],
+                    "text": "learning"
+                },
+                {
+                    "indices": [
+                        256,
+                        265
+                    ],
+                    "text": "training"
+                }
+            ],
+            "urls": [
+                {
+                    "display_url": "bit.ly/2Wu6NEB",
+                    "expanded_url": "https://bit.ly/2Wu6NEB",
+                    "indices": [
+                        187,
+                        210
+                    ],
+                    "url": "https://t.co/j8qPr5NNak"
+                },
+                {
+                    "display_url": "pic.twitter.com/ni1gRtSjBp",
+                    "expanded_url": "https://twitter.com/DiscoveryEd/status/1093527314007244800/photo/1",
+                    "indices": [
+                        211,
+                        234
+                    ],
+                    "url": "https://t.co/ni1gRtSjBp"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    }
+]

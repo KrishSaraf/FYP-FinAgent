@@ -1,0 +1,4153 @@
+[
+    {
+        "type": "tweet",
+        "id": "1948053412030910924",
+        "url": "https://x.com/TataConsumer/status/1948053412030910924",
+        "twitterUrl": "https://twitter.com/TataConsumer/status/1948053412030910924",
+        "text": "Our financial results for the quarter ended 30th June 2025 are out!\n\nWe delivered a topline growth of 10%, with double-digit net profit growth.\n\nView the full results here: https://t.co/CS4QK3f8z1\n\n#TataConsumerProducts #Q1FY26 https://t.co/IylIdTqp48",
+        "source": "Twitter for iPhone",
+        "retweetCount": 1,
+        "replyCount": 1,
+        "likeCount": 3,
+        "quoteCount": 0,
+        "viewCount": 218,
+        "createdAt": "Wed Jul 23 16:11:41 +0000 2025",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1948053412030910924",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "TataConsumer",
+            "url": "https://x.com/TataConsumer",
+            "twitterUrl": "https://twitter.com/TataConsumer",
+            "id": "2179307928",
+            "name": "Tata Consumer Products",
+            "isVerified": false,
+            "isBlueVerified": true,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/1674876693549559809/UILmj7n4_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/2179307928/1741586521",
+            "description": "",
+            "location": "Mumbai, India",
+            "followers": 16060,
+            "following": 91,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Thu Nov 07 04:16:35 +0000 2013",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 573,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 1779,
+            "statusesCount": 3037,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "The official twitter handle of Tata Consumer Products Ltd (Formerly known as Tata Global Beverages Ltd.)",
+                "entities": {
+                    "description": {},
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "tataconsumer.com",
+                                "expanded_url": "http://www.tataconsumer.com",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/mIOEIV3GYZ"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {
+            "media": [
+                {
+                    "additional_media_info": {
+                        "monetizable": false
+                    },
+                    "display_url": "pic.twitter.com/IylIdTqp48",
+                    "expanded_url": "https://twitter.com/TataConsumer/status/1948053412030910924/video/1",
+                    "ext_media_availability": {
+                        "status": "Available"
+                    },
+                    "id_str": "1948053321971007488",
+                    "indices": [
+                        228,
+                        251
+                    ],
+                    "media_key": "7_1948053321971007488",
+                    "media_results": {
+                        "id": "QXBpTWVkaWFSZXN1bHRzOgwAAwoAARsI4CzTmgAACgACGwjgQcuXEcwAAA==",
+                        "result": {
+                            "__typename": "ApiMedia",
+                            "id": "QXBpTWVkaWE6DAADCgABGwjgLNOaAAAKAAIbCOBBy5cRzAAA",
+                            "media_key": "7_1948053321971007488"
+                        }
+                    },
+                    "media_url_https": "https://pbs.twimg.com/ext_tw_video_thumb/1948053321971007488/pu/img/YVEGgSUrWs1Sz0Pk.jpg",
+                    "original_info": {
+                        "focus_rects": [],
+                        "height": 900,
+                        "width": 720
+                    },
+                    "sizes": {
+                        "large": {
+                            "h": 900,
+                            "w": 720
+                        }
+                    },
+                    "type": "video",
+                    "url": "https://t.co/IylIdTqp48",
+                    "video_info": {
+                        "aspect_ratio": [
+                            4,
+                            5
+                        ],
+                        "duration_millis": 19498,
+                        "variants": [
+                            {
+                                "content_type": "application/x-mpegURL",
+                                "url": "https://video-s.twimg.com/ext_tw_video/1948053321971007488/pu/pl/3MU-hRkMYfUW8Y77.m3u8?tag=12"
+                            },
+                            {
+                                "bitrate": 632000,
+                                "content_type": "video/mp4",
+                                "url": "https://video-s.twimg.com/ext_tw_video/1948053321971007488/pu/vid/avc1/320x400/iKrRxbDCfRJ5srNZ.mp4?tag=12"
+                            },
+                            {
+                                "bitrate": 950000,
+                                "content_type": "video/mp4",
+                                "url": "https://video-s.twimg.com/ext_tw_video/1948053321971007488/pu/vid/avc1/480x600/maGRoAoRlg-jUUM1.mp4?tag=12"
+                            },
+                            {
+                                "bitrate": 2176000,
+                                "content_type": "video/mp4",
+                                "url": "https://video-s.twimg.com/ext_tw_video/1948053321971007488/pu/vid/avc1/720x900/Ee_E2HUQoDUFx10t.mp4?tag=12"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "card": null,
+        "place": {},
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        198,
+                        219
+                    ],
+                    "text": "TataConsumerProducts"
+                },
+                {
+                    "indices": [
+                        220,
+                        227
+                    ],
+                    "text": "Q1FY26"
+                }
+            ],
+            "urls": [
+                {
+                    "display_url": "tataconsumer.com/investors/inve\u2026",
+                    "expanded_url": "https://www.tataconsumer.com/investors/investor-relations/results-and-presentation/consolidated-results",
+                    "indices": [
+                        173,
+                        196
+                    ],
+                    "url": "https://t.co/CS4QK3f8z1"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1948023028321038400",
+        "url": "https://x.com/TataConsumer/status/1948023028321038400",
+        "twitterUrl": "https://twitter.com/TataConsumer/status/1948023028321038400",
+        "text": "Newsflash! #TataConsumerProducts #Q1FY26 are out.\n\nRevenue from Operations at INR 4,779 Cr., up 10%\n\nConsolidated EBITDA at INR 615 Cr., down 8%\n\nGroup Net Profit at INR 332 Cr., up 15%\n\nFull results here: https://t.co/7yH0BaPApt",
+        "source": "Twitter for iPhone",
+        "retweetCount": 1,
+        "replyCount": 2,
+        "likeCount": 2,
+        "quoteCount": 0,
+        "viewCount": 300,
+        "createdAt": "Wed Jul 23 14:10:57 +0000 2025",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1948023028321038400",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "TataConsumer",
+            "url": "https://x.com/TataConsumer",
+            "twitterUrl": "https://twitter.com/TataConsumer",
+            "id": "2179307928",
+            "name": "Tata Consumer Products",
+            "isVerified": false,
+            "isBlueVerified": true,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/1674876693549559809/UILmj7n4_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/2179307928/1741586521",
+            "description": "",
+            "location": "Mumbai, India",
+            "followers": 16060,
+            "following": 91,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Thu Nov 07 04:16:35 +0000 2013",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 573,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 1779,
+            "statusesCount": 3037,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "The official twitter handle of Tata Consumer Products Ltd (Formerly known as Tata Global Beverages Ltd.)",
+                "entities": {
+                    "description": {},
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "tataconsumer.com",
+                                "expanded_url": "http://www.tataconsumer.com",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/mIOEIV3GYZ"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": null,
+        "place": {},
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        11,
+                        32
+                    ],
+                    "text": "TataConsumerProducts"
+                },
+                {
+                    "indices": [
+                        33,
+                        40
+                    ],
+                    "text": "Q1FY26"
+                }
+            ],
+            "urls": [
+                {
+                    "display_url": "tataconsumer.com/news/results-q\u2026",
+                    "expanded_url": "https://www.tataconsumer.com/news/results-quarter-ended-30th-june-2025",
+                    "indices": [
+                        206,
+                        229
+                    ],
+                    "url": "https://t.co/7yH0BaPApt"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1915074541128225141",
+        "url": "https://x.com/TataConsumer/status/1915074541128225141",
+        "twitterUrl": "https://twitter.com/TataConsumer/status/1915074541128225141",
+        "text": "Our financial results for the Quarter and Year ended 31st March 2025 are out!\n\nWe delivered a topline growth of 17% for the Quarter and 16% for the Year, growth was broad based across India and the International Business.\n\nView the full results here: https://t.co/1qLHsqMopT\n\n#TataConsumerProducts #FY2024-25",
+        "source": "Twitter for iPhone",
+        "retweetCount": 1,
+        "replyCount": 0,
+        "likeCount": 3,
+        "quoteCount": 0,
+        "viewCount": 14856,
+        "createdAt": "Wed Apr 23 16:05:25 +0000 2025",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1915074541128225141",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "TataConsumer",
+            "url": "https://x.com/TataConsumer",
+            "twitterUrl": "https://twitter.com/TataConsumer",
+            "id": "2179307928",
+            "name": "Tata Consumer Products",
+            "isVerified": false,
+            "isBlueVerified": true,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/1674876693549559809/UILmj7n4_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/2179307928/1741586521",
+            "description": "",
+            "location": "Mumbai, India",
+            "followers": 16060,
+            "following": 91,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Thu Nov 07 04:16:35 +0000 2013",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 573,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 1779,
+            "statusesCount": 3037,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "The official twitter handle of Tata Consumer Products Ltd (Formerly known as Tata Global Beverages Ltd.)",
+                "entities": {
+                    "description": {},
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "tataconsumer.com",
+                                "expanded_url": "http://www.tataconsumer.com",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/mIOEIV3GYZ"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {
+            "media": [
+                {
+                    "additional_media_info": {
+                        "monetizable": false
+                    },
+                    "display_url": "pic.twitter.com/ss8w76uhzN",
+                    "expanded_url": "https://twitter.com/TataConsumer/status/1915074541128225141/video/1",
+                    "ext_media_availability": {
+                        "status": "Available"
+                    },
+                    "id_str": "1915074496979210240",
+                    "indices": [
+                        276,
+                        299
+                    ],
+                    "media_key": "7_1915074496979210240",
+                    "media_results": {
+                        "id": "QXBpTWVkaWFSZXN1bHRzOgwAAwoAARqTthvG2xAACgACGpO2Jg5XkXUAAA==",
+                        "result": {
+                            "__typename": "ApiMedia",
+                            "id": "QXBpTWVkaWE6DAADCgABGpO2G8bbEAAKAAIak7YmDleRdQAA",
+                            "media_key": "7_1915074496979210240"
+                        }
+                    },
+                    "media_url_https": "https://pbs.twimg.com/ext_tw_video_thumb/1915074496979210240/pu/img/fGll6FS764kDAekY.jpg",
+                    "original_info": {
+                        "focus_rects": [],
+                        "height": 900,
+                        "width": 720
+                    },
+                    "sizes": {
+                        "large": {
+                            "h": 900,
+                            "w": 720
+                        }
+                    },
+                    "type": "video",
+                    "url": "https://t.co/ss8w76uhzN",
+                    "video_info": {
+                        "aspect_ratio": [
+                            4,
+                            5
+                        ],
+                        "duration_millis": 33700,
+                        "variants": [
+                            {
+                                "content_type": "application/x-mpegURL",
+                                "url": "https://video-s.twimg.com/ext_tw_video/1915074496979210240/pu/pl/AyRegENSgltilNab.m3u8?tag=12"
+                            },
+                            {
+                                "bitrate": 632000,
+                                "content_type": "video/mp4",
+                                "url": "https://video-s.twimg.com/ext_tw_video/1915074496979210240/pu/vid/avc1/320x400/MWC9lFuvnLR7fe9G.mp4?tag=12"
+                            },
+                            {
+                                "bitrate": 950000,
+                                "content_type": "video/mp4",
+                                "url": "https://video-s.twimg.com/ext_tw_video/1915074496979210240/pu/vid/avc1/480x600/W7-Vfloe9uyRGZRX.mp4?tag=12"
+                            },
+                            {
+                                "bitrate": 2176000,
+                                "content_type": "video/mp4",
+                                "url": "https://video-s.twimg.com/ext_tw_video/1915074496979210240/pu/vid/avc1/720x900/B4hk8i37PvbOEiZL.mp4?tag=12"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "card": null,
+        "place": {},
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        276,
+                        297
+                    ],
+                    "text": "TataConsumerProducts"
+                },
+                {
+                    "indices": [
+                        298,
+                        305
+                    ],
+                    "text": "FY2024"
+                }
+            ],
+            "urls": [
+                {
+                    "display_url": "tataconsumer.com/investors/inve\u2026",
+                    "expanded_url": "https://www.tataconsumer.com/investors/investor-relations/results-and-presentation/press-releases",
+                    "indices": [
+                        251,
+                        274
+                    ],
+                    "url": "https://t.co/1qLHsqMopT"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1915014633796387248",
+        "url": "https://x.com/TataConsumer/status/1915014633796387248",
+        "twitterUrl": "https://twitter.com/TataConsumer/status/1915014633796387248",
+        "text": "Newsflash! #TataConsumerProducts results for the Quarter and Year ended 31st March 2025 are out.\n\nRevenue for the Quarter at INR 4,608 Cr., up 17%, For the Year at INR 17,618 Cr., up 16%.\n\nConsolidated EBITDA for the Quarter at INR 625 Cr., down 1%, For the Year at INR 2,502 Cr., up 8%.\n\nGroup Net Profit for the Quarter at INR 349 Cr., up 64%, For the Year at INR 1,287 Cr., up 6%.\n\nFull results here: https://t.co/1qLHsqMWfr\n\n#TataConsumerProducts #Q4FY25",
+        "source": "Twitter for iPhone",
+        "retweetCount": 0,
+        "replyCount": 1,
+        "likeCount": 0,
+        "quoteCount": 0,
+        "viewCount": 383,
+        "createdAt": "Wed Apr 23 12:07:22 +0000 2025",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1915014633796387248",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "TataConsumer",
+            "url": "https://x.com/TataConsumer",
+            "twitterUrl": "https://twitter.com/TataConsumer",
+            "id": "2179307928",
+            "name": "Tata Consumer Products",
+            "isVerified": false,
+            "isBlueVerified": true,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/1674876693549559809/UILmj7n4_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/2179307928/1741586521",
+            "description": "",
+            "location": "Mumbai, India",
+            "followers": 16060,
+            "following": 91,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Thu Nov 07 04:16:35 +0000 2013",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 573,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 1779,
+            "statusesCount": 3037,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "The official twitter handle of Tata Consumer Products Ltd (Formerly known as Tata Global Beverages Ltd.)",
+                "entities": {
+                    "description": {},
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "tataconsumer.com",
+                                "expanded_url": "http://www.tataconsumer.com",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/mIOEIV3GYZ"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": null,
+        "place": {},
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        11,
+                        32
+                    ],
+                    "text": "TataConsumerProducts"
+                },
+                {
+                    "indices": [
+                        429,
+                        450
+                    ],
+                    "text": "TataConsumerProducts"
+                },
+                {
+                    "indices": [
+                        451,
+                        458
+                    ],
+                    "text": "Q4FY25"
+                }
+            ],
+            "urls": [
+                {
+                    "display_url": "tataconsumer.com/investors/inve\u2026",
+                    "expanded_url": "https://www.tataconsumer.com/investors/investor-relations/results-and-presentation/press-releases",
+                    "indices": [
+                        404,
+                        427
+                    ],
+                    "url": "https://t.co/1qLHsqMWfr"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1888090381470024177",
+        "url": "https://x.com/TataConsumer/status/1888090381470024177",
+        "twitterUrl": "https://twitter.com/TataConsumer/status/1888090381470024177",
+        "text": "Our MD & CEO, Sunil D'Souza, discusses the company\u2019s ambitions, earnings, urban vs. rural demand trends, and the evolving consumer landscape in India with Ratna Bhushan for The Economic Times.\n \nClick here to listen to the full podcast: https://t.co/1guSqeDfck\n\n#TataConsumerProducts #ForBetter",
+        "source": "Twitter for iPhone",
+        "retweetCount": 3,
+        "replyCount": 0,
+        "likeCount": 4,
+        "quoteCount": 0,
+        "viewCount": 418,
+        "createdAt": "Sat Feb 08 05:00:00 +0000 2025",
+        "lang": "en",
+        "bookmarkCount": 1,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1888090381470024177",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "TataConsumer",
+            "url": "https://x.com/TataConsumer",
+            "twitterUrl": "https://twitter.com/TataConsumer",
+            "id": "2179307928",
+            "name": "Tata Consumer Products",
+            "isVerified": false,
+            "isBlueVerified": true,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/1674876693549559809/UILmj7n4_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/2179307928/1741586521",
+            "description": "",
+            "location": "Mumbai, India",
+            "followers": 16060,
+            "following": 91,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Thu Nov 07 04:16:35 +0000 2013",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 573,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 1779,
+            "statusesCount": 3037,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "The official twitter handle of Tata Consumer Products Ltd (Formerly known as Tata Global Beverages Ltd.)",
+                "entities": {
+                    "description": {},
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "tataconsumer.com",
+                                "expanded_url": "http://www.tataconsumer.com",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/mIOEIV3GYZ"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {
+            "media": [
+                {
+                    "display_url": "pic.twitter.com/jxqskeDCv7",
+                    "expanded_url": "https://twitter.com/TataConsumer/status/1888090381470024177/photo/1",
+                    "ext_media_availability": {
+                        "status": "Available"
+                    },
+                    "features": {
+                        "large": {
+                            "faces": [
+                                {
+                                    "h": 39,
+                                    "w": 39,
+                                    "x": 314,
+                                    "y": 679
+                                },
+                                {
+                                    "h": 263,
+                                    "w": 263,
+                                    "x": 182,
+                                    "y": 287
+                                }
+                            ]
+                        },
+                        "orig": {
+                            "faces": [
+                                {
+                                    "h": 39,
+                                    "w": 39,
+                                    "x": 314,
+                                    "y": 679
+                                },
+                                {
+                                    "h": 263,
+                                    "w": 263,
+                                    "x": 182,
+                                    "y": 287
+                                }
+                            ]
+                        }
+                    },
+                    "id_str": "1887870607888441345",
+                    "indices": [
+                        266,
+                        289
+                    ],
+                    "media_key": "3_1887870607888441345",
+                    "media_results": {
+                        "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAARozEFDFF2ABCgACGjPYMstaQfEAAA==",
+                        "result": {
+                            "__typename": "ApiMedia",
+                            "id": "QXBpTWVkaWE6DAABCgABGjMQUMUXYAEKAAIaM9gyy1pB8QAA",
+                            "media_key": "3_1887870607888441345"
+                        }
+                    },
+                    "media_url_https": "https://pbs.twimg.com/media/GjMQUMUXYAEvNYC.jpg",
+                    "original_info": {
+                        "focus_rects": [
+                            {
+                                "h": 605,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 157
+                            },
+                            {
+                                "h": 1080,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 947,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 540,
+                                "x": 27,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 0
+                            }
+                        ],
+                        "height": 1080,
+                        "width": 1080
+                    },
+                    "sizes": {
+                        "large": {
+                            "h": 1080,
+                            "w": 1080
+                        }
+                    },
+                    "type": "photo",
+                    "url": "https://t.co/jxqskeDCv7"
+                }
+            ]
+        },
+        "card": null,
+        "place": {},
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        262,
+                        283
+                    ],
+                    "text": "TataConsumerProducts"
+                },
+                {
+                    "indices": [
+                        284,
+                        294
+                    ],
+                    "text": "ForBetter"
+                }
+            ],
+            "urls": [
+                {
+                    "display_url": "ecoti.in/iG_UxZ",
+                    "expanded_url": "https://ecoti.in/iG_UxZ",
+                    "indices": [
+                        237,
+                        260
+                    ],
+                    "url": "https://t.co/1guSqeDfck"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1885175442342371374",
+        "url": "https://x.com/TataConsumer/status/1885175442342371374",
+        "twitterUrl": "https://twitter.com/TataConsumer/status/1885175442342371374",
+        "text": "Our financial results for the quarter ended 31st December 2024 are out!\n\nWe delivered a topline growth of 17%, growth was broad based with strong performance in India Beverages and Foods.\n\n#TataConsumerProducts #Q3FY25 https://t.co/8kZjHmP5M6",
+        "source": "Twitter for iPhone",
+        "retweetCount": 0,
+        "replyCount": 3,
+        "likeCount": 5,
+        "quoteCount": 0,
+        "viewCount": 370,
+        "createdAt": "Fri Jan 31 03:57:04 +0000 2025",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1885175442342371374",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "TataConsumer",
+            "url": "https://x.com/TataConsumer",
+            "twitterUrl": "https://twitter.com/TataConsumer",
+            "id": "2179307928",
+            "name": "Tata Consumer Products",
+            "isVerified": false,
+            "isBlueVerified": true,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/1674876693549559809/UILmj7n4_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/2179307928/1741586521",
+            "description": "",
+            "location": "Mumbai, India",
+            "followers": 16060,
+            "following": 91,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Thu Nov 07 04:16:35 +0000 2013",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 573,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 1779,
+            "statusesCount": 3037,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "The official twitter handle of Tata Consumer Products Ltd (Formerly known as Tata Global Beverages Ltd.)",
+                "entities": {
+                    "description": {},
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "tataconsumer.com",
+                                "expanded_url": "http://www.tataconsumer.com",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/mIOEIV3GYZ"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {
+            "media": [
+                {
+                    "additional_media_info": {
+                        "monetizable": false
+                    },
+                    "display_url": "pic.twitter.com/8kZjHmP5M6",
+                    "expanded_url": "https://twitter.com/TataConsumer/status/1885175442342371374/video/1",
+                    "ext_media_availability": {
+                        "status": "Available"
+                    },
+                    "id_str": "1885175244291215361",
+                    "indices": [
+                        219,
+                        242
+                    ],
+                    "media_key": "7_1885175244291215361",
+                    "media_results": {
+                        "id": "QXBpTWVkaWFSZXN1bHRzOgwAAwoAARopfOWHVpABCgACGil9E6QbYC4AAA==",
+                        "result": {
+                            "__typename": "ApiMedia",
+                            "id": "QXBpTWVkaWE6DAADCgABGil85YdWkAEKAAIaKX0TpBtgLgAA",
+                            "media_key": "7_1885175244291215361"
+                        }
+                    },
+                    "media_url_https": "https://pbs.twimg.com/ext_tw_video_thumb/1885175244291215361/pu/img/SK4tsMraslomSWPq.jpg",
+                    "original_info": {
+                        "focus_rects": [],
+                        "height": 900,
+                        "width": 720
+                    },
+                    "sizes": {
+                        "large": {
+                            "h": 900,
+                            "w": 720
+                        }
+                    },
+                    "type": "video",
+                    "url": "https://t.co/8kZjHmP5M6",
+                    "video_info": {
+                        "aspect_ratio": [
+                            4,
+                            5
+                        ],
+                        "duration_millis": 33005,
+                        "variants": [
+                            {
+                                "content_type": "application/x-mpegURL",
+                                "url": "https://video-s.twimg.com/ext_tw_video/1885175244291215361/pu/pl/4FWrZlE0obqDIJNp.m3u8?tag=12"
+                            },
+                            {
+                                "bitrate": 632000,
+                                "content_type": "video/mp4",
+                                "url": "https://video-s.twimg.com/ext_tw_video/1885175244291215361/pu/vid/avc1/320x400/7g0ze8wwP_K7wMPd.mp4?tag=12"
+                            },
+                            {
+                                "bitrate": 950000,
+                                "content_type": "video/mp4",
+                                "url": "https://video-s.twimg.com/ext_tw_video/1885175244291215361/pu/vid/avc1/480x600/aPoF9wQy21MSERdS.mp4?tag=12"
+                            },
+                            {
+                                "bitrate": 2176000,
+                                "content_type": "video/mp4",
+                                "url": "https://video-s.twimg.com/ext_tw_video/1885175244291215361/pu/vid/avc1/720x900/r7Q_U3a_n6WDHZ5j.mp4?tag=12"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "card": null,
+        "place": {},
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        189,
+                        210
+                    ],
+                    "text": "TataConsumerProducts"
+                },
+                {
+                    "indices": [
+                        211,
+                        218
+                    ],
+                    "text": "Q3FY25"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1884969694983270534",
+        "url": "https://x.com/TataConsumer/status/1884969694983270534",
+        "twitterUrl": "https://twitter.com/TataConsumer/status/1884969694983270534",
+        "text": "Newsflash! #TataConsumerProducts #Q3FY25 results are out!\n\nRevenue from Operations at INR 4,444 Crores, up 17%.\n\nConsolidated EBITDA at INR 578 Crores.\n\nVisit the link below to view the full results:\nhttps://t.co/TQDDxALdUD",
+        "source": "Twitter for iPhone",
+        "retweetCount": 1,
+        "replyCount": 1,
+        "likeCount": 5,
+        "quoteCount": 0,
+        "viewCount": 549,
+        "createdAt": "Thu Jan 30 14:19:30 +0000 2025",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1884969694983270534",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "TataConsumer",
+            "url": "https://x.com/TataConsumer",
+            "twitterUrl": "https://twitter.com/TataConsumer",
+            "id": "2179307928",
+            "name": "Tata Consumer Products",
+            "isVerified": false,
+            "isBlueVerified": true,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/1674876693549559809/UILmj7n4_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/2179307928/1741586521",
+            "description": "",
+            "location": "Mumbai, India",
+            "followers": 16060,
+            "following": 91,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Thu Nov 07 04:16:35 +0000 2013",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 573,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 1779,
+            "statusesCount": 3037,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "The official twitter handle of Tata Consumer Products Ltd (Formerly known as Tata Global Beverages Ltd.)",
+                "entities": {
+                    "description": {},
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "tataconsumer.com",
+                                "expanded_url": "http://www.tataconsumer.com",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/mIOEIV3GYZ"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": null,
+        "place": {},
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        11,
+                        32
+                    ],
+                    "text": "TataConsumerProducts"
+                },
+                {
+                    "indices": [
+                        33,
+                        40
+                    ],
+                    "text": "Q3FY25"
+                }
+            ],
+            "urls": [
+                {
+                    "display_url": "tataconsumer.com/news/results-q\u2026",
+                    "expanded_url": "https://www.tataconsumer.com/news/results-quarter-ended-31st-december-2024",
+                    "indices": [
+                        200,
+                        223
+                    ],
+                    "url": "https://t.co/TQDDxALdUD"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1847513727882371143",
+        "url": "https://x.com/TataConsumer/status/1847513727882371143",
+        "twitterUrl": "https://twitter.com/TataConsumer/status/1847513727882371143",
+        "text": "Our financial results for the quarter ended 30th September 2024 are out!\n\nWe delivered a topline growth of 13% with EBITDA growth of 11%.\n\nView the full result here: https://t.co/KvP7pAimBO\n\n#TataConsumerProducts #Q2FY25 https://t.co/vwVz27GeZE",
+        "source": "Twitter for iPhone",
+        "retweetCount": 1,
+        "replyCount": 1,
+        "likeCount": 5,
+        "quoteCount": 0,
+        "viewCount": 1298,
+        "createdAt": "Sat Oct 19 05:42:52 +0000 2024",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1847513727882371143",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "TataConsumer",
+            "url": "https://x.com/TataConsumer",
+            "twitterUrl": "https://twitter.com/TataConsumer",
+            "id": "2179307928",
+            "name": "Tata Consumer Products",
+            "isVerified": false,
+            "isBlueVerified": true,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/1674876693549559809/UILmj7n4_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/2179307928/1741586521",
+            "description": "",
+            "location": "Mumbai, India",
+            "followers": 16060,
+            "following": 91,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Thu Nov 07 04:16:35 +0000 2013",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 573,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 1779,
+            "statusesCount": 3037,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "The official twitter handle of Tata Consumer Products Ltd (Formerly known as Tata Global Beverages Ltd.)",
+                "entities": {
+                    "description": {},
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "tataconsumer.com",
+                                "expanded_url": "http://www.tataconsumer.com",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/mIOEIV3GYZ"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {
+            "media": [
+                {
+                    "additional_media_info": {
+                        "monetizable": false
+                    },
+                    "display_url": "pic.twitter.com/vwVz27GeZE",
+                    "expanded_url": "https://twitter.com/TataConsumer/status/1847513727882371143/video/1",
+                    "ext_media_availability": {
+                        "status": "Available"
+                    },
+                    "id_str": "1847507912521916416",
+                    "indices": [
+                        221,
+                        244
+                    ],
+                    "media_key": "7_1847507912521916416",
+                    "media_results": {
+                        "id": "QXBpTWVkaWFSZXN1bHRzOgwAAwoAARmjqqhtl6AACgACGaOv8mwWIEcAAA==",
+                        "result": {
+                            "__typename": "ApiMedia",
+                            "id": "QXBpTWVkaWE6DAADCgABGaOqqG2XoAAKAAIZo6/ybBYgRwAA",
+                            "media_key": "7_1847507912521916416"
+                        }
+                    },
+                    "media_url_https": "https://pbs.twimg.com/ext_tw_video_thumb/1847507912521916416/pu/img/aiUMUclMj_D51gHX.jpg",
+                    "original_info": {
+                        "focus_rects": [],
+                        "height": 1080,
+                        "width": 1080
+                    },
+                    "sizes": {
+                        "large": {
+                            "h": 1080,
+                            "w": 1080
+                        }
+                    },
+                    "type": "video",
+                    "url": "https://t.co/vwVz27GeZE",
+                    "video_info": {
+                        "aspect_ratio": [
+                            1,
+                            1
+                        ],
+                        "duration_millis": 119666,
+                        "variants": [
+                            {
+                                "content_type": "application/x-mpegURL",
+                                "url": "https://video-s.twimg.com/ext_tw_video/1847507912521916416/pu/pl/GJuKDx-hqbD8qceB.m3u8?tag=12"
+                            },
+                            {
+                                "bitrate": 432000,
+                                "content_type": "video/mp4",
+                                "url": "https://video-s.twimg.com/ext_tw_video/1847507912521916416/pu/vid/avc1/320x320/OmYiChdj6vrXGPW6.mp4?tag=12"
+                            },
+                            {
+                                "bitrate": 832000,
+                                "content_type": "video/mp4",
+                                "url": "https://video-s.twimg.com/ext_tw_video/1847507912521916416/pu/vid/avc1/540x540/hkXVQt3ThP9JP7N1.mp4?tag=12"
+                            },
+                            {
+                                "bitrate": 1280000,
+                                "content_type": "video/mp4",
+                                "url": "https://video-s.twimg.com/ext_tw_video/1847507912521916416/pu/vid/avc1/720x720/cuT878El6tk8tsqv.mp4?tag=12"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "card": null,
+        "place": {},
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        191,
+                        212
+                    ],
+                    "text": "TataConsumerProducts"
+                },
+                {
+                    "indices": [
+                        213,
+                        220
+                    ],
+                    "text": "Q2FY25"
+                }
+            ],
+            "urls": [
+                {
+                    "display_url": "tataconsumer.com/sites/g/files/\u2026",
+                    "expanded_url": "https://www.tataconsumer.com/sites/g/files/gfwrlq316/files/2024-10/Q2FY25%20Investor%20Presentation_vf.pdf",
+                    "indices": [
+                        166,
+                        189
+                    ],
+                    "url": "https://t.co/KvP7pAimBO"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1847257643917693433",
+        "url": "https://x.com/TataConsumer/status/1847257643917693433",
+        "twitterUrl": "https://twitter.com/TataConsumer/status/1847257643917693433",
+        "text": "Newsflash! #TataConsumerProducts #Q2FY25 results are out!\nRevenue from Operations at INR 4214 Cr., up 13%\nConsolidated EBITDA at INR 629 Cr., grew by 11%\n\nClick here to read the full report: https://t.co/hl1K7Dohf7",
+        "source": "Twitter for iPhone",
+        "retweetCount": 0,
+        "replyCount": 0,
+        "likeCount": 5,
+        "quoteCount": 0,
+        "viewCount": 542,
+        "createdAt": "Fri Oct 18 12:45:17 +0000 2024",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1847257643917693433",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "TataConsumer",
+            "url": "https://x.com/TataConsumer",
+            "twitterUrl": "https://twitter.com/TataConsumer",
+            "id": "2179307928",
+            "name": "Tata Consumer Products",
+            "isVerified": false,
+            "isBlueVerified": true,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/1674876693549559809/UILmj7n4_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/2179307928/1741586521",
+            "description": "",
+            "location": "Mumbai, India",
+            "followers": 16060,
+            "following": 91,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Thu Nov 07 04:16:35 +0000 2013",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 573,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 1779,
+            "statusesCount": 3037,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "The official twitter handle of Tata Consumer Products Ltd (Formerly known as Tata Global Beverages Ltd.)",
+                "entities": {
+                    "description": {},
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "tataconsumer.com",
+                                "expanded_url": "http://www.tataconsumer.com",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/mIOEIV3GYZ"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": null,
+        "place": {},
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        11,
+                        32
+                    ],
+                    "text": "TataConsumerProducts"
+                },
+                {
+                    "indices": [
+                        33,
+                        40
+                    ],
+                    "text": "Q2FY25"
+                }
+            ],
+            "urls": [
+                {
+                    "display_url": "tataconsumer.com/investors/inve\u2026",
+                    "expanded_url": "https://www.tataconsumer.com/investors/investor-relations/results-and-presentation/press-releases",
+                    "indices": [
+                        191,
+                        214
+                    ],
+                    "url": "https://t.co/hl1K7Dohf7"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1818506730642235400",
+        "url": "https://x.com/TataConsumer/status/1818506730642235400",
+        "twitterUrl": "https://twitter.com/TataConsumer/status/1818506730642235400",
+        "text": "Our financial results for the quarter ended 30th June 2024 are out. We delivered good topline growth along with significant expansion in EBITDA margin.\n\nView the full results here: https://t.co/aiocA20GzY\n\n#Q1FY25 #FinancialResults #TataConsumerProducts https://t.co/EmYZFmYL9H",
+        "source": "Twitter for iPhone",
+        "retweetCount": 1,
+        "replyCount": 2,
+        "likeCount": 9,
+        "quoteCount": 1,
+        "viewCount": 2734,
+        "createdAt": "Wed Jul 31 04:39:25 +0000 2024",
+        "lang": "en",
+        "bookmarkCount": 1,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1818506730642235400",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "TataConsumer",
+            "url": "https://x.com/TataConsumer",
+            "twitterUrl": "https://twitter.com/TataConsumer",
+            "id": "2179307928",
+            "name": "Tata Consumer Products",
+            "isVerified": false,
+            "isBlueVerified": true,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/1674876693549559809/UILmj7n4_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/2179307928/1741586521",
+            "description": "",
+            "location": "Mumbai, India",
+            "followers": 16060,
+            "following": 91,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Thu Nov 07 04:16:35 +0000 2013",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 573,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 1779,
+            "statusesCount": 3037,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "The official twitter handle of Tata Consumer Products Ltd (Formerly known as Tata Global Beverages Ltd.)",
+                "entities": {
+                    "description": {},
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "tataconsumer.com",
+                                "expanded_url": "http://www.tataconsumer.com",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/mIOEIV3GYZ"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {
+            "media": [
+                {
+                    "display_url": "pic.twitter.com/EmYZFmYL9H",
+                    "expanded_url": "https://twitter.com/TataConsumer/status/1818506730642235400/photo/1",
+                    "ext_media_availability": {
+                        "status": "Available"
+                    },
+                    "features": {
+                        "large": {
+                            "faces": [
+                                {
+                                    "h": 52,
+                                    "w": 52,
+                                    "x": 716,
+                                    "y": 478
+                                }
+                            ]
+                        },
+                        "orig": {
+                            "faces": [
+                                {
+                                    "h": 52,
+                                    "w": 52,
+                                    "x": 716,
+                                    "y": 478
+                                }
+                            ]
+                        }
+                    },
+                    "id_str": "1818506339963830272",
+                    "indices": [
+                        254,
+                        277
+                    ],
+                    "media_key": "3_1818506339963830272",
+                    "media_results": {
+                        "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAARk8oeGfVwAACgACGTyiPJWWYAgAAA==",
+                        "result": {
+                            "__typename": "ApiMedia",
+                            "id": "QXBpTWVkaWE6DAABCgABGTyh4Z9XAAAKAAIZPKI8lZZgCAAA",
+                            "media_key": "3_1818506339963830272"
+                        }
+                    },
+                    "media_url_https": "https://pbs.twimg.com/media/GTyh4Z9XAAAOhN3.jpg",
+                    "original_info": {
+                        "focus_rects": [
+                            {
+                                "h": 605,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 947,
+                                "x": 67,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 540,
+                                "x": 270,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 0
+                            }
+                        ],
+                        "height": 1080,
+                        "width": 1080
+                    },
+                    "sizes": {
+                        "large": {
+                            "h": 1080,
+                            "w": 1080
+                        }
+                    },
+                    "type": "photo",
+                    "url": "https://t.co/EmYZFmYL9H"
+                },
+                {
+                    "display_url": "pic.twitter.com/EmYZFmYL9H",
+                    "expanded_url": "https://twitter.com/TataConsumer/status/1818506730642235400/photo/1",
+                    "ext_media_availability": {
+                        "status": "Available"
+                    },
+                    "features": {
+                        "large": {
+                            "faces": [
+                                {
+                                    "h": 138,
+                                    "w": 138,
+                                    "x": 213,
+                                    "y": 85
+                                }
+                            ]
+                        },
+                        "orig": {
+                            "faces": [
+                                {
+                                    "h": 138,
+                                    "w": 138,
+                                    "x": 213,
+                                    "y": 85
+                                }
+                            ]
+                        }
+                    },
+                    "id_str": "1818506364261470208",
+                    "indices": [
+                        254,
+                        277
+                    ],
+                    "media_key": "3_1818506364261470208",
+                    "media_results": {
+                        "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAARk8oedHl5AACgACGTyiPJWWYAgAAA==",
+                        "result": {
+                            "__typename": "ApiMedia",
+                            "id": "QXBpTWVkaWE6DAABCgABGTyh50eXkAAKAAIZPKI8lZZgCAAA",
+                            "media_key": "3_1818506364261470208"
+                        }
+                    },
+                    "media_url_https": "https://pbs.twimg.com/media/GTyh50eXkAAAZY1.jpg",
+                    "original_info": {
+                        "focus_rects": [
+                            {
+                                "h": 605,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 947,
+                                "x": 133,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 540,
+                                "x": 405,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 0
+                            }
+                        ],
+                        "height": 1080,
+                        "width": 1080
+                    },
+                    "sizes": {
+                        "large": {
+                            "h": 1080,
+                            "w": 1080
+                        }
+                    },
+                    "type": "photo",
+                    "url": "https://t.co/EmYZFmYL9H"
+                },
+                {
+                    "display_url": "pic.twitter.com/EmYZFmYL9H",
+                    "expanded_url": "https://twitter.com/TataConsumer/status/1818506730642235400/photo/1",
+                    "ext_media_availability": {
+                        "status": "Available"
+                    },
+                    "features": {
+                        "large": {
+                            "faces": [
+                                {
+                                    "h": 48,
+                                    "w": 48,
+                                    "x": 754,
+                                    "y": 353
+                                },
+                                {
+                                    "h": 63,
+                                    "w": 63,
+                                    "x": 162,
+                                    "y": 972
+                                }
+                            ]
+                        },
+                        "orig": {
+                            "faces": [
+                                {
+                                    "h": 48,
+                                    "w": 48,
+                                    "x": 754,
+                                    "y": 353
+                                },
+                                {
+                                    "h": 63,
+                                    "w": 63,
+                                    "x": 162,
+                                    "y": 972
+                                }
+                            ]
+                        }
+                    },
+                    "id_str": "1818506383806910465",
+                    "indices": [
+                        254,
+                        277
+                    ],
+                    "media_key": "3_1818506383806910465",
+                    "media_results": {
+                        "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAARk8oevUl1ABCgACGTyiPJWWYAgAAA==",
+                        "result": {
+                            "__typename": "ApiMedia",
+                            "id": "QXBpTWVkaWE6DAABCgABGTyh69SXUAEKAAIZPKI8lZZgCAAA",
+                            "media_key": "3_1818506383806910465"
+                        }
+                    },
+                    "media_url_https": "https://pbs.twimg.com/media/GTyh69SXUAEm8Ek.jpg",
+                    "original_info": {
+                        "focus_rects": [
+                            {
+                                "h": 605,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 947,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 540,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 0
+                            }
+                        ],
+                        "height": 1080,
+                        "width": 1080
+                    },
+                    "sizes": {
+                        "large": {
+                            "h": 1080,
+                            "w": 1080
+                        }
+                    },
+                    "type": "photo",
+                    "url": "https://t.co/EmYZFmYL9H"
+                },
+                {
+                    "display_url": "pic.twitter.com/EmYZFmYL9H",
+                    "expanded_url": "https://twitter.com/TataConsumer/status/1818506730642235400/photo/1",
+                    "ext_media_availability": {
+                        "status": "Available"
+                    },
+                    "features": {
+                        "large": {
+                            "faces": [
+                                {
+                                    "h": 37,
+                                    "w": 37,
+                                    "x": 676,
+                                    "y": 537
+                                }
+                            ]
+                        },
+                        "orig": {
+                            "faces": [
+                                {
+                                    "h": 37,
+                                    "w": 37,
+                                    "x": 676,
+                                    "y": 537
+                                }
+                            ]
+                        }
+                    },
+                    "id_str": "1818506401053831168",
+                    "indices": [
+                        254,
+                        277
+                    ],
+                    "media_key": "3_1818506401053831168",
+                    "media_results": {
+                        "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAARk8oe/YlnAACgACGTyiPJWWYAgAAA==",
+                        "result": {
+                            "__typename": "ApiMedia",
+                            "id": "QXBpTWVkaWE6DAABCgABGTyh79iWcAAKAAIZPKI8lZZgCAAA",
+                            "media_key": "3_1818506401053831168"
+                        }
+                    },
+                    "media_url_https": "https://pbs.twimg.com/media/GTyh79iWcAAMaXV.jpg",
+                    "original_info": {
+                        "focus_rects": [
+                            {
+                                "h": 605,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 157
+                            },
+                            {
+                                "h": 1080,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 947,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 540,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 0
+                            }
+                        ],
+                        "height": 1080,
+                        "width": 1080
+                    },
+                    "sizes": {
+                        "large": {
+                            "h": 1080,
+                            "w": 1080
+                        }
+                    },
+                    "type": "photo",
+                    "url": "https://t.co/EmYZFmYL9H"
+                }
+            ]
+        },
+        "card": null,
+        "place": {},
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        206,
+                        213
+                    ],
+                    "text": "Q1FY25"
+                },
+                {
+                    "indices": [
+                        214,
+                        231
+                    ],
+                    "text": "FinancialResults"
+                },
+                {
+                    "indices": [
+                        232,
+                        253
+                    ],
+                    "text": "TataConsumerProducts"
+                }
+            ],
+            "urls": [
+                {
+                    "display_url": "tataconsumer.com/.../results...\u2026",
+                    "expanded_url": "https://www.tataconsumer.com/.../results.../press-releases",
+                    "indices": [
+                        181,
+                        204
+                    ],
+                    "url": "https://t.co/aiocA20GzY"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1783049166220083465",
+        "url": "https://x.com/TataConsumer/status/1783049166220083465",
+        "twitterUrl": "https://twitter.com/TataConsumer/status/1783049166220083465",
+        "text": "Our MD &amp; CEO, Sunil D'Souza, discusses Tata Consumer Products' performance in Q4 and FY24, recent acquisitions and our path to the next level of growth with @blitzkreigm on @CNBCTV18News.\n\nWatch the full interview for exclusive insights: https://t.co/tnZIYBrMrl",
+        "source": "Twitter for iPhone",
+        "retweetCount": 1,
+        "replyCount": 2,
+        "likeCount": 5,
+        "quoteCount": 0,
+        "viewCount": 388,
+        "createdAt": "Wed Apr 24 08:23:43 +0000 2024",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1783049166220083465",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "TataConsumer",
+            "url": "https://x.com/TataConsumer",
+            "twitterUrl": "https://twitter.com/TataConsumer",
+            "id": "2179307928",
+            "name": "Tata Consumer Products",
+            "isVerified": false,
+            "isBlueVerified": true,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/1674876693549559809/UILmj7n4_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/2179307928/1741586521",
+            "description": "",
+            "location": "Mumbai, India",
+            "followers": 16060,
+            "following": 91,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Thu Nov 07 04:16:35 +0000 2013",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 573,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 1779,
+            "statusesCount": 3037,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "The official twitter handle of Tata Consumer Products Ltd (Formerly known as Tata Global Beverages Ltd.)",
+                "entities": {
+                    "description": {},
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "tataconsumer.com",
+                                "expanded_url": "http://www.tataconsumer.com",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/mIOEIV3GYZ"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": null,
+        "place": {},
+        "entities": {
+            "urls": [
+                {
+                    "display_url": "youtu.be/f26CBYzl_l8",
+                    "expanded_url": "https://youtu.be/f26CBYzl_l8",
+                    "indices": [
+                        242,
+                        265
+                    ],
+                    "url": "https://t.co/tnZIYBrMrl"
+                }
+            ],
+            "user_mentions": [
+                {
+                    "id_str": "35699012",
+                    "indices": [
+                        161,
+                        173
+                    ],
+                    "name": "Mangalam Maloo",
+                    "screen_name": "blitzkreigm"
+                },
+                {
+                    "id_str": "631810714",
+                    "indices": [
+                        177,
+                        190
+                    ],
+                    "name": "CNBC-TV18",
+                    "screen_name": "CNBCTV18News"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1782797323782746369",
+        "url": "https://x.com/TataConsumer/status/1782797323782746369",
+        "twitterUrl": "https://twitter.com/TataConsumer/status/1782797323782746369",
+        "text": "Our financial results for the quarter and year ended 31st March 2024 are out. We delivered good topline growth along with significant expansion in EBITDA margin YoY in FY24.\n\nView the full results here: https://t.co/PevxYRk0mk\n\n#TataConsumerProducts #FinancialResults\n\n1/3 https://t.co/i2KKVbNVnr",
+        "source": "Twitter for iPhone",
+        "retweetCount": 0,
+        "replyCount": 8,
+        "likeCount": 10,
+        "quoteCount": 3,
+        "viewCount": 2950,
+        "createdAt": "Tue Apr 23 15:42:59 +0000 2024",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1782797323782746369",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "TataConsumer",
+            "url": "https://x.com/TataConsumer",
+            "twitterUrl": "https://twitter.com/TataConsumer",
+            "id": "2179307928",
+            "name": "Tata Consumer Products",
+            "isVerified": false,
+            "isBlueVerified": true,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/1674876693549559809/UILmj7n4_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/2179307928/1741586521",
+            "description": "",
+            "location": "Mumbai, India",
+            "followers": 16060,
+            "following": 91,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Thu Nov 07 04:16:35 +0000 2013",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 573,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 1779,
+            "statusesCount": 3037,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "The official twitter handle of Tata Consumer Products Ltd (Formerly known as Tata Global Beverages Ltd.)",
+                "entities": {
+                    "description": {},
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "tataconsumer.com",
+                                "expanded_url": "http://www.tataconsumer.com",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/mIOEIV3GYZ"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {
+            "media": [
+                {
+                    "display_url": "pic.twitter.com/i2KKVbNVnr",
+                    "expanded_url": "https://twitter.com/TataConsumer/status/1782797323782746369/photo/1",
+                    "ext_media_availability": {
+                        "status": "Available"
+                    },
+                    "features": {
+                        "large": {
+                            "faces": [
+                                {
+                                    "h": 48,
+                                    "w": 48,
+                                    "x": 719,
+                                    "y": 479
+                                },
+                                {
+                                    "h": 58,
+                                    "w": 58,
+                                    "x": 630,
+                                    "y": 530
+                                }
+                            ]
+                        },
+                        "orig": {
+                            "faces": [
+                                {
+                                    "h": 48,
+                                    "w": 48,
+                                    "x": 719,
+                                    "y": 479
+                                },
+                                {
+                                    "h": 58,
+                                    "w": 58,
+                                    "x": 630,
+                                    "y": 530
+                                }
+                            ]
+                        }
+                    },
+                    "id_str": "1782797009230921728",
+                    "indices": [
+                        273,
+                        296
+                    ],
+                    "media_key": "3_1782797009230921728",
+                    "media_results": {
+                        "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAARi9xG8p1oAACgACGL3EuGaWcQEAAA==",
+                        "result": {
+                            "__typename": "ApiMedia",
+                            "id": "QXBpTWVkaWE6DAABCgABGL3EbynWgAAKAAIYvcS4ZpZxAQAA",
+                            "media_key": "3_1782797009230921728"
+                        }
+                    },
+                    "media_url_https": "https://pbs.twimg.com/media/GL3EbynWgAAtlLD.jpg",
+                    "original_info": {
+                        "focus_rects": [
+                            {
+                                "h": 605,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 947,
+                                "x": 67,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 540,
+                                "x": 270,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 0
+                            }
+                        ],
+                        "height": 1080,
+                        "width": 1080
+                    },
+                    "sizes": {
+                        "large": {
+                            "h": 1080,
+                            "w": 1080
+                        }
+                    },
+                    "type": "photo",
+                    "url": "https://t.co/i2KKVbNVnr"
+                },
+                {
+                    "display_url": "pic.twitter.com/i2KKVbNVnr",
+                    "expanded_url": "https://twitter.com/TataConsumer/status/1782797323782746369/photo/1",
+                    "ext_media_availability": {
+                        "status": "Available"
+                    },
+                    "features": {
+                        "large": {
+                            "faces": [
+                                {
+                                    "h": 69,
+                                    "w": 69,
+                                    "x": 582,
+                                    "y": 742
+                                },
+                                {
+                                    "h": 139,
+                                    "w": 139,
+                                    "x": 211,
+                                    "y": 84
+                                }
+                            ]
+                        },
+                        "orig": {
+                            "faces": [
+                                {
+                                    "h": 69,
+                                    "w": 69,
+                                    "x": 582,
+                                    "y": 742
+                                },
+                                {
+                                    "h": 139,
+                                    "w": 139,
+                                    "x": 211,
+                                    "y": 84
+                                }
+                            ]
+                        }
+                    },
+                    "id_str": "1782797010011070465",
+                    "indices": [
+                        273,
+                        296
+                    ],
+                    "media_key": "3_1782797010011070465",
+                    "media_results": {
+                        "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAARi9xG9YVqABCgACGL3EuGaWcQEAAA==",
+                        "result": {
+                            "__typename": "ApiMedia",
+                            "id": "QXBpTWVkaWE6DAABCgABGL3Eb1hWoAEKAAIYvcS4ZpZxAQAA",
+                            "media_key": "3_1782797010011070465"
+                        }
+                    },
+                    "media_url_https": "https://pbs.twimg.com/media/GL3Eb1hWoAERzvX.jpg",
+                    "original_info": {
+                        "focus_rects": [
+                            {
+                                "h": 605,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 947,
+                                "x": 133,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 540,
+                                "x": 405,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 0
+                            }
+                        ],
+                        "height": 1080,
+                        "width": 1080
+                    },
+                    "sizes": {
+                        "large": {
+                            "h": 1080,
+                            "w": 1080
+                        }
+                    },
+                    "type": "photo",
+                    "url": "https://t.co/i2KKVbNVnr"
+                },
+                {
+                    "display_url": "pic.twitter.com/i2KKVbNVnr",
+                    "expanded_url": "https://twitter.com/TataConsumer/status/1782797323782746369/photo/1",
+                    "ext_media_availability": {
+                        "status": "Available"
+                    },
+                    "features": {
+                        "large": {
+                            "faces": [
+                                {
+                                    "h": 49,
+                                    "w": 49,
+                                    "x": 753,
+                                    "y": 353
+                                },
+                                {
+                                    "h": 50,
+                                    "w": 50,
+                                    "x": 626,
+                                    "y": 410
+                                }
+                            ]
+                        },
+                        "orig": {
+                            "faces": [
+                                {
+                                    "h": 49,
+                                    "w": 49,
+                                    "x": 753,
+                                    "y": 353
+                                },
+                                {
+                                    "h": 50,
+                                    "w": 50,
+                                    "x": 626,
+                                    "y": 410
+                                }
+                            ]
+                        }
+                    },
+                    "id_str": "1782797009990103040",
+                    "indices": [
+                        273,
+                        296
+                    ],
+                    "media_key": "3_1782797009990103040",
+                    "media_results": {
+                        "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAARi9xG9XFrAACgACGL3EuGaWcQEAAA==",
+                        "result": {
+                            "__typename": "ApiMedia",
+                            "id": "QXBpTWVkaWE6DAABCgABGL3Eb1cWsAAKAAIYvcS4ZpZxAQAA",
+                            "media_key": "3_1782797009990103040"
+                        }
+                    },
+                    "media_url_https": "https://pbs.twimg.com/media/GL3Eb1cWsAAKBuY.jpg",
+                    "original_info": {
+                        "focus_rects": [
+                            {
+                                "h": 605,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 475
+                            },
+                            {
+                                "h": 1080,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 947,
+                                "x": 133,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 540,
+                                "x": 540,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 0
+                            }
+                        ],
+                        "height": 1080,
+                        "width": 1080
+                    },
+                    "sizes": {
+                        "large": {
+                            "h": 1080,
+                            "w": 1080
+                        }
+                    },
+                    "type": "photo",
+                    "url": "https://t.co/i2KKVbNVnr"
+                },
+                {
+                    "display_url": "pic.twitter.com/i2KKVbNVnr",
+                    "expanded_url": "https://twitter.com/TataConsumer/status/1782797323782746369/photo/1",
+                    "ext_media_availability": {
+                        "status": "Available"
+                    },
+                    "features": {
+                        "large": {
+                            "faces": [
+                                {
+                                    "h": 202,
+                                    "w": 202,
+                                    "x": 67,
+                                    "y": 480
+                                }
+                            ]
+                        },
+                        "orig": {
+                            "faces": [
+                                {
+                                    "h": 202,
+                                    "w": 202,
+                                    "x": 67,
+                                    "y": 480
+                                }
+                            ]
+                        }
+                    },
+                    "id_str": "1782797009977585664",
+                    "indices": [
+                        273,
+                        296
+                    ],
+                    "media_key": "3_1782797009977585664",
+                    "media_results": {
+                        "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAARi9xG9WV7AACgACGL3EuGaWcQEAAA==",
+                        "result": {
+                            "__typename": "ApiMedia",
+                            "id": "QXBpTWVkaWE6DAABCgABGL3Eb1ZXsAAKAAIYvcS4ZpZxAQAA",
+                            "media_key": "3_1782797009977585664"
+                        }
+                    },
+                    "media_url_https": "https://pbs.twimg.com/media/GL3Eb1ZXsAAAMuO.jpg",
+                    "original_info": {
+                        "focus_rects": [
+                            {
+                                "h": 605,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 157
+                            },
+                            {
+                                "h": 1080,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 947,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 540,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 0
+                            }
+                        ],
+                        "height": 1080,
+                        "width": 1080
+                    },
+                    "sizes": {
+                        "large": {
+                            "h": 1080,
+                            "w": 1080
+                        }
+                    },
+                    "type": "photo",
+                    "url": "https://t.co/i2KKVbNVnr"
+                }
+            ]
+        },
+        "card": null,
+        "place": {},
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        228,
+                        249
+                    ],
+                    "text": "TataConsumerProducts"
+                },
+                {
+                    "indices": [
+                        250,
+                        267
+                    ],
+                    "text": "FinancialResults"
+                }
+            ],
+            "urls": [
+                {
+                    "display_url": "shorturl.at/hvFZ9",
+                    "expanded_url": "https://shorturl.at/hvFZ9",
+                    "indices": [
+                        203,
+                        226
+                    ],
+                    "url": "https://t.co/PevxYRk0mk"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1782751640992247958",
+        "url": "https://x.com/TataConsumer/status/1782751640992247958",
+        "twitterUrl": "https://twitter.com/TataConsumer/status/1782751640992247958",
+        "text": "Newsflash! #TataConsumerProducts #Q4FY24 results are out.\nRevenue from Operations at INR 3,927 Cr., up 9%\nConsolidated EBITDA at INR 631 Cr., up 22%\nProfit before exceptional items at INR 509 Cr., up 12%\nFull results here: https://t.co/6MY8aVkHMq",
+        "source": "Twitter for iPhone",
+        "retweetCount": 0,
+        "replyCount": 0,
+        "likeCount": 1,
+        "quoteCount": 0,
+        "viewCount": 538,
+        "createdAt": "Tue Apr 23 12:41:27 +0000 2024",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1782751640992247958",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "TataConsumer",
+            "url": "https://x.com/TataConsumer",
+            "twitterUrl": "https://twitter.com/TataConsumer",
+            "id": "2179307928",
+            "name": "Tata Consumer Products",
+            "isVerified": false,
+            "isBlueVerified": true,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/1674876693549559809/UILmj7n4_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/2179307928/1741586521",
+            "description": "",
+            "location": "Mumbai, India",
+            "followers": 16060,
+            "following": 91,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Thu Nov 07 04:16:35 +0000 2013",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 573,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 1779,
+            "statusesCount": 3037,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "The official twitter handle of Tata Consumer Products Ltd (Formerly known as Tata Global Beverages Ltd.)",
+                "entities": {
+                    "description": {},
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "tataconsumer.com",
+                                "expanded_url": "http://www.tataconsumer.com",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/mIOEIV3GYZ"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": null,
+        "place": {},
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        11,
+                        32
+                    ],
+                    "text": "TataConsumerProducts"
+                },
+                {
+                    "indices": [
+                        33,
+                        40
+                    ],
+                    "text": "Q4FY24"
+                }
+            ],
+            "urls": [
+                {
+                    "display_url": "surl.li/swovv",
+                    "expanded_url": "http://surl.li/swovv",
+                    "indices": [
+                        223,
+                        246
+                    ],
+                    "url": "https://t.co/6MY8aVkHMq"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1755493258216841431",
+        "url": "https://x.com/TataConsumer/status/1755493258216841431",
+        "twitterUrl": "https://twitter.com/TataConsumer/status/1755493258216841431",
+        "text": "Our MD and CEO, Sunil D'Souza speaks to @nikunjdalmia , @ETNOWlive, on our performance in Q3 FY24, recent acquisitions and getting to the next level of growth. \u00a0\n\nWatch the full interview here:\u00a0https://t.co/4nWYPuItOW\n\n#TataConsumerProducts #Q3FY24 #BusinessUpdates",
+        "source": "Twitter for iPhone",
+        "retweetCount": 5,
+        "replyCount": 1,
+        "likeCount": 10,
+        "quoteCount": 0,
+        "viewCount": 545,
+        "createdAt": "Thu Feb 08 07:26:22 +0000 2024",
+        "lang": "en",
+        "bookmarkCount": 1,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1755493258216841431",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "TataConsumer",
+            "url": "https://x.com/TataConsumer",
+            "twitterUrl": "https://twitter.com/TataConsumer",
+            "id": "2179307928",
+            "name": "Tata Consumer Products",
+            "isVerified": false,
+            "isBlueVerified": true,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/1674876693549559809/UILmj7n4_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/2179307928/1741586521",
+            "description": "",
+            "location": "Mumbai, India",
+            "followers": 16060,
+            "following": 91,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Thu Nov 07 04:16:35 +0000 2013",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 573,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 1779,
+            "statusesCount": 3037,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "The official twitter handle of Tata Consumer Products Ltd (Formerly known as Tata Global Beverages Ltd.)",
+                "entities": {
+                    "description": {},
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "tataconsumer.com",
+                                "expanded_url": "http://www.tataconsumer.com",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/mIOEIV3GYZ"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": {
+            "binding_values": [
+                {
+                    "key": "player_url",
+                    "value": {
+                        "string_value": "https://www.youtube.com/embed/yCFOD1Azukc"
+                    }
+                },
+                {
+                    "key": "player_image_large",
+                    "value": {
+                        "image_value": {
+                            "height": 320,
+                            "url": "https://pbs.twimg.com/card_img/1947858459887570944/LnZlGXdG?format=jpg&name=800x320_1",
+                            "width": 569
+                        }
+                    }
+                },
+                {
+                    "key": "player_image",
+                    "value": {
+                        "image_value": {
+                            "height": 158,
+                            "url": "https://pbs.twimg.com/card_img/1947858459887570944/LnZlGXdG?format=jpg&name=280x280",
+                            "width": 280
+                        }
+                    }
+                },
+                {
+                    "key": "app_star_rating",
+                    "value": {
+                        "string_value": "4.68074"
+                    }
+                },
+                {
+                    "key": "description",
+                    "value": {
+                        "string_value": "ET Now Exclusive: TCPL India Foods Biz Grows 13%. Tata Consumer Q3 : Premium Segments Outperform. Strong Demand For Staples In Q3. Aim to become a Premium FM..."
+                    }
+                },
+                {
+                    "key": "player_width",
+                    "value": {
+                        "string_value": "1280"
+                    }
+                },
+                {
+                    "key": "domain",
+                    "value": {
+                        "string_value": "www.youtube.com"
+                    }
+                },
+                {
+                    "key": "app_is_free",
+                    "value": {
+                        "string_value": "true"
+                    }
+                },
+                {
+                    "key": "site",
+                    "value": {
+                        "scribe_key": "publisher_id",
+                        "user_value": {
+                            "id_str": "10228272"
+                        }
+                    }
+                },
+                {
+                    "key": "player_image_original",
+                    "value": {
+                        "image_value": {
+                            "height": 720,
+                            "url": "https://pbs.twimg.com/card_img/1947858459887570944/LnZlGXdG?format=jpg&name=orig",
+                            "width": 1280
+                        }
+                    }
+                },
+                {
+                    "key": "app_url_resolved",
+                    "value": {
+                        "string_value": "vnd.youtube://www.youtube.com/watch?si=ezbqiWw0pvsfQkvQ&v=yCFOD1Azukc&feature=youtu.be&feature=applinks"
+                    }
+                },
+                {
+                    "key": "app_num_ratings",
+                    "value": {
+                        "string_value": "42,859,560"
+                    }
+                },
+                {
+                    "key": "app_price_amount",
+                    "value": {
+                        "string_value": "0.0"
+                    }
+                },
+                {
+                    "key": "player_height",
+                    "value": {
+                        "string_value": "720"
+                    }
+                },
+                {
+                    "key": "vanity_url",
+                    "value": {
+                        "scribe_key": "vanity_url",
+                        "string_value": "youtube.com"
+                    }
+                },
+                {
+                    "key": "app_name",
+                    "value": {
+                        "string_value": "YouTube"
+                    }
+                },
+                {
+                    "key": "app_id",
+                    "value": {
+                        "scribe_key": "publisher_app_id",
+                        "string_value": "544007664"
+                    }
+                },
+                {
+                    "key": "player_image_small",
+                    "value": {
+                        "image_value": {
+                            "height": 81,
+                            "url": "https://pbs.twimg.com/card_img/1947858459887570944/LnZlGXdG?format=jpg&name=144x144",
+                            "width": 144
+                        }
+                    }
+                },
+                {
+                    "key": "title",
+                    "value": {
+                        "string_value": "Tata Consumer Q3: Premium Biz Outperform | MD & CEO Sunil D'Souza..."
+                    }
+                },
+                {
+                    "key": "app_price_currency",
+                    "value": {
+                        "string_value": "USD"
+                    }
+                },
+                {
+                    "key": "app_url",
+                    "value": {
+                        "string_value": "https://t.co/redirect?url=vnd.youtube%3A%2F%2Fwww.youtube.com%2Fwatch%3Fsi%3DezbqiWw0pvsfQkvQ%26v%3DyCFOD1Azukc%26feature%3Dyoutu.be%26feature%3Dapplinks&sig=5691eeee4cdc037f9c50de6abc67a86791d5fb68&ssr=true&slug=4nWYPuItOW"
+                    }
+                },
+                {
+                    "key": "card_url",
+                    "value": {
+                        "scribe_key": "card_url",
+                        "string_value": "https://t.co/4nWYPuItOW"
+                    }
+                },
+                {
+                    "key": "player_image_color",
+                    "value": {
+                        "image_color_value": {
+                            "palette": [
+                                {
+                                    "percentage": 28.26,
+                                    "rgb": {
+                                        "blue": 24,
+                                        "green": 30,
+                                        "red": 45
+                                    }
+                                },
+                                {
+                                    "percentage": 22.65,
+                                    "rgb": {
+                                        "blue": 207,
+                                        "green": 207,
+                                        "red": 210
+                                    }
+                                },
+                                {
+                                    "percentage": 10.58,
+                                    "rgb": {
+                                        "blue": 10,
+                                        "green": 18,
+                                        "red": 77
+                                    }
+                                },
+                                {
+                                    "percentage": 7.69,
+                                    "rgb": {
+                                        "blue": 112,
+                                        "green": 137,
+                                        "red": 204
+                                    }
+                                },
+                                {
+                                    "percentage": 5.85,
+                                    "rgb": {
+                                        "blue": 11,
+                                        "green": 9,
+                                        "red": 154
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "key": "player_image_x_large",
+                    "value": {
+                        "image_value": {
+                            "height": 720,
+                            "url": "https://pbs.twimg.com/card_img/1947858459887570944/LnZlGXdG?format=png&name=2048x2048_2_exp",
+                            "width": 1280
+                        }
+                    }
+                }
+            ],
+            "card_platform": {
+                "platform": {
+                    "audience": {
+                        "name": "production"
+                    },
+                    "device": {
+                        "name": "iPhone",
+                        "version": "13"
+                    }
+                }
+            },
+            "name": "player",
+            "url": "https://t.co/4nWYPuItOW",
+            "user_refs_results": [
+                {
+                    "rest_id": "10228272",
+                    "result": {
+                        "__typename": "User",
+                        "action_counts": {
+                            "favorites_count": 6057
+                        },
+                        "avatar": {
+                            "image_url": "https://pbs.twimg.com/profile_images/1915882040353837056/VbhPvueq_normal.jpg"
+                        },
+                        "banner": {
+                            "image_url": "https://pbs.twimg.com/profile_banners/10228272/1745416765"
+                        },
+                        "core": {
+                            "created_at": "Tue Nov 13 21:43:46 +0000 2007",
+                            "name": "YouTube",
+                            "screen_name": "YouTube"
+                        },
+                        "dm_permissions": {
+                            "can_dm": false
+                        },
+                        "exclusive_tweet_following": false,
+                        "identity_profile_labels_highlighted_label": {},
+                        "location": {
+                            "location": "San Bruno, CA"
+                        },
+                        "media_permissions": {
+                            "can_media_tag": true
+                        },
+                        "notifications_settings": {},
+                        "pinned_items": {},
+                        "privacy": {},
+                        "private_super_following": false,
+                        "profile_bio": {
+                            "description": "like & subscribe",
+                            "entities": {
+                                "description": {},
+                                "url": {
+                                    "urls": [
+                                        {
+                                            "display_url": "yt.be/3NDRz",
+                                            "expanded_url": "https://yt.be/3NDRz",
+                                            "indices": [
+                                                0,
+                                                23
+                                            ],
+                                            "url": "https://t.co/WBV5E1Rh1y"
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        "profile_image_shape": "Square",
+                        "profile_metadata": {
+                            "profile_interstitial_type": "",
+                            "profile_link_color": "C9191D"
+                        },
+                        "profile_translation": {
+                            "translator_type_enum": "Regular"
+                        },
+                        "properties": {
+                            "has_extended_profile": false
+                        },
+                        "relationship_counts": {
+                            "followers": 78999735,
+                            "following": 1147
+                        },
+                        "relationship_perspectives": {},
+                        "rest_id": "10228272",
+                        "super_follow_eligible": false,
+                        "super_followed_by": false,
+                        "super_following": false,
+                        "tweet_counts": {
+                            "media_tweets": 16019,
+                            "tweets": 60081
+                        },
+                        "website": {
+                            "url": "https://t.co/WBV5E1Rh1y"
+                        },
+                        "verification": {
+                            "is_blue_verified": true,
+                            "verified_type": "Business"
+                        }
+                    }
+                }
+            ]
+        },
+        "place": {},
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        219,
+                        240
+                    ],
+                    "text": "TataConsumerProducts"
+                },
+                {
+                    "indices": [
+                        241,
+                        248
+                    ],
+                    "text": "Q3FY24"
+                },
+                {
+                    "indices": [
+                        249,
+                        265
+                    ],
+                    "text": "BusinessUpdates"
+                }
+            ],
+            "urls": [
+                {
+                    "display_url": "youtu.be/yCFOD1Azukc?si\u2026",
+                    "expanded_url": "https://youtu.be/yCFOD1Azukc?si=ezbqiWw0pvsfQkvQ",
+                    "indices": [
+                        194,
+                        217
+                    ],
+                    "url": "https://t.co/4nWYPuItOW"
+                }
+            ],
+            "user_mentions": [
+                {
+                    "id_str": "30040452",
+                    "indices": [
+                        40,
+                        53
+                    ],
+                    "name": "Nikunj Dalmia",
+                    "screen_name": "nikunjdalmia"
+                },
+                {
+                    "id_str": "225012752",
+                    "indices": [
+                        56,
+                        66
+                    ],
+                    "name": "ET NOW",
+                    "screen_name": "ETNOWlive"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1755241793602625905",
+        "url": "https://x.com/TataConsumer/status/1755241793602625905",
+        "twitterUrl": "https://twitter.com/TataConsumer/status/1755241793602625905",
+        "text": "Our financial results for the quarter ending 31st December 2023 are out. We delivered yet another strong quarter with a revenue growth of 9% along with an EBITDA growth of 26%.\n\nView the full results here: https://t.co/0OVlx0Av7E\n\n#TataConsumerProducts #ForBetter #Q3FY24 https://t.co/qfMM31gx2Y",
+        "source": "Twitter for iPhone",
+        "retweetCount": 5,
+        "replyCount": 6,
+        "likeCount": 16,
+        "quoteCount": 2,
+        "viewCount": 2927,
+        "createdAt": "Wed Feb 07 14:47:09 +0000 2024",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1755241793602625905",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "TataConsumer",
+            "url": "https://x.com/TataConsumer",
+            "twitterUrl": "https://twitter.com/TataConsumer",
+            "id": "2179307928",
+            "name": "Tata Consumer Products",
+            "isVerified": false,
+            "isBlueVerified": true,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/1674876693549559809/UILmj7n4_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/2179307928/1741586521",
+            "description": "",
+            "location": "Mumbai, India",
+            "followers": 16060,
+            "following": 91,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Thu Nov 07 04:16:35 +0000 2013",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 573,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 1779,
+            "statusesCount": 3037,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "The official twitter handle of Tata Consumer Products Ltd (Formerly known as Tata Global Beverages Ltd.)",
+                "entities": {
+                    "description": {},
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "tataconsumer.com",
+                                "expanded_url": "http://www.tataconsumer.com",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/mIOEIV3GYZ"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {
+            "media": [
+                {
+                    "display_url": "pic.twitter.com/qfMM31gx2Y",
+                    "expanded_url": "https://twitter.com/TataConsumer/status/1755241793602625905/photo/1",
+                    "ext_media_availability": {
+                        "status": "Available"
+                    },
+                    "features": {
+                        "large": {},
+                        "orig": {}
+                    },
+                    "id_str": "1755241785352404992",
+                    "indices": [
+                        272,
+                        295
+                    ],
+                    "media_key": "3_1755241785352404992",
+                    "media_results": {
+                        "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAARhb3xqm2kAACgACGFvfHJKaoXEAAA==",
+                        "result": {
+                            "__typename": "ApiMedia",
+                            "id": "QXBpTWVkaWE6DAABCgABGFvfGqbaQAAKAAIYW98ckpqhcQAA",
+                            "media_key": "3_1755241785352404992"
+                        }
+                    },
+                    "media_url_https": "https://pbs.twimg.com/media/GFvfGqbaQAAqywf.jpg",
+                    "original_info": {
+                        "focus_rects": [
+                            {
+                                "h": 605,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 427
+                            },
+                            {
+                                "h": 1080,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 947,
+                                "x": 133,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 540,
+                                "x": 351,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 0
+                            }
+                        ],
+                        "height": 1080,
+                        "width": 1080
+                    },
+                    "sizes": {
+                        "large": {
+                            "h": 1080,
+                            "w": 1080
+                        }
+                    },
+                    "type": "photo",
+                    "url": "https://t.co/qfMM31gx2Y"
+                },
+                {
+                    "display_url": "pic.twitter.com/qfMM31gx2Y",
+                    "expanded_url": "https://twitter.com/TataConsumer/status/1755241793602625905/photo/1",
+                    "ext_media_availability": {
+                        "status": "Available"
+                    },
+                    "features": {
+                        "large": {
+                            "faces": [
+                                {
+                                    "h": 68,
+                                    "w": 68,
+                                    "x": 889,
+                                    "y": 881
+                                },
+                                {
+                                    "h": 87,
+                                    "w": 87,
+                                    "x": 872,
+                                    "y": 253
+                                },
+                                {
+                                    "h": 72,
+                                    "w": 72,
+                                    "x": 693,
+                                    "y": 882
+                                },
+                                {
+                                    "h": 75,
+                                    "w": 75,
+                                    "x": 65,
+                                    "y": 652
+                                }
+                            ]
+                        },
+                        "orig": {
+                            "faces": [
+                                {
+                                    "h": 68,
+                                    "w": 68,
+                                    "x": 889,
+                                    "y": 881
+                                },
+                                {
+                                    "h": 87,
+                                    "w": 87,
+                                    "x": 872,
+                                    "y": 253
+                                },
+                                {
+                                    "h": 72,
+                                    "w": 72,
+                                    "x": 693,
+                                    "y": 882
+                                },
+                                {
+                                    "h": 75,
+                                    "w": 75,
+                                    "x": 65,
+                                    "y": 652
+                                }
+                            ]
+                        }
+                    },
+                    "id_str": "1755241785365028864",
+                    "indices": [
+                        272,
+                        295
+                    ],
+                    "media_key": "3_1755241785365028864",
+                    "media_results": {
+                        "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAARhb3xqnmuAACgACGFvfHJKaoXEAAA==",
+                        "result": {
+                            "__typename": "ApiMedia",
+                            "id": "QXBpTWVkaWE6DAABCgABGFvfGqea4AAKAAIYW98ckpqhcQAA",
+                            "media_key": "3_1755241785365028864"
+                        }
+                    },
+                    "media_url_https": "https://pbs.twimg.com/media/GFvfGqea4AAOAbi.jpg",
+                    "original_info": {
+                        "focus_rects": [
+                            {
+                                "h": 605,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 947,
+                                "x": 67,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 540,
+                                "x": 270,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 0
+                            }
+                        ],
+                        "height": 1080,
+                        "width": 1080
+                    },
+                    "sizes": {
+                        "large": {
+                            "h": 1080,
+                            "w": 1080
+                        }
+                    },
+                    "type": "photo",
+                    "url": "https://t.co/qfMM31gx2Y"
+                },
+                {
+                    "display_url": "pic.twitter.com/qfMM31gx2Y",
+                    "expanded_url": "https://twitter.com/TataConsumer/status/1755241793602625905/photo/1",
+                    "ext_media_availability": {
+                        "status": "Available"
+                    },
+                    "features": {
+                        "large": {},
+                        "orig": {}
+                    },
+                    "id_str": "1755241785360797696",
+                    "indices": [
+                        272,
+                        295
+                    ],
+                    "media_key": "3_1755241785360797696",
+                    "media_results": {
+                        "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAARhb3xqnWlAACgACGFvfHJKaoXEAAA==",
+                        "result": {
+                            "__typename": "ApiMedia",
+                            "id": "QXBpTWVkaWE6DAABCgABGFvfGqdaUAAKAAIYW98ckpqhcQAA",
+                            "media_key": "3_1755241785360797696"
+                        }
+                    },
+                    "media_url_https": "https://pbs.twimg.com/media/GFvfGqdaUAA682E.jpg",
+                    "original_info": {
+                        "focus_rects": [
+                            {
+                                "h": 605,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 373
+                            },
+                            {
+                                "h": 1080,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 947,
+                                "x": 133,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 540,
+                                "x": 351,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 0
+                            }
+                        ],
+                        "height": 1080,
+                        "width": 1080
+                    },
+                    "sizes": {
+                        "large": {
+                            "h": 1080,
+                            "w": 1080
+                        }
+                    },
+                    "type": "photo",
+                    "url": "https://t.co/qfMM31gx2Y"
+                },
+                {
+                    "display_url": "pic.twitter.com/qfMM31gx2Y",
+                    "expanded_url": "https://twitter.com/TataConsumer/status/1755241793602625905/photo/1",
+                    "ext_media_availability": {
+                        "status": "Available"
+                    },
+                    "features": {
+                        "large": {
+                            "faces": [
+                                {
+                                    "h": 76,
+                                    "w": 76,
+                                    "x": 53,
+                                    "y": 724
+                                }
+                            ]
+                        },
+                        "orig": {
+                            "faces": [
+                                {
+                                    "h": 76,
+                                    "w": 76,
+                                    "x": 53,
+                                    "y": 724
+                                }
+                            ]
+                        }
+                    },
+                    "id_str": "1755241785390153728",
+                    "indices": [
+                        272,
+                        295
+                    ],
+                    "media_key": "3_1755241785390153728",
+                    "media_results": {
+                        "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAARhb3xqpGkAACgACGFvfHJKaoXEAAA==",
+                        "result": {
+                            "__typename": "ApiMedia",
+                            "id": "QXBpTWVkaWE6DAABCgABGFvfGqkaQAAKAAIYW98ckpqhcQAA",
+                            "media_key": "3_1755241785390153728"
+                        }
+                    },
+                    "media_url_https": "https://pbs.twimg.com/media/GFvfGqkaQAAZAgi.jpg",
+                    "original_info": {
+                        "focus_rects": [
+                            {
+                                "h": 605,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 157
+                            },
+                            {
+                                "h": 1080,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 947,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 540,
+                                "x": 81,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 0
+                            }
+                        ],
+                        "height": 1080,
+                        "width": 1080
+                    },
+                    "sizes": {
+                        "large": {
+                            "h": 1080,
+                            "w": 1080
+                        }
+                    },
+                    "type": "photo",
+                    "url": "https://t.co/qfMM31gx2Y"
+                }
+            ]
+        },
+        "card": null,
+        "place": {},
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        231,
+                        252
+                    ],
+                    "text": "TataConsumerProducts"
+                },
+                {
+                    "indices": [
+                        253,
+                        263
+                    ],
+                    "text": "ForBetter"
+                },
+                {
+                    "indices": [
+                        264,
+                        271
+                    ],
+                    "text": "Q3FY24"
+                }
+            ],
+            "urls": [
+                {
+                    "display_url": "tataconsumer.com/sites/g/files/\u2026",
+                    "expanded_url": "https://www.tataconsumer.com/sites/g/files/gfwrlq316/files/2024-02/tcpl-Q3FY24-press-release-vf.pdf",
+                    "indices": [
+                        206,
+                        229
+                    ],
+                    "url": "https://t.co/0OVlx0Av7E"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1755208509912932612",
+        "url": "https://x.com/TataConsumer/status/1755208509912932612",
+        "twitterUrl": "https://twitter.com/TataConsumer/status/1755208509912932612",
+        "text": "Newsflash! #TataConsumerProducts #Q3FY24 results are out.\nRevenue from Operations at Rs 3,804 Crs, up by 9%\nConsolidated EBITDA at Rs 576 Crs, grew by 26%\nGroup Net Profit before exceptional items for the quarter at Rs 372 Crs, higher by 31%\nFull results: https://t.co/0OVlx0Av7E",
+        "source": "Twitter for iPhone",
+        "retweetCount": 4,
+        "replyCount": 0,
+        "likeCount": 13,
+        "quoteCount": 0,
+        "viewCount": 856,
+        "createdAt": "Wed Feb 07 12:34:53 +0000 2024",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1755208509912932612",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "TataConsumer",
+            "url": "https://x.com/TataConsumer",
+            "twitterUrl": "https://twitter.com/TataConsumer",
+            "id": "2179307928",
+            "name": "Tata Consumer Products",
+            "isVerified": false,
+            "isBlueVerified": true,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/1674876693549559809/UILmj7n4_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/2179307928/1741586521",
+            "description": "",
+            "location": "Mumbai, India",
+            "followers": 16060,
+            "following": 91,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Thu Nov 07 04:16:35 +0000 2013",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 573,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 1779,
+            "statusesCount": 3037,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "The official twitter handle of Tata Consumer Products Ltd (Formerly known as Tata Global Beverages Ltd.)",
+                "entities": {
+                    "description": {},
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "tataconsumer.com",
+                                "expanded_url": "http://www.tataconsumer.com",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/mIOEIV3GYZ"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": null,
+        "place": {},
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        11,
+                        32
+                    ],
+                    "text": "TataConsumerProducts"
+                },
+                {
+                    "indices": [
+                        33,
+                        40
+                    ],
+                    "text": "Q3FY24"
+                }
+            ],
+            "urls": [
+                {
+                    "display_url": "tataconsumer.com/sites/g/files/\u2026",
+                    "expanded_url": "https://www.tataconsumer.com/sites/g/files/gfwrlq316/files/2024-02/tcpl-Q3FY24-press-release-vf.pdf",
+                    "indices": [
+                        256,
+                        279
+                    ],
+                    "url": "https://t.co/0OVlx0Av7E"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1724772056280297749",
+        "url": "https://x.com/TataConsumer/status/1724772056280297749",
+        "twitterUrl": "https://twitter.com/TataConsumer/status/1724772056280297749",
+        "text": "We continued our strong momentum on innovation with a number of new product launches across food and beverages in Q2 FY 24, further expanding our total addressable market. Here\u2019s a quick look at what we launched during the quarter.\n\n#TataConsumerProducts #BusinessUpdates #Q2FY24 https://t.co/GenepS8wiC",
+        "source": "Twitter for iPhone",
+        "retweetCount": 3,
+        "replyCount": 1,
+        "likeCount": 8,
+        "quoteCount": 0,
+        "viewCount": 748,
+        "createdAt": "Wed Nov 15 12:51:17 +0000 2023",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1724772056280297749",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "TataConsumer",
+            "url": "https://x.com/TataConsumer",
+            "twitterUrl": "https://twitter.com/TataConsumer",
+            "id": "2179307928",
+            "name": "Tata Consumer Products",
+            "isVerified": false,
+            "isBlueVerified": true,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/1674876693549559809/UILmj7n4_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/2179307928/1741586521",
+            "description": "",
+            "location": "Mumbai, India",
+            "followers": 16060,
+            "following": 91,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Thu Nov 07 04:16:35 +0000 2013",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 573,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 1779,
+            "statusesCount": 3037,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "The official twitter handle of Tata Consumer Products Ltd (Formerly known as Tata Global Beverages Ltd.)",
+                "entities": {
+                    "description": {},
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "tataconsumer.com",
+                                "expanded_url": "http://www.tataconsumer.com",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/mIOEIV3GYZ"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {
+            "media": [
+                {
+                    "additional_media_info": {
+                        "monetizable": false
+                    },
+                    "display_url": "pic.twitter.com/GenepS8wiC",
+                    "expanded_url": "https://twitter.com/TataConsumer/status/1724772056280297749/video/1",
+                    "ext_media_availability": {
+                        "status": "Available"
+                    },
+                    "id_str": "1724772009077542912",
+                    "indices": [
+                        280,
+                        303
+                    ],
+                    "media_key": "7_1724772009077542912",
+                    "media_results": {
+                        "id": "QXBpTWVkaWFSZXN1bHRzOgwAAwoAARfvnwEHmpAACgACF++fDAUbcRUAAA==",
+                        "result": {
+                            "__typename": "ApiMedia",
+                            "id": "QXBpTWVkaWE6DAADCgABF++fAQeakAAKAAIX758MBRtxFQAA",
+                            "media_key": "7_1724772009077542912"
+                        }
+                    },
+                    "media_url_https": "https://pbs.twimg.com/ext_tw_video_thumb/1724772009077542912/pu/img/rItDTgToTlbQIAqm.jpg",
+                    "original_info": {
+                        "focus_rects": [],
+                        "height": 720,
+                        "width": 720
+                    },
+                    "sizes": {
+                        "large": {
+                            "h": 720,
+                            "w": 720
+                        }
+                    },
+                    "type": "video",
+                    "url": "https://t.co/GenepS8wiC",
+                    "video_info": {
+                        "aspect_ratio": [
+                            1,
+                            1
+                        ],
+                        "duration_millis": 15533,
+                        "variants": [
+                            {
+                                "content_type": "application/x-mpegURL",
+                                "url": "https://video-s.twimg.com/ext_tw_video/1724772009077542912/pu/pl/lBU5E8GppngqxHjc.m3u8?tag=12"
+                            },
+                            {
+                                "bitrate": 432000,
+                                "content_type": "video/mp4",
+                                "url": "https://video-s.twimg.com/ext_tw_video/1724772009077542912/pu/vid/avc1/320x320/mTbToAOYb175GnKM.mp4?tag=12"
+                            },
+                            {
+                                "bitrate": 832000,
+                                "content_type": "video/mp4",
+                                "url": "https://video-s.twimg.com/ext_tw_video/1724772009077542912/pu/vid/avc1/540x540/QeeyzQ9e7HJLh4ui.mp4?tag=12"
+                            },
+                            {
+                                "bitrate": 1280000,
+                                "content_type": "video/mp4",
+                                "url": "https://video-s.twimg.com/ext_tw_video/1724772009077542912/pu/vid/avc1/720x720/24KYP2uloggiVjHu.mp4?tag=12"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "card": null,
+        "place": {},
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        233,
+                        254
+                    ],
+                    "text": "TataConsumerProducts"
+                },
+                {
+                    "indices": [
+                        255,
+                        271
+                    ],
+                    "text": "BusinessUpdates"
+                },
+                {
+                    "indices": [
+                        272,
+                        279
+                    ],
+                    "text": "Q2FY24"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1720430882178417028",
+        "url": "https://x.com/TataConsumer/status/1720430882178417028",
+        "twitterUrl": "https://twitter.com/TataConsumer/status/1720430882178417028",
+        "text": "In Q2 FY24, we achieved new milestones in our sales &amp; distribution journey. With a total reach of 3.8m outlets, we almost doubled our reach since September\u201920 &amp; also strengthened our rurban focus.\nKnow more - https://t.co/fQlmtmP7zS https://t.co/KGFyRYvzZD",
+        "source": "Twitter for iPhone",
+        "retweetCount": 1,
+        "replyCount": 2,
+        "likeCount": 10,
+        "quoteCount": 0,
+        "viewCount": 646,
+        "createdAt": "Fri Nov 03 13:21:01 +0000 2023",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1720430882178417028",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "TataConsumer",
+            "url": "https://x.com/TataConsumer",
+            "twitterUrl": "https://twitter.com/TataConsumer",
+            "id": "2179307928",
+            "name": "Tata Consumer Products",
+            "isVerified": false,
+            "isBlueVerified": true,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/1674876693549559809/UILmj7n4_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/2179307928/1741586521",
+            "description": "",
+            "location": "Mumbai, India",
+            "followers": 16060,
+            "following": 91,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Thu Nov 07 04:16:35 +0000 2013",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 573,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 1779,
+            "statusesCount": 3037,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "The official twitter handle of Tata Consumer Products Ltd (Formerly known as Tata Global Beverages Ltd.)",
+                "entities": {
+                    "description": {},
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "tataconsumer.com",
+                                "expanded_url": "http://www.tataconsumer.com",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/mIOEIV3GYZ"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {
+            "media": [
+                {
+                    "allow_download_status": {
+                        "allow_download": true
+                    },
+                    "display_url": "pic.twitter.com/KGFyRYvzZD",
+                    "expanded_url": "https://twitter.com/TataConsumer/status/1720430882178417028/photo/1",
+                    "ext_media_availability": {
+                        "status": "Available"
+                    },
+                    "features": {
+                        "large": {},
+                        "orig": {}
+                    },
+                    "id_str": "1720430871545839616",
+                    "indices": [
+                        241,
+                        264
+                    ],
+                    "media_key": "3_1720430871545839616",
+                    "media_results": {
+                        "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAARfgMsMvGwAACgACF+AyxajbQYQAAA==",
+                        "result": {
+                            "__typename": "ApiMedia",
+                            "id": "QXBpTWVkaWE6DAABCgABF+Aywy8bAAAKAAIX4DLFqNtBhAAA",
+                            "media_key": "3_1720430871545839616"
+                        }
+                    },
+                    "media_url_https": "https://pbs.twimg.com/media/F-Aywy8bAAAIGqa.jpg",
+                    "original_info": {
+                        "focus_rects": [
+                            {
+                                "h": 605,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 947,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 540,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 0
+                            }
+                        ],
+                        "height": 1080,
+                        "width": 1080
+                    },
+                    "sizes": {
+                        "large": {
+                            "h": 1080,
+                            "w": 1080
+                        }
+                    },
+                    "type": "photo",
+                    "url": "https://t.co/KGFyRYvzZD"
+                }
+            ]
+        },
+        "card": null,
+        "place": {},
+        "entities": {
+            "urls": [
+                {
+                    "display_url": "tataconsumer.com/sites/g/files/\u2026",
+                    "expanded_url": "https://www.tataconsumer.com/sites/g/files/gfwrlq316/files/2023-10/Q2FY24_investor_presentation_for_release.pdf",
+                    "indices": [
+                        217,
+                        240
+                    ],
+                    "url": "https://t.co/fQlmtmP7zS"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1719603824988664284",
+        "url": "https://x.com/TataConsumer/status/1719603824988664284",
+        "twitterUrl": "https://twitter.com/TataConsumer/status/1719603824988664284",
+        "text": "Our MD &amp; CEO, Sunil D\u2019Souza speaks to @nikunjdalmia, @AyeshaFaridi1 and @avannedubash on @ETNOWlive, on our performance in Q2 FY 24 across India and International businesses, consumption trends, focus on high growth businesses and expanding our product portfolio.",
+        "source": "Twitter for iPhone",
+        "retweetCount": 0,
+        "replyCount": 1,
+        "likeCount": 7,
+        "quoteCount": 0,
+        "viewCount": 591,
+        "createdAt": "Wed Nov 01 06:34:35 +0000 2023",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1719603824988664284",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "TataConsumer",
+            "url": "https://x.com/TataConsumer",
+            "twitterUrl": "https://twitter.com/TataConsumer",
+            "id": "2179307928",
+            "name": "Tata Consumer Products",
+            "isVerified": false,
+            "isBlueVerified": true,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/1674876693549559809/UILmj7n4_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/2179307928/1741586521",
+            "description": "",
+            "location": "Mumbai, India",
+            "followers": 16060,
+            "following": 91,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Thu Nov 07 04:16:35 +0000 2013",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 573,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 1779,
+            "statusesCount": 3037,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "The official twitter handle of Tata Consumer Products Ltd (Formerly known as Tata Global Beverages Ltd.)",
+                "entities": {
+                    "description": {},
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "tataconsumer.com",
+                                "expanded_url": "http://www.tataconsumer.com",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/mIOEIV3GYZ"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": null,
+        "place": {},
+        "entities": {
+            "user_mentions": [
+                {
+                    "id_str": "30040452",
+                    "indices": [
+                        42,
+                        55
+                    ],
+                    "name": "Nikunj Dalmia",
+                    "screen_name": "nikunjdalmia"
+                },
+                {
+                    "id_str": "246296202",
+                    "indices": [
+                        57,
+                        71
+                    ],
+                    "name": "Ayesha Faridi",
+                    "screen_name": "AyeshaFaridi1"
+                },
+                {
+                    "id_str": "2765754919",
+                    "indices": [
+                        76,
+                        89
+                    ],
+                    "name": "avanne dubash",
+                    "screen_name": "avannedubash"
+                },
+                {
+                    "id_str": "225012752",
+                    "indices": [
+                        93,
+                        103
+                    ],
+                    "name": "ET NOW",
+                    "screen_name": "ETNOWlive"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    }
+]

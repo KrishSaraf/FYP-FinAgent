@@ -1,0 +1,1078 @@
+[
+    {
+        "type": "tweet",
+        "id": "1887102042998493643",
+        "url": "https://x.com/Airtel_Presence/status/1887102042998493643",
+        "twitterUrl": "https://twitter.com/Airtel_Presence/status/1887102042998493643",
+        "text": "@SandeepKumarL Give us a chance to rectify the issue. Please DM us your respective Airtel number. We'll pull up our socks to change this into an excellent experience with positive results. Thanks, Komal https://t.co/2G23qpK1Kp",
+        "source": "Twitter for iPhone",
+        "retweetCount": 0,
+        "replyCount": 2,
+        "likeCount": 0,
+        "quoteCount": 0,
+        "viewCount": 35,
+        "createdAt": "Wed Feb 05 11:32:42 +0000 2025",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": true,
+        "inReplyToId": "1887097576874279332",
+        "conversationId": "1887091166291558660",
+        "inReplyToUserId": "125931125",
+        "inReplyToUsername": "SandeepKumarL",
+        "author": {
+            "type": "user",
+            "userName": "Airtel_Presence",
+            "url": "https://x.com/Airtel_Presence",
+            "twitterUrl": "https://twitter.com/Airtel_Presence",
+            "id": "103323813",
+            "name": "Airtel Cares",
+            "isVerified": false,
+            "isBlueVerified": false,
+            "verifiedType": "Business",
+            "profilePicture": "https://pbs.twimg.com/profile_images/1585639426256142338/thLKbDxO_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/103323813/1679039583",
+            "description": "",
+            "location": "India",
+            "followers": 536146,
+            "following": 3,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Sat Jan 09 17:25:28 +0000 2010",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 900,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 729,
+            "statusesCount": 4347641,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [
+                "1897043148100264339"
+            ],
+            "profile_bio": {
+                "description": "Empowering your communication journey, one query at a time! \ud83d\udcac Your dedicated channel for all things airtel. Official experience handle for @airtelindia",
+                "entities": {
+                    "description": {
+                        "user_mentions": [
+                            {
+                                "id_str": "0",
+                                "indices": [
+                                    139,
+                                    151
+                                ],
+                                "name": "",
+                                "screen_name": "airtelindia"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "i.airtel.in/e/Ytchnl",
+                                "expanded_url": "http://i.airtel.in/e/Ytchnl",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/34sCK59eWd"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": {
+            "binding_values": [
+                {
+                    "key": "_omit_link_",
+                    "value": {
+                        "boolean_value": false
+                    }
+                },
+                {
+                    "key": "recipient",
+                    "value": {
+                        "user_value": {
+                            "id_str": "103323813"
+                        }
+                    }
+                },
+                {
+                    "key": "cta",
+                    "value": {
+                        "string_value": "message_me_card_cta_2"
+                    }
+                },
+                {
+                    "key": "card_url",
+                    "value": {
+                        "scribe_key": "card_url",
+                        "string_value": "https://t.co/2G23qpK1Kp"
+                    }
+                }
+            ],
+            "card_platform": {
+                "platform": {
+                    "audience": {
+                        "name": "production"
+                    },
+                    "device": {
+                        "name": "iPhone",
+                        "version": "13"
+                    }
+                }
+            },
+            "name": "2586390716:message_me",
+            "url": "https://t.co/2G23qpK1Kp",
+            "user_refs_results": [
+                {
+                    "rest_id": "103323813",
+                    "result": {
+                        "__typename": "User",
+                        "action_counts": {
+                            "favorites_count": 900
+                        },
+                        "avatar": {
+                            "image_url": "https://pbs.twimg.com/profile_images/1585639426256142338/thLKbDxO_normal.jpg"
+                        },
+                        "banner": {
+                            "image_url": "https://pbs.twimg.com/profile_banners/103323813/1679039583"
+                        },
+                        "core": {
+                            "created_at": "Sat Jan 09 17:25:28 +0000 2010",
+                            "name": "Airtel Cares",
+                            "screen_name": "Airtel_Presence"
+                        },
+                        "dm_permissions": {
+                            "can_dm": true
+                        },
+                        "exclusive_tweet_following": false,
+                        "identity_profile_labels_highlighted_label": {},
+                        "location": {
+                            "location": "India"
+                        },
+                        "media_permissions": {
+                            "can_media_tag": true
+                        },
+                        "notifications_settings": {},
+                        "pinned_items": {
+                            "tweet_ids_str": [
+                                "1897043148100264339"
+                            ]
+                        },
+                        "privacy": {},
+                        "private_super_following": false,
+                        "profile_bio": {
+                            "description": "Empowering your communication journey, one query at a time! \ud83d\udcac Your dedicated channel for all things airtel. Official experience handle for @airtelindia",
+                            "entities": {
+                                "description": {
+                                    "user_mentions": [
+                                        {
+                                            "id_str": "0",
+                                            "indices": [
+                                                139,
+                                                151
+                                            ],
+                                            "name": "",
+                                            "screen_name": "airtelindia"
+                                        }
+                                    ]
+                                },
+                                "url": {
+                                    "urls": [
+                                        {
+                                            "display_url": "i.airtel.in/e/Ytchnl",
+                                            "expanded_url": "http://i.airtel.in/e/Ytchnl",
+                                            "indices": [
+                                                0,
+                                                23
+                                            ],
+                                            "url": "https://t.co/34sCK59eWd"
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        "profile_image_shape": "Square",
+                        "profile_metadata": {
+                            "profile_interstitial_type": "",
+                            "profile_link_color": "0A090A"
+                        },
+                        "profile_translation": {
+                            "translator_type_enum": "None"
+                        },
+                        "properties": {
+                            "has_extended_profile": false
+                        },
+                        "relationship_counts": {
+                            "followers": 536146,
+                            "following": 3
+                        },
+                        "relationship_perspectives": {},
+                        "rest_id": "103323813",
+                        "super_follow_eligible": false,
+                        "super_followed_by": false,
+                        "super_following": false,
+                        "tweet_counts": {
+                            "media_tweets": 729,
+                            "tweets": 4347641
+                        },
+                        "website": {
+                            "url": "https://t.co/34sCK59eWd"
+                        },
+                        "verification": {
+                            "is_blue_verified": false,
+                            "verified_type": "Business"
+                        }
+                    }
+                }
+            ]
+        },
+        "place": {},
+        "entities": {
+            "urls": [
+                {
+                    "display_url": "twitter.com/messages/compo\u2026",
+                    "expanded_url": "https://twitter.com/messages/compose?recipient_id=103323813",
+                    "indices": [
+                        203,
+                        226
+                    ],
+                    "url": "https://t.co/2G23qpK1Kp"
+                }
+            ],
+            "user_mentions": [
+                {
+                    "id_str": "125931125",
+                    "indices": [
+                        0,
+                        14
+                    ],
+                    "name": "Sandeep Kumar L",
+                    "screen_name": "SandeepKumarL"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1885302836918951968",
+        "url": "https://x.com/Airtel_Presence/status/1885302836918951968",
+        "twitterUrl": "https://twitter.com/Airtel_Presence/status/1885302836918951968",
+        "text": "@Profit_Raining An appreciation from you really boosts our will to ensure trust in your journey with us. Always at your service. Thank you, Mudit https://t.co/2G23qpK1Kp",
+        "source": "Twitter for iPhone",
+        "retweetCount": 0,
+        "replyCount": 0,
+        "likeCount": 1,
+        "quoteCount": 0,
+        "viewCount": 67,
+        "createdAt": "Fri Jan 31 12:23:18 +0000 2025",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": true,
+        "inReplyToId": "1885289777727234211",
+        "conversationId": "1885289777727234211",
+        "inReplyToUserId": "3165581569",
+        "inReplyToUsername": "AstroRaining",
+        "author": {
+            "type": "user",
+            "userName": "Airtel_Presence",
+            "url": "https://x.com/Airtel_Presence",
+            "twitterUrl": "https://twitter.com/Airtel_Presence",
+            "id": "103323813",
+            "name": "Airtel Cares",
+            "isVerified": false,
+            "isBlueVerified": false,
+            "verifiedType": "Business",
+            "profilePicture": "https://pbs.twimg.com/profile_images/1585639426256142338/thLKbDxO_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/103323813/1679039583",
+            "description": "",
+            "location": "India",
+            "followers": 536146,
+            "following": 3,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Sat Jan 09 17:25:28 +0000 2010",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 900,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 729,
+            "statusesCount": 4347641,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [
+                "1897043148100264339"
+            ],
+            "profile_bio": {
+                "description": "Empowering your communication journey, one query at a time! \ud83d\udcac Your dedicated channel for all things airtel. Official experience handle for @airtelindia",
+                "entities": {
+                    "description": {
+                        "user_mentions": [
+                            {
+                                "id_str": "0",
+                                "indices": [
+                                    139,
+                                    151
+                                ],
+                                "name": "",
+                                "screen_name": "airtelindia"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "i.airtel.in/e/Ytchnl",
+                                "expanded_url": "http://i.airtel.in/e/Ytchnl",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/34sCK59eWd"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": {
+            "binding_values": [
+                {
+                    "key": "_omit_link_",
+                    "value": {
+                        "boolean_value": false
+                    }
+                },
+                {
+                    "key": "recipient",
+                    "value": {
+                        "user_value": {
+                            "id_str": "103323813"
+                        }
+                    }
+                },
+                {
+                    "key": "cta",
+                    "value": {
+                        "string_value": "message_me_card_cta_2"
+                    }
+                },
+                {
+                    "key": "card_url",
+                    "value": {
+                        "scribe_key": "card_url",
+                        "string_value": "https://t.co/2G23qpK1Kp"
+                    }
+                }
+            ],
+            "card_platform": {
+                "platform": {
+                    "audience": {
+                        "name": "production"
+                    },
+                    "device": {
+                        "name": "iPhone",
+                        "version": "13"
+                    }
+                }
+            },
+            "name": "2586390716:message_me",
+            "url": "https://t.co/2G23qpK1Kp",
+            "user_refs_results": [
+                {
+                    "rest_id": "103323813",
+                    "result": {
+                        "__typename": "User",
+                        "action_counts": {
+                            "favorites_count": 900
+                        },
+                        "avatar": {
+                            "image_url": "https://pbs.twimg.com/profile_images/1585639426256142338/thLKbDxO_normal.jpg"
+                        },
+                        "banner": {
+                            "image_url": "https://pbs.twimg.com/profile_banners/103323813/1679039583"
+                        },
+                        "core": {
+                            "created_at": "Sat Jan 09 17:25:28 +0000 2010",
+                            "name": "Airtel Cares",
+                            "screen_name": "Airtel_Presence"
+                        },
+                        "dm_permissions": {
+                            "can_dm": true
+                        },
+                        "exclusive_tweet_following": false,
+                        "identity_profile_labels_highlighted_label": {},
+                        "location": {
+                            "location": "India"
+                        },
+                        "media_permissions": {
+                            "can_media_tag": true
+                        },
+                        "notifications_settings": {},
+                        "pinned_items": {
+                            "tweet_ids_str": [
+                                "1897043148100264339"
+                            ]
+                        },
+                        "privacy": {},
+                        "private_super_following": false,
+                        "profile_bio": {
+                            "description": "Empowering your communication journey, one query at a time! \ud83d\udcac Your dedicated channel for all things airtel. Official experience handle for @airtelindia",
+                            "entities": {
+                                "description": {
+                                    "user_mentions": [
+                                        {
+                                            "id_str": "0",
+                                            "indices": [
+                                                139,
+                                                151
+                                            ],
+                                            "name": "",
+                                            "screen_name": "airtelindia"
+                                        }
+                                    ]
+                                },
+                                "url": {
+                                    "urls": [
+                                        {
+                                            "display_url": "i.airtel.in/e/Ytchnl",
+                                            "expanded_url": "http://i.airtel.in/e/Ytchnl",
+                                            "indices": [
+                                                0,
+                                                23
+                                            ],
+                                            "url": "https://t.co/34sCK59eWd"
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        "profile_image_shape": "Square",
+                        "profile_metadata": {
+                            "profile_interstitial_type": "",
+                            "profile_link_color": "0A090A"
+                        },
+                        "profile_translation": {
+                            "translator_type_enum": "None"
+                        },
+                        "properties": {
+                            "has_extended_profile": false
+                        },
+                        "relationship_counts": {
+                            "followers": 536146,
+                            "following": 3
+                        },
+                        "relationship_perspectives": {},
+                        "rest_id": "103323813",
+                        "super_follow_eligible": false,
+                        "super_followed_by": false,
+                        "super_following": false,
+                        "tweet_counts": {
+                            "media_tweets": 729,
+                            "tweets": 4347641
+                        },
+                        "website": {
+                            "url": "https://t.co/34sCK59eWd"
+                        },
+                        "verification": {
+                            "is_blue_verified": false,
+                            "verified_type": "Business"
+                        }
+                    }
+                }
+            ]
+        },
+        "place": {},
+        "entities": {
+            "urls": [
+                {
+                    "display_url": "twitter.com/messages/compo\u2026",
+                    "expanded_url": "https://twitter.com/messages/compose?recipient_id=103323813",
+                    "indices": [
+                        146,
+                        169
+                    ],
+                    "url": "https://t.co/2G23qpK1Kp"
+                }
+            ],
+            "user_mentions": [
+                {
+                    "id_str": "1931604269784023040",
+                    "indices": [
+                        0,
+                        15
+                    ],
+                    "name": "Sachin Bhatia",
+                    "screen_name": "Profit_Raining"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1882343391507230814",
+        "url": "https://x.com/Airtel_Presence/status/1882343391507230814",
+        "twitterUrl": "https://twitter.com/Airtel_Presence/status/1882343391507230814",
+        "text": "@this_is_madhuma Thank you for placing your trust in us. We are excited to embark on this journey together and are committed to delivering exceptional results. Regards, Anjali A https://t.co/2G23qpK1Kp",
+        "source": "Twitter for iPhone",
+        "retweetCount": 0,
+        "replyCount": 0,
+        "likeCount": 0,
+        "quoteCount": 0,
+        "viewCount": 15,
+        "createdAt": "Thu Jan 23 08:23:31 +0000 2025",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": true,
+        "inReplyToId": "1882306796230160872",
+        "conversationId": "1882301865670656412",
+        "inReplyToUserId": "1842658310102896640",
+        "inReplyToUsername": "this_is_madhuma",
+        "author": {
+            "type": "user",
+            "userName": "Airtel_Presence",
+            "url": "https://x.com/Airtel_Presence",
+            "twitterUrl": "https://twitter.com/Airtel_Presence",
+            "id": "103323813",
+            "name": "Airtel Cares",
+            "isVerified": false,
+            "isBlueVerified": false,
+            "verifiedType": "Business",
+            "profilePicture": "https://pbs.twimg.com/profile_images/1585639426256142338/thLKbDxO_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/103323813/1679039583",
+            "description": "",
+            "location": "India",
+            "followers": 536146,
+            "following": 3,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Sat Jan 09 17:25:28 +0000 2010",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 900,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 729,
+            "statusesCount": 4347641,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [
+                "1897043148100264339"
+            ],
+            "profile_bio": {
+                "description": "Empowering your communication journey, one query at a time! \ud83d\udcac Your dedicated channel for all things airtel. Official experience handle for @airtelindia",
+                "entities": {
+                    "description": {
+                        "user_mentions": [
+                            {
+                                "id_str": "0",
+                                "indices": [
+                                    139,
+                                    151
+                                ],
+                                "name": "",
+                                "screen_name": "airtelindia"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "i.airtel.in/e/Ytchnl",
+                                "expanded_url": "http://i.airtel.in/e/Ytchnl",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/34sCK59eWd"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": {
+            "binding_values": [
+                {
+                    "key": "_omit_link_",
+                    "value": {
+                        "boolean_value": false
+                    }
+                },
+                {
+                    "key": "recipient",
+                    "value": {
+                        "user_value": {
+                            "id_str": "103323813"
+                        }
+                    }
+                },
+                {
+                    "key": "cta",
+                    "value": {
+                        "string_value": "message_me_card_cta_2"
+                    }
+                },
+                {
+                    "key": "card_url",
+                    "value": {
+                        "scribe_key": "card_url",
+                        "string_value": "https://t.co/2G23qpK1Kp"
+                    }
+                }
+            ],
+            "card_platform": {
+                "platform": {
+                    "audience": {
+                        "name": "production"
+                    },
+                    "device": {
+                        "name": "iPhone",
+                        "version": "13"
+                    }
+                }
+            },
+            "name": "2586390716:message_me",
+            "url": "https://t.co/2G23qpK1Kp",
+            "user_refs_results": [
+                {
+                    "rest_id": "103323813",
+                    "result": {
+                        "__typename": "User",
+                        "action_counts": {
+                            "favorites_count": 900
+                        },
+                        "avatar": {
+                            "image_url": "https://pbs.twimg.com/profile_images/1585639426256142338/thLKbDxO_normal.jpg"
+                        },
+                        "banner": {
+                            "image_url": "https://pbs.twimg.com/profile_banners/103323813/1679039583"
+                        },
+                        "core": {
+                            "created_at": "Sat Jan 09 17:25:28 +0000 2010",
+                            "name": "Airtel Cares",
+                            "screen_name": "Airtel_Presence"
+                        },
+                        "dm_permissions": {
+                            "can_dm": true
+                        },
+                        "exclusive_tweet_following": false,
+                        "identity_profile_labels_highlighted_label": {},
+                        "location": {
+                            "location": "India"
+                        },
+                        "media_permissions": {
+                            "can_media_tag": true
+                        },
+                        "notifications_settings": {},
+                        "pinned_items": {
+                            "tweet_ids_str": [
+                                "1897043148100264339"
+                            ]
+                        },
+                        "privacy": {},
+                        "private_super_following": false,
+                        "profile_bio": {
+                            "description": "Empowering your communication journey, one query at a time! \ud83d\udcac Your dedicated channel for all things airtel. Official experience handle for @airtelindia",
+                            "entities": {
+                                "description": {
+                                    "user_mentions": [
+                                        {
+                                            "id_str": "0",
+                                            "indices": [
+                                                139,
+                                                151
+                                            ],
+                                            "name": "",
+                                            "screen_name": "airtelindia"
+                                        }
+                                    ]
+                                },
+                                "url": {
+                                    "urls": [
+                                        {
+                                            "display_url": "i.airtel.in/e/Ytchnl",
+                                            "expanded_url": "http://i.airtel.in/e/Ytchnl",
+                                            "indices": [
+                                                0,
+                                                23
+                                            ],
+                                            "url": "https://t.co/34sCK59eWd"
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        "profile_image_shape": "Square",
+                        "profile_metadata": {
+                            "profile_interstitial_type": "",
+                            "profile_link_color": "0A090A"
+                        },
+                        "profile_translation": {
+                            "translator_type_enum": "None"
+                        },
+                        "properties": {
+                            "has_extended_profile": false
+                        },
+                        "relationship_counts": {
+                            "followers": 536146,
+                            "following": 3
+                        },
+                        "relationship_perspectives": {},
+                        "rest_id": "103323813",
+                        "super_follow_eligible": false,
+                        "super_followed_by": false,
+                        "super_following": false,
+                        "tweet_counts": {
+                            "media_tweets": 729,
+                            "tweets": 4347641
+                        },
+                        "website": {
+                            "url": "https://t.co/34sCK59eWd"
+                        },
+                        "verification": {
+                            "is_blue_verified": false,
+                            "verified_type": "Business"
+                        }
+                    }
+                }
+            ]
+        },
+        "place": {},
+        "entities": {
+            "urls": [
+                {
+                    "display_url": "twitter.com/messages/compo\u2026",
+                    "expanded_url": "https://twitter.com/messages/compose?recipient_id=103323813",
+                    "indices": [
+                        178,
+                        201
+                    ],
+                    "url": "https://t.co/2G23qpK1Kp"
+                }
+            ],
+            "user_mentions": [
+                {
+                    "id_str": "1842658310102896640",
+                    "indices": [
+                        0,
+                        16
+                    ],
+                    "name": "Madhu \ud83e\udd8b",
+                    "screen_name": "this_is_madhuma"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1854848859026968644",
+        "url": "https://x.com/Airtel_Presence/status/1854848859026968644",
+        "twitterUrl": "https://twitter.com/Airtel_Presence/status/1854848859026968644",
+        "text": "@Profit_Raining Such an adulation from your end is worth diamonds for us. We really cherish the moments of your satisfaction. Thanks, Poorvi https://t.co/2G23qpK1Kp",
+        "source": "Twitter for iPhone",
+        "retweetCount": 0,
+        "replyCount": 0,
+        "likeCount": 1,
+        "quoteCount": 0,
+        "viewCount": 17,
+        "createdAt": "Fri Nov 08 11:30:04 +0000 2024",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": true,
+        "inReplyToId": "1854842933905965574",
+        "conversationId": "1854842929120264374",
+        "inReplyToUserId": "3165581569",
+        "inReplyToUsername": "AstroRaining",
+        "author": {
+            "type": "user",
+            "userName": "Airtel_Presence",
+            "url": "https://x.com/Airtel_Presence",
+            "twitterUrl": "https://twitter.com/Airtel_Presence",
+            "id": "103323813",
+            "name": "Airtel Cares",
+            "isVerified": false,
+            "isBlueVerified": false,
+            "verifiedType": "Business",
+            "profilePicture": "https://pbs.twimg.com/profile_images/1585639426256142338/thLKbDxO_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/103323813/1679039583",
+            "description": "",
+            "location": "India",
+            "followers": 536146,
+            "following": 3,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Sat Jan 09 17:25:28 +0000 2010",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 900,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 729,
+            "statusesCount": 4347641,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [
+                "1897043148100264339"
+            ],
+            "profile_bio": {
+                "description": "Empowering your communication journey, one query at a time! \ud83d\udcac Your dedicated channel for all things airtel. Official experience handle for @airtelindia",
+                "entities": {
+                    "description": {
+                        "user_mentions": [
+                            {
+                                "id_str": "0",
+                                "indices": [
+                                    139,
+                                    151
+                                ],
+                                "name": "",
+                                "screen_name": "airtelindia"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "i.airtel.in/e/Ytchnl",
+                                "expanded_url": "http://i.airtel.in/e/Ytchnl",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/34sCK59eWd"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": {
+            "binding_values": [
+                {
+                    "key": "_omit_link_",
+                    "value": {
+                        "boolean_value": false
+                    }
+                },
+                {
+                    "key": "recipient",
+                    "value": {
+                        "user_value": {
+                            "id_str": "103323813"
+                        }
+                    }
+                },
+                {
+                    "key": "cta",
+                    "value": {
+                        "string_value": "message_me_card_cta_2"
+                    }
+                },
+                {
+                    "key": "card_url",
+                    "value": {
+                        "scribe_key": "card_url",
+                        "string_value": "https://t.co/2G23qpK1Kp"
+                    }
+                }
+            ],
+            "card_platform": {
+                "platform": {
+                    "audience": {
+                        "name": "production"
+                    },
+                    "device": {
+                        "name": "iPhone",
+                        "version": "13"
+                    }
+                }
+            },
+            "name": "2586390716:message_me",
+            "url": "https://t.co/2G23qpK1Kp",
+            "user_refs_results": [
+                {
+                    "rest_id": "103323813",
+                    "result": {
+                        "__typename": "User",
+                        "action_counts": {
+                            "favorites_count": 900
+                        },
+                        "avatar": {
+                            "image_url": "https://pbs.twimg.com/profile_images/1585639426256142338/thLKbDxO_normal.jpg"
+                        },
+                        "banner": {
+                            "image_url": "https://pbs.twimg.com/profile_banners/103323813/1679039583"
+                        },
+                        "core": {
+                            "created_at": "Sat Jan 09 17:25:28 +0000 2010",
+                            "name": "Airtel Cares",
+                            "screen_name": "Airtel_Presence"
+                        },
+                        "dm_permissions": {
+                            "can_dm": true
+                        },
+                        "exclusive_tweet_following": false,
+                        "identity_profile_labels_highlighted_label": {},
+                        "location": {
+                            "location": "India"
+                        },
+                        "media_permissions": {
+                            "can_media_tag": true
+                        },
+                        "notifications_settings": {},
+                        "pinned_items": {
+                            "tweet_ids_str": [
+                                "1897043148100264339"
+                            ]
+                        },
+                        "privacy": {},
+                        "private_super_following": false,
+                        "profile_bio": {
+                            "description": "Empowering your communication journey, one query at a time! \ud83d\udcac Your dedicated channel for all things airtel. Official experience handle for @airtelindia",
+                            "entities": {
+                                "description": {
+                                    "user_mentions": [
+                                        {
+                                            "id_str": "0",
+                                            "indices": [
+                                                139,
+                                                151
+                                            ],
+                                            "name": "",
+                                            "screen_name": "airtelindia"
+                                        }
+                                    ]
+                                },
+                                "url": {
+                                    "urls": [
+                                        {
+                                            "display_url": "i.airtel.in/e/Ytchnl",
+                                            "expanded_url": "http://i.airtel.in/e/Ytchnl",
+                                            "indices": [
+                                                0,
+                                                23
+                                            ],
+                                            "url": "https://t.co/34sCK59eWd"
+                                        }
+                                    ]
+                                }
+                            }
+                        },
+                        "profile_image_shape": "Square",
+                        "profile_metadata": {
+                            "profile_interstitial_type": "",
+                            "profile_link_color": "0A090A"
+                        },
+                        "profile_translation": {
+                            "translator_type_enum": "None"
+                        },
+                        "properties": {
+                            "has_extended_profile": false
+                        },
+                        "relationship_counts": {
+                            "followers": 536146,
+                            "following": 3
+                        },
+                        "relationship_perspectives": {},
+                        "rest_id": "103323813",
+                        "super_follow_eligible": false,
+                        "super_followed_by": false,
+                        "super_following": false,
+                        "tweet_counts": {
+                            "media_tweets": 729,
+                            "tweets": 4347641
+                        },
+                        "website": {
+                            "url": "https://t.co/34sCK59eWd"
+                        },
+                        "verification": {
+                            "is_blue_verified": false,
+                            "verified_type": "Business"
+                        }
+                    }
+                }
+            ]
+        },
+        "place": {},
+        "entities": {
+            "urls": [
+                {
+                    "display_url": "twitter.com/messages/compo\u2026",
+                    "expanded_url": "https://twitter.com/messages/compose?recipient_id=103323813",
+                    "indices": [
+                        141,
+                        164
+                    ],
+                    "url": "https://t.co/2G23qpK1Kp"
+                }
+            ],
+            "user_mentions": [
+                {
+                    "id_str": "1931604269784023040",
+                    "indices": [
+                        0,
+                        15
+                    ],
+                    "name": "Sachin Bhatia",
+                    "screen_name": "Profit_Raining"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    }
+]

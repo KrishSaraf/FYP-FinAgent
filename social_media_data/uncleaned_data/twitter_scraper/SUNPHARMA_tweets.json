@@ -1,0 +1,100 @@
+[
+    {
+        "type": "tweet",
+        "id": "1554724809887870976",
+        "url": "https://x.com/Pawan6um/status/1554724809887870976",
+        "twitterUrl": "https://twitter.com/Pawan6um/status/1554724809887870976",
+        "text": "@SunPharma_Live It had been more than 3 months and I have still not got my free vials of Latoprost RT as advertised by you. This is a case of false advertising and consumer fraud. Why are you making false claims?",
+        "source": "Twitter for iPhone",
+        "retweetCount": 0,
+        "replyCount": 1,
+        "likeCount": 0,
+        "quoteCount": 0,
+        "viewCount": 0,
+        "createdAt": "Wed Aug 03 07:04:14 +0000 2022",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1554724809887870976",
+        "inReplyToUserId": "2879642113",
+        "inReplyToUsername": "SunPharma_Live",
+        "author": {
+            "type": "user",
+            "userName": "Pawan6um",
+            "url": "https://x.com/Pawan6um",
+            "twitterUrl": "https://twitter.com/Pawan6um",
+            "id": "27465042",
+            "name": "Pawan Prabhat",
+            "isVerified": false,
+            "isBlueVerified": false,
+            "verifiedType": null,
+            "profilePicture": "https://pbs.twimg.com/profile_images/1378492456/pawan3_Compressed_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/27465042/1406487119",
+            "description": "",
+            "location": "Mumbai",
+            "followers": 169,
+            "following": 96,
+            "status": "",
+            "canDm": false,
+            "canMediaTag": true,
+            "createdAt": "Sun Mar 29 17:36:45 +0000 2009",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 1,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 8,
+            "statusesCount": 86,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "Serial Entrepreneur, Ex I-Banker, Co-Founder Shorthillstech, Ex Crisil-S&P, Standard Chartered, Alumni - IIT Bombay, IIM Indore",
+                "entities": {
+                    "description": {},
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "myecomteams.com",
+                                "expanded_url": "http://www.myecomteams.com",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/tIoZhCF6PF"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": null,
+        "place": {},
+        "entities": {
+            "user_mentions": [
+                {
+                    "id_str": "2879642113",
+                    "indices": [
+                        0,
+                        15
+                    ],
+                    "name": "Sun Pharma",
+                    "screen_name": "SunPharma_Live"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    }
+]

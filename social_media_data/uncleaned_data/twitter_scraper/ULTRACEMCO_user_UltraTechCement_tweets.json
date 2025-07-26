@@ -1,0 +1,3692 @@
+[
+    {
+        "type": "tweet",
+        "id": "1947241892489617656",
+        "url": "https://x.com/UltraTechCement/status/1947241892489617656",
+        "twitterUrl": "https://twitter.com/UltraTechCement/status/1947241892489617656",
+        "text": "UltraTech today declared financial results for Q1 FY26 with consolidated net sales at Rs 21,040 crores and consolidated sales volumes at 36.83 million MT. UltraTech remains committed to contributing to the country's economic development.\n\nRead: https://t.co/GDIaD4KDzF https://t.co/NWFJ07dJ8H",
+        "source": "Twitter for iPhone",
+        "retweetCount": 0,
+        "replyCount": 1,
+        "likeCount": 5,
+        "quoteCount": 0,
+        "viewCount": 358,
+        "createdAt": "Mon Jul 21 10:26:59 +0000 2025",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1947241892489617656",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "UltraTechCement",
+            "url": "https://x.com/UltraTechCement",
+            "twitterUrl": "https://twitter.com/UltraTechCement",
+            "id": "975339853",
+            "name": "UltraTech Cement Ltd",
+            "isVerified": false,
+            "isBlueVerified": false,
+            "verifiedType": "Business",
+            "profilePicture": "https://pbs.twimg.com/profile_images/1782776746712186881/JTYIPcNN_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/975339853/1687763496",
+            "description": "",
+            "location": "",
+            "followers": 28217,
+            "following": 27,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Wed Nov 28 04:14:46 +0000 2012",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 2391,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 1707,
+            "statusesCount": 6807,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "UltraTech is India\u2019s No. 1 Cement\u2019\nVisit - https://t.co/f8HmCuHe20 for claim details. \nWe never ask for any advance payments for dealership or bulk orders.",
+                "entities": {
+                    "description": {
+                        "urls": [
+                            {
+                                "display_url": "ultratechcement.com",
+                                "expanded_url": "http://ultratechcement.com",
+                                "indices": [
+                                    43,
+                                    66
+                                ],
+                                "url": "https://t.co/f8HmCuHe20"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "ultratechcement.com",
+                                "expanded_url": "http://www.ultratechcement.com/",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/XaITioehwC"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {
+            "media": [
+                {
+                    "display_url": "pic.twitter.com/NWFJ07dJ8H",
+                    "expanded_url": "https://twitter.com/UltraTechCement/status/1947241892489617656/photo/1",
+                    "ext_media_availability": {
+                        "status": "Available"
+                    },
+                    "features": {
+                        "large": {},
+                        "orig": {}
+                    },
+                    "id_str": "1947241889755000832",
+                    "indices": [
+                        269,
+                        292
+                    ],
+                    "media_key": "3_1947241889755000832",
+                    "media_results": {
+                        "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAARsF/i6Km3AACgACGwX+Ly2aYPgAAA==",
+                        "result": {
+                            "__typename": "ApiMedia",
+                            "id": "QXBpTWVkaWE6DAABCgABGwX+LoqbcAAKAAIbBf4vLZpg+AAA",
+                            "media_key": "3_1947241889755000832"
+                        }
+                    },
+                    "media_url_https": "https://pbs.twimg.com/media/GwX-LoqbcAAPbjz.jpg",
+                    "original_info": {
+                        "focus_rects": [
+                            {
+                                "h": 605,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 265
+                            },
+                            {
+                                "h": 1080,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 947,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 540,
+                                "x": 27,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 0
+                            }
+                        ],
+                        "height": 1080,
+                        "width": 1080
+                    },
+                    "sizes": {
+                        "large": {
+                            "h": 1080,
+                            "w": 1080
+                        }
+                    },
+                    "type": "photo",
+                    "url": "https://t.co/NWFJ07dJ8H"
+                }
+            ]
+        },
+        "card": null,
+        "place": {},
+        "entities": {
+            "urls": [
+                {
+                    "display_url": "bit.ly/4eZFQ4r",
+                    "expanded_url": "https://bit.ly/4eZFQ4r",
+                    "indices": [
+                        245,
+                        268
+                    ],
+                    "url": "https://t.co/GDIaD4KDzF"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1916826405566115857",
+        "url": "https://x.com/UltraTechCement/status/1916826405566115857",
+        "twitterUrl": "https://twitter.com/UltraTechCement/status/1916826405566115857",
+        "text": "UltraTech delivers robust Q4FY25 performance with consolidated net sales of Rs 22,788 cr &amp; profit before interest, depreciation &amp; tax at Rs 4,721 cr. In FY25 UltraTech achieved sales volume of 135.83 mn MT, one of the highest globally (ex-China).\n\nRead: https://t.co/c21zBxmKGJ https://t.co/ipWr15y0ar",
+        "source": "Twitter for iPhone",
+        "retweetCount": 1,
+        "replyCount": 1,
+        "likeCount": 12,
+        "quoteCount": 0,
+        "viewCount": 849,
+        "createdAt": "Mon Apr 28 12:06:42 +0000 2025",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1916826405566115857",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "UltraTechCement",
+            "url": "https://x.com/UltraTechCement",
+            "twitterUrl": "https://twitter.com/UltraTechCement",
+            "id": "975339853",
+            "name": "UltraTech Cement Ltd",
+            "isVerified": false,
+            "isBlueVerified": false,
+            "verifiedType": "Business",
+            "profilePicture": "https://pbs.twimg.com/profile_images/1782776746712186881/JTYIPcNN_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/975339853/1687763496",
+            "description": "",
+            "location": "",
+            "followers": 28217,
+            "following": 27,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Wed Nov 28 04:14:46 +0000 2012",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 2391,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 1707,
+            "statusesCount": 6807,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "UltraTech is India\u2019s No. 1 Cement\u2019\nVisit - https://t.co/f8HmCuHe20 for claim details. \nWe never ask for any advance payments for dealership or bulk orders.",
+                "entities": {
+                    "description": {
+                        "urls": [
+                            {
+                                "display_url": "ultratechcement.com",
+                                "expanded_url": "http://ultratechcement.com",
+                                "indices": [
+                                    43,
+                                    66
+                                ],
+                                "url": "https://t.co/f8HmCuHe20"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "ultratechcement.com",
+                                "expanded_url": "http://www.ultratechcement.com/",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/XaITioehwC"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {
+            "media": [
+                {
+                    "allow_download_status": {
+                        "allow_download": true
+                    },
+                    "display_url": "pic.twitter.com/ipWr15y0ar",
+                    "expanded_url": "https://twitter.com/UltraTechCement/status/1916826405566115857/photo/1",
+                    "ext_media_availability": {
+                        "status": "Available"
+                    },
+                    "features": {
+                        "large": {},
+                        "orig": {}
+                    },
+                    "id_str": "1916826395650740226",
+                    "indices": [
+                        286,
+                        309
+                    ],
+                    "media_key": "3_1916826395650740226",
+                    "media_results": {
+                        "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAARqZ73N42tACCgACGpnvdcfbcBEAAA==",
+                        "result": {
+                            "__typename": "ApiMedia",
+                            "id": "QXBpTWVkaWE6DAABCgABGpnvc3ja0AIKAAIame91x9twEQAA",
+                            "media_key": "3_1916826395650740226"
+                        }
+                    },
+                    "media_url_https": "https://pbs.twimg.com/media/Gpnvc3ja0AIP67W.jpg",
+                    "original_info": {
+                        "focus_rects": [
+                            {
+                                "h": 605,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 265
+                            },
+                            {
+                                "h": 1080,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 947,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 540,
+                                "x": 27,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 0
+                            }
+                        ],
+                        "height": 1080,
+                        "width": 1080
+                    },
+                    "sizes": {
+                        "large": {
+                            "h": 1080,
+                            "w": 1080
+                        }
+                    },
+                    "type": "photo",
+                    "url": "https://t.co/ipWr15y0ar"
+                }
+            ]
+        },
+        "card": null,
+        "place": {},
+        "entities": {
+            "urls": [
+                {
+                    "display_url": "bit.ly/3EHKeHq",
+                    "expanded_url": "https://bit.ly/3EHKeHq",
+                    "indices": [
+                        262,
+                        285
+                    ],
+                    "url": "https://t.co/c21zBxmKGJ"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1882434035907231936",
+        "url": "https://x.com/UltraTechCement/status/1882434035907231936",
+        "twitterUrl": "https://twitter.com/UltraTechCement/status/1882434035907231936",
+        "text": "As the world steps into the second quarter of the 21st century in 2025, UltraTech is proud to continue championing India's growth story. Guided by our Chairman Mr. Kumar Mangalam Birla's pioneering leadership, team UltraTech is ready for new frontiers.",
+        "source": "Twitter for iPhone",
+        "retweetCount": 0,
+        "replyCount": 0,
+        "likeCount": 0,
+        "quoteCount": 0,
+        "viewCount": 552,
+        "createdAt": "Thu Jan 23 14:23:42 +0000 2025",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1882434035907231936",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "UltraTechCement",
+            "url": "https://x.com/UltraTechCement",
+            "twitterUrl": "https://twitter.com/UltraTechCement",
+            "id": "975339853",
+            "name": "UltraTech Cement Ltd",
+            "isVerified": false,
+            "isBlueVerified": false,
+            "verifiedType": "Business",
+            "profilePicture": "https://pbs.twimg.com/profile_images/1782776746712186881/JTYIPcNN_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/975339853/1687763496",
+            "description": "",
+            "location": "",
+            "followers": 28217,
+            "following": 27,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Wed Nov 28 04:14:46 +0000 2012",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 2391,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 1707,
+            "statusesCount": 6807,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "UltraTech is India\u2019s No. 1 Cement\u2019\nVisit - https://t.co/f8HmCuHe20 for claim details. \nWe never ask for any advance payments for dealership or bulk orders.",
+                "entities": {
+                    "description": {
+                        "urls": [
+                            {
+                                "display_url": "ultratechcement.com",
+                                "expanded_url": "http://ultratechcement.com",
+                                "indices": [
+                                    43,
+                                    66
+                                ],
+                                "url": "https://t.co/f8HmCuHe20"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "ultratechcement.com",
+                                "expanded_url": "http://www.ultratechcement.com/",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/XaITioehwC"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": null,
+        "place": {},
+        "entities": {},
+        "quoted_tweet": {
+            "type": "tweet",
+            "id": "1881682445046775891",
+            "url": "https://x.com/AdityaBirlaGrp/status/1881682445046775891",
+            "twitterUrl": "https://twitter.com/AdityaBirlaGrp/status/1881682445046775891",
+            "text": "What's common between the past, the present, and the potential future?\n\nOur Chairman, Mr. Kumar Mangalam Birla reflects on the evolution of ideas so far, the values that we continue to endure, and the boundless possibilities of tomorrow. https://t.co/0stYligrSs",
+            "source": "Twitter for iPhone",
+            "retweetCount": 17,
+            "replyCount": 9,
+            "likeCount": 333,
+            "quoteCount": 1,
+            "viewCount": 151614,
+            "createdAt": "Tue Jan 21 12:37:09 +0000 2025",
+            "lang": "en",
+            "bookmarkCount": 4,
+            "isReply": false,
+            "inReplyToId": null,
+            "conversationId": "1881682445046775891",
+            "inReplyToUserId": null,
+            "inReplyToUsername": null,
+            "author": {
+                "type": "user",
+                "userName": "AdityaBirlaGrp",
+                "url": "https://x.com/AdityaBirlaGrp",
+                "twitterUrl": "https://twitter.com/AdityaBirlaGrp",
+                "id": "51983734",
+                "name": "Aditya Birla Group",
+                "isVerified": false,
+                "isBlueVerified": false,
+                "verifiedType": "Business",
+                "profilePicture": "https://pbs.twimg.com/profile_images/909671691940278272/FonlKYy9_normal.jpg",
+                "coverPicture": "https://pbs.twimg.com/profile_banners/51983734/1723692455",
+                "description": "",
+                "location": "Mumbai",
+                "followers": 740020,
+                "following": 29,
+                "status": "",
+                "canDm": true,
+                "canMediaTag": true,
+                "createdAt": "Mon Jun 29 06:37:01 +0000 2009",
+                "entities": {
+                    "description": {
+                        "urls": []
+                    },
+                    "url": {}
+                },
+                "fastFollowersCount": 0,
+                "favouritesCount": 1114,
+                "hasCustomTimelines": true,
+                "isTranslator": false,
+                "mediaCount": 3236,
+                "statusesCount": 10421,
+                "withheldInCountries": [],
+                "affiliatesHighlightedLabel": {},
+                "possiblySensitive": false,
+                "pinnedTweetIds": [
+                    "1937751785520636157"
+                ],
+                "profile_bio": {
+                    "description": "Aditya Birla Group is a global conglomerate spanning over 41 countries anchored by a powerful force of employees from over 100 nationalities.",
+                    "entities": {
+                        "description": {},
+                        "url": {
+                            "urls": [
+                                {
+                                    "display_url": "bit.ly/_AdityaBirlaGr\u2026",
+                                    "expanded_url": "https://bit.ly/_AdityaBirlaGroup",
+                                    "indices": [
+                                        0,
+                                        23
+                                    ],
+                                    "url": "https://t.co/vx7rizxrSm"
+                                }
+                            ]
+                        }
+                    }
+                },
+                "isAutomated": false,
+                "automatedBy": null
+            },
+            "extendedEntities": {
+                "media": [
+                    {
+                        "additional_media_info": {
+                            "monetizable": false
+                        },
+                        "display_url": "pic.twitter.com/0stYligrSs",
+                        "expanded_url": "https://twitter.com/AdityaBirlaGrp/status/1881682445046775891/video/1",
+                        "ext_media_availability": {
+                            "status": "Available"
+                        },
+                        "id_str": "1881678138574352384",
+                        "indices": [
+                            238,
+                            261
+                        ],
+                        "media_key": "7_1881678138574352384",
+                        "media_results": {
+                            "id": "QXBpTWVkaWFSZXN1bHRzOgwAAwoAARodEEwnV7AACgACGh0UNtUaAFMAAA==",
+                            "result": {
+                                "__typename": "ApiMedia",
+                                "id": "QXBpTWVkaWE6DAADCgABGh0QTCdXsAAKAAIaHRQ21RoAUwAA",
+                                "media_key": "7_1881678138574352384"
+                            }
+                        },
+                        "media_url_https": "https://pbs.twimg.com/ext_tw_video_thumb/1881678138574352384/pu/img/X_9D149OO43NbSFm.jpg",
+                        "original_info": {
+                            "focus_rects": [],
+                            "height": 1920,
+                            "width": 1080
+                        },
+                        "sizes": {
+                            "large": {
+                                "h": 1920,
+                                "w": 1080
+                            }
+                        },
+                        "type": "video",
+                        "url": "https://t.co/0stYligrSs",
+                        "video_info": {
+                            "aspect_ratio": [
+                                9,
+                                16
+                            ],
+                            "duration_millis": 123490,
+                            "variants": [
+                                {
+                                    "content_type": "application/x-mpegURL",
+                                    "url": "https://video-s.twimg.com/ext_tw_video/1881678138574352384/pu/pl/tSr52LNLkyg0xfnD.m3u8?tag=12&v=f6a"
+                                },
+                                {
+                                    "bitrate": 632000,
+                                    "content_type": "video/mp4",
+                                    "url": "https://video-s.twimg.com/ext_tw_video/1881678138574352384/pu/vid/avc1/320x568/DVIf4FVy_xtRa_YA.mp4?tag=12"
+                                },
+                                {
+                                    "bitrate": 950000,
+                                    "content_type": "video/mp4",
+                                    "url": "https://video-s.twimg.com/ext_tw_video/1881678138574352384/pu/vid/avc1/480x852/bBd6UNM6G1Jg1CNT.mp4?tag=12"
+                                },
+                                {
+                                    "bitrate": 2176000,
+                                    "content_type": "video/mp4",
+                                    "url": "https://video-s.twimg.com/ext_tw_video/1881678138574352384/pu/vid/avc1/720x1280/Xv4WkI9L54sRyEqG.mp4?tag=12"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "card": null,
+            "place": {},
+            "entities": {},
+            "quoted_tweet": null,
+            "retweeted_tweet": null,
+            "article": null
+        },
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1882388380392333766",
+        "url": "https://x.com/UltraTechCement/status/1882388380392333766",
+        "twitterUrl": "https://twitter.com/UltraTechCement/status/1882388380392333766",
+        "text": "UltraTech reports robust Q3FY25 earnings with consolidated net sales at Rs 16,971 cr and profit before interest, depreciation and tax at Rs 3,131 cr. Domestic sales volume grew 10% yoy, a testament to UltraTech partnering India in its growth journey.\nRead: https://t.co/sLWxiCk9sz https://t.co/dCgu0O0ybQ",
+        "source": "Twitter for iPhone",
+        "retweetCount": 0,
+        "replyCount": 0,
+        "likeCount": 6,
+        "quoteCount": 0,
+        "viewCount": 1992,
+        "createdAt": "Thu Jan 23 11:22:17 +0000 2025",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1882388380392333766",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "UltraTechCement",
+            "url": "https://x.com/UltraTechCement",
+            "twitterUrl": "https://twitter.com/UltraTechCement",
+            "id": "975339853",
+            "name": "UltraTech Cement Ltd",
+            "isVerified": false,
+            "isBlueVerified": false,
+            "verifiedType": "Business",
+            "profilePicture": "https://pbs.twimg.com/profile_images/1782776746712186881/JTYIPcNN_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/975339853/1687763496",
+            "description": "",
+            "location": "",
+            "followers": 28217,
+            "following": 27,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Wed Nov 28 04:14:46 +0000 2012",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 2391,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 1707,
+            "statusesCount": 6807,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "UltraTech is India\u2019s No. 1 Cement\u2019\nVisit - https://t.co/f8HmCuHe20 for claim details. \nWe never ask for any advance payments for dealership or bulk orders.",
+                "entities": {
+                    "description": {
+                        "urls": [
+                            {
+                                "display_url": "ultratechcement.com",
+                                "expanded_url": "http://ultratechcement.com",
+                                "indices": [
+                                    43,
+                                    66
+                                ],
+                                "url": "https://t.co/f8HmCuHe20"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "ultratechcement.com",
+                                "expanded_url": "http://www.ultratechcement.com/",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/XaITioehwC"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {
+            "media": [
+                {
+                    "allow_download_status": {
+                        "allow_download": true
+                    },
+                    "display_url": "pic.twitter.com/dCgu0O0ybQ",
+                    "expanded_url": "https://twitter.com/UltraTechCement/status/1882388380392333766/photo/1",
+                    "ext_media_availability": {
+                        "status": "Available"
+                    },
+                    "features": {
+                        "large": {},
+                        "orig": {}
+                    },
+                    "id_str": "1882388310729056256",
+                    "indices": [
+                        281,
+                        304
+                    ],
+                    "media_key": "3_1882388310729056256",
+                    "media_results": {
+                        "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAARofljH+WmAACgACGh+WQjabocYAAA==",
+                        "result": {
+                            "__typename": "ApiMedia",
+                            "id": "QXBpTWVkaWE6DAABCgABGh+WMf5aYAAKAAIaH5ZCNpuhxgAA",
+                            "media_key": "3_1882388310729056256"
+                        }
+                    },
+                    "media_url_https": "https://pbs.twimg.com/media/Gh-WMf5aYAALVqW.jpg",
+                    "original_info": {
+                        "focus_rects": [
+                            {
+                                "h": 605,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 265
+                            },
+                            {
+                                "h": 1080,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 947,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 540,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 0
+                            }
+                        ],
+                        "height": 1080,
+                        "width": 1080
+                    },
+                    "sizes": {
+                        "large": {
+                            "h": 1080,
+                            "w": 1080
+                        }
+                    },
+                    "type": "photo",
+                    "url": "https://t.co/dCgu0O0ybQ"
+                }
+            ]
+        },
+        "card": null,
+        "place": {},
+        "entities": {
+            "urls": [
+                {
+                    "display_url": "bit.ly/40pvVy9",
+                    "expanded_url": "https://bit.ly/40pvVy9",
+                    "indices": [
+                        257,
+                        280
+                    ],
+                    "url": "https://t.co/sLWxiCk9sz"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1848313200951128403",
+        "url": "https://x.com/UltraTechCement/status/1848313200951128403",
+        "twitterUrl": "https://twitter.com/UltraTechCement/status/1848313200951128403",
+        "text": "UltraTech reports a stable quarterly performance for Q2FY25 with Consolidated Net Sales at Rs. 15,308 crores and Profit before interest, depreciation and tax at Rs. 2,239 crores.\n\nRead more: https://t.co/FhceawQ6sP https://t.co/Pg4UnwDiv3",
+        "source": "Twitter for iPhone",
+        "retweetCount": 0,
+        "replyCount": 1,
+        "likeCount": 4,
+        "quoteCount": 0,
+        "viewCount": 553,
+        "createdAt": "Mon Oct 21 10:39:41 +0000 2024",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1848313200951128403",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "UltraTechCement",
+            "url": "https://x.com/UltraTechCement",
+            "twitterUrl": "https://twitter.com/UltraTechCement",
+            "id": "975339853",
+            "name": "UltraTech Cement Ltd",
+            "isVerified": false,
+            "isBlueVerified": false,
+            "verifiedType": "Business",
+            "profilePicture": "https://pbs.twimg.com/profile_images/1782776746712186881/JTYIPcNN_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/975339853/1687763496",
+            "description": "",
+            "location": "",
+            "followers": 28217,
+            "following": 27,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Wed Nov 28 04:14:46 +0000 2012",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 2391,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 1707,
+            "statusesCount": 6807,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "UltraTech is India\u2019s No. 1 Cement\u2019\nVisit - https://t.co/f8HmCuHe20 for claim details. \nWe never ask for any advance payments for dealership or bulk orders.",
+                "entities": {
+                    "description": {
+                        "urls": [
+                            {
+                                "display_url": "ultratechcement.com",
+                                "expanded_url": "http://ultratechcement.com",
+                                "indices": [
+                                    43,
+                                    66
+                                ],
+                                "url": "https://t.co/f8HmCuHe20"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "ultratechcement.com",
+                                "expanded_url": "http://www.ultratechcement.com/",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/XaITioehwC"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {
+            "media": [
+                {
+                    "allow_download_status": {
+                        "allow_download": true
+                    },
+                    "display_url": "pic.twitter.com/Pg4UnwDiv3",
+                    "expanded_url": "https://twitter.com/UltraTechCement/status/1848313200951128403/photo/1",
+                    "ext_media_availability": {
+                        "status": "Available"
+                    },
+                    "features": {
+                        "large": {},
+                        "orig": {}
+                    },
+                    "id_str": "1848313136174272512",
+                    "indices": [
+                        215,
+                        238
+                    ],
+                    "media_key": "3_1848313136174272512",
+                    "media_results": {
+                        "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAARmmhwErWxAACgACGaaHEEBbcVMAAA==",
+                        "result": {
+                            "__typename": "ApiMedia",
+                            "id": "QXBpTWVkaWE6DAABCgABGaaHAStbEAAKAAIZpocQQFtxUwAA",
+                            "media_key": "3_1848313136174272512"
+                        }
+                    },
+                    "media_url_https": "https://pbs.twimg.com/media/GaaHAStbEAAxrge.jpg",
+                    "original_info": {
+                        "focus_rects": [
+                            {
+                                "h": 605,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 265
+                            },
+                            {
+                                "h": 1080,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 947,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 540,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 0
+                            }
+                        ],
+                        "height": 1080,
+                        "width": 1080
+                    },
+                    "sizes": {
+                        "large": {
+                            "h": 1080,
+                            "w": 1080
+                        }
+                    },
+                    "type": "photo",
+                    "url": "https://t.co/Pg4UnwDiv3"
+                }
+            ]
+        },
+        "card": null,
+        "place": {},
+        "entities": {
+            "urls": [
+                {
+                    "display_url": "bit.ly/3A4ri3q",
+                    "expanded_url": "https://bit.ly/3A4ri3q",
+                    "indices": [
+                        191,
+                        214
+                    ],
+                    "url": "https://t.co/FhceawQ6sP"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1814266571449405593",
+        "url": "https://x.com/UltraTechCement/status/1814266571449405593",
+        "twitterUrl": "https://twitter.com/UltraTechCement/status/1814266571449405593",
+        "text": "UltraTech announces financial results for Q1FY25, recording consolidated net sales at Rs 17,879 crore and profit before interest, depreciation and tax at Rs. 3,205 crore. Domestic sales volume registered 6% growth y-o-y, echoing India's growth story.\nRead: https://t.co/sZMhaRB6kb https://t.co/PafklICD2V",
+        "source": "Twitter for iPhone",
+        "retweetCount": 0,
+        "replyCount": 2,
+        "likeCount": 4,
+        "quoteCount": 0,
+        "viewCount": 928,
+        "createdAt": "Fri Jul 19 11:50:32 +0000 2024",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1814266571449405593",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "UltraTechCement",
+            "url": "https://x.com/UltraTechCement",
+            "twitterUrl": "https://twitter.com/UltraTechCement",
+            "id": "975339853",
+            "name": "UltraTech Cement Ltd",
+            "isVerified": false,
+            "isBlueVerified": false,
+            "verifiedType": "Business",
+            "profilePicture": "https://pbs.twimg.com/profile_images/1782776746712186881/JTYIPcNN_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/975339853/1687763496",
+            "description": "",
+            "location": "",
+            "followers": 28217,
+            "following": 27,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Wed Nov 28 04:14:46 +0000 2012",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 2391,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 1707,
+            "statusesCount": 6807,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "UltraTech is India\u2019s No. 1 Cement\u2019\nVisit - https://t.co/f8HmCuHe20 for claim details. \nWe never ask for any advance payments for dealership or bulk orders.",
+                "entities": {
+                    "description": {
+                        "urls": [
+                            {
+                                "display_url": "ultratechcement.com",
+                                "expanded_url": "http://ultratechcement.com",
+                                "indices": [
+                                    43,
+                                    66
+                                ],
+                                "url": "https://t.co/f8HmCuHe20"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "ultratechcement.com",
+                                "expanded_url": "http://www.ultratechcement.com/",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/XaITioehwC"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {
+            "media": [
+                {
+                    "allow_download_status": {
+                        "allow_download": true
+                    },
+                    "display_url": "pic.twitter.com/PafklICD2V",
+                    "expanded_url": "https://twitter.com/UltraTechCement/status/1814266571449405593/photo/1",
+                    "ext_media_availability": {
+                        "status": "Available"
+                    },
+                    "features": {
+                        "large": {},
+                        "orig": {}
+                    },
+                    "id_str": "1814266562767134720",
+                    "indices": [
+                        281,
+                        304
+                    ],
+                    "media_key": "3_1814266562767134720",
+                    "media_results": {
+                        "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAARktkdORmqAACgACGS2R1ZcbkJkAAA==",
+                        "result": {
+                            "__typename": "ApiMedia",
+                            "id": "QXBpTWVkaWE6DAABCgABGS2R05GaoAAKAAIZLZHVlxuQmQAA",
+                            "media_key": "3_1814266562767134720"
+                        }
+                    },
+                    "media_url_https": "https://pbs.twimg.com/media/GS2R05GaoAAbnUb.jpg",
+                    "original_info": {
+                        "focus_rects": [
+                            {
+                                "h": 605,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 373
+                            },
+                            {
+                                "h": 1080,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 947,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 540,
+                                "x": 27,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 0
+                            }
+                        ],
+                        "height": 1080,
+                        "width": 1080
+                    },
+                    "sizes": {
+                        "large": {
+                            "h": 1080,
+                            "w": 1080
+                        }
+                    },
+                    "type": "photo",
+                    "url": "https://t.co/PafklICD2V"
+                }
+            ]
+        },
+        "card": null,
+        "place": {},
+        "entities": {
+            "urls": [
+                {
+                    "display_url": "bit.ly/46dWnwY",
+                    "expanded_url": "https://bit.ly/46dWnwY",
+                    "indices": [
+                        257,
+                        280
+                    ],
+                    "url": "https://t.co/sZMhaRB6kb"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1784913328500060161",
+        "url": "https://x.com/UltraTechCement/status/1784913328500060161",
+        "twitterUrl": "https://twitter.com/UltraTechCement/status/1784913328500060161",
+        "text": "UltraTech announces financial results for the year ended 31st March 2024, recording consolidated net sales at Rs 69,810 crore, up 12% over FY23. The Company achieves dual milestone of 150 mtpa+ capacity and US$1.5 bn+ EBITDA.\n \nRead more: https://t.co/8XeuQMHsYt\n\n#Growth https://t.co/60JQHNldlY",
+        "source": "Twitter for iPhone",
+        "retweetCount": 3,
+        "replyCount": 3,
+        "likeCount": 23,
+        "quoteCount": 0,
+        "viewCount": 1375,
+        "createdAt": "Mon Apr 29 11:51:14 +0000 2024",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1784913328500060161",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "UltraTechCement",
+            "url": "https://x.com/UltraTechCement",
+            "twitterUrl": "https://twitter.com/UltraTechCement",
+            "id": "975339853",
+            "name": "UltraTech Cement Ltd",
+            "isVerified": false,
+            "isBlueVerified": false,
+            "verifiedType": "Business",
+            "profilePicture": "https://pbs.twimg.com/profile_images/1782776746712186881/JTYIPcNN_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/975339853/1687763496",
+            "description": "",
+            "location": "",
+            "followers": 28217,
+            "following": 27,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Wed Nov 28 04:14:46 +0000 2012",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 2391,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 1707,
+            "statusesCount": 6807,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "UltraTech is India\u2019s No. 1 Cement\u2019\nVisit - https://t.co/f8HmCuHe20 for claim details. \nWe never ask for any advance payments for dealership or bulk orders.",
+                "entities": {
+                    "description": {
+                        "urls": [
+                            {
+                                "display_url": "ultratechcement.com",
+                                "expanded_url": "http://ultratechcement.com",
+                                "indices": [
+                                    43,
+                                    66
+                                ],
+                                "url": "https://t.co/f8HmCuHe20"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "ultratechcement.com",
+                                "expanded_url": "http://www.ultratechcement.com/",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/XaITioehwC"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {
+            "media": [
+                {
+                    "allow_download_status": {
+                        "allow_download": true
+                    },
+                    "display_url": "pic.twitter.com/60JQHNldlY",
+                    "expanded_url": "https://twitter.com/UltraTechCement/status/1784913328500060161/photo/1",
+                    "ext_media_availability": {
+                        "status": "Available"
+                    },
+                    "features": {
+                        "large": {},
+                        "orig": {}
+                    },
+                    "id_str": "1784913310728822784",
+                    "indices": [
+                        272,
+                        295
+                    ],
+                    "media_key": "3_1784913310728822784",
+                    "media_results": {
+                        "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAARjFSTMA26AACgACGMVJNyQbMAEAAA==",
+                        "result": {
+                            "__typename": "ApiMedia",
+                            "id": "QXBpTWVkaWE6DAABCgABGMVJMwDboAAKAAIYxUk3JBswAQAA",
+                            "media_key": "3_1784913310728822784"
+                        }
+                    },
+                    "media_url_https": "https://pbs.twimg.com/media/GMVJMwDboAA4zD8.jpg",
+                    "original_info": {
+                        "focus_rects": [
+                            {
+                                "h": 605,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 265
+                            },
+                            {
+                                "h": 1080,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 947,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 540,
+                                "x": 27,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 0
+                            }
+                        ],
+                        "height": 1080,
+                        "width": 1080
+                    },
+                    "sizes": {
+                        "large": {
+                            "h": 1080,
+                            "w": 1080
+                        }
+                    },
+                    "type": "photo",
+                    "url": "https://t.co/60JQHNldlY"
+                }
+            ]
+        },
+        "card": null,
+        "place": {},
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        264,
+                        271
+                    ],
+                    "text": "Growth"
+                }
+            ],
+            "urls": [
+                {
+                    "display_url": "bit.ly/3WleeiW",
+                    "expanded_url": "https://bit.ly/3WleeiW",
+                    "indices": [
+                        239,
+                        262
+                    ],
+                    "url": "https://t.co/8XeuQMHsYt"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1748306434209788308",
+        "url": "https://x.com/UltraTechCement/status/1748306434209788308",
+        "twitterUrl": "https://twitter.com/UltraTechCement/status/1748306434209788308",
+        "text": "UltraTech today announced its financial results for Q3FY24, reporting stellar earnings with consolidated net sales at Rs 16,487 crores and profit after tax (PAT) at Rs 1,777 crores, registering the highest ever quarterly PAT.\n\nRead: https://t.co/jarG7KWwsi\n\n#Growth https://t.co/N1p4As0xHz",
+        "source": "Twitter for iPhone",
+        "retweetCount": 6,
+        "replyCount": 1,
+        "likeCount": 38,
+        "quoteCount": 1,
+        "viewCount": 2193,
+        "createdAt": "Fri Jan 19 11:28:30 +0000 2024",
+        "lang": "en",
+        "bookmarkCount": 2,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1748306434209788308",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "UltraTechCement",
+            "url": "https://x.com/UltraTechCement",
+            "twitterUrl": "https://twitter.com/UltraTechCement",
+            "id": "975339853",
+            "name": "UltraTech Cement Ltd",
+            "isVerified": false,
+            "isBlueVerified": false,
+            "verifiedType": "Business",
+            "profilePicture": "https://pbs.twimg.com/profile_images/1782776746712186881/JTYIPcNN_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/975339853/1687763496",
+            "description": "",
+            "location": "",
+            "followers": 28217,
+            "following": 27,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Wed Nov 28 04:14:46 +0000 2012",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 2391,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 1707,
+            "statusesCount": 6807,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "UltraTech is India\u2019s No. 1 Cement\u2019\nVisit - https://t.co/f8HmCuHe20 for claim details. \nWe never ask for any advance payments for dealership or bulk orders.",
+                "entities": {
+                    "description": {
+                        "urls": [
+                            {
+                                "display_url": "ultratechcement.com",
+                                "expanded_url": "http://ultratechcement.com",
+                                "indices": [
+                                    43,
+                                    66
+                                ],
+                                "url": "https://t.co/f8HmCuHe20"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "ultratechcement.com",
+                                "expanded_url": "http://www.ultratechcement.com/",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/XaITioehwC"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {
+            "media": [
+                {
+                    "display_url": "pic.twitter.com/N1p4As0xHz",
+                    "expanded_url": "https://twitter.com/UltraTechCement/status/1748306434209788308/photo/1",
+                    "ext_media_availability": {
+                        "status": "Available"
+                    },
+                    "features": {
+                        "large": {},
+                        "orig": {}
+                    },
+                    "id_str": "1748306035037859840",
+                    "indices": [
+                        266,
+                        289
+                    ],
+                    "media_key": "3_1748306035037859840",
+                    "media_results": {
+                        "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAARhDOxNxGnAACgACGEM7cGGasZQAAA==",
+                        "result": {
+                            "__typename": "ApiMedia",
+                            "id": "QXBpTWVkaWE6DAABCgABGEM7E3EacAAKAAIYQztwYZqxlAAA",
+                            "media_key": "3_1748306035037859840"
+                        }
+                    },
+                    "media_url_https": "https://pbs.twimg.com/media/GEM7E3EacAA782D.jpg",
+                    "original_info": {
+                        "focus_rects": [
+                            {
+                                "h": 605,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 265
+                            },
+                            {
+                                "h": 1080,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 947,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 540,
+                                "x": 27,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 0
+                            }
+                        ],
+                        "height": 1080,
+                        "width": 1080
+                    },
+                    "sizes": {
+                        "large": {
+                            "h": 1080,
+                            "w": 1080
+                        }
+                    },
+                    "type": "photo",
+                    "url": "https://t.co/N1p4As0xHz"
+                }
+            ]
+        },
+        "card": null,
+        "place": {},
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        258,
+                        265
+                    ],
+                    "text": "Growth"
+                }
+            ],
+            "urls": [
+                {
+                    "display_url": "bit.ly/3SmURDG",
+                    "expanded_url": "https://bit.ly/3SmURDG",
+                    "indices": [
+                        233,
+                        256
+                    ],
+                    "url": "https://t.co/jarG7KWwsi"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1714972503502991805",
+        "url": "https://x.com/UltraTechCement/status/1714972503502991805",
+        "twitterUrl": "https://twitter.com/UltraTechCement/status/1714972503502991805",
+        "text": "UltraTech today announced its financial results with a robust volume growth of 16% for the quarter ended September 30, 2023. We witnessed strong demand fueled by government led infrastructure, rural development and urban residential demand.\n\nRead: https://t.co/jkpObPqStD\n\n#Growth https://t.co/1LGvS6bzg7",
+        "source": "Twitter for iPhone",
+        "retweetCount": 2,
+        "replyCount": 1,
+        "likeCount": 13,
+        "quoteCount": 1,
+        "viewCount": 1142,
+        "createdAt": "Thu Oct 19 11:51:22 +0000 2023",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1714972503502991805",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "UltraTechCement",
+            "url": "https://x.com/UltraTechCement",
+            "twitterUrl": "https://twitter.com/UltraTechCement",
+            "id": "975339853",
+            "name": "UltraTech Cement Ltd",
+            "isVerified": false,
+            "isBlueVerified": false,
+            "verifiedType": "Business",
+            "profilePicture": "https://pbs.twimg.com/profile_images/1782776746712186881/JTYIPcNN_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/975339853/1687763496",
+            "description": "",
+            "location": "",
+            "followers": 28217,
+            "following": 27,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Wed Nov 28 04:14:46 +0000 2012",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 2391,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 1707,
+            "statusesCount": 6807,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "UltraTech is India\u2019s No. 1 Cement\u2019\nVisit - https://t.co/f8HmCuHe20 for claim details. \nWe never ask for any advance payments for dealership or bulk orders.",
+                "entities": {
+                    "description": {
+                        "urls": [
+                            {
+                                "display_url": "ultratechcement.com",
+                                "expanded_url": "http://ultratechcement.com",
+                                "indices": [
+                                    43,
+                                    66
+                                ],
+                                "url": "https://t.co/f8HmCuHe20"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "ultratechcement.com",
+                                "expanded_url": "http://www.ultratechcement.com/",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/XaITioehwC"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {
+            "media": [
+                {
+                    "display_url": "pic.twitter.com/1LGvS6bzg7",
+                    "expanded_url": "https://twitter.com/UltraTechCement/status/1714972503502991805/photo/1",
+                    "ext_media_availability": {
+                        "status": "Available"
+                    },
+                    "features": {
+                        "large": {},
+                        "orig": {}
+                    },
+                    "id_str": "1714971059479580672",
+                    "indices": [
+                        281,
+                        304
+                    ],
+                    "media_key": "3_1714971059479580672",
+                    "media_results": {
+                        "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAARfMzRegWxAACgACF8zOZ9bbsb0AAA==",
+                        "result": {
+                            "__typename": "ApiMedia",
+                            "id": "QXBpTWVkaWE6DAABCgABF8zNF6BbEAAKAAIXzM5n1tuxvQAA",
+                            "media_key": "3_1714971059479580672"
+                        }
+                    },
+                    "media_url_https": "https://pbs.twimg.com/media/F8zNF6BbEAA2bgy.jpg",
+                    "original_info": {
+                        "focus_rects": [
+                            {
+                                "h": 605,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 265
+                            },
+                            {
+                                "h": 1080,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 947,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 540,
+                                "x": 27,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 0
+                            }
+                        ],
+                        "height": 1080,
+                        "width": 1080
+                    },
+                    "sizes": {
+                        "large": {
+                            "h": 1080,
+                            "w": 1080
+                        }
+                    },
+                    "type": "photo",
+                    "url": "https://t.co/1LGvS6bzg7"
+                }
+            ]
+        },
+        "card": null,
+        "place": {},
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        273,
+                        280
+                    ],
+                    "text": "Growth"
+                }
+            ],
+            "urls": [
+                {
+                    "display_url": "bit.ly/3S5OGE9",
+                    "expanded_url": "https://bit.ly/3S5OGE9",
+                    "indices": [
+                        248,
+                        271
+                    ],
+                    "url": "https://t.co/jkpObPqStD"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1709137925101822430",
+        "url": "https://x.com/UltraTechCement/status/1709137925101822430",
+        "twitterUrl": "https://twitter.com/UltraTechCement/status/1709137925101822430",
+        "text": "UltraTech\u2019s consolidated sales volume rose 16 per cent to 26.69 million tons year-on-year in the quarter ended September 30, 2023. UltraTech's strong performance mirrors India's robust growth story.\n\nRead more: https://t.co/cI1LfD5ffy",
+        "source": "Twitter for iPhone",
+        "retweetCount": 1,
+        "replyCount": 1,
+        "likeCount": 7,
+        "quoteCount": 0,
+        "viewCount": 685,
+        "createdAt": "Tue Oct 03 09:26:50 +0000 2023",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1709137925101822430",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "UltraTechCement",
+            "url": "https://x.com/UltraTechCement",
+            "twitterUrl": "https://twitter.com/UltraTechCement",
+            "id": "975339853",
+            "name": "UltraTech Cement Ltd",
+            "isVerified": false,
+            "isBlueVerified": false,
+            "verifiedType": "Business",
+            "profilePicture": "https://pbs.twimg.com/profile_images/1782776746712186881/JTYIPcNN_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/975339853/1687763496",
+            "description": "",
+            "location": "",
+            "followers": 28217,
+            "following": 27,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Wed Nov 28 04:14:46 +0000 2012",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 2391,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 1707,
+            "statusesCount": 6807,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "UltraTech is India\u2019s No. 1 Cement\u2019\nVisit - https://t.co/f8HmCuHe20 for claim details. \nWe never ask for any advance payments for dealership or bulk orders.",
+                "entities": {
+                    "description": {
+                        "urls": [
+                            {
+                                "display_url": "ultratechcement.com",
+                                "expanded_url": "http://ultratechcement.com",
+                                "indices": [
+                                    43,
+                                    66
+                                ],
+                                "url": "https://t.co/f8HmCuHe20"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "ultratechcement.com",
+                                "expanded_url": "http://www.ultratechcement.com/",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/XaITioehwC"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": null,
+        "place": {},
+        "entities": {
+            "urls": [
+                {
+                    "display_url": "bit.ly/3ROuFlD",
+                    "expanded_url": "https://bit.ly/3ROuFlD",
+                    "indices": [
+                        211,
+                        234
+                    ],
+                    "url": "https://t.co/cI1LfD5ffy"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1682338596089626624",
+        "url": "https://x.com/UltraTechCement/status/1682338596089626624",
+        "twitterUrl": "https://twitter.com/UltraTechCement/status/1682338596089626624",
+        "text": "UltraTech reports strong earnings for Q1 FY24 with consolidated revenue at Rs 17,519 cr, up 16.7% YoY. The Company continues to deliver strong growth quarter after quarter, achieving a 20% volume growth during the quarter.\n\nRead more: https://t.co/hkNMWuhiDD\n\n#Growth https://t.co/W87dS0ryZc",
+        "source": "Twitter for iPhone",
+        "retweetCount": 1,
+        "replyCount": 3,
+        "likeCount": 13,
+        "quoteCount": 1,
+        "viewCount": 963,
+        "createdAt": "Fri Jul 21 10:35:52 +0000 2023",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1682338596089626624",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "UltraTechCement",
+            "url": "https://x.com/UltraTechCement",
+            "twitterUrl": "https://twitter.com/UltraTechCement",
+            "id": "975339853",
+            "name": "UltraTech Cement Ltd",
+            "isVerified": false,
+            "isBlueVerified": false,
+            "verifiedType": "Business",
+            "profilePicture": "https://pbs.twimg.com/profile_images/1782776746712186881/JTYIPcNN_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/975339853/1687763496",
+            "description": "",
+            "location": "",
+            "followers": 28217,
+            "following": 27,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Wed Nov 28 04:14:46 +0000 2012",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 2391,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 1707,
+            "statusesCount": 6807,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "UltraTech is India\u2019s No. 1 Cement\u2019\nVisit - https://t.co/f8HmCuHe20 for claim details. \nWe never ask for any advance payments for dealership or bulk orders.",
+                "entities": {
+                    "description": {
+                        "urls": [
+                            {
+                                "display_url": "ultratechcement.com",
+                                "expanded_url": "http://ultratechcement.com",
+                                "indices": [
+                                    43,
+                                    66
+                                ],
+                                "url": "https://t.co/f8HmCuHe20"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "ultratechcement.com",
+                                "expanded_url": "http://www.ultratechcement.com/",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/XaITioehwC"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {
+            "media": [
+                {
+                    "display_url": "pic.twitter.com/W87dS0ryZc",
+                    "expanded_url": "https://twitter.com/UltraTechCement/status/1682338596089626624/photo/1",
+                    "ext_media_availability": {
+                        "status": "Available"
+                    },
+                    "features": {
+                        "large": {},
+                        "orig": {}
+                    },
+                    "id_str": "1682337929321144320",
+                    "indices": [
+                        268,
+                        291
+                    ],
+                    "media_key": "3_1682337929321144320",
+                    "media_results": {
+                        "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAARdY3W7tWmAACgACF1jeCivaAAAAAA==",
+                        "result": {
+                            "__typename": "ApiMedia",
+                            "id": "QXBpTWVkaWE6DAABCgABF1jdbu1aYAAKAAIXWN4KK9oAAAAA",
+                            "media_key": "3_1682337929321144320"
+                        }
+                    },
+                    "media_url_https": "https://pbs.twimg.com/media/F1jdbu1aYAAEx_R.jpg",
+                    "original_info": {
+                        "focus_rects": [
+                            {
+                                "h": 605,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 475
+                            },
+                            {
+                                "h": 1080,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 947,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 540,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 0
+                            }
+                        ],
+                        "height": 1080,
+                        "width": 1080
+                    },
+                    "sizes": {
+                        "large": {
+                            "h": 1080,
+                            "w": 1080
+                        }
+                    },
+                    "type": "photo",
+                    "url": "https://t.co/W87dS0ryZc"
+                }
+            ]
+        },
+        "card": null,
+        "place": {},
+        "entities": {
+            "hashtags": [
+                {
+                    "indices": [
+                        260,
+                        267
+                    ],
+                    "text": "Growth"
+                }
+            ],
+            "urls": [
+                {
+                    "display_url": "bit.ly/3rEA181",
+                    "expanded_url": "https://bit.ly/3rEA181",
+                    "indices": [
+                        235,
+                        258
+                    ],
+                    "url": "https://t.co/hkNMWuhiDD"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1651941912042160130",
+        "url": "https://x.com/UltraTechCement/status/1651941912042160130",
+        "twitterUrl": "https://twitter.com/UltraTechCement/status/1651941912042160130",
+        "text": "UltraTech reports robust earnings for Q4FY23. Consolidated Net Sales at \u20b918,436 crores recorded a growth of 19% YoY. Profit before interest, depreciation and tax was at \u20b93,444 crores.\n\nRead more: https://t.co/NjHwW1S43w https://t.co/aV2qhY65eG",
+        "source": "Twitter for iPhone",
+        "retweetCount": 0,
+        "replyCount": 1,
+        "likeCount": 13,
+        "quoteCount": 0,
+        "viewCount": 1041,
+        "createdAt": "Fri Apr 28 13:30:18 +0000 2023",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1651941912042160130",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "UltraTechCement",
+            "url": "https://x.com/UltraTechCement",
+            "twitterUrl": "https://twitter.com/UltraTechCement",
+            "id": "975339853",
+            "name": "UltraTech Cement Ltd",
+            "isVerified": false,
+            "isBlueVerified": false,
+            "verifiedType": "Business",
+            "profilePicture": "https://pbs.twimg.com/profile_images/1782776746712186881/JTYIPcNN_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/975339853/1687763496",
+            "description": "",
+            "location": "",
+            "followers": 28217,
+            "following": 27,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Wed Nov 28 04:14:46 +0000 2012",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 2391,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 1707,
+            "statusesCount": 6807,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "UltraTech is India\u2019s No. 1 Cement\u2019\nVisit - https://t.co/f8HmCuHe20 for claim details. \nWe never ask for any advance payments for dealership or bulk orders.",
+                "entities": {
+                    "description": {
+                        "urls": [
+                            {
+                                "display_url": "ultratechcement.com",
+                                "expanded_url": "http://ultratechcement.com",
+                                "indices": [
+                                    43,
+                                    66
+                                ],
+                                "url": "https://t.co/f8HmCuHe20"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "ultratechcement.com",
+                                "expanded_url": "http://www.ultratechcement.com/",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/XaITioehwC"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {
+            "media": [
+                {
+                    "display_url": "pic.twitter.com/aV2qhY65eG",
+                    "expanded_url": "https://twitter.com/UltraTechCement/status/1651941912042160130/photo/1",
+                    "ext_media_availability": {
+                        "status": "Available"
+                    },
+                    "features": {
+                        "large": {},
+                        "orig": {}
+                    },
+                    "id_str": "1651941616939139073",
+                    "indices": [
+                        220,
+                        243
+                    ],
+                    "media_key": "3_1651941616939139073",
+                    "media_results": {
+                        "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAARbs4CXzV4ABCgACFuzgaqjaQAIAAA==",
+                        "result": {
+                            "__typename": "ApiMedia",
+                            "id": "QXBpTWVkaWE6DAABCgABFuzgJfNXgAEKAAIW7OBqqNpAAgAA",
+                            "media_key": "3_1651941616939139073"
+                        }
+                    },
+                    "media_url_https": "https://pbs.twimg.com/media/FuzgJfNXgAEUNcY.jpg",
+                    "original_info": {
+                        "focus_rects": [
+                            {
+                                "h": 605,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 947,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 540,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 0
+                            }
+                        ],
+                        "height": 1080,
+                        "width": 1080
+                    },
+                    "sizes": {
+                        "large": {
+                            "h": 1080,
+                            "w": 1080
+                        }
+                    },
+                    "type": "photo",
+                    "url": "https://t.co/aV2qhY65eG"
+                }
+            ]
+        },
+        "card": null,
+        "place": {},
+        "entities": {
+            "urls": [
+                {
+                    "display_url": "bit.ly/3Ljm9Wy",
+                    "expanded_url": "https://bit.ly/3Ljm9Wy",
+                    "indices": [
+                        196,
+                        219
+                    ],
+                    "url": "https://t.co/NjHwW1S43w"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1616747919306264577",
+        "url": "https://x.com/UltraTechCement/status/1616747919306264577",
+        "twitterUrl": "https://twitter.com/UltraTechCement/status/1616747919306264577",
+        "text": "UltraTech reports robust earnings for Q3FY23. The Company held its operating profits with strong volume growth despite cost pressures. Consolidated Net Sales at Rs.15,299 crores and Profit after tax at Rs.1,058 crores. Read More - https://t.co/ScbabVqD6d https://t.co/H7WKEcQeHx",
+        "source": "Twitter for iPhone",
+        "retweetCount": 3,
+        "replyCount": 2,
+        "likeCount": 19,
+        "quoteCount": 1,
+        "viewCount": 2159,
+        "createdAt": "Sat Jan 21 10:41:56 +0000 2023",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1616747919306264577",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "UltraTechCement",
+            "url": "https://x.com/UltraTechCement",
+            "twitterUrl": "https://twitter.com/UltraTechCement",
+            "id": "975339853",
+            "name": "UltraTech Cement Ltd",
+            "isVerified": false,
+            "isBlueVerified": false,
+            "verifiedType": "Business",
+            "profilePicture": "https://pbs.twimg.com/profile_images/1782776746712186881/JTYIPcNN_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/975339853/1687763496",
+            "description": "",
+            "location": "",
+            "followers": 28217,
+            "following": 27,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Wed Nov 28 04:14:46 +0000 2012",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 2391,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 1707,
+            "statusesCount": 6807,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "UltraTech is India\u2019s No. 1 Cement\u2019\nVisit - https://t.co/f8HmCuHe20 for claim details. \nWe never ask for any advance payments for dealership or bulk orders.",
+                "entities": {
+                    "description": {
+                        "urls": [
+                            {
+                                "display_url": "ultratechcement.com",
+                                "expanded_url": "http://ultratechcement.com",
+                                "indices": [
+                                    43,
+                                    66
+                                ],
+                                "url": "https://t.co/f8HmCuHe20"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "ultratechcement.com",
+                                "expanded_url": "http://www.ultratechcement.com/",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/XaITioehwC"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {
+            "media": [
+                {
+                    "display_url": "pic.twitter.com/H7WKEcQeHx",
+                    "expanded_url": "https://twitter.com/UltraTechCement/status/1616747919306264577/photo/1",
+                    "ext_media_availability": {
+                        "status": "Available"
+                    },
+                    "features": {
+                        "large": {},
+                        "orig": {}
+                    },
+                    "id_str": "1616747651554504704",
+                    "indices": [
+                        255,
+                        278
+                    ],
+                    "media_key": "3_1616747651554504704",
+                    "media_results": {
+                        "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAARZv12xWWnAACgACFm/Xqq2aEAEAAA==",
+                        "result": {
+                            "__typename": "ApiMedia",
+                            "id": "QXBpTWVkaWE6DAABCgABFm/XbFZacAAKAAIWb9eqrZoQAQAA",
+                            "media_key": "3_1616747651554504704"
+                        }
+                    },
+                    "media_url_https": "https://pbs.twimg.com/media/Fm_XbFZacAAlkJj.jpg",
+                    "original_info": {
+                        "focus_rects": [
+                            {
+                                "h": 605,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 103
+                            },
+                            {
+                                "h": 1080,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 947,
+                                "x": 67,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 540,
+                                "x": 270,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 0
+                            }
+                        ],
+                        "height": 1080,
+                        "width": 1080
+                    },
+                    "sizes": {
+                        "large": {
+                            "h": 1080,
+                            "w": 1080
+                        }
+                    },
+                    "type": "photo",
+                    "url": "https://t.co/H7WKEcQeHx"
+                }
+            ]
+        },
+        "card": null,
+        "place": {},
+        "entities": {
+            "urls": [
+                {
+                    "display_url": "bit.ly/3iREyzR",
+                    "expanded_url": "https://bit.ly/3iREyzR",
+                    "indices": [
+                        231,
+                        254
+                    ],
+                    "url": "https://t.co/ScbabVqD6d"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1582675828798021632",
+        "url": "https://x.com/UltraTechCement/status/1582675828798021632",
+        "twitterUrl": "https://twitter.com/UltraTechCement/status/1582675828798021632",
+        "text": "UltraTech reports robust earnings for Q2FY23 in a seasonally weak quarter for the cement industry. Domestic sales volume grew 9.6% on a year-on-year basis. Achieved capacity utilisation of 76% as against 71% during Q2 FY22.\n\nRead More: https://t.co/7GDNvz0fdb https://t.co/pqnN2FXjI7",
+        "source": "Twitter for iPhone",
+        "retweetCount": 1,
+        "replyCount": 6,
+        "likeCount": 16,
+        "quoteCount": 0,
+        "viewCount": 0,
+        "createdAt": "Wed Oct 19 10:11:36 +0000 2022",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1582675828798021632",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "UltraTechCement",
+            "url": "https://x.com/UltraTechCement",
+            "twitterUrl": "https://twitter.com/UltraTechCement",
+            "id": "975339853",
+            "name": "UltraTech Cement Ltd",
+            "isVerified": false,
+            "isBlueVerified": false,
+            "verifiedType": "Business",
+            "profilePicture": "https://pbs.twimg.com/profile_images/1782776746712186881/JTYIPcNN_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/975339853/1687763496",
+            "description": "",
+            "location": "",
+            "followers": 28217,
+            "following": 27,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Wed Nov 28 04:14:46 +0000 2012",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 2391,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 1707,
+            "statusesCount": 6807,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "UltraTech is India\u2019s No. 1 Cement\u2019\nVisit - https://t.co/f8HmCuHe20 for claim details. \nWe never ask for any advance payments for dealership or bulk orders.",
+                "entities": {
+                    "description": {
+                        "urls": [
+                            {
+                                "display_url": "ultratechcement.com",
+                                "expanded_url": "http://ultratechcement.com",
+                                "indices": [
+                                    43,
+                                    66
+                                ],
+                                "url": "https://t.co/f8HmCuHe20"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "ultratechcement.com",
+                                "expanded_url": "http://www.ultratechcement.com/",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/XaITioehwC"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {
+            "media": [
+                {
+                    "display_url": "pic.twitter.com/pqnN2FXjI7",
+                    "expanded_url": "https://twitter.com/UltraTechCement/status/1582675828798021632/photo/1",
+                    "ext_media_availability": {
+                        "status": "Available"
+                    },
+                    "features": {
+                        "large": {
+                            "faces": [
+                                {
+                                    "h": 45,
+                                    "w": 45,
+                                    "x": 150,
+                                    "y": 411
+                                },
+                                {
+                                    "h": 51,
+                                    "w": 51,
+                                    "x": 147,
+                                    "y": 299
+                                },
+                                {
+                                    "h": 55,
+                                    "w": 55,
+                                    "x": 145,
+                                    "y": 227
+                                },
+                                {
+                                    "h": 56,
+                                    "w": 56,
+                                    "x": 144,
+                                    "y": 370
+                                }
+                            ]
+                        },
+                        "orig": {
+                            "faces": [
+                                {
+                                    "h": 45,
+                                    "w": 45,
+                                    "x": 150,
+                                    "y": 411
+                                },
+                                {
+                                    "h": 51,
+                                    "w": 51,
+                                    "x": 147,
+                                    "y": 299
+                                },
+                                {
+                                    "h": 55,
+                                    "w": 55,
+                                    "x": 145,
+                                    "y": 227
+                                },
+                                {
+                                    "h": 56,
+                                    "w": 56,
+                                    "x": 144,
+                                    "y": 370
+                                }
+                            ]
+                        }
+                    },
+                    "id_str": "1582675688725049345",
+                    "indices": [
+                        260,
+                        283
+                    ],
+                    "media_key": "3_1582675688725049345",
+                    "media_results": {
+                        "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAARX2yydNGnABCgACFfbLR+oaYAAAAA==",
+                        "result": {
+                            "__typename": "ApiMedia",
+                            "id": "QXBpTWVkaWE6DAABCgABFfbLJ00acAEKAAIV9stH6hpgAAAA",
+                            "media_key": "3_1582675688725049345"
+                        }
+                    },
+                    "media_url_https": "https://pbs.twimg.com/media/FfbLJ00acAEQpon.jpg",
+                    "original_info": {
+                        "focus_rects": [
+                            {
+                                "h": 605,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 947,
+                                "x": 133,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 540,
+                                "x": 459,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 0
+                            }
+                        ],
+                        "height": 1080,
+                        "width": 1080
+                    },
+                    "sizes": {
+                        "large": {
+                            "h": 1080,
+                            "w": 1080
+                        }
+                    },
+                    "type": "photo",
+                    "url": "https://t.co/pqnN2FXjI7"
+                }
+            ]
+        },
+        "card": null,
+        "place": {},
+        "entities": {
+            "urls": [
+                {
+                    "display_url": "bit.ly/3MHtYpk",
+                    "expanded_url": "https://bit.ly/3MHtYpk",
+                    "indices": [
+                        236,
+                        259
+                    ],
+                    "url": "https://t.co/7GDNvz0fdb"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1550433777620762624",
+        "url": "https://x.com/UltraTechCement/status/1550433777620762624",
+        "twitterUrl": "https://twitter.com/UltraTechCement/status/1550433777620762624",
+        "text": "UltraTech reports robust earnings for Q1FY23 amidst challenging conditions for the cement industry. Consolidated Net Sales at Rs. 15,007 crore. Profit before interest, depreciation and tax at Rs. 3204 crore\n\nRead more: https://t.co/oPpgrltI8H https://t.co/PTnF3Xqhl0",
+        "source": "Twitter for iPhone",
+        "retweetCount": 2,
+        "replyCount": 3,
+        "likeCount": 29,
+        "quoteCount": 1,
+        "viewCount": 0,
+        "createdAt": "Fri Jul 22 10:53:12 +0000 2022",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1550433777620762624",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "UltraTechCement",
+            "url": "https://x.com/UltraTechCement",
+            "twitterUrl": "https://twitter.com/UltraTechCement",
+            "id": "975339853",
+            "name": "UltraTech Cement Ltd",
+            "isVerified": false,
+            "isBlueVerified": false,
+            "verifiedType": "Business",
+            "profilePicture": "https://pbs.twimg.com/profile_images/1782776746712186881/JTYIPcNN_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/975339853/1687763496",
+            "description": "",
+            "location": "",
+            "followers": 28217,
+            "following": 27,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Wed Nov 28 04:14:46 +0000 2012",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 2391,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 1707,
+            "statusesCount": 6807,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "UltraTech is India\u2019s No. 1 Cement\u2019\nVisit - https://t.co/f8HmCuHe20 for claim details. \nWe never ask for any advance payments for dealership or bulk orders.",
+                "entities": {
+                    "description": {
+                        "urls": [
+                            {
+                                "display_url": "ultratechcement.com",
+                                "expanded_url": "http://ultratechcement.com",
+                                "indices": [
+                                    43,
+                                    66
+                                ],
+                                "url": "https://t.co/f8HmCuHe20"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "ultratechcement.com",
+                                "expanded_url": "http://www.ultratechcement.com/",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/XaITioehwC"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {
+            "media": [
+                {
+                    "display_url": "pic.twitter.com/PTnF3Xqhl0",
+                    "expanded_url": "https://twitter.com/UltraTechCement/status/1550433777620762624/photo/1",
+                    "ext_media_availability": {
+                        "status": "Available"
+                    },
+                    "features": {
+                        "large": {},
+                        "orig": {}
+                    },
+                    "id_str": "1550432959307870208",
+                    "indices": [
+                        243,
+                        266
+                    ],
+                    "media_key": "3_1550432959307870208",
+                    "media_results": {
+                        "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAARWEPo/bmnAACgACFYQ/TmLaQAAAAA==",
+                        "result": {
+                            "__typename": "ApiMedia",
+                            "id": "QXBpTWVkaWE6DAABCgABFYQ+j9uacAAKAAIVhD9OYtpAAAAA",
+                            "media_key": "3_1550432959307870208"
+                        }
+                    },
+                    "media_url_https": "https://pbs.twimg.com/media/FYQ-j9uacAABnd9.jpg",
+                    "original_info": {
+                        "focus_rects": [
+                            {
+                                "h": 605,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 103
+                            },
+                            {
+                                "h": 1080,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 947,
+                                "x": 133,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 540,
+                                "x": 459,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 0
+                            }
+                        ],
+                        "height": 1080,
+                        "width": 1080
+                    },
+                    "sizes": {
+                        "large": {
+                            "h": 1080,
+                            "w": 1080
+                        }
+                    },
+                    "type": "photo",
+                    "url": "https://t.co/PTnF3Xqhl0"
+                }
+            ]
+        },
+        "card": null,
+        "place": {},
+        "entities": {
+            "urls": [
+                {
+                    "display_url": "bit.ly/3BbnmvQ",
+                    "expanded_url": "https://bit.ly/3BbnmvQ",
+                    "indices": [
+                        219,
+                        242
+                    ],
+                    "url": "https://t.co/oPpgrltI8H"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1520008780343562241",
+        "url": "https://x.com/UltraTechCement/status/1520008780343562241",
+        "twitterUrl": "https://twitter.com/UltraTechCement/status/1520008780343562241",
+        "text": "UltraTech\u2019s Net Sales for FY22 crosses Rs. 50,000 crore milestone! FY22 net sales up 16.9% to Rs. 51,708 crores. UltraTech has reported robust earnings for the fourth quarter amidst challenging conditions for the cement industry.\n\nRead more: https://t.co/Z9VJZVMRxS https://t.co/Tay9FbQu3S",
+        "source": "Twitter for iPhone",
+        "retweetCount": 5,
+        "replyCount": 4,
+        "likeCount": 23,
+        "quoteCount": 1,
+        "viewCount": 0,
+        "createdAt": "Fri Apr 29 11:55:08 +0000 2022",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1520008780343562241",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "UltraTechCement",
+            "url": "https://x.com/UltraTechCement",
+            "twitterUrl": "https://twitter.com/UltraTechCement",
+            "id": "975339853",
+            "name": "UltraTech Cement Ltd",
+            "isVerified": false,
+            "isBlueVerified": false,
+            "verifiedType": "Business",
+            "profilePicture": "https://pbs.twimg.com/profile_images/1782776746712186881/JTYIPcNN_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/975339853/1687763496",
+            "description": "",
+            "location": "",
+            "followers": 28217,
+            "following": 27,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Wed Nov 28 04:14:46 +0000 2012",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 2391,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 1707,
+            "statusesCount": 6807,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "UltraTech is India\u2019s No. 1 Cement\u2019\nVisit - https://t.co/f8HmCuHe20 for claim details. \nWe never ask for any advance payments for dealership or bulk orders.",
+                "entities": {
+                    "description": {
+                        "urls": [
+                            {
+                                "display_url": "ultratechcement.com",
+                                "expanded_url": "http://ultratechcement.com",
+                                "indices": [
+                                    43,
+                                    66
+                                ],
+                                "url": "https://t.co/f8HmCuHe20"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "ultratechcement.com",
+                                "expanded_url": "http://www.ultratechcement.com/",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/XaITioehwC"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {
+            "media": [
+                {
+                    "display_url": "pic.twitter.com/Tay9FbQu3S",
+                    "expanded_url": "https://twitter.com/UltraTechCement/status/1520008780343562241/photo/1",
+                    "ext_media_availability": {
+                        "status": "Available"
+                    },
+                    "features": {
+                        "large": {},
+                        "orig": {}
+                    },
+                    "id_str": "1520006713050812416",
+                    "indices": [
+                        266,
+                        289
+                    ],
+                    "media_key": "3_1520006713050812416",
+                    "media_results": {
+                        "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAARUYJg1bmlAACgACFRgn7q/aUAEAAA==",
+                        "result": {
+                            "__typename": "ApiMedia",
+                            "id": "QXBpTWVkaWE6DAABCgABFRgmDVuaUAAKAAIVGCfur9pQAQAA",
+                            "media_key": "3_1520006713050812416"
+                        }
+                    },
+                    "media_url_https": "https://pbs.twimg.com/media/FRgmDVuaUAAErjV.jpg",
+                    "original_info": {
+                        "focus_rects": [
+                            {
+                                "h": 605,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 475
+                            },
+                            {
+                                "h": 1080,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 947,
+                                "x": 133,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 540,
+                                "x": 513,
+                                "y": 0
+                            },
+                            {
+                                "h": 1080,
+                                "w": 1080,
+                                "x": 0,
+                                "y": 0
+                            }
+                        ],
+                        "height": 1080,
+                        "width": 1080
+                    },
+                    "sizes": {
+                        "large": {
+                            "h": 1080,
+                            "w": 1080
+                        }
+                    },
+                    "type": "photo",
+                    "url": "https://t.co/Tay9FbQu3S"
+                }
+            ]
+        },
+        "card": null,
+        "place": {},
+        "entities": {
+            "urls": [
+                {
+                    "display_url": "bit.ly/3EXVACV",
+                    "expanded_url": "https://bit.ly/3EXVACV",
+                    "indices": [
+                        242,
+                        265
+                    ],
+                    "url": "https://t.co/Z9VJZVMRxS"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1483020235754315776",
+        "url": "https://x.com/UltraTechCement/status/1483020235754315776",
+        "twitterUrl": "https://twitter.com/UltraTechCement/status/1483020235754315776",
+        "text": "UltraTech Cement reported robust earnings for Q3FY22 despite challenging conditions for the cement industry. Profit after tax for the Company was at Rs.1708 crore, up 8 per cent year on year.\n\nRead more here: https://t.co/Kofh9yzxLK",
+        "source": "Twitter for iPhone",
+        "retweetCount": 3,
+        "replyCount": 1,
+        "likeCount": 18,
+        "quoteCount": 0,
+        "viewCount": 0,
+        "createdAt": "Mon Jan 17 10:15:52 +0000 2022",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1483020235754315776",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "UltraTechCement",
+            "url": "https://x.com/UltraTechCement",
+            "twitterUrl": "https://twitter.com/UltraTechCement",
+            "id": "975339853",
+            "name": "UltraTech Cement Ltd",
+            "isVerified": false,
+            "isBlueVerified": false,
+            "verifiedType": "Business",
+            "profilePicture": "https://pbs.twimg.com/profile_images/1782776746712186881/JTYIPcNN_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/975339853/1687763496",
+            "description": "",
+            "location": "",
+            "followers": 28217,
+            "following": 27,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Wed Nov 28 04:14:46 +0000 2012",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 2391,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 1707,
+            "statusesCount": 6807,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "UltraTech is India\u2019s No. 1 Cement\u2019\nVisit - https://t.co/f8HmCuHe20 for claim details. \nWe never ask for any advance payments for dealership or bulk orders.",
+                "entities": {
+                    "description": {
+                        "urls": [
+                            {
+                                "display_url": "ultratechcement.com",
+                                "expanded_url": "http://ultratechcement.com",
+                                "indices": [
+                                    43,
+                                    66
+                                ],
+                                "url": "https://t.co/f8HmCuHe20"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "ultratechcement.com",
+                                "expanded_url": "http://www.ultratechcement.com/",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/XaITioehwC"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {},
+        "card": null,
+        "place": {},
+        "entities": {
+            "urls": [
+                {
+                    "display_url": "bit.ly/3Aka0et",
+                    "expanded_url": "https://bit.ly/3Aka0et",
+                    "indices": [
+                        209,
+                        232
+                    ],
+                    "url": "https://t.co/Kofh9yzxLK"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1418176997914644480",
+        "url": "https://x.com/UltraTechCement/status/1418176997914644480",
+        "twitterUrl": "https://twitter.com/UltraTechCement/status/1418176997914644480",
+        "text": "UltraTech reports stellar earnings for Q1FY22. Consolidated Net Sales up 54% YoY at Rs.11698 crore and Profit after tax up 114% YoY at Rs.1703 crore. Read more here https://t.co/tsYzEiIrvI https://t.co/EGxK0mnSgU",
+        "source": "Twitter for iPhone",
+        "retweetCount": 5,
+        "replyCount": 0,
+        "likeCount": 35,
+        "quoteCount": 0,
+        "viewCount": 0,
+        "createdAt": "Thu Jul 22 11:51:59 +0000 2021",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1418176997914644480",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "UltraTechCement",
+            "url": "https://x.com/UltraTechCement",
+            "twitterUrl": "https://twitter.com/UltraTechCement",
+            "id": "975339853",
+            "name": "UltraTech Cement Ltd",
+            "isVerified": false,
+            "isBlueVerified": false,
+            "verifiedType": "Business",
+            "profilePicture": "https://pbs.twimg.com/profile_images/1782776746712186881/JTYIPcNN_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/975339853/1687763496",
+            "description": "",
+            "location": "",
+            "followers": 28217,
+            "following": 27,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Wed Nov 28 04:14:46 +0000 2012",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 2391,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 1707,
+            "statusesCount": 6807,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "UltraTech is India\u2019s No. 1 Cement\u2019\nVisit - https://t.co/f8HmCuHe20 for claim details. \nWe never ask for any advance payments for dealership or bulk orders.",
+                "entities": {
+                    "description": {
+                        "urls": [
+                            {
+                                "display_url": "ultratechcement.com",
+                                "expanded_url": "http://ultratechcement.com",
+                                "indices": [
+                                    43,
+                                    66
+                                ],
+                                "url": "https://t.co/f8HmCuHe20"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "ultratechcement.com",
+                                "expanded_url": "http://www.ultratechcement.com/",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/XaITioehwC"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {
+            "media": [
+                {
+                    "display_url": "pic.twitter.com/EGxK0mnSgU",
+                    "expanded_url": "https://twitter.com/UltraTechCement/status/1418176997914644480/photo/1",
+                    "ext_media_availability": {
+                        "status": "Available"
+                    },
+                    "features": {
+                        "large": {},
+                        "orig": {}
+                    },
+                    "id_str": "1418176313454592011",
+                    "indices": [
+                        189,
+                        212
+                    ],
+                    "media_key": "3_1418176313454592011",
+                    "media_results": {
+                        "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAAROuX9fgVYALCgACE65gdz1VEAAAAA==",
+                        "result": {
+                            "__typename": "ApiMedia",
+                            "id": "QXBpTWVkaWE6DAABCgABE65f1+BVgAsKAAITrmB3PVUQAAAA",
+                            "media_key": "3_1418176313454592011"
+                        }
+                    },
+                    "media_url_https": "https://pbs.twimg.com/media/E65f1-BVgAsj_l3.jpg",
+                    "original_info": {
+                        "focus_rects": [
+                            {
+                                "h": 701,
+                                "w": 1251,
+                                "x": 0,
+                                "y": 431
+                            },
+                            {
+                                "h": 1251,
+                                "w": 1251,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1251,
+                                "w": 1097,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1251,
+                                "w": 626,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1251,
+                                "w": 1251,
+                                "x": 0,
+                                "y": 0
+                            }
+                        ],
+                        "height": 1251,
+                        "width": 1251
+                    },
+                    "sizes": {
+                        "large": {
+                            "h": 1251,
+                            "w": 1251
+                        }
+                    },
+                    "type": "photo",
+                    "url": "https://t.co/EGxK0mnSgU"
+                }
+            ]
+        },
+        "card": null,
+        "place": {},
+        "entities": {
+            "urls": [
+                {
+                    "display_url": "bit.ly/3iutODe",
+                    "expanded_url": "https://bit.ly/3iutODe",
+                    "indices": [
+                        165,
+                        188
+                    ],
+                    "url": "https://t.co/tsYzEiIrvI"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1390709522872737792",
+        "url": "https://x.com/UltraTechCement/status/1390709522872737792",
+        "twitterUrl": "https://twitter.com/UltraTechCement/status/1390709522872737792",
+        "text": "UltraTech reports robust Q4FY21 financial results. Consolidated Net Sales at Rs.14,232 crores and Profit after tax at Rs.1,775 crores. More details at https://t.co/6ClN8AdUsg https://t.co/nvln8vfZUi",
+        "source": "Twitter for iPhone",
+        "retweetCount": 3,
+        "replyCount": 9,
+        "likeCount": 44,
+        "quoteCount": 0,
+        "viewCount": 0,
+        "createdAt": "Fri May 07 16:46:03 +0000 2021",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1390709522872737792",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "UltraTechCement",
+            "url": "https://x.com/UltraTechCement",
+            "twitterUrl": "https://twitter.com/UltraTechCement",
+            "id": "975339853",
+            "name": "UltraTech Cement Ltd",
+            "isVerified": false,
+            "isBlueVerified": false,
+            "verifiedType": "Business",
+            "profilePicture": "https://pbs.twimg.com/profile_images/1782776746712186881/JTYIPcNN_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/975339853/1687763496",
+            "description": "",
+            "location": "",
+            "followers": 28217,
+            "following": 27,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Wed Nov 28 04:14:46 +0000 2012",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 2391,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 1707,
+            "statusesCount": 6807,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "UltraTech is India\u2019s No. 1 Cement\u2019\nVisit - https://t.co/f8HmCuHe20 for claim details. \nWe never ask for any advance payments for dealership or bulk orders.",
+                "entities": {
+                    "description": {
+                        "urls": [
+                            {
+                                "display_url": "ultratechcement.com",
+                                "expanded_url": "http://ultratechcement.com",
+                                "indices": [
+                                    43,
+                                    66
+                                ],
+                                "url": "https://t.co/f8HmCuHe20"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "ultratechcement.com",
+                                "expanded_url": "http://www.ultratechcement.com/",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/XaITioehwC"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {
+            "media": [
+                {
+                    "display_url": "pic.twitter.com/nvln8vfZUi",
+                    "expanded_url": "https://twitter.com/UltraTechCement/status/1390709522872737792/photo/1",
+                    "ext_media_availability": {
+                        "status": "Available"
+                    },
+                    "features": {
+                        "large": {},
+                        "orig": {}
+                    },
+                    "id_str": "1390709478534774784",
+                    "indices": [
+                        175,
+                        198
+                    ],
+                    "media_key": "3_1390709478534774784",
+                    "media_results": {
+                        "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAARNMyucF1YAACgACE0zK8ViVIAAAAA==",
+                        "result": {
+                            "__typename": "ApiMedia",
+                            "id": "QXBpTWVkaWE6DAABCgABE0zK5wXVgAAKAAITTMrxWJUgAAAA",
+                            "media_key": "3_1390709478534774784"
+                        }
+                    },
+                    "media_url_https": "https://pbs.twimg.com/media/E0zK5wXVgAAkE5l.jpg",
+                    "original_info": {
+                        "focus_rects": [
+                            {
+                                "h": 701,
+                                "w": 1251,
+                                "x": 0,
+                                "y": 56
+                            },
+                            {
+                                "h": 1251,
+                                "w": 1251,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1251,
+                                "w": 1097,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1251,
+                                "w": 626,
+                                "x": 93,
+                                "y": 0
+                            },
+                            {
+                                "h": 1251,
+                                "w": 1251,
+                                "x": 0,
+                                "y": 0
+                            }
+                        ],
+                        "height": 1251,
+                        "width": 1251
+                    },
+                    "sizes": {
+                        "large": {
+                            "h": 1251,
+                            "w": 1251
+                        }
+                    },
+                    "type": "photo",
+                    "url": "https://t.co/nvln8vfZUi"
+                }
+            ]
+        },
+        "card": null,
+        "place": {},
+        "entities": {
+            "urls": [
+                {
+                    "display_url": "bit.ly/3esk1wL",
+                    "expanded_url": "https://bit.ly/3esk1wL",
+                    "indices": [
+                        151,
+                        174
+                    ],
+                    "url": "https://t.co/6ClN8AdUsg"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    },
+    {
+        "type": "tweet",
+        "id": "1352915561680781312",
+        "url": "https://x.com/UltraTechCement/status/1352915561680781312",
+        "twitterUrl": "https://twitter.com/UltraTechCement/status/1352915561680781312",
+        "text": "UltraTech announces results for quarter ended 31st December 2020. Domestic Sales Volume up by 14%. Consolidated Net Sales at Rs.12,144 crores. Operating margin at 26% boosted by operational efficiencies and tight control over costs. Read more https://t.co/UjuP5day1N https://t.co/0aJ7wPswKM",
+        "source": "Twitter for iPhone",
+        "retweetCount": 10,
+        "replyCount": 3,
+        "likeCount": 54,
+        "quoteCount": 0,
+        "viewCount": 0,
+        "createdAt": "Sat Jan 23 09:46:20 +0000 2021",
+        "lang": "en",
+        "bookmarkCount": 0,
+        "isReply": false,
+        "inReplyToId": null,
+        "conversationId": "1352915561680781312",
+        "inReplyToUserId": null,
+        "inReplyToUsername": null,
+        "author": {
+            "type": "user",
+            "userName": "UltraTechCement",
+            "url": "https://x.com/UltraTechCement",
+            "twitterUrl": "https://twitter.com/UltraTechCement",
+            "id": "975339853",
+            "name": "UltraTech Cement Ltd",
+            "isVerified": false,
+            "isBlueVerified": false,
+            "verifiedType": "Business",
+            "profilePicture": "https://pbs.twimg.com/profile_images/1782776746712186881/JTYIPcNN_normal.jpg",
+            "coverPicture": "https://pbs.twimg.com/profile_banners/975339853/1687763496",
+            "description": "",
+            "location": "",
+            "followers": 28217,
+            "following": 27,
+            "status": "",
+            "canDm": true,
+            "canMediaTag": true,
+            "createdAt": "Wed Nov 28 04:14:46 +0000 2012",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {}
+            },
+            "fastFollowersCount": 0,
+            "favouritesCount": 2391,
+            "hasCustomTimelines": true,
+            "isTranslator": false,
+            "mediaCount": 1707,
+            "statusesCount": 6807,
+            "withheldInCountries": [],
+            "affiliatesHighlightedLabel": {},
+            "possiblySensitive": false,
+            "pinnedTweetIds": [],
+            "profile_bio": {
+                "description": "UltraTech is India\u2019s No. 1 Cement\u2019\nVisit - https://t.co/f8HmCuHe20 for claim details. \nWe never ask for any advance payments for dealership or bulk orders.",
+                "entities": {
+                    "description": {
+                        "urls": [
+                            {
+                                "display_url": "ultratechcement.com",
+                                "expanded_url": "http://ultratechcement.com",
+                                "indices": [
+                                    43,
+                                    66
+                                ],
+                                "url": "https://t.co/f8HmCuHe20"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "display_url": "ultratechcement.com",
+                                "expanded_url": "http://www.ultratechcement.com/",
+                                "indices": [
+                                    0,
+                                    23
+                                ],
+                                "url": "https://t.co/XaITioehwC"
+                            }
+                        ]
+                    }
+                }
+            },
+            "isAutomated": false,
+            "automatedBy": null
+        },
+        "extendedEntities": {
+            "media": [
+                {
+                    "display_url": "pic.twitter.com/0aJ7wPswKM",
+                    "expanded_url": "https://twitter.com/UltraTechCement/status/1352915561680781312/photo/1",
+                    "ext_media_availability": {
+                        "status": "Available"
+                    },
+                    "features": {
+                        "large": {},
+                        "orig": {}
+                    },
+                    "id_str": "1352914802419458050",
+                    "indices": [
+                        267,
+                        290
+                    ],
+                    "media_key": "3_1352914802419458050",
+                    "media_results": {
+                        "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAARLGhNhBlGACCgACEsaFiQkUwAAAAA==",
+                        "result": {
+                            "__typename": "ApiMedia",
+                            "id": "QXBpTWVkaWE6DAABCgABEsaE2EGUYAIKAAISxoWJCRTAAAAA",
+                            "media_key": "3_1352914802419458050"
+                        }
+                    },
+                    "media_url_https": "https://pbs.twimg.com/media/EsaE2EGUYAIIvSp.jpg",
+                    "original_info": {
+                        "focus_rects": [
+                            {
+                                "h": 701,
+                                "w": 1251,
+                                "x": 0,
+                                "y": 56
+                            },
+                            {
+                                "h": 1251,
+                                "w": 1251,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1251,
+                                "w": 1097,
+                                "x": 0,
+                                "y": 0
+                            },
+                            {
+                                "h": 1251,
+                                "w": 626,
+                                "x": 93,
+                                "y": 0
+                            },
+                            {
+                                "h": 1251,
+                                "w": 1251,
+                                "x": 0,
+                                "y": 0
+                            }
+                        ],
+                        "height": 1251,
+                        "width": 1251
+                    },
+                    "sizes": {
+                        "large": {
+                            "h": 1251,
+                            "w": 1251
+                        }
+                    },
+                    "type": "photo",
+                    "url": "https://t.co/0aJ7wPswKM"
+                }
+            ]
+        },
+        "card": null,
+        "place": {},
+        "entities": {
+            "urls": [
+                {
+                    "display_url": "bit.ly/3sP0xHz",
+                    "expanded_url": "https://bit.ly/3sP0xHz",
+                    "indices": [
+                        243,
+                        266
+                    ],
+                    "url": "https://t.co/UjuP5day1N"
+                }
+            ]
+        },
+        "quoted_tweet": null,
+        "retweeted_tweet": null,
+        "article": null
+    }
+]
