@@ -1134,3 +1134,40 @@
 2025-07-21 21:29:31,384 - INFO -    API calls skipped (cached): 0
 2025-07-21 21:29:31,384 - INFO -    Efficiency: 0.0 articles per API call
 2025-07-21 21:29:31,384 - INFO - 📁 Results saved to: smart_cached_news.csv
+2025-07-27 15:11:23,905 - INFO - Loaded cache: 300 previous API calls
+2025-07-27 15:11:23,910 - INFO - 📚 Loaded 262 existing articles from storage
+2025-07-27 15:11:23,910 - INFO - ✅ Smart Marketaux API initialized
+2025-07-27 15:11:25,871 - INFO - 🧠 SMART CACHING NEWS FETCHER
+2025-07-27 15:11:25,872 - INFO - ==================================================
+2025-07-27 15:11:25,872 - INFO - 📊 Cache Status:
+2025-07-27 15:11:25,872 - INFO -    Previous API calls: 300
+2025-07-27 15:11:25,872 - INFO -    Articles in storage: 262
+2025-07-27 15:11:25,872 - INFO -    Last update: 2025-07-21T21:29:29.852373
+2025-07-27 15:11:25,876 - INFO - 📅 Processing: 2024-06-06 to 2024-06-13
+2025-07-27 15:11:25,876 - INFO - ⏭️  Skipping cached request: general_indian_market (2024-06-06 to 2024-06-13)
+2025-07-27 15:11:25,876 - INFO - ⏭️  Using cached: general_indian_market (2024-06-06 to 2024-06-13)
+2025-07-27 15:11:25,876 - INFO - 📭 No new articles from general_indian_market
+2025-07-27 15:11:27,381 - INFO - ⏭️  Skipping cached request: bse_sensex_trading (2024-06-06 to 2024-06-13)
+2025-07-27 15:11:27,382 - INFO - ⏭️  Using cached: bse_sensex_trading (2024-06-06 to 2024-06-13)
+2025-07-27 15:11:27,382 - INFO - 📭 No new articles from bse_sensex_trading
+2025-07-27 15:11:28,887 - INFO - ⏭️  Skipping cached request: nse_nifty_index (2024-06-06 to 2024-06-13)
+2025-07-27 15:11:28,888 - INFO - ⏭️  Using cached: nse_nifty_index (2024-06-06 to 2024-06-13)
+2025-07-27 15:11:28,888 - INFO - 📭 No new articles from nse_nifty_index
+2025-07-27 15:11:30,391 - INFO - ⏭️  Skipping cached request: indian_banking_sector (2024-06-06 to 2024-06-13)
+2025-07-27 15:11:30,393 - INFO - ⏭️  Using cached: indian_banking_sector (2024-06-06 to 2024-06-13)
+2025-07-27 15:11:30,394 - INFO - 📭 No new articles from indian_banking_sector
+2025-07-27 15:11:31,897 - INFO - ⏭️  Skipping cached request: indian_it_companies (2024-06-06 to 2024-06-13)
+2025-07-27 15:11:31,897 - INFO - ⏭️  Using cached: indian_it_companies (2024-06-06 to 2024-06-13)
+2025-07-27 15:11:31,897 - INFO - 📭 No new articles from indian_it_companies
+2025-07-27 15:11:33,403 - INFO - ⏭️  Skipping cached request: indian_pharmaceutical (2024-06-06 to 2024-06-13)
+2025-07-27 15:11:33,404 - INFO - ⏭️  Using cached: indian_pharmaceutical (2024-06-06 to 2024-06-13)
+2025-07-27 15:11:33,405 - INFO - 📭 No new articles from indian_pharmaceutical
+2025-07-27 15:11:34,908 - INFO - ⏭️  Skipping cached request: indian_automobile (2024-06-06 to 2024-06-13)
+2025-07-27 15:11:34,908 - INFO - ⏭️  Using cached: indian_automobile (2024-06-06 to 2024-06-13)
+2025-07-27 15:11:34,908 - INFO - 📭 No new articles from indian_automobile
+2025-07-27 15:11:36,413 - INFO - ⏭️  Skipping cached request: reliance_industries (2024-06-06 to 2024-06-13)
+2025-07-27 15:11:36,413 - INFO - ⏭️  Using cached: reliance_industries (2024-06-06 to 2024-06-13)
+2025-07-27 15:11:36,413 - INFO - 📭 No new articles from reliance_industries
+2025-07-27 15:11:37,921 - INFO - ⏭️  Skipping cached request: tata_group_companies (2024-06-06 to 2024-06-13)
+2025-07-27 15:11:37,922 - INFO - ⏭️  Using cached: tata_group_companies (2024-06-06 to 2024-06-13)
+2025-07-27 15:11:37,922 - INFO - 📭 No new articles from tata_group_companies
