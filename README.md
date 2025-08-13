@@ -60,3 +60,9 @@ python process_data.py
 python train_ppo.py
 ...
 ```
+
+# While the training is running, in a different terminal window navigate to project directory and:
+```bash
+tensorboard --logdir logs/
+```
+Open the link generated in your browser to see the model performance.
