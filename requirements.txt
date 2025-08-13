@@ -27,3 +27,8 @@ praw==7.8.1
 twscrape
 selenium
 playwright
+gymnasium
+transformers
+torch
+stable-baselines3[extra]
+tensorboard

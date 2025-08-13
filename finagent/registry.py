@@ -16,4 +16,6 @@ class Registry:
 
 # Define registries for different components
 DOWNLOADER = Registry('downloader')
-CLEANER = Registry('cleaner')  # Registry for data cleaners
+CLEANER = Registry('cleaners')
+PROCESSOR = Registry('processor')
+ENVIRONMENT = Registry('environment')
