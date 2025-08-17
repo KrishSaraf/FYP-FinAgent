@@ -7,6 +7,7 @@ from datetime import datetime, timedelta
 from concurrent.futures import ThreadPoolExecutor
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
 import torch
+import re
 from finagent.registry import PROCESSOR
 
 @PROCESSOR.register_module()
@@ -139,80 +140,170 @@ class MarketDataConsolidator:
             return pd.DataFrame()
     
     def _load_fundamental_data(self, stock_symbol: str) -> pd.DataFrame:
-        """Load fundamental data from various sources"""
+        """
+        Loads and consolidates fundamental data to create a time-series dataset.
+
+        This method integrates three types of data:
+        1. KeyMetrics files for baseline, non-time-specific metrics.
+        2. Annual financial files, with the period ending on March 31st of the year in the filename.
+        3. Interim (quarterly) financial files, with the period end date parsed from the filename.
+
+        The data is then aligned to the dates of board meetings where financial results were announced,
+        creating a historical view of the available data at the time of each announcement.
+        """
         stock_path = self.cleaned_data_path / stock_symbol
-        
-        # Load key metrics
-        metrics_files = list(stock_path.glob("KeyMetrics_*.csv"))
-        all_metrics_dict = {}
-        # Iterate over all files that match the pattern to consolidate all available metrics.
-        for metrics_file in metrics_files:
-            try:
-                df = pd.read_csv(metrics_file)
+        if not stock_path.exists():
+            self.logger.warning(f"Data directory not found for symbol: {stock_symbol}")
+            return pd.DataFrame()
 
-                # Validate expected columns for the current file.
-                if 'key' not in df.columns or 'value' not in df.columns:
-                    self.logger.warning(f"Metrics file {metrics_file} is missing 'key' or 'value' columns. Skipping.")
-                    continue
-
-                # Drop rows where key or value is missing to avoid errors.
-                df.dropna(subset=['key', 'value'], inplace=True)
-
-                # Pivot the current file's data into a dictionary.
-                current_metrics = pd.Series(df.value.values, index=df.key).to_dict()
-                
-                # Update the master dictionary with the data from the current file.
-                # This will add new keys and overwrite existing ones with newer values.
-                all_metrics_dict.update(current_metrics)
-
-            except Exception as e:
-                self.logger.warning(f"Could not process metrics file {metrics_file}: {e}")
-                continue
-        
-        # Load financial data (latest available)
-        financial_files = list(stock_path.glob("Financials_*2025_Annual.csv"))
-    
-        # Use a temporary dict to collect all financial data from multiple files
-        financial_data_dict = {}
-        for file_path in financial_files:
+        # --- 1. Load Base KeyMetrics ---
+        base_metrics_dict: Dict[str, any] = {}
+        key_metrics_files = list(stock_path.glob("KeyMetrics_*.csv"))
+        for file_path in key_metrics_files:
             try:
                 df = pd.read_csv(file_path)
-                # Check for the key-value structure from your screenshot
-                if 'key' in df.columns and 'value' in df.columns:
-                    # Create a mapping of financial metric keys to their values for easy lookup
-                    financial_series = df.set_index('key')['value']
-                    
-                    # Define the keys you want to extract from the files
-                    keys_to_extract = {
-                        'revenue': 'Revenue',
-                        'net_income': 'NetIncome',
-                        'gross_profit': 'GrossProfit',
-                        'operating_income': 'OperatingIncome',
-                        'total_assets': 'TotalAssets',
-                        'total_equity': 'TotalEquity',
-                        'total_debt': 'TotalDebt',
-                        'net_cash_change': 'NetChangeinCash'
-                    }
-                    
-                    # Extract data for each key if it exists in the file
-                    for friendly_name, file_key in keys_to_extract.items():
-                        if file_key in financial_series.index:
-                            financial_data_dict[friendly_name] = financial_series.get(file_key)
-                else:
-                    self.logger.warning(f"Financials file {file_path} is missing 'key' or 'value' columns.")
+                if 'key' not in df.columns or 'value' not in df.columns:
+                    self.logger.warning(f"Skipping {file_path}: missing 'key' or 'value' columns.")
+                    continue
+                df.dropna(subset=['key', 'value'], inplace=True)
+                base_metrics_dict.update(pd.Series(df.value.values, index=df.key).to_dict())
             except Exception as e:
-                self.logger.warning(f"Error loading financials {file_path}: {e}")
+                self.logger.error(f"Error processing KeyMetrics file {file_path}: {e}")
+
+        # --- 2. Pre-load all time-stamped Financial Data into a Master Lookup ---
+        data_by_period_end: Dict[pd.Timestamp, dict] = {}
+
+        # Part A: Process Annual Files (from Snippet 1 logic)
+        annual_files = list(stock_path.glob("Financials_*_Annual.csv"))
+        for file_path in annual_files:
+            match = re.search(r'_(\d{4})_Annual', file_path.name)
+            if not match:
                 continue
+            try:
+                year = int(match.group(1))
+                # Assumption: Annual reports for the fiscal year ending March 31st.
+                period_end_date = pd.Timestamp(year=year, month=3, day=31)
+                metrics_series = pd.read_csv(file_path).set_index('key')['value']
                 
-        # Add the successfully loaded financial data to the main dictionary
-        all_metrics_dict.update(financial_data_dict)
+                if period_end_date not in data_by_period_end:
+                    data_by_period_end[period_end_date] = {}
+                data_by_period_end[period_end_date].update(metrics_series.to_dict())
+            except Exception as e:
+                self.logger.error(f"Error processing annual file {file_path}: {e}")
+
+        # Part B: Process single-observation Interim Files (calculating date from CSV content)
+        interim_files = list(stock_path.glob("Financials_*_Interim.csv"))
+        for file_path in interim_files:
+            try:
+                # --- Step 1: Read the CSV file, including the separate FiscalYear column ---
+                df = pd.read_csv(file_path)
+                if 'key' not in df.columns or 'value' not in df.columns or 'FiscalYear' not in df.columns:
+                    self.logger.warning(f"Skipping {file_path}: missing key, value, or FiscalYear columns.")
+                    continue
+                
+                # --- Step 2: Extract metadata from the file content ---
+                metrics_series = df.set_index('key')['value']
+                
+                # Get FiscalYear from its dedicated column (using the first row's value).
+                csv_fiscal_year = int(df['FiscalYear'].iloc[0])
+                
+                # Extract period details. periodNumber is essential for this calculation.
+                period_length = pd.to_numeric(metrics_series.get('periodLength'), errors='coerce')
+                period_type = metrics_series.get('periodType', 'Months').lower() # Default to months
+
+                # Validate that we have the necessary data to proceed
+                if pd.isna(period_length):
+                    self.logger.warning(f"Skipping {file_path}: 'periodLength' key not found or invalid.")
+                    continue
+
+                # --- Step 3: Calculate the period-end date from the fiscal year start ---
+                # Define a multiplier to handle different period types (e.g., months, quarters).
+                unit_multiplier = {'months': 1, 'quarters': 3}.get(period_type, 1)
+                total_months_offset = int(period_length * unit_multiplier)
+
+                # A fiscal year (e.g., FY2024) starts on April 1 of the previous calendar year (2023).
+                fy_start_date = pd.Timestamp(year=csv_fiscal_year - 1, month=4, day=1)
+                
+                # Calculate the end date by adding the total month offset to the fiscal year start
+                # Example: FY24-Q1 -> 2023-04-01 + 3 months -> 2023-06-30
+                target_end_date = fy_start_date + pd.DateOffset(months=total_months_offset)
+                period_end_date = target_end_date - pd.DateOffset(days=1) + pd.offsets.MonthEnd(0)
+
+                # --- Step 4: Store the loaded metrics with the calculated period-end date ---
+                if period_end_date not in data_by_period_end:
+                    data_by_period_end[period_end_date] = {}
+                data_by_period_end[period_end_date].update(metrics_series.to_dict())
+
+            except Exception as e:
+                self.logger.error(f"Error processing interim file {file_path}: {e}")
+
+        if not data_by_period_end:
+            self.logger.warning(f"No time-stamped financial data could be loaded for {stock_symbol}.")
+            # Still might return base metrics if available, but without a date context.
+            # Returning empty for consistency with the method's time-series goal.
+            return pd.DataFrame()
+
+        sorted_period_end_dates = sorted(data_by_period_end.keys())
         
-        if all_metrics_dict:
-            # Combine all metrics into a single DataFrame
-            all_metrics_df = pd.DataFrame([all_metrics_dict])
-            all_metrics_df.columns = [f"metric_{col}" for col in all_metrics_df.columns]
-            return all_metrics_df
-        return pd.DataFrame()
+        # --- 3. Load Board Meeting Announcements and Match to Data ---
+        actions_file = stock_path / "CorporateActions_BoardMeetings.csv"
+        if not actions_file.exists():
+            self.logger.warning(f"CorporateActions_BoardMeetings.csv not found for {stock_symbol}.")
+            return pd.DataFrame()
+
+        all_periods_data = []
+        try:
+            actions_df = pd.read_csv(actions_file, usecols=['boardMeetDate', 'purpose'])
+            actions_df['date'] = pd.to_datetime(actions_df['boardMeetDate'], errors='coerce')
+            actions_df.dropna(subset=['date'], inplace=True)
+            
+            # Find announcements for quarterly, half-yearly, or annual results
+            relevant_announcements = actions_df[
+                actions_df['purpose'].str.contains('result', case=False, na=False)
+            ].copy()
+
+            for _, announcement in relevant_announcements.iterrows():
+                announcement_date = announcement['date']
+                
+                # Find the latest financial data available *before* this announcement date
+                matching_period_end = None
+                for end_date in sorted_period_end_dates:
+                    if end_date < announcement_date:
+                        matching_period_end = end_date
+                    else:
+                        break # Stop once we've passed the announcement date
+                
+                if matching_period_end:
+                    # Start with the base metrics, then update with period-specific data
+                    record = base_metrics_dict.copy()
+                    record.update(data_by_period_end[matching_period_end])
+                    record['date'] = announcement_date # This is the announcement date
+                    record['period_end_date'] = matching_period_end # Add for clarity
+                    all_periods_data.append(record)
+
+        except Exception as e:
+            self.logger.error(f"Error processing board meetings for {stock_symbol}: {e}")
+
+        # --- 4. Create and Clean the Final DataFrame ---
+        if not all_periods_data:
+            self.logger.warning(f"No fundamental data points could be constructed for {stock_symbol}.")
+            return pd.DataFrame()
+
+        fundamental_df = pd.DataFrame(all_periods_data).sort_values('date')
+        fundamental_df.drop_duplicates(subset=['date'], keep='last', inplace=True)
+        fundamental_df.set_index('date', inplace=True)
+
+        # Convert all potential metric columns to numeric, leaving date/ID columns alone
+        for col in fundamental_df.columns:
+            if fundamental_df[col].dtype == 'object' and col not in ['purpose']:
+                fundamental_df[col] = pd.to_numeric(fundamental_df[col], errors='coerce')
+        
+        # Add a 'metric_' prefix to all columns except for the period end date
+        fundamental_df.columns = [
+            f"metric_{c}" if c != 'period_end_date' else c for c in fundamental_df.columns
+        ]
+        
+        return fundamental_df
     
     def _load_sentiment_data(self, stock_symbol: str) -> pd.DataFrame:
         """Load and merge social media sentiment data into a single time-indexed DataFrame."""
@@ -268,7 +359,7 @@ class MarketDataConsolidator:
             try:
                 df = pd.read_csv(twitter_file)
                 if 'created_at' in df.columns:
-                    df['date'] = pd.to_datetime(df['created_at'], errors='coerce').dt.date
+                    df['date'] = pd.to_datetime(df['created_at'], format='%a %b %d %H:%M:%S %z %Y', errors='coerce').dt.date
                     df.dropna(subset=['date'], inplace=True)
                     df['date'] = pd.to_datetime(df['date'])
                     
@@ -316,27 +407,57 @@ class MarketDataConsolidator:
             # If no sentiment data was found, return an empty DataFrame
             return pd.DataFrame()
         
-    def _analyze_sentiment(self, texts: List[str]) -> List[str]:
-        """Analyze sentiment of text data using FinBERT"""
+    def _analyze_sentiment(self, texts: List[str]) -> List[float]:
+        """
+        Analyze sentiment of text data using FinBERT and output numeric sentiment scores.
+
+        Args:
+            texts: A list of strings to analyze.
+
+        Returns:
+            A list of sentiment scores, where each score is between -1.0 and 1.0.
+        """
+        original_text_count = len(texts)
         try:
-            # Tokenize the text data
-            inputs = self.tokenizer(texts, padding=True, truncation=True, return_tensors="pt")
-            
-            # Perform inference
-            with torch.no_grad():
-                outputs = self.model(**inputs)
-            
-            # Get probabilities and predicted labels
-            logits = outputs.logits
+            sanitized_texts = [str(text) if text and isinstance(text, str) else "." for text in texts]
+            if not sanitized_texts:
+                return []
+
+            # Tokenize texts in batches
+            batch_size = 32  # Define batch size
+            all_logits = []
+
+            # Perform inference in batches
+            for i in range(0, len(texts), batch_size):
+                batch_texts = sanitized_texts[i:i+batch_size]
+                inputs = self.tokenizer(
+                batch_texts, 
+                padding=True, 
+                truncation=True, 
+                return_tensors="pt"
+            )
+                with torch.no_grad():
+                    outputs = self.model(**inputs)
+                all_logits.append(outputs.logits)
+
+            # Concatenate all outputs
+            logits = torch.cat(all_logits, dim=0)
+
+            # Convert logits to probabilities
             probabilities = torch.nn.functional.softmax(logits, dim=-1)
-            predicted_labels = torch.argmax(probabilities, dim=1)
-            
-            # Map label indices to sentiment labels
-            labels = ["positive", "negative", "neutral"]
-            return [labels[i] for i in predicted_labels]
+
+            # Calculate sentiment scores
+            positive_probs = probabilities[:, 0]  # Positive probability
+            negative_probs = probabilities[:, 1]  # Negative probability
+
+            # Score = Positive Probability - Negative Probability
+            scores = positive_probs - negative_probs
+
+            # Convert the result from a PyTorch tensor to a simple Python list
+            return scores.tolist()
         except Exception as e:
             self.logger.error(f"Error analyzing sentiment: {e}")
-            return ["neutral"] * len(texts)  # Default to neutral if error occurs
+            return [0.0] * original_text_count  # Default to neutral score if error occurs
     
     def _load_corporate_data(self, stock_symbol: str) -> pd.DataFrame:
         """Load corporate actions and news data with FinBERT sentiment analysis."""
@@ -490,7 +611,7 @@ class MarketDataConsolidator:
         # Forward fill corporate action data
         corporate_cols = [col for col in df.columns if col.startswith(('dividend_', 'bonus_', 'split_', 'news_'))]
         if corporate_cols:
-            df[corporate_cols] = df[corporate_cols].fillna(method='ffill')
+            df[corporate_cols] = df[corporate_cols].fillna(0)
         else:
             self.logger.warning("No corporate action columns found in DataFrame.")
 

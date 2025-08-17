@@ -311,27 +311,46 @@ class TemporalDataAligner:
             
             # Price-based features
             prices = [stock_data[stock].loc[date, 'price'] for stock in stock_data 
-                     if 'price' in stock_data[stock].columns and not pd.isna(stock_data[stock].loc[date, 'price'])]
+                     if 'price' in stock_data[stock].columns and np.all(pd.notna(stock_data[stock].loc[date, 'price']))]
             
             if prices:
-                market_features[date]['market_price_mean'] = np.mean(prices)
-                market_features[date]['market_price_std'] = np.std(prices)
-                market_features[date]['market_price_change'] = np.mean([p - prices[0] for p in prices[1:]]) if len(prices) > 1 else 0
+                flat_prices = []
+                for item in prices:
+                    if isinstance(item, pd.Series):
+                        flat_prices.extend(item.tolist())
+                    else:
+                        flat_prices.append(item)
+            if flat_prices:
+                market_features[date]['market_price_mean'] = np.mean(flat_prices)
+                market_features[date]['market_price_std'] = np.std(flat_prices)
+                market_features[date]['market_price_change'] = np.mean([p - flat_prices[0] for p in flat_prices[1:]]) if len(flat_prices) > 1 else 0
             
             # Volume-based features
             volumes = [stock_data[stock].loc[date, 'volume'] for stock in stock_data 
-                      if 'volume' in stock_data[stock].columns and not pd.isna(stock_data[stock].loc[date, 'volume'])]
+                      if 'volume' in stock_data[stock].columns and np.all(pd.notna(stock_data[stock].loc[date, 'volume']))]
             
             if volumes:
-                market_features[date]['market_volume_mean'] = np.mean(volumes)
-                market_features[date]['market_volume_std'] = np.std(volumes)
+                flat_volumes = []
+                for item in volumes:
+                    if isinstance(item, pd.Series):
+                        flat_volumes.extend(item.tolist())
+                    else:
+                        flat_volumes.append(item)
+                market_features[date]['market_volume_mean'] = np.mean(flat_volumes)
+                market_features[date]['market_volume_std'] = np.std(flat_volumes)
             
             # Sentiment-based features
             reddit_scores = [stock_data[stock].loc[date, 'reddit_score_mean'] for stock in stock_data 
-                           if 'reddit_score_mean' in stock_data[stock].columns and not pd.isna(stock_data[stock].loc[date, 'reddit_score_mean'])]
+                           if 'reddit_score_mean' in stock_data[stock].columns and np.all(pd.notna(stock_data[stock].loc[date, 'reddit_score_mean']))]
             
             if reddit_scores:
-                market_features[date]['market_reddit_sentiment'] = np.mean(reddit_scores)
+                flat_reddit_scores = []
+                for item in reddit_scores:
+                    if isinstance(item, pd.Series):
+                        flat_reddit_scores.extend(item.tolist())
+                    else:
+                        flat_reddit_scores.append(item)
+                market_features[date]['market_reddit_sentiment'] = np.mean(flat_reddit_scores)
         
         market_df = pd.DataFrame.from_dict(market_features, orient='index')
         market_df.index = pd.to_datetime(market_df.index)

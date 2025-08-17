@@ -61,7 +61,7 @@ model = PPO(
 # The total number of steps the agent will be trained for.
 # Start with a smaller number (e.g., 20,000) for testing, 
 # then increase significantly (e.g., 1,000,000+) for real training.
-TIMESTEPS = 100000 
+TIMESTEPS = 1000000 
 
 print("--- Starting Agent Training ---")
 model.learn(
