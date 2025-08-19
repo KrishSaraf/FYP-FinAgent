@@ -20,6 +20,14 @@ playwright install
 playwright install-deps
 ```
 
+# Using GPU acceleration for training
+```bash
+
+conda create -n rapids-24.06 -c rapidsai -c conda-forge -c nvidia cudf=24.06 python=3.10 cudatoolkit=11.8
+
+conda activate rapids-24.06
+```
+
 # Prepare the environment variables
 The suggested way to do it is to create a .env file in the root of the repository (never push this file to GitHub) where variables can be defined.
 Please check the examples below.

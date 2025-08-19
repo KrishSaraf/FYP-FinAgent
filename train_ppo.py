@@ -1,6 +1,7 @@
 import pandas as pd
 from stable_baselines3 import PPO
 from stable_baselines3.common.vec_env import DummyVecEnv
+from stable_baselines3.common.callbacks import CheckpointCallback
 import time
 import os
 
@@ -40,34 +41,54 @@ train_env = DummyVecEnv([lambda: PortfolioEnv(
 # MlpPolicy is a standard feed-forward neural network policy.
 # We pass the environment to the PPO agent, enable verbose logging,
 # and specify the directory for TensorBoard logs.
-model = PPO(
-    'MlpPolicy',
-    train_env,
-    verbose=1,
-    tensorboard_log=logdir,
-    # You can tune these hyperparameters
-    n_steps=2048,
-    batch_size=64,
-    n_epochs=10,
-    gamma=0.99,
-    gae_lambda=0.95,
-    ent_coef=0.0,
-    vf_coef=0.5,
-    max_grad_norm=0.5,
-)
+
+RESUME_MODEL_PATH = "models/PPO-1755516322/checkpoint_655000_steps.zip"  # Path to a saved model to resume training, if any
+
+if RESUME_MODEL_PATH and os.path.exists(RESUME_MODEL_PATH):
+    print(f"Resuming training from {RESUME_MODEL_PATH}")
+    model = PPO.load(
+        RESUME_MODEL_PATH,
+        env=train_env,
+        tensorboard_log=logdir)
+else:
+    print("--- Creating a new PPO agent ---")
+    model = PPO(
+        'MlpPolicy',
+        train_env,
+        verbose=1,
+        tensorboard_log=logdir,
+        # You can tune these hyperparameters
+        n_steps=2048,
+        batch_size=64,
+        n_epochs=10,
+        gamma=0.99,
+        gae_lambda=0.95,
+        ent_coef=0.0,
+        vf_coef=0.5,
+        max_grad_norm=0.5,
+    )
 
 # --- 4. TRAIN THE AGENT ---
 
 # The total number of steps the agent will be trained for.
 # Start with a smaller number (e.g., 20,000) for testing, 
 # then increase significantly (e.g., 1,000,000+) for real training.
-TIMESTEPS = 1000000 
+TIMESTEPS = 5000
+SAVE_FREQ = 50000
 
 print("--- Starting Agent Training ---")
+
+checkpoint_callback = CheckpointCallback(
+    save_freq=SAVE_FREQ,
+    save_path=models_dir,
+    name_prefix='checkpoint'
+)
+
 model.learn(
     total_timesteps=TIMESTEPS, 
     reset_num_timesteps=False, # Set to False to continue training from a saved model
-    tb_log_name="PPO_run"
+    tb_log_name="PPO_run",
+    callback=checkpoint_callback
 )
 print("--- Agent Training Finished ---")
 
