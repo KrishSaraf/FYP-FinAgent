@@ -359,7 +359,7 @@ class PortfolioEnv(gym.Env):
             current_price = 0
             if len(market_window) > 0:
                 # Use the first feature as the main price indicator
-                main_feature = self.features[0]  # Assuming first feature is price-related
+                main_feature = "price"  # Assuming first feature is price-related
                 
                 if isinstance(self.data.columns, pd.MultiIndex):
                     if (symbol, main_feature) in self.data.columns:
@@ -443,13 +443,12 @@ class PortfolioEnv(gym.Env):
         """Helper method to extract current prices for all stocks at a given date."""
         current_data = self.data.loc[date]
         prices = {}
+        main_feature = "price"
               # Debug prints
         print(f"DEBUG: Getting prices for date: {date}")
         print(f"DEBUG: Data columns type: {type(self.data.columns)}")
         print(f"DEBUG: First 5 columns: {self.data.columns[:5].tolist()}")
         print(f"DEBUG: Main feature: {self.features[0]}")
-
-        main_feature = self.features[0]
 
         for symbol in self.stocks:
             if isinstance(self.data.columns, pd.MultiIndex):
@@ -464,9 +463,6 @@ class PortfolioEnv(gym.Env):
                     print(f"DEBUG: Price column not found for {symbol}")
                     print(f"DEBUG: Available columns for {symbol}: {[col for col in self.data.columns if symbol in str(col)]}")
         
-        
-        # Use the first feature as the main price (typically 'close', 'price', etc.)
-        main_feature = self.features[0]
         
         for symbol in self.stocks:
             if isinstance(self.data.columns, pd.MultiIndex):
