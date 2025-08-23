@@ -443,6 +443,27 @@ class PortfolioEnv(gym.Env):
         """Helper method to extract current prices for all stocks at a given date."""
         current_data = self.data.loc[date]
         prices = {}
+              # Debug prints
+        print(f"DEBUG: Getting prices for date: {date}")
+        print(f"DEBUG: Data columns type: {type(self.data.columns)}")
+        print(f"DEBUG: First 5 columns: {self.data.columns[:5].tolist()}")
+        print(f"DEBUG: Main feature: {self.features[0]}")
+
+        main_feature = self.features[0]
+
+        for symbol in self.stocks:
+            if isinstance(self.data.columns, pd.MultiIndex):
+                # Check both possible MultiIndex orientations
+                if (symbol, main_feature) in self.data.columns:
+                    prices[symbol] = current_data[(symbol, main_feature)]
+                    print(f"DEBUG: Found price for {symbol}: {prices[symbol]}")
+                elif (main_feature, symbol) in self.data.columns:
+                    prices[symbol] = current_data[(main_feature, symbol)]
+                    print(f"DEBUG: Found price for {symbol}: {prices[symbol]} (reversed index)")
+                else:
+                    print(f"DEBUG: Price column not found for {symbol}")
+                    print(f"DEBUG: Available columns for {symbol}: {[col for col in self.data.columns if symbol in str(col)]}")
+        
         
         # Use the first feature as the main price (typically 'close', 'price', etc.)
         main_feature = self.features[0]
@@ -543,3 +564,24 @@ class PortfolioEnv(gym.Env):
             else:
                 print("No open positions.")
             print("-" * 30)
+
+
+# if __name__ == "__main__":
+#     # Example usage
+#     env = PortfolioEnv(
+#         data_root="processed_data/",
+#         stocks=["ADANIPORTS"],  
+#         start_date="2024-06-06",
+#         end_date="2025-03-06"
+#     )
+
+#     obs, info = env.reset()
+#     print("Initial observation shape:", obs.shape)
+#     print("Initial info:", info)
+
+#     for _ in range(5):  # Run 5 steps
+#         action = env.action_space.sample()  
+#         obs, reward, terminated, truncated, info = env.step(action)
+#         env.render()
+#         if terminated:
+#             break
