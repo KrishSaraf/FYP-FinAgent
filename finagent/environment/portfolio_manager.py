@@ -19,7 +19,7 @@ class PositionSide(Enum):
 class Position:
     """Individual position in a stock"""
     stock_symbol: str
-    quantity: float
+    quantity: int  # Changed to int for whole shares
     side: PositionSide
     entry_price: float
     entry_date: datetime
@@ -56,7 +56,7 @@ class Transaction:
     transaction_id: str
     stock_symbol: str
     transaction_type: str  # "BUY", "SELL", "SHORT", "COVER"
-    quantity: float
+    quantity: int  # Changed to int for whole shares
     price: float
     timestamp: datetime
     fees: float = 0.0
@@ -77,13 +77,13 @@ class PortfolioManager:
     def __init__(self, 
                  initial_cash: float = 1000000.0,  # 10 Lakh INR
                  max_position_size: float = 0.2,   # Max 20% in single stock
-                 transaction_fees: float = 0.0005,  # 0.05% transaction fees
+                 exchange: str = "NSE",  # NSE or BSE
                  data_root: str = "market_data",
                  stocks: Optional[List[str]] = None):
         
         self.initial_cash = initial_cash
         self.max_position_size = max_position_size
-        self.transaction_fees = transaction_fees
+        self.exchange = exchange
         self.data_root = Path(data_root)
         
         # Portfolio state
@@ -120,6 +120,81 @@ class PortfolioManager:
         """Generate unique transaction ID"""
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S_%f")
         return f"TXN_{timestamp}"
+    
+    def calculate_indian_trading_costs(self, transaction_value: float, is_buy: bool = True) -> Dict[str, float]:
+        """
+        Calculate Indian stock trading costs based on equity delivery.
+        
+        Args:
+            transaction_value: Value of the transaction (quantity * price)
+            is_buy: True for buy transactions, False for sell
+            
+        Returns:
+            Dictionary with breakdown of all costs
+        """
+        costs = {}
+        
+        # Brokerage: Zero
+        costs['brokerage'] = 0.0
+        
+        # STT/CTT: 0.1% on buy & sell
+        costs['stt'] = transaction_value * 0.001
+        
+        # Transaction charges (depends on exchange)
+        if self.exchange.upper() == "NSE":
+            costs['transaction_charges'] = transaction_value * 0.00297 / 100
+        else:  # BSE
+            costs['transaction_charges'] = transaction_value * 0.00375 / 100
+        
+        # SEBI charges: ₹10 / crore
+        costs['sebi_charges'] = (transaction_value / 10000000) * 10  # 1 crore = 10^7
+        
+        # Stamp charges: 0.015% or ₹1500 / crore on buy side only
+        if is_buy:
+            stamp_percentage = transaction_value * 0.00015
+            stamp_flat = (transaction_value / 10000000) * 1500
+            costs['stamp_charges'] = min(stamp_percentage, stamp_flat)
+        else:
+            costs['stamp_charges'] = 0.0
+        
+        # GST: 18% on (brokerage + SEBI charges + transaction charges)
+        taxable_amount = costs['brokerage'] + costs['sebi_charges'] + costs['transaction_charges']
+        costs['gst'] = taxable_amount * 0.18
+        
+        # Total costs
+        costs['total_costs'] = sum(costs.values())
+        
+        return costs
+    
+    def get_max_buyable_shares(self, price: float) -> int:
+        """
+        Calculate maximum whole shares that can be bought with available cash.
+        
+        Args:
+            price: Price per share
+            
+        Returns:
+            Maximum whole shares that can be bought
+        """
+        if price <= 0:
+            return 0
+        
+        # Binary search to find maximum shares considering transaction costs
+        max_shares = int(self.cash / price)  # Upper bound
+        min_shares = 0
+        
+        while min_shares <= max_shares:
+            shares = (min_shares + max_shares) // 2
+            transaction_value = shares * price
+            costs = self.calculate_indian_trading_costs(transaction_value, is_buy=True)
+            total_required = transaction_value + costs['total_costs']
+            
+            if total_required <= self.cash:
+                min_shares = shares + 1
+            else:
+                max_shares = shares - 1
+        
+        return max_shares
     
     def get_portfolio_state(self) -> Dict[str, Any]:
         """
@@ -207,22 +282,28 @@ class PortfolioManager:
         # For now, return empty dict
         return {}
     
-    def can_buy(self, stock_symbol: str, quantity: float, price: float) -> Tuple[bool, str]:
+    def can_buy(self, stock_symbol: str, quantity: int, price: float) -> Tuple[bool, str]:
         """
         Check if a buy order can be executed.
         
         Args:
             stock_symbol: Stock to buy
-            quantity: Quantity to buy
+            quantity: Quantity to buy (whole shares)
             price: Price per share
             
         Returns:
             Tuple of (can_execute, reason)
         """
-        required_cash = (quantity * price) * (1 + self.transaction_fees)
+        # Ensure whole shares
+        if not isinstance(quantity, int) or quantity <= 0:
+            return False, f"Quantity must be a positive whole number. Received: {quantity}"
+        
+        transaction_value = quantity * price
+        costs = self.calculate_indian_trading_costs(transaction_value, is_buy=True)
+        required_cash = transaction_value + costs['total_costs']
         
         if required_cash > self.cash:
-            return False, f"Insufficient cash. Required: {required_cash:.2f}, Available: {self.cash:.2f}"
+            return False, f"Insufficient cash. Required: ₹{required_cash:.2f}, Available: ₹{self.cash:.2f}"
         
         # Check position size limits
         if stock_symbol in self.positions:
@@ -235,17 +316,21 @@ class PortfolioManager:
         
         return True, "Order can be executed"
     
-    def can_sell(self, stock_symbol: str, quantity: float) -> Tuple[bool, str]:
+    def can_sell(self, stock_symbol: str, quantity: int) -> Tuple[bool, str]:
         """
         Check if a sell order can be executed.
         
         Args:
             stock_symbol: Stock to sell
-            quantity: Quantity to sell
+            quantity: Quantity to sell (whole shares)
             
         Returns:
             Tuple of (can_execute, reason)
         """
+        # Ensure whole shares
+        if not isinstance(quantity, int) or quantity <= 0:
+            return False, f"Quantity must be a positive whole number. Received: {quantity}"
+        
         if stock_symbol not in self.positions:
             return False, f"No position in {stock_symbol}"
         
@@ -258,14 +343,14 @@ class PortfolioManager:
         
         return True, "Order can be executed"
     
-    def execute_buy(self, stock_symbol: str, quantity: float, price: float, 
+    def execute_buy(self, stock_symbol: str, quantity: int, price: float, 
                     timestamp: datetime = None, notes: str = "") -> bool:
         """
         Execute a buy order.
         
         Args:
             stock_symbol: Stock to buy
-            quantity: Quantity to buy
+            quantity: Quantity to buy (whole shares)
             price: Price per share
             timestamp: Transaction timestamp
             notes: Additional notes
@@ -281,9 +366,10 @@ class PortfolioManager:
         if timestamp is None:
             timestamp = datetime.now()
         
-        # Calculate fees
-        fees = (quantity * price) * self.transaction_fees
-        total_cost = (quantity * price) + fees
+        # Calculate Indian trading costs
+        transaction_value = quantity * price
+        costs = self.calculate_indian_trading_costs(transaction_value, is_buy=True)
+        total_cost = transaction_value + costs['total_costs']
         
         # Deduct cash
         self.cash -= total_cost
@@ -321,22 +407,22 @@ class PortfolioManager:
             quantity=quantity,
             price=price,
             timestamp=timestamp,
-            fees=fees,
-            notes=notes
+            fees=costs['total_costs'],
+            notes=f"{notes} | Costs: STT=₹{costs['stt']:.2f}, TC=₹{costs['transaction_charges']:.2f}, Stamp=₹{costs['stamp_charges']:.2f}, GST=₹{costs['gst']:.2f}"
         )
         self.transactions.append(transaction)
         
-        self.logger.info(f"Buy order executed: {quantity} {stock_symbol} @ {price:.2f}")
+        self.logger.info(f"Buy order executed: {quantity} {stock_symbol} @ ₹{price:.2f} (Total cost: ₹{total_cost:.2f})")
         return True
     
-    def execute_sell(self, stock_symbol: str, quantity: float, price: float,
+    def execute_sell(self, stock_symbol: str, quantity: int, price: float,
                      timestamp: datetime = None, notes: str = "") -> bool:
         """
         Execute a sell order.
         
         Args:
             stock_symbol: Stock to sell
-            quantity: Quantity to sell
+            quantity: Quantity to sell (whole shares)
             price: Price per share
             timestamp: Transaction timestamp
             notes: Additional notes
@@ -352,9 +438,10 @@ class PortfolioManager:
         if timestamp is None:
             timestamp = datetime.now()
         
-        # Calculate fees
-        fees = (quantity * price) * self.transaction_fees
-        total_proceeds = (quantity * price) - fees
+        # Calculate Indian trading costs
+        transaction_value = quantity * price
+        costs = self.calculate_indian_trading_costs(transaction_value, is_buy=False)
+        total_proceeds = transaction_value - costs['total_costs']
         
         # Add cash
         self.cash += total_proceeds
@@ -377,12 +464,12 @@ class PortfolioManager:
             quantity=quantity,
             price=price,
             timestamp=timestamp,
-            fees=fees,
-            notes=notes
+            fees=costs['total_costs'],
+            notes=f"{notes} | Costs: STT=₹{costs['stt']:.2f}, TC=₹{costs['transaction_charges']:.2f}, GST=₹{costs['gst']:.2f}"
         )
         self.transactions.append(transaction)
         
-        self.logger.info(f"Sell order executed: {quantity} {stock_symbol} @ {price:.2f}")
+        self.logger.info(f"Sell order executed: {quantity} {stock_symbol} @ ₹{price:.2f} (Net proceeds: ₹{total_proceeds:.2f})")
         return True
     
     def update_market_prices(self, market_data: Dict[str, float], timestamp: datetime = None):
