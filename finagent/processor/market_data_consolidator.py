@@ -26,6 +26,7 @@ class MarketDataConsolidator:
         self.market_data_path = self.data_root / "indian_market"
         self.cleaned_data_path = self.data_root / "cleaned_data"
         self.social_media_path = Path("social_media_data/cleaned_data")
+        self.news_data_path = Path("news/stocks_news_data")
         
         # Stock list
         self.stocks = self._load_stock_list()
@@ -62,10 +63,11 @@ class MarketDataConsolidator:
             fundamental_data = self._load_fundamental_data(stock_symbol)
             sentiment_data = self._load_sentiment_data(stock_symbol)
             corporate_data = self._load_corporate_data(stock_symbol)
+            news_data = self._load_news_data(stock_symbol)
             
             # Merge all data sources
             consolidated_df = self._merge_data_sources(
-                price_data, fundamental_data, sentiment_data, corporate_data
+                price_data, fundamental_data, sentiment_data, corporate_data, news_data
             )
             
             # Fill missing values and align timestamps
@@ -459,6 +461,104 @@ class MarketDataConsolidator:
             self.logger.error(f"Error analyzing sentiment: {e}")
             return [0.0] * original_text_count  # Default to neutral score if error occurs
     
+    def _load_news_data(self, stock_symbol: str) -> pd.DataFrame:
+        """Load and process news data from CSV files using FinBERT sentiment analysis."""
+        all_news_data = []
+        
+        try:
+            # Load Economic Times Headlines for 2024 and 2025
+            for year in [2024, 2025]:
+                news_file = self.news_data_path / f"economic_times_headlines_{year}.csv"
+                if news_file.exists():
+                    try:
+                        df = pd.read_csv(news_file)
+                        if 'Date' in df.columns and 'Headline' in df.columns:
+                            df['date'] = pd.to_datetime(df['Date'], format='%d-%m-%Y', errors='coerce')
+                            df.dropna(subset=['date'], inplace=True)
+                            
+                            # Filter headlines that might be relevant to the stock
+                            # Simple keyword matching - headlines containing stock symbol
+                            stock_keywords = [stock_symbol.lower(), stock_symbol.upper()]
+                            relevant_headlines = df[
+                                df['Headline'].str.contains('|'.join(stock_keywords), case=False, na=False)
+                            ].copy()
+                            
+                            if not relevant_headlines.empty:
+                                # Perform FinBERT sentiment analysis
+                                sentiments = self._analyze_sentiment(relevant_headlines['Headline'].tolist())
+                                relevant_headlines['sentiment_score'] = sentiments
+                                relevant_headlines['news_source'] = f'economic_times_{year}'
+                                all_news_data.append(relevant_headlines[['date', 'Headline', 'sentiment_score', 'news_source']])
+                                
+                    except Exception as e:
+                        self.logger.warning(f"Error processing {news_file}: {e}")
+            
+            # Load Indian Stock News
+            indian_news_file = self.news_data_path / "indian_stock_news.csv"
+            if indian_news_file.exists():
+                try:
+                    df = pd.read_csv(indian_news_file)
+                    if 'published_at' in df.columns and 'symbols' in df.columns:
+                        # Filter news for the specific stock symbol
+                        stock_news = df[df['symbols'].str.contains(stock_symbol, case=False, na=False)].copy()
+                        
+                        if not stock_news.empty:
+                            stock_news['date'] = pd.to_datetime(stock_news['published_at'], errors='coerce').dt.date
+                            stock_news['date'] = pd.to_datetime(stock_news['date'])
+                            stock_news.dropna(subset=['date'], inplace=True)
+                            
+                            # Combine title and description for sentiment analysis
+                            combined_text = []
+                            for _, row in stock_news.iterrows():
+                                text_parts = []
+                                if pd.notna(row.get('title')):
+                                    text_parts.append(str(row['title']))
+                                if pd.notna(row.get('description')):
+                                    text_parts.append(str(row['description']))
+                                combined_text.append(' '.join(text_parts) if text_parts else '')
+                            
+                            # Perform FinBERT sentiment analysis
+                            sentiments = self._analyze_sentiment(combined_text)
+                            stock_news['sentiment_score'] = sentiments
+                            stock_news['news_source'] = 'indian_stock_news'
+                            stock_news['Headline'] = stock_news.get('title', '')
+                            
+                            all_news_data.append(stock_news[['date', 'Headline', 'sentiment_score', 'news_source']])
+                            
+                except Exception as e:
+                    self.logger.warning(f"Error processing {indian_news_file}: {e}")
+            
+            # Combine all news data
+            if not all_news_data:
+                return pd.DataFrame()
+                
+            combined_news = pd.concat(all_news_data, ignore_index=True)
+            combined_news['date'] = pd.to_datetime(combined_news['date'])
+            
+            # Aggregate news sentiment by date
+            daily_news = combined_news.groupby('date').agg({
+                'sentiment_score': ['mean', 'count', 'std'],
+                'news_source': lambda x: list(x.unique())
+            }).round(4)
+            
+            # Flatten column names
+            daily_news.columns = ['_'.join(col).strip() for col in daily_news.columns.values]
+            daily_news.rename(columns={
+                'sentiment_score_mean': 'news_sentiment_mean',
+                'sentiment_score_count': 'news_articles_count',
+                'sentiment_score_std': 'news_sentiment_std',
+                'news_source_<lambda>': 'news_sources'
+            }, inplace=True)
+            
+            # Fill NaN std values with 0 (happens when only 1 article per day)
+            daily_news['news_sentiment_std'].fillna(0, inplace=True)
+            
+            return daily_news
+            
+        except Exception as e:
+            self.logger.error(f"Error loading news data for {stock_symbol}: {e}")
+            return pd.DataFrame()
+    
     def _load_corporate_data(self, stock_symbol: str) -> pd.DataFrame:
         """Load corporate actions and news data with FinBERT sentiment analysis."""
         stock_path = self.cleaned_data_path / stock_symbol
@@ -553,7 +653,7 @@ class MarketDataConsolidator:
 
     
     def _merge_data_sources(self, price_data: pd.DataFrame, fundamental_data: pd.DataFrame, 
-                        sentiment_data: pd.DataFrame, corporate_data: pd.DataFrame) -> pd.DataFrame:
+                        sentiment_data: pd.DataFrame, corporate_data: pd.DataFrame, news_data: pd.DataFrame) -> pd.DataFrame:
         """Merge all data sources into a single DataFrame."""
         try:
             # Ensure price data is not empty
@@ -575,6 +675,10 @@ class MarketDataConsolidator:
             # Merge corporate data
             if not corporate_data.empty:
                 merged_df = merged_df.join(corporate_data, how='outer')
+            
+            # Merge news data
+            if not news_data.empty:
+                merged_df = merged_df.join(news_data, how='outer')
 
             return merged_df
 
@@ -609,14 +713,14 @@ class MarketDataConsolidator:
             self.logger.warning("No fundamental columns found in DataFrame.")
 
         # Forward fill corporate action data
-        corporate_cols = [col for col in df.columns if col.startswith(('dividend_', 'bonus_', 'split_', 'news_'))]
+        corporate_cols = [col for col in df.columns if col.startswith(('dividend_', 'bonus_', 'split_'))]
         if corporate_cols:
             df[corporate_cols] = df[corporate_cols].fillna(0)
         else:
             self.logger.warning("No corporate action columns found in DataFrame.")
 
         # Fill remaining NaN values with 0 for sentiment and other metrics
-        sentiment_cols = [col for col in df.columns if col.startswith(('reddit_', 'twitter_'))]
+        sentiment_cols = [col for col in df.columns if col.startswith(('reddit_', 'twitter_', 'news_'))]
         if sentiment_cols:
             df[sentiment_cols] = df[sentiment_cols].fillna(0)
         else:
