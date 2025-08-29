@@ -17,35 +17,47 @@ class PositionSide(Enum):
 
 @dataclass
 class Position:
-    """Individual position in a stock"""
+    """Individual position in a stock with FIFO lots for accurate gains/holding periods"""
     stock_symbol: str
-    quantity: int  # Changed to int for whole shares
     side: PositionSide
-    entry_price: float
-    entry_date: datetime
-    current_price: float
-    last_updated: datetime
-    
+    lots: List[Dict[str, Any]] = field(default_factory=list)  # each lot: {'quantity', 'price', 'entry_date', 'fees'}
+    current_price: float = 0.0
+    last_updated: datetime = None
+
+    @property
+    def quantity(self) -> int:
+        return sum(int(lot['quantity']) for lot in self.lots)
+
+    @property
+    def entry_price(self) -> float:
+        total_qty = self.quantity
+        if total_qty == 0:
+            return 0.0
+        total_cost = sum(lot['quantity'] * lot['price'] + lot.get('fees', 0.0) for lot in self.lots)
+        return total_cost / total_qty
+
+    @property
+    def entry_date(self) -> Optional[datetime]:
+        # earliest lot entry date
+        if not self.lots:
+            return None
+        return min(lot['entry_date'] for lot in self.lots)
+
     @property
     def market_value(self) -> float:
-        """Current market value of the position"""
         return self.quantity * self.current_price
-    
+
     @property
     def unrealized_pnl(self) -> float:
-        """Unrealized profit/loss"""
-        if self.side == PositionSide.LONG:
-            return (self.current_price - self.entry_price) * self.quantity
-        elif self.side == PositionSide.SHORT:
-            return (self.entry_price - self.current_price) * self.quantity
-        return 0.0
-    
+        # Sum over lots
+        pnl = 0.0
+        for lot in self.lots:
+            pnl += (self.current_price - lot['price']) * lot['quantity']
+        return pnl
+
     @property
     def unrealized_pnl_percent(self) -> float:
-        """Unrealized P&L as percentage of entry value"""
-        if self.entry_price == 0:
-            return 0.0
-        entry_value = self.entry_price * self.quantity
+        entry_value = sum(lot['price'] * lot['quantity'] + lot.get('fees', 0.0) for lot in self.lots)
         if entry_value == 0:
             return 0.0
         return (self.unrealized_pnl / entry_value) * 100
@@ -99,6 +111,20 @@ class PortfolioManager:
         self.max_drawdown = 0.0
         self.peak_value = initial_cash
         
+        # --- TAX / CAPITAL GAINS bookkeeping ---
+        # Total realized short-term and long-term gains
+        self.total_stcg = 0.0
+        self.total_ltcg = 0.0
+        # Total tax paid so far
+        self.total_tax_paid = 0.0
+        # STCG rate change effective date (23 Jul 2024) as you referenced
+        self.stcg_rate_change_date = datetime(2024, 7, 23)
+        self.stcg_rate_before = 0.15   # 15% for transfers before change date
+        self.stcg_rate_after = 0.20    # 20% for transfers on/after change date
+        self.cess_rate = 0.04          # 4% health & education cess
+        # Optional surcharge (set to 0.0 unless you want to simulate)
+        self.surcharge_rate = 0.0
+
         # Setup logging
         self.logger = logging.getLogger(__name__)
         
@@ -195,6 +221,111 @@ class PortfolioManager:
                 max_shares = shares - 1
         
         return max_shares
+
+    def _add_buy_lot(self, stock_symbol: str, quantity: int, price: float, fees: float, timestamp: datetime):
+        """Append a buy lot to the position (create position if not exists)"""
+        lot = {
+            'quantity': int(quantity),
+            'price': float(price),
+            'entry_date': timestamp,
+            'fees': float(fees)
+        }
+        if stock_symbol in self.positions:
+            position = self.positions[stock_symbol]
+            position.lots.append(lot)
+            position.current_price = price
+            position.last_updated = timestamp
+        else:
+            position = Position(
+                stock_symbol=stock_symbol,
+                side=PositionSide.LONG,
+                lots=[lot],
+                current_price=price,
+                last_updated=timestamp
+            )
+            self.positions[stock_symbol] = position
+
+    def _match_sell_lots(self, stock_symbol: str, sell_quantity: int, sell_price: float,
+                         sell_costs: Dict[str, float], timestamp: datetime) -> Dict[str, Any]:
+        """
+        Match sell_quantity to existing lots FIFO, compute realized gains per lot,
+        classify into STCG / LTCG, and return summary dict:
+          {
+            'stcg': <amount>,
+            'ltcg': <amount>,
+            'tax': <computed_tax>,
+            'gain_details': [ {lot_qty, lot_price, buy_fees, sell_proceeds, holding_days, gain} ... ]
+          }
+        """
+        result = {'stcg': 0.0, 'ltcg': 0.0, 'tax': 0.0, 'gain_details': []}
+        if stock_symbol not in self.positions:
+            return result
+
+        position = self.positions[stock_symbol]
+        remaining = int(sell_quantity)
+        total_tx_value = sell_quantity * sell_price
+        sell_fees_total = float(sell_costs.get('total_costs', 0.0))
+
+        # Iterate lots FIFO
+        while remaining > 0 and position.lots:
+            lot = position.lots[0]
+            lot_qty = int(lot['quantity'])
+            take_qty = min(lot_qty, remaining)
+
+            buy_price = float(lot['price'])
+            buy_fees = float(lot.get('fees', 0.0))
+            # allocate buy fees proportionally to quantity taken
+            buy_fee_alloc = (take_qty / lot_qty) * buy_fees if lot_qty > 0 else 0.0
+
+            sell_proceeds = take_qty * sell_price
+            # allocate sell fees proportionally across the sell transaction value
+            sell_fee_alloc = (sell_proceeds / total_tx_value) * sell_fees_total if total_tx_value > 0 else 0.0
+
+            cost_basis = (take_qty * buy_price) + buy_fee_alloc
+            gain = sell_proceeds - cost_basis - sell_fee_alloc
+
+            holding_days = (timestamp.date() - lot['entry_date'].date()).days if lot.get('entry_date') else None
+
+            # classify
+            if holding_days is not None and holding_days <= 365:
+                result['stcg'] += gain
+            else:
+                result['ltcg'] += gain
+
+            result['gain_details'].append({
+                'lot_qty': take_qty,
+                'lot_price': buy_price,
+                'buy_fee_alloc': buy_fee_alloc,
+                'sell_fee_alloc': sell_fee_alloc,
+                'sell_proceeds': sell_proceeds,
+                'holding_days': holding_days,
+                'gain': gain
+            })
+
+            # reduce or pop lot
+            if take_qty == lot_qty:
+                position.lots.pop(0)
+            else:
+                lot['quantity'] = lot_qty - take_qty
+
+            remaining -= take_qty
+
+        # If remaining > 0, user tried to sell more than lots (should be prevented by can_sell)
+        # Compute tax for STCG only (LTCG handling left in ledger)
+        stcg_amount = result['stcg']
+        tax_on_stcg = 0.0
+        if stcg_amount > 0:
+            rate = self.stcg_rate_after if timestamp.date() >= self.stcg_rate_change_date.date() else self.stcg_rate_before
+            tax_on_stcg = stcg_amount * rate
+            # add surcharge if any
+            if self.surcharge_rate:
+                tax_on_stcg += tax_on_stcg * self.surcharge_rate
+            # cess
+            tax_on_stcg += tax_on_stcg * self.cess_rate
+
+        result['tax'] = tax_on_stcg
+        return result
+
     
     def get_portfolio_state(self) -> Dict[str, Any]:
         """
@@ -374,30 +505,12 @@ class PortfolioManager:
         # Deduct cash
         self.cash -= total_cost
         
-        # Update or create position
-        if stock_symbol in self.positions:
-            # Add to existing position
-            position = self.positions[stock_symbol]
-            total_quantity = position.quantity + quantity
-            total_cost_basis = (position.entry_price * position.quantity) + (price * quantity)
-            avg_price = total_cost_basis / total_quantity
-            
-            position.quantity = total_quantity
-            position.entry_price = avg_price
-            position.current_price = price
-            position.last_updated = timestamp
-        else:
-            # Create new position
-            position = Position(
-                stock_symbol=stock_symbol,
-                quantity=quantity,
-                side=PositionSide.LONG,
-                entry_price=price,
-                entry_date=timestamp,
-                current_price=price,
-                last_updated=timestamp
-            )
-            self.positions[stock_symbol] = position
+        # Record buy lot for FIFO bookkeeping
+        self._add_buy_lot(stock_symbol=stock_symbol,
+                          quantity=quantity,
+                          price=price,
+                          fees=costs['total_costs'],
+                          timestamp=timestamp)
         
         # Record transaction
         transaction = Transaction(
@@ -418,45 +531,65 @@ class PortfolioManager:
     def execute_sell(self, stock_symbol: str, quantity: int, price: float,
                      timestamp: datetime = None, notes: str = "") -> bool:
         """
-        Execute a sell order.
-        
-        Args:
-            stock_symbol: Stock to sell
-            quantity: Quantity to sell (whole shares)
-            price: Price per share
-            timestamp: Transaction timestamp
-            notes: Additional notes
-            
-        Returns:
-            True if successful, False otherwise
+        Execute a sell order with FIFO matching to compute realized gains and STCG tax.
         """
         can_sell, reason = self.can_sell(stock_symbol, quantity)
         if not can_sell:
             self.logger.warning(f"Sell order rejected: {reason}")
             return False
-        
+
         if timestamp is None:
             timestamp = datetime.now()
-        
-        # Calculate Indian trading costs
+
+        # Calculate Indian trading costs (sell side)
         transaction_value = quantity * price
         costs = self.calculate_indian_trading_costs(transaction_value, is_buy=False)
         total_proceeds = transaction_value - costs['total_costs']
-        
-        # Add cash
+
+        # Match lots FIFO and compute realized gains & tax
+        match_result = self._match_sell_lots(stock_symbol=stock_symbol,
+                                             sell_quantity=quantity,
+                                             sell_price=price,
+                                             sell_costs=costs,
+                                             timestamp=timestamp)
+
+        stcg = match_result.get('stcg', 0.0)
+        ltcg = match_result.get('ltcg', 0.0)
+        tax = match_result.get('tax', 0.0)
+
+        # Update overall ledger totals
+        self.total_stcg += stcg
+        self.total_ltcg += ltcg
+        self.total_tax_paid += tax
+
+        # Now update cash: add proceeds then subtract tax
         self.cash += total_proceeds
-        
-        # Update position
-        position = self.positions[stock_symbol]
-        position.quantity -= quantity
-        position.current_price = price
-        position.last_updated = timestamp
-        
-        # Remove position if quantity becomes 0
-        if position.quantity == 0:
-            del self.positions[stock_symbol]
-        
-        # Record transaction
+        if tax > 0:
+            # Deduct tax immediately
+            self.cash -= tax
+            # Record tax as separate transaction (for audit)
+            tax_tx = Transaction(
+                transaction_id=self._generate_transaction_id(),
+                stock_symbol=stock_symbol,
+                transaction_type="TAX",
+                quantity=0,
+                price=0.0,
+                timestamp=timestamp,
+                fees=tax,
+                notes=f"STCG tax deducted on realized STCG ₹{stcg:.2f} = tax ₹{tax:.2f}"
+            )
+            self.transactions.append(tax_tx)
+
+        # Update position (quantity and current price)
+        position = self.positions.get(stock_symbol)
+        if position:
+            position.current_price = price
+            position.last_updated = timestamp
+            # If all lots consumed, remove position
+            if position.quantity == 0:
+                del self.positions[stock_symbol]
+
+        # Record sell transaction
         transaction = Transaction(
             transaction_id=self._generate_transaction_id(),
             stock_symbol=stock_symbol,
@@ -465,12 +598,20 @@ class PortfolioManager:
             price=price,
             timestamp=timestamp,
             fees=costs['total_costs'],
-            notes=f"{notes} | Costs: STT=₹{costs['stt']:.2f}, TC=₹{costs['transaction_charges']:.2f}, GST=₹{costs['gst']:.2f}"
+            notes=f"{notes} | Costs: STT=₹{costs['stt']:.2f}, TC=₹{costs['transaction_charges']:.2f}, GST=₹{costs['gst']:.2f} | Realized STCG=₹{stcg:.2f}, LTCG=₹{ltcg:.2f}, TAX=₹{tax:.2f}"
         )
         self.transactions.append(transaction)
-        
-        self.logger.info(f"Sell order executed: {quantity} {stock_symbol} @ ₹{price:.2f} (Net proceeds: ₹{total_proceeds:.2f})")
+
+        self.logger.info(f"Sell order executed: {quantity} {stock_symbol} @ ₹{price:.2f} (Net proceeds: ₹{total_proceeds:.2f}) Realized STCG: ₹{stcg:.2f}, TAX deducted: ₹{tax:.2f}")
         return True
+
+    def get_tax_summary(self) -> Dict[str, float]:
+        """Return a quick summary of realized gains and taxes paid"""
+        return {
+            'total_stcg': self.total_stcg,
+            'total_ltcg': self.total_ltcg,
+            'total_tax_paid': self.total_tax_paid
+        }
     
     def update_market_prices(self, market_data: Dict[str, float], timestamp: datetime = None):
         """

@@ -42,7 +42,7 @@ train_env = DummyVecEnv([lambda: PortfolioEnv(
 # We pass the environment to the PPO agent, enable verbose logging,
 # and specify the directory for TensorBoard logs.
 
-RESUME_MODEL_PATH = "models/PPO-1755598712/checkpoint_955000_steps.zip"  # Path to a saved model to resume training, if any
+RESUME_MODEL_PATH = "models/PPO-1756379121/checkpoint_950000_steps.zip"  # Path to a saved model to resume training, if any
 
 if RESUME_MODEL_PATH and os.path.exists(RESUME_MODEL_PATH):
     print(f"Resuming training from {RESUME_MODEL_PATH}")
@@ -73,7 +73,7 @@ else:
 # The total number of steps the agent will be trained for.
 # Start with a smaller number (e.g., 20,000) for testing, 
 # then increase significantly (e.g., 1,000,000+) for real training.
-TIMESTEPS = 50000
+TIMESTEPS = 0
 SAVE_FREQ = 50000
 
 print("--- Starting Agent Training ---")

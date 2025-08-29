@@ -32,3 +32,4 @@ transformers
 torch
 stable-baselines3[extra]
 tensorboard
+fuzzywuzzy

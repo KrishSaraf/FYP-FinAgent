@@ -80,7 +80,7 @@ class TemporalDataAligner:
             aligned_df[fundamental_cols] = aligned_df[fundamental_cols].fillna(method='ffill')
             
             # Forward fill corporate action data
-            corporate_cols = [col for col in df.columns if col.startswith(('dividend_', 'bonus_', 'split_', 'news_'))]
+            corporate_cols = [col for col in df.columns if col.startswith(('dividend_', 'bonus_', 'split_',))]
             aligned_df[corporate_cols] = aligned_df[corporate_cols].fillna(method='ffill')
             
             # Fill remaining NaN values

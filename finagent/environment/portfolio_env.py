@@ -424,7 +424,7 @@ class PortfolioEnv(gym.Env):
                 
                 if symbol in current_prices:
                     price = current_prices[symbol]
-                    quantity_to_sell = amount_to_sell / price
+                    quantity_to_sell = round(amount_to_sell / price)
                     self.portfolio_manager.execute_sell(symbol, quantity_to_sell, price, timestamp=current_date)
 
         # Then, process buy orders with the available cash
@@ -436,7 +436,7 @@ class PortfolioEnv(gym.Env):
                 
                 if symbol in current_prices:
                     price = current_prices[symbol]
-                    quantity_to_buy = target_market_value / price
+                    quantity_to_buy = round(target_market_value / price)
                     self.portfolio_manager.execute_buy(symbol, quantity_to_buy, price, timestamp=current_date)
 
     def _get_current_prices(self, date):
@@ -445,23 +445,23 @@ class PortfolioEnv(gym.Env):
         prices = {}
         main_feature = "price"
               # Debug prints
-        print(f"DEBUG: Getting prices for date: {date}")
-        print(f"DEBUG: Data columns type: {type(self.data.columns)}")
-        print(f"DEBUG: First 5 columns: {self.data.columns[:5].tolist()}")
-        print(f"DEBUG: Main feature: {self.features[0]}")
+        # print(f"DEBUG: Getting prices for date: {date}")
+        # print(f"DEBUG: Data columns type: {type(self.data.columns)}")
+        # print(f"DEBUG: First 5 columns: {self.data.columns[:5].tolist()}")
+        # print(f"DEBUG: Main feature: {self.features[0]}")
 
         for symbol in self.stocks:
             if isinstance(self.data.columns, pd.MultiIndex):
                 # Check both possible MultiIndex orientations
                 if (symbol, main_feature) in self.data.columns:
                     prices[symbol] = current_data[(symbol, main_feature)]
-                    print(f"DEBUG: Found price for {symbol}: {prices[symbol]}")
+                    # print(f"DEBUG: Found price for {symbol}: {prices[symbol]}")
                 elif (main_feature, symbol) in self.data.columns:
                     prices[symbol] = current_data[(main_feature, symbol)]
-                    print(f"DEBUG: Found price for {symbol}: {prices[symbol]} (reversed index)")
-                else:
-                    print(f"DEBUG: Price column not found for {symbol}")
-                    print(f"DEBUG: Available columns for {symbol}: {[col for col in self.data.columns if symbol in str(col)]}")
+                    # print(f"DEBUG: Found price for {symbol}: {prices[symbol]} (reversed index)")
+                # else:
+                    # print(f"DEBUG: Price column not found for {symbol}")
+                    # print(f"DEBUG: Available columns for {symbol}: {[col for col in self.data.columns if symbol in str(col)]}")
         
         
         for symbol in self.stocks:

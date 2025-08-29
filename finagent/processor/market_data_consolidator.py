@@ -8,6 +8,7 @@ from concurrent.futures import ThreadPoolExecutor
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
 import torch
 import re
+from fuzzywuzzy import fuzz, process
 from finagent.registry import PROCESSOR
 
 @PROCESSOR.register_module()
@@ -190,6 +191,7 @@ class MarketDataConsolidator:
                 if period_end_date not in data_by_period_end:
                     data_by_period_end[period_end_date] = {}
                 data_by_period_end[period_end_date].update(metrics_series.to_dict())
+                # print(data_by_period_end)
             except Exception as e:
                 self.logger.error(f"Error processing annual file {file_path}: {e}")
 
@@ -205,13 +207,15 @@ class MarketDataConsolidator:
                 
                 # --- Step 2: Extract metadata from the file content ---
                 metrics_series = df.set_index('key')['value']
-                
+                # print(metrics_series)
                 # Get FiscalYear from its dedicated column (using the first row's value).
                 csv_fiscal_year = int(df['FiscalYear'].iloc[0])
-                
+                # print(csv_fiscal_year)
                 # Extract period details. periodNumber is essential for this calculation.
                 period_length = pd.to_numeric(metrics_series.get('periodLength'), errors='coerce')
+                # print(period_length)
                 period_type = metrics_series.get('periodType', 'Months').lower() # Default to months
+                # print(period_type)
 
                 # Validate that we have the necessary data to proceed
                 if pd.isna(period_length):
@@ -230,11 +234,13 @@ class MarketDataConsolidator:
                 # Example: FY24-Q1 -> 2023-04-01 + 3 months -> 2023-06-30
                 target_end_date = fy_start_date + pd.DateOffset(months=total_months_offset)
                 period_end_date = target_end_date - pd.DateOffset(days=1) + pd.offsets.MonthEnd(0)
+                # print(period_end_date)
 
                 # --- Step 4: Store the loaded metrics with the calculated period-end date ---
                 if period_end_date not in data_by_period_end:
                     data_by_period_end[period_end_date] = {}
                 data_by_period_end[period_end_date].update(metrics_series.to_dict())
+                # print(data_by_period_end)
 
             except Exception as e:
                 self.logger.error(f"Error processing interim file {file_path}: {e}")
@@ -246,6 +252,7 @@ class MarketDataConsolidator:
             return pd.DataFrame()
 
         sorted_period_end_dates = sorted(data_by_period_end.keys())
+        # print(sorted_period_end_dates)
         
         # --- 3. Load Board Meeting Announcements and Match to Data ---
         actions_file = stock_path / "CorporateActions_BoardMeetings.csv"
@@ -263,6 +270,7 @@ class MarketDataConsolidator:
             relevant_announcements = actions_df[
                 actions_df['purpose'].str.contains('result', case=False, na=False)
             ].copy()
+            # print(relevant_announcements)
 
             for _, announcement in relevant_announcements.iterrows():
                 announcement_date = announcement['date']
@@ -274,6 +282,7 @@ class MarketDataConsolidator:
                         matching_period_end = end_date
                     else:
                         break # Stop once we've passed the announcement date
+                # print(f"Matching {announcement_date} to {matching_period_end}")
                 
                 if matching_period_end:
                     # Start with the base metrics, then update with period-specific data
@@ -281,6 +290,7 @@ class MarketDataConsolidator:
                     record.update(data_by_period_end[matching_period_end])
                     record['date'] = announcement_date # This is the announcement date
                     record['period_end_date'] = matching_period_end # Add for clarity
+                    # print(record)
                     all_periods_data.append(record)
 
         except Exception as e:
@@ -304,6 +314,7 @@ class MarketDataConsolidator:
         fundamental_df.columns = [
             f"metric_{c}" if c != 'period_end_date' else c for c in fundamental_df.columns
         ]
+        # print(fundamental_df.head())
         
         return fundamental_df
     
@@ -332,19 +343,21 @@ class MarketDataConsolidator:
 
                     # Aggregate daily sentiment metrics
                     daily_reddit = df.groupby('date').agg({
-                        'sentiment_title': lambda x: x.value_counts().to_dict(),  # Count sentiment labels
-                        'sentiment_body': lambda x: x.value_counts().to_dict(),  # Count sentiment labels
+                        'sentiment_title': ['mean', 'std'],  # Count sentiment labels
+                        'sentiment_body': ['mean', 'std'],  # Count sentiment labels
                         'score': ['mean', 'sum', 'count'],
                         'num_comments': 'sum'
-                    }).round(2)
+                    }).round(4)
                     
                     # Flatten the MultiIndex columns
                     daily_reddit.columns = ['_'.join(col).strip() for col in daily_reddit.columns.values]
 
                     # Now rename the flattened columns
                     daily_reddit.rename(columns={
-                        'sentiment_title_<lambda>': 'reddit_title_sentiments',
-                        'sentiment_body_<lambda>': 'reddit_body_sentiments',
+                        'sentiment_title_mean': 'reddit_title_sentiments_mean',
+                        'sentiment_title_std': 'reddit_title_sentiments_std',
+                        'sentiment_body_mean': 'reddit_body_sentiments',
+                        'sentiment_body_std': 'reddit_body_sentiments_std',
                         'score_mean': 'reddit_score_mean',
                         'score_sum': 'reddit_score_sum',
                         'score_count': 'reddit_posts_count', # score_count is the number of posts
@@ -371,17 +384,18 @@ class MarketDataConsolidator:
 
                     # Aggregate daily Twitter metrics
                     daily_twitter = df.groupby('date').agg({
-                        'sentiment': lambda x: x.value_counts().to_dict(),  # Count sentiment labels
+                        'sentiment': ['mean', 'std'],  # Count sentiment labels
                         'like_count': ['mean', 'sum'],
                         'retweet_count': ['mean', 'sum'],
                         'reply_count': ['mean', 'sum'],
                         'view_count': ['mean', 'sum']
-                    }).round(2)
+                    }).round(4)
                     
                     daily_twitter.columns = ['_'.join(col).strip() for col in daily_twitter.columns.values]
 
                     daily_twitter.rename(columns={
-                        'sentiment_<lambda>': 'twitter_sentiments',
+                        'sentiment_mean': 'twitter_sentiments_mean',
+                        'sentiment_std': 'twitter_sentiments_std',
                         'like_count_mean': 'twitter_like_mean',
                         'like_count_sum': 'twitter_like_sum',
                         'retweet_count_mean': 'twitter_retweet_mean',
@@ -463,6 +477,40 @@ class MarketDataConsolidator:
     
     def _load_news_data(self, stock_symbol: str) -> pd.DataFrame:
         """Load and process news data from CSV files using FinBERT sentiment analysis."""
+
+        def get_relevant_headlines_fuzzy(df, stock_symbol, min_score=75):
+            """Use fuzzy matching to find relevant headlines"""
+            relevant_rows = []
+            
+            # Create search terms
+            search_terms = [
+                stock_symbol.upper(),
+                f"${stock_symbol.upper()}",
+                stock_symbol.lower(),
+                # Add company name if available
+            ]
+            
+            for idx, headline in df['Headline'].fillna('').items():
+                max_score = 0
+                
+                # Check against each search term
+                for term in search_terms:
+                    # Partial ratio is good for finding terms within longer strings
+                    score = fuzz.partial_ratio(term.lower(), headline.lower())
+                    max_score = max(max_score, score)
+                
+                if max_score >= min_score:
+                    relevant_rows.append((idx, max_score))
+            
+            if relevant_rows:
+                indices, scores = zip(*relevant_rows)
+                relevant_headlines = df.loc[list(indices)].copy()
+                relevant_headlines['fuzzy_score'] = scores
+                return relevant_headlines.sort_values('fuzzy_score', ascending=False)
+            else:
+                return df.iloc[0:0].copy()  # Empty DataFrame with same structure
+
+
         all_news_data = []
         
         try:
@@ -476,12 +524,8 @@ class MarketDataConsolidator:
                             df['date'] = pd.to_datetime(df['Date'], format='%d-%m-%Y', errors='coerce')
                             df.dropna(subset=['date'], inplace=True)
                             
-                            # Filter headlines that might be relevant to the stock
-                            # Simple keyword matching - headlines containing stock symbol
-                            stock_keywords = [stock_symbol.lower(), stock_symbol.upper()]
-                            relevant_headlines = df[
-                                df['Headline'].str.contains('|'.join(stock_keywords), case=False, na=False)
-                            ].copy()
+                            # Use fuzzy matching to find relevant headlines
+                            relevant_headlines = get_relevant_headlines_fuzzy(df, stock_symbol)
                             
                             if not relevant_headlines.empty:
                                 # Perform FinBERT sentiment analysis
