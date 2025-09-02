@@ -4,6 +4,7 @@ import numpy as np
 import pandas as pd
 from typing import Dict, List, Optional, Any
 from pathlib import Path
+from scipy.special import softmax
 
 from finagent.environment.portfolio_manager import PortfolioManager, PositionSide
 
@@ -404,7 +405,8 @@ class PortfolioEnv(gym.Env):
 
     def _take_action(self, action: np.ndarray):
         """Translates target weights from the agent into buy/sell orders."""
-        target_weights = action / np.sum(action) if np.sum(action) > 0 else np.zeros(len(self.stocks))
+        # target_weights = action / np.sum(action) if np.sum(action) > 0 else np.zeros(len(self.stocks))
+        target_weights = softmax(action)  # Alternative normalization which might be better?
         
         portfolio_state = self.portfolio_manager.get_portfolio_state()
         current_weights = np.array([portfolio_state['position_weights'].get(s, 0) for s in self.stocks])
