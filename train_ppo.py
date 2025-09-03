@@ -1,9 +1,10 @@
 import pandas as pd
 from stable_baselines3 import PPO
-from stable_baselines3.common.vec_env import DummyVecEnv
+from stable_baselines3.common.vec_env import SubprocVecEnv, DummyVecEnv
 from stable_baselines3.common.callbacks import CheckpointCallback
 import time
 import os
+import multiprocessing
 
 # Import your custom environment
 from finagent.environment.portfolio_env import PortfolioEnv
@@ -29,12 +30,19 @@ DATA_ROOT = "processed_data/"
 # --- 2. INSTANTIATE THE TRAINING ENVIRONMENT ---
 
 # Important: Stable Baselines3 requires the environment to be "vectorized"
-# We use DummyVecEnv to wrap our single environment.
-train_env = DummyVecEnv([lambda: PortfolioEnv(
-    data_root=DATA_ROOT,
-    start_date=TRAIN_START_DATE,
-    end_date=TRAIN_END_DATE
-)])
+# Function to create a single environment instance
+def make_env(data_root, start_date, end_date):
+    return lambda: PortfolioEnv(
+        data_root=data_root,
+        start_date=start_date,
+        end_date=end_date
+    )
+
+# Use all available CPU cores for parallel environments
+num_cpu = multiprocessing.cpu_count()
+
+# Create a vectorized environment with SubprocVecEnv
+train_env = SubprocVecEnv([make_env(DATA_ROOT, TRAIN_START_DATE, TRAIN_END_DATE) for _ in range(num_cpu)])
 
 # --- 3. CREATE THE PPO AGENT ---
 
@@ -73,7 +81,7 @@ else:
 # The total number of steps the agent will be trained for.
 # Start with a smaller number (e.g., 20,000) for testing, 
 # then increase significantly (e.g., 1,000,000+) for real training.
-TIMESTEPS = 0
+TIMESTEPS = 1_000_000
 SAVE_FREQ = 50000
 
 print("--- Starting Agent Training ---")

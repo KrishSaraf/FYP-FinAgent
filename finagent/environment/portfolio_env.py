@@ -79,7 +79,7 @@ class PortfolioEnv(gym.Env):
         return [p.stem.replace('_aligned', '') for p in self.data_root.glob("*_aligned.csv")]
 
     def _load_and_preprocess_data(self, 
-                               fill_missing_features_with: str = 'zero',  # 'zero', 'nan', 'forward_fill', or 'interpolate'
+                               fill_missing_features_with: str = 'interpolate',  # 'zero', 'nan', 'forward_fill', or 'interpolate'
                                standardize_features: bool = True) -> pd.DataFrame:
         """
         Loads and combines data for all stocks into a single DataFrame.
@@ -118,20 +118,26 @@ class PortfolioEnv(gym.Env):
                 print(f"Error reading headers for {stock_symbol}: {e}")
                 continue
         
-        # Determine the standardized feature set
-        if standardize_features:
-            # Use the intersection of all features (features present in ALL stocks)
-            common_features = set.intersection(*[set(features) for features in stock_features.values()])
-            if not common_features:
-                print("Warning: No common features found across all stocks. Using union of all features.")
-                self.features = sorted(list(all_features))
-            else:
-                self.features = sorted(list(common_features))
-                print(f"Using common features across all stocks: {self.features}")
-        else:
-            # Use all features found across any stock
+                # Determine the standardized feature set
+        if self.use_all_features:
+            # If user explicitly wants all features across stocks, use union
             self.features = sorted(list(all_features))
-            print(f"Using all features found across stocks: {self.features}")
+            print(f"Using ALL features across stocks (union): {self.features}")
+        else:
+            if standardize_features:
+                # Use the intersection of all features (features present in ALL stocks)
+                common_features = set.intersection(*[set(features) for features in stock_features.values()])
+                if not common_features:
+                    print("Warning: No common features found across all stocks. Using union of all features.")
+                    self.features = sorted(list(all_features))
+                else:
+                    self.features = sorted(list(common_features))
+                    print(f"Using common features across all stocks: {self.features}")
+            else:
+                # fallback: use union
+                self.features = sorted(list(all_features))
+                print(f"Using all features found across stocks: {self.features}")
+
         
         self.num_features = len(self.features)
 
@@ -175,18 +181,21 @@ class PortfolioEnv(gym.Env):
                         # Feature missing, handle according to strategy
                         print(f"Feature '{feature}' missing for {stock_symbol}, filling with {fill_missing_features_with}")
                         
+                        # After selecting columns, apply a robust imputation sequence
                         if fill_missing_features_with == 'zero':
-                            processed_df[feature] = 0.0
-                        elif fill_missing_features_with == 'nan':
-                            processed_df[feature] = np.nan
+                            processed_df = processed_df.fillna(0.0)
                         elif fill_missing_features_with == 'forward_fill':
-                            # Create series with NaN and forward fill
-                            processed_df[feature] = np.nan
+                            processed_df = processed_df.ffill().bfill()
                         elif fill_missing_features_with == 'interpolate':
-                            # Create series with NaN for later interpolation
-                            processed_df[feature] = np.nan
+                            processed_df = processed_df.interpolate(method='linear').ffill().bfill()
                         else:
-                            processed_df[feature] = 0.0
+                            # default robust pipeline
+                            processed_df = processed_df.ffill().bfill()
+                            processed_df = processed_df.interpolate().ffill().bfill()
+                
+                    # As a last resort, fill any remaining NaNs with 0
+                    processed_df = processed_df.fillna(0.0)
+
                 
                 # Apply additional filling strategies if needed
                 if fill_missing_features_with == 'forward_fill':
@@ -360,7 +369,7 @@ class PortfolioEnv(gym.Env):
             current_price = 0
             if len(market_window) > 0:
                 # Use the first feature as the main price indicator
-                main_feature = "price"  # Assuming first feature is price-related
+                main_feature = "close"  # Assuming first feature is price-related
                 
                 if isinstance(self.data.columns, pd.MultiIndex):
                     if (symbol, main_feature) in self.data.columns:
@@ -422,11 +431,12 @@ class PortfolioEnv(gym.Env):
             if weight_diff[i] < 0:
                 current_market_value = current_weights[i] * total_value
                 target_market_value = target_weights[i] * total_value
-                amount_to_sell = current_market_value - target_market_value
                 
                 if symbol in current_prices:
                     price = current_prices[symbol]
-                    quantity_to_sell = round(amount_to_sell / price)
+                    desired_shares = round(target_market_value / price)
+                    current_shares = self.portfolio_manager.get_position_summary()['Quantity'].loc[symbol] if symbol in self.portfolio_manager.get_position_summary()['Stock'].values else 0
+                    quantity_to_sell = min(current_shares, current_shares - desired_shares)
                     self.portfolio_manager.execute_sell(symbol, quantity_to_sell, price, timestamp=current_date)
 
         # Then, process buy orders with the available cash
@@ -438,14 +448,16 @@ class PortfolioEnv(gym.Env):
                 
                 if symbol in current_prices:
                     price = current_prices[symbol]
-                    quantity_to_buy = round(target_market_value / price)
+                    desired_shares = round(target_market_value / price)
+                    max_affordable_shares = self.portfolio_manager.get_max_buyable_shares(price)
+                    quantity_to_buy = max(0, min(desired_shares, max_affordable_shares))
                     self.portfolio_manager.execute_buy(symbol, quantity_to_buy, price, timestamp=current_date)
 
     def _get_current_prices(self, date):
         """Helper method to extract current prices for all stocks at a given date."""
         current_data = self.data.loc[date]
         prices = {}
-        main_feature = "price"
+        main_feature = "close"
               # Debug prints
         # print(f"DEBUG: Getting prices for date: {date}")
         # print(f"DEBUG: Data columns type: {type(self.data.columns)}")
@@ -534,7 +546,7 @@ class PortfolioEnv(gym.Env):
         super().reset(seed=seed)
 
         self.portfolio_manager.reset_portfolio()
-        self.current_step = self.window_size # Start with enough data for the first observation
+        self.current_step = 0 # Start from the beginning of the data
         self.done = False
 
         # Update portfolio with initial prices

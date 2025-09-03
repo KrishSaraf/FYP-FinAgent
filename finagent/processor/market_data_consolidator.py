@@ -82,66 +82,81 @@ class MarketDataConsolidator:
             return pd.DataFrame()
     
     def _load_price_data(self, stock_symbol: str) -> pd.DataFrame:
-        """Load price and technical data"""
-        stock_path = self.cleaned_data_path / stock_symbol
-        price_data = {}
+        """Load price and technical data from OHLC data in market_data/new_OHCL."""
+        stock_path = self.data_root / "new OHCL"
+        price_file = stock_path / f"{stock_symbol}_OHLC_Data_Jun06_2024_Jun06_2025.csv"
         
         try:
-            # Load price data
-            price_file = stock_path / "Price on NSE.csv"
             if price_file.exists():
                 df = pd.read_csv(price_file)
-                if 'Date' in df.columns and 'Price on NSE' in df.columns:
-                    df['date'] = pd.to_datetime(df['Date'])
+                if {'Date', 'Open', 'High', 'Low', 'Close', 'Volume', 'VWAP'}.issubset(df.columns):
+                    # Parse the Date column and set it as the index
+                    df['date'] = pd.to_datetime(df['Date'], format='%d-%b-%Y', errors='coerce')
                     df.set_index('date', inplace=True)
-                    price_data['price'] = df['Price on NSE']
+                    
+                    # Select and rename relevant columns
+                    price_data = df[['Open', 'High', 'Low', 'Close', 'Volume', 'VWAP', 'Value_Traded', 'Total_Trades']].copy()
+                    price_data.rename(columns={
+                        'Open': 'open',
+                        'High': 'high',
+                        'Low': 'low',
+                        'Close': 'close',
+                        'Volume': 'volume',
+                        'VWAP': 'vwap',
+                        'Value_Traded': 'value_traded',
+                        'Total_Trades': 'total_trades'
+                    }, inplace=True)
+                    # Drop duplicates based on the date index, keeping the first observation
+                    price_data = price_data[~price_data.index.duplicated(keep='first')]
+                    
                 else:
                     self.logger.warning(f"Missing required columns in {price_file}")
-            
-            # Load volume data
-            volume_file = stock_path / "Volume.csv"
-            if volume_file.exists():
-                df = pd.read_csv(volume_file)
-                if 'Date' in df.columns and 'Volume' in df.columns:
-                    df['date'] = pd.to_datetime(df['Date'])
-                    df.set_index('date', inplace=True)
-                    price_data['volume'] = df['Volume']
-                    price_data['delivery_percentage'] = df.get('Delivery (%)', np.nan)
-                else:
-                    self.logger.warning(f"Missing required columns in {volume_file}")
-            
-            # Load DMA data
-            dma50_file = stock_path / "50 DMA.csv"
-            if dma50_file.exists():
-                df = pd.read_csv(dma50_file)
-                if 'Date' in df.columns and '50 DMA' in df.columns:
-                    df['date'] = pd.to_datetime(df['Date'])
-                    df.set_index('date', inplace=True)
-                    price_data['dma50'] = df['50 DMA']
-                else:
-                    self.logger.warning(f"Missing required columns in {dma50_file}")
-            
-            dma200_file = stock_path / "200 DMA.csv"
-            if dma200_file.exists():
-                df = pd.read_csv(dma200_file)
-                if 'Date' in df.columns and '200 DMA' in df.columns:
-                    df['date'] = pd.to_datetime(df['Date'])
-                    df.set_index('date', inplace=True)
-                    price_data['dma200'] = df['200 DMA']
-                else:
-                    self.logger.warning(f"Missing required columns in {dma200_file}")
-            
-            if price_data:
-                # print(price_data)
-                return pd.DataFrame(price_data)
             else:
-                self.logger.warning(f"No price data found for {stock_symbol}")
-                return pd.DataFrame()
-        
+                self.logger.warning(f"Price file not found: {price_file}")
         except Exception as e:
             self.logger.error(f"Error loading price data for {stock_symbol}: {e}")
+        
+        # Take DMA50 and DMA200 from older data
+        try:
+            # Load DMA50 data
+            dma50_file = self.cleaned_data_path / stock_symbol / "50 DMA.csv"
+            if dma50_file.exists():
+                dma50_df = pd.read_csv(dma50_file)
+                if 'Date' in dma50_df.columns and '50 DMA' in dma50_df.columns:
+                    dma50_df['Date'] = pd.to_datetime(dma50_df['Date'], format='%Y-%m-%d', errors='coerce')
+                    dma50_df.rename(columns={'Date': 'date'}, inplace=True)
+                    dma50_df.set_index('date', inplace=True)
+                    price_data = price_data.join(dma50_df[['50 DMA']], how='left')
+                    price_data.rename(columns={'50 DMA': 'dma_50'}, inplace=True)
+                else:
+                    self.logger.warning(f"DMA50 file for {stock_symbol} is missing required columns.")
+            else:
+                self.logger.warning(f"DMA50 file not found for {stock_symbol}.")
+
+            # Load DMA200 data
+            dma200_file = self.cleaned_data_path / stock_symbol / "200 DMA.csv"
+            if dma200_file.exists():
+                dma200_df = pd.read_csv(dma200_file)
+                if 'Date' in dma200_df.columns and '200 DMA' in dma200_df.columns:
+                    dma200_df['Date'] = pd.to_datetime(dma200_df['Date'], format='%Y-%m-%d', errors='coerce')
+                    dma200_df.rename(columns={'Date': 'date'}, inplace=True)
+                    dma200_df.set_index('date', inplace=True)
+                    price_data = price_data.join(dma200_df[['200 DMA']], how='left')
+                    price_data.rename(columns={'200 DMA': 'dma_200'}, inplace=True)
+                else:
+                    self.logger.warning(f"DMA200 file for {stock_symbol} is missing required columns.")
+            else:
+                self.logger.warning(f"DMA200 file not found for {stock_symbol}.")
+        except Exception as e:
+            self.logger.error(f"Error loading DMA50 or DMA200 data for {stock_symbol}: {e}")
+
+        if price_data.empty:
+            self.logger.warning(f"No price data could be loaded for {stock_symbol}.")
             return pd.DataFrame()
+        else:
+            return price_data
     
+
     def _load_fundamental_data(self, stock_symbol: str) -> pd.DataFrame:
         """
         Loads and consolidates fundamental data to create a time-series dataset.

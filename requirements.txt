@@ -33,3 +33,4 @@ torch
 stable-baselines3[extra]
 tensorboard
 fuzzywuzzy
+sb3_contrib

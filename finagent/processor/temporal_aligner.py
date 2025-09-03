@@ -181,7 +181,7 @@ class TemporalDataAligner:
         df_with_lags = df.copy()
         
         # Create lagged features for price and volume data
-        price_volume_cols = ['price', 'volume', 'dma50', 'dma200']
+        price_volume_cols = ['open', 'high', 'low', 'close', 'volume', 'dma_50', 'dma_200']
         
         for col in price_volume_cols:
             if col in df.columns:
@@ -199,14 +199,14 @@ class TemporalDataAligner:
                 df_with_lags[f'{col}_rolling_std_20'] = df[col].rolling(window=20).std()
                 
                 # Price momentum
-                if col == 'price':
+                if col == 'close':
                     df_with_lags[f'{col}_momentum_5'] = df[col] / df[col].shift(5) - 1
                     df_with_lags[f'{col}_momentum_20'] = df[col] / df[col].shift(20) - 1
         
         # Create technical indicators
-        if 'price' in df.columns and 'volume' in df.columns:
+        if 'close' in df.columns and 'volume' in df.columns:
             # RSI-like indicator
-            price_diff = df['price'].diff()
+            price_diff = df['close'].diff()
             gain = price_diff.where(price_diff > 0, 0)
             loss = -price_diff.where(price_diff < 0, 0)
             
@@ -218,12 +218,12 @@ class TemporalDataAligner:
             df_with_lags['rsi_14'] = rsi
             
             # Volume-price trend
-            df_with_lags['volume_price_trend'] = (df['price'] - df['price'].shift(1)) * df['volume']
+            df_with_lags['volume_price_trend'] = (df['close'] - df['close'].shift(1)) * df['volume']
         
         # Create cross-sectional features
-        if 'dma50' in df.columns and 'dma200' in df.columns:
-            df_with_lags['dma_cross'] = (df['dma50'] > df['dma200']).astype(int)
-            df_with_lags['dma_distance'] = (df['dma50'] - df['dma200']) / df['dma200']
+        if 'dma_50' in df.columns and 'dma_200' in df.columns:
+            df_with_lags['dma_cross'] = (df['dma_50'] > df['dma_200']).astype(int)
+            df_with_lags['dma_distance'] = (df['dma_50'] - df['dma_200']) / df['dma_200']
         
         return df_with_lags
     
@@ -310,8 +310,8 @@ class TemporalDataAligner:
             market_features[date] = {}
             
             # Price-based features
-            prices = [stock_data[stock].loc[date, 'price'] for stock in stock_data 
-                     if 'price' in stock_data[stock].columns and np.all(pd.notna(stock_data[stock].loc[date, 'price']))]
+            prices = [stock_data[stock].loc[date, 'close'] for stock in stock_data 
+                     if 'close' in stock_data[stock].columns and np.all(pd.notna(stock_data[stock].loc[date, 'close']))]
             
             if prices:
                 flat_prices = []
@@ -321,9 +321,9 @@ class TemporalDataAligner:
                     else:
                         flat_prices.append(item)
             if flat_prices:
-                market_features[date]['market_price_mean'] = np.mean(flat_prices)
-                market_features[date]['market_price_std'] = np.std(flat_prices)
-                market_features[date]['market_price_change'] = np.mean([p - flat_prices[0] for p in flat_prices[1:]]) if len(flat_prices) > 1 else 0
+                market_features[date]['market_close_mean'] = np.mean(flat_prices)
+                market_features[date]['market_close_std'] = np.std(flat_prices)
+                market_features[date]['market_close_change'] = np.mean([p - flat_prices[0] for p in flat_prices[1:]]) if len(flat_prices) > 1 else 0
             
             # Volume-based features
             volumes = [stock_data[stock].loc[date, 'volume'] for stock in stock_data 
