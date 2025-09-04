@@ -415,7 +415,13 @@ class PortfolioEnv(gym.Env):
     def _take_action(self, action: np.ndarray):
         """Translates target weights from the agent into buy/sell orders."""
         # target_weights = action / np.sum(action) if np.sum(action) > 0 else np.zeros(len(self.stocks))
-        target_weights = softmax(action)  # Alternative normalization which might be better?
+        # target_weights = softmax(action)  # Alternative normalization which might be better?
+        # Clip and normalize
+        clipped = np.clip(action, 0, 1)
+        if np.sum(clipped) > 0:
+            target_weights = clipped/np.sum(clipped)
+        else:
+            target_weights = np.zeros(len(clipped))
         
         portfolio_state = self.portfolio_manager.get_portfolio_state()
         current_weights = np.array([portfolio_state['position_weights'].get(s, 0) for s in self.stocks])
@@ -435,7 +441,11 @@ class PortfolioEnv(gym.Env):
                 if symbol in current_prices:
                     price = current_prices[symbol]
                     desired_shares = round(target_market_value / price)
-                    current_shares = self.portfolio_manager.get_position_summary()['Quantity'].loc[symbol] if symbol in self.portfolio_manager.get_position_summary()['Stock'].values else 0
+                    if symbol in self.portfolio_manager.get_position_summary()['Stock'].values:
+                        mask = self.portfolio_manager.get_position_summary()['Stock'] == symbol
+                        current_shares = self.portfolio_manager.get_position_summary().loc[mask, 'Quantity'].iloc[0]
+                    else:
+                        current_shares = 0
                     quantity_to_sell = min(current_shares, current_shares - desired_shares)
                     self.portfolio_manager.execute_sell(symbol, quantity_to_sell, price, timestamp=current_date)
 
