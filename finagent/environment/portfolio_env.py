@@ -1,5 +1,3 @@
-# In this version of the project, PortfolioManager is obsolete. This is because of issues with the vectorisation of tax calculation which is more complex.
-
 import jax
 import jax.numpy as jnp
 from jax import random, vmap, lax
@@ -10,496 +8,517 @@ from pathlib import Path
 import chex
 from functools import partial
 import h5py
-# Removed ThreadPoolExecutor as it's not used in the provided JAX code for the env logic itself.
+from concurrent.futures import ThreadPoolExecutor
+import os # Added for os.cpu_count()
 
 # JAX environment state
 class EnvState(NamedTuple):
     """JAX-compatible environment state"""
     current_step: int
-    portfolio_weights: chex.Array  # Current portfolio weights (including cash if managed directly by agent, but here we assume fully invested)
-    cash_weight: float # Represents the portion of total portfolio value held in cash
+    portfolio_weights: chex.Array  # Current portfolio weights (stocks + cash, sums to 1)
     done: bool
-    total_return: float # Cumulative log return for simplicity, or simple return as currently
-    portfolio_value: float # Normalized to 1.0 at start
-    sharpe_buffer: chex.Array  # Rolling buffer for Sharpe calculation (stores *returns*)
+    total_return: float # Cumulative simple return, normalized to initial value of 1.0
+    portfolio_value: float # Normalized to 1.0 at start, represents the multiplier of initial value
+    sharpe_buffer: chex.Array  # Rolling buffer for Sharpe calculation (stores *daily_returns*)
     sharpe_buffer_idx: int
-    # Potentially add other state variables if needed for observations, e.g., current prices
-    # current_prices: chex.Array # If the agent needs access to specific prices not in features.
-                               # For now, it's implicitly derived from features.
 
 
 class JAXPortfolioDataLoader:
     """Optimized data loader for portfolio environment"""
-    
+
     def __init__(self, data_root: str, stocks: List[str], features: List[str]):
-        self.data_root = Path(data_root) 
+        self.data_root = Path(data_root)
         self.stocks = stocks
         self.features = features
         self.n_stocks = len(stocks)
         self.n_features = len(features)
-        
-    def load_and_preprocess_data(self, 
-                                start_date: str, 
-                                end_date: str,
-                                preload_to_gpu: bool = True) -> Tuple[chex.Array, chex.Array, pd.DatetimeIndex]: # Return valid_dates for info
+
+    def load_and_preprocess_data(self,
+                                 start_date: str,
+                                 end_date: str,
+                                 preload_to_gpu: bool = True) -> Tuple[chex.Array, chex.Array, pd.DatetimeIndex]:
         """
         Load and preprocess data optimized for JAX training
         Returns: (data_array, dates_array, valid_dates)
         """
         print(f"Loading data for {self.n_stocks} stocks, {self.n_features} features...")
-        
-        # Check if HDF5 file exists, if not convert from CSV
+
         h5_path = self.data_root / "stocks_data.h5"
         if not h5_path.exists():
             print("HDF5 file not found. Converting from CSV...")
+            self.data_root.mkdir(parents=True, exist_ok=True)
             self._convert_csv_to_hdf5()
-        
-        # Load data from HDF5
+
         data_arrays = []
-        full_dates_df = None # To get the master date index
         
         with h5py.File(h5_path, 'r') as h5f:
             if not h5f:
                 raise ValueError(f"HDF5 file {h5_path} is empty or corrupted.")
 
-            # Load dates from one stock to establish a master date index
-            # This assumes all stock CSVs are aligned by date.
-            first_stock_group = next(iter(h5f.values()), None)
-            if first_stock_group is None:
+            first_stock_group_name = next(iter(h5f.keys()), None)
+            if first_stock_group_name is None:
                 raise ValueError("No stock groups found in HDF5 file.")
+            first_stock_group = h5f[first_stock_group_name]
 
             all_h5_dates = pd.to_datetime(first_stock_group['dates'][:].astype(str))
-            
-            # Filter dates based on start_date and end_date
-            date_mask = (all_h5_dates >= start_date) & (all_h5_dates <= end_date)
-            valid_dates = all_h5_dates[date_mask].to_numpy() # Use numpy array for consistent output type
-            
+
+            start_dt = pd.to_datetime(start_date)
+            end_dt = pd.to_datetime(end_date)
+            date_mask = (all_h5_dates >= start_dt) & (all_h5_dates <= end_dt)
+            valid_dates = all_h5_dates[date_mask].to_numpy()
+
             if len(valid_dates) == 0:
                 raise ValueError(f"No valid dates found between {start_date} and {end_date}.")
 
-            # Now load data for all stocks, filtered by the common valid_dates
             for stock in self.stocks:
                 if stock not in h5f:
                     print(f"Warning: {stock} not found in HDF5 file. Skipping.")
                     continue
-                
+
                 stock_group = h5f[stock]
-                
+
                 stock_data = []
                 for feature in self.features:
                     if feature in stock_group:
-                        feature_data = stock_group[feature][:][date_mask] # Apply the date mask
+                        feature_data = stock_group[feature][:][date_mask]
                     else:
                         print(f"Feature {feature} not found for {stock}, filling with zeros for the selected date range.")
                         feature_data = np.zeros(date_mask.sum())
-                    
+
                     stock_data.append(feature_data)
-                
-                # Check if stock_data is empty before stacking
+
                 if stock_data:
-                    stock_array = np.stack(stock_data, axis=-1)  # Shape: (time, features)
+                    stock_array = np.stack(stock_data, axis=-1)
                     data_arrays.append(stock_array)
                 else:
                     print(f"Warning: No features loaded for {stock}. Skipping.")
 
         if not data_arrays:
             raise ValueError("No valid stock data loaded after filtering. Check stock list and date range.")
-        
-        # Combine all stocks: Shape (time, stocks, features)
+
         data_array = np.stack(data_arrays, axis=1)
-        
-        # Handle NaNs and preprocessing
+
         data_array = self._preprocess_array(data_array)
-        
-        # Convert to JAX arrays
-        if preload_to_gpu:
-            data_array = jnp.array(data_array, dtype=jnp.float32)
-        
-        # dates_array should just be indices for JAX processing
-        dates_array = jnp.arange(len(valid_dates)) 
-        
+
+        data_array = jnp.array(data_array, dtype=jnp.float32)
+
+        dates_array = jnp.arange(len(valid_dates))
+
         print(f"Loaded data shape: {data_array.shape}")
         print(f"Date range: {pd.to_datetime(valid_dates[0]).strftime('%Y-%m-%d')} to {pd.to_datetime(valid_dates[-1]).strftime('%Y-%m-%d')} ({len(valid_dates)} days)")
-        
-        return data_array, dates_array, pd.DatetimeIndex(valid_dates) # Return pd.DatetimeIndex for easy external use
-    
+
+        return data_array, dates_array, pd.DatetimeIndex(valid_dates)
+
     def _convert_csv_to_hdf5(self):
         """Convert CSV files to HDF5 format for faster loading"""
         h5_path = self.data_root / "stocks_data.h5"
-        
+
         print(f"Converting CSV files to {h5_path}...")
-        
-        # Use ThreadPoolExecutor for parallel processing of CSV files
-        # This can speed up conversion if many large CSVs
+
         max_workers = os.cpu_count() or 1
         with h5py.File(h5_path, 'w') as h5f:
+            futures = []
             with ThreadPoolExecutor(max_workers=max_workers) as executor:
-                futures = []
                 for stock in self.stocks:
                     csv_path = self.data_root / f"{stock}_aligned.csv"
                     if not csv_path.exists():
-                        print(f"Warning: CSV file for {stock} not found. Skipping conversion for {stock}.")
+                        print(f"Warning: CSV file for {stock} not found at {csv_path}. Skipping conversion for {stock}.")
                         continue
-                    futures.append(executor.submit(self._process_single_csv, h5f, stock, csv_path))
-                
-                # Wait for all conversions to complete
+                    futures.append(executor.submit(self._process_single_csv, h5f, stock, csv_path, self.features))
+
                 for future in futures:
-                    future.result() # This will re-raise any exceptions from the worker threads
-        
+                    future.result()
+
         print(f"Conversion complete: {h5_path}")
 
-    def _process_single_csv(self, h5f_obj, stock_symbol: str, csv_path: Path):
+    def _process_single_csv(self, h5f_obj, stock_symbol: str, csv_path: Path, features_to_save: List[str]):
         """Helper to process a single CSV into HDF5, called by ThreadPoolExecutor"""
         try:
             print(f"Processing {stock_symbol} from {csv_path}...")
             df_chunks = pd.read_csv(csv_path, chunksize=10000)
             df = pd.concat(df_chunks, ignore_index=True)
-            
+
             date_col = df.columns[0]
             df[date_col] = pd.to_datetime(df[date_col])
             df = df.sort_values(date_col).reset_index(drop=True)
-            
+
             stock_group = h5f_obj.create_group(stock_symbol)
-            
+
             dates_str = df[date_col].dt.strftime('%Y-%m-%d').values
-            stock_group.create_dataset('dates', data=dates_str.astype('S10'))
-            
-            for feature in self.features:
+            stock_group.create_dataset('dates', data=dates_str.astype('S10'), compression='gzip')
+
+            for feature in features_to_save:
                 if feature in df.columns:
-                    data = pd.to_numeric(df[feature], errors='coerce').fillna(0).values
+                    data = pd.to_numeric(df[feature], errors='coerce').fillna(0).values.astype(np.float32)
                 else:
-                    data = np.zeros(len(df))
-                
+                    data = np.zeros(len(df), dtype=np.float32)
+
                 stock_group.create_dataset(
-                    feature, 
-                    data=data.astype(np.float32),
+                    feature,
+                    data=data,
                     compression='gzip'
                 )
             print(f"Converted {stock_symbol}: {len(df)} records")
         except Exception as e:
             print(f"Error converting {stock_symbol}: {e}")
-            # Re-raise to ensure main thread sees it, or handle as per desired error strategy
-
+            raise
 
     @staticmethod
     def _preprocess_array(data_array: np.ndarray) -> np.ndarray:
-        """Preprocess the data array (handle NaNs, normalize, etc.)"""
-        # Fill NaNs
-        mask = np.isnan(data_array)
-        if mask.any():
-            print(f"Filling {mask.sum()} NaN values...")
-            # Forward fill along time axis
-            # Use a more efficient vectorized ffill/bfill if possible, or JAX's equivalent if this becomes a JAX operation
-            # For NumPy, pandas' methods are robust
-            
-            # Temporary convert to pandas for ffill/bfill, then convert back
-            # This can be memory intensive for very large arrays.
-            # An alternative is custom numpy loop, but pandas is easier.
+        """
+        Preprocess the data array (handle NaNs, normalize, etc.) using NumPy.
+        Input: (time, stocks, features)
+        Output: (time, stocks, features)
+        """
+        if np.isnan(data_array).any():
+            print(f"Filling {np.isnan(data_array).sum()} NaN values in data_array...")
             for s_idx in range(data_array.shape[1]):
                 for f_idx in range(data_array.shape[2]):
-                    series = pd.Series(data_array[:, s_idx, f_idx])
-                    data_array[:, s_idx, f_idx] = series.ffill().bfill().fillna(0).values
+                    series = data_array[:, s_idx, f_idx]
 
-        # Normalize features (z-score normalization along time axis)
-        # Avoid division by zero when std is 0
+                    mask = np.isnan(series)
+                    idx = np.where(~mask, np.arange(mask.shape[0]), 0)
+                    np.maximum.accumulate(idx, out=idx)
+                    series = series[idx]
+
+                    mask = np.isnan(series)
+                    idx = np.where(~mask, np.arange(mask.shape[0]), mask.shape[0] - 1)
+                    np.minimum.accumulate(idx[::-1], out=idx[::-1])
+                    series = series[idx]
+
+                    series = np.nan_to_num(series, nan=0.0)
+
+                    data_array[:, s_idx, f_idx] = series
+        
         mean = np.mean(data_array, axis=0, keepdims=True)
         std = np.std(data_array, axis=0, keepdims=True)
-        std = np.where(std == 0, 1e-8, std) # Add a small epsilon to avoid NaN/inf
-        
+
+        std = np.where(std == 0, 1e-8, std)
+
         data_array = (data_array - mean) / std
-        
-        # Clip extreme values
-        data_array = np.clip(data_array, -5, 5)
-        
+
+        data_array = np.clip(data_array, -5.0, 5.0)
+
         return data_array
+
 
 class JAXVectorizedPortfolioEnv:
     """Vectorized Portfolio Environment optimized for JAX training"""
-    
+
     def __init__(self,
                  data_root: str = "processed_data/",
                  stocks: List[str] = None,
                  features: List[str] = None,
-                 initial_cash: float = 1000000.0, # This initial_cash is mostly for logging/conceptual value now
+                 initial_cash: float = 1000000.0,
                  window_size: int = 30,
                  start_date: str = '2024-06-06',
                  end_date: str = '2025-03-06',
-                 n_envs: int = 64,
-                 transaction_cost: float = 0.001,
-                 sharpe_window: int = 252, # ~1 year for Sharpe calculation
-                 # Added risk_free_rate, aligning with PortfolioManager's Sharpe
+                 transaction_cost_rate: float = 0.005,
+                 sharpe_window: int = 252,
                  risk_free_rate: float = 0.05):
-        
+
         self.data_root = data_root
         self.window_size = window_size
         self.start_date = start_date
         self.end_date = end_date
-        self.n_envs = n_envs
-        self.initial_cash_actual = initial_cash # Keep actual initial cash for value translation
-        self.transaction_cost = transaction_cost
+        self.initial_cash_actual = initial_cash
+        self.transaction_cost_rate = transaction_cost_rate
         self.sharpe_window = sharpe_window
-        self.risk_free_rate = risk_free_rate # For Sharpe ratio calculation
-        
-        # Load stock list if not provided
+        self.risk_free_rate_daily = risk_free_rate / 252.0
+
         if stocks is None:
-            stocks = self._load_stock_list()
+            # Example stock list - you should replace with your actual stocks
+            # For demonstration, ensure these CSVs exist in 'processed_data'
+            stocks = ['AAPL', 'MSFT', 'GOOG'] 
         self.stocks = stocks
         self.n_stocks = len(stocks)
-        
-        # Define features if not provided
+
         if features is None:
-            # Ensuring 'close' is always the first feature for returns calculation
-            default_features = ['close', 'open', 'high', 'low', 'volume', 'returns_1d', 
-                               'volatility_10d', 'rsi_14', 'ma_20', 'ma_50']
-            # Make sure 'close' is included and at the front if specified otherwise
+            default_candidate_features = ['close', 'open', 'high', 'low', 'volume', 'returns_1d',
+                                          'volatility_10d', 'rsi_14', 'ma_20', 'ma_50']
+            self.features = ['close'] + [f for f in default_candidate_features if f != 'close']
+        else:
             if 'close' not in features:
-                 features = ['close'] + default_features
+                 features = ['close'] + features
             elif features[0] != 'close':
                  features.remove('close')
                  features = ['close'] + features
-            else:
-                 features = default_features
+            self.features = features
 
-        self.features = features
-        self.n_features = len(features)
-        
-        # Load and preprocess data
-        self.data_loader = JAXPortfolioDataLoader(data_root, stocks, features)
-        self.data, self.dates, self.actual_dates = self.data_loader.load_and_preprocess_data(
+        self.n_features = len(self.features)
+
+        self.data_loader = JAXPortfolioDataLoader(data_root, stocks, self.features)
+        self.data, self.dates_idx, self.actual_dates = self.data_loader.load_and_preprocess_data(
             start_date, end_date, preload_to_gpu=True
         )
-        
-        self.n_timesteps = len(self.dates)
-        
-        # Action space: continuous weights for each stock (will be softmax normalized)
-        # Plus one for cash if the agent explicitly manages cash.
-        # Your current setup implicitly assumes full investment in stocks (cash_weight=0.0 in step).
-        # If agent should manage cash, action_dim should be self.n_stocks + 1, and the last element is cash.
-        self.action_dim = self.n_stocks # Agent output is stock weights, cash is derived or zero.
-        
-        # Observation space: (window_size * n_stocks * n_features) + portfolio_state
-        # portfolio_state: current portfolio weights (n_stocks), cash_weight (1), total_return (1)
-        obs_size = self.window_size * self.n_stocks * self.n_features + self.n_stocks + 2
+        self.n_timesteps = len(self.dates_idx)
+
+        self.action_dim = self.n_stocks + 1
+        chex.assert_trees_all_equal(self.data.shape[1], self.n_stocks)
+
+        obs_size = (self.window_size * self.n_stocks * self.n_features) + self.action_dim + 2
+
         self.obs_dim = obs_size
-        
+
         print(f"Environment initialized:")
         print(f"  Stocks: {self.n_stocks}")
-        print(f"  Features: {self.n_features}")  
+        print(f"  Features: {self.n_features}")
         print(f"  Window size: {self.window_size}")
         print(f"  Observation dim: {self.obs_dim}")
-        print(f"  Action dim: {self.action_dim}")
-        print(f"  Timesteps: {self.n_timesteps}")
-        print(f"  Parallel envs: {self.n_envs}")
-    
-    def _load_stock_list(self) -> List[str]:
-        """Load stock list from file or directory, similar to JAXPortfolioDataLoader"""
-        stocks_file = Path("finagent/stocks.txt")
-        if stocks_file.exists():
-            with open(stocks_file, 'r') as f:
-                return [line.strip() for line in f.readlines()]
-        
-        # Fallback to scanning directory for CSV files
-        data_path = Path(self.data_root)
-        if not data_path.is_dir():
-            raise FileNotFoundError(f"Data root directory not found: {self.data_root}")
-        
-        # Look for existing HDF5 file first for stock list
-        h5_path = self.data_root / "stocks_data.h5"
-        if h5_path.exists():
-            try:
-                with h5py.File(h5_path, 'r') as h5f:
-                    stocks_in_h5 = list(h5f.keys())
-                    if stocks_in_h5:
-                        print(f"Loaded {len(stocks_in_h5)} stock symbols from {h5_path}.")
-                        return stocks_in_h5
-            except Exception as e:
-                print(f"Error reading stocks from HDF5: {e}. Falling back to CSV scan.")
-
-        # Fallback to CSV files if HDF5 fails or doesn't exist
-        csv_stocks = [p.stem.replace('_aligned', '') for p in data_path.glob("*_aligned.csv")]
-        if csv_stocks:
-            print(f"Loaded {len(csv_stocks)} stock symbols by scanning CSV files.")
-            return csv_stocks
-        
-        raise ValueError(f"No stocks found in {stocks_file} or in {self.data_root} directory.")
+        print(f"  Action dim (stocks+cash): {self.action_dim}")
+        print(f"  Timesteps available: {self.n_timesteps}")
 
     @partial(jax.jit, static_argnums=(0,))
     def reset(self, key: chex.PRNGKey) -> Tuple[EnvState, chex.Array]:
         """Reset environment state"""
-        # Initialize portfolio with equal cash allocation, normalized value 1.0
-        # Agent starts with a cash position. First action will dictate how to invest.
-        initial_weights = jnp.zeros(self.n_stocks) # No shares initially
-        initial_cash_weight = 1.0 # 100% cash
-        
-        # Initialize Sharpe calculation buffer
-        sharpe_buffer = jnp.zeros(self.sharpe_window)
-        
-        # Randomize start step for each environment within the data range
-        # Ensure enough data for window_size
-        min_start_step = self.window_size - 1 
-        max_start_step = self.n_timesteps - 1 - self.window_size 
-        
-        if max_start_step <= min_start_step:
-            raise ValueError(f"Not enough timesteps ({self.n_timesteps}) for window size ({self.window_size}).")
+        initial_weights = jnp.zeros(self.n_stocks)
+        initial_cash_weight = 1.0
 
-        # Each environment starts at a random time step
-        start_step = random.randint(key, (), min_start_step, max_start_step)
-        
+        initial_portfolio_weights = jnp.append(initial_weights, initial_cash_weight)
+        chex.assert_trees_all_equal(jnp.sum(initial_portfolio_weights), 1.0)
+
+        sharpe_buffer = jnp.zeros(self.sharpe_window)
+
+        min_start_step = self.window_size - 1
+        max_start_step = self.n_timesteps - 2
+
+        chex.assert_scalar_in(min_start_step, max_start_step)
+
+        start_step = random.randint(key, (), min_start_step, max_start_step + 1)
+
         env_state = EnvState(
-            current_step=start_step,  
-            portfolio_weights=initial_weights, # Initial weights are all cash, so stock weights are zero
-            cash_weight=initial_cash_weight,
+            current_step=start_step,
+            portfolio_weights=initial_portfolio_weights,
             done=False,
             total_return=0.0,
-            portfolio_value=1.0,  # Normalized to 1.0
+            portfolio_value=1.0,
             sharpe_buffer=sharpe_buffer,
             sharpe_buffer_idx=0
         )
-        
+
         obs = self._get_observation(env_state)
         return env_state, obs
-    
+
     @partial(jax.jit, static_argnums=(0,))
     def step(self, env_state: EnvState, action: chex.Array) -> Tuple[EnvState, chex.Array, float, bool, dict]:
         """Execute one environment step"""
-        # Actions are raw policy outputs, expected to be continuous values (e.g., means of a Gaussian)
-        # We need to convert these to valid portfolio weights (sum to 1, including cash)
-        # Assuming action is (n_stocks,) and represents target weights for stocks.
-        # We need to add a cash component explicitly if the agent is to manage it.
-        # For now, let's assume `action` represents desired weights for stocks, and the remaining
-        # will be implicitly cash or a fixed cash component.
-        
-        # Method 1: Agent directly outputs target weights for N stocks. Cash weight is derived.
-        # We apply softmax to ensure they sum to 1.
-        # The agent's action dim would be N_stocks + 1 if it explicitly manages cash and N_stocks if it implicitly allocates remaining to cash.
-        
-        # Let's assume `action` (shape `self.n_stocks`) are the unnormalized target weights for stocks.
-        # The agent controls N_stocks and the remaining becomes cash.
-        # We need to decide if cash is explicitly managed or derived.
-        # Current design `cash_weight = 0.0` suggests fully invested. Let's make it flexible.
-        
-        # If `action_dim` is `n_stocks`: The agent outputs N values. We need to normalize these including cash.
-        # Common approach: add a 'cash' dimension to the action logits before softmax.
-        # `action` should be `(self.n_stocks + 1,)` if agent directly controls cash weight.
-        # For now, let's stick to the previous interpretation: `action` are just target stock weights,
-        # and we use softmax on them to normalize. This implies the agent is always fully invested.
-        # If cash is to be managed, `action_dim` in `LSTMActorCritic` should be `self.n_stocks + 1`.
-        # Let's update `action_dim` in __init__ to `self.n_stocks + 1` for explicit cash management.
-        
-        # Re-evaluating `action_dim` and `action` interpretation:
-        # If `self.action_dim` is `self.n_stocks`, then `action` has `self.n_stocks` elements.
-        # Agent's policy outputs logits for N stocks.
-        # To incorporate cash, we need `self.n_stocks + 1` logits.
-        
-        # Option 1 (current interpretation): Agent only chooses stock weights, cash is ignored or implicitly 0.
-        # portfolio_weights = jax.nn.softmax(action) # Sums to 1. No explicit cash weight.
-        # cash_weight = 0.0
-        
-        # Option 2 (better for real portfolio management): Agent outputs logits for N stocks + 1 cash.
-        # Then softmax gives (N_stocks + 1) portfolio_weights.
-        # Let's modify action_dim in __init__ to `self.n_stocks + 1` for this.
-        # So `action` will be `(self.n_stocks + 1,)`
-        # The last element of `portfolio_weights` will be cash.
-        
-        # Updated action interpretation: action is raw output for (stocks + cash)
-        # If your agent outputs only `n_stocks`, then you need to decide how cash is handled.
-        # For now, I'll assume `action` comes from a policy with `action_dim = self.n_stocks + 1`.
-        # So `action` will have `self.n_stocks + 1` elements.
-        # The last element is the unnormalized 'cash' component.
+        normalized_action_weights = jax.nn.softmax(action)
+        chex.assert_trees_all_equal(normalized_action_weights.shape, (self.action_dim,))
 
-        # Normalize actions to valid portfolio weights (stocks + cash)
-        all_weights_raw = action # Policy output for N stocks + 1 cash
-        all_weights_softmax = jax.nn.softmax(all_weights_raw)
+        new_stock_weights = normalized_action_weights[:-1]
+        new_cash_weight = normalized_action_weights[-1]
+
+        prev_stock_weights = env_state.portfolio_weights[:-1]
+        prev_cash_weight = env_state.portfolio_weights[-1]
         
-        portfolio_weights = all_weights_softmax[:-1] # Weights for stocks
-        cash_weight = all_weights_softmax[-1]       # Weight for cash
+        prev_portfolio_value = env_state.portfolio_value
+
+        transaction_cost_value = jnp.sum(jnp.abs(new_stock_weights - prev_stock_weights)) * self.transaction_cost_rate
+
+        current_daily_returns = self._get_daily_returns_from_data(env_state.current_step + 1)
+
+        daily_portfolio_return_before_costs = (
+            jnp.sum(prev_stock_weights * current_daily_returns) +
+            (prev_cash_weight * self.risk_free_rate_daily)
+        )
+
+        net_daily_portfolio_return = daily_portfolio_return_before_costs - transaction_cost_value
+
+        new_portfolio_value = prev_portfolio_value * (1.0 + net_daily_portfolio_return)
+
+        new_total_return = (new_portfolio_value - 1.0)
+
+        new_sharpe_buffer = env_state.sharpe_buffer.at[env_state.sharpe_buffer_idx].set(net_daily_portfolio_return)
+        new_sharpe_buffer_idx = (env_state.sharpe_buffer_idx + 1) % self.sharpe_window
+
+        sharpe_mean = jnp.mean(new_sharpe_buffer)
+        sharpe_std = jnp.std(new_sharpe_buffer)
+
+        sharpe_ratio = lax.cond(
+            sharpe_std == 0,
+            lambda: 0.0,
+            lambda: (sharpe_mean - self.risk_free_rate_daily) / sharpe_std * jnp.sqrt(252.0)
+        )
         
-        # Calculate transaction costs
-        # Only apply costs to *changes* in stock weights, not cash weight.
-        # The 'cash_weight' from env_state.portfolio_weights might be used if we want to include cash in transaction cost calculations.
-        # For simplicity, let's assume `env_state.portfolio_weights` only stores stock weights.
-        # This means we need to adjust `env_state.portfolio_weights` to also include cash weight or only track stock weights.
+        reward = sharpe_ratio
+
+        next_step = env_state.current_step + 1
+        done = (next_step >= self.n_timesteps - 1) | (new_portfolio_value <= 0.5)
+
+        new_env_state = EnvState(
+            current_step=next_step,
+            portfolio_weights=normalized_action_weights,
+            done=done,
+            total_return=new_total_return,
+            portfolio_value=new_portfolio_value,
+            sharpe_buffer=new_sharpe_buffer,
+            sharpe_buffer_idx=new_sharpe_buffer_idx
+        )
+
+        next_obs = self._get_observation(new_env_state)
+
+        info = {
+            'date_idx': next_step,
+            'portfolio_value': new_portfolio_value,
+            'total_return': new_total_return,
+            'sharpe_ratio': sharpe_ratio,
+            'daily_portfolio_return': net_daily_portfolio_return,
+            'transaction_cost_value': transaction_cost_value,
+            'new_stock_weights': new_stock_weights,
+            'new_cash_weight': new_cash_weight,
+            'prev_stock_weights': prev_stock_weights,
+            'prev_cash_weight': prev_cash_weight
+        }
+
+        return new_env_state, next_obs, reward, done, info
+
+    @partial(jax.jit, static_argnums=(0,))
+    def _get_observation(self, env_state: EnvState) -> chex.Array:
+        """
+        Constructs the observation for the current step.
+        """
+        start_idx = env_state.current_step - self.window_size + 1
+        end_idx = env_state.current_step + 1
         
-        # Let's assume `env_state.portfolio_weights` stores *stock* weights.
-        # If the agent wants to reduce a stock position to increase cash, it's still a transaction.
+        data_slice = lax.dynamic_slice(
+            self.data,
+            (start_idx, 0, 0),
+            (self.window_size, self.n_stocks, self.n_features)
+        )
         
-        # Current transaction cost calculation:
-        # weight_changes = jnp.abs(portfolio_weights - env_state.portfolio_weights) # This is only for stocks
+        market_data_flat = data_slice.flatten()
+
+        portfolio_state_flat = jnp.concatenate([
+            env_state.portfolio_weights,
+            jnp.array([env_state.portfolio_value]),
+            jnp.array([env_state.total_return])
+        ])
+
+        obs = jnp.concatenate([market_data_flat, portfolio_state_flat])
+        chex.assert_trees_all_equal(obs.shape, (self.obs_dim,))
+
+        return obs
+
+    @partial(jax.jit, static_argnums=(0,))
+    def _get_daily_returns_from_data(self, step: int) -> chex.Array:
+        """
+        Calculates daily returns for all stocks for a given step.
+        Returns array of shape (n_stocks,).
+        """
+        price_t = self.data[step, :, 0]
+        price_t_minus_1 = self.data[step - 1, :, 0]
         
-        # Revised transaction cost: consider total portfolio value and amount of reallocation.
-        # The `transaction_cost` from your PortfolioManager is proportional to `transaction_value`.
-        # The JAX env currently applies `transaction_cost` to changes in weights.
-        # It's a simplification, `sum(weight_changes) * self.transaction_cost` acts like a "slippage" or rebalancing cost.
+        price_t_minus_1_safe = jnp.where(price_t_minus_1 == 0, 1e-8, price_t_minus_1)
+
+        daily_returns = (price_t / price_t_minus_1_safe) - 1.0
+        return daily_returns
+
+# # Example usage (for testing)
+# if __name__ == "__main__":
+#     # Create a dummy 'processed_data' directory and some CSVs for testing
+#     # In a real scenario, you'd have your actual stock data here.
+#     data_dir = Path("processed_data")
+#     data_dir.mkdir(exist_ok=True)
+
+#     # Generate dummy CSV files for AAPL, MSFT, GOOG
+#     stocks_for_test = ['AAPL', 'MSFT', 'GOOG']
+#     dates = pd.date_range(start='2023-12-01', end='2024-12-31', freq='B') # Business days
+    
+#     for stock in stocks_for_test:
+#         dummy_data = {
+#             'Date': dates,
+#             'close': np.random.rand(len(dates)) * 100 + 100, # Base price 100-200
+#             'open': np.random.rand(len(dates)) * 100 + 95,
+#             'high': np.random.rand(len(dates)) * 100 + 105,
+#             'low': np.random.rand(len(dates)) * 100 + 90,
+#             'volume': np.random.randint(100000, 10000000, len(dates)),
+#             'returns_1d': np.random.randn(len(dates)) * 0.01,
+#             'volatility_10d': np.random.rand(len(dates)) * 0.05,
+#             'rsi_14': np.random.rand(len(dates)) * 100,
+#             'ma_20': np.random.rand(len(dates)) * 100 + 98,
+#             'ma_50': np.random.rand(len(dates)) * 100 + 95,
+#         }
+#         df = pd.DataFrame(dummy_data)
+#         df.to_csv(data_dir / f"{stock}_aligned.csv", index=False)
+    
+#     print("\n--- Dummy CSVs created for testing ---")
+    
+#     # Initialize the environment
+#     try:
+#         env = JAXVectorizedPortfolioEnv(
+#             data_root="processed_data/",
+#             stocks=stocks_for_test,
+#             features=['close', 'volume', 'rsi_14'],
+#             window_size=10,
+#             start_date='2024-01-01',
+#             end_date='2024-12-31',
+#             transaction_cost_rate=0.001
+#         )
+
+#         key = random.PRNGKey(0)
+
+#         # Test reset
+#         key, reset_key = random.split(key)
+#         env_state, obs = env.reset(reset_key)
+#         print(f"\n--- Environment Reset ---")
+#         print(f"Initial State: {env_state}")
+#         print(f"Initial Observation shape: {obs.shape}")
+
+#         # Test step
+#         print(f"\n--- Stepping through the Environment ---")
+#         num_steps_to_take = 5
+#         for i in range(num_steps_to_take):
+#             key, action_key = random.split(key)
+#             # Example action: random weights for stocks and cash
+#             # action.shape must be (self.action_dim,)
+#             random_action = random.normal(action_key, (env.action_dim,))
+
+#             env_state, next_obs, reward, done, info = env.step(env_state, random_action)
+#             print(f"Step {i+1}:")
+#             print(f"  Date: {env.actual_dates[env_state.current_step].strftime('%Y-%m-%d')}")
+#             print(f"  Portfolio Value: {env_state.portfolio_value:.4f}")
+#             print(f"  Total Return: {env_state.total_return:.4f}")
+#             print(f"  Reward (Sharpe): {reward:.4f}")
+#             print(f"  Done: {done}")
+#             print(f"  Info (Daily Return): {info['daily_portfolio_return']:.4f}")
+#             print(f"  Info (Transaction Cost): {info['transaction_cost_value']:.6f}")
+#             if done:
+#                 print("Environment terminated early!")
+#                 break
         
-        # Let's keep the current JAX transaction cost calculation for simplicity in RL.
-        # The agent's `portfolio_weights` (for stocks) and `env_state.portfolio_weights` (previous stock weights)
-        # are what matter for calculating transaction costs on *stock* rebalancing.
+#         # Example of vmap for parallel environments
+#         print(f"\n--- Testing vmap for multiple environments ---")
+#         num_parallel_envs = 4
         
-        # Recalculate `weight_changes` and `transaction_costs` based on *stock* weights only.
-        # The agent's `action` determines the *target* stock weights.
-        # The transaction costs should be proportional to the value of assets being bought/sold.
-        # In a normalized environment, this is (change in weight) * portfolio_value.
-        
-        # Value of new stock positions: portfolio_weights * new_portfolio_value
-        # Value of old stock positions: env_state.portfolio_weights * env_state.portfolio_value
-        # The `portfolio_return` below will already incorporate price changes.
-        
-        # Transaction costs for rebalancing:
-        # The cost applies to the *amount* of asset bought/sold.
-        # Here `env_state.portfolio_value` is normalized to 1.0.
-        # `portfolio_weights` are also normalized to 1 (excluding cash in this context)
-        # or sum to 1 with cash if `action_dim = n_stocks + 1`.
-        
-        # Let's assume `portfolio_weights` are the target stock weights (sum to < 1 if cash > 0).
-        # We need previous stock weights from `env_state.portfolio_weights`.
-        
-        # Compute changes in *value* of stock positions.
-        # Value change due to agent's action: (new_weight - old_weight) * current_portfolio_value
-        # This needs to be applied to the *previous* portfolio value.
-        # However, it is simpler for PPO to just calculate costs on *weight changes*.
-        
-        # Keep the existing transaction cost logic in the JAX env for simplicity.
-        # It assumes a proportional cost on the absolute sum of weight changes.
-        weight_changes = jnp.abs(portfolio_weights - env_state.portfolio_weights) # Only for stock weights
-        transaction_costs_value = jnp.sum(weight_changes) * self.transaction_cost * env_state.portfolio_value
-        
-        # Get returns for current step (next day's returns based on prices at `current_step + 1`)
-        # returns is (n_stocks,)
-        returns = self._get_returns(env_state.current_step + 1) # Returns for moving to next day
-        
-        # Calculate portfolio return from stock positions and cash
-        # Return on stocks: sum(weights_stocks * returns_stocks)
-        # Return on cash: cash_weight * (risk_free_rate / 252) if you want cash to earn interest
-        
-        # For simplicity, assume cash earns 0 or is part of a risk-free asset in the `sharpe_ratio`.
-        # Here, the 'portfolio_return' is just from the invested stock portion.
-        # The `portfolio_value` will then reflect overall value.
-        
-        stock_portfolio_return = jnp.sum(portfolio_weights * returns)
-        
-        # Total portfolio return including cash, and accounting for transaction costs.
-        # (Weight in stocks * Stock Returns) + (Weight in Cash * Cash Returns) - Transaction Costs
-        # Assuming cash has 0 returns for now in the daily update, as it's typically risk-free.
-        # Or, cash return could be a small daily risk-free rate. For now, let's simplify.
-        
-        # The agent's *action* dictates the split between stocks and cash.
-        # `portfolio_weights` are stock weights, `cash_weight` is the cash weight.
-        
-        # New value of portfolio:
-        # Initial value of stocks: env_state.portfolio_weights * env_state.portfolio_value
-        # Value change from returns on old positions: sum(env_state.portfolio_weights * returns) * env_state.portfolio_value
-        # This is essentially `env_state.portfolio_value * (1 + stock_portfolio_return_on_old_weights)`
-        
-        # A more direct way:
-        # The `portfolio_value` is updated based on `portfolio_return`.
-        # `portfolio_return` should be the *net* return of the entire portfolio *before* new allocation.
-        # It needs to reflect the change in value of *previous* holdings.
-        
-        # Let's adjust `portfolio_return` calculation. It should be the return *of the current holdings*.
-        # The `env_state.portfolio_weights` are the holdings *from the previous step*.
-        # The `action` decides the *new* holdings.
-        
-        # Return from holding *previous* portfolio weights for one day
-        # `env_state.portfolio_weights` sum to (1 - previous cash_weight)
-        return_on_old_stock_positions = jnp.sum(env_state.portfolio_weights * returns)
-        return_on_old_cash_position = env_state.cash_
+#         # JIT-compile the reset and step functions for vmap
+#         vmap_reset = jax.vmap(env.reset, in_axes=(0,))
+#         vmap_step = jax.vmap(env.step, in_axes=(0, 0))
+
+#         # Generate separate keys for each parallel environment
+#         key, *reset_keys = random.split(key, num_parallel_envs + 1)
+#         reset_keys = jnp.array(reset_keys)
+
+#         # Reset all parallel environments
+#         env_states, obs_batch = vmap_reset(reset_keys)
+#         print(f"Parallel reset: Initial state batch (first env portfolio value): {env_states.portfolio_value[0]:.4f}")
+#         print(f"Parallel reset: Obs batch shape: {obs_batch.shape}")
+
+#         # Take a step in all parallel environments
+#         key, *action_keys = random.split(key, num_parallel_envs + 1)
+#         action_keys = jnp.array(action_keys)
+#         random_action_batch = random.normal(action_keys, (num_parallel_envs, env.action_dim))
+
+#         env_states, next_obs_batch, rewards_batch, dones_batch, infos_batch = vmap_step(env_states, random_action_batch)
+#         print(f"Parallel step: Next state batch (first env portfolio value): {env_states.portfolio_value[0]:.4f}")
+#         print(f"Parallel step: Rewards batch: {rewards_batch}")
+#         print(f"Parallel step: Dones batch: {dones_batch}")
+
+#     except Exception as e:
+#         print(f"\nAn error occurred during environment testing: {e}")
+#         # Optionally, you might want to delete the dummy data if an error occurs
+#         # for stock in stocks_for_test:
+#         #     (data_dir / f"{stock}_aligned.csv").unlink(missing_ok=True)
+#         # (data_dir / "stocks_data.h5").unlink(missing_ok=True)
+#         # data_dir.rmdir()
+
+#     print("\n--- Example usage complete ---")
