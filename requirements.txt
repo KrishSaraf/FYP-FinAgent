@@ -34,3 +34,11 @@ stable-baselines3[extra]
 tensorboard
 fuzzywuzzy
 sb3_contrib
+jax[cuda12]
+flax
+optax
+orbax
+distrax
+chex
+gymnax
+wandb
