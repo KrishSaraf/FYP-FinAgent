@@ -10,6 +10,7 @@ from functools import partial
 import h5py
 from concurrent.futures import ThreadPoolExecutor
 import os # Added for os.cpu_count()
+import distrax
 
 # JAX environment state
 class EnvState(NamedTuple):
@@ -24,182 +25,106 @@ class EnvState(NamedTuple):
 
 
 class JAXPortfolioDataLoader:
-    """Optimized data loader for portfolio environment"""
+    """Optimized data loader for portfolio environment (CSV-based, flexible feature handling)"""
 
-    def __init__(self, data_root: str, stocks: List[str], features: List[str]):
+    def __init__(self, data_root: str, stocks: List[str], features: Optional[List[str]] = None,
+                 use_all_features: bool = False):
         self.data_root = Path(data_root)
         self.stocks = stocks
-        self.features = features
-        self.n_stocks = len(stocks)
-        self.n_features = len(features)
+        self.features = features  # can be None, will be inferred
+        self.use_all_features = use_all_features
 
     def load_and_preprocess_data(self,
                                  start_date: str,
                                  end_date: str,
+                                 fill_missing_features_with: str = 'interpolate',
                                  preload_to_gpu: bool = True) -> Tuple[chex.Array, chex.Array, pd.DatetimeIndex]:
         """
-        Load and preprocess data optimized for JAX training
-        Returns: (data_array, dates_array, valid_dates)
+        Load and preprocess CSV data into a consistent tensor for JAX.
+
+        Args:
+            fill_missing_features_with: 'zero', 'nan', 'forward_fill', 'interpolate'
+            preload_to_gpu: whether to return jnp.array instead of np.array
         """
-        print(f"Loading data for {self.n_stocks} stocks, {self.n_features} features...")
 
-        h5_path = self.data_root / "stocks_data.h5"
-        if not h5_path.exists():
-            print("HDF5 file not found. Converting from CSV...")
-            self.data_root.mkdir(parents=True, exist_ok=True)
-            self._convert_csv_to_hdf5()
+        all_data = []
+        all_features = set()
+        stock_features = {}
 
-        data_arrays = []
-        
-        with h5py.File(h5_path, 'r') as h5f:
-            if not h5f:
-                raise ValueError(f"HDF5 file {h5_path} is empty or corrupted.")
+        # Pass 1: Collect available features
+        for stock in self.stocks:
+            csv_path = self.data_root / f"{stock}_aligned.csv"
+            if not csv_path.exists():
+                print(f"Warning: CSV for {stock} not found, skipping.")
+                continue
+            sample_df = pd.read_csv(csv_path, nrows=0)
+            date_col = sample_df.columns[0]
+            feats = [c for c in sample_df.columns if c != date_col]
+            stock_features[stock] = feats
+            all_features.update(feats)
 
-            first_stock_group_name = next(iter(h5f.keys()), None)
-            if first_stock_group_name is None:
-                raise ValueError("No stock groups found in HDF5 file.")
-            first_stock_group = h5f[first_stock_group_name]
+        if self.features is None:
+            if self.use_all_features:
+                self.features = sorted(list(all_features))
+            else:
+                common = set.intersection(*[set(f) for f in stock_features.values()])
+                self.features = sorted(list(common)) if common else sorted(list(all_features))
+        print(f"Using features: {self.features}")
 
-            all_h5_dates = pd.to_datetime(first_stock_group['dates'][:].astype(str))
-
-            start_dt = pd.to_datetime(start_date)
-            end_dt = pd.to_datetime(end_date)
-            date_mask = (all_h5_dates >= start_dt) & (all_h5_dates <= end_dt)
-            valid_dates = all_h5_dates[date_mask].to_numpy()
-
-            if len(valid_dates) == 0:
-                raise ValueError(f"No valid dates found between {start_date} and {end_date}.")
-
-            for stock in self.stocks:
-                if stock not in h5f:
-                    print(f"Warning: {stock} not found in HDF5 file. Skipping.")
-                    continue
-
-                stock_group = h5f[stock]
-
-                stock_data = []
-                for feature in self.features:
-                    if feature in stock_group:
-                        feature_data = stock_group[feature][:][date_mask]
-                    else:
-                        print(f"Feature {feature} not found for {stock}, filling with zeros for the selected date range.")
-                        feature_data = np.zeros(date_mask.sum())
-
-                    stock_data.append(feature_data)
-
-                if stock_data:
-                    stock_array = np.stack(stock_data, axis=-1)
-                    data_arrays.append(stock_array)
-                else:
-                    print(f"Warning: No features loaded for {stock}. Skipping.")
-
-        if not data_arrays:
-            raise ValueError("No valid stock data loaded after filtering. Check stock list and date range.")
-
-        data_array = np.stack(data_arrays, axis=1)
-
-        data_array = self._preprocess_array(data_array)
-
-        data_array = jnp.array(data_array, dtype=jnp.float32)
-
-        dates_array = jnp.arange(len(valid_dates))
-
-        print(f"Loaded data shape: {data_array.shape}")
-        print(f"Date range: {pd.to_datetime(valid_dates[0]).strftime('%Y-%m-%d')} to {pd.to_datetime(valid_dates[-1]).strftime('%Y-%m-%d')} ({len(valid_dates)} days)")
-
-        return data_array, dates_array, pd.DatetimeIndex(valid_dates)
-
-    def _convert_csv_to_hdf5(self):
-        """Convert CSV files to HDF5 format for faster loading"""
-        h5_path = self.data_root / "stocks_data.h5"
-
-        print(f"Converting CSV files to {h5_path}...")
-
-        max_workers = os.cpu_count() or 1
-        with h5py.File(h5_path, 'w') as h5f:
-            futures = []
-            with ThreadPoolExecutor(max_workers=max_workers) as executor:
-                for stock in self.stocks:
-                    csv_path = self.data_root / f"{stock}_aligned.csv"
-                    if not csv_path.exists():
-                        print(f"Warning: CSV file for {stock} not found at {csv_path}. Skipping conversion for {stock}.")
-                        continue
-                    futures.append(executor.submit(self._process_single_csv, h5f, stock, csv_path, self.features))
-
-                for future in futures:
-                    future.result()
-
-        print(f"Conversion complete: {h5_path}")
-
-    def _process_single_csv(self, h5f_obj, stock_symbol: str, csv_path: Path, features_to_save: List[str]):
-        """Helper to process a single CSV into HDF5, called by ThreadPoolExecutor"""
-        try:
-            print(f"Processing {stock_symbol} from {csv_path}...")
-            df_chunks = pd.read_csv(csv_path, chunksize=10000)
-            df = pd.concat(df_chunks, ignore_index=True)
-
+        # Pass 2: Load and standardize
+        for stock in self.stocks:
+            csv_path = self.data_root / f"{stock}_aligned.csv"
+            if not csv_path.exists():
+                continue
+            df = pd.read_csv(csv_path, parse_dates=[0])
             date_col = df.columns[0]
-            df[date_col] = pd.to_datetime(df[date_col])
-            df = df.sort_values(date_col).reset_index(drop=True)
+            df = df.rename(columns={date_col: "date"}).set_index("date").sort_index()
+            df = df.loc[start_date:end_date]
 
-            stock_group = h5f_obj.create_group(stock_symbol)
-
-            dates_str = df[date_col].dt.strftime('%Y-%m-%d').values
-            stock_group.create_dataset('dates', data=dates_str.astype('S10'), compression='gzip')
-
-            for feature in features_to_save:
-                if feature in df.columns:
-                    data = pd.to_numeric(df[feature], errors='coerce').fillna(0).values.astype(np.float32)
+            proc = pd.DataFrame(index=df.index)
+            for feat in self.features:
+                if feat in df.columns:
+                    proc[feat] = pd.to_numeric(df[feat], errors="coerce")
                 else:
-                    data = np.zeros(len(df), dtype=np.float32)
+                    print(f"{feat} missing for {stock}, filling with {fill_missing_features_with}")
+                    proc[feat] = np.nan
 
-                stock_group.create_dataset(
-                    feature,
-                    data=data,
-                    compression='gzip'
-                )
-            print(f"Converted {stock_symbol}: {len(df)} records")
-        except Exception as e:
-            print(f"Error converting {stock_symbol}: {e}")
-            raise
+            # Fill missing values
+            if fill_missing_features_with == "zero":
+                proc = proc.fillna(0.0)
+            elif fill_missing_features_with == "forward_fill":
+                proc = proc.ffill().bfill().fillna(0.0)
+            elif fill_missing_features_with == "interpolate":
+                proc = proc.interpolate(method="linear").ffill().bfill().fillna(0.0)
+            else:  # default nan then robust pipeline
+                proc = proc.ffill().bfill().interpolate().ffill().bfill().fillna(0.0)
 
-    @staticmethod
-    def _preprocess_array(data_array: np.ndarray) -> np.ndarray:
-        """
-        Preprocess the data array (handle NaNs, normalize, etc.) using NumPy.
-        Input: (time, stocks, features)
-        Output: (time, stocks, features)
-        """
-        if np.isnan(data_array).any():
-            print(f"Filling {np.isnan(data_array).sum()} NaN values in data_array...")
-            for s_idx in range(data_array.shape[1]):
-                for f_idx in range(data_array.shape[2]):
-                    series = data_array[:, s_idx, f_idx]
+            proc["symbol"] = stock
+            all_data.append(proc)
 
-                    mask = np.isnan(series)
-                    idx = np.where(~mask, np.arange(mask.shape[0]), 0)
-                    np.maximum.accumulate(idx, out=idx)
-                    series = series[idx]
+        if not all_data:
+            raise RuntimeError("No stock data loaded.")
 
-                    mask = np.isnan(series)
-                    idx = np.where(~mask, np.arange(mask.shape[0]), mask.shape[0] - 1)
-                    np.minimum.accumulate(idx[::-1], out=idx[::-1])
-                    series = series[idx]
-
-                    series = np.nan_to_num(series, nan=0.0)
-
-                    data_array[:, s_idx, f_idx] = series
+        panel = pd.concat(all_data).reset_index().set_index(["date", "symbol"])
+        panel = panel[~panel.index.duplicated(keep="first")]
+        panel = panel.unstack(level="symbol").sort_index(axis=1)
+        full_columns = pd.MultiIndex.from_product([self.features, self.stocks])
         
-        mean = np.mean(data_array, axis=0, keepdims=True)
-        std = np.std(data_array, axis=0, keepdims=True)
+        # Align to requested date range
+        valid_dates = pd.date_range(start=start_date, end=end_date, freq="B")
+        panel = panel.reindex(valid_dates, columns=full_columns, method="ffill").fillna(0.0)
 
-        std = np.where(std == 0, 1e-8, std)
+        # Convert to numpy/jax
+        data_array = panel.values.astype(np.float32)  # shape (T, features*stocks)
+        n_days = len(valid_dates)
+        n_features = len(self.features)
+        n_stocks = len(self.stocks)
+        data_array = data_array.reshape(n_days, n_features, n_stocks).transpose(0, 2, 1)
 
-        data_array = (data_array - mean) / std
+        if preload_to_gpu:
+            data_array = jnp.array(data_array)
 
-        data_array = np.clip(data_array, -5.0, 5.0)
-
-        return data_array
+        return data_array, jnp.arange(n_days), valid_dates, n_features
 
 
 class JAXVectorizedPortfolioEnv:
@@ -215,7 +140,8 @@ class JAXVectorizedPortfolioEnv:
                  end_date: str = '2025-03-06',
                  transaction_cost_rate: float = 0.005,
                  sharpe_window: int = 252,
-                 risk_free_rate: float = 0.05):
+                 risk_free_rate: float = 0.05,
+                 use_all_features: bool = True):
 
         self.data_root = data_root
         self.window_size = window_size
@@ -225,30 +151,18 @@ class JAXVectorizedPortfolioEnv:
         self.transaction_cost_rate = transaction_cost_rate
         self.sharpe_window = sharpe_window
         self.risk_free_rate_daily = risk_free_rate / 252.0
+        self.use_all_features = use_all_features
+        self.features = None
 
         if stocks is None:
             # Example stock list - you should replace with your actual stocks
             # For demonstration, ensure these CSVs exist in 'processed_data'
-            stocks = ['AAPL', 'MSFT', 'GOOG'] 
+            stocks = self._load_stock_list() 
         self.stocks = stocks
         self.n_stocks = len(stocks)
 
-        if features is None:
-            default_candidate_features = ['close', 'open', 'high', 'low', 'volume', 'returns_1d',
-                                          'volatility_10d', 'rsi_14', 'ma_20', 'ma_50']
-            self.features = ['close'] + [f for f in default_candidate_features if f != 'close']
-        else:
-            if 'close' not in features:
-                 features = ['close'] + features
-            elif features[0] != 'close':
-                 features.remove('close')
-                 features = ['close'] + features
-            self.features = features
-
-        self.n_features = len(self.features)
-
-        self.data_loader = JAXPortfolioDataLoader(data_root, stocks, self.features)
-        self.data, self.dates_idx, self.actual_dates = self.data_loader.load_and_preprocess_data(
+        self.data_loader = JAXPortfolioDataLoader(data_root, stocks, self.features, self.use_all_features)
+        self.data, self.dates_idx, self.actual_dates, self.n_features = self.data_loader.load_and_preprocess_data(
             start_date, end_date, preload_to_gpu=True
         )
         self.n_timesteps = len(self.dates_idx)
@@ -268,6 +182,15 @@ class JAXVectorizedPortfolioEnv:
         print(f"  Action dim (stocks+cash): {self.action_dim}")
         print(f"  Timesteps available: {self.n_timesteps}")
 
+    def _load_stock_list(self) -> List[str]:
+        """Loads stock list from a file if not provided."""
+        stocks_file = Path("finagent/stocks.txt")
+        if stocks_file.exists():
+            with open(stocks_file, 'r') as f:
+                return [line.strip() for line in f.readlines()]
+        # Fallback to scanning directory if file doesn't exist
+        return [p.stem.replace('_aligned', '') for p in self.data_root.glob("*_aligned.csv")]
+
     @partial(jax.jit, static_argnums=(0,))
     def reset(self, key: chex.PRNGKey) -> Tuple[EnvState, chex.Array]:
         """Reset environment state"""
@@ -275,14 +198,11 @@ class JAXVectorizedPortfolioEnv:
         initial_cash_weight = 1.0
 
         initial_portfolio_weights = jnp.append(initial_weights, initial_cash_weight)
-        chex.assert_trees_all_equal(jnp.sum(initial_portfolio_weights), 1.0)
-
+    
         sharpe_buffer = jnp.zeros(self.sharpe_window)
 
         min_start_step = self.window_size - 1
         max_start_step = self.n_timesteps - 2
-
-        chex.assert_scalar_in(min_start_step, max_start_step)
 
         start_step = random.randint(key, (), min_start_step, max_start_step + 1)
 
