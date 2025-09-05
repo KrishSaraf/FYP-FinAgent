@@ -11,7 +11,10 @@ import chex
 from typing import Tuple, Dict, Any, NamedTuple, List
 import wandb
 import pickle
+import distrax
+from pathlib import Path
 from functools import partial
+import orbax.checkpoint as ocp
 
 # Import the JAX environment (assume it's in the same directory or installed)
 from finagent.environment.portfolio_env import JAXVectorizedPortfolioEnv, EnvState
@@ -68,7 +71,7 @@ class LSTMActorCritic(nn.Module):
                 layer_carry = carry[i]
             
             # LSTM cell
-            lstm_cell = nn.OptimizedLSTMCell()
+            lstm_cell = nn.OptimizedLSTMCell(features=self.hidden_size)
             new_h_val, lstm_input = lstm_cell(layer_carry, lstm_input) # new_h_val is the new LSTMCarry, lstm_input is the output
             new_carry.append(new_h_val)
         
@@ -94,17 +97,19 @@ class PPOTrainer:
             'stocks': config.get('stocks', None),
             'start_date': config['train_start_date'],
             'end_date': config['train_end_date'],
-            'n_envs': config['n_envs'],
             'window_size': config['window_size'],
-            'transaction_cost': config['transaction_cost'],
+            'transaction_cost_rate': config['transaction_cost_rate'],
             'sharpe_window': config['sharpe_window']
         }
         
         self.env = JAXVectorizedPortfolioEnv(**env_config)
+
+        self.vmap_reset = jax.vmap(self.env.reset, in_axes=(0,))
+        self.vmap_step = jax.vmap(self.env.step, in_axes=(0,0))
         
         # Network initialization
         self.network = LSTMActorCritic(
-            action_dim=self.env.env.action_dim,
+            action_dim=self.env.action_dim,
             hidden_size=config['hidden_size'],
             n_lstm_layers=config['n_lstm_layers']
         )
@@ -113,7 +118,7 @@ class PPOTrainer:
         self.rng = random.PRNGKey(config['seed'])
         self.rng, init_rng = random.split(self.rng)
         
-        dummy_obs = jnp.ones((config['n_envs'], self.env.env.obs_dim))
+        dummy_obs = jnp.ones((config['n_envs'], self.env.obs_dim))
         
         # Initialize LSTM carry for dummy init
         dummy_carry = [
@@ -140,7 +145,9 @@ class PPOTrainer:
         if config.get('use_wandb', True):
             wandb.init(project="jax-ppo-portfolio", config=config)
             
-        self.env_states, self.obs = self.env.reset()
+        self.rng, *reset_keys = random.split(self.rng, config['n_envs'] + 1)
+        reset_keys = jnp.array(reset_keys)
+        self.env_states, self.obs = self.vmap_reset(reset_keys)
         # Initialize the LSTM carry for the collector (will be updated at each step)
         self.collector_carry = [
             LSTMCarry(
@@ -152,57 +159,44 @@ class PPOTrainer:
     @partial(jax.jit, static_argnums=(0,))
     def collect_trajectory(self, train_state: TrainState, env_states: List[EnvState], initial_obs: chex.Array, initial_carry: List[LSTMCarry], rng_key: chex.PRNGKey) -> Tuple[Trajectory, List[EnvState], chex.Array, List[LSTMCarry]]:
         """Collect trajectory using current policy"""
-        
+    
         def step_fn(carry_step, _):
-            env_states, obs, lstm_carry, rng_key = carry_step
-            
+            env_states, obs, lstm_carry_tuple, rng_key = carry_step
+        
             # Get action from policy
             rng_key, action_rng = random.split(rng_key)
-            
+        
             # Apply network
-            # Ensure lstm_carry is treated as a list of LSTMCarry, even if it's the initial one (could be None initially if not handled in network init)
-            logits, values, new_carry_list = train_state.apply_fn(train_state.params, obs, tuple(lstm_carry))
-            
-            # Sample actions
-            # For continuous actions, you'd typically sample from a distribution (e.g., Normal)
-            # For discrete actions (as implied by random.categorical), ensure the action space aligns.
-            # Here, we assume continuous actions are directly the logits, which are then softmax-normalized by the env.
-            # We'll treat `logits` as direct actions or the means of a distribution.
-            # Let's assume for now `actions` are directly the continuous values passed to the env.
-            # For PPO with continuous actions, we often output mean and std.
-            # Given the environment expects weights (softmax-normalized), let's assume logits are the raw outputs.
-            # The environment will then softmax these logits.
-            
-            # Actions are sampled from a Gaussian policy parameterized by logits
-            action_std = self.config['action_std'] # Retrieve action_std from config
-            
-            action_distribution = jax.scipy.stats.norm(loc=logits, scale=action_std)
-            actions = action_distribution.sample(key=action_rng)
-            actions = jnp.clip(actions, -5.0, 5.0) # Clip actions before env for stability
-            log_probs = action_distribution.logpdf(actions).sum(axis=-1)
-            
+            logits, values, new_carry_list = train_state.apply_fn(train_state.params, obs, lstm_carry_tuple)
+        
+            # Sample actions from the distribution
+            action_std = self.config['action_std']
+            action_distribution = distrax.Normal(loc=logits, scale=action_std)
+            actions = action_distribution.sample(seed=action_rng)
+            actions = jnp.clip(actions, -5.0, 5.0)
+            log_probs = action_distribution.log_prob(actions).sum(axis=-1)
+        
             # Step environment
-            new_env_states, next_obs, rewards, dones, info = self.env.step(env_states, actions)
-            
-            # Handle LSTM state resets on episode boundaries
-            # new_carry_list contains the post-transition LSTM states
-            reset_carry_list = []
-            for i, layer_carry in enumerate(new_carry_list):
-                h_zeros = jnp.zeros_like(layer_carry.h)
-                c_zeros = jnp.zeros_like(layer_carry.c)
-                zero_carry_layer = LSTMCarry(h=h_zeros, c=c_zeros)
-                
-                reset_h = jnp.where(dones[:, None], zero_carry_layer.h, layer_carry.h)
-                reset_c = jnp.where(dones[:, None], zero_carry_layer.c, layer_carry.c)
-                reset_carry_list.append(LSTMCarry(h=reset_h, c=reset_c))
+            new_env_states, next_obs, rewards, dones, info = self.vmap_step(env_states, actions)
 
+            new_carry_tuple = new_carry_list[0]
+            # Handle LSTM state resets on episode boundaries using vmap
+            def reset_carry_fn(layer_carry, done):
+                h_state = layer_carry[0]
+                c_state = layer_carry[1]
+                h_zeros = jnp.zeros_like(h_state)
+                c_zeros = jnp.zeros_like(c_state)
+                reset_h = jnp.where(done, h_zeros, h_state)
+                reset_c = jnp.where(done, c_zeros, c_state)
+                return LSTMCarry(h=reset_h, c=reset_c)
+
+            # Vectorize the reset function over the list of LSTM layers
+            reset_carry_list = jax.vmap(reset_carry_fn, in_axes=(0, 0))(new_carry_tuple, dones)
+        
             # Stack LSTM carry for trajectory storage
-            # (n_lstm_layers, n_envs, hidden_size) -> (n_envs, n_lstm_layers, hidden_size)
-            # Need to store the *initial* carry of the step, not the *new* carry for the transition.
-            # So, `lstm_carry` are the states used to produce `logits, values`
-            initial_lstm_h_stacked = jnp.stack([c.h for c in lstm_carry], axis=1)
-            initial_lstm_c_stacked = jnp.stack([c.c for c in lstm_carry], axis=1)
-            
+            initial_lstm_h_stacked = jnp.stack([c.h for c in lstm_carry_tuple], axis=1)
+            initial_lstm_c_stacked = jnp.stack([c.c for c in lstm_carry_tuple], axis=1)
+        
             transition = Trajectory(
                 obs=obs,
                 actions=actions,
@@ -213,20 +207,19 @@ class PPOTrainer:
                 initial_lstm_h=initial_lstm_h_stacked,
                 initial_lstm_c=initial_lstm_c_stacked
             )
-            
-            return (new_env_states, next_obs, tuple(reset_carry_list), rng_key), transition
         
+            return (new_env_states, next_obs, (reset_carry_list, ), rng_key), transition
+    
         # Roll out trajectory
         n_steps = self.config['n_steps']
         init_carry_scan = (env_states, initial_obs, tuple(initial_carry), rng_key)
-        
-        # trajectory will be a Trajectory object where each field has shape (n_steps, n_envs, ...)
-        final_carry_scan, trajectory = lax.scan(step_fn, init_carry_scan, None, length=n_steps)
-        
-        final_env_states, final_obs, final_lstm_carry_tuple, _ = final_carry_scan
-        
-        return trajectory, final_env_states, final_obs, list(final_lstm_carry_tuple)
     
+        final_carry_scan, trajectory = lax.scan(step_fn, init_carry_scan, None, length=n_steps)
+    
+        final_env_states, final_obs, final_lstm_carry_tuple, _ = final_carry_scan
+    
+        return trajectory, final_env_states, final_obs, list(final_lstm_carry_tuple)
+        
     @partial(jax.jit, static_argnums=(0,))
     def compute_gae(self, trajectory: Trajectory, last_values: chex.Array) -> Tuple[chex.Array, chex.Array]:
         """Compute Generalized Advantage Estimation"""
@@ -319,8 +312,8 @@ class PPOTrainer:
         # Policy loss
         # Use the same continuous action distribution assumption as in collect_trajectory
         action_std = self.config['action_std']
-        action_distribution = jax.scipy.stats.norm(loc=logits, scale=action_std)
-        new_log_probs = action_distribution.logpdf(actions_batch).sum(axis=-1)
+        action_distribution = distrax.Normal(loc=logits, scale=action_std)
+        new_log_probs = action_distribution.log_prob(actions_batch).sum(axis=-1)
         
         ratio = jnp.exp(new_log_probs - old_log_probs_batch)
         
@@ -334,7 +327,7 @@ class PPOTrainer:
         # Entropy loss
         # For continuous actions, entropy of Gaussian: 0.5 * log(2*pi*e*sigma^2)
         # Sum across action dimensions
-        entropy = jnp.mean(action_distribution.entropy().sum(axis=-1))
+        entropy = action_distribution.entropy().sum(axis=-1)
         entropy_loss = -self.config['entropy_coeff'] * entropy.mean() # Maximize entropy, so negative coefficient
         
         total_loss = policy_loss + value_loss * self.config['value_coeff'] + entropy_loss
@@ -350,8 +343,8 @@ class PPOTrainer:
         
         return total_loss, metrics
 
-    @partial(jax.jit, static_argnums=(0,))
-    def train_step(self, train_state: TrainState, trajectory: Trajectory, last_values: chex.Array, rng_key: chex.PRNGKey) -> Tuple[TrainState, Dict[str, Any]]:
+    @partial(jax.jit, static_argnums=(0,5))
+    def train_step(self, train_state: TrainState, trajectory: Trajectory, last_values: chex.Array, rng_key: chex.PRNGKey, num_minibatches: int) -> Tuple[TrainState, Dict[str, Any]]:
         """Perform one PPO training step (multiple epochs over the trajectory)"""
         
         advantages, returns = self.compute_gae(trajectory, last_values)
@@ -371,12 +364,6 @@ class PPOTrainer:
         approx_kl_sum = jnp.array(0.0)
         clip_fraction_sum = jnp.array(0.0)
         
-        batch_size = self.config['ppo_batch_size']
-        num_minibatches = flat_trajectory.obs.shape[0] // batch_size
-        
-        # Ensure num_minibatches is at least 1, even if flat_trajectory.obs.shape[0] < batch_size
-        num_minibatches = jnp.maximum(1, num_minibatches)
-        
         # Shuffle indices for mini-batch sampling
         rng_key, shuffle_rng = random.split(rng_key)
         permutation = random.permutation(shuffle_rng, flat_trajectory.obs.shape[0])
@@ -390,7 +377,7 @@ class PPOTrainer:
         # Define a single PPO epoch function
         def ppo_epoch(carry, i):
             current_train_state, current_metrics_sums, current_rng_key = carry
-            
+            batch_size = self.config['ppo_batch_size']
             # Extract mini-batch
             start_idx = i * batch_size
             end_idx = (i + 1) * batch_size
@@ -433,6 +420,8 @@ class PPOTrainer:
         """Main training loop"""
         
         print("Starting PPO training...")
+
+        num_minibatches = self.config['n_steps'] * self.config['n_envs'] // self.config['ppo_batch_size']
         
         for update in range(self.config['num_updates']):
             start_time = time.time()
@@ -451,10 +440,12 @@ class PPOTrainer:
             # Make sure to pass the carry of the *last* step to predict the last_values
             # The obs are the ones *after* the last step of the trajectory.
             _, last_values, _ = self.train_state.apply_fn(self.train_state.params, self.obs, tuple(self.collector_carry))
+
+            
             
             # Perform PPO training step
             self.rng, train_rng = random.split(self.rng)
-            self.train_state, metrics = self.train_step(self.train_state, trajectory, last_values, train_rng)
+            self.train_state, metrics = self.train_step(self.train_state, trajectory, last_values, train_rng, num_minibatches)
             
             end_time = time.time()
             
@@ -492,7 +483,7 @@ class PPOTrainer:
                     # A more accurate Sharpe calculation would be needed here, e.g., if env_states has info
                     # sharpe_means = jnp.mean(self.env_states.sharpe_buffer, axis=1)
                     # sharpe_stds = jnp.std(self.env_states.sharpe_buffer, axis=1)
-                    # avg_sharpe = jnp.mean((sharpe_means - self.env.env.risk_free_rate_daily) / (sharpe_stds + 1e-8) * jnp.sqrt(252.0))
+                    # avg_sharpe = jnp.mean((sharpe_means - self.env.risk_free_rate_daily) / (sharpe_stds + 1e-8) * jnp.sqrt(252.0))
                     # wandb_log['final_env/avg_sharpe_ratio'] = avg_sharpe
                     wandb_log['final_env/avg_sharpe_ratio'] = jnp.array(0.0) # Placeholder for now to avoid error
                     
@@ -500,7 +491,7 @@ class PPOTrainer:
             
             # Save model
             if update % self.config['save_interval'] == 0 and update > 0:
-                self.save_model(f"ppo_model_update_{update}.pkl")
+                self.save_model(f"ppo_model_update_{update}")
                 
         print("Training complete!")
         if self.config.get('use_wandb', True):
@@ -510,8 +501,8 @@ class PPOTrainer:
         """Save the training state (parameters and optimizer state)"""
         save_path = Path(self.config['model_dir']) / filename
         os.makedirs(save_path.parent, exist_ok=True)
-        with open(save_path, 'wb') as f:
-            pickle.dump(self.train_state, f)
+        checkpointer = ocp.PyTreeCheckpointer()
+        checkpointer.save(save_path, save_args)
         print(f"Model saved to {save_path}")
 
     def load_model(self, filename: str):
@@ -528,14 +519,14 @@ if __name__ == "__main__":
         'data_root': 'processed_data/',
         'stocks': None, 
         'train_start_date': '2024-06-06', # Extended for more data
-        'train_end_date': '2025-03-06', 
-        'n_envs': 16, # Reduced for initial testing on Colab
+        'train_end_date': '2025-03-06',
         'window_size': 30,
-        'transaction_cost': 0.005,
+        'transaction_cost_rate': 0.005,
         'sharpe_window': 252,
+        'n_envs' : 16,
         
         # PPO parameters
-        'num_updates': 1000, # Number of PPO updates
+        'num_updates': 100000, # Number of PPO updates
         'n_steps': 128,      # Number of steps to collect per environment
         'gamma': 0.99,       # Discount factor
         'gae_lambda': 0.95,  # GAE lambda parameter
@@ -555,8 +546,8 @@ if __name__ == "__main__":
         # Logging and saving
         'use_wandb': True,
         'log_interval': 10,
-        'save_interval': 100,
-        'model_dir': 'ppo_models',
+        'save_interval': 5000,
+        'model_dir': 'models',
     }
     
     # Create and run the trainer
