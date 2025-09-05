@@ -14,7 +14,7 @@ import pickle
 from functools import partial
 
 # Import the JAX environment (assume it's in the same directory or installed)
-from jax_portfolio_env import JAXPortfolioEnvWrapper, EnvState
+from finagent.environment.portfolio_env import JAXVectorizedPortfolioEnv, EnvState
 
 # Enable JAX optimizations
 jax.config.update('jax_enable_x64', False)
@@ -45,7 +45,7 @@ class LSTMActorCritic(nn.Module):
     n_lstm_layers: int = 2
     
     @nn.compact
-    def __call__(self, x, carry: Optional[List[LSTMCarry]] = None, training=True):
+    def __call__(self, x, carry: List[LSTMCarry], training=True):
         batch_size = x.shape[0]
         
         # Input preprocessing
@@ -59,10 +59,10 @@ class LSTMActorCritic(nn.Module):
         new_carry = []
         
         for i in range(self.n_lstm_layers):
-            if carry is None or len(carry) <= i or carry[i] is None:
+            if carry[i] is None:
                 # Initialize carry if None for this layer or not provided
-                h = jnp.zeros((batch_size, self.hidden_size))
-                c = jnp.zeros((batch_size, self.hidden_size))
+                h = jnp.zeros((batch_size, self.hidden_size), dtype = jnp.float32)
+                c = jnp.zeros((batch_size, self.hidden_size), dtype = jnp.float32)
                 layer_carry = LSTMCarry(h=h, c=c)
             else:
                 layer_carry = carry[i]
@@ -100,7 +100,7 @@ class PPOTrainer:
             'sharpe_window': config['sharpe_window']
         }
         
-        self.env = JAXPortfolioEnvWrapper(env_config)
+        self.env = JAXVectorizedPortfolioEnv(**env_config)
         
         # Network initialization
         self.network = LSTMActorCritic(
@@ -122,7 +122,7 @@ class PPOTrainer:
                 c=jnp.zeros((config['n_envs'], config['hidden_size']))
             ) for _ in range(config['n_lstm_layers'])
         ]
-        self.params = self.network.init(init_rng, dummy_obs, dummy_carry)
+        self.params = self.network.init(init_rng, dummy_obs, tuple(dummy_carry))
         
         # Optimizer with gradient clipping
         self.optimizer = optax.chain(
@@ -161,7 +161,7 @@ class PPOTrainer:
             
             # Apply network
             # Ensure lstm_carry is treated as a list of LSTMCarry, even if it's the initial one (could be None initially if not handled in network init)
-            logits, values, new_carry_list = train_state.apply_fn(train_state.params, obs, lstm_carry)
+            logits, values, new_carry_list = train_state.apply_fn(train_state.params, obs, tuple(lstm_carry))
             
             # Sample actions
             # For continuous actions, you'd typically sample from a distribution (e.g., Normal)
@@ -173,51 +173,23 @@ class PPOTrainer:
             # Given the environment expects weights (softmax-normalized), let's assume logits are the raw outputs.
             # The environment will then softmax these logits.
             
-            # Let's assume actions are the raw logits (which will be softmaxed by the env)
-            actions = logits # Pass raw logits, env will softmax
+            # Actions are sampled from a Gaussian policy parameterized by logits
+            action_std = self.config['action_std'] # Retrieve action_std from config
             
-            # For log_probs, we need to calculate them based on the *actual* actions taken.
-            # If the env softmaxes, the agent isn't directly choosing discrete categories.
-            # For PPO with continuous actions:
-            # - Policy outputs mean and log_std (or std).
-            # - Actions are sampled from N(mean, std).
-            # - Log_probs are then calculated for those sampled actions.
-            # Given the current setup, `logits` are *not* directly probabilities.
-            # Let's *re-interpret* `actions` as continuous outputs that the env then processes.
-            # For PPO on continuous actions, it's common to use a TanhNormal or directly output mean/log_std for Normal.
-            # For simplicity, if `actions` are directly continuous, and the environment uses softmax,
-            # then `log_probs` would refer to the log-likelihood of the continuous action.
-            # A common approach for this is to use a Beta distribution or Normal distribution
-            # and then apply a squash function like Tanh.
-            # For now, let's assume `logits` are the raw outputs, and we need to define how `actions` and `log_probs` are derived.
-            # If the environment `step` function applies `jax.nn.softmax(action)`, then `action` here are the unnormalized log-probabilities.
-            # A common approach for continuous actions is to sample from a Gaussian parameterized by the actor output.
-            # For simplicity for now, let's assume 'logits' are the direct continuous action values.
-            # The PPO formulation usually works with a policy that outputs distribution parameters.
-            # Let's make an explicit choice: `logits` are the means of a Gaussian policy, and we'll use a fixed `action_std`.
-            # This is a simplification. A more robust PPO would have the network also output `log_std`.
-            
-            # Simplified continuous action sampling for now:
-            # We'll use the logits as means and a fixed standard deviation
-            action_std = self.config['action_std'] # Add action_std to config
             action_distribution = jax.scipy.stats.norm(loc=logits, scale=action_std)
             actions = action_distribution.sample(key=action_rng)
-            
-            # Clip actions to reasonable range if necessary before environment
-            actions = jnp.clip(actions, -5.0, 5.0) # Example clipping
-            
-            log_probs = action_distribution.logpdf(actions).sum(axis=-1) # Sum log_probs across action_dim
+            actions = jnp.clip(actions, -5.0, 5.0) # Clip actions before env for stability
+            log_probs = action_distribution.logpdf(actions).sum(axis=-1)
             
             # Step environment
-            new_env_states, next_obs, rewards, dones, info = self.env.batch_step(env_states, actions)
+            new_env_states, next_obs, rewards, dones, info = self.env.step(env_states, actions)
             
             # Handle LSTM state resets on episode boundaries
-            # new_carry_list is a list of LSTMCarry objects
+            # new_carry_list contains the post-transition LSTM states
             reset_carry_list = []
             for i, layer_carry in enumerate(new_carry_list):
-                batch_size_h = layer_carry.h.shape[0]
-                h_zeros = jnp.zeros((batch_size_h, self.config['hidden_size']))
-                c_zeros = jnp.zeros((batch_size_h, self.config['hidden_size']))
+                h_zeros = jnp.zeros_like(layer_carry.h)
+                c_zeros = jnp.zeros_like(layer_carry.c)
                 zero_carry_layer = LSTMCarry(h=h_zeros, c=c_zeros)
                 
                 reset_h = jnp.where(dones[:, None], zero_carry_layer.h, layer_carry.h)
@@ -228,8 +200,8 @@ class PPOTrainer:
             # (n_lstm_layers, n_envs, hidden_size) -> (n_envs, n_lstm_layers, hidden_size)
             # Need to store the *initial* carry of the step, not the *new* carry for the transition.
             # So, `lstm_carry` are the states used to produce `logits, values`
-            initial_lstm_h_stacked = jnp.stack([c.h for c in lstm_carry], axis=1) # (n_envs, n_lstm_layers, hidden_size)
-            initial_lstm_c_stacked = jnp.stack([c.c for c in lstm_carry], axis=1) # (n_envs, n_lstm_layers, hidden_size)
+            initial_lstm_h_stacked = jnp.stack([c.h for c in lstm_carry], axis=1)
+            initial_lstm_c_stacked = jnp.stack([c.c for c in lstm_carry], axis=1)
             
             transition = Trajectory(
                 obs=obs,
@@ -242,18 +214,18 @@ class PPOTrainer:
                 initial_lstm_c=initial_lstm_c_stacked
             )
             
-            return (new_env_states, next_obs, reset_carry_list, rng_key), transition
+            return (new_env_states, next_obs, tuple(reset_carry_list), rng_key), transition
         
         # Roll out trajectory
         n_steps = self.config['n_steps']
-        init_carry_scan = (env_states, initial_obs, initial_carry, rng_key)
+        init_carry_scan = (env_states, initial_obs, tuple(initial_carry), rng_key)
         
         # trajectory will be a Trajectory object where each field has shape (n_steps, n_envs, ...)
         final_carry_scan, trajectory = lax.scan(step_fn, init_carry_scan, None, length=n_steps)
         
-        final_env_states, final_obs, final_lstm_carry, _ = final_carry_scan
+        final_env_states, final_obs, final_lstm_carry_tuple, _ = final_carry_scan
         
-        return trajectory, final_env_states, final_obs, final_lstm_carry
+        return trajectory, final_env_states, final_obs, list(final_lstm_carry_tuple)
     
     @partial(jax.jit, static_argnums=(0,))
     def compute_gae(self, trajectory: Trajectory, last_values: chex.Array) -> Tuple[chex.Array, chex.Array]:
@@ -330,13 +302,13 @@ class PPOTrainer:
         initial_lstm_c_batch = train_batch.initial_lstm_c
 
         # Reconstruct LSTM carry from stacked h and c
-        lstm_carry_batch = [
+        lstm_carry_batch = tuple([
             LSTMCarry(h=initial_lstm_h_batch[:, i, :], c=initial_lstm_c_batch[:, i, :])
             for i in range(self.config['n_lstm_layers'])
-        ]
+        ])
         
         # Get current policy outputs
-        logits, values, _ = self.network.apply(params, obs_batch, lstm_carry_batch)
+        logits, values, _ = self.network.apply(params, obs_batch, tuple(lstm_carry_batch))
         
         # Value loss
         value_pred_clipped = train_batch.values + (values - train_batch.values).clip(-self.config['clip_eps'], self.config['clip_eps'])
@@ -362,7 +334,7 @@ class PPOTrainer:
         # Entropy loss
         # For continuous actions, entropy of Gaussian: 0.5 * log(2*pi*e*sigma^2)
         # Sum across action dimensions
-        entropy = 0.5 * jnp.log(2 * jnp.pi * jnp.e * jnp.square(action_std)) * self.network.action_dim
+        entropy = jnp.mean(action_distribution.entropy().sum(axis=-1))
         entropy_loss = -self.config['entropy_coeff'] * entropy.mean() # Maximize entropy, so negative coefficient
         
         total_loss = policy_loss + value_loss * self.config['value_coeff'] + entropy_loss
@@ -425,7 +397,7 @@ class PPOTrainer:
             
             # Use dynamic_slice to handle batching within JIT
             mini_batch_trajectory = jax.tree_util.tree_map(
-                lambda x: lax.dynamic_slice(x, (start_idx, 0) if x.ndim > 1 else (start_idx,), (batch_size, x.shape[1]) if x.ndim > 1 else (batch_size,)),
+                lambda x: lax.dynamic_slice(x, (start_idx,) + (0,) * (x.ndim - 1), (batch_size,) + x.shape[1:]),
                 shuffled_flat_trajectory
             )
             mini_batch_advantages = lax.dynamic_slice(shuffled_flat_advantages, (start_idx,), (batch_size,))
@@ -478,7 +450,7 @@ class PPOTrainer:
             # Get last values (for GAE)
             # Make sure to pass the carry of the *last* step to predict the last_values
             # The obs are the ones *after* the last step of the trajectory.
-            _, last_values, _ = self.train_state.apply_fn(self.train_state.params, self.obs, self.collector_carry)
+            _, last_values, _ = self.train_state.apply_fn(self.train_state.params, self.obs, tuple(self.collector_carry))
             
             # Perform PPO training step
             self.rng, train_rng = random.split(self.rng)
@@ -514,9 +486,15 @@ class PPOTrainer:
                     # The `info` dict from `step` contains 'portfolio_values', 'sharpe_ratios', etc.
                     # You'd need to extend `collect_trajectory` to return `all_infos` or derive from `env_states`.
                     # For simplicity, let's assume we can get some from `self.env_states` which are the final states.
-                    if isinstance(self.env_states, EnvState): # Check if EnvState is a NamedTuple/single instance
-                        wandb_log['final_env/avg_portfolio_value'] = self.env_states.portfolio_value.mean()
-                        wandb_log['final_env/avg_sharpe_ratio'] = self.env_states.sharpe_buffer.mean() # This is crude, better calculate from buffer
+                    # For logging portfolio value and sharpe ratio from the final state of each env
+                    wandb_log['final_env/avg_portfolio_value'] = self.env_states.portfolio_value.mean()
+                    # Note: Sharpe calculation needs to happen on the full buffer, not just its mean
+                    # A more accurate Sharpe calculation would be needed here, e.g., if env_states has info
+                    # sharpe_means = jnp.mean(self.env_states.sharpe_buffer, axis=1)
+                    # sharpe_stds = jnp.std(self.env_states.sharpe_buffer, axis=1)
+                    # avg_sharpe = jnp.mean((sharpe_means - self.env.env.risk_free_rate_daily) / (sharpe_stds + 1e-8) * jnp.sqrt(252.0))
+                    # wandb_log['final_env/avg_sharpe_ratio'] = avg_sharpe
+                    wandb_log['final_env/avg_sharpe_ratio'] = jnp.array(0.0) # Placeholder for now to avoid error
                     
                     wandb.log(wandb_log)
             
@@ -549,11 +527,11 @@ if __name__ == "__main__":
         'seed': 0,
         'data_root': 'processed_data/',
         'stocks': None, 
-        'train_start_date': '2010-01-01', # Extended for more data
-        'train_end_date': '2020-12-31', 
+        'train_start_date': '2024-06-06', # Extended for more data
+        'train_end_date': '2025-03-06', 
         'n_envs': 16, # Reduced for initial testing on Colab
         'window_size': 30,
-        'transaction_cost': 0.001,
+        'transaction_cost': 0.005,
         'sharpe_window': 252,
         
         # PPO parameters
@@ -568,8 +546,7 @@ if __name__ == "__main__":
         'max_grad_norm': 0.5,
         'value_coeff': 0.5,
         'entropy_coeff': 0.01,
-        'action_std': 0.5, # Fixed standard deviation for continuous action sampling (simplified)
-                           # For more robust PPO, the network should learn this.
+        'action_std': 0.5,
         
         # LSTM parameters
         'hidden_size': 256, # Reduced for initial testing
@@ -586,6 +563,6 @@ if __name__ == "__main__":
     trainer = PPOTrainer(config)
     trainer.train()
 
-    !git add .
-    !git commit -m "Trained PPO LSTM model"
-    !git push origin gpu-training-scripts
+    # !git add .
+    # !git commit -m "Trained PPO LSTM model"
+    # !git push origin gpu-training-scripts
