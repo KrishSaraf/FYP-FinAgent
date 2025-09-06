@@ -331,7 +331,7 @@ class JAXVectorizedPortfolioEnv:
             'total_return': new_total_return,
             'sharpe_ratio': sharpe_ratio,
             'daily_portfolio_return': net_daily_portfolio_return,
-            'transaction_cost_value': transaction_cost_value,
+            'transaction_cost_value': transaction_cost_rate_applied,
             'new_stock_weights': new_stock_weights,
             'new_cash_weight': new_cash_weight,
             'prev_stock_weights': prev_stock_weights,
