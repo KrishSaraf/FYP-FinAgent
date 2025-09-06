@@ -517,7 +517,7 @@ if __name__ == "__main__":
     # Example Configuration
     config = {
         'seed': 0,
-        'data_root': 'FYP-FinAgent/processed_data/',
+        'data_root': 'processed_data/',
         'stocks': None, 
         'train_start_date': '2024-06-06', # Extended for more data
         'train_end_date': '2025-03-06',
