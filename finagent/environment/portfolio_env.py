@@ -22,6 +22,9 @@ class EnvState(NamedTuple):
     portfolio_value: float # Normalized to 1.0 at start, represents the multiplier of initial value
     sharpe_buffer: chex.Array  # Rolling buffer for Sharpe calculation (stores *daily_returns*)
     sharpe_buffer_idx: int
+    portfolio_volatility: float
+    max_drawdown: float
+    rolling_correlation: chex.Array # Portfolio correlation with market
 
 
 class JAXPortfolioDataLoader:
@@ -34,24 +37,55 @@ class JAXPortfolioDataLoader:
         self.features = features  # can be None, will be inferred
         self.use_all_features = use_all_features
 
+    def engineer_features(self, df: pd.DataFrame, stock: str) -> pd.DataFrame:
+        """Add engineered features to data"""
+        # Price relatives (returns)
+        df['returns_1d'] = df['close'].pct_change()
+        df['returns_5d'] = df['close'].pct_change(periods=5)
+
+        # Volatility estimates
+        df['volatility_10d'] = df['returns_1d'].rolling(10).std()
+        df['volatility_30d'] = df['returns_1d'].rolling(30).std()
+
+        # Normalized technical indicators (z-scores)
+        for col in ['rsi_14', 'dma_50', 'dma_200']:
+            if col in df.columns:
+                rolling_mean = df[col].rolling(30).mean()
+                rolling_std = df[col].rolling(30).std()
+                df[f'{col}_zscore'] = (df[col] - rolling_mean) / (rolling_std + 1e-8)
+
+        # Price relatives to moving averages
+        if 'dma_50' in df.columns:
+            df['price_to_dma50'] = df['close'] / df['dma_50'] - 1.0
+        if 'dma_200' in df.columns:
+            df['price_to_dma200'] = df['close'] / df['dma_200'] - 1.0
+
+        # Gap from previous close (needs "open")
+        if 'open' in df.columns:
+            df['overnight_gap'] = df['open'] / df['close'].shift(1) - 1.0
+
+        return df.fillna(0.0)
+
     def load_and_preprocess_data(self,
                                  start_date: str,
                                  end_date: str,
                                  fill_missing_features_with: str = 'interpolate',
-                                 preload_to_gpu: bool = True) -> Tuple[chex.Array, chex.Array, pd.DatetimeIndex]:
+                                 preload_to_gpu: bool = True) -> Tuple[chex.Array, chex.Array, pd.DatetimeIndex, int]:
         """
         Load and preprocess CSV data into a consistent tensor for JAX.
 
-        Args:
-            fill_missing_features_with: 'zero', 'nan', 'forward_fill', 'interpolate'
-            preload_to_gpu: whether to return jnp.array instead of np.array
+        Returns:
+            data_array: jnp.array or np.array with shape (T, n_stocks, n_features)
+            day_idx: jnp.array of indices (0..T-1)
+            valid_dates: pd.DatetimeIndex
+            n_features: number of features
         """
 
         all_data = []
         all_features = set()
         stock_features = {}
 
-        # Pass 1: Collect available features (ONLY from actual stock files)
+        # Pass 1: Collect available features
         for stock in self.stocks:
             csv_path = self.data_root / f"{stock}_aligned.csv"
             if not csv_path.exists():
@@ -59,37 +93,26 @@ class JAXPortfolioDataLoader:
                 continue
             try:
                 sample_df = pd.read_csv(csv_path, nrows=0, index_col=0)
-                feats = list(sample_df.columns)  # All columns are features after setting index
+                feats = list(sample_df.columns)
                 stock_features[stock] = feats
                 all_features.update(feats)
-                print(f"Stock {stock}: {len(feats)} features, has 'close': {'close' in feats}")
             except Exception as e:
                 print(f"Warning: Error reading {stock}: {e}, skipping.")
                 continue
 
-        print(f"DEBUG: Total stocks processed: {len(stock_features)}")
-        print(f"DEBUG: All features found: {sorted(list(all_features))}")
-        print(f"DEBUG: 'close' in all_features: {'close' in all_features}")
-
         if self.features is None:
             if self.use_all_features:
                 self.features = sorted(list(all_features))
-                print(f"DEBUG: Using all features: {len(self.features)} features")
             else:
                 common = set.intersection(*[set(f) for f in stock_features.values()])
                 self.features = sorted(list(common)) if common else sorted(list(all_features))
-                print(f"DEBUG: Using common features: {len(self.features)} features")
-        
-        # CRITICAL: Ensure 'close' price is available and prioritize it
+
+        # Ensure 'close' is available
         if 'close' not in self.features:
-            raise ValueError("'close' price must be available in the data for portfolio returns calculation")
-        
-        # Reorganize features to put 'close' first for reliable indexing
-        if 'close' in self.features:
-            self.features = ['close'] + [f for f in self.features if f != 'close']
-        
-        print(f"Using features: {self.features}")
-        print(f"Close price will be at index 0 for reliable returns calculation")
+            raise ValueError("'close' must be present in features")
+
+        # Reorganize so 'close' is always first
+        self.features = ['close'] + [f for f in self.features if f != 'close']
 
         # Pass 2: Load and standardize
         for stock in self.stocks:
@@ -97,7 +120,7 @@ class JAXPortfolioDataLoader:
             if not csv_path.exists():
                 continue
             df = pd.read_csv(csv_path, parse_dates=[0], index_col=0)
-            df.index.name = "date"  # Ensure index is named 'date'
+            df.index.name = "date"
             df = df.sort_index()
             df = df.loc[start_date:end_date]
 
@@ -106,36 +129,42 @@ class JAXPortfolioDataLoader:
                 if feat in df.columns:
                     proc[feat] = pd.to_numeric(df[feat], errors="coerce")
                 else:
-                    print(f"{feat} missing for {stock}, filling with {fill_missing_features_with}")
                     proc[feat] = np.nan
 
-            # Fill missing values
+            # Fill missing
             if fill_missing_features_with == "zero":
                 proc = proc.fillna(0.0)
             elif fill_missing_features_with == "forward_fill":
                 proc = proc.ffill().bfill().fillna(0.0)
             elif fill_missing_features_with == "interpolate":
                 proc = proc.interpolate(method="linear").ffill().bfill().fillna(0.0)
-            else:  # default nan then robust pipeline
+            else:
                 proc = proc.ffill().bfill().interpolate().ffill().bfill().fillna(0.0)
 
+            proc = self.engineer_features(proc, stock)
             proc["symbol"] = stock
             all_data.append(proc)
 
         if not all_data:
             raise RuntimeError("No stock data loaded.")
 
+        # Merge into panel
         panel = pd.concat(all_data).reset_index().set_index(["date", "symbol"])
         panel = panel[~panel.index.duplicated(keep="first")]
+
+        # Update feature list to include engineered features
+        engineered_feats = [c for c in all_data[0].columns if c not in self.features + ["symbol"]]
+        self.features = self.features + engineered_feats
+
         panel = panel.unstack(level="symbol").sort_index(axis=1)
         full_columns = pd.MultiIndex.from_product([self.features, self.stocks])
-        
+
         # Align to requested date range
         valid_dates = pd.date_range(start=start_date, end=end_date, freq="B")
         panel = panel.reindex(valid_dates, columns=full_columns, method="ffill").fillna(0.0)
 
-        # Convert to numpy/jax
-        data_array = panel.values.astype(np.float32)  # shape (T, features*stocks)
+        # Convert to tensor
+        data_array = panel.values.astype(np.float32)
         n_days = len(valid_dates)
         n_features = len(self.features)
         n_stocks = len(self.stocks)
@@ -145,6 +174,7 @@ class JAXPortfolioDataLoader:
             data_array = jnp.array(data_array)
 
         return data_array, jnp.arange(n_days), valid_dates, n_features
+
 
 
 class JAXVectorizedPortfolioEnv:
@@ -193,6 +223,14 @@ class JAXVectorizedPortfolioEnv:
         
         # Set close price index (should be 0 after reorganization)
         self.close_price_idx = 0
+
+        self.feature_indices = {
+            'open': self.data_loader.features.index('open'),
+            'close': self.data_loader.features.index('close'),
+            'returns_1d': self.data_loader.features.index('returns_1d') if 'returns_1d' in self.data_loader.features else None,
+            'volatility_10d': self.data_loader.features.index('volatility_10d') if 'volatility_10d' in self.data_loader.features else None,
+            'overnight_gap': self.data_loader.features.index('overnight_gap') if 'overnight_gap' in self.data_loader.features else None
+        }
         
         # Validate that we have valid price data
         if self.data.shape[0] < self.window_size + 2:
@@ -202,7 +240,7 @@ class JAXVectorizedPortfolioEnv:
         self.action_dim = self.n_stocks + 1
         chex.assert_trees_all_equal(self.data.shape[1], self.n_stocks)
 
-        obs_size = (self.window_size * self.n_stocks * self.n_features) + self.action_dim + 2
+        obs_size = (self.window_size * self.n_stocks * self.n_features) + self.n_stocks * 2 + self.action_dim + 4
 
         self.obs_dim = obs_size
 
@@ -255,7 +293,10 @@ class JAXVectorizedPortfolioEnv:
             total_return=0.0,
             portfolio_value=1.0,
             sharpe_buffer=sharpe_buffer,
-            sharpe_buffer_idx=0
+            sharpe_buffer_idx=0,
+            portfolio_volatility=0.0,
+            max_drawdown=0.0,
+            rolling_correlation=jnp.zeros(30)  # 30-day correlation buffer
         )
 
         obs = self._get_observation(env_state)
@@ -299,16 +340,25 @@ class JAXVectorizedPortfolioEnv:
         new_sharpe_buffer = env_state.sharpe_buffer.at[env_state.sharpe_buffer_idx].set(net_daily_portfolio_return)
         new_sharpe_buffer_idx = (env_state.sharpe_buffer_idx + 1) % self.sharpe_window
 
+        # Calculate rolling maximum for drawdown
+        rolling_returns = env_state.sharpe_buffer[:env_state.sharpe_buffer_idx + 1]
+        cumulative_returns = jnp.cumsum(rolling_returns)
+        running_max = jnp.maximum.accumulate(cumulative_returns)
+        drawdown = (cumulative_returns - running_max).min()
+        new_max_drawdown = jnp.minimum(env_state.max_drawdown, drawdown)
+
+        portfolio_volatility = jnp.std(rolling_returns) * jnp.sqrt(252.0)
+
         sharpe_mean = jnp.mean(new_sharpe_buffer)
         sharpe_std = jnp.std(new_sharpe_buffer)
 
         sharpe_ratio = lax.cond(
             sharpe_std == 0,
             lambda: 0.0,
-            lambda: (sharpe_mean - self.risk_free_rate_daily) / sharpe_std * jnp.sqrt(252.0)
+            lambda: (sharpe_mean - self.risk_free_rate_daily) / (sharpe_std + 1e-8)
         )
         
-        reward = sharpe_ratio
+        reward = (jnp.clip(sharpe_ratio, -5.0, 5.0) * 0.7 + net_daily_portfolio_return * 20.0 - weight_change_total * 0.5 - jnp.maximum(0, -drawdown - 0.1) * 2.0)
 
         next_step = env_state.current_step + 1
         done = (next_step >= self.n_timesteps - 1) | (new_portfolio_value <= 0.5)
@@ -320,7 +370,10 @@ class JAXVectorizedPortfolioEnv:
             total_return=new_total_return,
             portfolio_value=new_portfolio_value,
             sharpe_buffer=new_sharpe_buffer,
-            sharpe_buffer_idx=new_sharpe_buffer_idx
+            sharpe_buffer_idx=new_sharpe_buffer_idx,
+            portfolio_volatility=portfolio_volatility,
+            max_drawdown=new_max_drawdown,
+            rolling_correlation=env_state.rolling_correlation # Placeholder
         )
 
         next_obs = self._get_observation(new_env_state)
@@ -344,28 +397,49 @@ class JAXVectorizedPortfolioEnv:
     def _get_observation(self, env_state: EnvState) -> chex.Array:
         """
         Constructs the observation for the current step.
+        - Historical features: t-window_size to t-1 (ALL features)
+        - Current partial info: t (ONLY open price and overnight gap)
         """
-        start_idx = env_state.current_step - self.window_size + 1
-        end_idx = env_state.current_step + 1
-        
-        data_slice = lax.dynamic_slice(
+        # Historical data (t-window_size to t-1)
+        hist_start_idx = env_state.current_step - self.window_size
+        hist_end_idx = env_state.current_step  # Exclusive, so gets up to t-1
+    
+        historical_data = lax.dynamic_slice(
             self.data,
-            (start_idx, 0, 0),
+            (hist_start_idx, 0, 0),
             (self.window_size, self.n_stocks, self.n_features)
         )
-        
-        market_data_flat = data_slice.flatten()
-
-        portfolio_state_flat = jnp.concatenate([
-            env_state.portfolio_weights,
-            jnp.array([env_state.portfolio_value]),
-            jnp.array([env_state.total_return])
+    
+        # Current partial information (time t)
+        current_step_data = self.data[env_state.current_step, :, :]  # (n_stocks, n_features)
+        current_open = current_step_data[:, self.feature_indices['open']]
+        current_gap = current_step_data[:, self.feature_indices['overnight_gap']]
+    
+        # Flatten historical data
+        historical_flat = historical_data.flatten()
+    
+        # Portfolio risk metrics
+        returns_buffer = env_state.sharpe_buffer[:env_state.sharpe_buffer_idx + 1]
+        portfolio_vol = jnp.std(returns_buffer) * jnp.sqrt(252.0)  # Annualized
+    
+        # Market state indicators
+        market_state = jnp.array([
+            env_state.portfolio_value,
+            env_state.total_return,
+            portfolio_vol,
+            env_state.max_drawdown
         ])
-
-        obs = jnp.concatenate([market_data_flat, portfolio_state_flat])
-        chex.assert_trees_all_equal(obs.shape, (self.obs_dim,))
-
+    
+        obs = jnp.concatenate([
+            historical_flat,           # Historical features (all)
+            current_open,             # Current open prices
+            current_gap,              # Overnight gaps
+            env_state.portfolio_weights,  # Current allocation
+            market_state              # Portfolio metrics
+        ])
+    
         return obs
+
 
     @partial(jax.jit, static_argnums=(0,))
     def _get_daily_returns_from_data(self, step: int) -> chex.Array:
