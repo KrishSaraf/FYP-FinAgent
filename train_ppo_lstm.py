@@ -99,7 +99,8 @@ class PPOTrainer:
             'end_date': config['train_end_date'],
             'window_size': config['window_size'],
             'transaction_cost_rate': config['transaction_cost_rate'],
-            'sharpe_window': config['sharpe_window']
+            'sharpe_window': config['sharpe_window'],
+            'use_all_features': True  # Use all available features
         }
         
         self.env = JAXVectorizedPortfolioEnv(**env_config)
@@ -502,7 +503,7 @@ class PPOTrainer:
         save_path = Path(self.config['model_dir']) / filename
         os.makedirs(save_path.parent, exist_ok=True)
         checkpointer = ocp.PyTreeCheckpointer()
-        checkpointer.save(save_path, save_args)
+        checkpointer.save(save_path, self.train_state)
         print(f"Model saved to {save_path}")
 
     def load_model(self, filename: str):
@@ -516,7 +517,7 @@ if __name__ == "__main__":
     # Example Configuration
     config = {
         'seed': 0,
-        'data_root': 'processed_data/',
+        'data_root': 'FYP-FinAgent/processed_data/',
         'stocks': None, 
         'train_start_date': '2024-06-06', # Extended for more data
         'train_end_date': '2025-03-06',

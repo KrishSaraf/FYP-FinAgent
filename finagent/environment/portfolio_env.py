@@ -51,23 +51,34 @@ class JAXPortfolioDataLoader:
         all_features = set()
         stock_features = {}
 
-        # Pass 1: Collect available features
+        # Pass 1: Collect available features (ONLY from actual stock files)
         for stock in self.stocks:
             csv_path = self.data_root / f"{stock}_aligned.csv"
             if not csv_path.exists():
                 print(f"Warning: CSV for {stock} not found, skipping.")
                 continue
-            sample_df = pd.read_csv(csv_path, nrows=0, index_col=0)
-            feats = list(sample_df.columns)  # All columns are features after setting index
-            stock_features[stock] = feats
-            all_features.update(feats)
+            try:
+                sample_df = pd.read_csv(csv_path, nrows=0, index_col=0)
+                feats = list(sample_df.columns)  # All columns are features after setting index
+                stock_features[stock] = feats
+                all_features.update(feats)
+                print(f"Stock {stock}: {len(feats)} features, has 'close': {'close' in feats}")
+            except Exception as e:
+                print(f"Warning: Error reading {stock}: {e}, skipping.")
+                continue
+
+        print(f"DEBUG: Total stocks processed: {len(stock_features)}")
+        print(f"DEBUG: All features found: {sorted(list(all_features))}")
+        print(f"DEBUG: 'close' in all_features: {'close' in all_features}")
 
         if self.features is None:
             if self.use_all_features:
                 self.features = sorted(list(all_features))
+                print(f"DEBUG: Using all features: {len(self.features)} features")
             else:
                 common = set.intersection(*[set(f) for f in stock_features.values()])
                 self.features = sorted(list(common)) if common else sorted(list(all_features))
+                print(f"DEBUG: Using common features: {len(self.features)} features")
         
         # CRITICAL: Ensure 'close' price is available and prioritize it
         if 'close' not in self.features:
@@ -170,6 +181,10 @@ class JAXVectorizedPortfolioEnv:
             stocks = self._load_stock_list() 
         self.stocks = stocks
         self.n_stocks = len(stocks)
+        
+        print(f"DEBUG ENV: Data root: {self.data_root}")
+        print(f"DEBUG ENV: Stocks loaded: {len(self.stocks)} - {self.stocks[:5]}...")
+        print(f"DEBUG ENV: First stock CSV path: {self.data_root}/{self.stocks[0]}_aligned.csv" if self.stocks else "No stocks loaded")
 
         self.data_loader = JAXPortfolioDataLoader(data_root, stocks, self.features, self.use_all_features)
         self.data, self.dates_idx, self.actual_dates, self.n_features = self.data_loader.load_and_preprocess_data(
@@ -202,11 +217,21 @@ class JAXVectorizedPortfolioEnv:
     def _load_stock_list(self) -> List[str]:
         """Loads stock list from a file if not provided."""
         stocks_file = Path("finagent/stocks.txt")
+        # Try current directory first, then relative to script location
+        if not stocks_file.exists():
+            stocks_file = Path("FYP-FinAgent/finagent/stocks.txt")
+        
+        print(f"DEBUG: Looking for stocks file at: {stocks_file}")
+        print(f"DEBUG: File exists: {stocks_file.exists()}")
+        
         if stocks_file.exists():
             with open(stocks_file, 'r') as f:
-                return [line.strip() for line in f.readlines()]
+                stocks = [line.strip() for line in f.readlines() if line.strip()]
+                print(f"DEBUG: Loaded {len(stocks)} stocks from file")
+                return stocks
         # Fallback to scanning directory if file doesn't exist
-        return [p.stem.replace('_aligned', '') for p in self.data_root.glob("*_aligned.csv")]
+        data_path = Path(self.data_root) if isinstance(self.data_root, str) else self.data_root
+        return [p.stem.replace('_aligned', '') for p in data_path.glob("*_aligned.csv")]
 
     @partial(jax.jit, static_argnums=(0,))
     def reset(self, key: chex.PRNGKey) -> Tuple[EnvState, chex.Array]:
