@@ -7,6 +7,7 @@ import numpy as np
 import optax
 from flax import linen as nn
 from flax.training.train_state import TrainState
+from flax import serialization
 import chex
 from typing import Tuple, Dict, Any, NamedTuple, List
 import wandb
@@ -14,7 +15,7 @@ import pickle
 import distrax
 from pathlib import Path
 from functools import partial
-import orbax.checkpoint as ocp
+import json
 
 # Import the JAX environment (assume it's in the same directory or installed)
 from finagent.environment.portfolio_env import JAXVectorizedPortfolioEnv, EnvState
@@ -501,9 +502,15 @@ class PPOTrainer:
     def save_model(self, filename: str):
         """Save the training state (parameters and optimizer state)"""
         save_path = Path(self.config['model_dir']) / filename
+        save_path = save_path.resolve()
         os.makedirs(save_path.parent, exist_ok=True)
-        checkpointer = ocp.PyTreeCheckpointer()
-        checkpointer.save(save_path, self.train_state)
+        state_dict = serialization.to_state_dict(self.train_state)
+        with open(save_path.with_suffix('.json'), 'w') as f:
+            json_safe_dict = jax.tree_util.tree_map(
+                lambda x: x.tolist() if hasattr(x, 'tolist') else x,
+                state_dict
+            )
+            json.dump(json_safe_dict, f)
         print(f"Model saved to {save_path}")
 
     def load_model(self, filename: str):
@@ -547,7 +554,7 @@ if __name__ == "__main__":
         # Logging and saving
         'use_wandb': True,
         'log_interval': 10,
-        'save_interval': 5000,
+        'save_interval': 50,
         'model_dir': 'models',
     }
     
