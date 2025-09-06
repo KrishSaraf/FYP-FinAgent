@@ -220,7 +220,7 @@ class JAXVectorizedPortfolioEnv:
         self.data, self.dates_idx, self.actual_dates, self.n_features = self.data_loader.load_and_preprocess_data(
             start_date, end_date, preload_to_gpu=True
         )
-        
+        #jax.debug.print("Number of nans in {}: {}", self.data, jnp.sum(jnp.isnan(self.data)))
         # Set close price index (should be 0 after reorganization)
         self.close_price_idx = 0
 
@@ -310,56 +310,89 @@ class JAXVectorizedPortfolioEnv:
 
         new_stock_weights = normalized_action_weights[:-1]
         new_cash_weight = normalized_action_weights[-1]
-
+        #jax.debug.print("new_stock_weights: {}", new_stock_weights)
+        #jax.debug.print("new_cash_weight: {}", new_cash_weight)
         prev_stock_weights = env_state.portfolio_weights[:-1]
         prev_cash_weight = env_state.portfolio_weights[-1]
+        #jax.debug.print("prev_stock_weights: {}", prev_stock_weights)
+        #jax.debug.print("prev_cash_weight: {}", prev_cash_weight)
         
         prev_portfolio_value = env_state.portfolio_value
+        #jax.debug.print("prev_portfolio_value: {}", prev_portfolio_value)
 
         # Calculate transaction cost as proportional to weight changes
         # Transaction cost should be: sum(|new_weight - old_weight|) * cost_rate * portfolio_value
         weight_change_total = jnp.sum(jnp.abs(new_stock_weights - prev_stock_weights))
         transaction_cost_rate_applied = weight_change_total * self.transaction_cost_rate
+        #jax.debug.print("weight_change_total: {}", weight_change_total)
+        #jax.debug.print("transaction_cost_rate_applied: {}", transaction_cost_rate_applied)
 
         current_daily_returns = self._get_daily_returns_from_data(env_state.current_step + 1)
+        #jax.debug.print("current_daily_returns: {}", current_daily_returns)
 
-        # Portfolio return from holdings (before transaction costs)
+        # Portfolio return from holdings (before transaction costs) with NaN protection
         daily_portfolio_return_before_costs = (
             jnp.sum(prev_stock_weights * current_daily_returns) +
             (prev_cash_weight * self.risk_free_rate_daily)
         )
+        daily_portfolio_return_before_costs = jnp.where(jnp.isnan(daily_portfolio_return_before_costs), 0.0, daily_portfolio_return_before_costs)
 
         # Apply transaction costs as a percentage reduction of portfolio value
         # Net return = gross return - transaction cost rate
         net_daily_portfolio_return = daily_portfolio_return_before_costs - transaction_cost_rate_applied
+        net_daily_portfolio_return = jnp.where(jnp.isnan(net_daily_portfolio_return), 0.0, net_daily_portfolio_return)
+        net_daily_portfolio_return = jnp.clip(net_daily_portfolio_return, -0.5, 0.5)  # Cap extreme returns
 
         new_portfolio_value = prev_portfolio_value * (1.0 + net_daily_portfolio_return)
+        new_portfolio_value = jnp.where(jnp.isnan(new_portfolio_value), prev_portfolio_value, new_portfolio_value)
+        new_portfolio_value = jnp.maximum(new_portfolio_value, 1e-6)
 
         new_total_return = (new_portfolio_value - 1.0)
-
+        #jax.debug.print("Return to be added to sharpe buffer: {}", net_daily_portfolio_return)
         new_sharpe_buffer = env_state.sharpe_buffer.at[env_state.sharpe_buffer_idx].set(net_daily_portfolio_return)
         new_sharpe_buffer_idx = (env_state.sharpe_buffer_idx + 1) % self.sharpe_window
 
-        # Calculate rolling maximum for drawdown
-        rolling_returns = env_state.sharpe_buffer[:env_state.sharpe_buffer_idx + 1]
+        # Calculate rolling maximum for drawdown with NaN protection
+        mask = jnp.arange(self.sharpe_window) < (env_state.sharpe_buffer_idx + 1)
+        rolling_returns = jnp.where(mask, env_state.sharpe_buffer, 0.0)
+        rolling_returns = jnp.where(jnp.isnan(rolling_returns), 0.0, rolling_returns)
         cumulative_returns = jnp.cumsum(rolling_returns)
-        running_max = jnp.maximum.accumulate(cumulative_returns)
+        running_max = lax.cummax(cumulative_returns, axis=0)
         drawdown = (cumulative_returns - running_max).min()
+        drawdown = jnp.where(jnp.isnan(drawdown), 0.0, drawdown)
         new_max_drawdown = jnp.minimum(env_state.max_drawdown, drawdown)
 
         portfolio_volatility = jnp.std(rolling_returns) * jnp.sqrt(252.0)
+        portfolio_volatility = jnp.where(jnp.isnan(portfolio_volatility), 0.0, portfolio_volatility)
 
         sharpe_mean = jnp.mean(new_sharpe_buffer)
         sharpe_std = jnp.std(new_sharpe_buffer)
-
-        sharpe_ratio = lax.cond(
-            sharpe_std == 0,
-            lambda: 0.0,
-            lambda: (sharpe_mean - self.risk_free_rate_daily) / (sharpe_std + 1e-8)
-        )
         
-        reward = (jnp.clip(sharpe_ratio, -5.0, 5.0) * 0.7 + net_daily_portfolio_return * 20.0 - weight_change_total * 0.5 - jnp.maximum(0, -drawdown - 0.1) * 2.0)
+        # Clean sharpe calculation inputs
+        sharpe_mean = jnp.where(jnp.isnan(sharpe_mean), 0.0, sharpe_mean)
+        sharpe_std = jnp.where(jnp.isnan(sharpe_std), 1e-6, sharpe_std)
+        sharpe_std = jnp.maximum(sharpe_std, 1e-6)  # Ensure positive std
 
+        sharpe_ratio = jnp.where(
+            sharpe_std < 1e-6,
+            0.0,
+            (sharpe_mean - self.risk_free_rate_daily) / (sharpe_std + 1e-8)
+        )
+        sharpe_ratio = jnp.where(jnp.isnan(sharpe_ratio), 0.0, sharpe_ratio)
+        sharpe_ratio = jnp.clip(sharpe_ratio, -5.0, 5.0)
+        
+        # Clean reward calculation inputs
+        net_daily_portfolio_return = jnp.where(jnp.isnan(net_daily_portfolio_return), 0.0, net_daily_portfolio_return)
+        weight_change_total = jnp.where(jnp.isnan(weight_change_total), 0.0, weight_change_total)
+        
+        # Calculate reward with NaN protection and reduced scaling
+        reward = (sharpe_ratio * 0.7 + 
+                 net_daily_portfolio_return * 10.0 -  # Reduced from 20.0
+                 weight_change_total * 0.5 - 
+                 jnp.maximum(0, -drawdown - 0.1) * 1.0)  # Reduced from 2.0
+        
+        reward = jnp.where(jnp.isnan(reward), 0.0, reward)
+        reward = jnp.clip(reward, -10.0, 10.0)  # Clip reward to prevent extreme values
         next_step = env_state.current_step + 1
         done = (next_step >= self.n_timesteps - 1) | (new_portfolio_value <= 0.5)
 
@@ -419,7 +452,8 @@ class JAXVectorizedPortfolioEnv:
         historical_flat = historical_data.flatten()
     
         # Portfolio risk metrics
-        returns_buffer = env_state.sharpe_buffer[:env_state.sharpe_buffer_idx + 1]
+        mask = jnp.arange(self.sharpe_window) < (env_state.sharpe_buffer_idx + 1)
+        returns_buffer = jnp.where(mask, env_state.sharpe_buffer, 0.0)
         portfolio_vol = jnp.std(returns_buffer) * jnp.sqrt(252.0)  # Annualized
     
         # Market state indicators
@@ -451,14 +485,21 @@ class JAXVectorizedPortfolioEnv:
         price_t = self.data[step, :, self.close_price_idx]
         price_t_minus_1 = self.data[step - 1, :, self.close_price_idx]
         
-        # Safety check for zero/negative prices
-        price_t_minus_1_safe = jnp.where(price_t_minus_1 <= 0, 1e-8, price_t_minus_1)
-        price_t_safe = jnp.where(price_t <= 0, 1e-8, price_t)
+        # Clean prices for NaN values
+        price_t = jnp.where(jnp.isnan(price_t), 1.0, price_t)
+        price_t_minus_1 = jnp.where(jnp.isnan(price_t_minus_1), 1.0, price_t_minus_1)
+        
+        # Safety check for zero/negative prices with better handling
+        price_t_minus_1_safe = jnp.where(price_t_minus_1 <= 1e-8, 1.0, price_t_minus_1)
+        price_t_safe = jnp.where(price_t <= 1e-8, 1.0, price_t)
 
+        # Calculate returns with numerical stability
         daily_returns = (price_t_safe / price_t_minus_1_safe) - 1.0
         
-        # Sanity check: cap extreme returns (likely data errors)
-        daily_returns = jnp.clip(daily_returns, -0.5, 0.5)  # Cap at ±50% daily moves
+        # Clean and cap extreme returns
+        daily_returns = jnp.where(jnp.isnan(daily_returns), 0.0, daily_returns)
+        daily_returns = jnp.where(jnp.isinf(daily_returns), 0.0, daily_returns)
+        daily_returns = jnp.clip(daily_returns, -0.3, 0.3)  # Cap at ±30% daily moves (more conservative)
         
         return daily_returns
 
