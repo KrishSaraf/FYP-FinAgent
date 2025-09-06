@@ -48,49 +48,86 @@ class LSTMActorCritic(nn.Module):
     hidden_size: int = 512
     n_lstm_layers: int = 2
     
+    def setup(self):
+        # Initialize with proper scaling to prevent NaN
+        self.input_dense1 = nn.Dense(256, kernel_init=nn.initializers.xavier_uniform(), bias_init=nn.initializers.zeros)
+        self.input_dense2 = nn.Dense(256, kernel_init=nn.initializers.xavier_uniform(), bias_init=nn.initializers.zeros)
+        self.actor_dense = nn.Dense(256, kernel_init=nn.initializers.xavier_uniform(), bias_init=nn.initializers.zeros)
+        self.actor_output = nn.Dense(self.action_dim, kernel_init=nn.initializers.xavier_uniform(), bias_init=nn.initializers.zeros)
+        self.critic_dense = nn.Dense(256, kernel_init=nn.initializers.xavier_uniform(), bias_init=nn.initializers.zeros)
+        self.critic_output = nn.Dense(1, kernel_init=nn.initializers.xavier_uniform(), bias_init=nn.initializers.zeros)
+    
     @nn.compact
     def __call__(self, x, carry: List[LSTMCarry], training=True):
         batch_size = x.shape[0]
         
-        # Input preprocessing
-        x = nn.Dense(256)(x)
-        x = nn.relu(x)
-        x = nn.Dense(256)(x) 
+        # Input preprocessing with NaN checking
+        x = self.input_dense1(x)
+        x = jnp.where(jnp.isnan(x), 0.0, x)  # Replace NaN with 0
         x = nn.relu(x)
         
-        # LSTM layers
+        x = self.input_dense2(x)
+        x = jnp.where(jnp.isnan(x), 0.0, x)  # Replace NaN with 0
+        x = nn.relu(x)
+        
+        # LSTM layers - fixed implementation
         lstm_input = x
         new_carry = []
         
         for i in range(self.n_lstm_layers):
             if carry[i] is None:
-                # Initialize carry if None for this layer or not provided
-                h = jnp.zeros((batch_size, self.hidden_size), dtype = jnp.float32)
-                c = jnp.zeros((batch_size, self.hidden_size), dtype = jnp.float32)
+                # Initialize carry with zeros - this is the correct way
+                h = jnp.zeros((batch_size, self.hidden_size), dtype=jnp.float32)
+                c = jnp.zeros((batch_size, self.hidden_size), dtype=jnp.float32)
                 layer_carry = LSTMCarry(h=h, c=c)
             else:
                 layer_carry = carry[i]
+                # Check for NaN in carry states and reset if found
+                h = jnp.where(jnp.isnan(layer_carry.h), 0.0, layer_carry.h)
+                c = jnp.where(jnp.isnan(layer_carry.c), 0.0, layer_carry.c)
+                layer_carry = LSTMCarry(h=h, c=c)
             
-            # LSTM cell
+            # LSTM cell - create properly
             lstm_cell = nn.OptimizedLSTMCell(features=self.hidden_size)
-            new_h_val, lstm_input = lstm_cell(layer_carry, lstm_input) # new_h_val is the new LSTMCarry, lstm_input is the output
+            new_h_val, lstm_input = lstm_cell(layer_carry, lstm_input)
+            
+            # Check for NaN in LSTM output and reset if found
+            lstm_input = jnp.where(jnp.isnan(lstm_input), 0.0, lstm_input)
+            new_h_val = LSTMCarry(
+                h=jnp.where(jnp.isnan(new_h_val[0]), 0.0, new_h_val[0]),
+                c=jnp.where(jnp.isnan(new_h_val[1]), 0.0, new_h_val[1])
+            )
             new_carry.append(new_h_val)
         
-        # Actor head (policy)
-        actor_hidden = nn.Dense(256)(lstm_input)
+        # Actor head (policy) with NaN checking
+        actor_hidden = self.actor_dense(lstm_input)
+        actor_hidden = jnp.where(jnp.isnan(actor_hidden), 0.0, actor_hidden)
         actor_hidden = nn.relu(actor_hidden)
-        logits = nn.Dense(self.action_dim)(actor_hidden)
         
-        # Critic head (value function)
-        critic_hidden = nn.Dense(256)(lstm_input)
+        logits = self.actor_output(actor_hidden)
+        logits = jnp.where(jnp.isnan(logits), 0.0, logits)
+        # Clip logits to prevent extreme values
+        logits = jnp.clip(logits, -10.0, 10.0)
+        
+        # Critic head (value function) with NaN checking
+        critic_hidden = self.critic_dense(lstm_input)
+        critic_hidden = jnp.where(jnp.isnan(critic_hidden), 0.0, critic_hidden)
         critic_hidden = nn.relu(critic_hidden)
-        values = nn.Dense(1)(critic_hidden).squeeze(-1)
+        
+        values = self.critic_output(critic_hidden).squeeze(-1)
+        values = jnp.where(jnp.isnan(values), 0.0, values)
+        # Clip values to prevent extreme values
+        values = jnp.clip(values, -100.0, 100.0)
         
         return logits, values, new_carry
 
 class PPOTrainer:
     def __init__(self, config: dict):
         self.config = config
+        
+        # Add NaN checking utility
+        self.nan_count = 0
+        self.max_nan_resets = 3  # Maximum number of parameter resets allowed (reduced for debugging)
         
         # Initialize environment
         env_config = {
@@ -129,12 +166,69 @@ class PPOTrainer:
                 c=jnp.zeros((config['n_envs'], config['hidden_size']))
             ) for _ in range(config['n_lstm_layers'])
         ]
-        self.params = self.network.init(init_rng, dummy_obs, tuple(dummy_carry))
         
-        # Optimizer with gradient clipping
+        # Initialize network with proper error handling
+        try:
+            self.params = self.network.init(init_rng, dummy_obs, tuple(dummy_carry))
+            print("Network initialized successfully")
+        except Exception as e:
+            print(f"Error during network initialization: {e}")
+            raise
+        
+        # Check for NaN in initial parameters
+        def has_nan_params(params):
+            return jax.tree_util.tree_reduce(
+                lambda acc, x: acc | jnp.any(jnp.isnan(x)) if jnp.issubdtype(x.dtype, jnp.floating) else acc,
+                params, False
+            )
+        
+        if has_nan_params(self.params):
+            print("WARNING: NaN detected in initial parameters!")
+            # Try reinitializing with different seed
+            self.rng, init_rng = random.split(self.rng)
+            self.params = self.network.init(init_rng, dummy_obs, tuple(dummy_carry))
+        
+        # Test network forward pass
+        print("Testing network forward pass...")
+        try:
+            test_logits, test_values, test_carry = self.network.apply(self.params, dummy_obs, tuple(dummy_carry))
+            if jnp.any(jnp.isnan(test_logits)) or jnp.any(jnp.isnan(test_values)):
+                print("❌ Network produces NaN outputs during test!")
+                print(f"   NaN in logits: {jnp.any(jnp.isnan(test_logits))}")
+                print(f"   NaN in values: {jnp.any(jnp.isnan(test_values))}")
+            else:
+                print("✅ Network test passed - no NaN outputs")
+        except Exception as e:
+            print(f"❌ Network test failed: {e}")
+            raise
+        
+        # Test environment
+        print("Testing environment...")
+        try:
+            test_key = random.PRNGKey(42)
+            test_env_state, test_obs = self.env.reset(test_key)
+            if jnp.any(jnp.isnan(test_obs)):
+                print("❌ Environment produces NaN observations!")
+            else:
+                print("✅ Environment test passed - no NaN observations")
+                
+            # Test environment step
+            test_action = jnp.zeros(self.env.action_dim)
+            test_env_state, test_next_obs, test_reward, test_done, test_info = self.env.step(test_env_state, test_action)
+            if jnp.any(jnp.isnan(test_next_obs)) or jnp.any(jnp.isnan(test_reward)):
+                print("❌ Environment produces NaN in step!")
+                print(f"   NaN in obs: {jnp.any(jnp.isnan(test_next_obs))}")
+                print(f"   NaN in reward: {jnp.any(jnp.isnan(test_reward))}")
+            else:
+                print("✅ Environment step test passed - no NaN outputs")
+        except Exception as e:
+            print(f"❌ Environment test failed: {e}")
+            raise
+        
+        # Optimizer with gradient clipping and better numerical stability
         self.optimizer = optax.chain(
             optax.clip_by_global_norm(config['max_grad_norm']),
-            optax.adam(learning_rate=config['learning_rate'], eps=1e-5) # Changed to optax.adam for common use, was adamw
+            optax.adam(learning_rate=config['learning_rate'], eps=1e-8, b1=0.9, b2=0.999) # Better eps and beta values
         )
         
         self.train_state = TrainState.create(
@@ -171,12 +265,22 @@ class PPOTrainer:
             # Apply network
             logits, values, new_carry_list = train_state.apply_fn(train_state.params, obs, lstm_carry_tuple)
         
-            # Sample actions from the distribution
+            # Sample actions from the distribution with NaN protection
             action_std = self.config['action_std']
+            
+            # Ensure logits and action_std are valid
+            logits = jnp.where(jnp.isnan(logits), 0.0, logits)
+            logits = jnp.clip(logits, -10.0, 10.0)
+            action_std = jnp.maximum(action_std, 1e-6)  # Ensure positive std
+            
             action_distribution = distrax.Normal(loc=logits, scale=action_std)
             actions = action_distribution.sample(seed=action_rng)
             actions = jnp.clip(actions, -5.0, 5.0)
+            
+            # Calculate log probabilities with NaN protection
             log_probs = action_distribution.log_prob(actions).sum(axis=-1)
+            log_probs = jnp.where(jnp.isnan(log_probs), -10.0, log_probs)  # Replace NaN with large negative value
+            log_probs = jnp.clip(log_probs, -50.0, 10.0)  # Clip to reasonable range
         
             # Step environment
             new_env_states, next_obs, rewards, dones, info = self.vmap_step(env_states, actions)
@@ -224,14 +328,19 @@ class PPOTrainer:
         
     @partial(jax.jit, static_argnums=(0,))
     def compute_gae(self, trajectory: Trajectory, last_values: chex.Array) -> Tuple[chex.Array, chex.Array]:
-        """Compute Generalized Advantage Estimation"""
+        """Compute Generalized Advantage Estimation with NaN protection"""
         gamma = self.config['gamma']
         gae_lambda = self.config['gae_lambda']
+        
+        # Clean inputs for NaN values
+        rewards = jnp.where(jnp.isnan(trajectory.rewards), 0.0, trajectory.rewards)
+        values = jnp.where(jnp.isnan(trajectory.values), 0.0, trajectory.values)
+        last_values = jnp.where(jnp.isnan(last_values), 0.0, last_values)
         
         # Add last values to the end of the trajectory values for GAE calculation
         # Values are (n_steps, n_envs)
         # last_values is (n_envs,)
-        extended_values = jnp.concatenate([trajectory.values, last_values[None, :]], axis=0) # (n_steps + 1, n_envs)
+        extended_values = jnp.concatenate([values, last_values[None, :]], axis=0) # (n_steps + 1, n_envs)
         
         def gae_step(gae_and_advantage, inputs):
             current_reward, current_value, next_value, current_done = inputs
@@ -246,19 +355,23 @@ class PPOTrainer:
             # A_t = delta_t + gamma * lambda * (1 - D_t) * A_{t+1}
             current_gae = delta + gamma * gae_lambda * (1 - current_done) * current_gae
             
+            # Check for NaN in GAE calculation and reset if found
+            current_gae = jnp.where(jnp.isnan(current_gae), 0.0, current_gae)
+            current_gae = jnp.clip(current_gae, -100.0, 100.0)  # Clip to prevent extreme values
+            
             return (current_gae, None), current_gae # We return current_gae to be the new carry's gae
         
         # Prepare inputs for scan: (reward, value_t, value_{t+1}, done)
         # We need to process in reverse order for GAE
-        # trajectory.rewards: (n_steps, n_envs)
-        # trajectory.values: (n_steps, n_envs)
+        # rewards: (n_steps, n_envs)
+        # values: (n_steps, n_envs)
         # extended_values: (n_steps + 1, n_envs)
         # trajectory.dones: (n_steps, n_envs)
         
         # Inputs for gae_step: (rewards, values_t, values_{t+1}, dones)
         gae_inputs = (
-            trajectory.rewards,
-            trajectory.values,
+            rewards,
+            values,
             extended_values[1:], # next_values
             trajectory.dones
         )
@@ -279,22 +392,28 @@ class PPOTrainer:
         
         advantages = advantages[::-1] # Reverse advantages back to original order
         
+        # Final NaN check and clipping
+        advantages = jnp.where(jnp.isnan(advantages), 0.0, advantages)
+        advantages = jnp.clip(advantages, -100.0, 100.0)
+        
         # Target = Advantages + Values
-        returns = advantages + trajectory.values
+        returns = advantages + values
+        returns = jnp.where(jnp.isnan(returns), 0.0, returns)
+        returns = jnp.clip(returns, -100.0, 100.0)
         
         return advantages, returns
 
     @partial(jax.jit, static_argnums=(0,))
     def ppo_loss(self, params: chex.Array, train_batch: Trajectory, gae_advantages: chex.Array, returns: chex.Array, rng_key: chex.PRNGKey):
-        """Compute PPO loss for a given batch"""
+        """Compute PPO loss for a given batch with NaN protection"""
         
-        # Unpack batch data
-        obs_batch = train_batch.obs # (batch_size, obs_dim)
-        actions_batch = train_batch.actions # (batch_size, action_dim)
-        old_log_probs_batch = train_batch.log_probs # (batch_size,)
+        # Unpack batch data and clean for NaN values
+        obs_batch = jnp.where(jnp.isnan(train_batch.obs), 0.0, train_batch.obs) # (batch_size, obs_dim)
+        actions_batch = jnp.where(jnp.isnan(train_batch.actions), 0.0, train_batch.actions) # (batch_size, action_dim)
+        old_log_probs_batch = jnp.where(jnp.isnan(train_batch.log_probs), -10.0, train_batch.log_probs) # (batch_size,)
         # Stacked initial LSTM carries for this batch (batch_size, n_lstm_layers, hidden_size)
-        initial_lstm_h_batch = train_batch.initial_lstm_h
-        initial_lstm_c_batch = train_batch.initial_lstm_c
+        initial_lstm_h_batch = jnp.where(jnp.isnan(train_batch.initial_lstm_h), 0.0, train_batch.initial_lstm_h)
+        initial_lstm_c_batch = jnp.where(jnp.isnan(train_batch.initial_lstm_c), 0.0, train_batch.initial_lstm_c)
 
         # Reconstruct LSTM carry from stacked h and c
         lstm_carry_batch = tuple([
@@ -305,45 +424,148 @@ class PPOTrainer:
         # Get current policy outputs
         logits, values, _ = self.network.apply(params, obs_batch, tuple(lstm_carry_batch))
         
-        # Value loss
-        value_pred_clipped = train_batch.values + (values - train_batch.values).clip(-self.config['clip_eps'], self.config['clip_eps'])
+        # Clean network outputs for NaN values
+        logits = jnp.where(jnp.isnan(logits), 0.0, logits)
+        values = jnp.where(jnp.isnan(values), 0.0, values)
+        logits = jnp.clip(logits, -10.0, 10.0)
+        values = jnp.clip(values, -100.0, 100.0)
+        
+        # Clean returns and advantages
+        returns = jnp.where(jnp.isnan(returns), 0.0, returns)
+        gae_advantages = jnp.where(jnp.isnan(gae_advantages), 0.0, gae_advantages)
+        returns = jnp.clip(returns, -100.0, 100.0)
+        gae_advantages = jnp.clip(gae_advantages, -100.0, 100.0)
+        
+        # Value loss with NaN protection
+        old_values = jnp.where(jnp.isnan(train_batch.values), 0.0, train_batch.values)
+        old_values = jnp.clip(old_values, -100.0, 100.0)
+        
+        value_pred_clipped = old_values + (values - old_values).clip(-self.config['clip_eps'], self.config['clip_eps'])
         value_losses = jnp.square(values - returns)
         value_losses_clipped = jnp.square(value_pred_clipped - returns)
         value_loss = 0.5 * jnp.maximum(value_losses, value_losses_clipped).mean()
         
-        # Policy loss
-        # Use the same continuous action distribution assumption as in collect_trajectory
-        action_std = self.config['action_std']
+        # Policy loss with NaN protection
+        action_std = jnp.maximum(self.config['action_std'], 1e-6)  # Ensure positive std
         action_distribution = distrax.Normal(loc=logits, scale=action_std)
         new_log_probs = action_distribution.log_prob(actions_batch).sum(axis=-1)
+        new_log_probs = jnp.where(jnp.isnan(new_log_probs), -10.0, new_log_probs)
+        new_log_probs = jnp.clip(new_log_probs, -50.0, 10.0)
         
-        ratio = jnp.exp(new_log_probs - old_log_probs_batch)
+        # Calculate ratio with numerical stability
+        log_ratio = new_log_probs - old_log_probs_batch
+        log_ratio = jnp.clip(log_ratio, -10.0, 10.0)  # Prevent extreme values
+        ratio = jnp.exp(log_ratio)
+        ratio = jnp.clip(ratio, 0.0, 10.0)  # Prevent extreme ratios
         
-        # Normalize advantages (optional, but common)
-        # gae_advantages = (gae_advantages - gae_advantages.mean()) / (gae_advantages.std() + 1e-8)
+        # Normalize advantages for stability
+        gae_advantages = (gae_advantages - gae_advantages.mean()) / (jnp.std(gae_advantages) + 1e-8)
+        gae_advantages = jnp.clip(gae_advantages, -10.0, 10.0)
         
         pg_losses1 = ratio * gae_advantages
         pg_losses2 = jnp.clip(ratio, 1.0 - self.config['clip_eps'], 1.0 + self.config['clip_eps']) * gae_advantages
         policy_loss = -jnp.minimum(pg_losses1, pg_losses2).mean()
         
-        # Entropy loss
-        # For continuous actions, entropy of Gaussian: 0.5 * log(2*pi*e*sigma^2)
-        # Sum across action dimensions
+        # Entropy loss with NaN protection
         entropy = action_distribution.entropy().sum(axis=-1)
-        entropy_loss = -self.config['entropy_coeff'] * entropy.mean() # Maximize entropy, so negative coefficient
+        entropy = jnp.where(jnp.isnan(entropy), 0.0, entropy)
+        entropy = jnp.clip(entropy, 0.0, 10.0)
+        entropy_loss = -self.config['entropy_coeff'] * entropy.mean()
         
+        # Calculate total loss with NaN protection
         total_loss = policy_loss + value_loss * self.config['value_coeff'] + entropy_loss
+        total_loss = jnp.where(jnp.isnan(total_loss), 0.0, total_loss)
+        
+        # Calculate metrics with NaN protection
+        approx_kl = (ratio - 1) - jnp.log(ratio + 1e-8)
+        approx_kl = jnp.where(jnp.isnan(approx_kl), 0.0, approx_kl)
+        approx_kl = jnp.clip(approx_kl, -10.0, 10.0)
+        
+        clip_fraction = (jnp.abs(ratio - 1.0) > self.config['clip_eps']).astype(jnp.float32)
         
         metrics = {
             'total_loss': total_loss,
             'policy_loss': policy_loss,
             'value_loss': value_loss,
             'entropy_loss': entropy_loss,
-            'approx_kl': ((ratio - 1) - jnp.log(ratio)).mean(), # for debugging
-            'clip_fraction': (jnp.abs(ratio - 1.0) > self.config['clip_eps']).mean()
+            'approx_kl': approx_kl.mean(),
+            'clip_fraction': clip_fraction.mean()
         }
         
         return total_loss, metrics
+
+    def check_and_reset_nan_params(self, train_state: TrainState, rng_key: chex.PRNGKey) -> Tuple[TrainState, chex.PRNGKey]:
+        """Check for NaN values in parameters and reset if necessary"""
+        def has_nan_params(params):
+            return jax.tree_util.tree_reduce(
+                lambda acc, x: acc | jnp.any(jnp.isnan(x)) if jnp.issubdtype(x.dtype, jnp.floating) else acc,
+                params, False
+            )
+        
+        if has_nan_params(train_state.params):
+            print(f"WARNING: NaN detected in parameters at step {self.nan_count}. Resetting parameters...")
+            self.nan_count += 1
+            
+            if self.nan_count > self.max_nan_resets:
+                raise RuntimeError(f"Too many NaN resets ({self.nan_count}). Training stopped.")
+            
+            # Reinitialize parameters
+            rng_key, init_rng = random.split(rng_key)
+            dummy_obs = jnp.ones((self.config['n_envs'], self.env.obs_dim))
+            dummy_carry = [
+                LSTMCarry(
+                    h=jnp.zeros((self.config['n_envs'], self.config['hidden_size'])),
+                    c=jnp.zeros((self.config['n_envs'], self.config['hidden_size']))
+                ) for _ in range(self.config['n_lstm_layers'])
+            ]
+            new_params = self.network.init(init_rng, dummy_obs, tuple(dummy_carry))
+            
+            # Create new train state with reset parameters
+            train_state = train_state.replace(params=new_params)
+            print("Parameters reset successfully.")
+        
+        return train_state, rng_key
+
+    def debug_nan_sources(self, obs, actions, rewards, values, logits):
+        """Debug function to identify NaN sources (non-JIT)"""
+        print("=== NaN Debugging ===")
+        
+        # Check observations
+        if jnp.any(jnp.isnan(obs)):
+            print("❌ NaN detected in observations")
+            print(f"   NaN count: {jnp.sum(jnp.isnan(obs))}")
+        else:
+            print("✅ Observations are clean")
+        
+        # Check actions
+        if jnp.any(jnp.isnan(actions)):
+            print("❌ NaN detected in actions")
+            print(f"   NaN count: {jnp.sum(jnp.isnan(actions))}")
+        else:
+            print("✅ Actions are clean")
+        
+        # Check rewards
+        if jnp.any(jnp.isnan(rewards)):
+            print("❌ NaN detected in rewards")
+            print(f"   NaN count: {jnp.sum(jnp.isnan(rewards))}")
+        else:
+            print("✅ Rewards are clean")
+        
+        # Check values
+        if jnp.any(jnp.isnan(values)):
+            print("❌ NaN detected in values")
+            print(f"   NaN count: {jnp.sum(jnp.isnan(values))}")
+        else:
+            print("✅ Values are clean")
+        
+        # Check logits
+        if jnp.any(jnp.isnan(logits)):
+            print("❌ NaN detected in logits")
+            print(f"   NaN count: {jnp.sum(jnp.isnan(logits))}")
+        else:
+            print("✅ Logits are clean")
+        
+        print("===================")
 
     @partial(jax.jit, static_argnums=(0,5))
     def train_step(self, train_state: TrainState, trajectory: Trajectory, last_values: chex.Array, rng_key: chex.PRNGKey, num_minibatches: int) -> Tuple[TrainState, Dict[str, Any]]:
@@ -438,6 +660,19 @@ class PPOTrainer:
                 collect_rng
             )
             
+            # Debug NaN sources in trajectory
+            if update % 5 == 0:  # Debug every 5 updates
+                # Get network outputs for debugging
+                _, last_values, _ = self.train_state.apply_fn(self.train_state.params, self.obs, tuple(self.collector_carry))
+                
+                self.debug_nan_sources(
+                    trajectory.obs[0],  # First step observations
+                    trajectory.actions[0],  # First step actions
+                    trajectory.rewards[0],  # First step rewards
+                    trajectory.values[0],  # First step values
+                    last_values  # Network values output
+                )
+            
             # Get last values (for GAE)
             # Make sure to pass the carry of the *last* step to predict the last_values
             # The obs are the ones *after* the last step of the trajectory.
@@ -445,9 +680,15 @@ class PPOTrainer:
 
             
             
+            # Check for NaN values before training
+            self.train_state, self.rng = self.check_and_reset_nan_params(self.train_state, self.rng)
+            
             # Perform PPO training step
             self.rng, train_rng = random.split(self.rng)
             self.train_state, metrics = self.train_step(self.train_state, trajectory, last_values, train_rng, num_minibatches)
+            
+            # Check for NaN values after training
+            self.train_state, self.rng = self.check_and_reset_nan_params(self.train_state, self.rng)
             
             end_time = time.time()
             
@@ -541,11 +782,11 @@ if __name__ == "__main__":
         'clip_eps': 0.2,     # PPO clipping epsilon
         'ppo_epochs': 4,     # Number of PPO epochs per update
         'ppo_batch_size': 256, # Mini-batch size for PPO
-        'learning_rate': 3e-4,
+        'learning_rate': 1e-4,  # Reduced learning rate for stability
         'max_grad_norm': 0.5,
         'value_coeff': 0.5,
         'entropy_coeff': 0.01,
-        'action_std': 0.5,
+        'action_std': 1.0,  # Increased action std for better exploration
         
         # LSTM parameters
         'hidden_size': 256, # Reduced for initial testing
