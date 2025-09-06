@@ -1,6 +1,41 @@
 # FYP-FinAgent
 Final Year Project
 
+## This branch is specially for training models on the Google Colab A100 GPU using JAX to optimise the environment and training code.
+
+# Google Colab Set-up
+## Open terminal and clone repo
+```bash
+git clone -b gpu-training-scripts https://<username>:<access_token>@github.com/KrishSaraf/FYP-FinAgent.git
+cd FYP-FinAgent
+```
+
+## Install dependencies and prepare GPU
+```bash
+pip install -r requirements.txt
+
+nvidia-smi -pm 1
+nvidia-smi -ac 1215,1410
+mkdir -p /content/jax_cache
+
+python colab_setup.py
+```
+
+## Start training
+```bash
+python train_ppo_lstm.py
+```
+
+## After training ensure to push all changes to this branch
+```bash
+git add .
+git commit -m "Trained PPO LSTM model"
+git push origin gpu-training-scripts
+```
+
+---
+---
+---
 # FinAgent
 
 # Installation
