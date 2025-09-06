@@ -57,9 +57,8 @@ class JAXPortfolioDataLoader:
             if not csv_path.exists():
                 print(f"Warning: CSV for {stock} not found, skipping.")
                 continue
-            sample_df = pd.read_csv(csv_path, nrows=0)
-            date_col = sample_df.columns[0]
-            feats = [c for c in sample_df.columns if c != date_col]
+            sample_df = pd.read_csv(csv_path, nrows=0, index_col=0)
+            feats = list(sample_df.columns)  # All columns are features after setting index
             stock_features[stock] = feats
             all_features.update(feats)
 
@@ -69,16 +68,26 @@ class JAXPortfolioDataLoader:
             else:
                 common = set.intersection(*[set(f) for f in stock_features.values()])
                 self.features = sorted(list(common)) if common else sorted(list(all_features))
+        
+        # CRITICAL: Ensure 'close' price is available and prioritize it
+        if 'close' not in self.features:
+            raise ValueError("'close' price must be available in the data for portfolio returns calculation")
+        
+        # Reorganize features to put 'close' first for reliable indexing
+        if 'close' in self.features:
+            self.features = ['close'] + [f for f in self.features if f != 'close']
+        
         print(f"Using features: {self.features}")
+        print(f"Close price will be at index 0 for reliable returns calculation")
 
         # Pass 2: Load and standardize
         for stock in self.stocks:
             csv_path = self.data_root / f"{stock}_aligned.csv"
             if not csv_path.exists():
                 continue
-            df = pd.read_csv(csv_path, parse_dates=[0])
-            date_col = df.columns[0]
-            df = df.rename(columns={date_col: "date"}).set_index("date").sort_index()
+            df = pd.read_csv(csv_path, parse_dates=[0], index_col=0)
+            df.index.name = "date"  # Ensure index is named 'date'
+            df = df.sort_index()
             df = df.loc[start_date:end_date]
 
             proc = pd.DataFrame(index=df.index)
@@ -153,6 +162,7 @@ class JAXVectorizedPortfolioEnv:
         self.risk_free_rate_daily = risk_free_rate / 252.0
         self.use_all_features = use_all_features
         self.features = None
+        self.close_price_idx = None  # Track close price index
 
         if stocks is None:
             # Example stock list - you should replace with your actual stocks
@@ -165,6 +175,13 @@ class JAXVectorizedPortfolioEnv:
         self.data, self.dates_idx, self.actual_dates, self.n_features = self.data_loader.load_and_preprocess_data(
             start_date, end_date, preload_to_gpu=True
         )
+        
+        # Set close price index (should be 0 after reorganization)
+        self.close_price_idx = 0
+        
+        # Validate that we have valid price data
+        if self.data.shape[0] < self.window_size + 2:
+            raise ValueError(f"Insufficient data: need at least {self.window_size + 2} time steps, got {self.data.shape[0]}")
         self.n_timesteps = len(self.dates_idx)
 
         self.action_dim = self.n_stocks + 1
@@ -233,16 +250,22 @@ class JAXVectorizedPortfolioEnv:
         
         prev_portfolio_value = env_state.portfolio_value
 
-        transaction_cost_value = jnp.sum(jnp.abs(new_stock_weights - prev_stock_weights)) * self.transaction_cost_rate
+        # Calculate transaction cost as proportional to weight changes
+        # Transaction cost should be: sum(|new_weight - old_weight|) * cost_rate * portfolio_value
+        weight_change_total = jnp.sum(jnp.abs(new_stock_weights - prev_stock_weights))
+        transaction_cost_rate_applied = weight_change_total * self.transaction_cost_rate
 
         current_daily_returns = self._get_daily_returns_from_data(env_state.current_step + 1)
 
+        # Portfolio return from holdings (before transaction costs)
         daily_portfolio_return_before_costs = (
             jnp.sum(prev_stock_weights * current_daily_returns) +
             (prev_cash_weight * self.risk_free_rate_daily)
         )
 
-        net_daily_portfolio_return = daily_portfolio_return_before_costs - transaction_cost_value
+        # Apply transaction costs as a percentage reduction of portfolio value
+        # Net return = gross return - transaction cost rate
+        net_daily_portfolio_return = daily_portfolio_return_before_costs - transaction_cost_rate_applied
 
         new_portfolio_value = prev_portfolio_value * (1.0 + net_daily_portfolio_return)
 
@@ -322,15 +345,22 @@ class JAXVectorizedPortfolioEnv:
     @partial(jax.jit, static_argnums=(0,))
     def _get_daily_returns_from_data(self, step: int) -> chex.Array:
         """
-        Calculates daily returns for all stocks for a given step.
+        Calculates daily returns for all stocks for a given step using CLOSE prices.
         Returns array of shape (n_stocks,).
         """
-        price_t = self.data[step, :, 0]
-        price_t_minus_1 = self.data[step - 1, :, 0]
+        # Use close price index (guaranteed to be 0 after reorganization)
+        price_t = self.data[step, :, self.close_price_idx]
+        price_t_minus_1 = self.data[step - 1, :, self.close_price_idx]
         
-        price_t_minus_1_safe = jnp.where(price_t_minus_1 == 0, 1e-8, price_t_minus_1)
+        # Safety check for zero/negative prices
+        price_t_minus_1_safe = jnp.where(price_t_minus_1 <= 0, 1e-8, price_t_minus_1)
+        price_t_safe = jnp.where(price_t <= 0, 1e-8, price_t)
 
-        daily_returns = (price_t / price_t_minus_1_safe) - 1.0
+        daily_returns = (price_t_safe / price_t_minus_1_safe) - 1.0
+        
+        # Sanity check: cap extreme returns (likely data errors)
+        daily_returns = jnp.clip(daily_returns, -0.5, 0.5)  # Cap at ±50% daily moves
+        
         return daily_returns
 
 # # Example usage (for testing)

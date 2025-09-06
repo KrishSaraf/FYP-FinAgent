@@ -790,12 +790,18 @@ class PortfolioManager:
             # Restore positions
             self.positions.clear()
             for symbol, pos_data in state.get('positions', {}).items():
+                # Reconstruct lots from saved data (simplified for basic restoration)
+                lots = [{
+                    'quantity': pos_data['quantity'],
+                    'price': pos_data['entry_price'],
+                    'entry_date': datetime.fromisoformat(pos_data['entry_date']),
+                    'fees': 0.0  # Default since not saved in old format
+                }]
+                
                 position = Position(
                     stock_symbol=symbol,
-                    quantity=pos_data['quantity'],
                     side=PositionSide(pos_data['side']),
-                    entry_price=pos_data['entry_price'],
-                    entry_date=datetime.fromisoformat(pos_data['entry_date']),
+                    lots=lots,
                     current_price=pos_data['current_price'],
                     last_updated=datetime.fromisoformat(pos_data['last_updated'])
                 )
