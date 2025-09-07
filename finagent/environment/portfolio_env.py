@@ -42,32 +42,152 @@ class JAXPortfolioDataLoader:
         self.cache_dir.mkdir(exist_ok=True)
 
     def engineer_features(self, df: pd.DataFrame, stock: str) -> pd.DataFrame:
-        """Add engineered features to data"""
-        # Price relatives (returns)
+        """Add engineered features to data - Enhanced for better returns"""
+        
+        # === BASIC PRICE FEATURES ===
+        # Multiple timeframe returns
         df['returns_1d'] = df['close'].pct_change()
+        df['returns_3d'] = df['close'].pct_change(periods=3)
         df['returns_5d'] = df['close'].pct_change(periods=5)
-
-        # Volatility estimates
+        df['returns_10d'] = df['close'].pct_change(periods=10)
+        df['returns_20d'] = df['close'].pct_change(periods=20)
+        
+        # Log returns (more stationary)
+        df['log_returns_1d'] = np.log(df['close'] / df['close'].shift(1))
+        df['log_returns_5d'] = np.log(df['close'] / df['close'].shift(5))
+        
+        # === VOLATILITY & RISK FEATURES ===
+        # Multiple timeframe volatility
+        df['volatility_5d'] = df['returns_1d'].rolling(5).std()
         df['volatility_10d'] = df['returns_1d'].rolling(10).std()
+        df['volatility_20d'] = df['returns_1d'].rolling(20).std()
         df['volatility_30d'] = df['returns_1d'].rolling(30).std()
-
+        df['volatility_60d'] = df['returns_1d'].rolling(60).std()
+        
+        # Volatility ratios (regime change detection)
+        df['vol_ratio_short_long'] = df['volatility_10d'] / (df['volatility_30d'] + 1e-8)
+        df['vol_ratio_5_20'] = df['volatility_5d'] / (df['volatility_20d'] + 1e-8)
+        
+        # === MOMENTUM FEATURES ===
+        # Price momentum at different horizons
+        for period in [5, 10, 20, 60]:
+            if len(df) > period:
+                df[f'momentum_{period}d'] = df['close'] / df['close'].shift(period) - 1.0
+        
+        # Acceleration (momentum of momentum)
+        df['momentum_acceleration_10d'] = df['momentum_10d'] - df['momentum_10d'].shift(5)
+        
+        # === TREND STRENGTH ===
+        # Moving average convergence/divergence
+        if all(col in df.columns for col in ['dma_50', 'dma_200']):
+            df['ma_convergence'] = (df['dma_50'] - df['dma_200']) / df['dma_200']
+            df['ma_trend_strength'] = df['ma_convergence'] - df['ma_convergence'].shift(5)
+        
+        # Price position within recent range
+        df['price_position_20d'] = ((df['close'] - df['close'].rolling(20).min()) / 
+                                   (df['close'].rolling(20).max() - df['close'].rolling(20).min() + 1e-8))
+        
+        # === TECHNICAL INDICATORS (ENHANCED) ===
         # Normalized technical indicators (z-scores)
         for col in ['rsi_14', 'dma_50', 'dma_200']:
             if col in df.columns:
-                rolling_mean = df[col].rolling(30).mean()
-                rolling_std = df[col].rolling(30).std()
-                df[f'{col}_zscore'] = (df[col] - rolling_mean) / (rolling_std + 1e-8)
-
+                for window in [20, 30, 60]:  # Multiple normalization windows
+                    rolling_mean = df[col].rolling(window).mean()
+                    rolling_std = df[col].rolling(window).std()
+                    df[f'{col}_zscore_{window}d'] = (df[col] - rolling_mean) / (rolling_std + 1e-8)
+        
         # Price relatives to moving averages
         if 'dma_50' in df.columns:
             df['price_to_dma50'] = df['close'] / df['dma_50'] - 1.0
+            df['price_to_dma50_momentum'] = df['price_to_dma50'] - df['price_to_dma50'].shift(5)
         if 'dma_200' in df.columns:
             df['price_to_dma200'] = df['close'] / df['dma_200'] - 1.0
-
-        # Gap from previous close (needs "open")
-        if 'open' in df.columns:
+            df['price_to_dma200_momentum'] = df['price_to_dma200'] - df['price_to_dma200'].shift(5)
+        
+        # === VOLUME FEATURES ===
+        if 'volume' in df.columns:
+            # Volume-price relationships
+            df['volume_price_momentum'] = (df['returns_1d'] * df['volume'] / df['volume'].rolling(20).mean()).fillna(0)
+            
+            # Volume relative to recent average
+            df['volume_ratio_5d'] = df['volume'] / (df['volume'].rolling(5).mean() + 1e-8)
+            df['volume_ratio_20d'] = df['volume'] / (df['volume'].rolling(20).mean() + 1e-8)
+            
+            # Volume trend
+            df['volume_trend_10d'] = df['volume'].rolling(10).mean() / df['volume'].rolling(20).mean() - 1.0
+        
+        # === INTRADAY FEATURES ===
+        if all(col in df.columns for col in ['open', 'high', 'low', 'close']):
+            # Gap features
             df['overnight_gap'] = df['open'] / df['close'].shift(1) - 1.0
-
+            df['gap_fade'] = (df['close'] - df['open']) / (df['open'] + 1e-8)
+            
+            # Intraday range and position
+            df['daily_range'] = (df['high'] - df['low']) / df['open']
+            df['close_position'] = (df['close'] - df['low']) / (df['high'] - df['low'] + 1e-8)
+            
+            # Body vs wick ratios (candlestick patterns)
+            body_size = abs(df['close'] - df['open'])
+            upper_wick = df['high'] - df[['close', 'open']].max(axis=1)
+            lower_wick = df[['close', 'open']].min(axis=1) - df['low']
+            total_range = df['high'] - df['low'] + 1e-8
+            
+            df['body_ratio'] = body_size / total_range
+            df['upper_wick_ratio'] = upper_wick / total_range  
+            df['lower_wick_ratio'] = lower_wick / total_range
+        
+        # === FUNDAMENTAL FEATURES (if available) ===
+        fundamental_cols = [col for col in df.columns if col.startswith('metric_')]
+        if fundamental_cols:
+            # Normalize fundamental metrics by their historical ranges
+            for col in fundamental_cols[:20]:  # Limit to avoid too many features
+                if df[col].std() > 1e-8:  # Only if there's variation
+                    rolling_min = df[col].rolling(60, min_periods=10).min()
+                    rolling_max = df[col].rolling(60, min_periods=10).max()
+                    df[f'{col}_normalized'] = ((df[col] - rolling_min) / 
+                                              (rolling_max - rolling_min + 1e-8))
+        
+        # === SENTIMENT FEATURES (if available) ===
+        sentiment_cols = [col for col in df.columns if 'sentiment' in col.lower()]
+        for col in sentiment_cols:
+            if col in df.columns and df[col].std() > 1e-8:
+                # Sentiment momentum
+                df[f'{col}_momentum_3d'] = df[col] - df[col].shift(3)
+                df[f'{col}_momentum_5d'] = df[col] - df[col].shift(5)
+                
+                # Sentiment extremes (potential reversal signals)
+                rolling_quantile_90 = df[col].rolling(30).quantile(0.9)
+                rolling_quantile_10 = df[col].rolling(30).quantile(0.1)
+                df[f'{col}_extreme_positive'] = (df[col] > rolling_quantile_90).astype(float)
+                df[f'{col}_extreme_negative'] = (df[col] < rolling_quantile_10).astype(float)
+        
+        # === REGIME DETECTION ===
+        # Market regime indicators based on volatility and trend
+        if 'volatility_20d' in df.columns:
+            vol_ma_short = df['volatility_20d'].rolling(20).mean()
+            vol_ma_long = df['volatility_20d'].rolling(60).mean()
+            df['high_vol_regime'] = (vol_ma_short > vol_ma_long).astype(float)
+        
+        # Trending vs mean-reverting regime
+        if 'returns_1d' in df.columns:
+            # Hurst exponent approximation
+            returns_cumsum = df['returns_1d'].rolling(20).apply(lambda x: np.cumsum(x.values)[-1] if len(x) == 20 else 0)
+            returns_range = df['returns_1d'].rolling(20).apply(lambda x: x.max() - x.min() if len(x) == 20 else 0)
+            df['trend_regime'] = returns_range / (df['volatility_20d'] * np.sqrt(20) + 1e-8)
+        
+        # === CROSS-SECTIONAL FEATURES ===
+        # These would ideally use market-wide data, but we approximate with single-stock features
+        df['momentum_rank_proxy'] = df['momentum_20d'].rolling(60).rank(pct=True)
+        df['vol_rank_proxy'] = df['volatility_20d'].rolling(60).rank(pct=True)
+        
+        # === INTERACTION FEATURES ===
+        # Combine different signal types
+        if all(col in df.columns for col in ['momentum_10d', 'volatility_10d']):
+            df['risk_adjusted_momentum'] = df['momentum_10d'] / (df['volatility_10d'] + 1e-8)
+        
+        if all(col in df.columns for col in ['price_to_dma50', 'volume_ratio_20d']):
+            df['volume_confirmed_trend'] = df['price_to_dma50'] * df['volume_ratio_20d']
+        
         return df.fillna(0.0)
 
     def _generate_cache_key(self, start_date: str, end_date: str, 
