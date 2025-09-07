@@ -105,11 +105,14 @@ class TransformerEncoderBlock(nn.Module):
         x = x + ff_output # Residual connection
         return x
 
-class ActorCriticTransformer(nn.Module):
-    """Transformer-based Actor-Critic network"""
+# Updated Transformer network to handle flattened observations correctly
+
+class ActorCriticTransformerFlat(nn.Module):
+    """Transformer-based Actor-Critic network that handles flattened observations"""
     action_dim: int
+    obs_dim: int  # Full observation dimension (flattened)
     window_size: int
-    n_assets: int
+    n_stocks: int
     n_features: int
     d_model: int = 64
     nhead: int = 4
@@ -117,14 +120,29 @@ class ActorCriticTransformer(nn.Module):
     dropout_rate: float = 0.1
 
     def setup(self):
-        # Input preprocessing - Project raw features into d_model space
-        self.input_proj = nn.Dense(self.d_model, kernel_init=nn.initializers.he_normal())
+        # Calculate sizes for different parts of the observation
+        self.historical_size = self.window_size * self.n_stocks * self.n_features
+        self.current_info_size = self.n_stocks * 2  # current_open + current_gap
+        self.portfolio_weights_size = self.action_dim  # portfolio weights
+        self.market_state_size = 4  # portfolio metrics
+        
+        # Verify observation structure matches environment
+        expected_obs_size = (self.historical_size + self.current_info_size + 
+                           self.portfolio_weights_size + self.market_state_size)
+        assert self.obs_dim == expected_obs_size, (
+            f"Observation dimension mismatch: expected {expected_obs_size}, got {self.obs_dim}"
+        )
 
-        # Learnable Positional Encoding
-        seq_len = self.window_size * self.n_assets
-        self.pos_embedding = self.param('pos_embedding', nn.initializers.zeros, (1, seq_len, self.d_model))
+        # Historical data processing (main Transformer path)
+        self.historical_proj = nn.Dense(self.d_model, kernel_init=nn.initializers.he_normal())
+        
+        # Positional encoding for historical sequence
+        max_seq_len = self.window_size * self.n_stocks * 2
+        self.pos_embedding = self.param('pos_embedding', 
+                                       nn.initializers.zeros, 
+                                       (1, max_seq_len, self.d_model))
 
-        # Transformer Encoder Layers
+        # Transformer blocks for historical data
         self.transformer_blocks = [
             TransformerEncoderBlock(
                 d_model=self.d_model,
@@ -133,79 +151,153 @@ class ActorCriticTransformer(nn.Module):
                 dropout_rate=self.dropout_rate
             ) for _ in range(self.num_layers)
         ]
-        self.transformer_norm = nn.LayerNorm() # Final LayerNorm after transformer blocks
+        self.transformer_norm = nn.LayerNorm()
+
+        # Current market info processing
+        self.current_info_proj = nn.Dense(self.d_model // 2, 
+                                        kernel_init=nn.initializers.he_normal())
+        
+        # Portfolio state processing
+        self.portfolio_proj = nn.Dense(self.d_model // 2, 
+                                     kernel_init=nn.initializers.he_normal())
+        
+        # Market metrics processing
+        self.market_state_proj = nn.Dense(self.d_model // 4, 
+                                        kernel_init=nn.initializers.he_normal())
+
+        # Final fusion layer
+        fusion_input_size = self.d_model + self.d_model // 2 + self.d_model // 2 + self.d_model // 4
+        self.fusion_layer = nn.Dense(self.d_model, kernel_init=nn.initializers.he_normal())
 
         # Actor (policy) head
         self.actor_head = MLPHead(self.d_model // 2, self.action_dim)
 
-        # Critic (value) head
+        # Critic (value) head  
         self.critic_head = MLPHead(self.d_model // 2, 1)
 
     @nn.compact
     def __call__(self, x: chex.Array, training: bool = True):
-        """Forward pass through the network"""
+        """Forward pass through the network with flattened observations"""
         batch_size = x.shape[0]
 
-        # Enhanced input preprocessing and normalization
+        # Clean inputs
         x = jnp.where(jnp.isnan(x), 0.0, x)
         x = jnp.where(jnp.isinf(x), jnp.sign(x) * 10.0, x)
 
-        # Robust input scaling (Z-score normalization with clipping)
-        x_mean = jnp.mean(x, axis=(-1, -2, -3), keepdims=True)
-        x_std = jnp.std(x, axis=(-1, -2, -3), keepdims=True)
-        x_std = jnp.maximum(x_std, 1e-8) # Prevent division by zero
-        x = (x - x_mean) / x_std
-        x = jnp.clip(x, -5.0, 5.0) # Clip to reasonable range
+        # Split the flattened observation into its components
+        historical_data = x[:, :self.historical_size]
+        start_idx = self.historical_size
+        current_info = x[:, start_idx:start_idx + self.current_info_size]  # Shape: (batch, n_stocks*2)
 
-        # Flatten window & assets into sequence
-        obs_seq = x.reshape(batch_size, self.window_size * self.n_assets, self.n_features)
+        start_idx += self.current_info_size  
+        portfolio_weights = x[:, start_idx:start_idx + self.portfolio_weights_size]  # Shape: (batch, action_dim)
 
-        # Project input features
-        x = self.input_proj(obs_seq) # [batch, seq_len, d_model]
+        market_state = x[:, -self.market_state_size:]  # Shape: (batch, 4)
 
-        # Add positional embedding
-        seq_len = x.shape[1]
-        x = x + self.pos_embedding[:, :seq_len, :]
-
-        # Pass through Transformer Encoder layers
-        for block in self.transformer_blocks:
-            x = block(x, training=training)
+        # Check if any component is empty before processing
+        if current_info.size == 0:
+            current_features = jnp.zeros((batch_size, self.d_model // 2))
+        else:
+            current_info = current_info.reshape(batch_size, -1)
+            current_features = self.current_info_proj(current_info)
         
-        x = self.transformer_norm(x)
+        if portfolio_weights.size == 0:
+            portfolio_features = jnp.zeros((batch_size, self.d_model // 2))
+        else:
+            portfolio_weights = portfolio_weights.reshape(batch_size, -1)
+            portfolio_features = self.portfolio_proj(portfolio_weights)
+        
+        if market_state.size == 0:
+            market_features = jnp.zeros((batch_size, self.d_model // 4))
+        else:
+            market_state = market_state.reshape(batch_size, -1)
+            market_features = self.market_state_proj(market_state)
 
+        # Process historical data with Transformer
+        # Reshape: [batch, window_size * n_stocks, n_features]
+        historical_reshaped = historical_data.reshape(batch_size, 
+                                                    -1, 
+                                                    self.n_features)
+        
+        # Normalize historical data
+        hist_mean = jnp.mean(historical_reshaped, axis=(-1, -2), keepdims=True)
+        hist_std = jnp.std(historical_reshaped, axis=(-1, -2), keepdims=True)
+        hist_std = jnp.maximum(hist_std, 1e-8)
+        historical_normalized = (historical_reshaped - hist_mean) / hist_std
+        historical_normalized = jnp.clip(historical_normalized, -5.0, 5.0)
+
+        # Project historical data
+        historical_encoded = self.historical_proj(historical_normalized)
+        
+        # Add positional encoding
+        seq_len = historical_encoded.shape[1]
+        historical_encoded = historical_encoded + self.pos_embedding[:, :seq_len, :]
+
+        # Pass through Transformer blocks
+        for block in self.transformer_blocks:
+            historical_encoded = block(historical_encoded, training=training)
+        
+        historical_encoded = self.transformer_norm(historical_encoded)
+        
         # Mean pooling across sequence dimension
-        x = x.mean(axis=1) # [batch, d_model]
+        historical_features = historical_encoded.mean(axis=1)  # [batch, d_model]
 
-        # Final cleaning before heads
-        x = jnp.where(jnp.isnan(x), 0.0, x)
-        x = jnp.clip(x, -10.0, 10.0)
+        # Process current market info
+        current_info_normalized = jnp.clip(current_info, -10.0, 10.0)
+        current_features = self.current_info_proj(current_info_normalized)
+        current_features = nn.relu(current_features)
 
-        # Actor (policy) head
-        logits = self.actor_head(x)
+        # Process portfolio weights
+        portfolio_normalized = jnp.clip(portfolio_weights, 0.0, 1.0)  # Portfolio weights should be [0,1]
+        portfolio_features = self.portfolio_proj(portfolio_normalized)
+        portfolio_features = nn.relu(portfolio_features)
+
+        # Process market state
+        market_state_normalized = jnp.clip(market_state, -10.0, 10.0)
+        market_features = self.market_state_proj(market_state_normalized)
+        market_features = nn.relu(market_features)
+
+        # Fuse all features
+        combined_features = jnp.concatenate([
+            historical_features,
+            current_features, 
+            portfolio_features,
+            market_features
+        ], axis=-1)
+        
+        fused_features = self.fusion_layer(combined_features)
+        fused_features = nn.relu(fused_features)
+        
+        # Final cleaning
+        fused_features = jnp.where(jnp.isnan(fused_features), 0.0, fused_features)
+        fused_features = jnp.clip(fused_features, -10.0, 10.0)
+
+        # Actor head (policy)
+        logits = self.actor_head(fused_features)
         logits = jnp.where(jnp.isnan(logits), 0.0, logits)
         logits = jnp.clip(logits, -10.0, 10.0)
 
-        # Critic (value) head
-        values = self.critic_head(x).squeeze(-1)
+        # Critic head (value)
+        values = self.critic_head(fused_features).squeeze(-1)
         values = jnp.where(jnp.isnan(values), 0.0, values)
         values = jnp.clip(values, -100.0, 100.0)
 
-        # Dummy new_carry for compatibility with PPO trainer
+        # Dummy carry for compatibility
         new_carry = [LSTMState(h=jnp.zeros((batch_size, 1)), c=jnp.zeros((batch_size, 1)))]
 
-        return logits, values, new_carry # Consistent return signature
+        return logits, values, new_carry
 
 # ============================================================================
 # PPO TRAINER WITH COMPREHENSIVE ERROR HANDLING
 # ============================================================================
 
-class PPOTrainer:
-    """PPO Trainer with comprehensive numerical stability and error handling"""
+# Key fixes for the PPOTrainer class in train_ppo_transformer.py
 
+class PPOTrainer:
     def __init__(self, config: Dict[str, Any]):
         self.config = config
         self.nan_count = 0
-        self.max_nan_resets = 5 # Allow more resets for debugging
+        self.max_nan_resets = 5
 
         logger.info("Initializing PPO Trainer...")
 
@@ -215,29 +307,33 @@ class PPOTrainer:
             self.env = JAXVectorizedPortfolioEnv(**env_config)
             logger.info(f"Environment initialized: obs_dim={self.env.obs_dim}, action_dim={self.env.action_dim}")
             
-            # Infer window_size, n_assets, n_features from environment
+            # FIXED: Get the correct dimensions from environment
             self.window_size = config.get('window_size', 30)
-            # The obs_dim is window_size * n_assets * n_features
-            # For this transformer, it's [window_size, n_assets, n_features]
-            # So, n_assets * n_features = self.env.obs_dim / self.window_size
-            self.n_assets = self.env.n_assets # Assuming env directly provides n_assets
-            self.n_features = self.env.obs_dim // (self.window_size * self.n_assets)
+            self.n_stocks = self.env.n_stocks  # Use n_stocks, not n_assets
+            self.n_features = self.env.n_features  # Use the actual n_features from env
             
-            logger.info(f"Inferred Transformer input shape: window_size={self.window_size}, n_assets={self.n_assets}, n_features={self.n_features}")
+            # Calculate the historical data portion of the observation
+            self.historical_obs_size = self.window_size * self.n_stocks * self.n_features
+            
+            logger.info(f"Environment dimensions: window_size={self.window_size}, "
+                       f"n_stocks={self.n_stocks}, n_features={self.n_features}")
+            logger.info(f"Historical obs size: {self.historical_obs_size}, "
+                       f"Total obs dim: {self.env.obs_dim}")
 
         except Exception as e:
             logger.error(f"Failed to initialize environment: {e}")
             raise
 
-        # Vectorized environment functions
+        # Rest of initialization...
         self.vmap_reset = jax.vmap(self.env.reset, in_axes=(0,))
         self.vmap_step = jax.vmap(self.env.step, in_axes=(0, 0))
         
-        # Initialize network
-        self.network = ActorCriticTransformer(
+        # FIXED: Initialize network with correct input handling
+        self.network = ActorCriticTransformerFlat(
             action_dim=self.env.action_dim,
+            obs_dim=self.env.obs_dim,  # Use full observation dimension
             window_size=self.window_size,
-            n_assets=self.n_assets,
+            n_stocks=self.n_stocks,
             n_features=self.n_features,
             d_model=config.get('d_model', 64),
             nhead=config.get('nhead', 4),
@@ -245,39 +341,168 @@ class PPOTrainer:
             dropout_rate=config.get('dropout_rate', 0.1)
         )
 
-        # Initialize parameters with robust error handling
+        # Initialize parameters with correct dummy input
         self._initialize_parameters()
+        # ... rest of init
 
-        # Setup optimizer with numerical stability
-        self.optimizer = optax.chain(
-            optax.clip_by_global_norm(config.get('max_grad_norm', 0.5)),
-            optax.adam(
-                learning_rate=config.get('learning_rate', 1e-4),
-                eps=1e-8,
-                b1=0.9,
-                b2=0.999
-            )
-        )
+    def _initialize_parameters(self):
+        """Initialize network parameters with correct input shape"""
+        logger.info("Initializing network parameters...")
 
-        # Create training state
-        self.train_state = TrainState.create(
-            apply_fn=self.network.apply,
-            params=self.params,
-            tx=self.optimizer
-        )
+        self.rng = random.PRNGKey(self.config.get('seed', 42))
+        self.rng, init_rng = random.split(self.rng)
 
-        # Initialize environment and "LSTM" state (dummy for transformer)
-        self._initialize_environment_state()
+        # FIXED: Create dummy input with correct flattened observation shape
+        dummy_obs = jnp.ones((self.config.get('n_envs', 8), self.env.obs_dim))
 
-        # Initialize wandb if requested
-        if config.get('use_wandb', False):
+        try:
+            self.params = self.network.init(init_rng, dummy_obs)
+            logger.info("Network parameters initialized successfully")
+        except Exception as e:
+            logger.error(f"Failed to initialize network parameters: {e}")
+            raise
+        
+        # Validation and testing...
+        if self._has_nan_params(self.params):
+            logger.warning("NaN detected in initial parameters, reinitializing...")
+            self.rng, init_rng = random.split(self.rng)
+            self.params = self.network.init(init_rng, dummy_obs)
+
+            if self._has_nan_params(self.params):
+                raise RuntimeError("Failed to initialize parameters without NaN")
+
+        self._test_network_forward_pass(dummy_obs)
+
+    def _initialize_environment_state(self):
+        """Initialize environment state with correct observation handling"""
+        logger.info("Initializing environment state...")
+
+        try:
+            self.rng, *reset_keys = random.split(self.rng, self.config.get('n_envs', 8) + 1)
+            reset_keys = jnp.array(reset_keys)
+            self.env_states, self.obs = self.vmap_reset(reset_keys)
+            
+            # FIXED: Keep observations flattened - don't reshape
+            # The observations are already in the correct shape from the environment
+            
+            # Clean environment observations
+            self.obs = jnp.where(jnp.isnan(self.obs), 0.0, self.obs)
+            self.obs = jnp.where(jnp.isinf(self.obs), 0.0, self.obs)
+            
+            if check_for_nans(self.obs, "initial observations"):
+                raise RuntimeError("NaN detected in initial environment observations after cleaning")
+            
+            # Debug: Check observation statistics
+            obs_mean = jnp.mean(self.obs)
+            obs_std = jnp.std(self.obs)
+            obs_max = jnp.max(self.obs)
+            obs_min = jnp.min(self.obs)
+            logger.info(f"Initial observations - mean: {obs_mean:.6f}, std: {obs_std:.6f}, "
+                       f"range: [{obs_min:.6f}, {obs_max:.6f}], shape: {self.obs.shape}")
+            
+            if obs_std < 1e-8:
+                logger.warning("⚠️ Initial observations have very low variance - this may cause training issues")
+
+            logger.info("✅ Environment state initialized successfully")
+
+        except Exception as e:
+            logger.error(f"Failed to initialize environment state: {e}")
+            raise
+
+    def collect_trajectory(self, train_state: TrainState, env_states: List[EnvState],
+                          initial_obs: chex.Array, rng_key: chex.PRNGKey) -> Tuple[Trajectory, List[EnvState], chex.Array]:
+        """Collect trajectory with correct observation handling"""
+
+        def step_fn(carry_step, _):
+            env_states, obs, rng_key = carry_step
+
+            # FIXED: Keep observations flattened - no reshaping needed
+            obs = jnp.where(jnp.isnan(obs), 0.0, obs)
+            obs = jnp.clip(obs, -50.0, 50.0)
+        
+            rng_key, action_rng = random.split(rng_key)
+        
             try:
-                wandb.init(project="jax-ppo-transformer-portfolio", config=config)
-                logger.info("Weights & Biases initialized")
+                logits, values, _ = train_state.apply_fn(train_state.params, obs)
             except Exception as e:
-                logger.warning(f"Failed to initialize wandb: {e}")
+                logger.error(f"Network forward pass failed: {e}")
+                logits = jnp.zeros((obs.shape[0], self.env.action_dim))
+                values = jnp.zeros(obs.shape[0])
 
-        logger.info("PPO Trainer initialization complete!")
+            # Clean outputs and sample actions
+            logits = jnp.where(jnp.isnan(logits), 0.0, logits)
+            values = jnp.where(jnp.isnan(values), 0.0, values)
+            logits = jnp.clip(logits, -5.0, 5.0)
+            values = jnp.clip(values, -50.0, 50.0)
+
+            action_std = self.config.get('action_std', 1.0)
+            action_std = jnp.maximum(action_std, 1e-6)
+            
+            action_distribution = distrax.Normal(loc=logits, scale=action_std)
+            actions = action_distribution.sample(seed=action_rng)
+            actions = jnp.clip(actions, -5.0, 5.0)
+            
+            log_probs = action_distribution.log_prob(actions).sum(axis=-1)
+            log_probs = jnp.where(jnp.isnan(log_probs), -10.0, log_probs)
+            log_probs = jnp.clip(log_probs, -50.0, 10.0)
+        
+            # Step environment
+            new_env_states, next_obs, rewards, dones, info = self.vmap_step(env_states, actions)
+
+            # FIXED: Keep next_obs flattened - no reshaping
+            next_obs = jnp.where(jnp.isnan(next_obs), 0.0, next_obs)
+            next_obs = jnp.clip(next_obs, -50.0, 50.0)
+            
+            rewards = jnp.where(jnp.isnan(rewards), 0.0, rewards)
+            rewards = jnp.clip(rewards, -50.0, 50.0)
+            
+            transition = Trajectory(
+                obs=obs,
+                actions=actions,
+                rewards=rewards,
+                values=values,
+                log_probs=log_probs,
+                dones=dones,
+            )
+        
+            return (new_env_states, next_obs, rng_key), transition
+
+        # Rest of trajectory collection remains the same...
+        n_steps = self.config.get('n_steps', 64)
+        initial_carry = (env_states, initial_obs, rng_key)
+        
+        try:
+            current_carry = initial_carry
+            trajectory_list = []
+
+            for step in range(n_steps):
+                current_carry, transition = step_fn(current_carry, None)
+                trajectory_list.append(transition)
+            
+            trajectory = jax.tree_util.tree_map(
+                lambda *args: jnp.stack(args, axis=0), *trajectory_list
+            )
+            
+        except Exception as e:
+            logger.error(f"Trajectory collection failed: {e}")
+            return self._create_empty_trajectory(), env_states, initial_obs
+
+        final_env_states, final_obs, _ = current_carry
+        return trajectory, final_env_states, final_obs
+
+    def _create_empty_trajectory(self) -> Trajectory:
+        """Create empty trajectory with correct observation shape"""
+        n_steps = self.config.get('n_steps', 128)
+        n_envs = self.config.get('n_envs', 8)
+
+        return Trajectory(
+            obs=jnp.zeros((n_steps, n_envs, self.env.obs_dim)),  # FIXED: Use correct obs_dim
+            actions=jnp.zeros((n_steps, n_envs, self.env.action_dim)),
+            rewards=jnp.zeros((n_steps, n_envs)),
+            values=jnp.zeros((n_steps, n_envs)),
+            log_probs=jnp.zeros((n_steps, n_envs)),
+            dones=jnp.zeros((n_steps, n_envs), dtype=bool),
+        )
 
     def _get_env_config(self) -> Dict[str, Any]:
         """Get environment configuration"""
@@ -290,11 +515,12 @@ class PPOTrainer:
             'transaction_cost_rate': self.config.get('transaction_cost_rate', 0.005),
             'sharpe_window': self.config.get('sharpe_window', 252),
             'use_all_features': self.config.get('use_all_features', True),
-            'fill_missing_features_with': self.config.get('fill_missing_features_with', 'interpolate'),
-            'save_cache': self.config.get('save_cache', True),
-            'cache_format': self.config.get('cache_format', 'hdf5'),
-            'force_reload': self.config.get('force_reload', False),
-            'preload_to_gpu': self.config.get('preload_to_gpu', True)
+            # 'fill_missing_features_with': self.config.get('fill_missing_features_with', 'interpolate'),
+            # 'save_cache': self.config.get('save_cache', True),
+            # 'cache_format': self.config.get('cache_format', 'hdf5'),
+            # 'force_reload': self.config.get('force_reload', False),
+            # 'preload_to_gpu': self.config.get('preload_to_gpu', True)
+            'hdf5_file': self.config.get('hdf5_file', None)
         }
 
     def _initialize_parameters(self):
@@ -306,7 +532,7 @@ class PPOTrainer:
         self.rng, init_rng = random.split(self.rng)
 
         # Create dummy inputs for initialization
-        dummy_obs = jnp.ones((self.config.get('n_envs', 8), self.window_size, self.n_assets, self.n_features))
+        dummy_obs = jnp.ones((self.config.get('n_envs', 8), self.window_size, self.n_stocks + 1, self.n_features))
 
         # Initialize parameters with error handling
         try:
@@ -345,8 +571,11 @@ class PPOTrainer:
         logger.info("Testing network forward pass...")
 
         try:
+            # Split PRNG key for dropout
+            self.rng, new_rng = random.split(self.rng)
+
             # Test network forward pass. Note: Transformer does not use LSTM carry
-            logits, values, _ = self.network.apply(self.params, obs)
+            logits, values, _ = self.network.apply(self.params, obs, rngs={"dropout": new_rng})
 
             # Check for NaN in outputs
             if check_for_nans(logits, "logits"):
@@ -369,27 +598,59 @@ class PPOTrainer:
             self.rng, *reset_keys = random.split(self.rng, self.config.get('n_envs', 8) + 1)
             reset_keys = jnp.array(reset_keys)
             self.env_states, self.obs = self.vmap_reset(reset_keys)
-            
-            # Reshape observations for Transformer: [n_envs, window_size, n_assets, n_features]
-            self.obs = self.obs.reshape(self.config.get('n_envs', 8), self.window_size, self.n_assets, self.n_features)
+
+            # Debug: Log the shape of self.obs
+            logger.info(f"Initial obs shape: {self.obs.shape}")
+
+            # Extract historical and current data dimensions
+            historical_size = self.window_size * self.n_assets * self.n_features
+            current_size = self.n_assets * 2  # Only 'open' and 'overnight_gap'
+            portfolio_weights_size = self.env.action_dim  # Portfolio weights (action_dim)
+            market_state_size = 4  # Portfolio metrics (portfolio_value, total_return, portfolio_vol, max_drawdown)
+
+            # Ensure the observation size matches the expected structure
+            expected_size = historical_size + current_size + portfolio_weights_size + market_state_size
+            actual_size = self.obs.shape[-1]
+            if actual_size != expected_size:
+                raise ValueError(f"Observation size mismatch: expected {expected_size}, got {actual_size}")
+
+            # Reshape historical data
+            historical_data = self.obs[:, :historical_size]
+            historical_data = historical_data.reshape(
+                self.config.get('n_envs', 8), self.window_size, self.n_assets, self.n_features
+            )
+
+            # Reshape current data
+            current_data = self.obs[:, historical_size:historical_size + current_size]
+            current_data = current_data.reshape(
+                self.config.get('n_envs', 8), 1, self.n_assets, 2
+            )
+
+            # Pad current_data to match the feature dimensions of historical_data
+            if current_data.shape[-1] != historical_data.shape[-1]:
+                padding = [(0, 0)] * (current_data.ndim - 1) + [(0, historical_data.shape[-1] - current_data.shape[-1])]
+                current_data = jnp.pad(current_data, padding, mode='constant', constant_values=0)
+
+            # Concatenate along the time axis
+            self.obs = jnp.concatenate([historical_data, current_data], axis=1)
 
             # Clean environment observations (handle inf/nan)
             self.obs = jnp.where(jnp.isnan(self.obs), 0.0, self.obs)
             self.obs = jnp.where(jnp.isinf(self.obs), 0.0, self.obs)
-            
+
             # Validate environment outputs
             if check_for_nans(self.obs, "initial observations"):
-                raise RuntimeError("NaN detected in initial environment observations after cleaning")
-            
+                raise ValueError("NaN detected in initial observations")
+
             # Debug: Check observation statistics
             obs_mean = jnp.mean(self.obs)
             obs_std = jnp.std(self.obs)
             obs_max = jnp.max(self.obs)
             obs_min = jnp.min(self.obs)
             logger.info(f"Initial observations - mean: {obs_mean:.6f}, std: {obs_std:.6f}, range: [{obs_min:.6f}, {obs_max:.6f}]")
-            
+
             if obs_std < 1e-8:
-                logger.warning("⚠️ Initial observations have very low variance - this may cause training issues")
+                raise ValueError("Standard deviation of observations is too small, indicating potential issues with the data")
 
             logger.info("✅ Environment state initialized successfully")
 
@@ -397,8 +658,9 @@ class PPOTrainer:
             logger.error(f"Failed to initialize environment state: {e}")
             raise
 
+
     def collect_trajectory(self, train_state: TrainState, env_states: List[EnvState],
-                          initial_obs: chex.Array, rng_key: chex.PRNGKey) -> Tuple[Trajectory, List[EnvState], chex.Array]:
+                        initial_obs: chex.Array, rng_key: chex.PRNGKey) -> Tuple[Trajectory, List[EnvState], chex.Array]:
         """Collect trajectory using current policy. No LSTM state management for Transformer."""
 
         def step_fn(carry_step, _):
@@ -407,15 +669,15 @@ class PPOTrainer:
 
             # Lightweight observation cleaning (only essential)
             obs = jnp.where(jnp.isnan(obs), 0.0, obs)
-            obs = jnp.clip(obs, -50.0, 50.0) # Reduced clipping range
-        
+            obs = jnp.clip(obs, -50.0, 50.0)  # Reduced clipping range
+
             # Get action from policy
             rng_key, action_rng = random.split(rng_key)
-        
+
             # Apply network with error handling. No LSTM carry for Transformer.
             try:
                 logits, values, _ = train_state.apply_fn(
-                    train_state.params, obs
+                    train_state.params, obs, rngs={"dropout": action_rng}
                 )
             except Exception as e:
                 logger.error(f"Network forward pass failed: {e}")
@@ -426,35 +688,70 @@ class PPOTrainer:
             # Lightweight network output cleaning
             logits = jnp.where(jnp.isnan(logits), 0.0, logits)
             values = jnp.where(jnp.isnan(values), 0.0, values)
-            logits = jnp.clip(logits, -5.0, 5.0) # Reduced clipping
-            values = jnp.clip(values, -50.0, 50.0) # Reduced clipping
+            logits = jnp.clip(logits, -5.0, 5.0)  # Reduced clipping
+            values = jnp.clip(values, -50.0, 50.0)  # Reduced clipping
 
             # Sample actions
             action_std = self.config.get('action_std', 1.0)
-            action_std = jnp.maximum(action_std, 1e-6) # Ensure positive std
-            
+            action_std = jnp.maximum(action_std, 1e-6)  # Ensure positive std
+
             action_distribution = distrax.Normal(loc=logits, scale=action_std)
             actions = action_distribution.sample(seed=action_rng)
             actions = jnp.clip(actions, -5.0, 5.0)
-            
+
             # Calculate log probabilities
             log_probs = action_distribution.log_prob(actions).sum(axis=-1)
             log_probs = jnp.where(jnp.isnan(log_probs), -10.0, log_probs)
             log_probs = jnp.clip(log_probs, -50.0, 10.0)
-        
+
             # Step environment
             new_env_states, next_obs, rewards, dones, info = self.vmap_step(env_states, actions)
 
             # Reshape next_obs for Transformer input
-            next_obs = next_obs.reshape(obs.shape[0], self.window_size, self.n_assets, self.n_features)
+            try:
+                # Extract historical and current data dimensions
+                historical_size = self.window_size * self.n_assets * self.n_features
+                current_size = self.n_assets * 2  # Only 'open' and 'overnight_gap'
+                portfolio_weights_size = self.env.action_dim  # Portfolio weights (action_dim)
+                market_state_size = 4  # Portfolio metrics (portfolio_value, total_return, portfolio_vol, max_drawdown)
+
+                # Ensure the observation size matches the expected structure
+                expected_size = historical_size + current_size + portfolio_weights_size + market_state_size
+                actual_size = next_obs.shape[-1]
+                if actual_size != expected_size:
+                    raise ValueError(f"Observation size mismatch: expected {expected_size}, got {actual_size}")
+
+                # Reshape historical data
+                historical_data = next_obs[:, :historical_size]
+                historical_data = historical_data.reshape(
+                    next_obs.shape[0], self.window_size, self.n_assets, self.n_features
+                )
+
+                # Reshape current data
+                current_data = next_obs[:, historical_size:historical_size + current_size]
+                current_data = current_data.reshape(
+                    next_obs.shape[0], 1, self.n_assets, 2
+                )
+
+                # Pad current_data to match the feature dimensions of historical_data
+                if current_data.shape[-1] != historical_data.shape[-1]:
+                    padding = [(0, 0)] * (current_data.ndim - 1) + [(0, historical_data.shape[-1] - current_data.shape[-1])]
+                    current_data = jnp.pad(current_data, padding, mode='constant', constant_values=0)
+
+                # Concatenate along the time axis
+                next_obs = jnp.concatenate([historical_data, current_data], axis=1)
+
+            except ValueError as e:
+                logger.error(f"Reshape failed: {e}")
+                raise
 
             # Lightweight environment output cleaning
             next_obs = jnp.where(jnp.isnan(next_obs), 0.0, next_obs)
-            next_obs = jnp.clip(next_obs, -50.0, 50.0) # Reduced clipping
-            
+            next_obs = jnp.clip(next_obs, -50.0, 50.0)  # Reduced clipping
+
             rewards = jnp.where(jnp.isnan(rewards), 0.0, rewards)
-            rewards = jnp.clip(rewards, -50.0, 50.0) # Reduced clipping
-            
+            rewards = jnp.clip(rewards, -50.0, 50.0)  # Reduced clipping
+
             # Create trajectory transition
             transition = Trajectory(
                 obs=obs,
@@ -464,13 +761,13 @@ class PPOTrainer:
                 log_probs=log_probs,
                 dones=dones,
             )
-        
+
             return (new_env_states, next_obs, rng_key), transition
 
         # Roll out trajectory using lax.scan (JIT-compiled, much faster)
         n_steps = self.config.get('n_steps', 64)
         initial_carry = (env_states, initial_obs, rng_key)
-        
+
         try:
             # Use regular Python loop for stability (no JIT compilation)
             current_carry = initial_carry
@@ -479,12 +776,12 @@ class PPOTrainer:
             for step in range(n_steps):
                 current_carry, transition = step_fn(current_carry, None)
                 trajectory_list.append(transition)
-            
+
             # Convert to trajectory format
             trajectory = jax.tree_util.tree_map(
                 lambda *args: jnp.stack(args, axis=0), *trajectory_list
             )
-            
+
         except Exception as e:
             logger.error(f"Trajectory collection failed: {e}")
             # Return safe defaults
@@ -693,7 +990,7 @@ class PPOTrainer:
 
         # Log NaN in gradients
         if self._has_nan_params(grads):
-        logger.warning("NaN detected in gradients during train step!")
+            logger.warning("NaN detected in gradients during train step!")
             metrics['nan_in_gradients'] = 1.0
         else:
             metrics['nan_in_gradients'] = 0.0
@@ -992,19 +1289,20 @@ if __name__ == '__main__':
         'save_interval': 100, # Save model every X updates
 
         # Environment specific configurations
-        'data_root': './data', # Path to your financial data
+        'data_root': './processed_data', # Path to your financial data
         'stocks': None, # e.g., ['AAPL', 'MSFT', 'GOOG'] or None for all
-        'train_start_date': '2010-01-01',
-        'train_end_date': '2020-12-31',
+        'train_start_date': '2024-06-06',
+        'train_end_date': '2025-03-06',
         'window_size': 30, # Lookback window for observations
         'transaction_cost_rate': 0.001,
         'sharpe_window': 252,
         'use_all_features': True,
-        'fill_missing_features_with': 'interpolate',
+        # 'fill_missing_features_with': 'interpolate',
         'save_cache': True,
         'cache_format': 'parquet',
         'force_reload': False,
         'preload_to_gpu': True,
+        'hdf5_file': None, # Path to HDF5 file if using
 
         # Transformer specific configurations
         'd_model': 128,
