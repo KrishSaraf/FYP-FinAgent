@@ -3,7 +3,7 @@ import jax.numpy as jnp
 from jax import random, vmap, lax
 import numpy as np
 import pandas as pd
-from typing import Dict, List, Optional, Any, Tuple, NamedTuple
+from typing import Dict, List, Optional, Any, Tuple, NamedTuple, Union
 from pathlib import Path
 import chex
 from functools import partial
@@ -11,6 +11,8 @@ import h5py
 from concurrent.futures import ThreadPoolExecutor
 import os # Added for os.cpu_count()
 import distrax
+import json
+import pickle
 
 # JAX environment state
 class EnvState(NamedTuple):
@@ -31,11 +33,13 @@ class JAXPortfolioDataLoader:
     """Optimized data loader for portfolio environment (CSV-based, flexible feature handling)"""
 
     def __init__(self, data_root: str, stocks: List[str], features: Optional[List[str]] = None,
-                 use_all_features: bool = False):
+                 use_all_features: bool = False, cache_dir: Optional[str] = None):
         self.data_root = Path(data_root)
         self.stocks = stocks
         self.features = features  # can be None, will be inferred
         self.use_all_features = use_all_features
+        self.cache_dir = Path(cache_dir) if cache_dir else self.data_root / "cache"
+        self.cache_dir.mkdir(exist_ok=True)
 
     def engineer_features(self, df: pd.DataFrame, stock: str) -> pd.DataFrame:
         """Add engineered features to data"""
@@ -66,13 +70,189 @@ class JAXPortfolioDataLoader:
 
         return df.fillna(0.0)
 
+    def _generate_cache_key(self, start_date: str, end_date: str, 
+                           fill_missing_features_with: str) -> str:
+        """Generate a unique cache key based on parameters"""
+        stocks_hash = hash(tuple(sorted(self.stocks)))
+        features_hash = hash(tuple(sorted(self.features or [])))
+        
+        key_components = [
+            f"stocks_{stocks_hash}",
+            f"features_{features_hash}",
+            f"start_{start_date}",
+            f"end_{end_date}",
+            f"fill_{fill_missing_features_with}",
+            f"use_all_{self.use_all_features}"
+        ]
+        return "_".join(key_components).replace("/", "-").replace(":", "")
+
+    def save_data(self, data_array: Union[np.ndarray, chex.Array], 
+                  valid_dates: pd.DatetimeIndex, 
+                  start_date: str, end_date: str,
+                  fill_missing_features_with: str,
+                  file_format: str = 'hdf5') -> str:
+        """
+        Save processed data to disk in specified format.
+        
+        Args:
+            data_array: The processed data tensor
+            valid_dates: DatetimeIndex of valid dates
+            start_date: Start date string
+            end_date: End date string
+            fill_missing_features_with: Missing data fill method
+            file_format: Format to save ('hdf5', 'npz', or 'pickle')
+            
+        Returns:
+            Path to saved file
+        """
+        cache_key = self._generate_cache_key(start_date, end_date, fill_missing_features_with)
+        
+        # Convert JAX array to numpy for saving
+        if hasattr(data_array, 'device'):  # JAX array
+            data_np = np.array(data_array)
+        else:
+            data_np = data_array
+            
+        metadata = {
+            'stocks': self.stocks,
+            'features': self.features,
+            'start_date': start_date,
+            'end_date': end_date,
+            'fill_method': fill_missing_features_with,
+            'use_all_features': self.use_all_features,
+            'shape': data_np.shape,
+            'n_days': len(valid_dates),
+            'n_stocks': len(self.stocks),
+            'n_features': len(self.features),
+            'dates': valid_dates.strftime('%Y-%m-%d').tolist()
+        }
+        
+        if file_format == 'hdf5':
+            filepath = self.cache_dir / f"{cache_key}.h5"
+            with h5py.File(filepath, 'w') as f:
+                # Save data array
+                f.create_dataset('data', data=data_np, compression='gzip', compression_opts=9)
+                f.create_dataset('day_indices', data=np.arange(len(valid_dates)))
+                
+                # Save metadata as JSON string attribute
+                f.attrs['metadata'] = json.dumps(metadata)
+                
+                # Save dates as string dataset
+                f.create_dataset('dates', data=valid_dates.strftime('%Y-%m-%d').astype('S10'))
+                
+        elif file_format == 'npz':
+            filepath = self.cache_dir / f"{cache_key}.npz"
+            np.savez_compressed(
+                filepath,
+                data=data_np,
+                day_indices=np.arange(len(valid_dates)),
+                dates=valid_dates.strftime('%Y-%m-%d'),
+                metadata=json.dumps(metadata)
+            )
+            
+        elif file_format == 'pickle':
+            filepath = self.cache_dir / f"{cache_key}.pkl"
+            save_dict = {
+                'data': data_np,
+                'day_indices': np.arange(len(valid_dates)),
+                'valid_dates': valid_dates,
+                'metadata': metadata
+            }
+            with open(filepath, 'wb') as f:
+                pickle.dump(save_dict, f, protocol=pickle.HIGHEST_PROTOCOL)
+                
+        else:
+            raise ValueError(f"Unsupported file format: {file_format}")
+            
+        print(f"Data saved to: {filepath}")
+        print(f"Data shape: {data_np.shape}")
+        print(f"File size: {filepath.stat().st_size / (1024**2):.2f} MB")
+        
+        return str(filepath)
+
+    def load_cached_data(self, start_date: str, end_date: str,
+                        fill_missing_features_with: str = 'interpolate',
+                        file_format: str = 'hdf5',
+                        preload_to_gpu: bool = True) -> Optional[Tuple[chex.Array, chex.Array, pd.DatetimeIndex, int]]:
+        """
+        Try to load cached data if it exists.
+        
+        Returns:
+            Cached data tuple if found, None otherwise
+        """
+        cache_key = self._generate_cache_key(start_date, end_date, fill_missing_features_with)
+        
+        if file_format == 'hdf5':
+            filepath = self.cache_dir / f"{cache_key}.h5"
+            if not filepath.exists():
+                return None
+                
+            with h5py.File(filepath, 'r') as f:
+                data_array = f['data'][:]
+                day_indices = f['day_indices'][:]
+                dates_str = f['dates'][:].astype(str)
+                metadata = json.loads(f.attrs['metadata'])
+                
+        elif file_format == 'npz':
+            filepath = self.cache_dir / f"{cache_key}.npz"
+            if not filepath.exists():
+                return None
+                
+            with np.load(filepath, allow_pickle=True) as f:
+                data_array = f['data']
+                day_indices = f['day_indices']
+                dates_str = f['dates']
+                metadata = json.loads(str(f['metadata']))
+                
+        elif file_format == 'pickle':
+            filepath = self.cache_dir / f"{cache_key}.pkl"
+            if not filepath.exists():
+                return None
+                
+            with open(filepath, 'rb') as f:
+                cached = pickle.load(f)
+                data_array = cached['data']
+                day_indices = cached['day_indices']
+                valid_dates = cached['valid_dates']
+                metadata = cached['metadata']
+                
+        else:
+            raise ValueError(f"Unsupported file format: {file_format}")
+            
+        if file_format != 'pickle':
+            valid_dates = pd.to_datetime(dates_str)
+            
+        # Restore features list
+        self.features = metadata['features']
+        
+        if preload_to_gpu:
+            data_array = jnp.array(data_array)
+            day_indices = jnp.array(day_indices)
+        else:
+            day_indices = jnp.array(day_indices)
+            
+        print(f"Loaded cached data from: {filepath}")
+        return data_array, day_indices, valid_dates, metadata['n_features']
+
     def load_and_preprocess_data(self,
                                  start_date: str,
                                  end_date: str,
                                  fill_missing_features_with: str = 'interpolate',
-                                 preload_to_gpu: bool = True) -> Tuple[chex.Array, chex.Array, pd.DatetimeIndex, int]:
+                                 preload_to_gpu: bool = True,
+                                 save_cache: bool = True,
+                                 cache_format: str = 'hdf5',
+                                 force_reload: bool = False) -> Tuple[chex.Array, chex.Array, pd.DatetimeIndex, int]:
         """
         Load and preprocess CSV data into a consistent tensor for JAX.
+        
+        Args:
+            start_date: Start date string
+            end_date: End date string
+            fill_missing_features_with: How to fill missing features
+            preload_to_gpu: Whether to convert to JAX arrays
+            save_cache: Whether to save processed data to cache
+            cache_format: Format for caching ('hdf5', 'npz', 'pickle')
+            force_reload: Whether to ignore existing cache
 
         Returns:
             data_array: jnp.array or np.array with shape (T, n_stocks, n_features)
@@ -80,6 +260,15 @@ class JAXPortfolioDataLoader:
             valid_dates: pd.DatetimeIndex
             n_features: number of features
         """
+        
+        # Try to load from cache first (unless force_reload is True)
+        if not force_reload:
+            cached_result = self.load_cached_data(
+                start_date, end_date, fill_missing_features_with, 
+                cache_format, preload_to_gpu
+            )
+            if cached_result is not None:
+                return cached_result
 
         all_data = []
         all_features = set()
@@ -130,7 +319,7 @@ class JAXPortfolioDataLoader:
                     proc[feat] = pd.to_numeric(df[feat], errors="coerce")
                 else:
                     proc[feat] = np.nan
-
+            
             # Fill missing
             if fill_missing_features_with == "zero":
                 proc = proc.fillna(0.0)
@@ -170,10 +359,37 @@ class JAXPortfolioDataLoader:
         n_stocks = len(self.stocks)
         data_array = data_array.reshape(n_days, n_features, n_stocks).transpose(0, 2, 1)
 
+        # Save to cache if requested
+        if save_cache:
+            self.save_data(
+                data_array, valid_dates, start_date, end_date,
+                fill_missing_features_with, cache_format
+            )
+
         if preload_to_gpu:
             data_array = jnp.array(data_array)
 
         return data_array, jnp.arange(n_days), valid_dates, n_features
+
+    def clear_cache(self, pattern: str = "*") -> int:
+        """
+        Clear cached files matching pattern.
+        
+        Args:
+            pattern: Glob pattern to match files (default: all cache files)
+            
+        Returns:
+            Number of files deleted
+        """
+        import glob
+        cache_files = list(self.cache_dir.glob(pattern))
+        count = 0
+        for file_path in cache_files:
+            if file_path.is_file():
+                file_path.unlink()
+                count += 1
+        print(f"Cleared {count} cache files")
+        return count
 
 
 
