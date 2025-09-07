@@ -63,6 +63,20 @@ def check_for_nans(x: chex.Array, name: str = "array") -> bool:
     has_nan = jnp.any(jnp.isnan(x))
     return has_nan
 
+
+# Defining nn.Sequential module manually
+class MLPHead(nn.Module):
+    hidden_dim: int
+    out_dim: int
+
+    @nn.compact
+    def __call__(self, x):
+        x = nn.Dense(self.hidden_dim, kernel_init=nn.initializers.he_normal())(x)
+        x = nn.relu(x)
+        x = nn.Dense(self.out_dim, kernel_init=nn.initializers.xavier_uniform())(x)
+        return x
+
+
 # ============================================================================
 # NEURAL NETWORK ARCHITECTURE (Transformer-based Actor-Critic)
 # ============================================================================
@@ -122,18 +136,10 @@ class ActorCriticTransformer(nn.Module):
         self.transformer_norm = nn.LayerNorm() # Final LayerNorm after transformer blocks
 
         # Actor (policy) head
-        self.actor_head = nn.Sequential([
-            nn.Dense(self.d_model // 2, kernel_init=nn.initializers.he_normal()),
-            nn.relu,
-            nn.Dense(self.action_dim, kernel_init=nn.initializers.xavier_uniform()),
-        ])
+        self.actor_head = MLPHead(self.d_model // 2, self.action_dim)
 
         # Critic (value) head
-        self.critic_head = nn.Sequential([
-            nn.Dense(self.d_model // 2, kernel_init=nn.initializers.he_normal()),
-            nn.relu,
-            nn.Dense(1, kernel_init=nn.initializers.xavier_uniform()),
-        ])
+        self.critic_head = MLPHead(self.d_model // 2, 1)
 
     @nn.compact
     def __call__(self, x: chex.Array, training: bool = True):
@@ -669,356 +675,356 @@ class PPOTrainer:
         
         return total_loss, metrics
 
-@partial(jax.jit, static_argnums=(0,), device=jax.devices('gpu')[0])
-def train_step(self, train_state: TrainState, train_batch: Trajectory, gae_advantages: chex.Array,
+    @partial(jax.jit, static_argnums=(0,), device=jax.devices('gpu')[0])
+    def train_step(self, train_state: TrainState, train_batch: Trajectory, gae_advantages: chex.Array,
                returns: chex.Array, rng_key: chex.PRNGKey) -> Tuple[TrainState, Dict[str, chex.Array]]:
-    """Performs a single PPO training step (compute gradients and update parameters)"""
+        """Performs a single PPO training step (compute gradients and update parameters)"""
 
-    # Define the loss function to be differentiated
-    grad_fn = jax.value_and_grad(self.ppo_loss, has_aux=True)
+        # Define the loss function to be differentiated
+        grad_fn = jax.value_and_grad(self.ppo_loss, has_aux=True)
 
-    # Compute loss and gradients
-    (total_loss, metrics), grads = grad_fn(
-        train_state.params, train_batch, gae_advantages, returns, rng_key
-    )
+        # Compute loss and gradients
+        (total_loss, metrics), grads = grad_fn(
+            train_state.params, train_batch, gae_advantages, returns, rng_key
+        )
 
-    # Apply gradients
-    train_state = train_state.apply_gradients(grads=grads)
+        # Apply gradients
+        train_state = train_state.apply_gradients(grads=grads)
 
-    # Log NaN in gradients
-    if self._has_nan_params(grads):
+        # Log NaN in gradients
+        if self._has_nan_params(grads):
         logger.warning("NaN detected in gradients during train step!")
-        metrics['nan_in_gradients'] = 1.0
-    else:
-        metrics['nan_in_gradients'] = 0.0
+            metrics['nan_in_gradients'] = 1.0
+        else:
+            metrics['nan_in_gradients'] = 0.0
 
-    return train_state, metrics
+        return train_state, metrics
 
-def train(self):
-    """Main training loop for PPO"""
-    logger.info("Starting PPO training...")
+    def train(self):
+        """Main training loop for PPO"""
+        logger.info("Starting PPO training...")
 
-    n_envs = self.config.get('n_envs', 8)
-    n_steps = self.config.get('n_steps', 64)
-    total_timesteps = self.config.get('total_timesteps', 1_000_000)
-    n_updates = total_timesteps // (n_envs * n_steps)
-    n_minibatch = self.config.get('n_minibatch', 4)
-    update_epochs = self.config.get('update_epochs', 4)
+        n_envs = self.config.get('n_envs', 8)
+        n_steps = self.config.get('n_steps', 64)
+        total_timesteps = self.config.get('total_timesteps', 1_000_000)
+        n_updates = total_timesteps // (n_envs * n_steps)
+        n_minibatch = self.config.get('n_minibatch', 4)
+        update_epochs = self.config.get('update_epochs', 4)
     
-    batch_size = n_envs * n_steps
-    minibatch_size = batch_size // n_minibatch
+        batch_size = n_envs * n_steps
+        minibatch_size = batch_size // n_minibatch
 
-    if batch_size % n_minibatch != 0:
-        raise ValueError(f"Batch size ({batch_size}) must be divisible by n_minibatch ({n_minibatch})")
+        if batch_size % n_minibatch != 0:
+            raise ValueError(f"Batch size ({batch_size}) must be divisible by n_minibatch ({n_minibatch})")
 
-    global_step = 0
-    start_time = time.time()
+        global_step = 0
+        start_time = time.time()
     
-    # Initial environment state and observations are already set in __init__
-    env_states = self.env_states
-    obs = self.obs
-    current_lstm_state = [LSTMState(h=jnp.zeros((n_envs, 1)), c=jnp.zeros((n_envs, 1)))] # Dummy for transformer
+        # Initial environment state and observations are already set in __init__
+        env_states = self.env_states
+        obs = self.obs
+        #current_lstm_state = [LSTMState(h=jnp.zeros((n_envs, 1)), c=jnp.zeros((n_envs, 1)))] # Dummy for transformer
 
-    for update in range(n_updates):
-        self.rng, collect_rng = random.split(self.rng)
+        for update in range(n_updates):
+            self.rng, collect_rng = random.split(self.rng)
         
-        # Collect trajectory with error handling
-        try:
-            trajectory, env_states, obs = self.collect_trajectory(
-                self.train_state, env_states, obs, collect_rng
-            )
+            # Collect trajectory with error handling
+            try:
+                trajectory, env_states, obs = self.collect_trajectory(
+                    self.train_state, env_states, obs, collect_rng
+                )
             
-            # Check for NaNs in collected trajectory
-            if any(check_for_nans(getattr(trajectory, field), field) for field in Trajectory._fields):
-                logger.error(f"NaN detected in trajectory after collection at update {update}, resetting environment and re-collecting.")
+                # Check for NaNs in collected trajectory
+                if any(check_for_nans(getattr(trajectory, field), field) for field in Trajectory._fields):
+                    logger.error(f"NaN detected in trajectory after collection at update {update}, resetting environment and re-collecting.")
+                    self.nan_count += 1
+                    if self.nan_count > self.max_nan_resets:
+                        raise RuntimeError("Too many NaN resets, stopping training.")
+                    self._initialize_environment_state() # Re-initialize env state
+                    env_states = self.env_states
+                    obs = self.obs
+                    #current_lstm_state = [LSTMState(h=jnp.zeros((n_envs, 1)), c=jnp.zeros((n_envs, 1)))] # Reset dummy LSTM state
+                    continue # Skip to next update
+
+            except Exception as e:
+                logger.error(f"Trajectory collection failed at update {update}: {e}, resetting and continuing.")
                 self.nan_count += 1
                 if self.nan_count > self.max_nan_resets:
                     raise RuntimeError("Too many NaN resets, stopping training.")
                 self._initialize_environment_state() # Re-initialize env state
                 env_states = self.env_states
                 obs = self.obs
-                current_lstm_state = [LSTMState(h=jnp.zeros((n_envs, 1)), c=jnp.zeros((n_envs, 1)))] # Reset dummy LSTM state
+                #current_lstm_state = [LSTMState(h=jnp.zeros((n_envs, 1)), c=jnp.zeros((n_envs, 1)))] # Reset dummy LSTM state
                 continue # Skip to next update
 
-        except Exception as e:
-            logger.error(f"Trajectory collection failed at update {update}: {e}, resetting and continuing.")
-            self.nan_count += 1
-            if self.nan_count > self.max_nan_resets:
-                raise RuntimeError("Too many NaN resets, stopping training.")
-            self._initialize_environment_state() # Re-initialize env state
-            env_states = self.env_states
-            obs = self.obs
-            current_lstm_state = [LSTMState(h=jnp.zeros((n_envs, 1)), c=jnp.zeros((n_envs, 1)))] # Reset dummy LSTM state
-            continue # Skip to next update
+            # Calculate last_values for GAE
+            self.rng, last_value_rng = random.split(self.rng)
+            try:
+                _, last_values, _ = self.network.apply(self.train_state.params, obs)
+                last_values = jnp.where(jnp.isnan(last_values), 0.0, last_values)
+                last_values = jnp.clip(last_values, -100.0, 100.0)
+            except Exception as e:
+                logger.error(f"Failed to compute last values for GAE at update {update}: {e}")
+                last_values = jnp.zeros(n_envs) # Default to zeros
 
-        # Calculate last_values for GAE
-        self.rng, last_value_rng = random.split(self.rng)
-        try:
-            _, last_values, _ = self.network.apply(self.train_state.params, obs)
-            last_values = jnp.where(jnp.isnan(last_values), 0.0, last_values)
-            last_values = jnp.clip(last_values, -100.0, 100.0)
-        except Exception as e:
-            logger.error(f"Failed to compute last values for GAE at update {update}: {e}")
-            last_values = jnp.zeros(n_envs) # Default to zeros
+            # Compute GAE advantages and returns
+            gae_advantages, returns = self.compute_gae(trajectory, last_values)
 
-        # Compute GAE advantages and returns
-        gae_advantages, returns = self.compute_gae(trajectory, last_values)
+            # Flatten the trajectory for training
+            flat_trajectory = jax.tree_util.tree_map(
+                lambda x: x.reshape(-1, *x.shape[2:]), trajectory
+            )
+            flat_gae_advantages = gae_advantages.reshape(-1)
+            flat_returns = returns.reshape(-1)
 
-        # Flatten the trajectory for training
-        flat_trajectory = jax.tree_util.tree_map(
-            lambda x: x.reshape(-1, *x.shape[2:]), trajectory
-        )
-        flat_gae_advantages = gae_advantages.reshape(-1)
-        flat_returns = returns.reshape(-1)
+            # Check for NaNs after GAE computation
+            if check_for_nans(flat_gae_advantages, "flat_gae_advantages") or check_for_nans(flat_returns, "flat_returns"):
+                logger.error(f"NaN detected in GAE advantages or returns at update {update}, skipping update.")
+                self.nan_count += 1
+                if self.nan_count > self.max_nan_resets:
+                    raise RuntimeError("Too many NaN resets, stopping training.")
+                continue # Skip to next update
 
-        # Check for NaNs after GAE computation
-        if check_for_nans(flat_gae_advantages, "flat_gae_advantages") or check_for_nans(flat_returns, "flat_returns"):
-            logger.error(f"NaN detected in GAE advantages or returns at update {update}, skipping update.")
-            self.nan_count += 1
-            if self.nan_count > self.max_nan_resets:
-                raise RuntimeError("Too many NaN resets, stopping training.")
-            continue # Skip to next update
+            # PPO epochs
+            for epoch in range(update_epochs):
+                self.rng, shuffle_rng = random.split(self.rng)
+                permutation = jax.random.permutation(shuffle_rng, batch_size)
 
-        # PPO epochs
-        for epoch in range(update_epochs):
-            self.rng, shuffle_rng = random.split(self.rng)
-            permutation = jax.random.permutation(shuffle_rng, batch_size)
-
-            # Shuffle and split into minibatches
-            for i in range(n_minibatch):
-                batch_indices = permutation[i * minibatch_size : (i + 1) * minibatch_size]
+                # Shuffle and split into minibatches
+                for i in range(n_minibatch):
+                    batch_indices = permutation[i * minibatch_size : (i + 1) * minibatch_size]
                 
-                minibatch = jax.tree_util.tree_map(
-                    lambda x: jnp.take(x, batch_indices, axis=0), flat_trajectory
-                )
-                minibatch_advantages = jnp.take(flat_gae_advantages, batch_indices, axis=0)
-                minibatch_returns = jnp.take(flat_returns, batch_indices, axis=0)
-
-                # Perform training step
-                self.rng, train_rng = random.split(self.rng)
-                try:
-                    self.train_state, metrics = self.train_step(
-                        self.train_state, minibatch, minibatch_advantages, minibatch_returns, train_rng
+                    minibatch = jax.tree_util.tree_map(
+                        lambda x: jnp.take(x, batch_indices, axis=0), flat_trajectory
                     )
-                    # Aggregate metrics
-                    if self.config.get('use_wandb', False):
-                        wandb.log({f"train/{k}": v for k, v in metrics.items()}, step=global_step)
-                except Exception as e:
-                    logger.error(f"Training step failed at update {update}, epoch {epoch}, minibatch {i}: {e}, skipping minibatch.")
-                    self.nan_count += 1
-                    if self.nan_count > self.max_nan_resets:
-                        raise RuntimeError("Too many NaN resets, stopping training.")
-                    break # Break from minibatch loop, try next epoch or update
+                    minibatch_advantages = jnp.take(flat_gae_advantages, batch_indices, axis=0)
+                    minibatch_returns = jnp.take(flat_returns, batch_indices, axis=0)
 
-        global_step += batch_size
-        if update % 10 == 0:
-            elapsed_time = time.time() - start_time
-            logger.info(f"Update: {update}/{n_updates}, Global Steps: {global_step}, Time: {elapsed_time:.2f}s")
-            if self.config.get('use_wandb', False):
-                wandb.log({"chart/SPS": global_step / elapsed_time}, step=global_step)
+                    # Perform training step
+                    self.rng, train_rng = random.split(self.rng)
+                    try:
+                        self.train_state, metrics = self.train_step(
+                            self.train_state, minibatch, minibatch_advantages, minibatch_returns, train_rng
+                        )
+                        # Aggregate metrics
+                        if self.config.get('use_wandb', False):
+                            wandb.log({f"train/{k}": v for k, v in metrics.items()}, step=global_step)
+                    except Exception as e:
+                        logger.error(f"Training step failed at update {update}, epoch {epoch}, minibatch {i}: {e}, skipping minibatch.")
+                        self.nan_count += 1
+                        if self.nan_count > self.max_nan_resets:
+                            raise RuntimeError("Too many NaN resets, stopping training.")
+                        break # Break from minibatch loop, try next epoch or update
 
-        # Early stopping based on KL divergence
-        if metrics['approx_kl'] > self.config.get('target_kl', 0.015) * 1.5:
-            logger.warning(f"KL divergence {metrics['approx_kl']:.4f} exceeded target_kl * 1.5. Early stopping.")
-            break
+            global_step += batch_size
+            if update % 10 == 0:
+                elapsed_time = time.time() - start_time
+                logger.info(f"Update: {update}/{n_updates}, Global Steps: {global_step}, Time: {elapsed_time:.2f}s")
+                if self.config.get('use_wandb', False):
+                    wandb.log({"chart/SPS": global_step / elapsed_time}, step=global_step)
 
-        # Save model periodically
-        if update % self.config.get('save_interval', 100) == 0:
-            self.save_model(f"checkpoint_{update}.pkl")
+            # Early stopping based on KL divergence
+            if metrics['approx_kl'] > self.config.get('target_kl', 0.015) * 1.5:
+                logger.warning(f"KL divergence {metrics['approx_kl']:.4f} exceeded target_kl * 1.5. Early stopping.")
+                break
 
-    self.save_model("final_model.pkl")
-    if self.config.get('use_wandb', False):
-        wandb.finish()
-    logger.info("PPO training finished!")
+            # Save model periodically
+            if update % self.config.get('save_interval', 100) == 0:
+                self.save_model(f"checkpoint_{update}.pkl")
 
-def save_model(self, filename: str = "model.pkl"):
-    """Saves the current train state parameters to a file."""
-    model_dir = Path(self.config.get('model_dir', './models'))
-    model_dir.mkdir(parents=True, exist_ok=True)
-    filepath = model_dir / filename
-    with open(filepath, "wb") as f:
-        f.write(serialization.to_bytes(self.train_state.params))
-    logger.info(f"Model saved to {filepath}")
+        self.save_model("final_model.pkl")
+        if self.config.get('use_wandb', False):
+            wandb.finish()
+        logger.info("PPO training finished!")
 
-def load_model(self, filename: str = "model.pkl"):
-    """Loads model parameters from a file."""
-    model_dir = Path(self.config.get('model_dir', './models'))
-    filepath = model_dir / filename
-    with open(filepath, "rb") as f:
-        params_bytes = f.read()
+    def save_model(self, filename: str = "model.pkl"):
+        """Saves the current train state parameters to a file."""
+        model_dir = Path(self.config.get('model_dir', './models'))
+        model_dir.mkdir(parents=True, exist_ok=True)
+        filepath = model_dir / filename
+        with open(filepath, "wb") as f:
+            f.write(serialization.to_bytes(self.train_state.params))
+        logger.info(f"Model saved to {filepath}")
+
+    def load_model(self, filename: str = "model.pkl"):
+        """Loads model parameters from a file."""
+        model_dir = Path(self.config.get('model_dir', './models'))
+        filepath = model_dir / filename
+        with open(filepath, "rb") as f:
+            params_bytes = f.read()
     
-    # We need to re-initialize the network to get a "template" for deserialization
-    dummy_obs = jnp.ones((1, self.window_size, self.n_assets, self.n_features))
-    temp_params = self.network.init(random.PRNGKey(0), dummy_obs) # Use a dummy key
-    loaded_params = serialization.from_bytes(temp_params, params_bytes)
-    self.train_state = self.train_state.replace(params=loaded_params)
-    logger.info(f"Model loaded from {filepath}")
+        # We need to re-initialize the network to get a "template" for deserialization
+        dummy_obs = jnp.ones((1, self.window_size, self.n_assets, self.n_features))
+        temp_params = self.network.init(random.PRNGKey(0), dummy_obs) # Use a dummy key
+        loaded_params = serialization.from_bytes(temp_params, params_bytes)
+        self.train_state = self.train_state.replace(params=loaded_params)
+        logger.info(f"Model loaded from {filepath}")
 
-def evaluate(self, eval_start_date: str, eval_end_date: str, n_eval_envs: int = 1):
-    """
-    Evaluates the trained model on a separate dataset.
-    Returns a dictionary of evaluation metrics.
-    """
-    logger.info("Starting evaluation...")
+    def evaluate(self, eval_start_date: str, eval_end_date: str, n_eval_envs: int = 1):
+        """
+        Evaluates the trained model on a separate dataset.
+        Returns a dictionary of evaluation metrics.
+        """
+        logger.info("Starting evaluation...")
 
-    # Create a separate evaluation environment
-    eval_env_config = self._get_env_config()
-    eval_env_config['start_date'] = eval_start_date
-    eval_env_config['end_date'] = eval_end_date
-    eval_env_config['preload_to_gpu'] = False # For potentially larger eval data
+        # Create a separate evaluation environment
+        eval_env_config = self._get_env_config()
+        eval_env_config['start_date'] = eval_start_date
+        eval_env_config['end_date'] = eval_end_date
+        eval_env_config['preload_to_gpu'] = False # For potentially larger eval data
 
-    try:
-        eval_env = JAXVectorizedPortfolioEnv(**eval_env_config)
-        logger.info(f"Evaluation environment initialized: obs_dim={eval_env.obs_dim}, action_dim={eval_env.action_dim}")
-    except Exception as e:
-        logger.error(f"Failed to initialize evaluation environment: {e}")
-        raise
+        try:
+            eval_env = JAXVectorizedPortfolioEnv(**eval_env_config)
+            logger.info(f"Evaluation environment initialized: obs_dim={eval_env.obs_dim}, action_dim={eval_env.action_dim}")
+        except Exception as e:
+            logger.error(f"Failed to initialize evaluation environment: {e}")
+            raise
 
-    vmap_eval_reset = jax.vmap(eval_env.reset, in_axes=(0,))
-    vmap_eval_step = jax.vmap(eval_env.step, in_axes=(0, 0))
+        vmap_eval_reset = jax.vmap(eval_env.reset, in_axes=(0,))
+        vmap_eval_step = jax.vmap(eval_env.step, in_axes=(0, 0))
 
-    rng_key = random.PRNGKey(self.config.get('seed', 42) + 123) # Different seed for eval
-    rng_key, *reset_keys = random.split(rng_key, n_eval_envs + 1)
-    reset_keys = jnp.array(reset_keys)
-    eval_env_states, eval_obs = vmap_eval_reset(reset_keys)
+        rng_key = random.PRNGKey(self.config.get('seed', 42) + 123) # Different seed for eval
+        rng_key, *reset_keys = random.split(rng_key, n_eval_envs + 1)
+        reset_keys = jnp.array(reset_keys)
+        eval_env_states, eval_obs = vmap_eval_reset(reset_keys)
     
-    eval_obs = eval_obs.reshape(n_eval_envs, self.window_size, self.n_assets, self.n_features)
-    eval_obs = jnp.where(jnp.isnan(eval_obs), 0.0, eval_obs)
-    eval_obs = jnp.where(jnp.isinf(eval_obs), 0.0, eval_obs)
-
-    # Track total rewards, portfolio values, etc.
-    total_rewards = jnp.zeros(n_eval_envs)
-    episode_lengths = jnp.zeros(n_eval_envs)
-    is_done = jnp.zeros(n_eval_envs, dtype=bool)
-
-    eval_steps = 0
-    max_eval_steps = eval_env.total_steps # Or a fixed number for evaluation
-
-    logger.info(f"Starting evaluation rollout for {max_eval_steps} steps...")
-    
-    while not jnp.all(is_done) and eval_steps < max_eval_steps:
-        rng_key, action_rng = random.split(rng_key)
-
-        # Get action from policy (no training mode)
-        logits, _, _ = self.network.apply(self.train_state.params, eval_obs, training=False)
-        logits = jnp.where(jnp.isnan(logits), 0.0, logits)
-        logits = jnp.clip(logits, -5.0, 5.0)
-
-        action_std = self.config.get('action_std', 1.0) # Use the same std as training
-        action_std = jnp.maximum(action_std, 1e-6)
-
-        action_distribution = distrax.Normal(loc=logits, scale=action_std)
-        actions = action_distribution.sample(seed=action_rng)
-        actions = jnp.clip(actions, -5.0, 5.0)
-
-        # Step environment
-        new_eval_env_states, next_eval_obs, rewards, dones, info = vmap_eval_step(eval_env_states, actions)
-
-        # Update observations and states
-        eval_env_states = new_eval_env_states
-        next_eval_obs = next_eval_obs.reshape(n_eval_envs, self.window_size, self.n_assets, self.n_features)
-        eval_obs = jnp.where(jnp.isnan(next_eval_obs), 0.0, next_eval_obs)
+        eval_obs = eval_obs.reshape(n_eval_envs, self.window_size, self.n_assets, self.n_features)
+        eval_obs = jnp.where(jnp.isnan(eval_obs), 0.0, eval_obs)
         eval_obs = jnp.where(jnp.isinf(eval_obs), 0.0, eval_obs)
 
-        # Accumulate rewards for episodes not yet done
-        total_rewards += rewards * (1 - is_done.astype(float))
-        episode_lengths += (1 - is_done.astype(float)) # Increment for active episodes
-        is_done = is_done | dones # Mark episodes as done
+        # Track total rewards, portfolio values, etc.
+        total_rewards = jnp.zeros(n_eval_envs)
+        episode_lengths = jnp.zeros(n_eval_envs)
+        is_done = jnp.zeros(n_eval_envs, dtype=bool)
 
-        eval_steps += 1
-        if eval_steps % 100 == 0:
-            logger.info(f"Eval Step: {eval_steps}/{max_eval_steps}, Mean Reward: {jnp.mean(total_rewards):.4f}")
+        eval_steps = 0
+        max_eval_steps = eval_env.total_steps # Or a fixed number for evaluation
 
-    # Final evaluation metrics
-    mean_total_reward = jnp.mean(total_rewards)
-    mean_episode_length = jnp.mean(episode_lengths)
-
-    # Retrieve final portfolio values and calculate other metrics if available
-    # This assumes the environment's info dict contains relevant evaluation metrics
-    # The info dict from env.step is typically per-environment, so we'd need to aggregate
+        logger.info(f"Starting evaluation rollout for {max_eval_steps} steps...")
     
-    # For simplicity, let's assume portfolio_values are directly accessible in info
-    # This part might need adjustment based on your specific EnvState structure
-    final_portfolio_values = jnp.array([state.portfolio_value for state in eval_env_states])
-    mean_final_portfolio_value = jnp.mean(final_portfolio_values)
+        while not jnp.all(is_done) and eval_steps < max_eval_steps:
+            rng_key, action_rng = random.split(rng_key)
 
-    # Example of how you might get sharpe ratio if the env provides it
-    # This will depend on the `info` structure from your JAXVectorizedPortfolioEnv
-    # For a truly robust evaluation, you'd collect a full history of portfolio values
-    # and calculate metrics outside the environment.
+            # Get action from policy (no training mode)
+            logits, _, _ = self.network.apply(self.train_state.params, eval_obs, training=False)
+            logits = jnp.where(jnp.isnan(logits), 0.0, logits)
+            logits = jnp.clip(logits, -5.0, 5.0)
+
+            action_std = self.config.get('action_std', 1.0) # Use the same std as training
+            action_std = jnp.maximum(action_std, 1e-6)
+
+            action_distribution = distrax.Normal(loc=logits, scale=action_std)
+            actions = action_distribution.sample(seed=action_rng)
+            actions = jnp.clip(actions, -5.0, 5.0)
+
+            # Step environment
+            new_eval_env_states, next_eval_obs, rewards, dones, info = vmap_eval_step(eval_env_states, actions)
+
+            # Update observations and states
+            eval_env_states = new_eval_env_states
+            next_eval_obs = next_eval_obs.reshape(n_eval_envs, self.window_size, self.n_assets, self.n_features)
+            eval_obs = jnp.where(jnp.isnan(next_eval_obs), 0.0, next_eval_obs)
+            eval_obs = jnp.where(jnp.isinf(eval_obs), 0.0, eval_obs)
+
+            # Accumulate rewards for episodes not yet done
+            total_rewards += rewards * (1 - is_done.astype(float))
+            episode_lengths += (1 - is_done.astype(float)) # Increment for active episodes
+            is_done = is_done | dones # Mark episodes as done
+
+            eval_steps += 1
+            if eval_steps % 100 == 0:
+                logger.info(f"Eval Step: {eval_steps}/{max_eval_steps}, Mean Reward: {jnp.mean(total_rewards):.4f}")
+
+        # Final evaluation metrics
+        mean_total_reward = jnp.mean(total_rewards)
+        mean_episode_length = jnp.mean(episode_lengths)
+
+        # Retrieve final portfolio values and calculate other metrics if available
+        # This assumes the environment's info dict contains relevant evaluation metrics
+        # The info dict from env.step is typically per-environment, so we'd need to aggregate
     
-    metrics = {
-        "eval/mean_total_reward": mean_total_reward,
-        "eval/mean_episode_length": mean_episode_length,
-        "eval/mean_final_portfolio_value": mean_final_portfolio_value,
-        # Add other metrics like Sharpe Ratio, Max Drawdown if available from info or computed from history
+        # For simplicity, let's assume portfolio_values are directly accessible in info
+        # This part might need adjustment based on your specific EnvState structure
+        final_portfolio_values = jnp.array([state.portfolio_value for state in eval_env_states])
+        mean_final_portfolio_value = jnp.mean(final_portfolio_values)
+
+        # Example of how you might get sharpe ratio if the env provides it
+        # This will depend on the `info` structure from your JAXVectorizedPortfolioEnv
+        # For a truly robust evaluation, you'd collect a full history of portfolio values
+        # and calculate metrics outside the environment.
+    
+        metrics = {
+            "eval/mean_total_reward": mean_total_reward,
+            "eval/mean_episode_length": mean_episode_length,
+            "eval/mean_final_portfolio_value": mean_final_portfolio_value,
+            # Add other metrics like Sharpe Ratio, Max Drawdown if available from info or computed from history
+        }
+
+        logger.info("Evaluation complete!")
+        for k, v in metrics.items():
+            logger.info(f"{k}: {v:.6f}")
+            if self.config.get('use_wandb', False):
+                wandb.log({k: v}, step=global_step if 'global_step' in locals() else 0)
+
+        return metrics
+# Example Usage
+
+if __name__ == '__main__':
+    # Define a configuration dictionary
+    config = {
+        'seed': 42,
+        'n_envs': 8,
+        'n_steps': 128, # Number of steps to collect in each environment per update
+        'total_timesteps': 500_000,
+        'learning_rate': 1e-4,
+        'max_grad_norm': 0.5,
+        'gamma': 0.99,
+        'gae_lambda': 0.95,
+        'clip_eps': 0.2,
+        'entropy_coeff': 0.01,
+        'value_coeff': 0.5,
+        'update_epochs': 4,
+        'n_minibatch': 4,
+        'target_kl': 0.01,
+        'action_std': 0.5, # Initial action standard deviation
+        'use_wandb': True, # Set to True to enable Weights & Biases logging
+        'model_dir': './models',
+        'save_interval': 100, # Save model every X updates
+
+        # Environment specific configurations
+        'data_root': './data', # Path to your financial data
+        'stocks': None, # e.g., ['AAPL', 'MSFT', 'GOOG'] or None for all
+        'train_start_date': '2010-01-01',
+        'train_end_date': '2020-12-31',
+        'window_size': 30, # Lookback window for observations
+        'transaction_cost_rate': 0.001,
+        'sharpe_window': 252,
+        'use_all_features': True,
+        'fill_missing_features_with': 'interpolate',
+        'save_cache': True,
+        'cache_format': 'parquet',
+        'force_reload': False,
+        'preload_to_gpu': True,
+
+        # Transformer specific configurations
+        'd_model': 128,
+        'nhead': 8,
+        'num_layers': 4,
+        'dropout_rate': 0.1
     }
 
-    logger.info("Evaluation complete!")
-    for k, v in metrics.items():
-        logger.info(f"{k}: {v:.6f}")
-        if self.config.get('use_wandb', False):
-            wandb.log({k: v}, step=global_step if 'global_step' in locals() else 0)
+    # Ensure data directory exists
+    Path(config['data_root']).mkdir(parents=True, exist_ok=True)
 
-    return metrics
-Example Usage
+    # Initialize and train the PPO agent
+    trainer = PPOTrainer(config)
+    trainer.train()
 
-if name == 'main':
-# Define a configuration dictionary
-config = {
-'seed': 42,
-'n_envs': 8,
-'n_steps': 128, # Number of steps to collect in each environment per update
-'total_timesteps': 500_000,
-'learning_rate': 1e-4,
-'max_grad_norm': 0.5,
-'gamma': 0.99,
-'gae_lambda': 0.95,
-'clip_eps': 0.2,
-'entropy_coeff': 0.01,
-'value_coeff': 0.5,
-'update_epochs': 4,
-'n_minibatch': 4,
-'target_kl': 0.01,
-'action_std': 0.5, # Initial action standard deviation
-'use_wandb': False, # Set to True to enable Weights & Biases logging
-'model_dir': './models',
-'save_interval': 100, # Save model every X updates
-
-# Environment specific configurations
-    'data_root': './data', # Path to your financial data
-    'stocks': None, # e.g., ['AAPL', 'MSFT', 'GOOG'] or None for all
-    'train_start_date': '2010-01-01',
-    'train_end_date': '2020-12-31',
-    'window_size': 30, # Lookback window for observations
-    'transaction_cost_rate': 0.001,
-    'sharpe_window': 252,
-    'use_all_features': True,
-    'fill_missing_features_with': 'interpolate',
-    'save_cache': True,
-    'cache_format': 'parquet',
-    'force_reload': False,
-    'preload_to_gpu': True,
-
-    # Transformer specific configurations
-    'd_model': 128,
-    'nhead': 8,
-    'num_layers': 4,
-    'dropout_rate': 0.1
-}
-
-# Ensure data directory exists
-Path(config['data_root']).mkdir(parents=True, exist_ok=True)
-
-# Initialize and train the PPO agent
-trainer = PPOTrainer(config)
-trainer.train()
-
-# After training, evaluate the model
-eval_start_date = '2021-01-01'
-eval_end_date = '2023-12-31'
-eval_metrics = trainer.evaluate(eval_start_date, eval_end_date)
-print("\nEvaluation Metrics:", eval_metrics)
+    # After training, evaluate the model
+    eval_start_date = '2021-01-01'
+    eval_end_date = '2023-12-31'
+    eval_metrics = trainer.evaluate(eval_start_date, eval_end_date)
+    print("\nEvaluation Metrics:", eval_metrics)
 
 # Example of loading a saved model and evaluating again
 # new_trainer = PPOTrainer(config) # Create a new trainer instance
