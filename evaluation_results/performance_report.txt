@@ -1,0 +1,42 @@
+
+PPO LSTM Portfolio Model Evaluation Report
+==========================================
+
+Model Information:
+- Model Path: ppo_model_update_900.pkl
+- Training Step: 0
+- Evaluation Period: 2025-03-07 to 2025-06-06
+- Number of Stocks: 45
+- Number of Episodes: 20
+
+Portfolio Performance Metrics:
+-----------------------------
+Mean Return: 0.0072 (0.72%)
+Standard Deviation: 0.0103
+Mean Sharpe Ratio: 1.0415
+Mean Volatility: 0.1312 (13.12% annualized)
+Mean Max Drawdown: -0.0276 (-2.76%)
+Success Rate: 0.65 (65.0% positive returns)
+
+Episode Statistics:
+------------------
+Best Return: 0.0243
+Worst Return: -0.0097
+Best Sharpe: 6.1289
+Worst Sharpe: -1.4436
+
+Risk Analysis:
+--------------
+Information Ratio: 0.7022
+Risk-Adjusted Return: 0.0552
+Calmar Ratio: 0.2626
+
+Stock Universe:
+--------------
+RELIANCE, TCS, HDFCBANK, INFY, ICICIBANK, HINDUNILVR, SBIN, BHARTIARTL, KOTAKBANK, LT, ASIANPAINT, AXISBANK, MARUTI, ULTRACEMCO, TITAN, BAJFINANCE, NESTLEIND, ONGC, POWERGRID, NTPC, ITC, BAJAJFINSV, SUNPHARMA, TECHM, WIPRO, HCLTECH, JSWSTEEL, TATAMOTORS, ADANIPORTS, BRITANNIA, SHREECEM, TATACONSUM, BPCL, INDUSINDBK, GRASIM, EICHERMOT, DRREDDY, COALINDIA, HEROMOTOCO, IOC, UPL, CIPLA, TATASTEEL, HDFCLIFE, BAJAJ-AUTO
+
+Configuration:
+-------------
+Transaction Cost Rate: 0.005
+Window Size: 30
+Evaluation Seed: 123
