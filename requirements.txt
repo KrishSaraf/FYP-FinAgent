@@ -1,44 +1,86 @@
-mmengine
-langchain
-openai
-unstructured
-pandas
-tiktoken
-finnhub-python
-yfinance
-pandas_market_calendars
-polygon-api-client
-mplfinance
-python-dotenv
-gym
-pandas_ta
-scikit-learn-extra
-json5
-pyarrow
-fastparquet
-langchain_community
-unstructured
-playwright
-ta
-snapshot_selenium
-pyecharts
-dotenv
-praw==7.8.1
-twscrape
-selenium
-playwright
-gymnasium
-transformers
-torch
-stable-baselines3[extra]
-tensorboard
-fuzzywuzzy
-sb3_contrib
-jax[cuda12]
-flax
-optax
-orbax
-distrax
-chex
-gymnax
-wandb
+# Core ML and RL libraries
+torch>=2.0.0
+torchvision>=0.15.0
+stable-baselines3[extra]>=2.0.0
+gymnasium>=0.28.0
+tensorboard>=2.13.0
+
+# JAX ecosystem for GPU acceleration
+jax[cuda12]>=0.4.20
+jaxlib>=0.4.20
+flax>=0.7.0
+optax>=0.1.7
+orbax>=0.1.0
+distrax>=0.1.6
+chex>=0.1.7
+gymnax>=0.0.6
+
+# Data processing and analysis
+pandas>=2.0.0
+numpy>=1.24.0
+scikit-learn>=1.3.0
+scikit-learn-extra>=0.3.0
+pyarrow>=12.0.0
+fastparquet>=0.8.0
+
+# Financial data and technical analysis
+yfinance>=0.2.18
+pandas_market_calendars>=5.0.0
+polygon-api-client>=1.15.0
+finnhub-python>=2.4.0
+ta>=0.10.2
+mplfinance>=0.12.10
+
+# Environment and configuration
+python-dotenv>=1.0.0
+json5>=0.9.0
+
+# Web scraping and data collection
+praw>=7.8.1
+selenium>=4.15.0
+playwright>=1.40.0
+twscrape>=2.0.0
+
+# Visualization and monitoring
+pyecharts>=1.9.0
+wandb>=0.16.0
+
+# NLP and AI libraries
+openai>=1.0.0
+langchain>=0.1.0
+langchain_community>=0.0.10
+transformers>=4.35.0
+tiktoken>=0.5.0
+
+# Data processing utilities
+unstructured>=0.10.0
+mmengine>=0.8.0
+fuzzywuzzy>=0.18.0
+snapshot_selenium>=0.1.0
+
+# Additional utilities
+h5py>=3.9.0
+matplotlib>=3.7.0
+seaborn>=0.12.0
+plotly>=5.17.0
+
+wandb>=0.16.0
+
+# NLP and AI libraries
+openai>=1.0.0
+langchain>=0.1.0
+langchain_community>=0.0.10
+transformers>=4.35.0
+tiktoken>=0.5.0
+
+# Data processing utilities
+unstructured>=0.10.0
+mmengine>=0.8.0
+fuzzywuzzy>=0.18.0
+snapshot_selenium>=0.1.0
+
+# Additional utilities
+h5py>=3.9.0
+matplotlib>=3.7.0
+seaborn>=0.12.0
+plotly>=5.17.0

@@ -12,13 +12,17 @@ cd FYP-FinAgent
 
 ## Install dependencies and prepare GPU
 ```bash
-pip install -r requirements.txt
+./install_dependencies.sh
+# OR if you prefer Python script
+# python3 install_dependencies.py
 
-nvidia-smi -pm 1
-nvidia-smi -ac 1215,1410
-mkdir -p /content/jax_cache
+# Optional: If you encounter issues with clock combinations, you can skip these or adjust them based on your GPU:
+# nvidia-smi -pm 1
+# nvidia-smi -ac 1215,1410
 
-python colab_setup.py
+# The JAX compilation cache directory is now automatically created and set by the installation script.
+# You typically do NOT need to run 'python colab_setup.py' directly, as its core functionality
+# related to JAX cache and GPU memory pre-allocation is integrated or superseded.
 ```
 
 ## Start training

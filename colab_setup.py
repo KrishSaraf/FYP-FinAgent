@@ -20,8 +20,8 @@ os.environ['XLA_PYTHON_CLIENT_MEM_FRACTION'] = '0.95'  # Use 95% of GPU memory
 os.environ['XLA_PYTHON_CLIENT_PREALLOCATE'] = 'true'
 
 # Enable JIT compilation caching
-os.environ['JAX_COMPILATION_CACHE_DIR'] = '/content/jax_cache'
-# !mkdir -p /content/jax_cache
+os.environ['JAX_COMPILATION_CACHE_DIR'] = './jax_cache'
+# !mkdir -p ./jax_cache
 
 # Verify GPU setup
 import jax

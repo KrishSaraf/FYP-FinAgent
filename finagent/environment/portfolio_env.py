@@ -258,7 +258,7 @@ class JAXPortfolioDataLoader:
                 f.attrs['metadata'] = json.dumps(metadata)
                 
                 # Save dates as string dataset
-                f.create_dataset('dates', data=valid_dates.strftime('%Y-%m-%d').astype('S10'))
+                f.create_dataset('dates', data=valid_dates.strftime('%Y-%m-%d').values.astype('S10'))
                 
         elif file_format == 'npz':
             filepath = self.cache_dir / f"{cache_key}.npz"
