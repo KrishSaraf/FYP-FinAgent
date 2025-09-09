@@ -16,9 +16,11 @@ import pickle
 
 # JAX environment state
 class EnvState(NamedTuple):
-    """JAX-compatible environment state"""
+    """JAX-compatible environment state with short position support"""
     current_step: int
     portfolio_weights: chex.Array  # Current portfolio weights (stocks + cash, sums to 1)
+    short_positions: chex.Array  # Track short positions: 1 if short, 0 if long/none
+    short_entry_steps: chex.Array  # Track when short positions were entered (step numbers)
     done: bool
     total_return: float # Cumulative simple return, normalized to initial value of 1.0
     portfolio_value: float # Normalized to 1.0 at start, represents the multiplier of initial value
@@ -187,7 +189,7 @@ class JAXPortfolioDataLoader:
         
         if all(col in df.columns for col in ['price_to_dma50', 'volume_ratio_20d']):
             df['volume_confirmed_trend'] = df['price_to_dma50'] * df['volume_ratio_20d']
-        
+
         return df.fillna(0.0)
 
     def _generate_cache_key(self, start_date: str, end_date: str, 
@@ -258,7 +260,7 @@ class JAXPortfolioDataLoader:
                 f.attrs['metadata'] = json.dumps(metadata)
                 
                 # Save dates as string dataset
-                f.create_dataset('dates', data=valid_dates.strftime('%Y-%m-%d').values.astype('S10'))
+                f.create_dataset('dates', data=valid_dates.strftime('%Y-%m-%d').astype('S10'))
                 
         elif file_format == 'npz':
             filepath = self.cache_dir / f"{cache_key}.npz"
@@ -359,7 +361,7 @@ class JAXPortfolioDataLoader:
                                  end_date: str,
                                  fill_missing_features_with: str = 'interpolate',
                                  preload_to_gpu: bool = True,
-                                 save_cache: bool = True,
+                                 save_cache: bool = False,
                                  cache_format: str = 'hdf5',
                                  force_reload: bool = False) -> Tuple[chex.Array, chex.Array, pd.DatetimeIndex, int]:
         """
@@ -537,6 +539,7 @@ class JAXVectorizedPortfolioEnv:
         self.transaction_cost_rate = transaction_cost_rate
         self.sharpe_window = sharpe_window
         self.risk_free_rate_daily = risk_free_rate / 252.0
+        self.cash_return_rate = 0.04 / 252.0  # 4% annual return for cash holdings
         self.use_all_features = use_all_features
         self.features = None
         self.close_price_idx = None  # Track close price index
@@ -576,7 +579,15 @@ class JAXVectorizedPortfolioEnv:
         self.action_dim = self.n_stocks + 1
         chex.assert_trees_all_equal(self.data.shape[1], self.n_stocks)
 
-        obs_size = (self.window_size * self.n_stocks * self.n_features) + self.n_stocks * 2 + self.action_dim + 4
+        # Updated observation size calculation with short position support
+        # Historical features + current prices + gaps + portfolio weights + short positions + market state
+        obs_size = (
+            (self.window_size * self.n_stocks * self.n_features) +  # Historical features
+            self.n_stocks * 2 +                                     # Current open prices + gaps
+            self.action_dim +                                       # Portfolio weights
+            self.n_stocks +                                         # Short position flags
+            8                                                       # Market state (8 elements now)
+        )
 
         self.obs_dim = obs_size
 
@@ -609,11 +620,15 @@ class JAXVectorizedPortfolioEnv:
 
     @partial(jax.jit, static_argnums=(0,))
     def reset(self, key: chex.PRNGKey) -> Tuple[EnvState, chex.Array]:
-        """Reset environment state"""
+        """Reset environment state with short position support"""
         initial_weights = jnp.zeros(self.n_stocks)
         initial_cash_weight = 1.0
 
         initial_portfolio_weights = jnp.append(initial_weights, initial_cash_weight)
+        
+        # Initialize short position tracking
+        initial_short_positions = jnp.zeros(self.n_stocks)  # 0 = no short position
+        initial_short_entry_steps = jnp.full(self.n_stocks, -1)  # -1 = no entry step
     
         sharpe_buffer = jnp.zeros(self.sharpe_window)
 
@@ -625,6 +640,8 @@ class JAXVectorizedPortfolioEnv:
         env_state = EnvState(
             current_step=start_step,
             portfolio_weights=initial_portfolio_weights,
+            short_positions=initial_short_positions,
+            short_entry_steps=initial_short_entry_steps,
             done=False,
             total_return=0.0,
             portfolio_value=1.0,
@@ -640,55 +657,115 @@ class JAXVectorizedPortfolioEnv:
 
     @partial(jax.jit, static_argnums=(0,))
     def step(self, env_state: EnvState, action: chex.Array) -> Tuple[EnvState, chex.Array, float, bool, dict]:
-        """Execute one environment step"""
-        normalized_action_weights = jax.nn.softmax(action)
-        chex.assert_trees_all_equal(normalized_action_weights.shape, (self.action_dim,))
-
-        new_stock_weights = normalized_action_weights[:-1]
-        new_cash_weight = normalized_action_weights[-1]
-        #jax.debug.print("new_stock_weights: {}", new_stock_weights)
-        #jax.debug.print("new_cash_weight: {}", new_cash_weight)
+        """Execute one environment step with short position support and intraday constraints"""
+        
+        # Convert action from [-1, 1] to position weights
+        # Action represents desired position size: -1 = max short, +1 = max long, 0 = no position
+        raw_stock_actions = jnp.tanh(action[:-1])  # Stock positions in [-1, 1]
+        raw_cash_action = jnp.tanh(action[-1])     # Cash position in [-1, 1]
+        
+        # Apply position size constraints (max 50% per stock for risk management)
+        max_position_size = 0.5
+        constrained_stock_actions = jnp.clip(raw_stock_actions, -max_position_size, max_position_size)
+        
+        # Calculate cash weight: 1 - sum(abs(stock_weights))
+        total_stock_exposure = jnp.sum(jnp.abs(constrained_stock_actions))
+        new_cash_weight = jnp.maximum(0.0, 1.0 - total_stock_exposure)
+        
+        # Normalize to ensure portfolio weights sum to 1
+        total_weight = total_stock_exposure + new_cash_weight
+        normalized_stock_weights = constrained_stock_actions / jnp.maximum(total_weight, 1e-8)
+        normalized_cash_weight = new_cash_weight / jnp.maximum(total_weight, 1e-8)
+        
+        # Combine into portfolio weights
+        new_portfolio_weights = jnp.append(normalized_stock_weights, normalized_cash_weight)
+        
+        # Get previous state
         prev_stock_weights = env_state.portfolio_weights[:-1]
         prev_cash_weight = env_state.portfolio_weights[-1]
-        #jax.debug.print("prev_stock_weights: {}", prev_stock_weights)
-        #jax.debug.print("prev_cash_weight: {}", prev_cash_weight)
-        
         prev_portfolio_value = env_state.portfolio_value
-        #jax.debug.print("prev_portfolio_value: {}", prev_portfolio_value)
-
-        # Calculate transaction cost as proportional to weight changes
-        # Transaction cost should be: sum(|new_weight - old_weight|) * cost_rate * portfolio_value
-        weight_change_total = jnp.sum(jnp.abs(new_stock_weights - prev_stock_weights))
-        transaction_cost_rate_applied = weight_change_total * self.transaction_cost_rate
-        #jax.debug.print("weight_change_total: {}", weight_change_total)
-        #jax.debug.print("transaction_cost_rate_applied: {}", transaction_cost_rate_applied)
-
-        current_daily_returns = self._get_daily_returns_from_data(env_state.current_step + 1)
-        #jax.debug.print("current_daily_returns: {}", current_daily_returns)
-
-        # Portfolio return from holdings (before transaction costs) with NaN protection
-        daily_portfolio_return_before_costs = (
-            jnp.sum(prev_stock_weights * current_daily_returns) +
-            (prev_cash_weight * self.risk_free_rate_daily)
+        current_step = env_state.current_step
+        
+        # Handle intraday short position constraints
+        # Check if we need to close short positions (end of trading day simulation)
+        # For simplicity, we'll close shorts every 6 steps (simulating end of day)
+        steps_per_day = 6  # Adjust based on your data frequency
+        is_end_of_day = (current_step % steps_per_day) == (steps_per_day - 1)
+        
+        # Force close all short positions at end of day
+        new_short_positions = jnp.where(is_end_of_day, 0.0, env_state.short_positions)
+        new_short_entry_steps = jnp.where(is_end_of_day, -1, env_state.short_entry_steps)
+        
+        # Update short position tracking for new positions
+        new_short_positions = jnp.where(
+            (normalized_stock_weights < 0) & (env_state.short_positions == 0),
+            1.0,  # Mark as short position
+            new_short_positions
         )
-        daily_portfolio_return_before_costs = jnp.where(jnp.isnan(daily_portfolio_return_before_costs), 0.0, daily_portfolio_return_before_costs)
-
-        # Apply transaction costs as a percentage reduction of portfolio value
-        # Net return = gross return - transaction cost rate
-        net_daily_portfolio_return = daily_portfolio_return_before_costs - transaction_cost_rate_applied
-        net_daily_portfolio_return = jnp.where(jnp.isnan(net_daily_portfolio_return), 0.0, net_daily_portfolio_return)
-        net_daily_portfolio_return = jnp.clip(net_daily_portfolio_return, -0.5, 0.5)  # Cap extreme returns
-
+        
+        # Update entry steps for new short positions
+        new_short_entry_steps = jnp.where(
+            (normalized_stock_weights < 0) & (env_state.short_positions == 0),
+            current_step,  # Record entry step
+            new_short_entry_steps
+        )
+        
+        # Apply penalty for holding short positions overnight (simulated)
+        overnight_short_penalty = jnp.where(
+            is_end_of_day & (jnp.sum(env_state.short_positions) > 0),
+            -0.01,  # 1% penalty for overnight shorts
+            0.0
+        )
+        
+        # Calculate transaction costs
+        weight_change_total = jnp.sum(jnp.abs(normalized_stock_weights - prev_stock_weights))
+        transaction_cost_rate_applied = weight_change_total * self.transaction_cost_rate
+        
+        # Get market returns
+        current_daily_returns = self._get_daily_returns_from_data(current_step + 1)
+        
+        # Calculate portfolio returns with short position handling
+        # For short positions, returns are inverted
+        stock_returns = jnp.where(
+            normalized_stock_weights < 0,  # Short positions
+            -current_daily_returns,        # Inverted returns
+            current_daily_returns          # Normal returns for long positions
+        )
+        
+        # Portfolio return calculation
+        daily_portfolio_return_before_costs = (
+            jnp.sum(normalized_stock_weights * stock_returns) +
+            (normalized_cash_weight * self.risk_free_rate_daily)
+        )
+        daily_portfolio_return_before_costs = jnp.where(
+            jnp.isnan(daily_portfolio_return_before_costs), 0.0, daily_portfolio_return_before_costs
+        )
+        
+        # Apply transaction costs and overnight penalty
+        net_daily_portfolio_return = (
+            daily_portfolio_return_before_costs - 
+            transaction_cost_rate_applied + 
+            overnight_short_penalty
+        )
+        net_daily_portfolio_return = jnp.where(
+            jnp.isnan(net_daily_portfolio_return), 0.0, net_daily_portfolio_return
+        )
+        net_daily_portfolio_return = jnp.clip(net_daily_portfolio_return, -0.5, 0.5)
+        
+        # Update portfolio value
         new_portfolio_value = prev_portfolio_value * (1.0 + net_daily_portfolio_return)
-        new_portfolio_value = jnp.where(jnp.isnan(new_portfolio_value), prev_portfolio_value, new_portfolio_value)
+        new_portfolio_value = jnp.where(
+            jnp.isnan(new_portfolio_value), prev_portfolio_value, new_portfolio_value
+        )
         new_portfolio_value = jnp.maximum(new_portfolio_value, 1e-6)
-
+        
         new_total_return = (new_portfolio_value - 1.0)
-        #jax.debug.print("Return to be added to sharpe buffer: {}", net_daily_portfolio_return)
+        
+        # Update Sharpe buffer
         new_sharpe_buffer = env_state.sharpe_buffer.at[env_state.sharpe_buffer_idx].set(net_daily_portfolio_return)
         new_sharpe_buffer_idx = (env_state.sharpe_buffer_idx + 1) % self.sharpe_window
-
-        # Calculate rolling maximum for drawdown with NaN protection
+        
+        # Calculate drawdown
         mask = jnp.arange(self.sharpe_window) < (env_state.sharpe_buffer_idx + 1)
         rolling_returns = jnp.where(mask, env_state.sharpe_buffer, 0.0)
         rolling_returns = jnp.where(jnp.isnan(rolling_returns), 0.0, rolling_returns)
@@ -697,18 +774,17 @@ class JAXVectorizedPortfolioEnv:
         drawdown = (cumulative_returns - running_max).min()
         drawdown = jnp.where(jnp.isnan(drawdown), 0.0, drawdown)
         new_max_drawdown = jnp.minimum(env_state.max_drawdown, drawdown)
-
+        
+        # Calculate volatility and Sharpe ratio
         portfolio_volatility = jnp.std(rolling_returns) * jnp.sqrt(252.0)
         portfolio_volatility = jnp.where(jnp.isnan(portfolio_volatility), 0.0, portfolio_volatility)
-
+        
         sharpe_mean = jnp.mean(new_sharpe_buffer)
         sharpe_std = jnp.std(new_sharpe_buffer)
-        
-        # Clean sharpe calculation inputs
         sharpe_mean = jnp.where(jnp.isnan(sharpe_mean), 0.0, sharpe_mean)
         sharpe_std = jnp.where(jnp.isnan(sharpe_std), 1e-6, sharpe_std)
-        sharpe_std = jnp.maximum(sharpe_std, 1e-6)  # Ensure positive std
-
+        sharpe_std = jnp.maximum(sharpe_std, 1e-6)
+        
         sharpe_ratio = jnp.where(
             sharpe_std < 1e-6,
             0.0,
@@ -717,24 +793,29 @@ class JAXVectorizedPortfolioEnv:
         sharpe_ratio = jnp.where(jnp.isnan(sharpe_ratio), 0.0, sharpe_ratio)
         sharpe_ratio = jnp.clip(sharpe_ratio, -5.0, 5.0)
         
-        # Clean reward calculation inputs
-        net_daily_portfolio_return = jnp.where(jnp.isnan(net_daily_portfolio_return), 0.0, net_daily_portfolio_return)
-        weight_change_total = jnp.where(jnp.isnan(weight_change_total), 0.0, weight_change_total)
-        
-        # Calculate reward with NaN protection and reduced scaling
-        reward = (sharpe_ratio * 0.7 + 
-                 net_daily_portfolio_return * 10.0 -  # Reduced from 20.0
-                 weight_change_total * 0.5 - 
-                 jnp.maximum(0, -drawdown - 0.1) * 1.0)  # Reduced from 2.0
+        # Calculate reward with short position considerations
+        short_exposure_penalty = jnp.sum(jnp.abs(normalized_stock_weights * (normalized_stock_weights < 0))) * 0.1
+        reward = (
+            sharpe_ratio * 0.7 + 
+            net_daily_portfolio_return * 10.0 - 
+            weight_change_total * 0.5 - 
+            jnp.maximum(0, -drawdown - 0.1) * 1.0 -
+            short_exposure_penalty  # Penalty for excessive short exposure
+        )
         
         reward = jnp.where(jnp.isnan(reward), 0.0, reward)
-        reward = jnp.clip(reward, -10.0, 10.0)  # Clip reward to prevent extreme values
-        next_step = env_state.current_step + 1
+        reward = jnp.clip(reward, -10.0, 10.0)
+        
+        # Check if episode is done
+        next_step = current_step + 1
         done = (next_step >= self.n_timesteps - 1) | (new_portfolio_value <= 0.5)
-
+        
+        # Create new environment state
         new_env_state = EnvState(
             current_step=next_step,
-            portfolio_weights=normalized_action_weights,
+            portfolio_weights=new_portfolio_weights,
+            short_positions=new_short_positions,
+            short_entry_steps=new_short_entry_steps,
             done=done,
             total_return=new_total_return,
             portfolio_value=new_portfolio_value,
@@ -742,11 +823,11 @@ class JAXVectorizedPortfolioEnv:
             sharpe_buffer_idx=new_sharpe_buffer_idx,
             portfolio_volatility=portfolio_volatility,
             max_drawdown=new_max_drawdown,
-            rolling_correlation=env_state.rolling_correlation # Placeholder
+            rolling_correlation=env_state.rolling_correlation
         )
-
+        
         next_obs = self._get_observation(new_env_state)
-
+        
         info = {
             'date_idx': next_step,
             'portfolio_value': new_portfolio_value,
@@ -754,8 +835,11 @@ class JAXVectorizedPortfolioEnv:
             'sharpe_ratio': sharpe_ratio,
             'daily_portfolio_return': net_daily_portfolio_return,
             'transaction_cost_value': transaction_cost_rate_applied,
-            'new_stock_weights': new_stock_weights,
-            'new_cash_weight': new_cash_weight,
+            'overnight_short_penalty': overnight_short_penalty,
+            'short_exposure': jnp.sum(jnp.abs(normalized_stock_weights * (normalized_stock_weights < 0))),
+            'is_end_of_day': is_end_of_day,
+            'new_stock_weights': normalized_stock_weights,
+            'new_cash_weight': normalized_cash_weight,
             'prev_stock_weights': prev_stock_weights,
             'prev_cash_weight': prev_cash_weight
         }
@@ -765,9 +849,10 @@ class JAXVectorizedPortfolioEnv:
     @partial(jax.jit, static_argnums=(0,))
     def _get_observation(self, env_state: EnvState) -> chex.Array:
         """
-        Constructs the observation for the current step.
+        Constructs the observation for the current step with short position support.
         - Historical features: t-window_size to t-1 (ALL features)
         - Current partial info: t (ONLY open price and overnight gap)
+        - Short position tracking information
         """
         # Historical data (t-window_size to t-1)
         hist_start_idx = env_state.current_step - self.window_size
@@ -791,13 +876,26 @@ class JAXVectorizedPortfolioEnv:
         mask = jnp.arange(self.sharpe_window) < (env_state.sharpe_buffer_idx + 1)
         returns_buffer = jnp.where(mask, env_state.sharpe_buffer, 0.0)
         portfolio_vol = jnp.std(returns_buffer) * jnp.sqrt(252.0)  # Annualized
+        
+        # Short position metrics
+        short_exposure = jnp.sum(jnp.abs(env_state.portfolio_weights[:-1] * (env_state.portfolio_weights[:-1] < 0)))
+        num_short_positions = jnp.sum(env_state.short_positions)
+        
+        # Time-based features for intraday constraints
+        steps_per_day = 6  # Should match the value in step function
+        time_in_day = env_state.current_step % steps_per_day
+        is_near_close = (time_in_day >= steps_per_day - 2).astype(jnp.float32)  # Last 2 steps of day
     
-        # Market state indicators
+        # Market state indicators with short position information
         market_state = jnp.array([
             env_state.portfolio_value,
             env_state.total_return,
             portfolio_vol,
-            env_state.max_drawdown
+            env_state.max_drawdown,
+            short_exposure,
+            num_short_positions,
+            time_in_day / steps_per_day,  # Normalized time in day
+            is_near_close
         ])
     
         obs = jnp.concatenate([
@@ -805,7 +903,8 @@ class JAXVectorizedPortfolioEnv:
             current_open,             # Current open prices
             current_gap,              # Overnight gaps
             env_state.portfolio_weights,  # Current allocation
-            market_state              # Portfolio metrics
+            env_state.short_positions,    # Short position flags
+            market_state              # Portfolio metrics + short position info
         ])
     
         return obs
@@ -838,113 +937,3 @@ class JAXVectorizedPortfolioEnv:
         daily_returns = jnp.clip(daily_returns, -0.3, 0.3)  # Cap at ±30% daily moves (more conservative)
         
         return daily_returns
-
-# # Example usage (for testing)
-# if __name__ == "__main__":
-#     # Create a dummy 'processed_data' directory and some CSVs for testing
-#     # In a real scenario, you'd have your actual stock data here.
-#     data_dir = Path("processed_data")
-#     data_dir.mkdir(exist_ok=True)
-
-#     # Generate dummy CSV files for AAPL, MSFT, GOOG
-#     stocks_for_test = ['AAPL', 'MSFT', 'GOOG']
-#     dates = pd.date_range(start='2023-12-01', end='2024-12-31', freq='B') # Business days
-    
-#     for stock in stocks_for_test:
-#         dummy_data = {
-#             'Date': dates,
-#             'close': np.random.rand(len(dates)) * 100 + 100, # Base price 100-200
-#             'open': np.random.rand(len(dates)) * 100 + 95,
-#             'high': np.random.rand(len(dates)) * 100 + 105,
-#             'low': np.random.rand(len(dates)) * 100 + 90,
-#             'volume': np.random.randint(100000, 10000000, len(dates)),
-#             'returns_1d': np.random.randn(len(dates)) * 0.01,
-#             'volatility_10d': np.random.rand(len(dates)) * 0.05,
-#             'rsi_14': np.random.rand(len(dates)) * 100,
-#             'ma_20': np.random.rand(len(dates)) * 100 + 98,
-#             'ma_50': np.random.rand(len(dates)) * 100 + 95,
-#         }
-#         df = pd.DataFrame(dummy_data)
-#         df.to_csv(data_dir / f"{stock}_aligned.csv", index=False)
-    
-#     print("\n--- Dummy CSVs created for testing ---")
-    
-#     # Initialize the environment
-#     try:
-#         env = JAXVectorizedPortfolioEnv(
-#             data_root="processed_data/",
-#             stocks=stocks_for_test,
-#             features=['close', 'volume', 'rsi_14'],
-#             window_size=10,
-#             start_date='2024-01-01',
-#             end_date='2024-12-31',
-#             transaction_cost_rate=0.001
-#         )
-
-#         key = random.PRNGKey(0)
-
-#         # Test reset
-#         key, reset_key = random.split(key)
-#         env_state, obs = env.reset(reset_key)
-#         print(f"\n--- Environment Reset ---")
-#         print(f"Initial State: {env_state}")
-#         print(f"Initial Observation shape: {obs.shape}")
-
-#         # Test step
-#         print(f"\n--- Stepping through the Environment ---")
-#         num_steps_to_take = 5
-#         for i in range(num_steps_to_take):
-#             key, action_key = random.split(key)
-#             # Example action: random weights for stocks and cash
-#             # action.shape must be (self.action_dim,)
-#             random_action = random.normal(action_key, (env.action_dim,))
-
-#             env_state, next_obs, reward, done, info = env.step(env_state, random_action)
-#             print(f"Step {i+1}:")
-#             print(f"  Date: {env.actual_dates[env_state.current_step].strftime('%Y-%m-%d')}")
-#             print(f"  Portfolio Value: {env_state.portfolio_value:.4f}")
-#             print(f"  Total Return: {env_state.total_return:.4f}")
-#             print(f"  Reward (Sharpe): {reward:.4f}")
-#             print(f"  Done: {done}")
-#             print(f"  Info (Daily Return): {info['daily_portfolio_return']:.4f}")
-#             print(f"  Info (Transaction Cost): {info['transaction_cost_value']:.6f}")
-#             if done:
-#                 print("Environment terminated early!")
-#                 break
-        
-#         # Example of vmap for parallel environments
-#         print(f"\n--- Testing vmap for multiple environments ---")
-#         num_parallel_envs = 4
-        
-#         # JIT-compile the reset and step functions for vmap
-#         vmap_reset = jax.vmap(env.reset, in_axes=(0,))
-#         vmap_step = jax.vmap(env.step, in_axes=(0, 0))
-
-#         # Generate separate keys for each parallel environment
-#         key, *reset_keys = random.split(key, num_parallel_envs + 1)
-#         reset_keys = jnp.array(reset_keys)
-
-#         # Reset all parallel environments
-#         env_states, obs_batch = vmap_reset(reset_keys)
-#         print(f"Parallel reset: Initial state batch (first env portfolio value): {env_states.portfolio_value[0]:.4f}")
-#         print(f"Parallel reset: Obs batch shape: {obs_batch.shape}")
-
-#         # Take a step in all parallel environments
-#         key, *action_keys = random.split(key, num_parallel_envs + 1)
-#         action_keys = jnp.array(action_keys)
-#         random_action_batch = random.normal(action_keys, (num_parallel_envs, env.action_dim))
-
-#         env_states, next_obs_batch, rewards_batch, dones_batch, infos_batch = vmap_step(env_states, random_action_batch)
-#         print(f"Parallel step: Next state batch (first env portfolio value): {env_states.portfolio_value[0]:.4f}")
-#         print(f"Parallel step: Rewards batch: {rewards_batch}")
-#         print(f"Parallel step: Dones batch: {dones_batch}")
-
-#     except Exception as e:
-#         print(f"\nAn error occurred during environment testing: {e}")
-#         # Optionally, you might want to delete the dummy data if an error occurs
-#         # for stock in stocks_for_test:
-#         #     (data_dir / f"{stock}_aligned.csv").unlink(missing_ok=True)
-#         # (data_dir / "stocks_data.h5").unlink(missing_ok=True)
-#         # data_dir.rmdir()
-
-#     print("\n--- Example usage complete ---")
