@@ -1,0 +1,147 @@
+{
+  "test_timestamp": "2025-09-11T12:59:09.141572",
+  "test_configuration": {
+    "n_stocks": 10,
+    "stocks_tested": [
+      "RELIANCE",
+      "TCS",
+      "HDFCBANK",
+      "INFY",
+      "ICICIBANK",
+      "HINDUNILVR",
+      "SBIN",
+      "BHARTIARTL",
+      "KOTAKBANK",
+      "LT"
+    ],
+    "data_root": "processed_data/",
+    "initial_capital": 1000000.0
+  },
+  "data_statistics": {
+    "shape": [
+      67,
+      180
+    ],
+    "date_range": [
+      "2024-06-06 00:00:00",
+      "2024-09-06 00:00:00"
+    ],
+    "n_stocks": 20,
+    "n_features_per_stock": 9,
+    "missing_data_pct": 0.0,
+    "stocks_with_data": [
+      "RELIANCE",
+      "TCS",
+      "HDFCBANK",
+      "INFY",
+      "ICICIBANK",
+      "HINDUNILVR",
+      "SBIN",
+      "BHARTIARTL",
+      "KOTAKBANK",
+      "LT",
+      "ASIANPAINT",
+      "AXISBANK",
+      "MARUTI",
+      "ULTRACEMCO",
+      "TITAN",
+      "BAJFINANCE",
+      "NESTLEIND",
+      "ONGC",
+      "POWERGRID",
+      "NTPC"
+    ]
+  },
+  "llm_signal_tests": {
+    "signals_generated": 3,
+    "signals_by_type": {
+      "BUY": 0,
+      "SELL": 0,
+      "HOLD": 3
+    },
+    "avg_confidence": 0.0,
+    "errors": 0,
+    "sample_signals": [
+      {
+        "stock": "RELIANCE",
+        "signal": "HOLD",
+        "confidence": 0,
+        "reasoning": "The provided data for RELIANCE is **invalid or missing critical values** (e.g., current price = \u20b90.0..."
+      },
+      {
+        "stock": "TCS",
+        "signal": "HOLD",
+        "confidence": 0,
+        "reasoning": "The provided market data for TCS is **invalid or missing critical values** (e.g., current price = \u20b90..."
+      },
+      {
+        "stock": "HDFCBANK",
+        "signal": "HOLD",
+        "confidence": 0,
+        "reasoning": "The provided market data for **HDFCBANK** is invalid or missing critical inputs (e.g., current price..."
+      }
+    ]
+  },
+  "portfolio_construction_tests": {
+    "inverse_volatility_weights": {
+      "RELIANCE": 0.1,
+      "TCS": 0.1,
+      "HDFCBANK": 0.1,
+      "INFY": 0.1,
+      "ICICIBANK": 0.1,
+      "HINDUNILVR": 0.1,
+      "SBIN": 0.1,
+      "BHARTIARTL": 0.1,
+      "KOTAKBANK": 0.1,
+      "LT": 0.1
+    },
+    "position_sizing_test": {
+      "total_positions": 10,
+      "total_allocation": 220000.0,
+      "max_position": 50000.0,
+      "sample_positions": {
+        "RELIANCE": 50000.0,
+        "TCS": 30000.000000000007,
+        "HDFCBANK": 50000.0
+      }
+    },
+    "risk_constraints_test": {},
+    "errors": []
+  },
+  "strategy_backtests": {
+    "pure_llm_results": {
+      "total_return": -0.009982617155295248,
+      "volatility": 0.03675202189821215,
+      "sharpe_ratio": -2.3690356540364053,
+      "max_drawdown": 0.02517031193488499,
+      "n_observations": 67
+    },
+    "hybrid_results": {
+      "total_return": -0.00040674295621800916,
+      "volatility": 0.016635599520727264,
+      "sharpe_ratio": -3.0893881320638323,
+      "max_drawdown": 0.007186151873000702,
+      "n_observations": 67
+    },
+    "comparison": {
+      "return_difference": 0.009575874199077239,
+      "sharpe_difference": -0.7203524780274271,
+      "better_strategy": "Pure LLM"
+    }
+  },
+  "summary": {
+    "overall_status": "SUCCESS",
+    "key_findings": [
+      "LLM signal generation working: 3 signals generated",
+      "Average confidence: 0.0%",
+      "Portfolio construction methods functioning correctly",
+      "Strategy comparison: Pure LLM performed better"
+    ],
+    "recommendations": [
+      "Consider longer testing period for more robust results",
+      "Test with more diverse market conditions",
+      "Implement transaction cost optimization",
+      "Add sector diversification constraints"
+    ]
+  }
+}
