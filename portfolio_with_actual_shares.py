@@ -68,7 +68,7 @@ class RealPortfolioManager:
         self.sentiment_analyzer = SentimentAnalyzer(".")
         
         logger.info(f"Initialized Real Portfolio Manager with ₹{initial_capital:,.0f}")
-        logger.info(f"Stocks: {stocks}")
+        logger.info(f"Managing {len(stocks)} stocks: {', '.join(stocks[:10])}{'...' if len(stocks) > 10 else ''}")
     
     def load_market_data(self, start_date: str, end_date: str) -> pd.DataFrame:
         """Load market data for all stocks"""
@@ -313,7 +313,7 @@ class RealPortfolioManager:
         first_date = trading_dates[0]
         current_prices = self.get_current_prices(market_data, first_date)
         
-        logger.info(f"🏦 Initial allocation on {first_date.strftime('%Y-%m-%d')} across {len(self.stocks)} stocks")
+        logger.info(f"🏦 Initial allocation on {first_date.strftime('%Y-%m-%d')} across {len(self.stocks)} stocks (₹{allocation_per_stock:,.0f} each)")
         
         if initial_allocation == "equal":
             # Equal allocation across all stocks
@@ -354,7 +354,11 @@ class RealPortfolioManager:
             
             current_prices = self.get_current_prices(market_data, date)
             
-            logger.info(f"\n📅 DAY {i+1} ({date.strftime('%Y-%m-%d')}):")
+            # Only log every 5 days to reduce clutter
+            should_log_daily = (i % 5 == 0 or i == len(trading_dates) - 1)
+            
+            if should_log_daily:
+                logger.info(f"\n📅 DAY {i+1} ({date.strftime('%Y-%m-%d')}):")
             
             # Generate LLM signals for each stock
             daily_trades = []
@@ -368,8 +372,8 @@ class RealPortfolioManager:
                         current_shares = self.positions.get(stock, Position(stock, 0, 0, 0)).shares
                         current_price = current_prices[stock]
                         
-                        # Only log high-confidence signals to reduce noise
-                        if llm_signal['confidence'] >= 70 or llm_signal['signal'] != 'HOLD':
+                        # Only log high-confidence signals and on logging days
+                        if should_log_daily and (llm_signal['confidence'] >= 70 or llm_signal['signal'] != 'HOLD'):
                             logger.info(f"   🤖 {stock}: {llm_signal['signal']} ({llm_signal['confidence']}%)")
                         
                         # Execute trades based on LLM signal
@@ -434,11 +438,11 @@ class RealPortfolioManager:
             prev_value = results['daily_portfolios'][-2]['total_value']
             daily_return = (portfolio_value['total_value'] - prev_value) / prev_value
             
-            # Weekly summary instead of daily to reduce logs
-            if i % 5 == 0 or i == len(trading_dates) - 1:  # Every 5 days or last day
-                logger.info(f"   💰 Day {i+1}: ₹{portfolio_value['total_value']:,.0f} ({daily_return:+.2%}) | Cash: ₹{self.cash:,.0f}")
+            # Show portfolio summary on logging days
+            if should_log_daily:
+                logger.info(f"   💰 Portfolio: ₹{portfolio_value['total_value']:,.0f} ({daily_return:+.2%}) | Cash: ₹{self.cash:,.0f} | Trades: {len(daily_trades)}")
                 
-                # Show top 3 positions weekly
+                # Show top 3 positions 
                 if portfolio_value['positions']:
                     top_positions = sorted(portfolio_value['positions'].items(), 
                                          key=lambda x: x[1]['market_value'], reverse=True)[:3]
@@ -462,18 +466,20 @@ class RealPortfolioManager:
         return results
 
 def main():
-    """Run the real portfolio backtest"""
+    """Run the real portfolio backtest for 3 months in 2025"""
     
-    print("🏦 REAL PORTFOLIO BACKTEST WITH ACTUAL SHARE TRACKING")
-    print("=" * 60)
+    print("🏦 REAL PORTFOLIO BACKTEST - 3 MONTHS 2025")
+    print("=" * 50)
     
-    # Load stocks
+    # Load ALL stocks from stocks.txt
     stocks_file = Path("finagent/stocks.txt")
     if stocks_file.exists():
         with open(stocks_file, 'r') as f:
-            stocks = [line.strip() for line in f.readlines() if line.strip()][:5]  # First 5 stocks
+            stocks = [line.strip() for line in f.readlines() if line.strip()]
+        print(f"Loaded {len(stocks)} stocks from universe")
     else:
-        stocks = ["RELIANCE", "TCS", "INFY", "HDFCBANK", "ICICIBANK"]
+        print("❌ finagent/stocks.txt not found")
+        return
     
     # Initialize portfolio manager
     portfolio = RealPortfolioManager(
@@ -482,13 +488,24 @@ def main():
         initial_capital=1000000.0
     )
     
-    # Run backtest (last 10 days for demo)
-    results = portfolio.run_backtest("2024-08-20", "2024-08-30")
+    # Run backtest for 3 months in 2025 (Jan-Mar 2025)
+    results = portfolio.run_backtest("2025-01-01", "2025-03-31")
     
     if "error" not in results:
-        print(f"\n✅ Backtest completed successfully!")
-        print(f"Final portfolio value: ₹{results['final_capital']:,.0f}")
-        print(f"Total return: {results['total_return']:.2%}")
+        print(f"\n🎯 FINAL RESULTS:")
+        print(f"Initial Capital: ₹{results['initial_capital']:,.0f}")
+        print(f"Final Capital: ₹{results['final_capital']:,.0f}")
+        print(f"Total Return: {results['total_return']:+.2%}")
+        print(f"Total Trades: {results['total_trades']}")
+        print(f"Days Traded: {len(results['daily_portfolios'])}")
+        
+        # Show top 5 performing stocks
+        final_positions = results['daily_portfolios'][-1]['positions']
+        if final_positions:
+            print("\n🏆 Top 5 Positions by Value:")
+            sorted_positions = sorted(final_positions.items(), key=lambda x: x[1]['market_value'], reverse=True)[:5]
+            for stock, pos in sorted_positions:
+                print(f"   {stock}: ₹{pos['market_value']:,.0f} ({pos['unrealized_pnl_pct']:+.1f}%)")
     else:
         print(f"❌ Error: {results['error']}")
 
