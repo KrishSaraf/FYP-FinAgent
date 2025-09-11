@@ -313,7 +313,7 @@ class RealPortfolioManager:
         first_date = trading_dates[0]
         current_prices = self.get_current_prices(market_data, first_date)
         
-        logger.info(f"\n🏦 DAY 1 ({first_date.strftime('%Y-%m-%d')}): INITIAL ALLOCATION")
+        logger.info(f"🏦 Initial allocation on {first_date.strftime('%Y-%m-%d')} across {len(self.stocks)} stocks")
         
         if initial_allocation == "equal":
             # Equal allocation across all stocks
@@ -337,7 +337,8 @@ class RealPortfolioManager:
                             'reason': 'Initial allocation'
                         })
                         
-                        logger.info(f"   ✅ {stock}: Bought {shares_to_buy:.1f} shares @ ₹{price:.2f} = ₹{trade_result['value']:,.0f}")
+                        # Reduce logging during initial allocation
+                        pass
         
         # Calculate initial portfolio value
         portfolio_value = self.calculate_portfolio_value(current_prices)
@@ -367,7 +368,9 @@ class RealPortfolioManager:
                         current_shares = self.positions.get(stock, Position(stock, 0, 0, 0)).shares
                         current_price = current_prices[stock]
                         
-                        logger.info(f"   🤖 {stock}: {llm_signal['signal']} ({llm_signal['confidence']}%) | Current: {current_shares:.1f} shares @ ₹{current_price:.2f}")
+                        # Only log high-confidence signals to reduce noise
+                        if llm_signal['confidence'] >= 70 or llm_signal['signal'] != 'HOLD':
+                            logger.info(f"   🤖 {stock}: {llm_signal['signal']} ({llm_signal['confidence']}%)")
                         
                         # Execute trades based on LLM signal
                         if llm_signal['signal'] == 'BUY' and llm_signal['confidence'] > 60:
@@ -392,7 +395,7 @@ class RealPortfolioManager:
                                         'value': trade_result['value'],
                                         'reason': f"LLM BUY signal ({llm_signal['confidence']}%)"
                                     })
-                                    logger.info(f"      ✅ Bought {shares_to_buy:.1f} more shares = ₹{trade_result['value']:,.0f}")
+                                    logger.info(f"      ✅ BUY {stock}: {shares_to_buy:.0f} shares = ₹{trade_result['value']:,.0f}")
                         
                         elif llm_signal['signal'] == 'SELL' and llm_signal['confidence'] > 70 and current_shares > 0:
                             # Sell half of current position
@@ -411,11 +414,11 @@ class RealPortfolioManager:
                                         'value': trade_result['value'],
                                         'reason': f"LLM SELL signal ({llm_signal['confidence']}%)"
                                     })
-                                    logger.info(f"      🔻 Sold {shares_to_sell:.1f} shares = ₹{trade_result['value']:,.0f}")
+                                    logger.info(f"      🔻 SELL {stock}: {shares_to_sell:.0f} shares = ₹{trade_result['value']:,.0f}")
                         
                         # For HOLD, do nothing (just track price changes)
                         
-                        time.sleep(0.2)  # Rate limiting
+                        time.sleep(0.1)  # Faster rate limiting for efficiency
             
             # Calculate end-of-day portfolio value
             portfolio_value = self.calculate_portfolio_value(current_prices)
@@ -431,16 +434,16 @@ class RealPortfolioManager:
             prev_value = results['daily_portfolios'][-2]['total_value']
             daily_return = (portfolio_value['total_value'] - prev_value) / prev_value
             
-            logger.info(f"   💰 Portfolio Value: ₹{portfolio_value['total_value']:,.0f} ({daily_return:+.2%}) | Cash: ₹{self.cash:,.0f}")
-            
-            # Show top positions
-            if portfolio_value['positions']:
-                top_positions = sorted(portfolio_value['positions'].items(), 
-                                     key=lambda x: x[1]['market_value'], reverse=True)[:3]
+            # Weekly summary instead of daily to reduce logs
+            if i % 5 == 0 or i == len(trading_dates) - 1:  # Every 5 days or last day
+                logger.info(f"   💰 Day {i+1}: ₹{portfolio_value['total_value']:,.0f} ({daily_return:+.2%}) | Cash: ₹{self.cash:,.0f}")
                 
-                logger.info(f"   🏆 Top positions:")
-                for stock, pos in top_positions:
-                    logger.info(f"      {stock}: {pos['shares']:.1f} shares = ₹{pos['market_value']:,.0f} ({pos['unrealized_pnl_pct']:+.1f}%)")
+                # Show top 3 positions weekly
+                if portfolio_value['positions']:
+                    top_positions = sorted(portfolio_value['positions'].items(), 
+                                         key=lambda x: x[1]['market_value'], reverse=True)[:3]
+                    for stock, pos in top_positions:
+                        logger.info(f"      {stock}: ₹{pos['market_value']:,.0f} ({pos['unrealized_pnl_pct']:+.1f}%)")
         
         # Final results
         final_value = results['daily_portfolios'][-1]['total_value']
