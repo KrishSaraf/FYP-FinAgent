@@ -120,15 +120,16 @@ class ActorCriticTransformerFlat(nn.Module):
     dropout_rate: float = 0.1
 
     def setup(self):
-        # Calculate sizes for different parts of the observation
+        # Calculate sizes for different parts of the observation based on actual portfolio_env structure
         self.historical_size = self.window_size * self.n_stocks * self.n_features
         self.current_info_size = self.n_stocks * 2  # current_open + current_gap
-        self.portfolio_weights_size = self.action_dim  # portfolio weights
-        self.market_state_size = 4  # portfolio metrics
+        self.portfolio_weights_size = self.action_dim  # portfolio weights (n_stocks + 1)
+        self.short_positions_size = self.n_stocks  # short position flags
+        self.market_state_size = 8  # market state indicators (8 elements)
         
         # Verify observation structure matches environment
         expected_obs_size = (self.historical_size + self.current_info_size + 
-                           self.portfolio_weights_size + self.market_state_size)
+                           self.portfolio_weights_size + self.short_positions_size + self.market_state_size)
         assert self.obs_dim == expected_obs_size, (
             f"Observation dimension mismatch: expected {expected_obs_size}, got {self.obs_dim}"
         )
@@ -161,12 +162,16 @@ class ActorCriticTransformerFlat(nn.Module):
         self.portfolio_proj = nn.Dense(self.d_model // 2, 
                                      kernel_init=nn.initializers.he_normal())
         
+        # Short positions processing
+        self.short_positions_proj = nn.Dense(self.d_model // 4, 
+                                           kernel_init=nn.initializers.he_normal())
+        
         # Market metrics processing
         self.market_state_proj = nn.Dense(self.d_model // 4, 
                                         kernel_init=nn.initializers.he_normal())
 
         # Final fusion layer
-        fusion_input_size = self.d_model + self.d_model // 2 + self.d_model // 2 + self.d_model // 4
+        fusion_input_size = self.d_model + self.d_model // 2 + self.d_model // 2 + self.d_model // 4 + self.d_model // 4
         self.fusion_layer = nn.Dense(self.d_model, kernel_init=nn.initializers.he_normal())
 
         # Actor (policy) head
@@ -184,15 +189,20 @@ class ActorCriticTransformerFlat(nn.Module):
         x = jnp.where(jnp.isnan(x), 0.0, x)
         x = jnp.where(jnp.isinf(x), jnp.sign(x) * 10.0, x)
 
-        # Split the flattened observation into its components
+        # Split the flattened observation into its components based on actual portfolio_env structure
         historical_data = x[:, :self.historical_size]
         start_idx = self.historical_size
+        
         current_info = x[:, start_idx:start_idx + self.current_info_size]  # Shape: (batch, n_stocks*2)
-
-        start_idx += self.current_info_size  
+        start_idx += self.current_info_size
+        
         portfolio_weights = x[:, start_idx:start_idx + self.portfolio_weights_size]  # Shape: (batch, action_dim)
-
-        market_state = x[:, -self.market_state_size:]  # Shape: (batch, 4)
+        start_idx += self.portfolio_weights_size
+        
+        short_positions = x[:, start_idx:start_idx + self.short_positions_size]  # Shape: (batch, n_stocks)
+        start_idx += self.short_positions_size
+        
+        market_state = x[:, start_idx:start_idx + self.market_state_size]  # Shape: (batch, 8)
 
         # Check if any component is empty before processing
         if current_info.size == 0:
@@ -206,6 +216,12 @@ class ActorCriticTransformerFlat(nn.Module):
         else:
             portfolio_weights = portfolio_weights.reshape(batch_size, -1)
             portfolio_features = self.portfolio_proj(portfolio_weights)
+        
+        if short_positions.size == 0:
+            short_features = jnp.zeros((batch_size, self.d_model // 4))
+        else:
+            short_positions = short_positions.reshape(batch_size, -1)
+            short_features = self.short_positions_proj(short_positions)
         
         if market_state.size == 0:
             market_features = jnp.zeros((batch_size, self.d_model // 4))
@@ -252,6 +268,11 @@ class ActorCriticTransformerFlat(nn.Module):
         portfolio_features = self.portfolio_proj(portfolio_normalized)
         portfolio_features = nn.relu(portfolio_features)
 
+        # Process short positions
+        short_positions_normalized = jnp.clip(short_positions, 0.0, 1.0)  # Short positions are binary flags
+        short_features = self.short_positions_proj(short_positions_normalized)
+        short_features = nn.relu(short_features)
+
         # Process market state
         market_state_normalized = jnp.clip(market_state, -10.0, 10.0)
         market_features = self.market_state_proj(market_state_normalized)
@@ -262,6 +283,7 @@ class ActorCriticTransformerFlat(nn.Module):
             historical_features,
             current_features, 
             portfolio_features,
+            short_features,
             market_features
         ], axis=-1)
         
@@ -372,6 +394,15 @@ class PPOTrainer:
                 raise RuntimeError("Failed to initialize parameters without NaN")
 
         self._test_network_forward_pass(dummy_obs)
+        
+        # Initialize optimizer and train state
+        self.optimizer = optax.adam(learning_rate=self.config.get('learning_rate', 1e-4))
+        self.train_state = TrainState.create(
+            apply_fn=self.network.apply,
+            params=self.params,
+            tx=self.optimizer
+        )
+        logger.info("Train state initialized successfully")
 
     def _initialize_environment_state(self):
         """Initialize environment state with correct observation handling"""
@@ -408,87 +439,6 @@ class PPOTrainer:
         except Exception as e:
             logger.error(f"Failed to initialize environment state: {e}")
             raise
-
-    def collect_trajectory(self, train_state: TrainState, env_states: List[EnvState],
-                          initial_obs: chex.Array, rng_key: chex.PRNGKey) -> Tuple[Trajectory, List[EnvState], chex.Array]:
-        """Collect trajectory with correct observation handling"""
-
-        def step_fn(carry_step, _):
-            env_states, obs, rng_key = carry_step
-
-            # FIXED: Keep observations flattened - no reshaping needed
-            obs = jnp.where(jnp.isnan(obs), 0.0, obs)
-            obs = jnp.clip(obs, -50.0, 50.0)
-        
-            rng_key, action_rng = random.split(rng_key)
-        
-            try:
-                logits, values, _ = train_state.apply_fn(train_state.params, obs)
-            except Exception as e:
-                logger.error(f"Network forward pass failed: {e}")
-                logits = jnp.zeros((obs.shape[0], self.env.action_dim))
-                values = jnp.zeros(obs.shape[0])
-
-            # Clean outputs and sample actions
-            logits = jnp.where(jnp.isnan(logits), 0.0, logits)
-            values = jnp.where(jnp.isnan(values), 0.0, values)
-            logits = jnp.clip(logits, -5.0, 5.0)
-            values = jnp.clip(values, -50.0, 50.0)
-
-            action_std = self.config.get('action_std', 1.0)
-            action_std = jnp.maximum(action_std, 1e-6)
-            
-            action_distribution = distrax.Normal(loc=logits, scale=action_std)
-            actions = action_distribution.sample(seed=action_rng)
-            actions = jnp.clip(actions, -5.0, 5.0)
-            
-            log_probs = action_distribution.log_prob(actions).sum(axis=-1)
-            log_probs = jnp.where(jnp.isnan(log_probs), -10.0, log_probs)
-            log_probs = jnp.clip(log_probs, -50.0, 10.0)
-        
-            # Step environment
-            new_env_states, next_obs, rewards, dones, info = self.vmap_step(env_states, actions)
-
-            # FIXED: Keep next_obs flattened - no reshaping
-            next_obs = jnp.where(jnp.isnan(next_obs), 0.0, next_obs)
-            next_obs = jnp.clip(next_obs, -50.0, 50.0)
-            
-            rewards = jnp.where(jnp.isnan(rewards), 0.0, rewards)
-            rewards = jnp.clip(rewards, -50.0, 50.0)
-            
-            transition = Trajectory(
-                obs=obs,
-                actions=actions,
-                rewards=rewards,
-                values=values,
-                log_probs=log_probs,
-                dones=dones,
-            )
-        
-            return (new_env_states, next_obs, rng_key), transition
-
-        # Rest of trajectory collection remains the same...
-        n_steps = self.config.get('n_steps', 64)
-        initial_carry = (env_states, initial_obs, rng_key)
-        
-        try:
-            current_carry = initial_carry
-            trajectory_list = []
-
-            for step in range(n_steps):
-                current_carry, transition = step_fn(current_carry, None)
-                trajectory_list.append(transition)
-            
-            trajectory = jax.tree_util.tree_map(
-                lambda *args: jnp.stack(args, axis=0), *trajectory_list
-            )
-            
-        except Exception as e:
-            logger.error(f"Trajectory collection failed: {e}")
-            return self._create_empty_trajectory(), env_states, initial_obs
-
-        final_env_states, final_obs, _ = current_carry
-        return trajectory, final_env_states, final_obs
 
     def _create_empty_trajectory(self) -> Trajectory:
         """Create empty trajectory with correct observation shape"""
@@ -531,8 +481,8 @@ class PPOTrainer:
         self.rng = random.PRNGKey(self.config.get('seed', 42))
         self.rng, init_rng = random.split(self.rng)
 
-        # Create dummy inputs for initialization
-        dummy_obs = jnp.ones((self.config.get('n_envs', 8), self.window_size, self.n_stocks + 1, self.n_features))
+        # Create dummy inputs for initialization - use flattened observation shape
+        dummy_obs = jnp.ones((self.config.get('n_envs', 8), self.env.obs_dim))
 
         # Initialize parameters with error handling
         try:
@@ -602,37 +552,8 @@ class PPOTrainer:
             # Debug: Log the shape of self.obs
             logger.info(f"Initial obs shape: {self.obs.shape}")
 
-            # Extract historical and current data dimensions
-            historical_size = self.window_size * self.n_assets * self.n_features
-            current_size = self.n_assets * 2  # Only 'open' and 'overnight_gap'
-            portfolio_weights_size = self.env.action_dim  # Portfolio weights (action_dim)
-            market_state_size = 4  # Portfolio metrics (portfolio_value, total_return, portfolio_vol, max_drawdown)
-
-            # Ensure the observation size matches the expected structure
-            expected_size = historical_size + current_size + portfolio_weights_size + market_state_size
-            actual_size = self.obs.shape[-1]
-            if actual_size != expected_size:
-                raise ValueError(f"Observation size mismatch: expected {expected_size}, got {actual_size}")
-
-            # Reshape historical data
-            historical_data = self.obs[:, :historical_size]
-            historical_data = historical_data.reshape(
-                self.config.get('n_envs', 8), self.window_size, self.n_assets, self.n_features
-            )
-
-            # Reshape current data
-            current_data = self.obs[:, historical_size:historical_size + current_size]
-            current_data = current_data.reshape(
-                self.config.get('n_envs', 8), 1, self.n_assets, 2
-            )
-
-            # Pad current_data to match the feature dimensions of historical_data
-            if current_data.shape[-1] != historical_data.shape[-1]:
-                padding = [(0, 0)] * (current_data.ndim - 1) + [(0, historical_data.shape[-1] - current_data.shape[-1])]
-                current_data = jnp.pad(current_data, padding, mode='constant', constant_values=0)
-
-            # Concatenate along the time axis
-            self.obs = jnp.concatenate([historical_data, current_data], axis=1)
+            # FIXED: Keep observations flattened - don't reshape
+            # The observations are already in the correct shape from the environment
 
             # Clean environment observations (handle inf/nan)
             self.obs = jnp.where(jnp.isnan(self.obs), 0.0, self.obs)
@@ -707,43 +628,9 @@ class PPOTrainer:
             # Step environment
             new_env_states, next_obs, rewards, dones, info = self.vmap_step(env_states, actions)
 
-            # Reshape next_obs for Transformer input
-            try:
-                # Extract historical and current data dimensions
-                historical_size = self.window_size * self.n_assets * self.n_features
-                current_size = self.n_assets * 2  # Only 'open' and 'overnight_gap'
-                portfolio_weights_size = self.env.action_dim  # Portfolio weights (action_dim)
-                market_state_size = 4  # Portfolio metrics (portfolio_value, total_return, portfolio_vol, max_drawdown)
-
-                # Ensure the observation size matches the expected structure
-                expected_size = historical_size + current_size + portfolio_weights_size + market_state_size
-                actual_size = next_obs.shape[-1]
-                if actual_size != expected_size:
-                    raise ValueError(f"Observation size mismatch: expected {expected_size}, got {actual_size}")
-
-                # Reshape historical data
-                historical_data = next_obs[:, :historical_size]
-                historical_data = historical_data.reshape(
-                    next_obs.shape[0], self.window_size, self.n_assets, self.n_features
-                )
-
-                # Reshape current data
-                current_data = next_obs[:, historical_size:historical_size + current_size]
-                current_data = current_data.reshape(
-                    next_obs.shape[0], 1, self.n_assets, 2
-                )
-
-                # Pad current_data to match the feature dimensions of historical_data
-                if current_data.shape[-1] != historical_data.shape[-1]:
-                    padding = [(0, 0)] * (current_data.ndim - 1) + [(0, historical_data.shape[-1] - current_data.shape[-1])]
-                    current_data = jnp.pad(current_data, padding, mode='constant', constant_values=0)
-
-                # Concatenate along the time axis
-                next_obs = jnp.concatenate([historical_data, current_data], axis=1)
-
-            except ValueError as e:
-                logger.error(f"Reshape failed: {e}")
-                raise
+            # FIXED: Keep next_obs flattened - no reshaping needed
+            next_obs = jnp.where(jnp.isnan(next_obs), 0.0, next_obs)
+            next_obs = jnp.clip(next_obs, -50.0, 50.0)
 
             # Lightweight environment output cleaning
             next_obs = jnp.where(jnp.isnan(next_obs), 0.0, next_obs)
@@ -797,7 +684,7 @@ class PPOTrainer:
         n_envs = self.config.get('n_envs', 8)
 
         return Trajectory(
-            obs=jnp.zeros((n_steps, n_envs, self.window_size, self.n_assets, self.n_features)),
+            obs=jnp.zeros((n_steps, n_envs, self.env.obs_dim)),  # FIXED: Use correct flattened obs_dim
             actions=jnp.zeros((n_steps, n_envs, self.env.action_dim)),
             rewards=jnp.zeros((n_steps, n_envs)),
             values=jnp.zeros((n_steps, n_envs)),
@@ -1151,7 +1038,7 @@ class PPOTrainer:
             params_bytes = f.read()
     
         # We need to re-initialize the network to get a "template" for deserialization
-        dummy_obs = jnp.ones((1, self.window_size, self.n_assets, self.n_features))
+        dummy_obs = jnp.ones((1, self.env.obs_dim))  # FIXED: Use flattened observation shape
         temp_params = self.network.init(random.PRNGKey(0), dummy_obs) # Use a dummy key
         loaded_params = serialization.from_bytes(temp_params, params_bytes)
         self.train_state = self.train_state.replace(params=loaded_params)
@@ -1185,7 +1072,7 @@ class PPOTrainer:
         reset_keys = jnp.array(reset_keys)
         eval_env_states, eval_obs = vmap_eval_reset(reset_keys)
     
-        eval_obs = eval_obs.reshape(n_eval_envs, self.window_size, self.n_assets, self.n_features)
+        # FIXED: Keep eval_obs flattened - no reshaping needed
         eval_obs = jnp.where(jnp.isnan(eval_obs), 0.0, eval_obs)
         eval_obs = jnp.where(jnp.isinf(eval_obs), 0.0, eval_obs)
 
@@ -1219,7 +1106,7 @@ class PPOTrainer:
 
             # Update observations and states
             eval_env_states = new_eval_env_states
-            next_eval_obs = next_eval_obs.reshape(n_eval_envs, self.window_size, self.n_assets, self.n_features)
+            # FIXED: Keep next_eval_obs flattened - no reshaping needed
             eval_obs = jnp.where(jnp.isnan(next_eval_obs), 0.0, next_eval_obs)
             eval_obs = jnp.where(jnp.isinf(eval_obs), 0.0, eval_obs)
 

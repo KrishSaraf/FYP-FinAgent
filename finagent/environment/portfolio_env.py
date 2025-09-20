@@ -44,7 +44,41 @@ class JAXPortfolioDataLoader:
         self.cache_dir.mkdir(exist_ok=True)
 
     def engineer_features(self, df: pd.DataFrame, stock: str) -> pd.DataFrame:
-        """Add engineered features to data - Enhanced for better returns"""
+        """Add engineered features to data - Enhanced with algorithmic trading signals"""
+        
+        # === REMOVE TIME-INVARIANT FEATURES ===
+        # Keep only the specific financial statement features that were previously chosen
+        # These are the core financial statement features that change with quarterly/annual reports
+        financial_statement_features = {
+            # Core Income Statement Features
+            'metric_Revenue', 'metric_TotalRevenue', 'metric_CostofRevenueTotal', 'metric_GrossProfit',
+            'metric_OperatingIncome', 'metric_NetIncomeBeforeTaxes', 'metric_NetIncomeAfterTaxes',
+            'metric_NetIncome', 'metric_DilutedNetIncome', 'metric_DilutedWeightedAverageShares',
+            'metric_DilutedEPSExcludingExtraOrdItems', 'metric_DPS-CommonStockPrimaryIssue',
+            
+            # Core Balance Sheet Features  
+            'metric_Cash', 'metric_ShortTermInvestments', 'metric_CashandShortTermInvestments',
+            'metric_TotalCurrentAssets', 'metric_TotalAssets', 'metric_TotalCurrentLiabilities',
+            'metric_TotalLiabilities', 'metric_TotalEquity', 'metric_TotalCommonSharesOutstanding',
+            
+            # Core Cash Flow Features
+            'metric_CashfromOperatingActivities', 'metric_CapitalExpenditures', 
+            'metric_CashfromInvestingActivities', 'metric_CashfromFinancingActivities',
+            'metric_NetChangeinCash', 'metric_TotalCashDividendsPaid',
+            
+            # Key Financial Metrics
+            'metric_freeCashFlowtrailing12Month', 'metric_freeCashFlowMostRecentFiscalYear',
+            'metric_periodLength', 'metric_periodType'
+        }
+        
+        # Remove truly time-invariant features (static fundamental metrics and corporate data)
+        # Keep only the specific financial statement features we've chosen
+        time_invariant_cols = [col for col in df.columns if 
+                              (col.startswith('metric_') and col not in financial_statement_features) or 
+                              col in ['period_end_date', 'dividend_amount', 'dividend_type', 'bonus_remarks']]
+        
+        # Keep only time-variant features
+        df = df.drop(columns=time_invariant_cols, errors='ignore')
         
         # === BASIC PRICE FEATURES ===
         # Multiple timeframe returns
@@ -89,38 +123,107 @@ class JAXPortfolioDataLoader:
         df['price_position_20d'] = ((df['close'] - df['close'].rolling(20).min()) / 
                                    (df['close'].rolling(20).max() - df['close'].rolling(20).min() + 1e-8))
         
-        # === TECHNICAL INDICATORS (ENHANCED) ===
-        # Normalized technical indicators (z-scores)
-        for col in ['rsi_14', 'dma_50', 'dma_200']:
-            if col in df.columns:
-                for window in [20, 30, 60]:  # Multiple normalization windows
-                    rolling_mean = df[col].rolling(window).mean()
-                    rolling_std = df[col].rolling(window).std()
-                    df[f'{col}_zscore_{window}d'] = (df[col] - rolling_mean) / (rolling_std + 1e-8)
+        # === ALGORITHMIC TRADING SIGNALS ===
         
-        # Price relatives to moving averages
-        if 'dma_50' in df.columns:
-            df['price_to_dma50'] = df['close'] / df['dma_50'] - 1.0
-            df['price_to_dma50_momentum'] = df['price_to_dma50'] - df['price_to_dma50'].shift(5)
-        if 'dma_200' in df.columns:
-            df['price_to_dma200'] = df['close'] / df['dma_200'] - 1.0
-            df['price_to_dma200_momentum'] = df['price_to_dma200'] - df['price_to_dma200'].shift(5)
+        # 1. Z-SCORE MEAN REVERSION SIGNALS
+        # Price z-score (mean reversion signal)
+        df['price_zscore_20d'] = (df['close'] - df['close'].rolling(20).mean()) / (df['close'].rolling(20).std() + 1e-8)
+        df['price_zscore_60d'] = (df['close'] - df['close'].rolling(60).mean()) / (df['close'].rolling(60).std() + 1e-8)
         
-        # === VOLUME FEATURES ===
+        # Volume z-score
         if 'volume' in df.columns:
-            # Volume-price relationships
-            df['volume_price_momentum'] = (df['returns_1d'] * df['volume'] / df['volume'].rolling(20).mean()).fillna(0)
-            
-            # Volume relative to recent average
-            df['volume_ratio_5d'] = df['volume'] / (df['volume'].rolling(5).mean() + 1e-8)
-            df['volume_ratio_20d'] = df['volume'] / (df['volume'].rolling(20).mean() + 1e-8)
-            
-            # Volume trend
-            df['volume_trend_10d'] = df['volume'].rolling(10).mean() / df['volume'].rolling(20).mean() - 1.0
+            df['volume_zscore_20d'] = (df['volume'] - df['volume'].rolling(20).mean()) / (df['volume'].rolling(20).std() + 1e-8)
+            df['volume_zscore_60d'] = (df['volume'] - df['volume'].rolling(60).mean()) / (df['volume'].rolling(60).std() + 1e-8)
         
-        # === INTRADAY FEATURES ===
+        # RSI z-score (if available)
+        if 'rsi_14' in df.columns:
+            df['rsi_zscore_20d'] = (df['rsi_14'] - df['rsi_14'].rolling(20).mean()) / (df['rsi_14'].rolling(20).std() + 1e-8)
+        
+        # 2. BOLLINGER BANDS SIGNALS
+        bb_period = 20
+        bb_std = 2
+        df['bb_middle'] = df['close'].rolling(bb_period).mean()
+        df['bb_std'] = df['close'].rolling(bb_period).std()
+        df['bb_upper'] = df['bb_middle'] + (bb_std * df['bb_std'])
+        df['bb_lower'] = df['bb_middle'] - (bb_std * df['bb_std'])
+        
+        # Bollinger Band position and signals
+        df['bb_position'] = (df['close'] - df['bb_lower']) / (df['bb_upper'] - df['bb_lower'] + 1e-8)
+        df['bb_squeeze'] = (df['bb_upper'] - df['bb_lower']) / df['bb_middle']  # Low volatility signal
+        df['bb_breakout_up'] = (df['close'] > df['bb_upper']).astype(float)
+        df['bb_breakout_down'] = (df['close'] < df['bb_lower']).astype(float)
+        
+        # 3. MEAN REVERSION SIGNALS
+        # Price deviation from moving averages
+        if 'dma_50' in df.columns:
+            df['price_deviation_50d'] = (df['close'] - df['dma_50']) / df['dma_50']
+            df['mean_reversion_signal_50d'] = np.where(df['price_deviation_50d'] > 0.05, -1,  # Overbought
+                                                      np.where(df['price_deviation_50d'] < -0.05, 1, 0))  # Oversold
+        
+        if 'dma_200' in df.columns:
+            df['price_deviation_200d'] = (df['close'] - df['dma_200']) / df['dma_200']
+            df['mean_reversion_signal_200d'] = np.where(df['price_deviation_200d'] > 0.1, -1,  # Overbought
+                                                       np.where(df['price_deviation_200d'] < -0.1, 1, 0))  # Oversold
+        
+        # 4. MOMENTUM BREAKOUT SIGNALS
+        # Price breakout from recent ranges
+        df['price_breakout_20d'] = (df['close'] > df['close'].rolling(20).max().shift(1)).astype(float)
+        df['price_breakdown_20d'] = (df['close'] < df['close'].rolling(20).min().shift(1)).astype(float)
+        
+        # Volume breakout signals
+        if 'volume' in df.columns:
+            df['volume_breakout_20d'] = (df['volume'] > df['volume'].rolling(20).max().shift(1)).astype(float)
+            df['volume_spike'] = (df['volume'] > df['volume'].rolling(20).mean() * 2).astype(float)
+        
+        # 5. TREND FOLLOWING SIGNALS
+        # Moving average crossover signals
+        if all(col in df.columns for col in ['dma_50', 'dma_200']):
+            df['ma_cross_bullish'] = ((df['dma_50'] > df['dma_200']) & (df['dma_50'].shift(1) <= df['dma_200'].shift(1))).astype(float)
+            df['ma_cross_bearish'] = ((df['dma_50'] < df['dma_200']) & (df['dma_50'].shift(1) >= df['dma_200'].shift(1))).astype(float)
+        
+        # Price above/below moving averages
+        if 'dma_50' in df.columns:
+            df['price_above_ma50'] = (df['close'] > df['dma_50']).astype(float)
+        if 'dma_200' in df.columns:
+            df['price_above_ma200'] = (df['close'] > df['dma_200']).astype(float)
+        
+        # 6. VOLATILITY REGIME SIGNALS
+        # High/low volatility regimes
+        vol_threshold_high = df['volatility_20d'].rolling(60).quantile(0.8)
+        vol_threshold_low = df['volatility_20d'].rolling(60).quantile(0.2)
+        df['high_vol_regime'] = (df['volatility_20d'] > vol_threshold_high).astype(float)
+        df['low_vol_regime'] = (df['volatility_20d'] < vol_threshold_low).astype(float)
+        
+        # Volatility expansion/contraction
+        df['vol_expansion'] = (df['volatility_20d'] > df['volatility_20d'].shift(5)).astype(float)
+        df['vol_contraction'] = (df['volatility_20d'] < df['volatility_20d'].shift(5)).astype(float)
+        
+        # 7. TECHNICAL INDICATOR SIGNALS
+        # RSI signals (if available)
+        if 'rsi_14' in df.columns:
+            df['rsi_oversold'] = (df['rsi_14'] < 30).astype(float)
+            df['rsi_overbought'] = (df['rsi_14'] > 70).astype(float)
+            df['rsi_bullish_divergence'] = ((df['rsi_14'] > df['rsi_14'].shift(1)) & 
+                                          (df['close'] < df['close'].shift(1))).astype(float)
+            df['rsi_bearish_divergence'] = ((df['rsi_14'] < df['rsi_14'].shift(1)) & 
+                                           (df['close'] > df['close'].shift(1))).astype(float)
+        
+        # 8. COMBINED SIGNAL STRENGTH
+        # Aggregate signal strength
+        signal_cols = [col for col in df.columns if any(signal in col for signal in 
+                      ['signal', 'breakout', 'cross', 'above', 'below', 'oversold', 'overbought'])]
+        
+        if signal_cols:
+            # Count positive signals
+            df['bullish_signals'] = df[signal_cols].sum(axis=1)
+            # Count negative signals  
+            df['bearish_signals'] = df[[col for col in signal_cols if 'bearish' in col or 'breakdown' in col or 'below' in col]].sum(axis=1)
+            # Net signal strength
+            df['net_signal_strength'] = df['bullish_signals'] - df['bearish_signals']
+        
+        # 9. PRICE ACTION PATTERNS
+        # Gap analysis
         if all(col in df.columns for col in ['open', 'high', 'low', 'close']):
-            # Gap features
             df['overnight_gap'] = df['open'] / df['close'].shift(1) - 1.0
             df['gap_fade'] = (df['close'] - df['open']) / (df['open'] + 1e-8)
             
@@ -137,19 +240,33 @@ class JAXPortfolioDataLoader:
             df['body_ratio'] = body_size / total_range
             df['upper_wick_ratio'] = upper_wick / total_range  
             df['lower_wick_ratio'] = lower_wick / total_range
+            
+            # Doji pattern (small body)
+            df['doji_pattern'] = (df['body_ratio'] < 0.1).astype(float)
+            
+            # Hammer pattern (long lower wick, small body)
+            df['hammer_pattern'] = ((df['lower_wick_ratio'] > 0.6) & (df['body_ratio'] < 0.3)).astype(float)
+            
+            # Shooting star pattern (long upper wick, small body)
+            df['shooting_star_pattern'] = ((df['upper_wick_ratio'] > 0.6) & (df['body_ratio'] < 0.3)).astype(float)
         
-        # === FUNDAMENTAL FEATURES (if available) ===
-        fundamental_cols = [col for col in df.columns if col.startswith('metric_')]
-        if fundamental_cols:
-            # Normalize fundamental metrics by their historical ranges
-            for col in fundamental_cols[:20]:  # Limit to avoid too many features
-                if df[col].std() > 1e-8:  # Only if there's variation
-                    rolling_min = df[col].rolling(60, min_periods=10).min()
-                    rolling_max = df[col].rolling(60, min_periods=10).max()
-                    df[f'{col}_normalized'] = ((df[col] - rolling_min) / 
-                                              (rolling_max - rolling_min + 1e-8))
+        # 10. VOLUME ANALYSIS SIGNALS
+        if 'volume' in df.columns:
+            # Volume-price relationships
+            df['volume_price_momentum'] = (df['returns_1d'] * df['volume'] / df['volume'].rolling(20).mean()).fillna(0)
+            
+            # Volume relative to recent average
+            df['volume_ratio_5d'] = df['volume'] / (df['volume'].rolling(5).mean() + 1e-8)
+            df['volume_ratio_20d'] = df['volume'] / (df['volume'].rolling(20).mean() + 1e-8)
+            
+            # Volume trend
+            df['volume_trend_10d'] = df['volume'].rolling(10).mean() / df['volume'].rolling(20).mean() - 1.0
+            
+            # Volume confirmation signals
+            df['volume_confirms_price'] = ((df['returns_1d'] > 0) & (df['volume_ratio_20d'] > 1.2)).astype(float)
+            df['volume_divergence'] = ((df['returns_1d'] > 0) & (df['volume_ratio_20d'] < 0.8)).astype(float)
         
-        # === SENTIMENT FEATURES (if available) ===
+        # 11. SENTIMENT FEATURES (if available) ===
         sentiment_cols = [col for col in df.columns if 'sentiment' in col.lower()]
         for col in sentiment_cols:
             if col in df.columns and df[col].std() > 1e-8:
@@ -163,12 +280,12 @@ class JAXPortfolioDataLoader:
                 df[f'{col}_extreme_positive'] = (df[col] > rolling_quantile_90).astype(float)
                 df[f'{col}_extreme_negative'] = (df[col] < rolling_quantile_10).astype(float)
         
-        # === REGIME DETECTION ===
+        # 12. REGIME DETECTION ===
         # Market regime indicators based on volatility and trend
         if 'volatility_20d' in df.columns:
             vol_ma_short = df['volatility_20d'].rolling(20).mean()
             vol_ma_long = df['volatility_20d'].rolling(60).mean()
-            df['high_vol_regime'] = (vol_ma_short > vol_ma_long).astype(float)
+            df['vol_regime_change'] = (vol_ma_short > vol_ma_long).astype(float)
         
         # Trending vs mean-reverting regime
         if 'returns_1d' in df.columns:
@@ -177,12 +294,12 @@ class JAXPortfolioDataLoader:
             returns_range = df['returns_1d'].rolling(20).apply(lambda x: x.max() - x.min() if len(x) == 20 else 0)
             df['trend_regime'] = returns_range / (df['volatility_20d'] * np.sqrt(20) + 1e-8)
         
-        # === CROSS-SECTIONAL FEATURES ===
+        # 13. CROSS-SECTIONAL FEATURES ===
         # These would ideally use market-wide data, but we approximate with single-stock features
         df['momentum_rank_proxy'] = df['momentum_20d'].rolling(60).rank(pct=True)
         df['vol_rank_proxy'] = df['volatility_20d'].rolling(60).rank(pct=True)
         
-        # === INTERACTION FEATURES ===
+        # 14. INTERACTION FEATURES ===
         # Combine different signal types
         if all(col in df.columns for col in ['momentum_10d', 'volatility_10d']):
             df['risk_adjusted_momentum'] = df['momentum_10d'] / (df['volatility_10d'] + 1e-8)
@@ -528,7 +645,6 @@ class JAXVectorizedPortfolioEnv:
                  end_date: str = '2025-03-06',
                  transaction_cost_rate: float = 0.005,
                  sharpe_window: int = 252,
-                 risk_free_rate: float = 0.05,
                  use_all_features: bool = True):
 
         self.data_root = data_root
@@ -538,7 +654,7 @@ class JAXVectorizedPortfolioEnv:
         self.initial_cash_actual = initial_cash
         self.transaction_cost_rate = transaction_cost_rate
         self.sharpe_window = sharpe_window
-        self.risk_free_rate_daily = risk_free_rate / 252.0
+        self.risk_free_rate_daily = 0.04 / 252.0  # 4% annual risk-free rate
         self.cash_return_rate = 0.04 / 252.0  # 4% annual return for cash holdings
         self.use_all_features = use_all_features
         self.features = None
@@ -735,7 +851,7 @@ class JAXVectorizedPortfolioEnv:
         # Portfolio return calculation
         daily_portfolio_return_before_costs = (
             jnp.sum(normalized_stock_weights * stock_returns) +
-            (normalized_cash_weight * self.risk_free_rate_daily)
+            (normalized_cash_weight * self.cash_return_rate)
         )
         daily_portfolio_return_before_costs = jnp.where(
             jnp.isnan(daily_portfolio_return_before_costs), 0.0, daily_portfolio_return_before_costs
@@ -788,7 +904,7 @@ class JAXVectorizedPortfolioEnv:
         sharpe_ratio = jnp.where(
             sharpe_std < 1e-6,
             0.0,
-            (sharpe_mean - self.risk_free_rate_daily) / (sharpe_std + 1e-8)
+            (sharpe_mean - self.cash_return_rate) / (sharpe_std + 1e-8)
         )
         sharpe_ratio = jnp.where(jnp.isnan(sharpe_ratio), 0.0, sharpe_ratio)
         sharpe_ratio = jnp.clip(sharpe_ratio, -5.0, 5.0)
