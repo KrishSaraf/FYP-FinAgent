@@ -11,8 +11,9 @@ Strategies implemented:
 4. Momentum-Based Portfolio
 5. Black-Litterman Model
 6. Minimum Variance Portfolio
-7. Average of Technical Analysis Models (RSI, Bollinger Bands, MACD)
-8. Average of Sentiment-Based Models (News, Social Media)
+7. Technical Analysis Strategy (RSI, Bollinger Bands, MACD) - evaluates each stock separately
+8. Sentiment-Based Strategy (News, Social Media) - evaluates each stock separately
+9. Max Return 60-Day Strategy - maximizes returns from past 60 days
 
 Author: AI Assistant
 Date: 2024
@@ -139,12 +140,12 @@ class SimplePortfolioStrategies:
                 prices.append(np.nan)
         return np.array(prices)
     
-    def _get_returns_data(self, window: int = 20) -> np.ndarray:
-        """Get returns data for all stocks over a window."""
+    def _get_returns_data(self, date: str, window: int = 20) -> np.ndarray:
+        """Get returns data for all stocks over a window up to the given date."""
         returns_data = []
         for stock in self.stocks:
-            if stock in self.data:
-                df = self.data[stock]
+            if stock in self.data and date in self.data[stock].index:
+                df = self.data[stock].loc[:date]
                 returns = df['close'].pct_change().dropna()
                 if len(returns) >= window:
                     returns_data.append(returns.tail(window).values)
@@ -162,15 +163,18 @@ class SimplePortfolioStrategies:
         
         return np.array(returns_data)
     
-    def _get_volatility_data(self, window: int = 20) -> np.ndarray:
-        """Get volatility data for all stocks."""
+    def _get_volatility_data(self, date: str, window: int = 20) -> np.ndarray:
+        """Get volatility data for all stocks up to the given date."""
         volatilities = []
         for stock in self.stocks:
-            if stock in self.data:
-                df = self.data[stock]
+            if stock in self.data and date in self.data[stock].index:
+                df = self.data[stock].loc[:date]
                 returns = df['close'].pct_change().dropna()
-                vol = returns.rolling(window).std().iloc[-1]
-                volatilities.append(vol if not pd.isna(vol) else 0.01)
+                if len(returns) >= window:
+                    vol = returns.rolling(window).std().iloc[-1]
+                    volatilities.append(vol if not pd.isna(vol) else 0.01)
+                else:
+                    volatilities.append(0.01)
             else:
                 volatilities.append(0.01)
         return np.array(volatilities)
@@ -274,9 +278,21 @@ class SimplePortfolioStrategies:
         weights = np.ones(self.n_stocks) / self.n_stocks
         return weights
     
-    def volatility_adjusted_equal_weight_strategy(self) -> np.ndarray:
+    def volatility_adjusted_equal_weight_strategy(self, date: str = None) -> np.ndarray:
         """Volatility-adjusted equal weight portfolio strategy."""
-        volatilities = self._get_volatility_data()
+        # For static strategies, we need to handle the case where date is not provided
+        if date is None:
+            # Use the latest available date for all stocks
+            latest_dates = []
+            for stock in self.stocks:
+                if stock in self.data and len(self.data[stock]) > 0:
+                    latest_dates.append(self.data[stock].index[-1])
+            if latest_dates:
+                date = min(latest_dates)  # Use earliest of latest dates to avoid look-ahead
+            else:
+                return np.ones(self.n_stocks) / self.n_stocks
+        
+        volatilities = self._get_volatility_data(date)
         
         # Avoid division by zero
         volatilities = np.maximum(volatilities, 0.001)
@@ -349,27 +365,54 @@ class SimplePortfolioStrategies:
         """Black-Litterman portfolio strategy."""
         try:
             # Get returns data
-            returns_data = self._get_returns_data(window=60)  # Use 60 days for estimation
+            returns_data = self._get_returns_data(date, window=60)  # Use 60 days for estimation
             
             # Check if we have valid data
             if np.all(np.isnan(returns_data)) or np.all(returns_data == 0):
                 logger.warning("No valid returns data for Black-Litterman strategy")
                 return self.equal_weight_strategy()
             
-            # Clean the data - replace NaN with 0
+            # Clean the data - replace NaN with 0 and handle constant returns
             returns_data = np.nan_to_num(returns_data, nan=0.0)
+            
+            # Add small random noise to prevent division by zero in correlation calculations
+            # This helps avoid numpy warnings when calculating correlations
+            np.random.seed(42)  # For reproducibility
+            noise_level = 1e-10
+            returns_data += np.random.normal(0, noise_level, returns_data.shape)
             
             # Calculate market equilibrium returns (implied returns)
             # Using equal weight as market portfolio proxy
             market_weights = np.ones(self.n_stocks) / self.n_stocks
             
             # Estimate covariance matrix using Ledoit-Wolf shrinkage
-            cov_estimator = LedoitWolf()
-            cov_matrix = cov_estimator.fit(returns_data.T).covariance_
-            
-            # Check if covariance matrix is valid
-            if np.any(np.isnan(cov_matrix)) or np.any(np.isinf(cov_matrix)):
-                logger.warning("Invalid covariance matrix for Black-Litterman strategy")
+            try:
+                with warnings.catch_warnings():
+                    warnings.simplefilter("ignore", RuntimeWarning)
+                    cov_estimator = LedoitWolf()
+                    cov_matrix = cov_estimator.fit(returns_data.T).covariance_
+                
+                # Check if covariance matrix is valid
+                if np.any(np.isnan(cov_matrix)) or np.any(np.isinf(cov_matrix)):
+                    logger.warning("Invalid covariance matrix for Black-Litterman strategy")
+                    return self.equal_weight_strategy()
+                
+                # Add regularization to ensure matrix is well-conditioned
+                regularization = 1e-6
+                cov_matrix += np.eye(self.n_stocks) * regularization
+                
+                # Check matrix condition number
+                try:
+                    cond_num = np.linalg.cond(cov_matrix)
+                    if cond_num > 1e10:  # Matrix is ill-conditioned
+                        logger.warning(f"Covariance matrix is ill-conditioned (condition number: {cond_num:.2e})")
+                        return self.equal_weight_strategy()
+                except np.linalg.LinAlgError:
+                    logger.warning("Cannot compute condition number for Black-Litterman")
+                    return self.equal_weight_strategy()
+                    
+            except Exception as e:
+                logger.warning(f"Ledoit-Wolf covariance estimation failed: {e}")
                 return self.equal_weight_strategy()
             
             # Risk aversion parameter (lambda)
@@ -407,29 +450,42 @@ class SimplePortfolioStrategies:
                 logger.warning("Invalid expected returns for Black-Litterman strategy")
                 return self.equal_weight_strategy()
             
-            # Optimize portfolio weights
-            def objective(weights):
-                portfolio_return = np.dot(weights, expected_returns)
-                portfolio_variance = np.dot(weights, np.dot(cov_matrix, weights))
-                return -(portfolio_return - 0.5 * risk_aversion * portfolio_variance)
+            # Try multiple optimization methods for Black-Litterman
+            methods_to_try = ['SLSQP', 'L-BFGS-B', 'trust-constr']
             
-            # Constraints
-            constraints = {'type': 'eq', 'fun': lambda w: np.sum(w) - 1}
-            bounds = [(0, 1) for _ in range(self.n_stocks)]
+            for method in methods_to_try:
+                try:
+                    # Optimize portfolio weights
+                    def objective(weights):
+                        portfolio_return = np.dot(weights, expected_returns)
+                        portfolio_variance = np.dot(weights, np.dot(cov_matrix, weights))
+                        return -(portfolio_return - 0.5 * risk_aversion * portfolio_variance)
+                    
+                    # Constraints
+                    constraints = {'type': 'eq', 'fun': lambda w: np.sum(w) - 1}
+                    bounds = [(0, 1) for _ in range(self.n_stocks)]
+                    
+                    # Initial guess
+                    x0 = np.ones(self.n_stocks) / self.n_stocks
+                    
+                    # Optimize
+                    result = minimize(objective, x0, method=method, bounds=bounds, constraints=constraints)
+                    
+                    if result.success and not np.any(np.isnan(result.x)) and not np.any(np.isinf(result.x)):
+                        # Normalize weights to ensure they sum to 1
+                        weights = result.x / np.sum(result.x)
+                        # Ensure all weights are non-negative
+                        weights = np.maximum(weights, 0.0)
+                        weights = weights / np.sum(weights)  # Renormalize
+                        return weights
+                        
+                except Exception as e:
+                    logger.warning(f"Black-Litterman optimization method {method} failed: {e}")
+                    continue
             
-            # Initial guess
-            x0 = np.ones(self.n_stocks) / self.n_stocks
-            
-            # Optimize
-            result = minimize(objective, x0, method='SLSQP', bounds=bounds, constraints=constraints)
-            
-            if result.success and not np.any(np.isnan(result.x)):
-                # Normalize weights to ensure they sum to 1
-                weights = result.x / np.sum(result.x)
-                return weights
-            else:
-                logger.warning(f"Black-Litterman optimization failed: {result.message}")
-                return self.equal_weight_strategy()
+            # If all optimization methods fail, use equal weights
+            logger.warning("All Black-Litterman optimization methods failed, using equal weights")
+            return self.equal_weight_strategy()
                 
         except Exception as e:
             logger.warning(f"Black-Litterman strategy failed: {e}, using equal weights")
@@ -439,18 +495,27 @@ class SimplePortfolioStrategies:
         """Minimum variance portfolio strategy."""
         try:
             # Get returns data
-            returns_data = self._get_returns_data(window=60)
+            returns_data = self._get_returns_data(date, window=60)
             
             # Check if we have valid data
             if np.all(np.isnan(returns_data)) or np.all(returns_data == 0):
                 logger.warning("No valid returns data for minimum variance strategy")
                 return self.equal_weight_strategy()
             
-            # Clean the data - replace NaN with 0
+            # Clean the data - replace NaN with 0 and handle constant returns
             returns_data = np.nan_to_num(returns_data, nan=0.0)
+            
+            # Add small random noise to prevent division by zero in correlation calculations
+            # This helps avoid numpy warnings when calculating correlations
+            np.random.seed(42)  # For reproducibility
+            noise_level = 1e-10
+            returns_data += np.random.normal(0, noise_level, returns_data.shape)
             
             # Calculate individual volatilities first
             individual_vols = np.std(returns_data, axis=1)
+            
+            # Ensure all volatilities are positive and different
+            individual_vols = np.maximum(individual_vols, 0.001)
             
             # If volatilities are too similar, add some differentiation
             if np.max(individual_vols) - np.min(individual_vols) < 0.001:
@@ -459,99 +524,247 @@ class SimplePortfolioStrategies:
                 individual_vols += np.random.normal(0, 0.001, len(individual_vols))
                 individual_vols = np.maximum(individual_vols, 0.001)  # Ensure positive
             
-            # Use a simpler covariance matrix estimation
-            # Create diagonal covariance matrix based on individual volatilities
+            # Use a more robust covariance matrix estimation
+            # Start with diagonal matrix (no correlation)
             cov_matrix = np.diag(individual_vols ** 2)
             
-            # Add some correlation structure (simplified)
-            # Use average correlation of 0.3
-            avg_correlation = 0.3
-            for i in range(self.n_stocks):
-                for j in range(i+1, self.n_stocks):
-                    cov_value = avg_correlation * individual_vols[i] * individual_vols[j]
-                    cov_matrix[i, j] = cov_value
-                    cov_matrix[j, i] = cov_value
+            # Add small correlation structure only if we have enough data
+            if len(returns_data) > 10:  # Need sufficient data for correlation estimation
+                try:
+                    # Calculate sample correlation matrix with proper error handling
+                    with warnings.catch_warnings():
+                        warnings.simplefilter("ignore", RuntimeWarning)
+                        
+                        # Check for constant returns (zero variance) before correlation calculation
+                        valid_stocks = []
+                        for i in range(self.n_stocks):
+                            stock_returns = returns_data[i]
+                            if np.std(stock_returns) > 1e-8:  # Non-zero variance
+                                valid_stocks.append(i)
+                        
+                        if len(valid_stocks) >= 2:  # Need at least 2 stocks with non-zero variance
+                            # Calculate correlation only for valid stocks
+                            valid_returns = returns_data[valid_stocks]
+                            corr_matrix = np.corrcoef(valid_returns)
+                            
+                            # Check if correlation matrix is valid
+                            if not np.any(np.isnan(corr_matrix)) and not np.any(np.isinf(corr_matrix)):
+                                # Use sample correlations but cap them to avoid extreme values
+                                corr_matrix = np.clip(corr_matrix, -0.8, 0.8)
+                                
+                                # Build covariance matrix from correlations
+                                for idx_i, i in enumerate(valid_stocks):
+                                    for idx_j, j in enumerate(valid_stocks):
+                                        if idx_i != idx_j:  # Skip diagonal
+                                            cov_value = corr_matrix[idx_i, idx_j] * individual_vols[i] * individual_vols[j]
+                                            cov_matrix[i, j] = cov_value
+                            else:
+                                # Fallback to simple correlation structure
+                                avg_correlation = 0.2  # Lower correlation to avoid singularity
+                                for i in range(self.n_stocks):
+                                    for j in range(i+1, self.n_stocks):
+                                        cov_value = avg_correlation * individual_vols[i] * individual_vols[j]
+                                        cov_matrix[i, j] = cov_value
+                                        cov_matrix[j, i] = cov_value
+                        else:
+                            # Not enough stocks with non-zero variance, use simple correlation
+                            avg_correlation = 0.2
+                            for i in range(self.n_stocks):
+                                for j in range(i+1, self.n_stocks):
+                                    cov_value = avg_correlation * individual_vols[i] * individual_vols[j]
+                                    cov_matrix[i, j] = cov_value
+                                    cov_matrix[j, i] = cov_value
+                except Exception:
+                    # If correlation calculation fails, use simple diagonal matrix
+                    pass
             
             # Check if covariance matrix is valid
             if np.any(np.isnan(cov_matrix)) or np.any(np.isinf(cov_matrix)):
                 logger.warning("Invalid covariance matrix for minimum variance strategy")
                 return self.equal_weight_strategy()
             
-            # Add regularization to ensure matrix is invertible
-            cov_matrix += np.eye(self.n_stocks) * 1e-6
+            # Add stronger regularization to ensure matrix is well-conditioned
+            regularization = 1e-4
+            cov_matrix += np.eye(self.n_stocks) * regularization
             
-            # Objective function: minimize portfolio variance
-            def objective(weights):
-                return np.dot(weights, np.dot(cov_matrix, weights))
-            
-            # Constraints
-            constraints = {'type': 'eq', 'fun': lambda w: np.sum(w) - 1}
-            bounds = [(0, 1) for _ in range(self.n_stocks)]
-            
-            # Initial guess - try inverse volatility weights
-            inv_vol_weights = 1.0 / individual_vols
-            inv_vol_weights = inv_vol_weights / np.sum(inv_vol_weights)
-            x0 = inv_vol_weights
-            
-            # Optimize
-            result = minimize(objective, x0, method='SLSQP', bounds=bounds, constraints=constraints)
-            
-            if result.success and not np.any(np.isnan(result.x)):
-                # Normalize weights to ensure they sum to 1
-                weights = result.x / np.sum(result.x)
+            # Check matrix condition number
+            try:
+                cond_num = np.linalg.cond(cov_matrix)
+                if cond_num > 1e12:  # Matrix is ill-conditioned
+                    logger.warning(f"Covariance matrix is ill-conditioned (condition number: {cond_num:.2e})")
+                    # Use inverse volatility weights as fallback
+                    inv_vol_weights = 1.0 / individual_vols
+                    weights = inv_vol_weights / np.sum(inv_vol_weights)
+                    return weights
+            except np.linalg.LinAlgError:
+                logger.warning("Cannot compute condition number, using inverse volatility weights")
+                inv_vol_weights = 1.0 / individual_vols
+                weights = inv_vol_weights / np.sum(inv_vol_weights)
                 return weights
-            else:
-                logger.warning(f"Minimum variance optimization failed: {result.message}")
-                return self.equal_weight_strategy()
+            
+            # Try multiple optimization methods
+            methods_to_try = ['SLSQP', 'L-BFGS-B', 'trust-constr']
+            
+            for method in methods_to_try:
+                try:
+                    # Objective function: minimize portfolio variance
+                    def objective(weights):
+                        return np.dot(weights, np.dot(cov_matrix, weights))
+                    
+                    # Constraints
+                    constraints = {'type': 'eq', 'fun': lambda w: np.sum(w) - 1}
+                    bounds = [(0, 1) for _ in range(self.n_stocks)]
+                    
+                    # Initial guess - try inverse volatility weights
+                    inv_vol_weights = 1.0 / individual_vols
+                    inv_vol_weights = inv_vol_weights / np.sum(inv_vol_weights)
+                    x0 = inv_vol_weights
+                    
+                    # Optimize
+                    result = minimize(objective, x0, method=method, bounds=bounds, constraints=constraints)
+                    
+                    if result.success and not np.any(np.isnan(result.x)) and not np.any(np.isinf(result.x)):
+                        # Normalize weights to ensure they sum to 1
+                        weights = result.x / np.sum(result.x)
+                        # Ensure all weights are non-negative
+                        weights = np.maximum(weights, 0.0)
+                        weights = weights / np.sum(weights)  # Renormalize
+                        return weights
+                        
+                except Exception as e:
+                    logger.warning(f"Optimization method {method} failed: {e}")
+                    continue
+            
+            # If all optimization methods fail, use inverse volatility weights
+            logger.warning("All optimization methods failed, using inverse volatility weights")
+            inv_vol_weights = 1.0 / individual_vols
+            weights = inv_vol_weights / np.sum(inv_vol_weights)
+            return weights
                 
         except Exception as e:
             logger.warning(f"Minimum variance strategy failed: {e}, using equal weights")
             return self.equal_weight_strategy()
     
     def technical_analysis_strategy(self, date: str) -> np.ndarray:
-        """Combined technical analysis strategy (RSI + Bollinger Bands + MACD)."""
+        """Combined technical analysis strategy (RSI + Bollinger Bands + MACD) - evaluates each stock separately."""
         try:
-            indicators = self._get_technical_indicators(date)
-            
             weights = np.zeros(self.n_stocks)
+            signal_details = []  # For debugging
             
-            for i in range(self.n_stocks):
-                rsi = indicators['rsi'][i]
-                bb_pos = indicators['bb_position'][i]
-                macd = indicators['macd_signal'][i]
-                
-                # Check for NaN values
-                if pd.isna(rsi) or pd.isna(bb_pos) or pd.isna(macd):
-                    continue
-                
-                # RSI signal: buy when oversold (< 30), sell when overbought (> 70)
-                rsi_signal = 0
-                if rsi < 30:
-                    rsi_signal = 1  # Buy signal
-                elif rsi > 70:
-                    rsi_signal = -1  # Sell signal
-                
-                # Bollinger Bands signal: buy when near lower band, sell when near upper band
-                bb_signal = 0
-                if bb_pos < 0.2:
-                    bb_signal = 1  # Buy signal
-                elif bb_pos > 0.8:
-                    bb_signal = -1  # Sell signal
-                
-                # MACD signal: already calculated as 1 or -1
-                
-                # Combine signals (simple average)
-                combined_signal = (rsi_signal + bb_signal + macd) / 3
-                
-                # Only positive signals get weight
-                if combined_signal > 0:
-                    weights[i] = combined_signal
+            for i, stock in enumerate(self.stocks):
+                if stock in self.data and date in self.data[stock].index:
+                    try:
+                        df = self.data[stock].loc[:date]
+                        
+                        # Calculate technical indicators for this specific stock
+                        rsi = 50.0  # Default neutral value
+                        bb_pos = 0.5  # Default middle position
+                        macd_signal = 0  # Default neutral signal
+                        
+                        # RSI calculation
+                        if 'rsi_14' in df.columns:
+                            rsi_val = df['rsi_14'].iloc[-1]
+                            if not pd.isna(rsi_val):
+                                rsi = float(rsi_val)
+                        else:
+                            # Calculate RSI if not available
+                            if len(df) >= 14:
+                                delta = df['close'].diff()
+                                gain = (delta.where(delta > 0, 0)).rolling(window=14).mean()
+                                loss = (-delta.where(delta < 0, 0)).rolling(window=14).mean()
+                                # Avoid division by zero
+                                rs = gain / loss.replace(0, 1e-10)
+                                rsi_calc = 100 - (100 / (1 + rs))
+                                rsi_val = rsi_calc.iloc[-1]
+                                if not pd.isna(rsi_val):
+                                    rsi = float(rsi_val)
+                        
+                        # Bollinger Bands position
+                        if len(df) >= 20:
+                            bb_middle = df['close'].rolling(20).mean().iloc[-1]
+                            bb_std = df['close'].rolling(20).std().iloc[-1]
+                            bb_upper = bb_middle + 2 * bb_std
+                            bb_lower = bb_middle - 2 * bb_std
+                            current_price = df['close'].iloc[-1]
+                            
+                            if not pd.isna(bb_upper) and not pd.isna(bb_lower) and bb_upper != bb_lower:
+                                bb_pos = (current_price - bb_lower) / (bb_upper - bb_lower)
+                                bb_pos = max(0, min(1, bb_pos))  # Clamp between 0 and 1
+                        
+                        # MACD signal (simplified)
+                        if len(df) >= 26:
+                            ema_12 = df['close'].ewm(span=12).mean().iloc[-1]
+                            ema_26 = df['close'].ewm(span=26).mean().iloc[-1]
+                            if not pd.isna(ema_12) and not pd.isna(ema_26):
+                                macd = ema_12 - ema_26
+                                macd_signal = 1 if macd > 0 else -1
+                        
+                        # Improved signal logic - use more nuanced scoring
+                        # RSI signal: score from -1 to 1 based on RSI position
+                        if rsi < 30:
+                            rsi_score = 1.0  # Strong buy
+                        elif rsi < 40:
+                            rsi_score = 0.5  # Moderate buy
+                        elif rsi > 70:
+                            rsi_score = -1.0  # Strong sell
+                        elif rsi > 60:
+                            rsi_score = -0.5  # Moderate sell
+                        else:
+                            rsi_score = 0.0  # Neutral
+                        
+                        # Bollinger Bands signal: score based on position
+                        if bb_pos < 0.1:
+                            bb_score = 1.0  # Strong buy (near lower band)
+                        elif bb_pos < 0.3:
+                            bb_score = 0.5  # Moderate buy
+                        elif bb_pos > 0.9:
+                            bb_score = -1.0  # Strong sell (near upper band)
+                        elif bb_pos > 0.7:
+                            bb_score = -0.5  # Moderate sell
+                        else:
+                            bb_score = 0.0  # Neutral
+                        
+                        # MACD signal: use the calculated signal directly
+                        macd_score = macd_signal
+                        
+                        # Combine signals with equal weights
+                        combined_signal = (rsi_score + bb_score + macd_score) / 3
+                        
+                        # Store signal details for debugging
+                        signal_details.append({
+                            'stock': stock,
+                            'rsi': rsi,
+                            'bb_pos': bb_pos,
+                            'macd_signal': macd_signal,
+                            'rsi_score': rsi_score,
+                            'bb_score': bb_score,
+                            'macd_score': macd_score,
+                            'combined_signal': combined_signal
+                        })
+                        
+                        # Only positive signals get weight (but use absolute value for stronger signals)
+                        if combined_signal > 0:
+                            weights[i] = abs(combined_signal)
+                        elif combined_signal < -0.3:  # Strong negative signal - avoid this stock
+                            weights[i] = 0.0
+                        else:
+                            # Neutral to slightly negative - give small weight
+                            weights[i] = 0.1
+                            
+                    except Exception as e:
+                        logger.warning(f"Error calculating technical indicators for {stock} on {date}: {e}")
+                        continue
+            
+            # Debug logging for first few periods
+            if len(signal_details) > 0 and len(signal_details) <= 5:
+                logger.info(f"Technical analysis signals for {date}: {signal_details[:3]}")
             
             # Normalize weights
             if np.sum(weights) > 0:
                 weights = weights / np.sum(weights)
             else:
                 # Fallback to equal weights if no signals
+                logger.warning(f"No positive technical signals found on {date}, using equal weights")
                 weights = np.ones(self.n_stocks) / self.n_stocks
             
             return weights
@@ -559,27 +772,79 @@ class SimplePortfolioStrategies:
             logger.warning(f"Technical analysis strategy failed: {e}")
             return np.ones(self.n_stocks) / self.n_stocks
     
-    def sentiment_strategy(self, date: str) -> np.ndarray:
-        """Combined sentiment-based strategy (News + Social Media)."""
+    def max_return_60day_strategy(self, date: str, lookback_window: int = 60) -> np.ndarray:
+        """Strategy that maximizes returns from the past 60 days."""
         try:
-            sentiments = self._get_sentiment_data(date)
-            
             weights = np.zeros(self.n_stocks)
             
-            for i in range(self.n_stocks):
-                news_sentiment = sentiments['news_sentiment'][i]
-                reddit_sentiment = sentiments['reddit_sentiment'][i]
-                
-                # Check for NaN values
-                if pd.isna(news_sentiment) or pd.isna(reddit_sentiment):
-                    continue
-                
-                # Combine sentiments (simple average)
-                combined_sentiment = (news_sentiment + reddit_sentiment) / 2
-                
-                # Only positive sentiment gets weight
-                if combined_sentiment > 0:
-                    weights[i] = combined_sentiment
+            for i, stock in enumerate(self.stocks):
+                if stock in self.data and date in self.data[stock].index:
+                    try:
+                        df = self.data[stock].loc[:date]
+                        
+                        if len(df) >= lookback_window:
+                            # Calculate return over the lookback period
+                            start_price = df['close'].iloc[-lookback_window]
+                            end_price = df['close'].iloc[-1]
+                            
+                            if not pd.isna(start_price) and not pd.isna(end_price) and start_price > 0:
+                                period_return = (end_price / start_price) - 1
+                                
+                                # Only positive returns get weight
+                                if period_return > 0:
+                                    weights[i] = period_return
+                    except Exception as e:
+                        logger.warning(f"Error calculating return for {stock} on {date}: {e}")
+                        continue
+            
+            # Normalize weights
+            if np.sum(weights) > 0:
+                weights = weights / np.sum(weights)
+            else:
+                # Fallback to equal weights if no positive returns
+                weights = np.ones(self.n_stocks) / self.n_stocks
+            
+            return weights
+        except Exception as e:
+            logger.warning(f"Max return 60-day strategy failed: {e}")
+            return np.ones(self.n_stocks) / self.n_stocks
+
+    def sentiment_strategy(self, date: str) -> np.ndarray:
+        """Combined sentiment-based strategy (News + Social Media) - evaluates each stock separately."""
+        try:
+            weights = np.zeros(self.n_stocks)
+            
+            for i, stock in enumerate(self.stocks):
+                if stock in self.data and date in self.data[stock].index:
+                    try:
+                        df_row = self.data[stock].loc[date]
+                        
+                        # Get sentiment data for this specific stock
+                        news_sentiment = 0.0
+                        reddit_sentiment = 0.0
+                        
+                        # News sentiment - handle both Series and scalar cases
+                        if 'news_sentiment_mean' in df_row.index:
+                            news_val = df_row['news_sentiment_mean']
+                            if not pd.isna(news_val):
+                                news_sentiment = float(news_val)
+                        
+                        # Reddit sentiment - handle both Series and scalar cases
+                        if 'reddit_title_sentiments_mean' in df_row.index:
+                            reddit_val = df_row['reddit_title_sentiments_mean']
+                            if not pd.isna(reddit_val):
+                                reddit_sentiment = float(reddit_val)
+                        
+                        # Combine sentiments (simple average)
+                        combined_sentiment = (news_sentiment + reddit_sentiment) / 2
+                        
+                        # Only positive sentiment gets weight
+                        if combined_sentiment > 0:
+                            weights[i] = combined_sentiment
+                            
+                    except Exception as e:
+                        logger.warning(f"Error getting sentiment data for {stock} on {date}: {e}")
+                        continue
             
             # Normalize weights
             if np.sum(weights) > 0:
@@ -612,8 +877,10 @@ class SimplePortfolioStrategies:
         for i, date in enumerate(unique_dates[1:], 1):  # Skip first date
             try:
                 # Get portfolio weights
-                if strategy_name in ['equal_weight', 'volatility_adjusted_equal_weight']:
+                if strategy_name == 'equal_weight':
                     weights = strategy_func()
+                elif strategy_name == 'volatility_adjusted_equal_weight':
+                    weights = strategy_func(date)
                 else:
                     weights = strategy_func(date)
                 
@@ -714,7 +981,8 @@ class SimplePortfolioStrategies:
             'black_litterman': self.black_litterman_strategy,
             'minimum_variance': self.minimum_variance_strategy,
             'technical_analysis': self.technical_analysis_strategy,
-            'sentiment': self.sentiment_strategy
+            'sentiment': self.sentiment_strategy,
+            'max_return_60day': self.max_return_60day_strategy
         }
         
         results = {}

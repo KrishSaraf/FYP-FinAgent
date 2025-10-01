@@ -5,6 +5,16 @@ Same state, action, and reward as portfolio_env
 
 This script implements a simpler RL algorithm than PPO while keeping the LSTM architecture
 for temporal modeling of the portfolio environment.
+
+BALANCED LEARNING IMPROVEMENTS:
+- Moderate action std (0.18 → 0.12) with gradual warmup for stable exploration
+- Learning rate scheduling (cosine decay) for gradual learning
+- Higher gamma (0.975) for smoother credit assignment in volatile markets
+- Balanced entropy (0.007 → 0.0015) with slow decay to prevent brittle strategies
+- Reward normalization and clipping [-8, 8] to prevent outlier hijacking
+- Smaller network (128 hidden, 1 LSTM layer) for better generalization
+- Robust early stopping metrics (Sharpe ratio, max drawdown) instead of raw returns
+- Gradient clipping (norm 6.0) for stable updates
 """
 
 import os
@@ -407,11 +417,27 @@ class EpisodeData(NamedTuple):
     lstm_carry_h: chex.Array
     lstm_carry_c: chex.Array
 
+# Curriculum configuration class
+class CurriculumConfig:
+    def __init__(self):
+        # Define curriculum stages here
+        self.stages = {
+            1: {"stage_num": 1, "name": "Exploration", "description": "Initial exploration stage",
+                "learning_rate": 4e-5, "action_std": 0.18, "entropy_coeff": 0.007, "num_updates": 1000},
+            2: {"stage_num": 2, "name": "Refinement", "description": "Refinement of learned policies",
+                "learning_rate": 2e-5, "action_std": 0.15, "entropy_coeff": 0.005, "num_updates": 800},
+            3: {"stage_num": 3, "name": "Optimization", "description": "Final optimization stage",
+                "learning_rate": 1e-5, "action_std": 0.12, "entropy_coeff": 0.003, "num_updates": 600},
+        }
+
+    def get_stage(self, stage_num):
+        return self.stages.get(stage_num, None)
+
 
 class PlainRLLSTMTrainer:
     """Plain RL Trainer using REINFORCE with LSTM architecture and feature combinations"""
     
-    def __init__(self, config: Dict[str, Any], selected_features: List[str]):
+    def __init__(self, config: Dict[str, Any], selected_features: List[str], curriculum_stage: int = None, curriculum_config: CurriculumConfig = None):
         """
         Initialize trainer with plain RL algorithm and LSTM architecture with feature selection.
         
@@ -428,6 +454,8 @@ class PlainRLLSTMTrainer:
         logger.info(f"Initializing Plain RL LSTM Trainer with {len(selected_features)} features")
         
         self.config = config
+        self.curriculum_stage = curriculum_stage
+        self.curriculum_config = curriculum_config
         self.nan_count = 0
         self.max_nan_resets = 5
         
@@ -438,6 +466,10 @@ class PlainRLLSTMTrainer:
         self.patience_counter = 0
         self.performance_history = []
         self.should_stop_early = False
+
+        # Apply curriculum stage settings if provided
+        if self.curriculum_stage and self.curriculum_config:
+            self._apply_curriculum_settings()
 
         logger.info("Initializing Plain RL LSTM Trainer...")
 
@@ -497,7 +529,96 @@ class PlainRLLSTMTrainer:
         elif config.get('use_wandb', False) and wandb is None:
             logger.warning("Wandb requested but not available. Install wandb to enable logging.")
 
+        # Initialize balanced learning components
+        self.training_step = 0
+        self.portfolio_values_history = []
+        self.returns_history = []
+        
+        # Reward normalization
+        self.reward_normalizer = self._create_reward_normalizer()
+        
+        # Learning rate scheduler
+        self.lr_scheduler = self._create_lr_scheduler()
+        
         logger.info("Plain RL LSTM Trainer initialization complete!")
+    
+    def _create_reward_normalizer(self):
+        """Create reward normalizer for stable learning"""
+        clip_range = self.config.get('reward_clip_range', (-8.0, 8.0))
+        scale = self.config.get('reward_scale', 1.2)
+        
+        class RewardNormalizer:
+            def __init__(self, clip_range, scale, window_size=100):
+                self.clip_range = clip_range
+                self.scale = scale
+                self.window_size = window_size
+                self.reward_history = []
+                self.running_mean = 0.0
+                self.running_std = 1.0
+                self.alpha = 0.01  # Exponential moving average factor
+            
+            def normalize(self, rewards):
+                """Normalize and clip rewards"""
+                rewards = np.array(rewards)
+                
+                # Update running statistics
+                if len(self.reward_history) > 0:
+                    self.running_mean = (1 - self.alpha) * self.running_mean + self.alpha * rewards.mean()
+                    self.running_std = (1 - self.alpha) * self.running_std + self.alpha * rewards.std()
+                
+                # Add to history
+                self.reward_history.extend(rewards.flatten())
+                if len(self.reward_history) > self.window_size:
+                    self.reward_history = self.reward_history[-self.window_size:]
+                
+                # Normalize rewards
+                if self.running_std > 1e-8:
+                    normalized_rewards = (rewards - self.running_mean) / self.running_std
+                else:
+                    normalized_rewards = rewards
+                
+                # Scale and clip
+                scaled_rewards = normalized_rewards * self.scale
+                clipped_rewards = np.clip(scaled_rewards, self.clip_range[0], self.clip_range[1])
+                
+                return clipped_rewards
+        
+        return RewardNormalizer(clip_range, scale)
+    
+    def _create_lr_scheduler(self):
+        """Create learning rate scheduler for gradual learning"""
+        initial_lr = self.config.get('learning_rate', 4e-5)
+        schedule_type = self.config.get('lr_schedule_type', 'cosine')
+        decay_steps = self.config.get('lr_decay_steps', 6000)
+        min_lr = self.config.get('lr_min', 8e-7)
+        
+        class LearningRateScheduler:
+            def __init__(self, initial_lr, schedule_type, decay_steps, min_lr):
+                self.initial_lr = initial_lr
+                self.schedule_type = schedule_type
+                self.decay_steps = decay_steps
+                self.min_lr = min_lr
+            
+            def get_lr(self, step):
+                """Get learning rate for current step"""
+                if self.schedule_type == 'cosine':
+                    # Cosine annealing
+                    progress = min(step / self.decay_steps, 1.0)
+                    lr = self.min_lr + (self.initial_lr - self.min_lr) * 0.5 * (1 + np.cos(np.pi * progress))
+                elif self.schedule_type == 'linear':
+                    # Linear decay
+                    progress = min(step / self.decay_steps, 1.0)
+                    lr = self.initial_lr - (self.initial_lr - self.min_lr) * progress
+                elif self.schedule_type == 'exponential':
+                    # Exponential decay
+                    decay_rate = np.log(self.min_lr / self.initial_lr) / self.decay_steps
+                    lr = self.initial_lr * np.exp(decay_rate * step)
+                else:
+                    lr = self.initial_lr
+                
+                return max(lr, self.min_lr)
+        
+        return LearningRateScheduler(initial_lr, schedule_type, decay_steps, min_lr)
     
     def _get_env_config(self) -> Dict[str, Any]:
         """Get environment configuration"""
@@ -547,6 +668,23 @@ class PlainRLLSTMTrainer:
         except Exception as e:
             logger.error(f"Failed to initialize network parameters: {e}")
             raise
+
+    def _apply_curriculum_settings(self):
+        """Apply curriculum-specific settings to the configuration."""
+        stage = self.curriculum_config.get_stage(self.curriculum_stage)
+        if not stage:
+            raise ValueError(f"Invalid curriculum stage: {self.curriculum_stage}")
+        
+        logger.info(f"Applying curriculum stage {stage['stage_num']}: {stage['name']}")
+        logger.info(f"Description: {stage['description']}")
+
+        # Update config with stage-specific hyperparameters
+        self.config.update({
+            'learning_rate': stage['learning_rate'],
+            'action_std': stage['action_std'],
+            'entropy_coeff': stage['entropy_coeff'],
+            'num_updates': stage['num_updates'],
+        })
 
     def _create_dummy_carry(self, batch_size: int) -> List[LSTMState]:
         """Create dummy LSTM carry states"""
@@ -804,8 +942,45 @@ class PlainRLLSTMTrainer:
 
     def train_step(self, train_state: train_state.TrainState, episode: EpisodeData,
                    rng_key: chex.PRNGKey) -> Tuple[train_state.TrainState, Dict[str, chex.Array]]:
-        """Perform one REINFORCE training step"""
+        """Perform one REINFORCE training step with balanced learning features"""
 
+        # Update hyperparameters based on training step
+        self.training_step += 1
+        
+        # Update learning rate
+        current_lr = self.lr_scheduler.get_lr(self.training_step)
+        
+        # Update action standard deviation (warmup)
+        warmup_steps = self.config.get('action_std_warmup_steps', 1200)
+        action_std_initial = self.config.get('action_std', 0.18)
+        action_std_final = self.config.get('action_std_final', 0.12)
+        
+        if self.training_step < warmup_steps:
+            progress = self.training_step / warmup_steps
+            current_action_std = action_std_initial + (action_std_final - action_std_initial) * progress
+        else:
+            current_action_std = action_std_final
+        
+        # Update entropy coefficient (decay)
+        entropy_decay_steps = self.config.get('entropy_decay_steps', 4000)
+        entropy_initial = self.config.get('entropy_coeff', 0.007)
+        entropy_final = self.config.get('entropy_final', 0.0015)
+        
+        if self.training_step < entropy_decay_steps:
+            progress = self.training_step / entropy_decay_steps
+            current_entropy_coeff = entropy_initial + (entropy_final - entropy_initial) * progress
+        else:
+            current_entropy_coeff = entropy_final
+        
+        # Update config with current values
+        self.config['action_std'] = current_action_std
+        self.config['entropy_coeff'] = current_entropy_coeff
+        
+        # Normalize rewards if enabled
+        if self.config.get('reward_normalization', True):
+            normalized_rewards = self.reward_normalizer.normalize(episode.rewards)
+            episode = episode._replace(rewards=normalized_rewards)
+        
         # Compute returns
         returns = self.compute_returns(episode)
         
@@ -829,35 +1004,102 @@ class PlainRLLSTMTrainer:
             lambda g: jnp.where(jnp.isinf(g), jnp.sign(g) * 10.0, g), grads
         )
         
-        # Gradient clipping
+        # Gradient clipping with balanced learning norm
+        grad_clip_norm = self.config.get('grad_clip_norm', 6.0)
         grads = jax.tree_util.tree_map(
-            lambda g: jnp.clip(g, -10.0, 10.0), grads
+            lambda g: jnp.clip(g, -grad_clip_norm, grad_clip_norm), grads
         )
 
         # Apply gradients
         train_state = train_state.apply_gradients(grads=grads)
         
+        # Track portfolio values and returns for robust metrics
+        portfolio_values = self.env_states.portfolio_value
+        self.portfolio_values_history.extend(portfolio_values.tolist())
+        
+        # Calculate returns from portfolio values
+        if len(self.portfolio_values_history) > 1:
+            portfolio_values_array = np.array(self.portfolio_values_history)
+            returns = np.diff(portfolio_values_array) / portfolio_values_array[:-1]
+            self.returns_history.extend(returns.tolist())
+        
+        # Add hyperparameter tracking to metrics
+        metrics.update({
+            'learning_rate': current_lr,
+            'action_std': current_action_std,
+            'entropy_coeff': current_entropy_coeff,
+            'reward_mean': episode.rewards.mean(),
+            'reward_std': episode.rewards.std(),
+        })
+        
         return train_state, metrics
 
+    def calculate_robust_metric(self, portfolio_values: np.ndarray, returns: np.ndarray) -> float:
+        """Calculate robust performance metric for early stopping"""
+        if len(returns) == 0:
+            return 0.0
+        
+        # Calculate Sharpe ratio (risk-adjusted returns)
+        if returns.std() > 1e-8:
+            sharpe_ratio = returns.mean() / returns.std() * np.sqrt(252)  # Annualized
+        else:
+            sharpe_ratio = 0.0
+        
+        # Calculate max drawdown
+        if len(portfolio_values) > 0:
+            peak = np.maximum.accumulate(portfolio_values)
+            drawdown = (portfolio_values - peak) / peak
+            max_drawdown = abs(np.min(drawdown))
+        else:
+            max_drawdown = 0.0
+        
+        # Calculate volatility-adjusted return
+        if returns.std() > 1e-8:
+            vol_adjusted_return = returns.mean() / returns.std() * np.sqrt(252)
+        else:
+            vol_adjusted_return = 0.0
+        
+        # Return the appropriate metric based on config
+        performance_metric = self.config.get('performance_metric', 'sharpe_ratio')
+        
+        if performance_metric == 'sharpe_ratio':
+            return sharpe_ratio
+        elif performance_metric == 'max_drawdown':
+            return -max_drawdown  # Negative for maximization
+        elif performance_metric == 'volatility_adjusted_return':
+            return vol_adjusted_return
+        else:
+            return returns.mean()  # Fallback to mean return
+
     def check_early_stopping(self, current_performance: float, update_step: int) -> bool:
-        """Check if early stopping criteria are met"""
-        self.performance_history.append(current_performance)
+        """Check if early stopping criteria are met using robust metrics"""
+        # Calculate robust metric if we have sufficient data
+        if len(self.returns_history) > 10:
+            portfolio_values_array = np.array(self.portfolio_values_history[-100:])  # Last 100 steps
+            returns_array = np.array(self.returns_history[-100:])
+            robust_metric = self.calculate_robust_metric(portfolio_values_array, returns_array)
+        else:
+            robust_metric = current_performance
+        
+        self.performance_history.append(robust_metric)
         
         if len(self.performance_history) > 50:
             self.performance_history = self.performance_history[-50:]
         
-        improvement = current_performance - self.best_performance
+        improvement = robust_metric - self.best_performance
         
         if improvement > self.early_stopping_min_delta:
-            self.best_performance = current_performance
+            self.best_performance = robust_metric
             self.patience_counter = 0
-            logger.info(f"New best performance: {current_performance:.4f} (improvement: {improvement:.4f})")
+            performance_metric = self.config.get('performance_metric', 'sharpe_ratio')
+            logger.info(f"New best {performance_metric}: {robust_metric:.4f} (improvement: {improvement:.4f})")
         else:
             self.patience_counter += 1
             
         if self.patience_counter >= self.early_stopping_patience:
+            performance_metric = self.config.get('performance_metric', 'sharpe_ratio')
             logger.info(f"Early stopping triggered after {self.patience_counter} steps without improvement")
-            logger.info(f"Best performance: {self.best_performance:.4f}, Current: {current_performance:.4f}")
+            logger.info(f"Best {performance_metric}: {self.best_performance:.4f}, Current: {robust_metric:.4f}")
             return True
         
         return False
@@ -1009,14 +1251,22 @@ Examples:
         default='ohlcv+technical',
         help='Feature combination to use (e.g., ohlcv+technical, all, etc.)'
     )
+
+    # Curriculum learning arguments
+    parser.add_argument('--curriculum_stage', type=int, choices=[1, 2, 3],
+                        help='Specific curriculum stage to run (1=exploration, 2=refinement, 3=optimization)')
+    parser.add_argument('--auto_curriculum', action='store_true',
+                        help='Automatically progress through all curriculum stages')
+    parser.add_argument('--start_stage', type=int, default=1, choices=[1, 2, 3],
+                        help='Stage to start from in auto mode')
     
-    # Training configuration arguments
-    parser.add_argument('--num_updates', type=int, default=1000, help='Number of training updates')
-    parser.add_argument('--learning_rate', type=float, default=1e-4, help='Learning rate')
+    # Training configuration arguments - Balanced Learning Defaults
+    parser.add_argument('--num_updates', type=int, default=2500, help='Number of training updates')
+    parser.add_argument('--learning_rate', type=float, default=4e-5, help='Learning rate (balanced: 4e-5)')
     parser.add_argument('--n_envs', type=int, default=8, help='Number of parallel environments')
-    parser.add_argument('--episode_length', type=int, default=100, help='Episode length')
-    parser.add_argument('--hidden_size', type=int, default=256, help='LSTM hidden size')
-    parser.add_argument('--n_lstm_layers', type=int, default=2, help='Number of LSTM layers')
+    parser.add_argument('--episode_length', type=int, default=120, help='Episode length (balanced: 120)')
+    parser.add_argument('--hidden_size', type=int, default=128, help='LSTM hidden size (balanced: 128)')
+    parser.add_argument('--n_lstm_layers', type=int, default=1, help='Number of LSTM layers (balanced: 1)')
     
     # Data configuration arguments
     parser.add_argument('--data_root', type=str, default='processed_data/', help='Data root directory')
@@ -1024,9 +1274,12 @@ Examples:
     parser.add_argument('--train_end_date', type=str, default='2025-03-06', help='Training end date')
     parser.add_argument('--window_size', type=int, default=30, help='Observation window size')
     
-    # Early stopping arguments
-    parser.add_argument('--early_stopping_patience', type=int, default=200, help='Early stopping patience')
-    parser.add_argument('--early_stopping_min_delta', type=float, default=0.001, help='Minimum improvement threshold')
+    # Early stopping arguments - Balanced Learning Defaults
+    parser.add_argument('--early_stopping_patience', type=int, default=180, help='Early stopping patience (balanced: 180)')
+    parser.add_argument('--early_stopping_min_delta', type=float, default=0.0025, help='Minimum improvement threshold (balanced: 0.0025)')
+    parser.add_argument('--performance_metric', type=str, default='sharpe_ratio', 
+                       choices=['sharpe_ratio', 'max_drawdown', 'volatility_adjusted_return'],
+                       help='Performance metric for early stopping (balanced: sharpe_ratio)')
     
     # Other arguments
     parser.add_argument('--use_wandb', action='store_true', help='Use Weights & Biases logging')
@@ -1036,6 +1289,9 @@ Examples:
     
     args = parser.parse_args()
     
+    # Curriculum learning configuration
+    curriculum_config = CurriculumConfig()
+
     # List available combinations if requested
     if args.list_combinations:
         feature_selector = FeatureSelector()
@@ -1083,21 +1339,42 @@ Examples:
         'n_envs': args.n_envs,
         'episode_length': args.episode_length,
         
-        # REINFORCE hyperparameters
+        # REINFORCE hyperparameters - Balanced Learning Configuration
         'num_updates': args.num_updates,
-        'gamma': 0.99,
+        'gamma': 0.975,  # Higher gamma for smoother credit assignment
         'learning_rate': args.learning_rate,
-        'value_coeff': 0.5,
-        'entropy_coeff': 0.01,
-        'action_std': 0.3,
+        'value_coeff': 0.25,  # Lower value coefficient for policy focus
+        'entropy_coeff': 0.007,  # Moderate entropy early, prevents brittle strategies
+        'action_std': 0.18,  # Moderate action std for balanced exploration
+        'action_std_final': 0.12,  # Final action std for stable exploitation
+        'action_std_warmup_steps': 1200,  # Gradual exploration -> exploitation transition
+        
+        # Learning rate scheduling
+        'lr_schedule_type': 'cosine',  # Smooth decay for fine-grained stability
+        'lr_decay_steps': 6000,  # Gradual decay over training
+        'lr_min': 8e-7,  # Minimum LR for stability
+        
+        # Entropy decay
+        'entropy_decay_steps': 4000,  # Slow decay maintains exploration
+        'entropy_final': 0.0015,  # Final entropy for exploitation
+        
+        # Reward normalization
+        'reward_normalization': True,  # Essential for financial RL
+        'reward_clip_range': (-8.0, 8.0),  # Clip extreme rewards
+        'reward_scale': 1.2,  # Scale factor for normalized rewards
+        
+        # Gradient clipping
+        'grad_clip_norm': 6.0,  # Moderate gradient clipping
         
         # Early stopping configuration
         'early_stopping_patience': args.early_stopping_patience,
         'early_stopping_min_delta': args.early_stopping_min_delta,
+        'performance_metric': args.performance_metric,
         
-        # Network architecture
+        # Network architecture - Balanced Learning Configuration
         'hidden_size': args.hidden_size,
         'n_lstm_layers': args.n_lstm_layers,
+        'dropout_rate': 0.12,  # Dropout for regularization
         
         # Logging and monitoring
         'use_wandb': args.use_wandb,
@@ -1108,11 +1385,14 @@ Examples:
     
     # Run training
     try:
-        logger.info("Creating Plain RL LSTM Trainer...")
-        trainer = PlainRLLSTMTrainer(config, selected_features)
-
-        logger.info("Starting training...")
-        trainer.train()
+        if args.auto_curriculum:
+            logger.info("Running FULL CURRICULUM (all stages)")
+            for stage_num in range(args.start_stage, 4):
+                trainer = PlainRLLSTMTrainer(config, selected_features, curriculum_stage=stage_num, curriculum_config=curriculum_config)
+                trainer.train()
+        else:
+            trainer = PlainRLLSTMTrainer(config, selected_features, curriculum_stage=args.curriculum_stage, curriculum_config=curriculum_config)
+            trainer.train()
 
         logger.info("Training completed successfully!")
         

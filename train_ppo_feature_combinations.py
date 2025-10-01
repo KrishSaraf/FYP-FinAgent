@@ -405,749 +405,192 @@ class CustomPortfolioEnv(JAXVectorizedPortfolioEnv):
         
         return filtered_df.fillna(0.0)
 
+class CurriculumConfig:
+    def __init__(self):
+        # Define curriculum stages here
+        self.stages = {
+            1: {"stage_num": 1, "name": "Exploration", "description": "Initial exploration stage"},
+            2: {"stage_num": 2, "name": "Refinement", "description": "Refinement of learned policies"},
+            3: {"stage_num": 3, "name": "Optimization", "description": "Final optimization stage"}
+        }
+
+    def get_stage(self, stage_num):
+        return self.stages.get(stage_num, None)
 
 class FeatureCombinationPPOTrainer(PPOTrainer):
-    """PPO Trainer with feature combination support, hyperparameter tuning, and robust early stopping"""
-    
+    """PPO Trainer with feature combination support, curriculum learning, and robust early stopping."""
+
     def __init__(self, config: Dict[str, Any], selected_features: List[str]):
         """
-        Initialize trainer with selected features and enhanced hyperparameter tuning.
+        Initialize trainer with selected features and curriculum learning support.
         
         Args:
             config: Training configuration
             selected_features: List of features to use
         """
         self.selected_features = selected_features
-        
-        # Update config to use custom environment
-        config['use_custom_env'] = True
-        config['selected_features'] = selected_features
-        
-        logger.info(f"Initializing Enhanced PPO Trainer with {len(selected_features)} features")
-        
-        # Initialize parent class but override environment creation
         self.config = config
-        self.nan_count = 0
-        self.max_nan_resets = 5
+        self.curriculum_stage = config.get('curriculum_stage', None)
+        self.curriculum_config = config.get('curriculum_config', None)
         
-        # Enhanced early stopping configuration with robust metrics
-        self.early_stopping_patience = config.get('early_stopping_patience', 150)
-        self.early_stopping_min_delta = config.get('early_stopping_min_delta', 0.005)
+        # Apply curriculum stage settings if provided
+        if self.curriculum_stage and self.curriculum_config:
+            self._apply_curriculum_settings()
+        
+        # Initialize parent class
+        super().__init__(self.config, selected_features)
+        
+        # Initialize training state and metrics
+        self._initialize_training_state()
+
+    def _apply_curriculum_settings(self):
+        """Apply curriculum-specific settings to the configuration."""
+        stage = self.curriculum_config.get_stage(self.curriculum_stage)
+        logger.info(f"Initializing Stage {stage.stage_num}: {stage.name}")
+        logger.info(f"Description: {stage.description}")
+        
+        # Update config with stage-specific hyperparameters
+        self.config.update({
+            'action_std': stage.exploration_std,
+            'entropy_coeff': stage.entropy_coeff,
+            'clip_eps': stage.clip_eps,
+            'learning_rate': stage.learning_rate,
+            'num_updates': stage.num_epochs,
+            'final_action_std': stage.exploration_std * 0.5,
+            'action_std_decay_steps': stage.num_epochs // 2,
+            'final_entropy_coeff': stage.entropy_coeff * 0.5,
+            'entropy_decay_steps': int(stage.num_epochs * 0.8),
+        })
+        
+        # Store stage-specific parameters
+        self.epsilon_uniform = stage.epsilon_uniform
+        self.reward_scaling = stage.reward_scaling
+        self.enable_constraints = stage.enable_constraints
+        
+        # Early stopping settings
+        if stage.stage_num == 1:
+            self.config.update({'early_stopping_patience': 30, 'early_stopping_min_delta': 0.001})
+        elif stage.stage_num == 2:
+            self.config.update({'early_stopping_patience': 50, 'early_stopping_min_delta': 0.005})
+        else:
+            self.config.update({'early_stopping_patience': 75, 'early_stopping_min_delta': 0.01})
+
+    def _initialize_training_state(self):
+        """Initialize training state and metrics."""
+        self.early_training_metrics = {
+            'portfolio_values': [],
+            'rewards': [],
+            'variances': [],
+            'losses': []
+        }
         self.best_performance = -float('inf')
         self.patience_counter = 0
-        self.performance_history = []
         self.should_stop_early = False
-        
-        # Robust performance tracking
-        self.sharpe_history = []
-        self.max_drawdown_history = []
-        self.volatility_history = []
-        self.best_sharpe = -float('inf')
-        self.best_max_drawdown = float('inf')
-        
-        # KL divergence tracking for policy update control
-        self.kl_divergence_history = []
-        self.max_kl_divergence = config.get('max_kl_divergence', 0.03)
-        self.kl_penalty_coeff = config.get('kl_penalty_coeff', 0.1)
-        
-        # Reward normalization
-        self.reward_mean = 0.0
-        self.reward_std = 1.0
-        self.reward_clip_range = config.get('reward_clip_range', [-10.0, 10.0])
-        self.reward_normalization_window = config.get('reward_normalization_window', 1000)
-        self.recent_rewards = []
-        
-        # Action std annealing
-        self.initial_action_std = config.get('action_std', 0.3)
-        self.final_action_std = config.get('final_action_std', 0.15)
-        self.action_std_decay_steps = config.get('action_std_decay_steps', 500)
-        
-        # Entropy annealing
-        self.initial_entropy_coeff = config.get('entropy_coeff', 0.01)
-        self.final_entropy_coeff = config.get('final_entropy_coeff', 0.005)
-        self.entropy_decay_steps = config.get('entropy_decay_steps', 800)
 
-        logger.info("Initializing PPO Trainer...")
-
-        # Initialize custom environment with error handling
-        try:
-            self._initialize_environment()
-        except Exception as e:
-            logger.error(f"Failed to initialize custom environment: {e}")
-            raise
-
-        # Vectorized environment functions
-        self.vmap_reset = jax.vmap(self.env.reset, in_axes=(0,))
-        self.vmap_step = jax.vmap(self.env.step, in_axes=(0, 0))
-        
-        # Initialize network
-        self.network = ActorCriticLSTM(
-            action_dim=self.env.action_dim,
-            hidden_size=config.get('hidden_size', 256),
-            n_lstm_layers=config.get('n_lstm_layers', 1)
-        )
-
-        # Initialize parameters with robust error handling
-        self._initialize_parameters()
-
-        # Enhanced optimizer with improved learning rate scheduling
-        self.total_steps = config.get('num_updates', 1000)
-        
-        # Multi-stage learning rate schedule for better learning dynamics
-        warmup_steps = config.get('warmup_steps', 50)
-        decay_steps = self.total_steps - warmup_steps
-        
-        # Warmup + cosine decay schedule
-        def create_lr_schedule():
-            def lr_fn(step):
-                # Warmup phase
-                if step < warmup_steps:
-                    warmup_lr = config.get('learning_rate', 3e-4) * (step / warmup_steps)
-                    return warmup_lr
-                else:
-                    # Cosine decay after warmup
-                    decay_step = step - warmup_steps
-                    cosine_lr = optax.cosine_decay_schedule(
-                        init_value=config.get('learning_rate', 3e-4),
-                        decay_steps=decay_steps,
-                        alpha=0.05  # Minimum learning rate is 5% of initial
-                    )(decay_step)
-                    return cosine_lr
-            return lr_fn
-        
-        self.learning_rate_schedule = create_lr_schedule()
-        
-        # Enhanced optimizer with better stability
-        self.optimizer = optax.chain(
-            optax.clip_by_global_norm(config.get('max_grad_norm', 0.5)),  # Moderate clipping
-            optax.adamw(  # AdamW for better weight decay
-                learning_rate=self.learning_rate_schedule,
-                eps=1e-8,
-                b1=0.9,
-                b2=0.999,
-                weight_decay=config.get('weight_decay', 1e-5)  # Small weight decay for regularization
-            )
-        )
-
-        # Create training state
-        self.train_state = train_state.TrainState.create(
-            apply_fn=self.network.apply,
-            params=self.params,
-            tx=self.optimizer
-        )
-
-        # Initialize RNG
-        self.rng = jax.random.PRNGKey(self.config.get('seed', 42))
-        
-        # Initialize environment and LSTM state
-        self._initialize_environment_state()
-
-        # Initialize wandb if enabled
-        if config.get('use_wandb', False) and wandb is not None:
-            try:
-                wandb.init(
-                    project=config.get('wandb_project', 'finagent-ppo'),
-                    config=config,
-                    name=f"ppo-{config.get('feature_combination', 'unknown')}-{int(time.time())}"
-                )
-                logger.info("Wandb initialized successfully")
-            except Exception as e:
-                logger.warning(f"Failed to initialize wandb: {e}")
-        elif config.get('use_wandb', False) and wandb is None:
-            logger.warning("Wandb requested but not available. Install wandb to enable logging.")
-
-        logger.info("Enhanced PPO Trainer initialization complete!")
-    
-    def normalize_rewards(self, rewards: jnp.ndarray) -> jnp.ndarray:
-        """
-        Normalize rewards to prevent outlier dominance and improve learning stability.
-        
-        Args:
-            rewards: Raw rewards from environment
-            
-        Returns:
-            Normalized rewards
-        """
-        # Convert to numpy for easier manipulation
-        rewards_np = np.array(rewards)
-        
-        # Add to recent rewards for running statistics
-        self.recent_rewards.extend(rewards_np.flatten())
-        
-        # Keep only recent window
-        if len(self.recent_rewards) > self.reward_normalization_window:
-            self.recent_rewards = self.recent_rewards[-self.reward_normalization_window:]
-        
-        # Update running statistics
-        if len(self.recent_rewards) > 10:  # Need some data for statistics
-            self.reward_mean = np.mean(self.recent_rewards)
-            self.reward_std = np.std(self.recent_rewards) + 1e-8  # Avoid division by zero
-        
-        # Normalize rewards
-        if self.reward_std > 1e-8:
-            normalized_rewards = (rewards_np - self.reward_mean) / self.reward_std
-        else:
-            normalized_rewards = rewards_np
-        
-        # Clip extreme rewards to prevent outlier dominance
-        normalized_rewards = np.clip(
-            normalized_rewards, 
-            self.reward_clip_range[0], 
-            self.reward_clip_range[1]
-        )
-        
-        return jnp.array(normalized_rewards)
-    
-    def get_current_action_std(self, step: int) -> float:
-        """Get current action standard deviation with annealing"""
-        if step >= self.action_std_decay_steps:
-            return self.final_action_std
-        
-        # Linear annealing from initial to final
-        progress = step / self.action_std_decay_steps
-        current_std = self.initial_action_std - (self.initial_action_std - self.final_action_std) * progress
-        return current_std
-    
-    def get_current_entropy_coeff(self, step: int) -> float:
-        """Get current entropy coefficient with annealing"""
-        if step >= self.entropy_decay_steps:
-            return self.final_entropy_coeff
-        
-        # Linear annealing from initial to final
-        progress = step / self.entropy_decay_steps
-        current_coeff = self.initial_entropy_coeff - (self.initial_entropy_coeff - self.final_entropy_coeff) * progress
-        return current_coeff
-    
-    def compute_robust_metrics(self, trajectory: Trajectory) -> Dict[str, float]:
-        """
-        Compute robust performance metrics for early stopping.
-        
-        Args:
-            trajectory: Current trajectory
-            
-        Returns:
-            Dictionary of robust metrics
-        """
-        # Compute episode returns
-        episode_returns = trajectory.rewards.sum(axis=0)  # Sum over time steps
-        
-        # Sharpe ratio (risk-adjusted return)
-        if len(episode_returns) > 1:
-            sharpe_ratio = float(jnp.mean(episode_returns) / (jnp.std(episode_returns) + 1e-8))
-        else:
-            sharpe_ratio = 0.0
-        
-        # Max drawdown approximation (simplified)
-        cumulative_returns = jnp.cumsum(trajectory.rewards, axis=0)
-        running_max = jnp.maximum.accumulate(cumulative_returns, axis=0)
-        drawdowns = running_max - cumulative_returns
-        max_drawdown = float(jnp.max(drawdowns))
-        
-        # Volatility (standard deviation of returns)
-        volatility = float(jnp.std(trajectory.rewards))
-        
-        # Risk-adjusted return (return / volatility)
-        mean_return = float(jnp.mean(trajectory.rewards))
-        risk_adjusted_return = mean_return / (volatility + 1e-8)
-        
-        return {
-            'sharpe_ratio': sharpe_ratio,
-            'max_drawdown': max_drawdown,
-            'volatility': volatility,
-            'risk_adjusted_return': risk_adjusted_return,
-            'mean_return': mean_return
-        }
-    
-    def _initialize_parameters(self):
-        """Initialize network parameters with comprehensive error handling"""
-        logger.info("Initializing network parameters...")
-        try:
-            # Create dummy input for parameter initialization
-            dummy_obs = jnp.zeros((1, self.env.obs_dim))
-            dummy_lstm_carry = [
-                LSTMState(
-                    h=jnp.zeros((1, self.config.get('hidden_size', 256))),
-                    c=jnp.zeros((1, self.config.get('hidden_size', 256)))
-                ) for _ in range(self.config.get('n_lstm_layers', 1))
-            ]
-            
-            # Initialize parameters with Flax tracing workaround
-            rng = jax.random.PRNGKey(42)
-            
-            # Workaround for Flax tracing error - use jax.jit to avoid tracing issues
-            try:
-                # Try direct initialization first
-                self.params = self.network.init(rng, dummy_obs, dummy_lstm_carry)
-                logger.info("Network parameters initialized successfully (direct method)")
-            except Exception as trace_error:
-                logger.warning(f"Direct initialization failed: {trace_error}")
-                logger.info("Attempting alternative initialization method...")
-                
-                # Alternative method: try using the original initialization approach
-                try:
-                    # Try using the same approach as in train_ppo_lstm.py
-                    dummy_carry = self._create_dummy_carry(1)  # Single environment
-                    self.params = self.network.init(rng, dummy_obs, dummy_carry)
-                    logger.info("Network parameters initialized successfully (original method)")
-                except Exception as orig_error:
-                    logger.warning(f"Original initialization failed: {orig_error}")
-                    
-                    # Skip JIT initialization and go directly to manual initialization
-                    logger.info("Attempting manual parameter initialization...")
-                    
-                    # Manual initialization as fallback
-                    self.params = self._manual_init_parameters(rng, dummy_obs, dummy_lstm_carry)
-                    logger.info("Network parameters initialized successfully (manual method)")
-            
-        except Exception as e:
-            logger.error(f"Failed to initialize network parameters: {e}")
-            raise
-    
-    def _manual_init_parameters(self, rng_key, dummy_obs, dummy_lstm_carry):
-        """Manual parameter initialization as fallback"""
-        logger.info("Using manual parameter initialization...")
-        
-        # Create parameter structure matching ActorCriticLSTM
-        hidden_size = self.config.get('hidden_size', 256)
-        action_dim = self.env.action_dim
-        n_lstm_layers = self.config.get('n_lstm_layers', 1)
-        
-        # Split RNG for different components
-        rng_key, input_rng, lstm_rng, actor_rng, critic_rng = jax.random.split(rng_key, 5)
-        
-        # Initialize input preprocessing layers
-        input_norm_params = {
-            'scale': jnp.ones(dummy_obs.shape[-1]),
-            'bias': jnp.zeros(dummy_obs.shape[-1])
-        }
-        
-        input_dense_params = {
-            'kernel': jax.random.normal(input_rng, (dummy_obs.shape[-1], hidden_size)) * 0.1,
-            'bias': jnp.zeros(hidden_size)
-        }
-        
-        # Initialize LSTM layers
-        lstm_cells_params = {}
-        lstm_layer_norms_params = {}
-        
-        for i in range(n_lstm_layers):
-            lstm_rng, layer_rng = jax.random.split(lstm_rng)
-            
-            # LSTM cell parameters (input + hidden -> 4 * hidden_size)
-            lstm_cells_params[f'layer_{i}'] = {
-                'kernel': jax.random.normal(layer_rng, (hidden_size, 4 * hidden_size)) * 0.1,
-                'recurrent_kernel': jax.random.normal(layer_rng, (hidden_size, 4 * hidden_size)) * 0.1,
-                'bias': jnp.zeros(4 * hidden_size)
-            }
-            
-            # LayerNorm for LSTM outputs
-            lstm_layer_norms_params[f'layer_{i}'] = {
-                'scale': jnp.ones(hidden_size),
-                'bias': jnp.zeros(hidden_size)
-            }
-        
-        # Initialize actor head
-        actor_rng1, actor_rng2, actor_rng3 = jax.random.split(actor_rng, 3)
-        
-        actor_params = {
-            'dense1': {
-                'kernel': jax.random.normal(actor_rng1, (hidden_size, hidden_size // 2)) * 0.1,
-                'bias': jnp.zeros(hidden_size // 2)
-            },
-            'dense2': {
-                'kernel': jax.random.normal(actor_rng2, (hidden_size // 2, hidden_size // 4)) * 0.1,
-                'bias': jnp.zeros(hidden_size // 4)
-            },
-            'output': {
-                'kernel': jax.random.normal(actor_rng3, (hidden_size // 4, action_dim)) * 0.1,
-                'bias': jnp.zeros(action_dim)
-            }
-        }
-        
-        # Initialize critic head
-        critic_rng1, critic_rng2, critic_rng3 = jax.random.split(critic_rng, 3)
-        
-        critic_params = {
-            'dense1': {
-                'kernel': jax.random.normal(critic_rng1, (hidden_size, hidden_size // 2)) * 0.1,
-                'bias': jnp.zeros(hidden_size // 2)
-            },
-            'dense2': {
-                'kernel': jax.random.normal(critic_rng2, (hidden_size // 2, hidden_size // 4)) * 0.1,
-                'bias': jnp.zeros(hidden_size // 4)
-            },
-            'output': {
-                'kernel': jax.random.normal(critic_rng3, (hidden_size // 4, 1)) * 0.1,
-                'bias': jnp.zeros(1)
-            }
-        }
-        
-        return {
-            'input_norm': input_norm_params,
-            'input_dense': input_dense_params,
-            'lstm_cells': lstm_cells_params,
-            'lstm_layer_norms': lstm_layer_norms_params,
-            'actor_dense1': actor_params['dense1'],
-            'actor_dense2': actor_params['dense2'],
-            'actor_output': actor_params['output'],
-            'critic_dense1': critic_params['dense1'],
-            'critic_dense2': critic_params['dense2'],
-            'critic_output': critic_params['output']
-        }
-    
-    def _create_dummy_carry(self, batch_size: int) -> List[LSTMState]:
-        """Create dummy LSTM carry states"""
-        return [
-            LSTMState(
-                h=jnp.zeros((batch_size, self.config.get('hidden_size', 256))),
-                c=jnp.zeros((batch_size, self.config.get('hidden_size', 256)))
-            ) for _ in range(self.config.get('n_lstm_layers', 1))
-        ]
-    
-    def _initialize_environment_state(self):
-        """Initialize environment and LSTM state"""
-        logger.info("Initializing environment state...")
-        try:
-            # Initialize environment states
-            rng = jax.random.split(jax.random.PRNGKey(42), self.config.get('n_envs', 1))
-            self.env_states, self.obs = self.vmap_reset(rng)
-            
-            # Clean environment observations (handle inf/nan)
-            self.obs = jnp.where(jnp.isnan(self.obs), 0.0, self.obs)
-            self.obs = jnp.where(jnp.isinf(self.obs), 0.0, self.obs)
-            
-            # Initialize LSTM carry states
-            self.collector_carry = self._create_dummy_carry(self.config.get('n_envs', 1))
-            
-            logger.info("Environment states initialized successfully")
-            
-        except Exception as e:
-            logger.error(f"Failed to initialize environment states: {e}")
-            raise
-    
-    def _get_env_config(self) -> Dict[str, Any]:
-        """Get environment configuration with feature selection"""
-        return {
-            'data_root': self.config['data_root'],
-            'stocks': self.config.get('stocks', None),
-            'features': self.config.get('features', None),
-            'initial_cash': self.config.get('initial_cash', 1000000.0),
-            'window_size': self.config.get('window_size', 30),
-            'start_date': self.config['train_start_date'],
-            'end_date': self.config['train_end_date'],
-            'transaction_cost_rate': self.config.get('transaction_cost_rate', 0.005),
-            'sharpe_window': self.config.get('sharpe_window', 252),
-            'use_all_features': self.config.get('use_all_features', True)
-        }
-    
-    def _initialize_environment(self):
-        """Initialize custom environment with feature selection"""
-        try:
-            env_config = self._get_env_config()
-            
-            # Use custom environment class with selected features
-            self.env = CustomPortfolioEnv(self.selected_features, **env_config)
-            logger.info(f"Custom environment initialized: obs_dim={self.env.obs_dim}, action_dim={self.env.action_dim}")
-            logger.info(f"Using {len(self.selected_features)} features: {self.selected_features[:5]}...")
-            
-        except Exception as e:
-            logger.error(f"Failed to initialize custom environment: {e}")
-            raise
-    
-    def check_early_stopping(self, trajectory: Trajectory, update_step: int) -> bool:
-        """
-        Enhanced early stopping with robust metrics to avoid overfitting to spurious patterns.
-        
-        Args:
-            trajectory: Current trajectory for robust metric computation
-            update_step: Current training step
-            
-        Returns:
-            True if training should stop early, False otherwise
-        """
-        # Compute robust metrics
-        metrics = self.compute_robust_metrics(trajectory)
-        
-        # Track metrics history
-        self.sharpe_history.append(metrics['sharpe_ratio'])
-        self.max_drawdown_history.append(metrics['max_drawdown'])
-        self.volatility_history.append(metrics['volatility'])
-        
-        # Keep only recent history for trend analysis
-        window_size = 30
-        if len(self.sharpe_history) > window_size:
-            self.sharpe_history = self.sharpe_history[-window_size:]
-            self.max_drawdown_history = self.max_drawdown_history[-window_size:]
-            self.volatility_history = self.volatility_history[-window_size:]
-        
-        # Primary stopping criterion: Sharpe ratio improvement
-        current_sharpe = metrics['sharpe_ratio']
-        sharpe_improvement = current_sharpe - self.best_sharpe
-        
-        if sharpe_improvement > self.early_stopping_min_delta:
-            # Significant improvement in risk-adjusted returns
-            self.best_sharpe = current_sharpe
-            self.best_performance = current_sharpe  # For compatibility
-            self.patience_counter = 0
-            logger.info(f"New best Sharpe ratio: {current_sharpe:.4f} (improvement: {sharpe_improvement:.4f})")
-        else:
-            # No significant improvement
-            self.patience_counter += 1
-        
-        # Secondary criterion: Check for overfitting indicators
-        overfitting_detected = False
-        
-        # Check 1: Excessive volatility increase (potential overfitting to noise)
-        if len(self.volatility_history) >= 10:
-            recent_vol = np.mean(self.volatility_history[-5:])
-            early_vol = np.mean(self.volatility_history[:5])
-            if recent_vol > early_vol * 2.0:  # Volatility doubled
-                logger.warning(f"Excessive volatility increase detected: {early_vol:.4f} -> {recent_vol:.4f}")
-                overfitting_detected = True
-        
-        # Check 2: Max drawdown getting worse
-        if len(self.max_drawdown_history) >= 10:
-            recent_dd = np.mean(self.max_drawdown_history[-5:])
-            early_dd = np.mean(self.max_drawdown_history[:5])
-            if recent_dd > early_dd * 1.5:  # Drawdown increased by 50%
-                logger.warning(f"Max drawdown worsening: {early_dd:.4f} -> {recent_dd:.4f}")
-                overfitting_detected = True
-        
-        # Check 3: Sharpe ratio declining trend
-        if len(self.sharpe_history) >= 15:
-            recent_sharpe = np.mean(self.sharpe_history[-5:])
-            mid_sharpe = np.mean(self.sharpe_history[-10:-5])
-            early_sharpe = np.mean(self.sharpe_history[-15:-10])
-            
-            if recent_sharpe < mid_sharpe < early_sharpe:  # Declining trend
-                logger.warning(f"Sharpe ratio declining trend: {early_sharpe:.4f} -> {mid_sharpe:.4f} -> {recent_sharpe:.4f}")
-                overfitting_detected = True
-        
-        # Early stopping decision
-        if self.patience_counter >= self.early_stopping_patience:
-            logger.info(f"Early stopping triggered after {self.patience_counter} steps without Sharpe improvement")
-            logger.info(f"Best Sharpe: {self.best_sharpe:.4f}, Current: {current_sharpe:.4f}")
-            return True
-        
-        # Overfitting-based early stopping (more aggressive)
-        if overfitting_detected and self.patience_counter >= self.early_stopping_patience // 2:
-            logger.info(f"Early stopping triggered due to overfitting indicators")
-            logger.info(f"Metrics - Sharpe: {current_sharpe:.4f}, Vol: {metrics['volatility']:.4f}, DD: {metrics['max_drawdown']:.4f}")
-            return True
-        
-        return False
-    
-    def get_current_learning_rate(self, step: int) -> float:
-        """Get current learning rate from schedule"""
-        return self.learning_rate_schedule(step)
-    
     def train(self):
-        """Override train method to include early stopping"""
-        logger.info("Starting PPO training with early stopping...")
-
-        # Training configuration
+        """Train the PPO model with curriculum learning and early stopping."""
+        logger.info("Starting PPO training...")
         num_updates = self.config.get('num_updates', 1000)
         log_interval = self.config.get('log_interval', 10)
         save_interval = self.config.get('save_interval', 50)
-
-        # Calculate minibatches
-        n_steps = self.config.get('n_steps', 128)
-        n_envs = self.config.get('n_envs', 8)
-        ppo_batch_size = self.config.get('ppo_batch_size', 256)
-        num_minibatches = max(1, (n_steps * n_envs) // ppo_batch_size)
-
-        logger.info(f"Training configuration: {num_updates} updates, {num_minibatches} minibatches")
-        logger.info(f"Early stopping patience: {self.early_stopping_patience} steps")
 
         for update in range(num_updates):
             start_time = time.time()
 
             try:
-                # Split RNG for collection and training
-                self.rng, collect_rng = random.split(self.rng)
-            
                 # Collect trajectory
-                trajectory, self.env_states, self.obs, self.collector_carry = self.collect_trajectory(
-                    self.train_state, self.env_states, self.obs, self.collector_carry, collect_rng
-                )
+                trajectory = self._collect_trajectory(update)
 
-                # Apply reward normalization to prevent outlier dominance
+                # Normalize rewards
                 trajectory = trajectory._replace(rewards=self.normalize_rewards(trajectory.rewards))
 
-                # Debug NaN sources periodically
-                if update % 20 == 0:
-                    try:
-                        _, last_values, _ = self.train_state.apply_fn(
-                            self.train_state.params, self.obs, self.collector_carry
-                        )
+                # Update hyperparameters
+                self._update_hyperparameters(update)
 
-                        if trajectory.obs.shape[0] > 0:
-                            self.debug_nan_sources(
-                                trajectory.obs[0], trajectory.actions[0],
-                                trajectory.rewards[0], trajectory.values[0], trajectory.log_probs[0]
-                            )
-                    except Exception as e:
-                        # Silent error handling to avoid JAX tracing issues
-                        pass
+                # Perform training step
+                self._train_step(trajectory, update)
 
-                # Get bootstrap values for GAE
-                try:
-                    _, last_values, _ = self.train_state.apply_fn(
-                        self.train_state.params, self.obs, self.collector_carry
-                    )
-                    last_values = jnp.where(jnp.isnan(last_values), 0.0, last_values)
-                except Exception as e:
-                    # Silent fallback to avoid JAX tracing issues
-                    last_values = jnp.zeros(self.config.get('n_envs', 8))
-
-                # Check for NaN parameters before training
-                self.train_state, self.rng = self.check_and_reset_nan_params(self.train_state, self.rng)
-            
-                # Get current hyperparameters for this step
-                current_action_std = self.get_current_action_std(update)
-                current_entropy_coeff = self.get_current_entropy_coeff(update)
-                
-                # Update config with current hyperparameters
-                self.config['action_std'] = current_action_std
-                self.config['entropy_coeff'] = current_entropy_coeff
-            
-                # Perform PPO training step with enhanced hyperparameters
-                self.rng, train_rng = random.split(self.rng)
-                self.train_state, metrics = self.train_step(
-                    self.train_state, trajectory, last_values, train_rng, num_minibatches
-                )
-                
-                # Track KL divergence for policy update control
-                if 'approx_kl' in metrics:
-                    self.kl_divergence_history.append(float(metrics['approx_kl']))
-                    if len(self.kl_divergence_history) > 50:
-                        self.kl_divergence_history = self.kl_divergence_history[-50:]
-            
-                # Check for NaN parameters after training
-                self.train_state, self.rng = self.check_and_reset_nan_params(self.train_state, self.rng)
-                
-                # Memory cleanup for A100
-                if self.config.get('memory_efficient', False):
-                    jax.clear_caches()  # Clear JAX caches
-                    import gc
-                    gc.collect()  # Force garbage collection
-            
-                # Logging and early stopping check
+                # Log progress
                 if update % log_interval == 0:
-                    elapsed = time.time() - start_time
+                    self._log_progress(trajectory, update, start_time)
 
-                    # Compute trajectory statistics
-                    avg_reward = float(trajectory.rewards.mean())
-                    max_return = float(trajectory.rewards.sum(axis=0).max())
-                    total_loss = float(metrics.get('total_loss', 0.0))
-                    policy_loss = float(metrics.get('policy_loss', 0.0))
-                    value_loss = float(metrics.get('value_loss', 0.0))
-                    
-                    # Get current hyperparameters
-                    current_lr = self.get_current_learning_rate(update)
-                    current_action_std = self.get_current_action_std(update)
-                    current_entropy_coeff = self.get_current_entropy_coeff(update)
-                    
-                    # Compute robust metrics
-                    robust_metrics = self.compute_robust_metrics(trajectory)
-                    
-                    # Get KL divergence info
-                    avg_kl = np.mean(self.kl_divergence_history) if self.kl_divergence_history else 0.0
-                    max_kl = np.max(self.kl_divergence_history) if self.kl_divergence_history else 0.0
+                # Check early stopping
+                if self.check_early_stopping(trajectory, update):
+                    logger.info("Early stopping triggered. Training complete.")
+                    break
 
-                    logger.info(
-                        f"Update {update}/{num_updates} | "
-                        f"Time: {elapsed:.2f}s | "
-                        f"LR: {current_lr:.6f} | "
-                        f"Action Std: {current_action_std:.3f} | "
-                        f"Entropy Coeff: {current_entropy_coeff:.4f} | "
-                        f"Total Loss: {total_loss:.4f} | "
-                        f"Policy Loss: {policy_loss:.4f} | "
-                        f"Value Loss: {value_loss:.4f} | "
-                        f"Avg Reward: {avg_reward:.4f} | "
-                        f"Sharpe: {robust_metrics['sharpe_ratio']:.4f} | "
-                        f"Max DD: {robust_metrics['max_drawdown']:.4f} | "
-                        f"Vol: {robust_metrics['volatility']:.4f} | "
-                        f"KL: {avg_kl:.4f} (max: {max_kl:.4f}) | "
-                        f"Patience: {self.patience_counter}/{self.early_stopping_patience}"
-                    )
-
-                    # Check early stopping using robust metrics
-                    if self.check_early_stopping(trajectory, update):
-                        logger.info(f"Early stopping triggered at update {update}")
-                        logger.info(f"Training completed early after {update} updates")
-                        break
-
-                    # Log to wandb if enabled
-                    if self.config.get('use_wandb', False) and wandb is not None:
-                        try:
-                            wandb_log = {
-                                # Hyperparameters
-                                "hyperparams/learning_rate": current_lr,
-                                "hyperparams/action_std": current_action_std,
-                                "hyperparams/entropy_coeff": current_entropy_coeff,
-                                
-                                # Losses
-                                "losses/total_loss": total_loss,
-                                "losses/policy_loss": policy_loss,
-                                "losses/value_loss": value_loss,
-                                "losses/entropy_loss": float(metrics.get('entropy_loss', 0.0)),
-                                "losses/approx_kl": float(metrics.get('approx_kl', 0.0)),
-                                "losses/clip_fraction": float(metrics.get('clip_fraction', 0.0)),
-                                "losses/avg_kl_divergence": avg_kl,
-                                "losses/max_kl_divergence": max_kl,
-                                
-                                # Basic metrics
-                                "rollout/avg_reward": avg_reward,
-                                "rollout/max_reward": float(trajectory.rewards.max()),
-                                "rollout/min_reward": float(trajectory.rewards.min()),
-                                "rollout/avg_episode_return": float(trajectory.rewards.sum(axis=0).mean()),
-                                "rollout/max_episode_return": max_return,
-                                "rollout/avg_portfolio_value": float(self.env_states.portfolio_value.mean()),
-                                
-                                # Robust metrics
-                                "robust/sharpe_ratio": robust_metrics['sharpe_ratio'],
-                                "robust/max_drawdown": robust_metrics['max_drawdown'],
-                                "robust/volatility": robust_metrics['volatility'],
-                                "robust/risk_adjusted_return": robust_metrics['risk_adjusted_return'],
-                                "robust/mean_return": robust_metrics['mean_return'],
-                                
-                                # Reward normalization
-                                "reward_norm/reward_mean": self.reward_mean,
-                                "reward_norm/reward_std": self.reward_std,
-                                
-                                # Early stopping
-                                "early_stopping/patience_counter": self.patience_counter,
-                                "early_stopping/best_performance": self.best_performance,
-                                "early_stopping/best_sharpe": self.best_sharpe,
-                                
-                                "global_step": update
-                            }
-                            wandb.log(wandb_log)
-                        except Exception as e:
-                            logger.warning(f"Wandb logging failed: {e}")
-            
                 # Save model periodically
                 if update % save_interval == 0 and update > 0:
-                    try:
-                        self.save_model(f"ppo_model_update_{update}")
-                    except Exception as e:
-                        # Silent error handling to avoid JAX tracing issues
-                        pass
+                    self.save_model(f"model_checkpoint_{update}")
 
             except Exception as e:
-                # Silent error handling to avoid JAX tracing issues
-                # Continue training despite errors
+                logger.error(f"Error during training step {update}: {e}")
                 continue
 
         logger.info("Training complete!")
 
-        # Final cleanup
-        if self.config.get('use_wandb', False) and wandb is not None:
-            try:
-                wandb.finish()
-            except Exception as e:
-                logger.warning(f"Wandb cleanup failed: {e}")
+    def _collect_trajectory(self, update: int) -> Trajectory:
+        """Collect trajectory from the environment."""
+        self.rng, collect_rng = random.split(self.rng)
+        trajectory, self.env_states, self.obs, self.collector_carry = self.collect_trajectory(
+            self.train_state, self.env_states, self.obs, self.collector_carry, collect_rng
+        )
+        return trajectory
+
+    def _update_hyperparameters(self, update: int):
+        """Update hyperparameters dynamically during training."""
+        self.config['action_std'] = self.get_current_action_std(update)
+        self.config['entropy_coeff'] = self.get_current_entropy_coeff(update)
+
+    def _train_step(self, trajectory: Trajectory, update: int):
+        """Perform a single training step."""
+        self.rng, train_rng = random.split(self.rng)
+        self.train_state, metrics = self.train_step(
+            self.train_state, trajectory, self._get_last_values(), train_rng
+        )
+        self._track_metrics(metrics)
+
+    def _get_last_values(self) -> jnp.ndarray:
+        """Get bootstrap values for GAE."""
+        try:
+            _, last_values, _ = self.train_state.apply_fn(
+                self.train_state.params, self.obs, self.collector_carry
+            )
+            return jnp.where(jnp.isnan(last_values), 0.0, last_values)
+        except Exception:
+            return jnp.zeros(self.config.get('n_envs', 8))
+
+    def _track_metrics(self, metrics: Dict[str, Any]):
+        """Track training metrics."""
+        if 'approx_kl' in metrics:
+            self.kl_divergence_history.append(float(metrics['approx_kl']))
+            if len(self.kl_divergence_history) > 50:
+                self.kl_divergence_history.pop(0)
+
+    def _log_progress(self, trajectory: Trajectory, update: int, start_time: float):
+        """Log training progress."""
+        elapsed = time.time() - start_time
+        avg_reward = float(trajectory.rewards.mean())
+        logger.info(
+            f"Update {update} | Time: {elapsed:.2f}s | Avg Reward: {avg_reward:.4f}"
+        )
+
+    def check_early_stopping(self, trajectory: Trajectory, update: int) -> bool:
+        """Check if early stopping criteria are met."""
+        metrics = self.compute_robust_metrics(trajectory)
+        sharpe_improvement = metrics['sharpe_ratio'] - self.best_performance
+
+        if sharpe_improvement > self.config['early_stopping_min_delta']:
+            self.best_performance = metrics['sharpe_ratio']
+            self.patience_counter = 0
+        else:
+            self.patience_counter += 1
+
+        if self.patience_counter >= self.config['early_stopping_patience']:
+            return True
+
+        return False
+    
 
 
 def run_training_with_combination(feature_combination: str, config: Dict[str, Any]):
@@ -1216,6 +659,8 @@ Examples:
   python train_ppo_feature_combinations.py --feature_combination ohlcv+technical
   python train_ppo_feature_combinations.py --feature_combination all --num_updates 500
   python train_ppo_feature_combinations.py --feature_combination ohlcv+financial+sentiment --use_wandb
+  python train_ppo_feature_combinations.py --feature_combination ohlcv+technical --curriculum_stage 1
+  python train_ppo_feature_combinations.py --feature_combination ohlcv+technical --auto_curriculum
         """
     )
     
@@ -1226,6 +671,14 @@ Examples:
         default='ohlcv+technical',
         help='Feature combination to use (e.g., ohlcv+technical, all, etc.)'
     )
+    
+    # Curriculum learning arguments
+    parser.add_argument('--curriculum_stage', type=int, choices=[1, 2, 3],
+                        help='Specific curriculum stage to run (1=exploration, 2=refinement, 3=optimization)')
+    parser.add_argument('--auto_curriculum', action='store_true',
+                        help='Automatically progress through all curriculum stages')
+    parser.add_argument('--start_stage', type=int, default=1, choices=[1, 2, 3],
+                        help='Stage to start from in auto mode')
     
     # Training configuration arguments
     parser.add_argument('--num_updates', type=int, default=1000, help='Number of training updates')
@@ -1247,26 +700,6 @@ Examples:
     parser.add_argument('--early_stopping_patience', type=int, default=150, help='Early stopping patience (steps without improvement)')
     parser.add_argument('--early_stopping_min_delta', type=float, default=0.005, help='Minimum improvement threshold for early stopping')
     
-    # Hyperparameter tuning arguments
-    parser.add_argument('--gae_lambda', type=float, default=0.97, help='GAE lambda for advantage estimation')
-    parser.add_argument('--clip_eps', type=float, default=0.15, help='PPO clipping epsilon')
-    parser.add_argument('--max_grad_norm', type=float, default=0.5, help='Maximum gradient norm for clipping')
-    parser.add_argument('--warmup_steps', type=int, default=50, help='Learning rate warmup steps')
-    parser.add_argument('--weight_decay', type=float, default=1e-5, help='Weight decay for regularization')
-    parser.add_argument('--max_kl_divergence', type=float, default=0.03, help='Maximum KL divergence threshold')
-    parser.add_argument('--kl_penalty_coeff', type=float, default=0.1, help='KL penalty coefficient')
-    
-    # Reward normalization arguments
-    parser.add_argument('--reward_clip_min', type=float, default=-10.0, help='Minimum reward clipping value')
-    parser.add_argument('--reward_clip_max', type=float, default=10.0, help='Maximum reward clipping value')
-    parser.add_argument('--reward_normalization_window', type=int, default=1000, help='Window size for reward normalization')
-    
-    # Annealing arguments
-    parser.add_argument('--final_action_std', type=float, default=0.15, help='Final action standard deviation')
-    parser.add_argument('--action_std_decay_steps', type=int, default=500, help='Steps to anneal action std')
-    parser.add_argument('--final_entropy_coeff', type=float, default=0.005, help='Final entropy coefficient')
-    parser.add_argument('--entropy_decay_steps', type=int, default=800, help='Steps to anneal entropy coefficient')
-    
     # Other arguments
     parser.add_argument('--use_wandb', action='store_true', help='Use Weights & Biases logging')
     parser.add_argument('--seed', type=int, default=42, help='Random seed')
@@ -1286,77 +719,38 @@ Examples:
         # Environment settings
         'seed': args.seed,
         'data_root': args.data_root,
-        'stocks': None,  # Will be loaded from stocks.txt
         'train_start_date': args.train_start_date,
         'train_end_date': args.train_end_date,
         'window_size': args.window_size,
-        'transaction_cost_rate': 0.005,
-        'sharpe_window': 252,
-        
-        # Data loading settings
-        'use_all_features': False,  # We'll use custom feature selection
-        'save_cache': True,
-        'cache_format': 'hdf5',
-        'force_reload': False,
-        'preload_to_gpu': True,
-        
-        # Training environment
         'n_envs': args.n_envs,
         'n_steps': args.n_steps,
-        
-        # PPO hyperparameters - Enhanced for stable learning and hyperparameter tuning
         'num_updates': args.num_updates,
-        'gamma': 0.99,
-        'gae_lambda': args.gae_lambda,  # Increased for smoother advantage estimation
-        'clip_eps': args.clip_eps,  # Moderate clipping for controlled policy updates
+        'learning_rate': args.learning_rate,
         'ppo_epochs': args.ppo_epochs,
         'ppo_batch_size': args.ppo_batch_size,
-        'learning_rate': args.learning_rate,
-        'max_grad_norm': args.max_grad_norm,  # Moderate gradient clipping
-        'value_coeff': 0.5,
-        'entropy_coeff': 0.01,  # Will be annealed during training
-        'action_std': 0.3,  # Will be annealed during training
-        
-        # Enhanced hyperparameter tuning
-        'warmup_steps': args.warmup_steps,  # Learning rate warmup
-        'weight_decay': args.weight_decay,  # Weight decay for regularization
-        'max_kl_divergence': args.max_kl_divergence,  # KL divergence threshold
-        'kl_penalty_coeff': args.kl_penalty_coeff,  # KL penalty coefficient
-        
-        # Reward normalization
-        'reward_clip_range': [args.reward_clip_min, args.reward_clip_max],  # Clip extreme rewards
-        'reward_normalization_window': args.reward_normalization_window,  # Window for reward statistics
-        
-        # Annealing schedules
-        'final_action_std': args.final_action_std,  # Final action standard deviation
-        'action_std_decay_steps': args.action_std_decay_steps,  # Steps to anneal action std
-        'final_entropy_coeff': args.final_entropy_coeff,  # Final entropy coefficient
-        'entropy_decay_steps': args.entropy_decay_steps,  # Steps to anneal entropy
-        
-        # Early stopping configuration
-        'early_stopping_patience': args.early_stopping_patience,  # Very liberal patience
-        'early_stopping_min_delta': args.early_stopping_min_delta,  # Very small improvement threshold
-        
-        # Network architecture
         'hidden_size': args.hidden_size,
         'n_lstm_layers': args.n_lstm_layers,
-        
-        # GPU optimizations - Disabled for Metal compatibility
-        'use_mixed_precision': False,
-        'compile_mode': 'default',
-        'memory_efficient': False,
-        'gradient_checkpointing': False,
-        
-        # Logging and monitoring
         'use_wandb': args.use_wandb,
-        'log_interval': 20,
-        'save_interval': 100,
+        'early_stopping_patience': args.early_stopping_patience,
+        'early_stopping_min_delta': args.early_stopping_min_delta,
         'model_dir': args.model_dir,
     }
     
+    # Curriculum learning configuration
+    if args.curriculum_stage or args.auto_curriculum:
+        curriculum_config = CurriculumConfig()
+        config['curriculum_config'] = curriculum_config
+        config['curriculum_stage'] = args.curriculum_stage
+    
     # Run training
     try:
-        run_training_with_combination(args.feature_combination, config)
+        if args.auto_curriculum:
+            logger.info("Running FULL CURRICULUM (all stages)")
+            for stage_num in range(args.start_stage, 4):
+                config['curriculum_stage'] = stage_num
+                run_training_with_combination(args.feature_combination, config)
+        else:
+            run_training_with_combination(args.feature_combination, config)
         
     except KeyboardInterrupt:
         logger.info("Training interrupted by user")
