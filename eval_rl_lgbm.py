@@ -289,7 +289,7 @@ def main():
     }
 
     # Model path - adjust this to your trained model
-    model_path = 'models/lgbm/policy_epoch_200.pkl'
+    model_path = 'models/lgbm/policy_epoch_stage_3_epoch_70.pkl'
 
     try:
         # Initialize evaluator
