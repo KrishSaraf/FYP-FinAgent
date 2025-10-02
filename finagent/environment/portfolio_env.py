@@ -909,18 +909,33 @@ class JAXVectorizedPortfolioEnv:
         sharpe_ratio = jnp.where(jnp.isnan(sharpe_ratio), 0.0, sharpe_ratio)
         sharpe_ratio = jnp.clip(sharpe_ratio, -5.0, 5.0)
         
-        # Calculate reward with short position considerations
-        short_exposure_penalty = jnp.sum(jnp.abs(normalized_stock_weights * (normalized_stock_weights < 0))) * 0.1
+        # Primary: Log return (wealth growth)
+        log_portfolio_return = jnp.log(new_portfolio_value / prev_portfolio_value)
+        log_portfolio_return = jnp.where(jnp.isnan(log_portfolio_return), -1.0, log_portfolio_return)
+
+        # Secondary: Risk adjustment
+        risk_penalty = portfolio_volatility * 0.05  # Penalize high volatility
+
+        # Tertiary: Trading costs
+        trading_penalty = weight_change_total * 0.3
+
+        # Drawdown penalty (only extreme drawdowns)
+        drawdown_penalty = jnp.maximum(0, -drawdown - 0.2) * 2.0
+
+        # Short position penalty
+        short_penalty = jnp.sum(jnp.abs(normalized_stock_weights * (normalized_stock_weights < 0))) * 0.1
+
+        # Combined reward
         reward = (
-            sharpe_ratio * 0.7 + 
-            net_daily_portfolio_return * 10.0 - 
-            weight_change_total * 0.5 - 
-            jnp.maximum(0, -drawdown - 0.1) * 1.0 -
-            short_exposure_penalty  # Penalty for excessive short exposure
+            log_portfolio_return * 20.0 -  # Primary: actual wealth growth
+            risk_penalty -                  # Keep reasonable volatility
+            trading_penalty -              # Discourage overtrading
+            drawdown_penalty -             # Avoid catastrophic losses
+            short_penalty                  # Be careful with shorts
         )
-        
-        reward = jnp.where(jnp.isnan(reward), 0.0, reward)
+
         reward = jnp.clip(reward, -10.0, 10.0)
+
         
         # Check if episode is done
         next_step = current_step + 1

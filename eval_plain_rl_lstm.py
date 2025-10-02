@@ -46,10 +46,15 @@ plt.style.use('seaborn-v0_8')
 sns.set_palette("husl")
 
 # Import your modules
-from finagent.environment.portfolio_env import JAXVectorizedPortfolioEnv, EnvState
+from finagent.environment.portfolio_env import (
+    JAXPortfolioDataLoader,
+    JAXVectorizedPortfolioEnv,
+    EnvState
+)
 from train_plain_rl_lstm import (
-    PlainRLLSTMTrainer, 
-    CustomPortfolioEnv, 
+    PlainRLLSTMTrainer,
+    CustomPortfolioEnv,
+    CustomDataLoader,
     FeatureSelector,
     ActorCriticLSTM,
     LSTMState
@@ -320,6 +325,7 @@ class PlainRLLSTMEvaluator:
         
         try:
             # Get market data for benchmark calculation
+            # Use minimal features for benchmark (just close price)
             eval_env = CustomPortfolioEnv(
                 selected_features=['close'],  # Only need close prices for benchmark
                 data_root=self.config['data_root'],
@@ -327,7 +333,8 @@ class PlainRLLSTMEvaluator:
                 start_date=self.config['eval_start_date'],
                 end_date=self.config['eval_end_date'],
                 window_size=self.config.get('window_size', 30),
-                transaction_cost_rate=0.0  # No transaction costs for benchmark
+                transaction_cost_rate=0.0,  # No transaction costs for benchmark
+                initial_cash=1_000_000.0
             )
             
             # Extract price data
@@ -599,9 +606,9 @@ Evaluation Seed: {self.config.get('eval_seed', 'N/A')}
         
         # Save plot if directory provided
         if save_dir:
-            plt.savefig(save_path / f'plain_rl_evaluation_results_{self.feature_combination.replace("+", "_")}.png', 
-                       dpi=300, bbox_inches='tight')
-            logger.info(f"Visualizations saved to: {save_path / f'plain_rl_evaluation_results_{self.feature_combination.replace("+", "_")}.png'}")
+            filename = f'plain_rl_evaluation_results_{self.feature_combination.replace("+", "_")}.png'
+            plt.savefig(save_path / filename, dpi=300, bbox_inches='tight')
+            logger.info(f"Visualizations saved to: {save_path / filename}")
         
         plt.show()
     

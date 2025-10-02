@@ -65,7 +65,11 @@ import chex
 
 # Import LSTM architecture and environment
 from train_ppo_lstm import ActorCriticLSTM, LSTMState
-from finagent.environment.portfolio_env import JAXVectorizedPortfolioEnv, EnvState
+from finagent.environment.portfolio_env import (
+    JAXPortfolioDataLoader,
+    JAXVectorizedPortfolioEnv,
+    EnvState
+)
 import optax
 from flax.training import train_state
 import distrax
@@ -309,102 +313,265 @@ class FeatureSelector:
         print("• all - All available features")
 
 
-class CustomPortfolioEnv(JAXVectorizedPortfolioEnv):
-    """Custom portfolio environment with feature selection capability"""
-    
-    def __init__(self, selected_features: List[str], **kwargs):
-        """
-        Initialize environment with selected features only.
-        
-        Args:
-            selected_features: List of features to use for training
-            **kwargs: Other environment arguments
-        """
-        # Store selected features
-        self.selected_features = selected_features
-        logger.info(f"Initializing environment with {len(selected_features)} selected features")
-        logger.info(f"Selected features: {selected_features[:10]}..." if len(selected_features) > 10 else f"Selected features: {selected_features}")
-        
-        # Initialize parent class
-        super().__init__(**kwargs)
-        
-        # Override features in data loader
-        self.data_loader.features = selected_features
-        
-        # Recalculate observation dimension based on selected features
-        self._recalculate_observation_dim()
-    
-    def _recalculate_observation_dim(self):
-        """Recalculate observation dimension based on selected features"""
-        self.n_features = len(self.selected_features)
-        
-        # Updated observation size calculation
-        obs_size = (
-            (self.window_size * self.n_stocks * self.n_features) +  # Historical features
-            self.n_stocks * 2 +                                     # Current open prices + gaps
-            self.action_dim +                                       # Portfolio weights
-            self.n_stocks +                                         # Short position flags
-            8                                                       # Market state (8 elements)
-        )
-        
-        self.obs_dim = obs_size
-        
-        logger.info(f"Recalculated observation dimension: {self.obs_dim}")
-        logger.info(f"Features per stock: {self.n_features}")
-        logger.info(f"Historical window features: {self.window_size * self.n_stocks * self.n_features}")
-    
+# -----------------------
+# Utilities
+# -----------------------
+def has_columns(df: pd.DataFrame, cols: List[str]) -> bool:
+    """
+    Safely check whether DataFrame has all columns in `cols`.
+    Avoids ambiguous truth-value operations with pandas Index.
+    """
+    return set(cols).issubset(set(df.columns))
+
+
+# -----------------------
+# CustomDataLoader
+# -----------------------
+class CustomDataLoader(JAXPortfolioDataLoader):
+    """
+    Custom data loader that only generates requested features and prevents
+    the parent loader from appending a large default feature set.
+    """
+    def __init__(self, selected_features: List[str], *args, **kwargs):
+        # Store selected features explicitly
+        self.selected_features = [str(f) for f in selected_features]
+        # Force disable 'use_all_features' behaviour by default
+        kwargs.setdefault('use_all_features', False)
+        # Set the features attribute (so parent may see it)
+        kwargs.setdefault('features', self.selected_features)
+        try:
+            super().__init__(*args, **kwargs)
+        except TypeError:
+            # Defensive: if parent has a different signature, try without args
+            try:
+                super().__init__()
+                # set attributes directly
+                self.features = self.selected_features
+                self.use_all_features = False
+            except Exception as e:
+                logger.error(f"Could not call parent JAXPortfolioDataLoader.__init__: {e}")
+                raise
+
+        # Ensure we don't later get overwritten accidentally
+        self.features = list(self.selected_features)
+        self.use_all_features = False
+
     def engineer_features(self, df: pd.DataFrame, stock: str) -> pd.DataFrame:
         """
-        Override feature engineering to only generate selected features.
-        This avoids generating hundreds of unnecessary features.
+        Engineer only requested features. Returns DataFrame with exactly
+        the columns in self.selected_features (order preserved).
+
+        This is a simplified version - only generates basic features.
+        For full feature engineering, see train_ppo_feature_combinations.py
         """
-        # Start with basic OHLCV columns
-        df_engineered = df.copy()
-        
-        # Only generate features that are in our selected_features list
-        # This prevents generating hundreds of unnecessary features
-        
-        # Basic returns (if requested)
-        if 'returns_1d' in self.selected_features:
-            df_engineered['returns_1d'] = df['close'].pct_change()
-        if 'returns_3d' in self.selected_features:
-            df_engineered['returns_3d'] = df['close'].pct_change(periods=3)
-        if 'returns_5d' in self.selected_features:
-            df_engineered['returns_5d'] = df['close'].pct_change(periods=5)
-        if 'returns_10d' in self.selected_features:
-            df_engineered['returns_10d'] = df['close'].pct_change(periods=10)
-        if 'returns_20d' in self.selected_features:
-            df_engineered['returns_20d'] = df['close'].pct_change(periods=20)
-        
-        # Log returns (if requested)
-        if 'log_returns_1d' in self.selected_features:
-            df_engineered['log_returns_1d'] = np.log(df['close'] / df['close'].shift(1))
-        if 'log_returns_5d' in self.selected_features:
-            df_engineered['log_returns_5d'] = np.log(df['close'] / df['close'].shift(5))
-        
-        # Price action features (if requested)
-        if 'overnight_gap' in self.selected_features and all(col in df.columns for col in ['open', 'close']):
-            df_engineered['overnight_gap'] = df['open'] / df['close'].shift(1) - 1.0
-        if 'daily_range' in self.selected_features and all(col in df.columns for col in ['high', 'low', 'open']):
-            df_engineered['daily_range'] = (df['high'] - df['low']) / df['open']
-        if 'close_position' in self.selected_features and all(col in df.columns for col in ['high', 'low', 'close']):
-            df_engineered['close_position'] = (df['close'] - df['low']) / (df['high'] - df['low'] + 1e-8)
-        
-        # Now filter to only include features that are in our selected_features list
-        # and that actually exist in the dataframe
-        available_features = [f for f in self.selected_features if f in df_engineered.columns]
-        
-        # Create filtered dataframe with only selected features
-        filtered_df = df_engineered[available_features].copy()
-        
-        # Ensure 'close' is always first
-        if 'close' in filtered_df.columns:
-            cols = ['close'] + [c for c in filtered_df.columns if c != 'close']
-            filtered_df = filtered_df[cols]
-        
-        logger.info(f"Generated {len(filtered_df.columns)} features for {stock}: {list(filtered_df.columns)}")
-        
-        return filtered_df.fillna(0.0)
+        try:
+            # Ensure required raw columns exist
+            required = {'open', 'high', 'low', 'close', 'volume'}
+            missing_required = required - set(df.columns)
+            if missing_required:
+                logger.warning(f"Missing required columns for {stock}: {missing_required}")
+                for col in missing_required:
+                    df[col] = 0.0
+
+            df_engineered = pd.DataFrame(index=df.index)
+
+            # Copy any raw columns that are requested and present
+            for col in self.selected_features:
+                if col in df.columns:
+                    df_engineered[col] = df[col]
+
+            # Prepare set of needed (requested but not present)
+            needed = [f for f in self.selected_features if f not in df_engineered.columns]
+
+            # === BASIC PRICE FEATURES ===
+            # Returns (multiple timeframes)
+            periods_map = {'returns_1d':1, 'returns_3d':3, 'returns_5d':5, 'returns_10d':10, 'returns_20d':20}
+            for feat, p in periods_map.items():
+                if feat in needed and 'close' in df.columns:
+                    df_engineered[feat] = df['close'].pct_change(p).fillna(0.0)
+
+            # Log returns
+            log_map = {'log_returns_1d':1, 'log_returns_5d':5}
+            for feat, p in log_map.items():
+                if feat in needed and 'close' in df.columns:
+                    df_engineered[feat] = np.log(df['close'] / df['close'].shift(p)).fillna(0.0)
+
+            # Gap and range features
+            if 'overnight_gap' in needed and has_columns(df, ['open', 'close']):
+                df_engineered['overnight_gap'] = (df['open'] / df['close'].shift(1) - 1.0).fillna(0.0)
+
+            if 'daily_range' in needed and has_columns(df, ['high', 'low', 'open']):
+                df_engineered['daily_range'] = ((df['high'] - df['low']) / df['open'].replace(0, np.nan)).fillna(0.0)
+
+            if 'close_position' in needed and has_columns(df, ['high', 'low', 'close']):
+                denom = df['high'] - df['low']
+                df_engineered['close_position'] = ((df['close'] - df['low']) / denom.replace(0, np.nan)).fillna(0.0)
+
+            # Fill any requested features that still don't exist with zeros
+            for feat in self.selected_features:
+                if feat not in df_engineered.columns:
+                    logger.warning(f"Feature '{feat}' could not be generated for {stock}, filling with zeros")
+                    df_engineered[feat] = 0.0
+
+            # Final enforcement: reorder columns to match selected_features exactly
+            df_engineered = df_engineered[self.selected_features]
+
+            logger.info(f"CustomDataLoader: Generated {len(df_engineered.columns)} features for {stock}")
+            return df_engineered.fillna(0.0)
+
+        except Exception as e:
+            logger.error(f"Error in CustomDataLoader.engineer_features for {stock}: {e}", exc_info=True)
+            # Return DataFrame of zeros with selected features
+            return pd.DataFrame(0.0, index=df.index, columns=self.selected_features)
+
+
+# -----------------------
+# CustomPortfolioEnv
+# -----------------------
+class CustomPortfolioEnv(JAXVectorizedPortfolioEnv):
+    """
+    Vectorized portfolio environment that uses CustomDataLoader to ensure the requested
+    features are used end-to-end.
+
+    CRITICAL: We override __init__ completely to prevent parent from creating its own loader.
+    """
+    def __init__(self, selected_features: List[str],
+                data_root: str = 'processed_data/',
+                stocks: List[str] = None,
+                initial_cash: float = 1_000_000.0,
+                window_size: int = 30,
+                start_date: str = '2024-06-06',
+                end_date: str = '2025-03-06',
+                transaction_cost_rate: float = 0.005,
+                sharpe_window: int = 252,
+                **kwargs):
+        """
+        Initialize CustomPortfolioEnv with complete control over feature selection.
+
+        We DON'T call super().__init__() because the parent creates its own JAXPortfolioDataLoader
+        which bypasses our custom loader. Instead, we replicate the parent's init logic
+        but use our CustomDataLoader.
+        """
+        try:
+            # Store and normalize selected features FIRST
+            self.selected_features = [str(f) for f in selected_features]
+            self.features = list(self.selected_features)
+            self.n_features = len(self.selected_features)
+            self.use_all_features = False
+
+            logger.info(f"CustomPortfolioEnv: Initializing with {len(self.selected_features)} features")
+
+            # === REPLICATE PARENT'S __init__ LOGIC ===
+            self.data_root = data_root
+            self.window_size = window_size
+            self.start_date = start_date
+            self.end_date = end_date
+            self.initial_cash_actual = initial_cash
+            self.transaction_cost_rate = transaction_cost_rate
+            self.sharpe_window = sharpe_window
+            self.risk_free_rate_daily = 0.04 / 252.0
+            self.cash_return_rate = 0.04 / 252.0
+            self.close_price_idx = None
+
+            # Load stocks
+            if stocks is None:
+                stocks = self._load_stock_list()
+            self.stocks = stocks
+            self.n_stocks = len(stocks)
+
+            logger.info(f"CustomPortfolioEnv: Data root: {self.data_root}")
+            logger.info(f"CustomPortfolioEnv: Stocks loaded: {len(self.stocks)}")
+
+            # === CRITICAL: Use CustomDataLoader instead of parent's JAXPortfolioDataLoader ===
+            self.data_loader = CustomDataLoader(
+                selected_features=self.selected_features,
+                data_root=data_root,
+                stocks=stocks,
+                use_all_features=False
+            )
+
+            # Load data using our custom loader
+            logger.info(f"CustomPortfolioEnv: Loading data with {len(self.selected_features)} features...")
+            self.data, self.dates_idx, self.actual_dates, self.n_features = self.data_loader.load_and_preprocess_data(
+                start_date=start_date,
+                end_date=end_date,
+                preload_to_gpu=True,
+                force_reload=False  # Use cache when available
+            )
+
+            # Verify data shape
+            if self.data.shape[2] != len(self.selected_features):
+                raise ValueError(
+                    f"Data shape mismatch! Expected {len(self.selected_features)} features, "
+                    f"got {self.data.shape[2]}. Data shape: {self.data.shape}"
+                )
+
+            logger.info(f"CustomPortfolioEnv: Data loaded successfully with shape: {self.data.shape}")
+
+            # Set close price index
+            self.close_price_idx = 0  # Always 0 after reorganization
+
+            # Create feature indices dict
+            self.feature_indices = {
+                'open': self.data_loader.features.index('open') if 'open' in self.data_loader.features else 0,
+                'close': self.data_loader.features.index('close') if 'close' in self.data_loader.features else 0,
+                'returns_1d': self.data_loader.features.index('returns_1d') if 'returns_1d' in self.data_loader.features else None,
+                'volatility_10d': self.data_loader.features.index('volatility_10d') if 'volatility_10d' in self.data_loader.features else None,
+                'overnight_gap': self.data_loader.features.index('overnight_gap') if 'overnight_gap' in self.data_loader.features else None
+            }
+
+            # Validate data
+            if self.data.shape[0] < self.window_size + 2:
+                raise ValueError(
+                    f"Insufficient data: need at least {self.window_size + 2} time steps, "
+                    f"got {self.data.shape[0]}"
+                )
+            self.n_timesteps = len(self.dates_idx)
+
+            # Set action and observation dimensions
+            self.action_dim = self.n_stocks + 1
+
+            # Calculate observation dimension
+            obs_size = (
+                (self.window_size * self.n_stocks * self.n_features) +  # Historical features
+                self.n_stocks * 2 +                                     # Current open prices + gaps
+                self.action_dim +                                       # Portfolio weights
+                self.n_stocks +                                         # Short position flags
+                8                                                       # Market state
+            )
+            self.obs_dim = obs_size
+
+            logger.info(f"CustomPortfolioEnv: Initialized successfully")
+            logger.info(f"  Stocks: {self.n_stocks}")
+            logger.info(f"  Features: {self.n_features}")
+            logger.info(f"  Window size: {self.window_size}")
+            logger.info(f"  Observation dim: {self.obs_dim}")
+            logger.info(f"  Action dim: {self.action_dim}")
+            logger.info(f"  Timesteps: {self.n_timesteps}")
+
+        except Exception as e:
+            logger.error(f"Error in CustomPortfolioEnv initialization: {e}", exc_info=True)
+            raise
+
+    def _load_stock_list(self) -> List[str]:
+        """Load stock list from file or scan directory"""
+        from pathlib import Path
+        stocks_file = Path("finagent/stocks.txt")
+        if not stocks_file.exists():
+            stocks_file = Path("FYP-FinAgent/finagent/stocks.txt")
+
+        if stocks_file.exists():
+            with open(stocks_file, 'r') as f:
+                stocks = [line.strip() for line in f.readlines() if line.strip()]
+                logger.info(f"Loaded {len(stocks)} stocks from file")
+                return stocks
+
+        # Fallback: scan directory
+        from pathlib import Path
+        data_path = Path(self.data_root) if isinstance(self.data_root, str) else self.data_root
+        stocks = [p.stem.replace('_aligned', '') for p in data_path.glob("*_aligned.csv")]
+        logger.info(f"Scanned {len(stocks)} stocks from directory")
+        return stocks
 
 
 class EpisodeData(NamedTuple):
@@ -420,14 +587,23 @@ class EpisodeData(NamedTuple):
 # Curriculum configuration class
 class CurriculumConfig:
     def __init__(self):
-        # Define curriculum stages here
+        # Define curriculum stages here (updated for longer training)
         self.stages = {
             1: {"stage_num": 1, "name": "Exploration", "description": "Initial exploration stage",
-                "learning_rate": 4e-5, "action_std": 0.18, "entropy_coeff": 0.007, "num_updates": 1000},
+                "learning_rate": 4e-5, "action_std": 0.18, "entropy_coeff": 0.007,
+                "num_updates": 800,  # Increased from 1000
+                "early_stopping_patience": 500,  # Increased from default
+                "early_stopping_min_delta": 0.001},
             2: {"stage_num": 2, "name": "Refinement", "description": "Refinement of learned policies",
-                "learning_rate": 2e-5, "action_std": 0.15, "entropy_coeff": 0.005, "num_updates": 800},
+                "learning_rate": 2e-5, "action_std": 0.15, "entropy_coeff": 0.005,
+                "num_updates": 1000,  # Increased from 800
+                "early_stopping_patience": 600,
+                "early_stopping_min_delta": 0.003},
             3: {"stage_num": 3, "name": "Optimization", "description": "Final optimization stage",
-                "learning_rate": 1e-5, "action_std": 0.12, "entropy_coeff": 0.003, "num_updates": 600},
+                "learning_rate": 1e-5, "action_std": 0.12, "entropy_coeff": 0.003,
+                "num_updates": 800,  # Increased from 600
+                "early_stopping_patience": 700,
+                "early_stopping_min_delta": 0.005},
         }
 
     def get_stage(self, stage_num):
@@ -462,7 +638,7 @@ class PlainRLLSTMTrainer:
         # Early stopping configuration
         self.early_stopping_patience = config.get('early_stopping_patience', 200)
         self.early_stopping_min_delta = config.get('early_stopping_min_delta', 0.001)
-        self.best_performance = -float('inf')
+        self.best_performance = -1e10
         self.patience_counter = 0
         self.performance_history = []
         self.should_stop_early = False
@@ -975,11 +1151,17 @@ class PlainRLLSTMTrainer:
         # Update config with current values
         self.config['action_std'] = current_action_std
         self.config['entropy_coeff'] = current_entropy_coeff
-        
+
+        # Store raw rewards BEFORE normalization for metrics computation
+        self.current_raw_rewards = episode.rewards
+
         # Normalize rewards if enabled
         if self.config.get('reward_normalization', True):
             normalized_rewards = self.reward_normalizer.normalize(episode.rewards)
+            self.current_normalized_rewards = normalized_rewards
             episode = episode._replace(rewards=normalized_rewards)
+        else:
+            self.current_normalized_rewards = episode.rewards
         
         # Compute returns
         returns = self.compute_returns(episode)
@@ -1031,8 +1213,50 @@ class PlainRLLSTMTrainer:
             'reward_mean': episode.rewards.mean(),
             'reward_std': episode.rewards.std(),
         })
-        
+
         return train_state, metrics
+
+    def compute_robust_metrics(self, rewards: chex.Array) -> Dict[str, float]:
+        """Compute simple, robust metrics like Sharpe ratio from RAW rewards.
+
+        CRITICAL: This should be called with RAW rewards (before normalization)
+        not normalized rewards which would make Sharpe ratio always ≈0.
+        """
+        try:
+            # Ensure rewards is a valid array and not empty
+            if rewards is None or (hasattr(rewards, 'size') and rewards.size == 0):
+                raise ValueError("Rewards are empty or None")
+            rewards = jnp.array(rewards)
+            rewards = jnp.where(jnp.isfinite(rewards), rewards, 0.0)
+
+            # Sum rewards per env across time (axis 0 is time dimension)
+            if rewards.ndim > 1:
+                per_env_return = jnp.sum(rewards, axis=0)
+            else:
+                per_env_return = rewards
+
+            # Compute mean and std safely
+            mean_return = jnp.mean(per_env_return)
+            std_return = jnp.std(per_env_return)
+
+            # Safe division for Sharpe ratio
+            std_return = jnp.where(std_return > 1e-8, std_return, 1.0)
+            sharpe = mean_return / std_return
+
+            return {
+                'sharpe_ratio': float(jnp.clip(sharpe, -1e3, 1e3)),
+                'avg_reward': float(jnp.mean(rewards)),
+                'std_reward': float(std_return),
+                'mean_return': float(mean_return)  # Add this for better tracking
+            }
+        except Exception as e:
+            logger.warning(f"Error in compute_robust_metrics: {e}")
+            return {
+                'sharpe_ratio': 0.0,
+                'avg_reward': 0.0,
+                'std_reward': 1.0,
+                'mean_return': 0.0
+            }
 
     def calculate_robust_metric(self, portfolio_values: np.ndarray, returns: np.ndarray) -> float:
         """Calculate robust performance metric for early stopping"""
@@ -1138,6 +1362,9 @@ class PlainRLLSTMTrainer:
                 if update % log_interval == 0:
                     elapsed = time.time() - start_time
 
+                    # Compute robust metrics from RAW rewards (before normalization)
+                    robust_metrics = self.compute_robust_metrics(self.current_raw_rewards)
+
                     # Compute episode statistics
                     avg_reward = float(episode.rewards.mean())
                     max_return = float(episode.rewards.sum(axis=0).max())
@@ -1153,13 +1380,13 @@ class PlainRLLSTMTrainer:
                         f"Policy Loss: {policy_loss:.4f} | "
                         f"Value Loss: {value_loss:.4f} | "
                         f"Avg Reward: {avg_reward:.4f} | "
-                        f"Mean Return: {mean_return:.4f} | "
-                        f"Max Return: {max_return:.4f} | "
+                        f"Sharpe Ratio: {robust_metrics['sharpe_ratio']:.4f} | "
+                        f"Mean Return: {robust_metrics['mean_return']:.4f} | "
                         f"Patience: {self.patience_counter}/{self.early_stopping_patience}"
                     )
 
-                    # Check early stopping using average reward as performance metric
-                    if self.check_early_stopping(avg_reward, update):
+                    # Check early stopping using Sharpe ratio from raw rewards
+                    if self.check_early_stopping(robust_metrics['sharpe_ratio'], update):
                         logger.info(f"Early stopping triggered at update {update}")
                         logger.info(f"Training completed early after {update} updates")
                         break
@@ -1179,6 +1406,15 @@ class PlainRLLSTMTrainer:
                                 "rollout/max_episode_return": max_return,
                                 "rollout/mean_return": mean_return,
                                 "rollout/avg_portfolio_value": float(self.env_states.portfolio_value.mean()),
+                                # Performance metrics (from RAW rewards)
+                                "performance/sharpe_ratio": robust_metrics.get('sharpe_ratio', 0.0),
+                                "performance/mean_return": robust_metrics.get('mean_return', 0.0),
+                                "performance/std_return": robust_metrics.get('std_reward', 1.0),
+                                # Hyperparameters
+                                "hyperparams/learning_rate": metrics.get('learning_rate', 0.0),
+                                "hyperparams/action_std": metrics.get('action_std', 0.0),
+                                "hyperparams/entropy_coeff": metrics.get('entropy_coeff', 0.0),
+                                # Early stopping
                                 "early_stopping/patience_counter": self.patience_counter,
                                 "early_stopping/best_performance": self.best_performance,
                                 "global_step": update

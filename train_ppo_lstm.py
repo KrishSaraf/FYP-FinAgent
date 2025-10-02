@@ -565,7 +565,7 @@ class PPOTrainer:
             lstm_carry_c=jnp.zeros((n_steps, n_envs, self.config.get('n_lstm_layers', 1), self.config.get('hidden_size', 256)))
         )
         
-    @partial(jax.jit, static_argnums=(0,), device=jax.devices('cpu')[0])
+    @partial(jax.jit, static_argnums=(0,))
     def compute_gae(self, trajectory: Trajectory, last_values: chex.Array) -> Tuple[chex.Array, chex.Array]:
         """Compute Generalized Advantage Estimation with robust numerical stability"""
         gamma = self.config.get('gamma', 0.99)
@@ -629,7 +629,7 @@ class PPOTrainer:
         
         return advantages, returns
 
-    @partial(jax.jit, static_argnums=(0,), device=jax.devices('cpu')[0])
+    @partial(jax.jit, static_argnums=(0,))
     def ppo_loss(self, params: chex.Array, train_batch: Trajectory, gae_advantages: chex.Array,
                  returns: chex.Array, rng_key: chex.PRNGKey) -> Tuple[chex.Array, Dict[str, chex.Array]]:
         """Compute PPO loss with comprehensive numerical stability"""
@@ -1128,6 +1128,12 @@ class PPOTrainer:
                     except Exception as e:
                         # Silent error handling to avoid JAX tracing issues
                         pass
+
+                # Throttle loop to target update time (avoid 100% utilization)
+                target_update_time = float(self.config.get('target_update_time', 0.5))
+                elapsed = time.time() - start_time
+                if target_update_time > 0 and elapsed < target_update_time:
+                    time.sleep(target_update_time - elapsed)
 
             except Exception as e:
                 # Silent error handling to avoid JAX tracing issues

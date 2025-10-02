@@ -26,6 +26,7 @@ build/
 *.swp
 *.swo
 *.bak
+wandb/
 
 # IDE files
 .vscode/
