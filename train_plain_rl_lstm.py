@@ -642,6 +642,8 @@ class PlainRLLSTMTrainer:
         self.patience_counter = 0
         self.performance_history = []
         self.should_stop_early = False
+        self.global_step = 0
+        self.current_raw_rewards = None
 
         # Apply curriculum stage settings if provided
         if self.curriculum_stage and self.curriculum_config:
@@ -850,7 +852,7 @@ class PlainRLLSTMTrainer:
         stage = self.curriculum_config.get_stage(self.curriculum_stage)
         if not stage:
             raise ValueError(f"Invalid curriculum stage: {self.curriculum_stage}")
-        
+
         logger.info(f"Applying curriculum stage {stage['stage_num']}: {stage['name']}")
         logger.info(f"Description: {stage['description']}")
 
@@ -861,6 +863,17 @@ class PlainRLLSTMTrainer:
             'entropy_coeff': stage['entropy_coeff'],
             'num_updates': stage['num_updates'],
         })
+
+        # Early stopping settings from curriculum config
+        early_stopping_patience = stage.get('early_stopping_patience', 500)
+        early_stopping_min_delta = stage.get('early_stopping_min_delta', 0.001)
+        self.config.update({
+            'early_stopping_patience': early_stopping_patience,
+            'early_stopping_min_delta': early_stopping_min_delta
+        })
+        self.early_stopping_patience = early_stopping_patience
+        self.early_stopping_min_delta = early_stopping_min_delta
+        logger.info(f"Early stopping: patience={early_stopping_patience}, min_delta={early_stopping_min_delta}")
 
     def _create_dummy_carry(self, batch_size: int) -> List[LSTMState]:
         """Create dummy LSTM carry states"""
@@ -1328,6 +1341,50 @@ class PlainRLLSTMTrainer:
         
         return False
 
+    def update_stage_parameters(self, stage_params: Dict[str, Any]):
+        """Update trainer parameters for a new curriculum stage."""
+        logger.info("Updating trainer parameters for new stage:")
+        for key, value in stage_params.items():
+            if key in self.config:
+                logger.info(f"  {key}: {self.config[key]} -> {value}")
+                self.config[key] = value
+            if key == "curriculum_stage":
+                # Update the curriculum stage tracker
+                self.curriculum_stage = value
+            if key == "global_step":
+                # Track global step across stages (for logging)
+                self.global_step = value
+
+        # Update early stopping parameters if provided
+        if 'early_stopping_patience' in stage_params:
+            self.early_stopping_patience = stage_params['early_stopping_patience']
+        if 'early_stopping_min_delta' in stage_params:
+            self.early_stopping_min_delta = stage_params['early_stopping_min_delta']
+
+        # Reset stage-specific counters and metrics
+        self.patience_counter = 0
+        self.best_performance = -1e10
+        self.performance_history = []
+
+        # Update optimizer with new learning rate if changed
+        if 'learning_rate' in stage_params:
+            import optax
+            from flax.training import train_state as ts
+            new_optimizer = optax.adam(
+                learning_rate=stage_params['learning_rate'],
+                eps=1e-8,
+                b1=0.9,
+                b2=0.999
+            )
+            self.train_state = ts.TrainState.create(
+                apply_fn=self.network.apply,
+                params=self.train_state.params,  # Preserve parameters
+                tx=new_optimizer
+            )
+
+            # Update learning rate scheduler with new settings
+            self.lr_scheduler = self._create_lr_scheduler()
+
     def train(self):
         """Main training loop using REINFORCE"""
         logger.info("Starting Plain RL LSTM training with REINFORCE...")
@@ -1623,15 +1680,41 @@ Examples:
     try:
         if args.auto_curriculum:
             logger.info("Running FULL CURRICULUM (all stages)")
+
+            trainer = None
+            global_step = 0
             for stage_num in range(args.start_stage, 4):
-                trainer = PlainRLLSTMTrainer(config, selected_features, curriculum_stage=stage_num, curriculum_config=curriculum_config)
+                logger.info(f"\n{'='*50}\nStarting Curriculum Stage {stage_num}\n{'='*50}")
+                stage = curriculum_config.get_stage(stage_num)
+                stage_params = {
+                    'learning_rate': stage['learning_rate'],
+                    'action_std': stage['action_std'],
+                    'entropy_coeff': stage['entropy_coeff'],
+                    'num_updates': stage['num_updates'],
+                    'early_stopping_patience': stage.get('early_stopping_patience', 500),
+                    'early_stopping_min_delta': stage.get('early_stopping_min_delta', 0.001),
+                    'curriculum_stage': stage_num,
+                    'global_step': global_step
+                }
+
+                if trainer is None:
+                    # Create trainer for first stage
+                    trainer = PlainRLLSTMTrainer(config, selected_features, curriculum_stage=stage_num, curriculum_config=curriculum_config)
+                else:
+                    # Update existing trainer for new stage
+                    trainer.update_stage_parameters(stage_params)
+
+                # Train for this stage
                 trainer.train()
+                trainer.save_model(f"curriculum_stage_{stage_num}")
+                global_step += stage['num_updates']
+                logger.info(f"Completed Curriculum Stage {stage_num}. Global step: {global_step}")
         else:
             trainer = PlainRLLSTMTrainer(config, selected_features, curriculum_stage=args.curriculum_stage, curriculum_config=curriculum_config)
             trainer.train()
 
         logger.info("Training completed successfully!")
-        
+
         # Save final model
         trainer.save_model(f"final_model_plain_rl_lstm_{args.feature_combination.replace('+', '_')}")
         

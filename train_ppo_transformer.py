@@ -765,13 +765,15 @@ class PPOTrainer:
         # Initialize training metrics
         self.best_performance = -1e10
         self.patience_counter = 0
+        self.global_step = 0
+        self.current_raw_rewards = None
 
     def _apply_curriculum_settings(self):
         """Apply curriculum-specific settings"""
         stage = self.curriculum_config.get_stage(self.curriculum_stage)
         logger.info(f"Initializing Stage {stage['stage_num']}: {stage['name']}")
         logger.info(f"Description: {stage['description']}")
-        
+
         self.config.update({
             'action_std': stage['exploration_std'],
             'entropy_coeff': stage['entropy_coeff'],
@@ -779,14 +781,15 @@ class PPOTrainer:
             'learning_rate': stage['learning_rate'],
             'total_timesteps': stage['num_epochs'] * self.config.get('n_envs', 8) * self.config.get('n_steps', 128),
         })
-        
-        # Early stopping settings by stage
-        if stage['stage_num'] == 1:
-            self.config.update({'early_stopping_patience': 30, 'early_stopping_min_delta': 0.001})
-        elif stage['stage_num'] == 2:
-            self.config.update({'early_stopping_patience': 50, 'early_stopping_min_delta': 0.005})
-        else:
-            self.config.update({'early_stopping_patience': 75, 'early_stopping_min_delta': 0.01})
+
+        # Early stopping settings from curriculum config
+        early_stopping_patience = stage.get('early_stopping_patience', 300)
+        early_stopping_min_delta = stage.get('early_stopping_min_delta', 0.001)
+        self.config.update({
+            'early_stopping_patience': early_stopping_patience,
+            'early_stopping_min_delta': early_stopping_min_delta
+        })
+        logger.info(f"Early stopping: patience={early_stopping_patience}, min_delta={early_stopping_min_delta}")
 
     def _get_env_config(self) -> Dict[str, Any]:
         """Get environment configuration"""
@@ -1195,6 +1198,34 @@ class PPOTrainer:
         
         return False
 
+    def update_stage_parameters(self, stage_params: Dict[str, Any]):
+        """Update trainer parameters for a new curriculum stage."""
+        logger.info("Updating trainer parameters for new stage:")
+        for key, value in stage_params.items():
+            if key in self.config:
+                logger.info(f"  {key}: {self.config[key]} -> {value}")
+                self.config[key] = value
+            if key == "curriculum_stage":
+                # Update the curriculum stage tracker
+                self.curriculum_stage = value
+            if key == "global_step":
+                # Track global step across stages (for logging)
+                self.global_step = value
+
+        # Reset stage-specific counters and metrics
+        self.patience_counter = 0
+
+        # Update optimizer learning rate if changed
+        if 'learning_rate' in stage_params:
+            import optax
+            from flax.training.train_state import TrainState
+            new_optimizer = optax.adam(stage_params['learning_rate'])
+            self.train_state = TrainState.create(
+                apply_fn=self.network.apply,
+                params=self.train_state.params,  # Preserve parameters
+                tx=new_optimizer
+            )
+
     def train(self):
         """Main training loop"""
         logger.info("Starting PPO training with Transformer...")
@@ -1303,7 +1334,11 @@ class PPOTrainer:
                         break
             
             global_step += batch_size
-            
+
+            # Initialize metrics if not set (in case of error)
+            if 'metrics' not in locals():
+                metrics = {'approx_kl': 0.0}
+
             if update % 10 == 0:
                 elapsed_time = time.time() - start_time
                 avg_reward = float(trajectory.rewards.mean())
@@ -1514,9 +1549,42 @@ Examples:
     try:
         if args.auto_curriculum:
             logger.info("Running FULL CURRICULUM (all stages)")
+            curriculum_config = CurriculumConfig()
+
+            feature_selector = FeatureSelector()
+            selected_features = feature_selector.get_features_for_combination(args.feature_combination)
+            config['selected_features'] = selected_features
+            config['curriculum_config'] = curriculum_config
+            logger.info(f"Selected {len(selected_features)} features for training")
+
+            trainer = None
+            global_step = 0
             for stage_num in range(args.start_stage, 4):
-                config['curriculum_stage'] = stage_num
-                run_training_with_combination(args.feature_combination, config)
+                logger.info(f"\n{'='*50}\nStarting Curriculum Stage {stage_num}\n{'='*50}")
+                stage = curriculum_config.get_stage(stage_num)
+                stage_params = {
+                    'action_std': stage['exploration_std'],
+                    'entropy_coeff': stage['entropy_coeff'],
+                    'clip_eps': stage['clip_eps'],
+                    'learning_rate': stage['learning_rate'],
+                    'total_timesteps': stage['num_epochs'] * config.get('n_envs', 8) * config.get('n_steps', 128),
+                    'early_stopping_patience': stage.get('early_stopping_patience', 300),
+                    'early_stopping_min_delta': stage.get('early_stopping_min_delta', 0.001),
+                    'curriculum_stage': stage_num,
+                    'global_step': global_step
+                }
+
+                if trainer is None:
+                    config['curriculum_stage'] = stage_num
+                    trainer = PPOTrainer(config, selected_features)
+                else:
+                    trainer.update_stage_parameters(stage_params)
+
+                # Train for this stage
+                trainer.train()
+                trainer.save_model(f"curriculum_stage_{stage_num}")
+                global_step += stage['num_epochs']
+                logger.info(f"Completed Curriculum Stage {stage_num}. Global step: {global_step}")
         else:
             run_training_with_combination(args.feature_combination, config)
     

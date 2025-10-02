@@ -1248,13 +1248,14 @@ class FeatureCombinationPPOTrainer(PPOTrainer):
             f"clip_eps={self.config['clip_eps']} | updates={self.config['num_updates']}"
         )
 
-        # Early stopping settings based on stage number
-        if stage_num == 1:
-            self.config.update({'early_stopping_patience': 150, 'early_stopping_min_delta': 0.001})
-        elif stage_num == 2:
-            self.config.update({'early_stopping_patience': 200, 'early_stopping_min_delta': 0.005})
-        else:
-            self.config.update({'early_stopping_patience': 250, 'early_stopping_min_delta': 0.01})
+        # Early stopping settings from curriculum config
+        early_stopping_patience = stage.get('early_stopping_patience', 200)
+        early_stopping_min_delta = stage.get('early_stopping_min_delta', 0.003)
+        self.config.update({
+            'early_stopping_patience': early_stopping_patience,
+            'early_stopping_min_delta': early_stopping_min_delta
+        })
+        logger.info(f"Early stopping: patience={early_stopping_patience}, min_delta={early_stopping_min_delta}")
 
     def _initialize_training_state(self):
         """Initialize training state including environment states and metrics"""
@@ -1302,6 +1303,10 @@ class FeatureCombinationPPOTrainer(PPOTrainer):
         self.patience_counter = 0
         self.should_stop_early = False
         self.kl_divergence_history = []
+        self.global_step = 0
+        self.current_raw_rewards = None
+        self.current_normalized_rewards = None
+        self.stage_update_counter = 0  # Track updates within current stage
         
     def update_stage_parameters(self, stage_params: Dict[str, Any]):
         """Update trainer parameters for a new curriculum stage."""
@@ -1319,15 +1324,38 @@ class FeatureCombinationPPOTrainer(PPOTrainer):
             if key == "early_stopping_patience":
                 # Update early stopping patience with curriculum-specific value
                 self.config["early_stopping_patience"] = value
-        
+            if key == "curriculum_stage":
+                # Update the curriculum stage tracker
+                self.curriculum_stage = value
+            if key == "global_step":
+                # Track global step across stages (for logging)
+                self.global_step = value
+
+        # Update decay steps based on new num_updates if provided
+        if 'num_updates' in stage_params:
+            num_epochs = stage_params['num_updates']
+            decay_fraction = stage_params.get('decay_steps_fraction', 0.8)
+            self.config['action_std_decay_steps'] = max(1, int(num_epochs * decay_fraction))
+            self.config['entropy_decay_steps'] = max(1, int(num_epochs * decay_fraction))
+
+            # Update final values based on decay fraction
+            if 'action_std' in stage_params:
+                action_decay_frac = stage_params.get('action_std_decay_fraction', 0.7)
+                self.config['final_action_std'] = stage_params['action_std'] * action_decay_frac
+            if 'entropy_coeff' in stage_params:
+                entropy_decay_frac = stage_params.get('entropy_decay_fraction', 0.7)
+                self.config['final_entropy_coeff'] = stage_params['entropy_coeff'] * entropy_decay_frac
+
         # Reset stage-specific counters and metrics
         self.patience_counter = 0
         self.kl_divergence_history = []
-        
+        self.stage_update_counter = 0  # Reset update counter for new stage
+
         # Update optimizer learning rate if changed
         if 'learning_rate' in stage_params:
+            new_optimizer = optax.adam(stage_params['learning_rate'])
             self.train_state = self.train_state.replace(
-                opt_state=optax.adam(stage_params['learning_rate']).init(self.train_state.params)
+                opt_state=new_optimizer.init(self.train_state.params)
             )
 
     def train(self):
@@ -1367,7 +1395,7 @@ class FeatureCombinationPPOTrainer(PPOTrainer):
                     self._log_progress(trajectory, update, start_time, avg_reward_raw)
 
                 # Check early stopping
-                if self.check_early_stopping(trajectory, update):
+                if self.check_early_stopping(update):
                     logger.info("Early stopping triggered. Training complete.")
                     break
 
@@ -1393,8 +1421,10 @@ class FeatureCombinationPPOTrainer(PPOTrainer):
 
     def _update_hyperparameters(self, update: int):
         """Update hyperparameters dynamically during training."""
-        self.config['action_std'] = self.get_current_action_std(update)
-        self.config['entropy_coeff'] = self.get_current_entropy_coeff(update)
+        # Use stage-relative counter for decay calculations
+        self.config['action_std'] = self.get_current_action_std(self.stage_update_counter)
+        self.config['entropy_coeff'] = self.get_current_entropy_coeff(self.stage_update_counter)
+        self.stage_update_counter += 1  # Increment stage-relative counter
 
     def get_current_action_std(self, update: int) -> float:
         """Decay action std with cosine annealing to maintain exploration longer."""
@@ -1652,16 +1682,20 @@ class FeatureCombinationPPOTrainer(PPOTrainer):
             }
             wandb.log(wandb_metrics, step=global_step)
 
-    def check_early_stopping(self, trajectory: Trajectory, update: int) -> bool:
+    def check_early_stopping(self, update: int) -> bool:
         """Check if early stopping criteria are met with more conservative settings."""
         try:
             # Don't check early stopping until we have enough updates
             min_updates = 100  # Minimum number of updates before considering early stopping
             if update < min_updates:
                 return False
-                
-            # Compute metrics safely
-            metrics = self.compute_robust_metrics(trajectory)
+
+            # Use raw rewards for computing metrics (not normalized rewards)
+            if self.current_raw_rewards is None:
+                return False
+
+            # Compute metrics safely from RAW rewards
+            metrics = self.compute_robust_metrics(self.current_raw_rewards)
             current_performance = metrics['sharpe_ratio']
             
             # Handle potential NaN/Inf in performance metrics
@@ -1999,10 +2033,12 @@ def main():
                     'entropy_decay_fraction': 0.7,
                     'decay_steps_fraction': 0.8,
                     'curriculum_stage': stage_num,
-                    'global_step': global_step
+                    'global_step': global_step,
+                    'early_stopping_patience': stage['early_stopping_patience'],
+                    'early_stopping_min_delta': stage['early_stopping_min_delta']
                 }
                 if trainer is None:
-                    config_with_stage = base_config.copy()
+                    config_with_stage = config.copy()
                     config_with_stage.update(stage_params)
                     trainer = FeatureCombinationPPOTrainer(config_with_stage, selected_features)
                 else:
