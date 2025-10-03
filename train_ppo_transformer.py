@@ -1,5 +1,29 @@
 import os
 import time
+import warnings
+import multiprocessing
+
+# Get number of CPU cores (limit to 6 to avoid memory exhaustion)
+NUM_CORES = min(6, multiprocessing.cpu_count())
+
+# Suppress JAX backend warnings (informational only, not errors)
+warnings.filterwarnings('ignore', message='Unable to initialize backend')
+
+# Configure JAX to use CPU only (Metal GPU not compatible with current JAX version)
+os.environ['JAX_PLATFORM_NAME'] = 'cpu'
+
+# Enable multi-threading for better CPU performance
+os.environ['XLA_FLAGS'] = f'--xla_force_host_platform_device_count={NUM_CORES}'
+
+# Suppress wandb-core MallocStackLogging warning on macOS
+os.environ['WANDB_DISABLE_CODE'] = 'true'
+os.environ['MallocStackLogging'] = '0'
+
+# Configure thread pools for optimal CPU usage
+os.environ['OMP_NUM_THREADS'] = str(NUM_CORES)
+os.environ['MKL_NUM_THREADS'] = str(NUM_CORES)
+os.environ['OPENBLAS_NUM_THREADS'] = str(NUM_CORES)
+
 import jax
 import jax.numpy as jnp
 from jax import random, vmap, lax
@@ -19,6 +43,8 @@ import json
 import logging
 import argparse
 import pandas as pd
+from datetime import datetime
+import csv
 
 # Import the JAX environment
 from finagent.environment.portfolio_env import (
@@ -27,11 +53,10 @@ from finagent.environment.portfolio_env import (
     EnvState
 )
 
-# Setup logging
-logging.basicConfig(level=logging.INFO)
+# Setup logging (will be configured properly in main())
 logger = logging.getLogger(__name__)
 
-# Enable JAX optimizations
+# JAX CPU optimizations
 jax.config.update('jax_enable_x64', False)
 jax.config.update('jax_compilation_cache_dir', './jax_cache')
 jax.config.update('jax_debug_nans', False)
@@ -287,7 +312,7 @@ class CustomDataLoader(JAXPortfolioDataLoader):
                 self.features = self.selected_features
                 self.use_all_features = False
             except Exception as e:
-                logger.error(f"Could not call parent JAXPortfolioDataLoader.__init__: {e}")
+                logger.error(f"Could not call parent JAXPortfolioDataLoader.__init__: {e}", exc_info=True)
                 raise
 
         # Ensure we don't later get overwritten accidentally
@@ -430,7 +455,7 @@ class CustomPortfolioEnv(JAXVectorizedPortfolioEnv):
             self.data, self.dates_idx, self.actual_dates, self.n_features = self.data_loader.load_and_preprocess_data(
                 start_date=start_date,
                 end_date=end_date,
-                preload_to_gpu=True,
+                preload_to_gpu=False,  # Changed to False since we're using CPU
                 force_reload=False  # Use cache when available
             )
 
@@ -741,7 +766,7 @@ class PPOTrainer:
                        f"n_stocks={self.n_stocks}, n_features={self.n_features}")
 
         except Exception as e:
-            logger.error(f"Failed to initialize environment: {e}")
+            logger.error(f"Failed to initialize environment: {e}", exc_info=True)
             raise
 
         self.vmap_reset = jax.vmap(self.env.reset, in_axes=(0,))
@@ -810,21 +835,21 @@ class PPOTrainer:
         logger.info("Initializing network parameters...")
         
         self.rng = random.PRNGKey(self.config.get('seed', 42))
-        self.rng, init_rng = random.split(self.rng)
-        
+        self.rng, init_rng, dropout_rng = random.split(self.rng, 3)
+
         dummy_obs = jnp.ones((self.config.get('n_envs', 8), self.env.obs_dim))
-        
+
         try:
-            self.params = self.network.init(init_rng, dummy_obs)
+            self.params = self.network.init({"params": init_rng, "dropout": dropout_rng}, dummy_obs, training=False)
             logger.info("Network parameters initialized successfully")
         except Exception as e:
-            logger.error(f"Failed to initialize network parameters: {e}")
+            logger.error(f"Failed to initialize network parameters: {e}", exc_info=True)
             raise
-        
+
         if self._has_nan_params(self.params):
             logger.warning("NaN detected in initial parameters, reinitializing...")
-            self.rng, init_rng = random.split(self.rng)
-            self.params = self.network.init(init_rng, dummy_obs)
+            self.rng, init_rng, dropout_rng = random.split(self.rng, 3)
+            self.params = self.network.init({"params": init_rng, "dropout": dropout_rng}, dummy_obs, training=False)
             
             if self._has_nan_params(self.params):
                 raise RuntimeError("Failed to initialize parameters without NaN")
@@ -856,7 +881,7 @@ class PPOTrainer:
         
         try:
             self.rng, new_rng = random.split(self.rng)
-            logits, values, _ = self.network.apply(self.params, obs, rngs={"dropout": new_rng})
+            logits, values, _ = self.network.apply(self.params, obs, training=False, rngs={"dropout": new_rng})
             
             if check_for_nans(logits, "logits"):
                 raise RuntimeError("NaN detected in logits output")
@@ -866,106 +891,146 @@ class PPOTrainer:
             logger.info("Network forward pass test passed")
         
         except Exception as e:
-            logger.error(f"Network forward pass test failed: {e}")
+            logger.error(f"Network forward pass test failed: {e}", exc_info=True)
             raise
 
     def _initialize_environment_state(self):
         """Initialize environment state"""
         logger.info("Initializing environment state...")
-        
+
         try:
-            self.rng, *reset_keys = random.split(self.rng, self.config.get('n_envs', 8) + 1)
-            reset_keys = jnp.array(reset_keys)
-            self.env_states, self.obs = self.vmap_reset(reset_keys)
-            
+            n_envs = self.config.get('n_envs', 8)
+            self.rng, *reset_keys = random.split(self.rng, n_envs + 1)
+
+            # Reset environments individually (first time only - dynamic indexing in reset)
+            # We disable JIT temporarily because env.reset() is JIT-compiled but contains
+            # dynamic indexing that doesn't work well during initialization
+            env_states_list = []
+            obs_list = []
+
+            with jax.disable_jit():
+                for key in reset_keys:
+                    env_state, obs = self.env.reset(key)
+                    env_states_list.append(env_state)
+                    obs_list.append(obs)
+
+            # Stack the results into batched pytree
+            self.env_states = jax.tree_util.tree_map(
+                lambda *args: jnp.stack(args, axis=0), *env_states_list
+            )
+            self.obs = jnp.stack(obs_list, axis=0)
+
+            # Clean observations
             self.obs = jnp.where(jnp.isnan(self.obs), 0.0, self.obs)
             self.obs = jnp.where(jnp.isinf(self.obs), 0.0, self.obs)
-            
+
             if check_for_nans(self.obs, "initial observations"):
                 raise RuntimeError("NaN detected in initial environment observations")
-            
+
             logger.info("Environment state initialized successfully")
-        
+
         except Exception as e:
-            logger.error(f"Failed to initialize environment state: {e}")
+            logger.error(f"Failed to initialize environment state: {e}", exc_info=True)
             raise
 
     def collect_trajectory(self, train_state: TrainState, env_states: List[EnvState],
                           initial_obs: chex.Array, rng_key: chex.PRNGKey) -> Tuple[Trajectory, List[EnvState], chex.Array]:
-        """Collect trajectory using current policy"""
-        
-        def step_fn(carry_step, _):
-            env_states, obs, rng_key = carry_step
-            
-            obs = jnp.where(jnp.isnan(obs), 0.0, obs)
+        """Collect trajectory using current policy with lax.scan optimization"""
+
+        n_steps = self.config.get('n_steps', 64)
+        n_envs = self.config.get('n_envs', 8)
+
+        # Define scan body function for trajectory collection
+        def scan_step(carry, unused):
+            current_env_states, current_obs, current_rng = carry
+
+            # Clean observations
+            obs = jnp.where(jnp.isnan(current_obs), 0.0, current_obs)
             obs = jnp.clip(obs, -50.0, 50.0)
-            
-            rng_key, action_rng = random.split(rng_key)
-            
-            try:
-                logits, values, _ = train_state.apply_fn(
-                    train_state.params, obs, rngs={"dropout": action_rng}
-                )
-            except Exception as e:
-                logger.error(f"Network forward pass failed: {e}")
-                logits = jnp.zeros((obs.shape[0], self.env.action_dim))
-                values = jnp.zeros(obs.shape[0])
-            
+
+            # Split RNG
+            current_rng, action_rng, dropout_rng = random.split(current_rng, 3)
+
+            # Get actions from policy
+            logits, values, _ = train_state.apply_fn(
+                train_state.params, obs, training=False, rngs={"dropout": dropout_rng}
+            )
+
             logits = jnp.where(jnp.isnan(logits), 0.0, logits)
             values = jnp.where(jnp.isnan(values), 0.0, values)
             logits = jnp.clip(logits, -5.0, 5.0)
             values = jnp.clip(values, -50.0, 50.0)
-            
+
+            # Sample actions with proper vectorization
             action_std = self.config.get('action_std', 1.0)
             action_std = jnp.maximum(action_std, 1e-6)
-            
-            action_distribution = distrax.Normal(loc=logits, scale=action_std)
-            actions = action_distribution.sample(seed=action_rng)
-            actions = jnp.clip(actions, -5.0, 5.0)
-            
-            log_probs = action_distribution.log_prob(actions).sum(axis=-1)
-            log_probs = jnp.where(jnp.isnan(log_probs), -10.0, log_probs)
-            log_probs = jnp.clip(log_probs, -50.0, 10.0)
-            
-            new_env_states, next_obs, rewards, dones, info = self.vmap_step(env_states, actions)
-            
+
+            # Split RNG for each environment
+            action_rngs = random.split(action_rng, n_envs)
+
+            def sample_action_for_env(logit, action_rng_single):
+                action_distribution = distrax.Normal(loc=logit, scale=action_std)
+                action = action_distribution.sample(seed=action_rng_single)
+                action = jnp.clip(action, -5.0, 5.0)
+                log_prob = action_distribution.log_prob(action).sum()
+                log_prob = jnp.where(jnp.isnan(log_prob), -10.0, log_prob)
+                log_prob = jnp.clip(log_prob, -50.0, 10.0)
+                return action, log_prob
+
+            # Vectorize action sampling across environments
+            actions, log_probs = vmap(sample_action_for_env)(logits, action_rngs)
+
+            # Vectorized environment step using self.vmap_step
+            step_results = self.vmap_step(current_env_states, actions)
+            new_env_states, next_obs, rewards, dones, _ = step_results
+
+            # Clean outputs
             next_obs = jnp.where(jnp.isnan(next_obs), 0.0, next_obs)
             next_obs = jnp.clip(next_obs, -50.0, 50.0)
-            
             rewards = jnp.where(jnp.isnan(rewards), 0.0, rewards)
             rewards = jnp.clip(rewards, -50.0, 50.0)
-            
-            transition = Trajectory(
-                obs=obs,
-                actions=actions,
-                rewards=rewards,
-                values=values,
-                log_probs=log_probs,
-                dones=dones,
-            )
-            
-            return (new_env_states, next_obs, rng_key), transition
-        
-        n_steps = self.config.get('n_steps', 64)
-        initial_carry = (env_states, initial_obs, rng_key)
-        
+
+            # Create trajectory step
+            trajectory_step = (obs, actions, rewards, values, log_probs, dones)
+
+            # Update carry
+            new_carry = (new_env_states, next_obs, current_rng)
+
+            return new_carry, trajectory_step
+
+        # Initial carry
+        init_carry = (env_states, initial_obs, rng_key)
+
+        # Run scan
         try:
-            current_carry = initial_carry
-            trajectory_list = []
-            
-            for step in range(n_steps):
-                current_carry, transition = step_fn(current_carry, None)
-                trajectory_list.append(transition)
-            
-            trajectory = jax.tree_util.tree_map(
-                lambda *args: jnp.stack(args, axis=0), *trajectory_list
+            final_carry, trajectory_steps = lax.scan(
+                scan_step,
+                init_carry,
+                None,
+                length=n_steps
             )
-        
+
+            # Unpack final state
+            final_env_states, final_obs, _ = final_carry
+
+            # Unpack trajectory
+            trajectory_obs, trajectory_actions, trajectory_rewards, \
+                trajectory_values, trajectory_log_probs, trajectory_dones = trajectory_steps
+
+            # Create trajectory object
+            trajectory = Trajectory(
+                obs=trajectory_obs,
+                actions=trajectory_actions,
+                rewards=trajectory_rewards,
+                values=trajectory_values,
+                log_probs=trajectory_log_probs,
+                dones=trajectory_dones,
+            )
+
         except Exception as e:
-            logger.error(f"Trajectory collection failed: {e}")
+            logger.error(f"Trajectory collection failed: {e}", exc_info=True)
             return self._create_empty_trajectory(), env_states, initial_obs
-        
-        final_env_states, final_obs, _ = current_carry
+
         return trajectory, final_env_states, final_obs
 
     def _create_empty_trajectory(self) -> Trajectory:
@@ -1040,14 +1105,9 @@ class PPOTrainer:
         old_log_probs_batch = jnp.where(jnp.isnan(train_batch.log_probs), -10.0, train_batch.log_probs)
         
         batch_size = obs_batch.shape[0]
-        
-        try:
-            logits, values, _ = self.network.apply(params, obs_batch)
-        except Exception as e:
-            logger.error(f"Network forward pass failed in PPO loss: {e}")
-            logits = jnp.zeros((batch_size, self.env.action_dim))
-            values = jnp.zeros(batch_size)
-        
+
+        logits, values, _ = self.network.apply(params, obs_batch, training=True, rngs={"dropout": rng_key})
+
         logits = jnp.where(jnp.isnan(logits), 0.0, logits)
         values = jnp.where(jnp.isnan(values), 0.0, values)
         logits = jnp.clip(logits, -10.0, 10.0)
@@ -1130,12 +1190,14 @@ class PPOTrainer:
         )
         
         train_state = train_state.apply_gradients(grads=grads)
-        
-        if self._has_nan_params(grads):
-            logger.warning("NaN detected in gradients!")
-            metrics['nan_in_gradients'] = 1.0
-        else:
-            metrics['nan_in_gradients'] = 0.0
+
+        # Check for NaN in gradients using JAX operations (compatible with JIT)
+        def check_tree_nan(tree):
+            leaves = jax.tree_util.tree_leaves(tree)
+            has_nan = jnp.any(jnp.array([jnp.any(jnp.isnan(leaf)) for leaf in leaves if jnp.issubdtype(leaf.dtype, jnp.floating)]))
+            return has_nan
+
+        metrics['nan_in_gradients'] = jnp.where(check_tree_nan(grads), 1.0, 0.0)
 
         return train_state, metrics
 
@@ -1228,21 +1290,44 @@ class PPOTrainer:
 
     def train(self):
         """Main training loop"""
+        logger.info("=" * 80)
         logger.info("Starting PPO training with Transformer...")
-        
+        logger.info("=" * 80)
+
         n_envs = self.config.get('n_envs', 8)
         n_steps = self.config.get('n_steps', 64)
         total_timesteps = self.config.get('total_timesteps', 1_000_000)
         n_updates = total_timesteps // (n_envs * n_steps)
         n_minibatch = self.config.get('n_minibatch', 4)
         update_epochs = self.config.get('update_epochs', 4)
-        
+
         batch_size = n_envs * n_steps
         minibatch_size = batch_size // n_minibatch
-        
+
         if batch_size % n_minibatch != 0:
             raise ValueError(f"Batch size ({batch_size}) must be divisible by n_minibatch ({n_minibatch})")
-        
+
+        # Log training configuration
+        logger.info("Training Configuration:")
+        logger.info(f"  Total timesteps: {total_timesteps:,}")
+        logger.info(f"  Number of updates: {n_updates:,}")
+        logger.info(f"  Environments: {n_envs}")
+        logger.info(f"  Steps per env: {n_steps}")
+        logger.info(f"  Batch size: {batch_size}")
+        logger.info(f"  Minibatch size: {minibatch_size}")
+        logger.info(f"  Update epochs: {update_epochs}")
+        logger.info(f"  Learning rate: {self.config.get('learning_rate', 1e-4)}")
+        logger.info(f"  Gamma: {self.config.get('gamma', 0.99)}")
+        logger.info(f"  GAE Lambda: {self.config.get('gae_lambda', 0.95)}")
+        logger.info(f"  Clip epsilon: {self.config.get('clip_eps', 0.2)}")
+        logger.info(f"  Entropy coeff: {self.config.get('entropy_coeff', 0.01)}")
+        logger.info(f"  Value coeff: {self.config.get('value_coeff', 0.5)}")
+        target_kl = self.config.get('target_kl', 0.01)
+        kl_multiplier = self.config.get('target_kl_multiplier', 3.0)
+        logger.info(f"  Target KL: {target_kl}")
+        logger.info(f"  KL threshold (target × multiplier): {target_kl * kl_multiplier:.4f} (multiplier: {kl_multiplier})")
+        logger.info("=" * 80)
+
         global_step = 0
         start_time = time.time()
         
@@ -1262,16 +1347,23 @@ class PPOTrainer:
 
                 if any(check_for_nans(getattr(trajectory, field), field) for field in Trajectory._fields):
                     logger.error(f"NaN detected in trajectory at update {update}")
+                    logger.error(f"  NaN count: {self.nan_count + 1}/{self.max_nan_resets}")
+                    logger.error(f"  Trajectory fields: {Trajectory._fields}")
+                    for field in Trajectory._fields:
+                        field_data = getattr(trajectory, field)
+                        if check_for_nans(field_data, field):
+                            logger.error(f"  NaN found in field '{field}': shape={field_data.shape}")
                     self.nan_count += 1
                     if self.nan_count > self.max_nan_resets:
-                        raise RuntimeError("Too many NaN resets")
+                        raise RuntimeError(f"Too many NaN resets ({self.nan_count}/{self.max_nan_resets}). Training unstable.")
+                    logger.warning(f"Resetting environment state (NaN reset {self.nan_count}/{self.max_nan_resets})...")
                     self._initialize_environment_state()
                     env_states = self.env_states
                     obs = self.obs
                     continue
             
             except Exception as e:
-                logger.error(f"Trajectory collection failed at update {update}: {e}")
+                logger.error(f"Trajectory collection failed at update {update}: {e}", exc_info=True)
                 self.nan_count += 1
                 if self.nan_count > self.max_nan_resets:
                     raise RuntimeError("Too many NaN resets")
@@ -1281,13 +1373,11 @@ class PPOTrainer:
                 continue
             
             self.rng, last_value_rng = random.split(self.rng)
-            try:
-                _, last_values, _ = self.network.apply(self.train_state.params, obs)
-                last_values = jnp.where(jnp.isnan(last_values), 0.0, last_values)
-                last_values = jnp.clip(last_values, -100.0, 100.0)
-            except Exception as e:
-                logger.error(f"Failed to compute last values: {e}")
-                last_values = jnp.zeros(n_envs)
+            _, last_values, _ = self.network.apply(
+                self.train_state.params, obs, training=False, rngs={"dropout": last_value_rng}
+            )
+            last_values = jnp.where(jnp.isnan(last_values), 0.0, last_values)
+            last_values = jnp.clip(last_values, -100.0, 100.0)
             
             gae_advantages, returns = self.compute_gae(trajectory, last_values)
             
@@ -1298,10 +1388,15 @@ class PPOTrainer:
             flat_returns = returns.reshape(-1)
             
             if check_for_nans(flat_gae_advantages, "advantages") or check_for_nans(flat_returns, "returns"):
-                logger.error(f"NaN detected in GAE at update {update}")
+                logger.error(f"NaN detected in GAE computation at update {update}")
+                logger.error(f"  NaN count: {self.nan_count + 1}/{self.max_nan_resets}")
+                logger.error(f"  Advantages shape: {flat_gae_advantages.shape}, has NaN: {check_for_nans(flat_gae_advantages, 'advantages')}")
+                logger.error(f"  Returns shape: {flat_returns.shape}, has NaN: {check_for_nans(flat_returns, 'returns')}")
+                logger.error(f"  Last values: min={float(last_values.min()):.6f}, max={float(last_values.max()):.6f}, mean={float(last_values.mean()):.6f}")
                 self.nan_count += 1
                 if self.nan_count > self.max_nan_resets:
-                    raise RuntimeError("Too many NaN resets")
+                    raise RuntimeError(f"Too many NaN resets ({self.nan_count}/{self.max_nan_resets}). Training unstable.")
+                logger.warning(f"Skipping update (NaN reset {self.nan_count}/{self.max_nan_resets})...")
                 continue
             
             for epoch in range(update_epochs):
@@ -1327,7 +1422,7 @@ class PPOTrainer:
                             wandb.log({f"train/{k}": v for k, v in metrics.items()}, step=global_step)
                     
                     except Exception as e:
-                        logger.error(f"Training step failed: {e}")
+                        logger.error(f"Training step failed: {e}", exc_info=True)
                         self.nan_count += 1
                         if self.nan_count > self.max_nan_resets:
                             raise RuntimeError("Too many NaN resets")
@@ -1342,23 +1437,45 @@ class PPOTrainer:
             if update % 10 == 0:
                 elapsed_time = time.time() - start_time
                 avg_reward = float(trajectory.rewards.mean())
+                sps = global_step / elapsed_time if elapsed_time > 0 else 0
 
                 # Compute robust metrics from RAW rewards (before normalization)
                 robust_metrics = self.compute_robust_metrics(self.current_raw_rewards)
 
-                logger.info(f"Update: {update}/{n_updates}, Steps: {global_step}, "
-                           f"Avg Reward: {avg_reward:.4f}, "
-                           f"Sharpe Ratio: {robust_metrics['sharpe_ratio']:.4f}, "
-                           f"Time: {elapsed_time:.2f}s")
+                # Enhanced logging with more details
+                logger.info("-" * 80)
+                logger.info(f"Update {update}/{n_updates} ({100*update/n_updates:.1f}%) | Steps: {global_step:,}/{total_timesteps:,}")
+                logger.info(f"  Performance:")
+                logger.info(f"    Avg Reward: {avg_reward:.6f}")
+                logger.info(f"    Sharpe Ratio: {robust_metrics['sharpe_ratio']:.6f}")
+                logger.info(f"    Mean Return: {robust_metrics.get('mean_return', 0.0):.6f}")
+                logger.info(f"    Std Return: {robust_metrics.get('std_reward', 1.0):.6f}")
+                logger.info(f"  Training Metrics:")
+                logger.info(f"    Policy Loss: {metrics.get('policy_loss', 0.0):.6f}")
+                logger.info(f"    Value Loss: {metrics.get('value_loss', 0.0):.6f}")
+                logger.info(f"    Entropy: {metrics.get('entropy', 0.0):.6f}")
+                logger.info(f"    Approx KL: {metrics.get('approx_kl', 0.0):.6f}")
+                logger.info(f"    Clip Fraction: {metrics.get('clipfrac', 0.0):.4f}")
+                logger.info(f"  Early Stopping:")
+                logger.info(f"    Best Performance: {self.best_performance:.6f}")
+                logger.info(f"    Patience Counter: {self.patience_counter}/{self.config.get('early_stopping_patience', 150)}")
+                logger.info(f"  Speed: {sps:.1f} SPS | Elapsed: {elapsed_time:.1f}s | ETA: {(elapsed_time/max(update, 1))*(n_updates-update):.1f}s")
+                logger.info("-" * 80)
 
                 if self.config.get('use_wandb', False):
                     wandb.log({
-                        "chart/SPS": global_step / elapsed_time,
+                        "chart/SPS": sps,
                         "chart/avg_reward": avg_reward,
                         # Performance metrics (from RAW rewards)
                         "performance/sharpe_ratio": robust_metrics.get('sharpe_ratio', 0.0),
                         "performance/mean_return": robust_metrics.get('mean_return', 0.0),
                         "performance/std_return": robust_metrics.get('std_reward', 1.0),
+                        # Training metrics
+                        "train/policy_loss": metrics.get('policy_loss', 0.0),
+                        "train/value_loss": metrics.get('value_loss', 0.0),
+                        "train/entropy": metrics.get('entropy', 0.0),
+                        "train/approx_kl": metrics.get('approx_kl', 0.0),
+                        "train/clipfrac": metrics.get('clipfrac', 0.0),
                         # Early stopping
                         "early_stopping/patience_counter": self.patience_counter,
                         "early_stopping/best_performance": self.best_performance
@@ -1369,17 +1486,37 @@ class PPOTrainer:
                     logger.info("Early stopping triggered")
                     break
             
-            if metrics['approx_kl'] > self.config.get('target_kl', 0.015) * 1.5:
-                logger.warning(f"KL divergence {metrics['approx_kl']:.4f} exceeded target. Early stopping.")
+            # KL divergence check - use configurable multiplier (default 3.0 for standard PPO)
+            kl_threshold = self.config.get('target_kl', 0.01) * self.config.get('target_kl_multiplier', 3.0)
+            if metrics['approx_kl'] > kl_threshold:
+                logger.warning(f"KL divergence {metrics['approx_kl']:.4f} exceeded threshold {kl_threshold:.4f}. Early stopping.")
                 break
             
             if update % self.config.get('save_interval', 100) == 0 and update > 0:
                 self.save_model(f"checkpoint_{update}.pkl")
         
         self.save_model("final_model.pkl")
-        if self.config.get('use_wandb', False):
+
+        # Training summary
+        total_time = time.time() - start_time
+        logger.info("=" * 80)
+        logger.info("TRAINING COMPLETE!")
+        logger.info("=" * 80)
+        logger.info(f"Training Summary:")
+        logger.info(f"  Total updates: {update}/{n_updates}")
+        logger.info(f"  Total timesteps: {global_step:,}")
+        logger.info(f"  Total time: {total_time:.2f}s ({total_time/60:.2f}m)")
+        logger.info(f"  Average SPS: {global_step/total_time:.1f}")
+        logger.info(f"  Best performance (Sharpe): {self.best_performance:.6f}")
+        logger.info(f"  Final avg reward: {avg_reward:.6f}")
+        logger.info(f"  Final Sharpe ratio: {robust_metrics['sharpe_ratio']:.6f}")
+        logger.info(f"  Model saved: final_model.pkl")
+        logger.info("=" * 80)
+
+        # Only finish wandb if NOT in curriculum mode (curriculum mode handles it in main loop)
+        if self.config.get('use_wandb', False) and not self.config.get('in_curriculum_mode', False):
             wandb.finish()
-        logger.info("Training complete!")
+            logger.info("Weights & Biases run finished")
 
     def save_model(self, filename: str = "model.pkl"):
         """Save model parameters"""
@@ -1398,10 +1535,88 @@ class PPOTrainer:
             params_bytes = f.read()
         
         dummy_obs = jnp.ones((1, self.env.obs_dim))
-        temp_params = self.network.init(random.PRNGKey(0), dummy_obs)
+        init_rng = random.PRNGKey(0)
+        dropout_rng = random.PRNGKey(1)
+        temp_params = self.network.init({"params": init_rng, "dropout": dropout_rng}, dummy_obs, training=False)
         loaded_params = serialization.from_bytes(temp_params, params_bytes)
         self.train_state = self.train_state.replace(params=loaded_params)
         logger.info(f"Model loaded from {filepath}")
+
+
+# ============================================================================
+# LOGGING SETUP
+# ============================================================================
+
+def setup_logging(feature_combination: str, log_level: str = "INFO", log_dir: str = "training_logs") -> Path:
+    """
+    Configure comprehensive logging with both file and console handlers.
+
+    Args:
+        feature_combination: Feature combination being trained (e.g., 'ohlcv+technical')
+        log_level: Logging level (DEBUG, INFO, WARNING, ERROR)
+        log_dir: Directory to store log files
+
+    Returns:
+        Path to the log file
+    """
+    # Create log directory structure
+    log_base = Path(log_dir)
+    log_base.mkdir(parents=True, exist_ok=True)
+
+    # Create subdirectory for this feature combination
+    feature_log_dir = log_base / feature_combination.replace('+', '_')
+    feature_log_dir.mkdir(parents=True, exist_ok=True)
+
+    # Create log file with timestamp
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    log_file = feature_log_dir / f"training_{timestamp}.log"
+
+    # Configure root logger
+    root_logger = logging.getLogger()
+    root_logger.setLevel(getattr(logging, log_level.upper()))
+
+    # Remove any existing handlers
+    root_logger.handlers.clear()
+
+    # Create formatters
+    detailed_formatter = logging.Formatter(
+        fmt='%(asctime)s | %(levelname)-8s | %(name)s:%(lineno)d | %(message)s',
+        datefmt='%Y-%m-%d %H:%M:%S'
+    )
+
+    console_formatter = logging.Formatter(
+        fmt='%(asctime)s | %(levelname)-8s | %(message)s',
+        datefmt='%H:%M:%S'
+    )
+
+    # File handler - detailed logging with full context
+    file_handler = logging.FileHandler(log_file, mode='w', encoding='utf-8')
+    file_handler.setLevel(logging.DEBUG)  # Capture everything in file
+    file_handler.setFormatter(detailed_formatter)
+    root_logger.addHandler(file_handler)
+
+    # Console handler - less verbose for readability
+    console_handler = logging.StreamHandler()
+    console_handler.setLevel(getattr(logging, log_level.upper()))
+    console_handler.setFormatter(console_formatter)
+    root_logger.addHandler(console_handler)
+
+    # Suppress noisy third-party loggers
+    logging.getLogger('jax._src.xla_bridge').setLevel(logging.WARNING)
+    logging.getLogger('jax._src.compilation_cache').setLevel(logging.WARNING)
+    logging.getLogger('jax._src.dispatch').setLevel(logging.WARNING)
+    logging.getLogger('jax._src.interpreters.pxla').setLevel(logging.WARNING)
+    logging.getLogger('absl').setLevel(logging.WARNING)
+
+    logger.info("=" * 80)
+    logger.info(f"Logging initialized")
+    logger.info(f"Log file: {log_file}")
+    logger.info(f"Log level: {log_level}")
+    logger.info(f"Feature combination: {feature_combination}")
+    logger.info(f"Configured JAX to use {NUM_CORES} CPU cores")
+    logger.info("=" * 80)
+
+    return log_file
 
 
 # ============================================================================
@@ -1423,26 +1638,40 @@ def run_training_with_combination(feature_combination: str, config: Dict[str, An
             logger.info(f"  {category}: {len(category_features)} features")
     
     except Exception as e:
-        logger.error(f"Failed to get features for combination '{feature_combination}': {e}")
+        logger.error(f"Failed to get features for combination '{feature_combination}': {e}", exc_info=True)
         feature_selector.print_available_combinations()
         raise
     
     config['feature_combination'] = feature_combination
     config['selected_features'] = selected_features
     config['model_name'] = f"ppo_transformer_{feature_combination.replace('+', '_')}"
-    
+
+    # Initialize wandb if enabled
+    if config.get('use_wandb', False):
+        try:
+            wandb.init(
+                project=config.get('wandb_project', 'ppo-transformer-portfolio'),
+                name=config.get('model_name', 'ppo_transformer'),
+                config=config,
+                tags=[feature_combination, 'transformer', 'ppo']
+            )
+            logger.info("Weights & Biases initialized")
+        except Exception as e:
+            logger.warning(f"Failed to initialize wandb: {e}. Continuing without wandb logging.")
+            config['use_wandb'] = False
+
     try:
         trainer = PPOTrainer(config, selected_features)
         logger.info("Transformer PPO trainer initialized successfully")
-        
+
         logger.info("Starting training...")
         trainer.train()
         logger.info("Training completed successfully!")
-        
+
         trainer.save_model(f"final_model_{feature_combination.replace('+', '_')}")
     
     except Exception as e:
-        logger.error(f"Training failed: {e}")
+        logger.error(f"Training failed: {e}", exc_info=True)
         raise
 
 
@@ -1453,10 +1682,10 @@ def main():
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:
-  python train_ppo_transformer_with_features.py --feature_combination ohlcv+technical
-  python train_ppo_transformer_with_features.py --feature_combination all --total_timesteps 500000
-  python train_ppo_transformer_with_features.py --feature_combination ohlcv+technical --curriculum_stage 1
-  python train_ppo_transformer_with_features.py --feature_combination ohlcv+technical --auto_curriculum
+  python train_ppo_transformer.py --feature_combination ohlcv+technical
+  python train_ppo_transformer.py --feature_combination all --total_timesteps 500000
+  python train_ppo_transformer.py --feature_combination ohlcv+technical --curriculum_stage 1
+  python train_ppo_transformer.py --feature_combination ohlcv+technical --auto_curriculum
         """
     )
     
@@ -1494,19 +1723,39 @@ Examples:
     # Early stopping
     parser.add_argument('--early_stopping_patience', type=int, default=150)
     parser.add_argument('--early_stopping_min_delta', type=float, default=0.005)
-    
+    parser.add_argument('--target_kl_multiplier', type=float, default=3.0,
+                       help='Multiplier for target KL divergence threshold (default: 3.0). '
+                            'Training stops if KL > target_kl * multiplier. '
+                            'Higher values = more tolerance for exploration.')
+
     # Other
-    parser.add_argument('--use_wandb', action='store_true')
+    parser.add_argument('--use_wandb', action='store_true', help='Enable Weights & Biases logging')
+    parser.add_argument('--wandb_project', type=str, default='ppo-transformer-portfolio',
+                       help='Weights & Biases project name')
     parser.add_argument('--seed', type=int, default=42)
     parser.add_argument('--model_dir', type=str, default='models')
     parser.add_argument('--list_combinations', action='store_true')
+
+    # Logging
+    parser.add_argument('--log_level', type=str, default='INFO',
+                       choices=['DEBUG', 'INFO', 'WARNING', 'ERROR'],
+                       help='Logging level (DEBUG, INFO, WARNING, ERROR)')
+    parser.add_argument('--log_dir', type=str, default='training_logs',
+                       help='Directory to store training log files')
     
     args = parser.parse_args()
-    
+
     if args.list_combinations:
         feature_selector = FeatureSelector()
         feature_selector.print_available_combinations()
         return
+
+    # Setup logging early
+    log_file = setup_logging(
+        feature_combination=args.feature_combination,
+        log_level=args.log_level,
+        log_dir=args.log_dir
+    )
     
     config = {
         'seed': args.seed,
@@ -1525,9 +1774,13 @@ Examples:
         'num_layers': args.num_layers,
         'dropout_rate': args.dropout_rate,
         'use_wandb': args.use_wandb,
+        'wandb_project': args.wandb_project,
         'early_stopping_patience': args.early_stopping_patience,
         'early_stopping_min_delta': args.early_stopping_min_delta,
+        'target_kl_multiplier': args.target_kl_multiplier,
         'model_dir': args.model_dir,
+        'log_file': str(log_file),
+        'log_level': args.log_level,
         'gamma': 0.99,
         'gae_lambda': 0.95,
         'clip_eps': 0.2,
@@ -1555,7 +1808,25 @@ Examples:
             selected_features = feature_selector.get_features_for_combination(args.feature_combination)
             config['selected_features'] = selected_features
             config['curriculum_config'] = curriculum_config
+            config['model_name'] = f"ppo_transformer_curriculum_{args.feature_combination.replace('+', '_')}"
             logger.info(f"Selected {len(selected_features)} features for training")
+
+            # Mark as curriculum mode to prevent wandb.finish() in train()
+            config['in_curriculum_mode'] = True
+
+            # Initialize wandb if enabled
+            if config.get('use_wandb', False):
+                try:
+                    wandb.init(
+                        project=config.get('wandb_project', 'ppo-transformer-portfolio'),
+                        name=config.get('model_name', 'ppo_transformer_curriculum'),
+                        config=config,
+                        tags=[args.feature_combination, 'transformer', 'ppo', 'curriculum']
+                    )
+                    logger.info("Weights & Biases initialized for curriculum learning")
+                except Exception as e:
+                    logger.warning(f"Failed to initialize wandb: {e}. Continuing without wandb logging.")
+                    config['use_wandb'] = False
 
             trainer = None
             global_step = 0
@@ -1585,6 +1856,11 @@ Examples:
                 trainer.save_model(f"curriculum_stage_{stage_num}")
                 global_step += stage['num_epochs']
                 logger.info(f"Completed Curriculum Stage {stage_num}. Global step: {global_step}")
+
+            # Finish wandb after all curriculum stages complete
+            if config.get('use_wandb', False):
+                wandb.finish()
+                logger.info("Weights & Biases run finished")
         else:
             run_training_with_combination(args.feature_combination, config)
     
@@ -1592,7 +1868,7 @@ Examples:
         logger.info("Training interrupted by user")
     
     except Exception as e:
-        logger.error(f"Training failed with error: {e}")
+        logger.error(f"Training failed with error: {e}", exc_info=True)
         raise
 
 

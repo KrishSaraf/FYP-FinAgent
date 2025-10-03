@@ -321,58 +321,8 @@ class PlainRLLSTMEvaluator:
     
     def calculate_benchmark_comparison(self) -> Dict[str, Any]:
         """Calculate benchmark comparisons (buy-and-hold, equal weight)"""
-        logger.info("Calculating benchmark comparisons...")
-        
-        try:
-            # Get market data for benchmark calculation
-            # Use minimal features for benchmark (just close price)
-            eval_env = CustomPortfolioEnv(
-                selected_features=['close'],  # Only need close prices for benchmark
-                data_root=self.config['data_root'],
-                stocks=self.config['stocks'],
-                start_date=self.config['eval_start_date'],
-                end_date=self.config['eval_end_date'],
-                window_size=self.config.get('window_size', 30),
-                transaction_cost_rate=0.0,  # No transaction costs for benchmark
-                initial_cash=1_000_000.0
-            )
-            
-            # Extract price data
-            close_prices = eval_env.data[:, :, 0]  # Assuming close is first feature
-            
-            # Buy-and-hold benchmark (equal weight)
-            equal_weights = jnp.ones(eval_env.n_stocks) / eval_env.n_stocks
-            daily_returns = jnp.diff(close_prices, axis=0) / close_prices[:-1]
-            daily_returns = jnp.where(jnp.isnan(daily_returns), 0.0, daily_returns)
-            
-            portfolio_returns = jnp.sum(equal_weights * daily_returns, axis=1)
-            cumulative_returns = jnp.cumprod(1 + portfolio_returns)
-            
-            # Calculate benchmark metrics
-            total_return = float(cumulative_returns[-1] - 1)
-            sharpe_ratio = float(jnp.mean(portfolio_returns) / jnp.std(portfolio_returns) * jnp.sqrt(252))
-            volatility = float(jnp.std(portfolio_returns) * jnp.sqrt(252))
-            
-            # Max drawdown
-            running_max = lax.cummax(cumulative_returns, axis=0)
-            drawdown = (cumulative_returns - running_max) / running_max
-            max_drawdown = float(jnp.min(drawdown))
-            
-            benchmark_results = {
-                'buy_and_hold_return': total_return,
-                'buy_and_hold_sharpe': sharpe_ratio,
-                'buy_and_hold_volatility': volatility,
-                'buy_and_hold_max_drawdown': max_drawdown,
-                'buy_and_hold_cumulative_returns': cumulative_returns.tolist()
-            }
-            
-            logger.info(f"Benchmark - Return: {total_return:.4f}, Sharpe: {sharpe_ratio:.4f}")
-            
-            return benchmark_results
-            
-        except Exception as e:
-            logger.error(f"Failed to calculate benchmarks: {e}")
-            return {}
+        logger.info("Benchmark comparison disabled")
+        return {}
     
     def analyze_feature_importance(self) -> Dict[str, Any]:
         """Analyze the importance of different feature categories"""
@@ -630,7 +580,7 @@ Evaluation Seed: {self.config.get('eval_seed', 'N/A')}
             
             # Add metadata
             results_to_save['evaluation_config'] = self.config
-            results_to_save['model_path'] = self.model_path
+            results_to_save['model_path'] = str(self.model_path)
             results_to_save['timestamp'] = pd.Timestamp.now().isoformat()
             results_to_save['feature_analysis'] = self.analyze_feature_importance()
             
@@ -646,53 +596,69 @@ Evaluation Seed: {self.config.get('eval_seed', 'N/A')}
 
 def main():
     """Main evaluation script"""
-    
+    import argparse
+
+    parser = argparse.ArgumentParser(description='Evaluate Plain RL LSTM Model')
+    parser.add_argument('--model_path', type=str, required=True, help='Path to the trained model file')
+    parser.add_argument('--feature_combination', type=str, default=None, help='Feature combination (e.g., ohlcv+technical+sentiment)')
+    parser.add_argument('--num_episodes', type=int, default=20, help='Number of evaluation episodes')
+    parser.add_argument('--eval_start_date', type=str, default='2025-03-07', help='Evaluation start date')
+    parser.add_argument('--eval_end_date', type=str, default='2025-06-06', help='Evaluation end date')
+    parser.add_argument('--results_dir', type=str, default='evaluation_results/Plain_RL_LSTM', help='Results directory')
+    parser.add_argument('--data_root', type=str, default='processed_data/', help='Data root directory')
+    parser.add_argument('--stocks_file', type=str, default='finagent/stocks.txt', help='Path to stocks file')
+
+    args = parser.parse_args()
+
     # Evaluation configuration
     eval_config = {
         # Data configuration
-        'data_root': 'processed_data/',
+        'data_root': args.data_root,
         'stocks': None,  # Will be loaded from stocks.txt or inferred
-        'eval_start_date': '2025-03-07',  # Out-of-sample period
-        'eval_end_date': '2025-06-06',
+        'eval_start_date': args.eval_start_date,
+        'eval_end_date': args.eval_end_date,
         'window_size': 30,
         'transaction_cost_rate': 0.005,
         'sharpe_window': 252,
-        
+
         # Evaluation configuration
         'n_eval_envs': 1,
         'eval_seed': 123,
-        
+
         # Data loading settings
         'fill_missing_features_with': 'interpolate',
         'preload_to_gpu': True,
-        
+
         # Output settings
         'save_results': True,
         'save_visualizations': True,
-        'results_dir': 'evaluation_results/Plain_RL_LSTM'
+        'results_dir': args.results_dir
     }
-    
+
     # Load stocks from file if not specified
     if eval_config['stocks'] is None:
         try:
-            with open('finagent/stocks.txt', 'r') as f:
+            with open(args.stocks_file, 'r') as f:
                 eval_config['stocks'] = [line.strip() for line in f.readlines() if line.strip()]
-            logger.info(f"Loaded {len(eval_config['stocks'])} stocks from stocks.txt")
+            logger.info(f"Loaded {len(eval_config['stocks'])} stocks from {args.stocks_file}")
         except FileNotFoundError:
-            logger.warning("stocks.txt not found, using default stocks")
+            logger.warning(f"{args.stocks_file} not found, using default stocks")
             eval_config['stocks'] = ['RELIANCE', 'TCS', 'HDFCBANK', 'INFY', 'HINDUNILVR']
-    
-    # Model path - adjust this to your trained model
-    model_path = 'models/final_model_plain_rl_lstm_ohlcv.pkl'  # Update this path
-    
+
+    # Get feature selector for feature combination
+    feature_selector = FeatureSelector()
+    selected_features = None
+    if args.feature_combination:
+        selected_features = feature_selector.get_features_for_combination(args.feature_combination)
+
     try:
         # Initialize evaluator
-        evaluator = PlainRLLSTMEvaluator(model_path, eval_config)
-        
+        evaluator = PlainRLLSTMEvaluator(args.model_path, eval_config, selected_features=selected_features)
+
         # Run evaluation
         logger.info("Starting model evaluation...")
         results = evaluator.evaluate_model(
-            num_episodes=20,  # Number of evaluation episodes
+            num_episodes=args.num_episodes,
             deterministic=True  # Use deterministic policy
         )
         
