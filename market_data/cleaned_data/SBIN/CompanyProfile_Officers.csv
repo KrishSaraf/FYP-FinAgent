@@ -1,8 +1,0 @@
-rank,since,firstName,mI,lastName,age,title
-1,01/20/2020,Challa,Sreenivasulu,Setty,,"{'startYear': '2024', 'startMonth': '8', 'startDay': '28', 'iD1': 'CHM', 'abbr1': 'Chmn.', 'iD2': 'EDR', 'abbr2': 'Exec. Dir.', 'Value': 'Executive Chairman of the Board'}"
-2,07/01/2023,Kameshwar,Rao,Kodavanti,,"{'startYear': '2023', 'startMonth': '7', 'startDay': '1', 'iD1': 'CFO', 'abbr1': 'CFO', 'iD2': '', 'abbr2': '', 'Value': 'Chief Financial Officer'}"
-3,01/07/2025,Baldev,,Prakash,,"{'startYear': '2025', 'startMonth': '1', 'startDay': '7', 'iD1': 'CRO', 'abbr1': 'CRO', 'iD2': 'DMD', 'abbr2': 'Dep-Mgng.Dir.', 'Value': 'Chief Risk Officer, Deputy Managing Director'}"
-4,01/28/2021,Ashwini,Kumar,Tewari,56,"{'startYear': '2023', 'startMonth': '11', 'startDay': '21', 'iD1': 'MDR', 'abbr1': 'Mgng.Dir.', 'iD2': 'EDR', 'abbr2': 'Exec. Dir.', 'Value': 'Managing Director - Corporate Banking and Subsidiaries, Executive Director'}"
-5,11/21/2023,Vinay,M.,Tonse,,"{'startYear': '2023', 'startMonth': '11', 'startDay': '21', 'iD1': 'MDR', 'abbr1': 'Mgng.Dir.', 'iD2': 'EDR', 'abbr2': 'Exec. Dir.', 'Value': 'Managing Director - Retail Business and Operations, Executive Director'}"
-6,11/01/2023,Ramamohan,,Rao Amara,,"{'startYear': '2024', 'startMonth': '12', 'startDay': '18', 'iD1': 'MDR', 'abbr1': 'Mgng.Dir.', 'iD2': '', 'abbr2': '', 'Value': 'Managing Director'}"
-7,04/05/2023,Aruna,Nitin,Dak,,"{'startYear': '2023', 'startMonth': '4', 'startDay': '5', 'iD1': 'SEC', 'abbr1': 'Secy.', 'iD2': '', 'abbr2': '', 'Value': 'Assistant General Manager - Compliance, Company Secretary'}"

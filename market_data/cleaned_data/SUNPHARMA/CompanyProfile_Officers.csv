@@ -1,7 +1,0 @@
-rank,since,firstName,mI,lastName,age,title
-1,NA,Dilip,Shantilal,Shanghvi,68,"{'startYear': '2024', 'startMonth': '5', 'startDay': '22', 'iD1': 'CHM', 'abbr1': 'Chmn.', 'iD2': 'MDR', 'abbr2': 'Mgng.Dir.', 'Value': 'Chairman, Managing Director, Executive Director'}"
-2,06/19/2017,C. S.,,Muralidharan,,"{'startYear': '2017', 'startMonth': '6', 'startDay': '19', 'iD1': 'CFO', 'abbr1': 'CFO', 'iD2': '', 'abbr2': '', 'Value': 'Chief Financial Officer'}"
-3,07/01/2025,Jayashree,,Satagopan,,"{'startYear': '2025', 'startMonth': '7', 'startDay': '1', 'iD1': 'CFO', 'abbr1': 'CFO', 'iD2': '', 'abbr2': '', 'Value': 'Chief Financial Officer'}"
-4,NA,Aalok,Dilip,Shanghvi,40,"{'startYear': '2023', 'startMonth': '6', 'startDay': '1', 'iD1': 'EVP', 'abbr1': 'Exec. VP', 'iD2': 'EDR', 'abbr2': 'Exec. Dir.', 'Value': 'Whole-time Director, Executive Vice-President, Emerging Markets, Global generic R&D, Global BD (Generics Segment) & API'}"
-5,01/31/2022,Anoop,,Deshpande,,"{'startYear': '2022', 'startMonth': '1', 'startDay': '31', 'iD1': 'CCO', 'abbr1': 'Chief Comp.', 'iD2': 'SEC', 'abbr2': 'Secy.', 'Value': 'Compliance Officer, Company Secretary'}"
-6,05/22/2025,Vidhi,,Shanghvi,,"{'startYear': '2025', 'startMonth': '5', 'startDay': '22', 'iD1': 'EDR', 'abbr1': 'Exec. Dir.', 'iD2': '', 'abbr2': '', 'Value': 'Whole-Time Director'}"

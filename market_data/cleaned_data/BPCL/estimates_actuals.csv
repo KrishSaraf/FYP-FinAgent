@@ -1,6 +1,0 @@
-CalendarMonth,CalendarYear,FiscalYear,ActualReportDate,Type,CurrencyCode,Reported,ReportedDate,SurprisePercent,SurpriseMean,SUE,NumEstimates,Mean,High,Low,Median,StandardDeviation,SmartEstimate
-3,2024,2024,2024-05-09T11:28:00,Actual,INR,63.67,2024-05-09T11:28:00,-6.26,67.92,-0.62,16,,,,,,
-3,2025,2025,2025-04-29T06:25:00,Actual,INR,32.1,2025-04-29T06:25:00,5.75,30.35,0.37,20,,,,,,
-3,2026,2026,,Estimate,INR,,,,,,21,34.0,51.0,22.0,33.0,7.0,34.0
-3,2027,2027,,Estimate,INR,,,,,,20,36.0,53.0,25.0,34.0,7.0,35.0
-3,2028,2028,,Estimate,INR,,,,,,7,42.0,50.0,33.0,45.0,6.0,41.0

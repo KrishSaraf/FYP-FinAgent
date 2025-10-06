@@ -1,7 +1,0 @@
-rank,since,firstName,mI,lastName,age,title
-1,NA,Sajjan,,Jindal,64,"{'startYear': '2011', 'startMonth': '10', 'startDay': '21', 'iD1': 'CHM', 'abbr1': 'Chmn.', 'iD2': 'MDR', 'abbr2': 'Mgng.Dir.', 'Value': 'Executive Chairman of the Board, Managing Director'}"
-2,05/07/2009,Jayant,,Acharya,61,"{'startYear': '2023', 'startMonth': '5', 'startDay': '19', 'iD1': 'CEO', 'abbr1': 'CEO', 'iD2': 'MDR', 'abbr2': 'Mgng.Dir.', 'Value': 'Chief Executive Officer, Joint Managing Director, Executive Director'}"
-3,07/21/2023,Swayam,,Saurabh,46,"{'startYear': '2024', 'startMonth': '6', 'startDay': '1', 'iD1': 'CFO', 'abbr1': 'CFO', 'iD2': '', 'abbr2': '', 'Value': 'Chief Financial Officer'}"
-4,NA,Gajraj,Singh,Rathore,,"{'startYear': '2023', 'startMonth': '5', 'startDay': '19', 'iD1': 'COO', 'abbr1': 'COO', 'iD2': 'EDR', 'abbr2': 'Exec. Dir.', 'Value': 'Whole-Time Director, Chief Operating Officer'}"
-5,01/24/2025,Manoj,Prasad,Singh,,"{'startYear': '2025', 'startMonth': '1', 'startDay': '24', 'iD1': 'CCO', 'abbr1': 'Chief Comp.', 'iD2': 'SEC', 'abbr2': 'Secy.', 'Value': 'Interim Compliance Officer, Company Secretary'}"
-6,10/25/2024,Arun,Sitaram,Maheshwari,55,"{'startYear': '2024', 'startMonth': '10', 'startDay': '25', 'iD1': 'EDR', 'abbr1': 'Exec. Dir.', 'iD2': '', 'abbr2': '', 'Value': 'Whole-Time Director'}"

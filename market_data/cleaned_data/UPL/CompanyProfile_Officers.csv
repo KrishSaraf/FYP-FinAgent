@@ -1,7 +1,0 @@
-rank,since,firstName,mI,lastName,age,title
-1,NA,Jaidev,Rajnikant,Shroff,57,"{'startYear': '2022', 'startMonth': '12', 'startDay': '1', 'iD1': 'CHM', 'abbr1': 'Chmn.', 'iD2': 'CEO', 'abbr2': 'CEO', 'Value': 'Chairman of the Board, Group Chief Executive Officer'}"
-2,04/22/2006,Vikram,Rajnikant,Shroff,51,"{'startYear': '2024', 'startMonth': '', 'startDay': '', 'iD1': 'CCE', 'abbr1': 'Co-CEO', 'iD2': 'VCH', 'abbr2': 'Vice Chmn.', 'Value': 'Group Co-Chief Executive Officer, Vice Chairman of the Board'}"
-3,06/01/2025,Bikash,,Prasad,,"{'startYear': '2025', 'startMonth': '6', 'startDay': '1', 'iD1': 'CFO', 'abbr1': 'CFO', 'iD2': '', 'abbr2': '', 'Value': 'Chief Financial Officer'}"
-4,11/08/2019,Sandeep,Mohan,Deshmukh,,"{'startYear': '2019', 'startMonth': '11', 'startDay': '8', 'iD1': 'CCO', 'abbr1': 'Chief Comp.', 'iD2': 'SEC', 'abbr2': 'Secy.', 'Value': 'Compliance Officer, Company Secretary'}"
-5,06/01/2025,Sujoy,,Mazumdar,,"{'startYear': '2025', 'startMonth': '6', 'startDay': '1', 'iD1': 'GCN', 'abbr1': 'Counsel', 'iD2': '', 'abbr2': '', 'Value': 'General Counsel'}"
-6,NA,Raj,Kumar,Tiwari,,"{'startYear': '2023', 'startMonth': '', 'startDay': '', 'iD1': 'EDR', 'abbr1': 'Exec. Dir.', 'iD2': '', 'abbr2': '', 'Value': 'Whole-Time Director'}"

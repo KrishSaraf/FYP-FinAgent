@@ -1,7 +1,0 @@
-rank,since,firstName,mI,lastName,age,title
-1,04/28/2021,Hisashi,,Takeuchi,,"{'startYear': '2022', 'startMonth': '4', 'startDay': '1', 'iD1': 'CEO', 'abbr1': 'CEO', 'iD2': 'MDR', 'abbr2': 'Mgng.Dir.', 'Value': 'Chief Executive Officer, Managing Director, Executive Director'}"
-2,10/16/2023,Arnab,,Roy,,"{'startYear': '2024', 'startMonth': '1', 'startDay': '1', 'iD1': 'CFO', 'abbr1': 'CFO', 'iD2': '', 'abbr2': '', 'Value': 'Chief Financial Officer'}"
-3,03/21/2018,Sanjeev,,Grover,,"{'startYear': '2022', 'startMonth': '', 'startDay': '', 'iD1': 'EVP', 'abbr1': 'Exec. VP', 'iD2': 'SEC', 'abbr2': 'Secy.', 'Value': 'Executive Vice President, Company Secretary'}"
-4,04/01/2025,Sunil,,Kakkar,,"{'startYear': '2025', 'startMonth': '4', 'startDay': '1', 'iD1': 'EDR', 'abbr1': 'Exec. Dir.', 'iD2': '', 'abbr2': '', 'Value': 'Whole-Time Director, Director - Corporate Planning'}"
-5,12/05/2019,Kenichiro,,Toyofuku,55,"{'startYear': '2025', 'startMonth': '4', 'startDay': '1', 'iD1': 'EDR', 'abbr1': 'Exec. Dir.', 'iD2': '', 'abbr2': '', 'Value': 'Whole-Time Director, Director - Sustainability'}"
-6,2017,Kazunari,,Yamaguchi,,"{'startYear': '2024', 'startMonth': '2', 'startDay': '1', 'iD1': 'EDR', 'abbr1': 'Exec. Dir.', 'iD2': '', 'abbr2': '', 'Value': 'Whole-Time Director, Director - Production'}"

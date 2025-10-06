@@ -1,7 +1,0 @@
-tickerId,companyName,remarks,recordDate,xdDate,interimOrFinal,instrumentType,value,percentage,dateOfAnnouncement,bookClosureStartDate,bookClosureEndDate,sortDate
-S0003039,Bharti Airtel,Rs.16.0000 per share(320%)Final Dividend,,,Final,5,16.0,320,2025-05-13,,,2025-05-13
-S0003039,Bharti Airtel,Rs.8.0000 per share(160%)Dividend,2024-08-07,2024-08-07,Final,5,8.0,160,2024-05-14,,,2024-08-07
-S0003039,Bharti Airtel,Rs.2.0000 per share(160%)Dividend,2024-08-07,2024-08-07,Final,109,2.0,160,2024-05-15,,,2024-08-07
-S0003039,Bharti Airtel,Rs.4.0000 per share(80%)Final Dividend,2023-08-11,2023-08-11,Final,5,4.0,80,2023-05-16,,,2023-08-11
-S0003039,Bharti Airtel,Rs.1.0000 per share(80%)Dividend,2023-08-11,2023-08-11,Final,109,1.0,80,2023-05-17,,,2023-08-11
-S0003039,Bharti Airtel,Rs.0.7500 per share(60%)Dividend on Partly Paid Shares,2022-08-02,2022-08-01,Final,109,0.75,60,2022-05-17,,,2022-08-01

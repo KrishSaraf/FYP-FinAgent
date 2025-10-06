@@ -1,6 +1,0 @@
-tickerId,companyName,remarks,recordDate,xdDate,interimOrFinal,instrumentType,value,percentage,dateOfAnnouncement,bookClosureStartDate,bookClosureEndDate,sortDate
-S0003126,Tata Consumer Products,Rs.8.2500 per share(825%)Dividend,2025-05-29,2025-05-29,Final,5,8.25,825,2025-04-23,,,2025-05-29
-S0003126,Tata Consumer Products,Rs.7.7500 per share(775%)Final Dividend,2024-05-24,2024-05-24,Final,5,7.75,775,2024-04-23,,,2024-05-24
-S0003126,Tata Consumer Products,Rs.8.4500 per share(845%)Final Dividend,,2023-05-19,Final,5,8.45,845,2023-04-25,2023-05-20,2023-05-26,2023-05-19
-S0003126,Tata Consumer Products,Rs.6.0500 per share(605%)Final Dividend,,2022-06-09,Final,5,6.05,605,2022-05-04,2022-06-11,2022-06-17,2022-06-09
-S0003126,Tata Consumer Products,Rs.4.0500 per share(405%)Final Dividend,,2021-06-10,Final,5,4.05,405,2021-05-06,2021-06-12,2021-06-18,2021-06-10

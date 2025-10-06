@@ -1,7 +1,0 @@
-tickerId,companyName,remarks,recordDate,xdDate,interimOrFinal,instrumentType,value,percentage,dateOfAnnouncement,bookClosureStartDate,bookClosureEndDate,sortDate
-S0003105,Wipro,Rs.6.0000 per share(300%)Interim Dividend,2025-01-28,2025-01-28,Interim,5,6,300,2025-01-17,,,2025-01-28
-S0003105,Wipro,Rs.1.0000 per share(50%)Interim Dividend,2024-01-24,2024-01-24,Interim,5,1,50,2024-01-12,,,2024-01-24
-S0003105,Wipro,Rs.1.0000 per share(50%)Interim Dividend,2023-01-25,2023-01-24,Interim,5,1,50,2023-01-13,,,2023-01-24
-S0003105,Wipro,Rs.5.0000 per share(250%)Interim Dividend,2022-04-06,2022-04-05,Interim,5,5,250,2022-03-25,,,2022-04-05
-S0003105,Wipro,Rs.1.0000 per share(50%)Interim Dividend,2022-01-24,2022-01-21,Interim,5,1,50,2022-01-12,,,2022-01-21
-S0003105,Wipro,Rs.1.0000 per share(50%)Interim Dividend,2021-01-25,2021-01-22,Interim,5,1,50,2021-01-13,,,2021-01-22

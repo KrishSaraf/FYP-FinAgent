@@ -1,6 +1,0 @@
-tickerId,companyName,priceToBookValueRatio,priceToEarningsValueRatio,marketCap,price,percentChange,netChange,returnOnAverageEquity5YearAverage,returnOnAverageEquityTrailing12Month,ltDebtPerEquityMostRecentFiscalYear,netProfitMargin5YearAverage,netProfitMarginPercentTrailing12Month,dividendYieldIndicatedAnnualDividend,totalSharesOutstanding,languageSupport,imageUrl,overallRating,ylow,yhigh
-S0003074,Titan Company,26.73,93.06,315696.76,3556.0,1.49,52.35,28.03,31.76,25.06,6.56,5.52,0.31,88.78,Titan Company,https://images.mintgenie.com/prod/stock/T.png,Bullish,2947.55,3866.15
-S0003205,Pc Jeweller,1.22,18.06,7493.47,11.87,1.98,0.23,-2.94,12.66,1.02,-5.99,25.74,,631.29,Pc Jeweller,https://logo.clearbit.com/pcjeweller.com/,Bearish,4.41,19.6
-S0005260,Ethos,7.11,72.54,6960.84,2855.0,0.22,6.4,10.9,10.32,24.95,6.72,7.69,,2.44,Ethos,https://logo.clearbit.com/ethoswatches.com/,Bullish,1963.5,3514.95
-S0003652,Rajesh Exports,0.39,17.94,5902.25,199.9,0.45,0.9,7.92,,0.0,0.37,0.02,,29.53,Rajesh Exports,https://logo.clearbit.com/rajeshindia.com/,Moderately Bullish,151.0,332.0
-S0003749,Vaibhav Global,3.11,27.78,4209.5,254.8,0.79,2.0,15.99,11.76,6.51,6.21,4.53,2.37,16.52,Vaibhav Global,https://logo.clearbit.com/vaibhavglobal.com/,Moderately Bullish,178.0,352.75

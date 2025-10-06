@@ -1,4 +1,0 @@
-CalendarMonth,CalendarYear,FiscalYear,ActualReportDate,Type,CurrencyCode,Mean,High,Low,Median,StandardDeviation,SmartEstimate,NumEstimates
-3,2026,2026,,Estimate,INR,35,39,33,35,1,35,35
-3,2027,2027,,Estimate,INR,40,46,37,39,2,39,35
-3,2028,2028,,Estimate,INR,44,54,40,44,2,44,19

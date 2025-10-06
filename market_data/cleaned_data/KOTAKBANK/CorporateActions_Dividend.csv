@@ -1,6 +1,0 @@
-tickerId,companyName,remarks,recordDate,xdDate,interimOrFinal,instrumentType,value,percentage,dateOfAnnouncement,bookClosureStartDate,bookClosureEndDate,sortDate
-S0003043,Kotak Mahindra Bank,Rs.2.5000 per share (50%) Dividend,,,Final,5,2.5,50,2025-05-05,,,2025-05-05
-S0003043,Kotak Mahindra Bank,Rs.2.0000 per share(40%)Final Dividend,2024-07-19,2024-07-19,Final,5,2.0,40,2024-05-06,,,2024-07-19
-S0003043,Kotak Mahindra Bank,Rs.1.5000 per share(30%)Final Dividend,2023-08-04,2023-08-04,Final,5,1.5,30,2023-05-02,,,2023-08-04
-S0003043,Kotak Mahindra Bank,Rs.0.9000 per share(18%)Dividend,2021-08-12,2021-08-11,Final,5,0.9,18,2021-05-03,,,2021-08-11
-S0003043,Kotak Mahindra Bank,Dividend on Preference Shares,2021-03-19,2021-03-18,Final,35,0.0,0,2021-03-09,,,2021-03-18

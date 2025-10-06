@@ -1,7 +1,0 @@
-rank,since,firstName,mI,lastName,age,title
-1,NA,Sunil,Bharti,Mittal,67,"{'startYear': '2016', 'startMonth': '10', 'startDay': '1', 'iD1': 'CHM', 'abbr1': 'Chmn.', 'iD2': 'EDR', 'abbr2': 'Exec. Dir.', 'Value': 'Executive Chairman of the Board'}"
-2,NA,Gopal,,Vittal,58,"{'startYear': '2021', 'startMonth': '', 'startDay': '', 'iD1': 'CEO', 'abbr1': 'CEO', 'iD2': 'MDR', 'abbr2': 'Mgng.Dir.', 'Value': 'Chief Executive Officer, Managing Director, Executive Director'}"
-3,12/21/2021,Soumen,,Ray,,"{'startYear': '2021', 'startMonth': '12', 'startDay': '21', 'iD1': 'CFO', 'abbr1': 'CFO', 'iD2': '', 'abbr2': '', 'Value': 'Chief Financial Officer'}"
-4,04/01/2025,Siddharth,,Sharma,,"{'startYear': '2025', 'startMonth': '4', 'startDay': '1', 'iD1': 'CMO', 'abbr1': 'CMO', 'iD2': '', 'abbr2': '', 'Value': 'Chief Marketing Officer, Chief Executive Officer - Connected Homes'}"
-5,01/25/2017,Rohit,Krishan,Puri,,"{'startYear': '2024', 'startMonth': '8', 'startDay': '6', 'iD1': 'CCO', 'abbr1': 'Chief Comp.', 'iD2': 'SEC', 'abbr2': 'Secy.', 'Value': 'Joint Company Secretary & Compliance Officer'}"
-6,07/18/2017,Pankaj,,Tewari,,"{'startYear': '2024', 'startMonth': '8', 'startDay': '6', 'iD1': 'SEC', 'abbr1': 'Secy.', 'iD2': '', 'abbr2': '', 'Value': 'Joint Company Secretary'}"

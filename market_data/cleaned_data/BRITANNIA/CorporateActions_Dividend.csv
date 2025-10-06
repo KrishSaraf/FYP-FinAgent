@@ -1,6 +1,0 @@
-tickerId,companyName,remarks,recordDate,xdDate,interimOrFinal,instrumentType,value,percentage,dateOfAnnouncement,bookClosureStartDate,bookClosureEndDate,sortDate
-S0003082,Britannia Industries,Rs.75.0000 per share(7500%)Final Dividend,2025-08-04,,Final,5,75.0,7500,2025-05-08,,,2025-08-04
-S0003082,Britannia Industries,Rs.73.5000 per share(7350%)Final Dividend,,2024-08-05,Final,5,73.5,7350,2024-05-03,2024-08-06,2024-08-12,2024-08-05
-S0003082,Britannia Industries,Rs.72.0000 per share(7200%)Interim Dividend,2023-04-13,2023-04-13,Interim,5,72.0,7200,2023-03-28,,,2023-04-13
-S0003082,Britannia Industries,Rs.56.5000 per share(5650%)Final Dividend,,2022-06-20,Final,5,56.5,5650,2022-05-02,2022-06-22,2022-06-28,2022-06-20
-S0003082,Britannia Industries,Rs.62.0000 per share(6200%)Interim Dividend,2021-04-10,2021-04-08,Interim,5,62.0,6200,2021-03-30,,,2021-04-08

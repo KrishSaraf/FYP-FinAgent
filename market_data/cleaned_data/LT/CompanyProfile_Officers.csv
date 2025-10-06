@@ -1,4 +1,0 @@
-rank,since,firstName,mI,lastName,age,title
-1,03/18/2019,Ashutosh,,Raghuvanshi,,"{'startYear': '2019', 'startMonth': '3', 'startDay': '19', 'iD1': 'CEO', 'abbr1': 'CEO', 'iD2': 'MDR', 'abbr2': 'Mgng.Dir.', 'Value': 'Chief Executive Officer, Managing Director, Executive Director'}"
-2,04/08/2019,Vivek,Kumar,Goyal,,"{'startYear': '2019', 'startMonth': '4', 'startDay': '8', 'iD1': 'CFO', 'abbr1': 'CFO', 'iD2': '', 'abbr2': '', 'Value': 'Chief Financial Officer'}"
-3,03/01/2024,Satyendra,,Chauhan,,"{'startYear': '2024', 'startMonth': '8', 'startDay': '5', 'iD1': 'CCO', 'abbr1': 'Chief Comp.', 'iD2': 'SEC', 'abbr2': 'Secy.', 'Value': 'Compliance Officer, Company Secretary'}"
