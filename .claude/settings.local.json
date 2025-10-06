@@ -1,0 +1,25 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git log:*)",
+      "Bash(while read file)",
+      "Bash(do if [ -f \"$file\" ])",
+      "Bash(then echo \"$file\")",
+      "Bash(fi)",
+      "Bash(done)",
+      "Bash(git -C /Users/krishsaraf/Downloads/FYP-FinAgent show origin/krish_training:train_ppo_transformer.py)",
+      "Bash(git -C /Users/krishsaraf/Downloads/FYP-FinAgent show origin/krish_training:train_plain_rl_lgbm.py)",
+      "Bash(git -C /Users/krishsaraf/Downloads/FYP-FinAgent show origin/krish_training:train_plain_rl_lstm.py)",
+      "Bash(git -C /Users/krishsaraf/Downloads/FYP-FinAgent branch -a)",
+      "Bash(git -C /Users/krishsaraf/Downloads/FYP-FinAgent show origin/main:eval_ppo.py)",
+      "Bash(git -C /Users/krishsaraf/Downloads/FYP-FinAgent log --oneline -10)",
+      "Bash(git -C /Users/krishsaraf/Downloads/FYP-FinAgent diff --name-only main...krish_training)",
+      "Bash(git -C /Users/krishsaraf/Downloads/FYP-FinAgent ls-tree -r krish_training --name-only)",
+      "Bash(python:*)",
+      "Bash(tee:*)",
+      "Bash(chmod:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "feature_categories": {
+    "ohlcv": {
+      "description": "Basic OHLCV price data and simple derived features",
+      "features": [
+        "open", "high", "low", "close", "volume", "vwap",
+        "returns_1d", "returns_3d", "returns_5d", "returns_10d", "returns_20d",
+        "log_returns_1d", "log_returns_5d",
+        "overnight_gap", "daily_range", "close_position",
+        "open_lag_1", "open_lag_2", "open_lag_3", "open_lag_5", "open_lag_10", "open_lag_20",
+        "high_lag_1", "high_lag_2", "high_lag_3", "high_lag_5", "high_lag_10", "high_lag_20",
+        "low_lag_1", "low_lag_2", "low_lag_3", "low_lag_5", "low_lag_10", "low_lag_20",
+        "close_lag_1", "close_lag_2", "close_lag_3", "close_lag_5", "close_lag_10", "close_lag_20",
+        "volume_lag_1", "volume_lag_2", "volume_lag_3", "volume_lag_5", "volume_lag_10", "volume_lag_20",
+        "open_rolling_mean_5", "open_rolling_mean_20", "open_rolling_std_20",
+        "high_rolling_mean_5", "high_rolling_mean_20", "high_rolling_std_20",
+        "low_rolling_mean_5", "low_rolling_mean_20", "low_rolling_std_20",
+        "close_rolling_mean_5", "close_rolling_mean_20", "close_rolling_std_20",
+        "close_momentum_5", "close_momentum_20",
+        "volume_rolling_mean_5", "volume_rolling_mean_20", "volume_rolling_std_20"
+      ]
+    },
+    "technical": {
+      "description": "Technical indicators and algorithmic trading signals",
+      "features": [
+        "dma_50", "dma_200",
+        "dma_50_lag_1", "dma_50_lag_2", "dma_50_lag_3", "dma_50_lag_5", "dma_50_lag_10", "dma_50_lag_20",
+        "dma_200_lag_1", "dma_200_lag_2", "dma_200_lag_3", "dma_200_lag_5", "dma_200_lag_10", "dma_200_lag_20",
+        "dma_50_rolling_mean_5", "dma_50_rolling_mean_20", "dma_50_rolling_std_20",
+        "dma_200_rolling_mean_5", "dma_200_rolling_mean_20", "dma_200_rolling_std_20",
+        "dma_cross", "dma_distance", "volume_price_trend",
+        "rsi_14",
+        "volatility_5d", "volatility_10d", "volatility_20d", "volatility_30d", "volatility_60d",
+        "vol_ratio_short_long", "vol_ratio_5_20",
+        "momentum_5d", "momentum_10d", "momentum_20d", "momentum_60d",
+        "momentum_acceleration_10d",
+        "ma_convergence", "ma_trend_strength", "price_position_20d",
+        "price_above_ma50", "price_above_ma200",
+        "rsi_oversold", "rsi_overbought", "rsi_bullish_divergence", "rsi_bearish_divergence",
+        "rsi_zscore_20d", "bb_position", "bb_squeeze", "bb_breakout_up", "bb_breakout_down",
+        "price_zscore_20d", "price_zscore_60d", "volume_zscore_20d", "volume_zscore_60d",
+        "price_deviation_50d", "price_deviation_200d", "mean_reversion_signal_50d", "mean_reversion_signal_200d",
+        "price_breakout_20d", "price_breakdown_20d", "volume_breakout_20d", "volume_spike",
+        "ma_cross_bullish", "ma_cross_bearish", "high_vol_regime", "low_vol_regime",
+        "vol_expansion", "vol_contraction", "body_ratio", "upper_wick_ratio", "lower_wick_ratio",
+        "doji_pattern", "hammer_pattern", "shooting_star_pattern", "volume_price_momentum",
+        "volume_ratio_5d", "volume_ratio_20d", "volume_trend_10d", "volume_confirms_price",
+        "volume_divergence", "bullish_signals", "bearish_signals", "net_signal_strength",
+        "risk_adjusted_momentum", "volume_confirmed_trend", "vol_regime_change", "trend_regime",
+        "momentum_rank_proxy", "vol_rank_proxy"
+      ]
+    },
+    "financial": {
+      "description": "Financial statement metrics and fundamental analysis",
+      "features": [
+        "metric_Revenue", "metric_TotalRevenue", "metric_CostofRevenueTotal", "metric_GrossProfit",
+        "metric_OperatingIncome", "metric_NetIncomeBeforeTaxes", "metric_NetIncomeAfterTaxes",
+        "metric_NetIncome", "metric_DilutedNetIncome", "metric_DilutedWeightedAverageShares",
+        "metric_DilutedEPSExcludingExtraOrdItems", "metric_DPS-CommonStockPrimaryIssue",
+        "metric_Cash", "metric_ShortTermInvestments", "metric_CashandShortTermInvestments",
+        "metric_TotalCurrentAssets", "metric_TotalAssets", "metric_TotalCurrentLiabilities",
+        "metric_TotalLiabilities", "metric_TotalEquity", "metric_TotalCommonSharesOutstanding",
+        "metric_CashfromOperatingActivities", "metric_CapitalExpenditures",
+        "metric_CashfromInvestingActivities", "metric_CashfromFinancingActivities",
+        "metric_NetChangeinCash", "metric_TotalCashDividendsPaid", "metric_freeCashFlowtrailing12Month",
+        "metric_freeCashFlowMostRecentFiscalYear", "metric_periodLength", "metric_periodType",
+        "metric_pPerEExcludingExtraordinaryItemsMostRecentFiscalYear",
+        "metric_currentDividendYieldCommonStockPrimaryIssueLTM", "metric_priceToBookMostRecentFiscalYear",
+        "metric_priceToFreeCashFlowPerShareTrailing12Months", "metric_pPerEBasicExcludingExtraordinaryItemsTTM",
+        "metric_pPerEIncludingExtraordinaryItemsTTM", "metric_returnOnAverageEquityMostRecentFiscalYear",
+        "metric_returnOnInvestmentMostRecentFiscalYear", "metric_netProfitMarginPercentTrailing12Month",
+        "metric_operatingMarginTrailing12Month", "metric_grossMarginTrailing12Month",
+        "metric_currentRatioMostRecentFiscalYear", "metric_quickRatioMostRecentFiscalYear",
+        "metric_totalDebtPerTotalEquityMostRecentFiscalYear", "metric_netInterestCoverageMostRecentFiscalYear",
+        "metric_marketCap", "metric_beta"
+      ]
+    },
+    "sentiment": {
+      "description": "News and social media sentiment indicators",
+      "features": [
+        "reddit_title_sentiments_mean", "reddit_title_sentiments_std",
+        "reddit_body_sentiments", "reddit_body_sentiments_std", "reddit_score_mean",
+        "reddit_score_sum", "reddit_posts_count", "reddit_comments_sum",
+        "news_sentiment_mean", "news_articles_count", "news_sentiment_std", "news_sources",
+        "sentiment_momentum_3d", "sentiment_momentum_5d",
+        "sentiment_extreme_positive", "sentiment_extreme_negative"
+      ]
+    }
+  }
+}
