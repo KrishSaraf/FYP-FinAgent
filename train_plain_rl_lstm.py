@@ -1099,10 +1099,24 @@ class PlainRLLSTMTrainer:
         new_log_probs = jnp.where(jnp.isnan(new_log_probs), -10.0, new_log_probs)
         new_log_probs = jnp.clip(new_log_probs, -50.0, 10.0)
         
-        # REINFORCE loss: -log_prob * return
-        policy_loss = -(new_log_probs * returns).mean()
-        
-        # Value loss (optional, for baseline)
+        # REINFORCE with baseline (Actor-Critic style)
+        # Using value function as baseline significantly reduces variance
+        advantages = returns - values  # This is the key improvement!
+        advantages = jnp.where(jnp.isnan(advantages), 0.0, advantages)
+        advantages = jnp.clip(advantages, -100.0, 100.0)
+
+        # Optionally normalize advantages for stability
+        if self.config.get('normalize_advantages', True):
+            adv_mean = jnp.mean(advantages)
+            adv_std = jnp.std(advantages)
+            adv_std = jnp.maximum(adv_std, 1e-8)
+            advantages = (advantages - adv_mean) / adv_std
+            advantages = jnp.clip(advantages, -10.0, 10.0)
+
+        # Policy loss: -log_prob * advantage (not return!)
+        policy_loss = -(new_log_probs * advantages).mean()
+
+        # Value loss: learn to predict returns accurately
         value_loss = 0.5 * jnp.square(values - returns).mean()
         
         # Entropy bonus
@@ -1124,6 +1138,9 @@ class PlainRLLSTMTrainer:
             'value_loss': value_loss,
             'entropy_loss': entropy_loss,
             'mean_return': returns.mean(),
+            'mean_advantage': advantages.mean(),
+            'std_advantage': jnp.std(advantages),
+            'mean_value': values.mean(),
             'mean_log_prob': new_log_probs.mean()
         }
         
@@ -1168,11 +1185,15 @@ class PlainRLLSTMTrainer:
         # Store raw rewards BEFORE normalization for metrics computation
         self.current_raw_rewards = episode.rewards
 
-        # Normalize rewards if enabled
-        if self.config.get('reward_normalization', True):
+        # Normalize rewards if enabled (DISABLED by default for financial RL)
+        # Reason: Normalized rewards lose the signal about actual returns
+        # The agent should learn to maximize real portfolio value, not normalized scores
+        if self.config.get('reward_normalization', False):  # Changed default to False
             normalized_rewards = self.reward_normalizer.normalize(episode.rewards)
             self.current_normalized_rewards = normalized_rewards
             episode = episode._replace(rewards=normalized_rewards)
+            logger.info(f"Reward normalization active: raw mean={self.current_raw_rewards.mean():.4f}, "
+                       f"normalized mean={normalized_rewards.mean():.4f}")
         else:
             self.current_normalized_rewards = episode.rewards
         
@@ -1309,7 +1330,7 @@ class PlainRLLSTMTrainer:
             return returns.mean()  # Fallback to mean return
 
     def check_early_stopping(self, current_performance: float, update_step: int) -> bool:
-        """Check if early stopping criteria are met using robust metrics"""
+        """Check if early stopping criteria are met using robust metrics with moving window"""
         # Calculate robust metric if we have sufficient data
         if len(self.returns_history) > 10:
             portfolio_values_array = np.array(self.portfolio_values_history[-100:])  # Last 100 steps
@@ -1317,28 +1338,66 @@ class PlainRLLSTMTrainer:
             robust_metric = self.calculate_robust_metric(portfolio_values_array, returns_array)
         else:
             robust_metric = current_performance
-        
+
         self.performance_history.append(robust_metric)
-        
-        if len(self.performance_history) > 50:
-            self.performance_history = self.performance_history[-50:]
-        
-        improvement = robust_metric - self.best_performance
-        
-        if improvement > self.early_stopping_min_delta:
+
+        # Keep recent history only (moving window)
+        window_size = 100
+        if len(self.performance_history) > window_size:
+            self.performance_history = self.performance_history[-window_size:]
+
+        # Need minimum history to make decisions
+        if len(self.performance_history) < 30:
+            logger.info(f"Building performance history: {len(self.performance_history)}/30 steps")
+            return False
+
+        # Compare to RECENT best (last 50 steps), not global best
+        recent_window = self.performance_history[-50:] if len(self.performance_history) >= 50 else self.performance_history[-30:]
+        recent_best = max(recent_window)
+        recent_mean = np.mean(recent_window)
+
+        improvement = robust_metric - recent_best
+
+        # Update global best for logging (but don't use for early stopping decision)
+        if robust_metric > self.best_performance:
             self.best_performance = robust_metric
+
+        if improvement > self.early_stopping_min_delta:
             self.patience_counter = 0
             performance_metric = self.config.get('performance_metric', 'sharpe_ratio')
-            logger.info(f"New best {performance_metric}: {robust_metric:.4f} (improvement: {improvement:.4f})")
+            logger.info(f"Improvement detected: {robust_metric:.4f} > recent best: {recent_best:.4f} "
+                       f"(improvement: {improvement:.4f})")
         else:
-            self.patience_counter += 1
-            
+            # Check for positive trend even without beating recent best
+            if len(self.performance_history) >= 40:
+                recent_20 = self.performance_history[-20:]
+                older_20 = self.performance_history[-40:-20]
+                recent_trend = np.mean(recent_20)
+                older_trend = np.mean(older_20)
+
+                # Reward positive trend (reduce patience counter)
+                if recent_trend > older_trend + self.early_stopping_min_delta / 2:
+                    self.patience_counter = max(0, self.patience_counter - 1)
+                    logger.info(f"Positive trend detected: recent mean {recent_trend:.4f} > "
+                               f"older mean {older_trend:.4f} (patience reduced)")
+                else:
+                    self.patience_counter += 1
+            else:
+                self.patience_counter += 1
+
         if self.patience_counter >= self.early_stopping_patience:
             performance_metric = self.config.get('performance_metric', 'sharpe_ratio')
             logger.info(f"Early stopping triggered after {self.patience_counter} steps without improvement")
-            logger.info(f"Best {performance_metric}: {self.best_performance:.4f}, Current: {robust_metric:.4f}")
+            logger.info(f"Global Best: {self.best_performance:.4f}, Recent Best: {recent_best:.4f}, "
+                       f"Recent Mean: {recent_mean:.4f}, Current: {robust_metric:.4f}")
             return True
-        
+
+        # Log progress every check
+        if update_step % 10 == 0:
+            performance_metric = self.config.get('performance_metric', 'sharpe_ratio')
+            logger.info(f"{performance_metric} - Current: {robust_metric:.4f} | Recent Best: {recent_best:.4f} | "
+                       f"Recent Mean: {recent_mean:.4f} | Patience: {self.patience_counter}/{self.early_stopping_patience}")
+
         return False
 
     def update_stage_parameters(self, stage_params: Dict[str, Any]):
@@ -1437,8 +1496,8 @@ class PlainRLLSTMTrainer:
                         f"Policy Loss: {policy_loss:.4f} | "
                         f"Value Loss: {value_loss:.4f} | "
                         f"Avg Reward: {avg_reward:.4f} | "
-                        f"Sharpe Ratio: {robust_metrics['sharpe_ratio']:.4f} | "
-                        f"Mean Return: {robust_metrics['mean_return']:.4f} | "
+                        f"Sharpe: {robust_metrics['sharpe_ratio']:.4f} | "
+                        f"Mean Adv: {float(metrics.get('mean_advantage', 0.0)):.4f} | "
                         f"Patience: {self.patience_counter}/{self.early_stopping_patience}"
                     )
 
@@ -1463,6 +1522,10 @@ class PlainRLLSTMTrainer:
                                 "rollout/max_episode_return": max_return,
                                 "rollout/mean_return": mean_return,
                                 "rollout/avg_portfolio_value": float(self.env_states.portfolio_value.mean()),
+                                # Advantage metrics (NEW)
+                                "advantages/mean_advantage": float(metrics.get('mean_advantage', 0.0)),
+                                "advantages/std_advantage": float(metrics.get('std_advantage', 0.0)),
+                                "advantages/mean_value": float(metrics.get('mean_value', 0.0)),
                                 # Performance metrics (from RAW rewards)
                                 "performance/sharpe_ratio": robust_metrics.get('sharpe_ratio', 0.0),
                                 "performance/mean_return": robust_metrics.get('mean_return', 0.0),
@@ -1556,8 +1619,8 @@ Examples:
     # Training configuration arguments - Balanced Learning Defaults
     parser.add_argument('--num_updates', type=int, default=2500, help='Number of training updates')
     parser.add_argument('--learning_rate', type=float, default=4e-5, help='Learning rate (balanced: 4e-5)')
-    parser.add_argument('--n_envs', type=int, default=8, help='Number of parallel environments')
-    parser.add_argument('--episode_length', type=int, default=120, help='Episode length (balanced: 120)')
+    parser.add_argument('--n_envs', type=int, default=32, help='Number of parallel environments (increased for stability)')
+    parser.add_argument('--episode_length', type=int, default=80, help='Episode length (reduced from 120 for faster feedback)')
     parser.add_argument('--hidden_size', type=int, default=128, help='LSTM hidden size (balanced: 128)')
     parser.add_argument('--n_lstm_layers', type=int, default=1, help='Number of LSTM layers (balanced: 1)')
     
@@ -1636,11 +1699,12 @@ Examples:
         'num_updates': args.num_updates,
         'gamma': 0.975,  # Higher gamma for smoother credit assignment
         'learning_rate': args.learning_rate,
-        'value_coeff': 0.25,  # Lower value coefficient for policy focus
+        'value_coeff': 0.5,  # Value coefficient for baseline (increased from 0.25)
         'entropy_coeff': 0.007,  # Moderate entropy early, prevents brittle strategies
         'action_std': 0.18,  # Moderate action std for balanced exploration
         'action_std_final': 0.12,  # Final action std for stable exploitation
         'action_std_warmup_steps': 1200,  # Gradual exploration -> exploitation transition
+        'normalize_advantages': True,  # Normalize advantages for stability
         
         # Learning rate scheduling
         'lr_schedule_type': 'cosine',  # Smooth decay for fine-grained stability
@@ -1651,10 +1715,11 @@ Examples:
         'entropy_decay_steps': 4000,  # Slow decay maintains exploration
         'entropy_final': 0.0015,  # Final entropy for exploitation
         
-        # Reward normalization
-        'reward_normalization': True,  # Essential for financial RL
-        'reward_clip_range': (-8.0, 8.0),  # Clip extreme rewards
-        'reward_scale': 1.2,  # Scale factor for normalized rewards
+        # Reward normalization (DISABLED by default)
+        # With simplified reward function, normalization is not needed
+        'reward_normalization': False,  # Disabled for clearer learning signal
+        'reward_clip_range': (-8.0, 8.0),  # Clip extreme rewards (if normalization enabled)
+        'reward_scale': 1.2,  # Scale factor for normalized rewards (if normalization enabled)
         
         # Gradient clipping
         'grad_clip_norm': 6.0,  # Moderate gradient clipping

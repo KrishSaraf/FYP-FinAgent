@@ -1372,17 +1372,18 @@ class FeatureCombinationPPOTrainer(PPOTrainer):
                 # Collect trajectory
                 trajectory = self._collect_trajectory(update)
                 
-                # Store raw rewards for logging before normalization
+                # Store raw rewards for logging
                 raw_rewards = trajectory.rewards
                 avg_reward_raw = float(raw_rewards.mean())
-                
-                # Normalize rewards for training stability but keep raw rewards for logging
-                normalized_rewards = self.normalize_rewards(raw_rewards)
-                trajectory = trajectory._replace(rewards=normalized_rewards)
-                
-                # Store both raw and normalized for logging
+
+                # DON'T normalize rewards for PPO!
+                # PPO computes advantages using GAE, which should work on raw rewards
+                # Advantage normalization happens later in the PPO loss function
+                # Normalizing rewards here destroys the learning signal
                 self.current_raw_rewards = raw_rewards
-                self.current_normalized_rewards = normalized_rewards
+                self.current_normalized_rewards = raw_rewards  # Keep same for backward compatibility
+
+                # trajectory.rewards are now RAW rewards (not normalized)
                 
                 # Update hyperparameters
                 self._update_hyperparameters(update)

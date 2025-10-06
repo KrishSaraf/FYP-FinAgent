@@ -909,32 +909,20 @@ class JAXVectorizedPortfolioEnv:
         sharpe_ratio = jnp.where(jnp.isnan(sharpe_ratio), 0.0, sharpe_ratio)
         sharpe_ratio = jnp.clip(sharpe_ratio, -5.0, 5.0)
         
-        # Primary: Log return (wealth growth)
+        # Simplified reward: Focus on portfolio returns
+        # The environment already handles transaction costs (in portfolio_value update)
+        # and short position constraints (intraday close, overnight penalties)
+
         log_portfolio_return = jnp.log(new_portfolio_value / prev_portfolio_value)
-        log_portfolio_return = jnp.where(jnp.isnan(log_portfolio_return), -1.0, log_portfolio_return)
 
-        # Secondary: Risk adjustment
-        risk_penalty = portfolio_volatility * 0.05  # Penalize high volatility
+        # Better NaN handling: use small negative instead of large penalty
+        log_portfolio_return = jnp.where(jnp.isnan(log_portfolio_return), -0.01, log_portfolio_return)
 
-        # Tertiary: Trading costs
-        trading_penalty = weight_change_total * 0.3
+        # Primary reward: actual wealth growth (already accounts for costs and risks)
+        reward = log_portfolio_return
 
-        # Drawdown penalty (only extreme drawdowns)
-        drawdown_penalty = jnp.maximum(0, -drawdown - 0.2) * 2.0
-
-        # Short position penalty
-        short_penalty = jnp.sum(jnp.abs(normalized_stock_weights * (normalized_stock_weights < 0))) * 0.1
-
-        # Combined reward
-        reward = (
-            log_portfolio_return * 20.0 -  # Primary: actual wealth growth
-            risk_penalty -                  # Keep reasonable volatility
-            trading_penalty -              # Discourage overtrading
-            drawdown_penalty -             # Avoid catastrophic losses
-            short_penalty                  # Be careful with shorts
-        )
-
-        reward = jnp.clip(reward, -10.0, 10.0)
+        # Clip to reasonable daily return bounds (±50% per day)
+        reward = jnp.clip(reward, -0.5, 0.5)
 
         
         # Check if episode is done

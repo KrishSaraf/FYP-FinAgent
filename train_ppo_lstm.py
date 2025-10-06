@@ -1212,9 +1212,9 @@ if __name__ == "__main__":
         'force_reload': False,  # Force reload data (ignore cache)
         'preload_to_gpu': True,  # Preload data to GPU memory
 
-        # Training environment (A100 GPU speed optimized)
-        'n_envs': 8,  # Balanced for memory usage
-        'n_steps': 32,  # Shorter for faster updates
+        # Training environment (optimized for stability)
+        'n_envs': 32,  # Increased for variance reduction (was 8)
+        'n_steps': 64,  # Balanced trajectory length (was 32)
 
         # PPO hyperparameters (A100 GPU memory optimized)
         'num_updates': 1000,  # Reasonable number for testing
