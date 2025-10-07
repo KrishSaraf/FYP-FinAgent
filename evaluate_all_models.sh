@@ -44,6 +44,7 @@ MODEL_TYPES=(
     "ppo_feature_combinations"
     "plain_rl_lstm"
     "ppo_transformer"
+    "ppo_mlp"
 )
 
 # Create directories
@@ -131,6 +132,15 @@ find_latest_model() {
                 "${model_dir}/curriculum_stage_1.pkl"
                 "${model_dir}/final_model_${feature_combo_safe}.pkl"
                 "${model_dir}/final_model.pkl"
+            )
+            ;;
+        "ppo_mlp")
+            model_patterns=(
+                "${model_dir}/stage_3/curriculum_stage_3.zip"
+                "${model_dir}/stage_2/curriculum_stage_2.zip"
+                "${model_dir}/stage_1/curriculum_stage_1.zip"
+                "${model_dir}/final_model_${feature_combo_safe}.zip"
+                "${model_dir}/checkpoint_*.zip"
             )
             ;;
     esac
@@ -250,6 +260,39 @@ evaluate_ppo_transformer() {
     fi
 }
 
+# Function to evaluate PPO MLP models
+evaluate_ppo_mlp() {
+    local feature_combo=$1
+    local model_path=$2
+    local log_file="${EVAL_LOG_DIR}/eval_ppo_mlp_${feature_combo//+/_}.log"
+    local results_dir="${EVAL_RESULTS_DIR}/PPO_MLP/${feature_combo//+/_}"
+
+    print_section "Evaluating PPO MLP: ${feature_combo}"
+    print_status "Model: ${model_path}"
+    print_status "Results directory: ${results_dir}"
+    print_status "Log file: ${log_file}"
+
+    mkdir -p "${results_dir}"
+
+    python eval_ppo_mlp_feature_combinations.py \
+        --model_path "${model_path}" \
+        --feature_combination "${feature_combo}" \
+        --num_episodes ${NUM_EVAL_EPISODES} \
+        --eval_start_date "${EVAL_START_DATE}" \
+        --eval_end_date "${EVAL_END_DATE}" \
+        --results_dir "${results_dir}" \
+        > "${log_file}" 2>&1
+
+    if [ $? -eq 0 ]; then
+        print_status "✓ Successfully evaluated PPO MLP for ${feature_combo}"
+        return 0
+    else
+        print_error "✗ Failed evaluating PPO MLP for ${feature_combo}"
+        print_error "Check log file: ${log_file}"
+        return 1
+    fi
+}
+
 # Function to generate comparative analysis
 generate_comparative_analysis() {
     print_section "Generating Comparative Analysis"
@@ -271,6 +314,7 @@ generate_comparative_analysis() {
         echo "  1. PPO with Feature Combinations (LSTM)"
         echo "  2. Plain RL LSTM (REINFORCE)"
         echo "  3. PPO Transformer"
+        echo "  4. PPO MLP"
         echo ""
         echo "Feature Combinations Evaluated:"
         for combo in "${FEATURE_COMBINATIONS[@]}"; do
@@ -370,6 +414,15 @@ main() {
                     else
                         ((failed_evals++))
                         failed_evaluations+=("PPO_Transformer_${feature_combo}")
+                    fi
+                    ;;
+                "ppo_mlp")
+                    evaluate_ppo_mlp "${feature_combo}" "${model_path}"
+                    if [ $? -eq 0 ]; then
+                        ((completed_evals++))
+                    else
+                        ((failed_evals++))
+                        failed_evaluations+=("PPO_MLP_${feature_combo}")
                     fi
                     ;;
             esac

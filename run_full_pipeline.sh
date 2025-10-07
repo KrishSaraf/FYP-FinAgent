@@ -32,7 +32,7 @@ cat << "EOF"
 ║              FYP-FinAgent Complete Training & Evaluation Pipeline          ║
 ║                                                                            ║
 ║  This pipeline will:                                                       ║
-║    1. Train all models (PPO LSTM, Plain RL LSTM, PPO Transformer)        ║
+║    1. Train all models (PPO LSTM, Plain RL LSTM, PPO Transformer, PPO MLP)║
 ║    2. Use auto curriculum learning for optimal training                   ║
 ║    3. Log all metrics to Weights & Biases (wandb)                         ║
 ║    4. Evaluate all trained models on out-of-sample data                   ║
@@ -119,7 +119,7 @@ echo -e "${YELLOW}════════════════════�
 echo -e "${YELLOW}WARNING: This pipeline will take several hours to complete!${NC}"
 echo -e "${YELLOW}═══════════════════════════════════════════════════════════════════════════${NC}"
 echo ""
-echo "The pipeline will train 3 model architectures × 4 feature combinations = 12 models"
+echo "The pipeline will train 4 model architectures × 4 feature combinations = 16 models"
 echo "Each model will go through 3 curriculum stages with auto early stopping"
 echo ""
 echo -e "Estimated time: ${CYAN}4-12 hours${NC} (depending on hardware and early stopping)"

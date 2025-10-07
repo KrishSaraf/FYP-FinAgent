@@ -167,10 +167,38 @@ train_ppo_transformer() {
     fi
 }
 
+# Function to train PPO MLP
+train_ppo_mlp() {
+    local feature_combo=$1
+    local feature_combo_safe="${feature_combo//+/_}"
+    local log_file="${LOG_DIR}/ppo_mlp_${feature_combo_safe}.log"
+    local model_subdir="${MODELS_DIR}/ppo_mlp/${feature_combo_safe}"
+
+    print_section "Training PPO MLP: ${feature_combo}"
+    print_status "Starting training with feature combination: ${feature_combo}"
+    print_status "Log file: ${log_file}"
+    print_status "Model directory: ${model_subdir}"
+
+    python train_ppo_mlp_feature_combinations.py \
+        --feature_combination "${feature_combo}" \
+        --auto_curriculum \
+        --use_wandb \
+        --model_dir "${model_subdir}" \
+        > "${log_file}" 2>&1
+
+    if [ $? -eq 0 ]; then
+        print_status "✓ Successfully completed PPO MLP training for ${feature_combo}"
+    else
+        print_error "✗ Failed training PPO MLP for ${feature_combo}"
+        print_error "Check log file: ${log_file}"
+        return 1
+    fi
+}
+
 # Main training loop
 main() {
     local start_time=$(date +%s)
-    local total_models=$((${#FEATURE_COMBINATIONS[@]} * 3))
+    local total_models=$((${#FEATURE_COMBINATIONS[@]} * 4))
     local completed_models=0
     local failed_models=0
 
@@ -208,6 +236,15 @@ main() {
         else
             ((failed_models++))
             failed_trainings+=("PPO_Transformer_${feature_combo}")
+        fi
+
+        # 4. Train PPO MLP
+        print_status "[${completed_models}/${total_models}] Training PPO MLP - ${feature_combo}..."
+        if train_ppo_mlp "${feature_combo}"; then
+            ((completed_models++))
+        else
+            ((failed_models++))
+            failed_trainings+=("PPO_MLP_${feature_combo}")
         fi
 
         echo ""
