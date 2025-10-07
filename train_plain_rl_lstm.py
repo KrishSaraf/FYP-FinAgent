@@ -25,7 +25,7 @@ from pathlib import Path
 from typing import Dict, List, Any, Set, NamedTuple, Tuple
 import time
 
-# Configure JAX to use CPU only (fixes Metal GPU compatibility issues)
+# Configure JAX to use CPU only (Metal GPU not compatible with current JAX version)
 os.environ['JAX_PLATFORM_NAME'] = 'cpu'
 
 # Setup logging early
@@ -1556,8 +1556,8 @@ class PlainRLLSTMTrainer:
 
         logger.info("Training complete!")
 
-        # Final cleanup
-        if self.config.get('use_wandb', False) and wandb is not None:
+        # Final cleanup - only finish wandb if NOT in curriculum mode
+        if self.config.get('use_wandb', False) and wandb is not None and not self.config.get('in_curriculum_mode', False):
             try:
                 wandb.finish()
             except Exception as e:
@@ -1746,6 +1746,9 @@ Examples:
         if args.auto_curriculum:
             logger.info("Running FULL CURRICULUM (all stages)")
 
+            # Mark as curriculum mode to prevent wandb.finish() in train()
+            config['in_curriculum_mode'] = True
+
             trainer = None
             global_step = 0
             for stage_num in range(args.start_stage, 4):
@@ -1774,6 +1777,14 @@ Examples:
                 trainer.save_model(f"curriculum_stage_{stage_num}")
                 global_step += stage['num_updates']
                 logger.info(f"Completed Curriculum Stage {stage_num}. Global step: {global_step}")
+
+            # Finish wandb after all curriculum stages complete
+            if config.get('use_wandb', False) and wandb is not None:
+                try:
+                    wandb.finish()
+                    logger.info("Weights & Biases run finished")
+                except Exception as e:
+                    logger.warning(f"Wandb cleanup failed: {e}")
         else:
             trainer = PlainRLLSTMTrainer(config, selected_features, curriculum_stage=args.curriculum_stage, curriculum_config=curriculum_config)
             trainer.train()

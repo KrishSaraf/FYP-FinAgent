@@ -983,10 +983,20 @@ class JAXVectorizedPortfolioEnv:
             (self.window_size, self.n_stocks, self.n_features)
         )
     
-        # Current partial information (time t)
-        current_step_data = self.data[env_state.current_step, :, :]  # (n_stocks, n_features)
+        # Current partial information (time t) - use dynamic_slice for JAX compatibility
+        current_step_slice = lax.dynamic_slice(
+            self.data,
+            (env_state.current_step, 0, 0),
+            (1, self.n_stocks, self.n_features)
+        )
+        current_step_data = current_step_slice[0, :, :]  # (n_stocks, n_features)
         current_open = current_step_data[:, self.feature_indices['open']]
-        current_gap = current_step_data[:, self.feature_indices['overnight_gap']]
+
+        # Handle overnight_gap: use it if available, otherwise use zeros
+        if self.feature_indices['overnight_gap'] is not None:
+            current_gap = current_step_data[:, self.feature_indices['overnight_gap']]
+        else:
+            current_gap = jnp.zeros(self.n_stocks)
     
         # Flatten historical data
         historical_flat = historical_data.flatten()
@@ -1034,22 +1044,37 @@ class JAXVectorizedPortfolioEnv:
         """
         Calculates daily returns for all stocks for a given step using CLOSE prices.
         Returns array of shape (n_stocks,).
+        Uses dynamic_slice for JAX-compatible indexing.
         """
-        # Use close price index (guaranteed to be 0 after reorganization)
-        price_t = self.data[step, :, self.close_price_idx]
-        price_t_minus_1 = self.data[step - 1, :, self.close_price_idx]
-        
+        # Use dynamic_slice for JAX-compatible indexing (works with traced values)
+        # Extract price at step t: shape (1, n_stocks, n_features)
+        price_data_t = lax.dynamic_slice(
+            self.data,
+            (step, 0, 0),
+            (1, self.data.shape[1], self.data.shape[2])
+        )
+        # Extract price at step t-1: shape (1, n_stocks, n_features)
+        price_data_t_minus_1 = lax.dynamic_slice(
+            self.data,
+            (step - 1, 0, 0),
+            (1, self.data.shape[1], self.data.shape[2])
+        )
+
+        # Extract close prices: shape (n_stocks,)
+        price_t = price_data_t[0, :, self.close_price_idx]
+        price_t_minus_1 = price_data_t_minus_1[0, :, self.close_price_idx]
+
         # Clean prices for NaN values
         price_t = jnp.where(jnp.isnan(price_t), 1.0, price_t)
         price_t_minus_1 = jnp.where(jnp.isnan(price_t_minus_1), 1.0, price_t_minus_1)
-        
+
         # Safety check for zero/negative prices with better handling
         price_t_minus_1_safe = jnp.where(price_t_minus_1 <= 1e-8, 1.0, price_t_minus_1)
         price_t_safe = jnp.where(price_t <= 1e-8, 1.0, price_t)
 
         # Calculate returns with numerical stability
         daily_returns = (price_t_safe / price_t_minus_1_safe) - 1.0
-        
+
         # Clean and cap extreme returns
         daily_returns = jnp.where(jnp.isnan(daily_returns), 0.0, daily_returns)
         daily_returns = jnp.where(jnp.isinf(daily_returns), 0.0, daily_returns)

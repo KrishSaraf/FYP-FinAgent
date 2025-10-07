@@ -95,15 +95,45 @@ print_warning() {
 find_latest_model() {
     local model_type=$1
     local feature_combo=$2
-    local model_dir="${MODELS_DIR}/${model_type}"
+    local feature_combo_safe="${feature_combo//+/_}"
 
-    # Look for curriculum stage models first, then checkpoint models, then final model
-    local model_patterns=(
-        "${model_dir}/curriculum_stage_3_${feature_combo//+/_}.pkl"
-        "${model_dir}/final_model_${feature_combo//+/_}.pkl"
-        "${model_dir}/model_checkpoint_*.pkl"
-        "${model_dir}/final_model.pkl"
-    )
+    # Path structure: models/{architecture}/{feature_combo}/
+    local model_dir="${MODELS_DIR}/${model_type}/${feature_combo_safe}"
+
+    # Look for curriculum stage models first, then final models
+    # Different model types save with different naming conventions
+    local model_patterns=()
+
+    case "${model_type}" in
+        "plain_rl_lstm")
+            model_patterns=(
+                "${model_dir}/curriculum_stage_3.pkl"
+                "${model_dir}/curriculum_stage_2.pkl"
+                "${model_dir}/curriculum_stage_1.pkl"
+                "${model_dir}/final_model_plain_rl_lstm_${feature_combo_safe}.pkl"
+                "${model_dir}/plain_rl_lstm_update_*.pkl"
+            )
+            ;;
+        "ppo_transformer")
+            model_patterns=(
+                "${model_dir}/curriculum_stage_3.pkl"
+                "${model_dir}/curriculum_stage_2.pkl"
+                "${model_dir}/curriculum_stage_1.pkl"
+                "${model_dir}/final_model_${feature_combo_safe}.pkl"
+                "${model_dir}/final_model.pkl"
+                "${model_dir}/checkpoint_*.pkl"
+            )
+            ;;
+        "ppo_feature_combinations")
+            model_patterns=(
+                "${model_dir}/curriculum_stage_3.pkl"
+                "${model_dir}/curriculum_stage_2.pkl"
+                "${model_dir}/curriculum_stage_1.pkl"
+                "${model_dir}/final_model_${feature_combo_safe}.pkl"
+                "${model_dir}/final_model.pkl"
+            )
+            ;;
+    esac
 
     for pattern in "${model_patterns[@]}"; do
         if ls ${pattern} 1> /dev/null 2>&1; then
@@ -295,6 +325,9 @@ main() {
     print_section "Starting Evaluation Pipeline"
     print_status "Total evaluations to perform: ${total_evals}"
 
+    # Disable exit on error for the entire evaluation loop
+    set +e
+
     # Evaluate all models
     for feature_combo in "${FEATURE_COMBINATIONS[@]}"; do
         for model_type in "${MODEL_TYPES[@]}"; do
@@ -313,7 +346,8 @@ main() {
             # Evaluate based on model type
             case "${model_type}" in
                 "ppo_feature_combinations")
-                    if evaluate_ppo_feature_combinations "${feature_combo}" "${model_path}"; then
+                    evaluate_ppo_feature_combinations "${feature_combo}" "${model_path}"
+                    if [ $? -eq 0 ]; then
                         ((completed_evals++))
                     else
                         ((failed_evals++))
@@ -321,7 +355,8 @@ main() {
                     fi
                     ;;
                 "plain_rl_lstm")
-                    if evaluate_plain_rl_lstm "${feature_combo}" "${model_path}"; then
+                    evaluate_plain_rl_lstm "${feature_combo}" "${model_path}"
+                    if [ $? -eq 0 ]; then
                         ((completed_evals++))
                     else
                         ((failed_evals++))
@@ -329,7 +364,8 @@ main() {
                     fi
                     ;;
                 "ppo_transformer")
-                    if evaluate_ppo_transformer "${feature_combo}" "${model_path}"; then
+                    evaluate_ppo_transformer "${feature_combo}" "${model_path}"
+                    if [ $? -eq 0 ]; then
                         ((completed_evals++))
                     else
                         ((failed_evals++))
@@ -341,6 +377,9 @@ main() {
             echo ""
         done
     done
+
+    # Re-enable exit on error after evaluation loop
+    set -e
 
     # Generate comparative analysis
     generate_comparative_analysis

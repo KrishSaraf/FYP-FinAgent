@@ -50,3 +50,5 @@ models/
 logs/
 PPO-*/
 *.zip
+
+jax_cache/

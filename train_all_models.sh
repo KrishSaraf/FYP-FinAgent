@@ -81,18 +81,21 @@ print_warning() {
 # Function to train PPO with feature combinations (LSTM architecture)
 train_ppo_feature_combinations() {
     local feature_combo=$1
-    local log_file="${LOG_DIR}/ppo_feature_combinations_${feature_combo//+/_}.log"
+    local feature_combo_safe="${feature_combo//+/_}"
+    local log_file="${LOG_DIR}/ppo_feature_combinations_${feature_combo_safe}.log"
+    local model_subdir="${MODELS_DIR}/ppo_feature_combinations/${feature_combo_safe}"
 
     print_section "Training PPO Feature Combinations (LSTM): ${feature_combo}"
     print_status "Starting training with feature combination: ${feature_combo}"
     print_status "Log file: ${log_file}"
+    print_status "Model directory: ${model_subdir}"
 
     python train_ppo_feature_combinations.py \
         --num_updates 2500 \
         --feature_combination "${feature_combo}" \
         --auto_curriculum \
         --use_wandb \
-        --model_dir "${MODELS_DIR}/ppo_feature_combinations" \
+        --model_dir "${model_subdir}" \
         > "${log_file}" 2>&1
 
     if [ $? -eq 0 ]; then
@@ -107,18 +110,21 @@ train_ppo_feature_combinations() {
 # Function to train Plain RL LSTM
 train_plain_rl_lstm() {
     local feature_combo=$1
-    local log_file="${LOG_DIR}/plain_rl_lstm_${feature_combo//+/_}.log"
+    local feature_combo_safe="${feature_combo//+/_}"
+    local log_file="${LOG_DIR}/plain_rl_lstm_${feature_combo_safe}.log"
+    local model_subdir="${MODELS_DIR}/plain_rl_lstm/${feature_combo_safe}"
 
     print_section "Training Plain RL LSTM: ${feature_combo}"
     print_status "Starting training with feature combination: ${feature_combo}"
     print_status "Log file: ${log_file}"
+    print_status "Model directory: ${model_subdir}"
 
     python train_plain_rl_lstm.py \
         --num_updates 2500 \
         --feature_combination "${feature_combo}" \
         --auto_curriculum \
         --use_wandb \
-        --model_dir "${MODELS_DIR}/plain_rl_lstm" \
+        --model_dir "${model_subdir}" \
         > "${log_file}" 2>&1
 
     if [ $? -eq 0 ]; then
@@ -133,18 +139,23 @@ train_plain_rl_lstm() {
 # Function to train PPO Transformer
 train_ppo_transformer() {
     local feature_combo=$1
-    local log_file="${LOG_DIR}/ppo_transformer_${feature_combo//+/_}.log"
+    local feature_combo_safe="${feature_combo//+/_}"
+    local log_file="${LOG_DIR}/ppo_transformer_${feature_combo_safe}.log"
+    local model_subdir="${MODELS_DIR}/ppo_transformer/${feature_combo_safe}"
 
     print_section "Training PPO Transformer: ${feature_combo}"
     print_status "Starting training with feature combination: ${feature_combo}"
     print_status "Log file: ${log_file}"
+    print_status "Model directory: ${model_subdir}"
 
     python train_ppo_transformer.py \
         --total_timesteps 2000000 \
         --feature_combination "${feature_combo}" \
         --auto_curriculum \
         --use_wandb \
-        --model_dir "${MODELS_DIR}/ppo_transformer" \
+        --n_envs 4 \
+        --n_steps 64 \
+        --model_dir "${model_subdir}" \
         > "${log_file}" 2>&1
 
     if [ $? -eq 0 ]; then
@@ -172,23 +183,23 @@ main() {
     # Train all models with all feature combinations
     for feature_combo in "${FEATURE_COMBINATIONS[@]}"; do
 
-        # 1. Train PPO Feature Combinations (LSTM)
-        print_status "[${completed_models}/${total_models}] Training PPO Feature Combinations - ${feature_combo}..."
-        if train_ppo_feature_combinations "${feature_combo}"; then
-            ((completed_models++))
-        else
-            ((failed_models++))
-            failed_trainings+=("PPO_Feature_Combinations_${feature_combo}")
-        fi
+        # # 1. Train PPO Feature Combinations (LSTM)
+        # print_status "[${completed_models}/${total_models}] Training PPO Feature Combinations - ${feature_combo}..."
+        # if train_ppo_feature_combinations "${feature_combo}"; then
+        #     ((completed_models++))
+        # else
+        #     ((failed_models++))
+        #     failed_trainings+=("PPO_Feature_Combinations_${feature_combo}")
+        # fi
 
-        # 2. Train Plain RL LSTM
-        print_status "[${completed_models}/${total_models}] Training Plain RL LSTM - ${feature_combo}..."
-        if train_plain_rl_lstm "${feature_combo}"; then
-            ((completed_models++))
-        else
-            ((failed_models++))
-            failed_trainings+=("Plain_RL_LSTM_${feature_combo}")
-        fi
+        # # 2. Train Plain RL LSTM
+        # print_status "[${completed_models}/${total_models}] Training Plain RL LSTM - ${feature_combo}..."
+        # if train_plain_rl_lstm "${feature_combo}"; then
+        #     ((completed_models++))
+        # else
+        #     ((failed_models++))
+        #     failed_trainings+=("Plain_RL_LSTM_${feature_combo}")
+        # fi
 
         # 3. Train PPO Transformer
         print_status "[${completed_models}/${total_models}] Training PPO Transformer - ${feature_combo}..."
