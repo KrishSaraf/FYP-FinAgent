@@ -645,7 +645,9 @@ class JAXVectorizedPortfolioEnv:
                  end_date: str = '2025-03-06',
                  transaction_cost_rate: float = 0.005,
                  sharpe_window: int = 252,
-                 use_all_features: bool = True):
+                 use_all_features: bool = True,
+                 exploration_bonus_coeff: float = 0.01,
+                 eval_mode: bool = False):
 
         self.data_root = data_root
         self.window_size = window_size
@@ -659,6 +661,8 @@ class JAXVectorizedPortfolioEnv:
         self.use_all_features = use_all_features
         self.features = None
         self.close_price_idx = None  # Track close price index
+        self.exploration_bonus_coeff = exploration_bonus_coeff  # Decayed during training
+        self.eval_mode = eval_mode  # If True, always start from beginning for full backtest
 
         if stocks is None:
             # Example stock list - you should replace with your actual stocks
@@ -751,7 +755,12 @@ class JAXVectorizedPortfolioEnv:
         min_start_step = self.window_size - 1
         max_start_step = self.n_timesteps - 2
 
-        start_step = random.randint(key, (), min_start_step, max_start_step + 1)
+        # In eval mode, always start from the beginning for full period backtest
+        # In training mode, use random starts for better generalization
+        if self.eval_mode:
+            start_step = min_start_step
+        else:
+            start_step = random.randint(key, (), min_start_step, max_start_step + 1)
 
         env_state = EnvState(
             current_step=start_step,
@@ -909,7 +918,7 @@ class JAXVectorizedPortfolioEnv:
         sharpe_ratio = jnp.where(jnp.isnan(sharpe_ratio), 0.0, sharpe_ratio)
         sharpe_ratio = jnp.clip(sharpe_ratio, -5.0, 5.0)
         
-        # Simplified reward: Focus on portfolio returns
+        # Enhanced reward function with risk-adjustment and exploration incentives
         # The environment already handles transaction costs (in portfolio_value update)
         # and short position constraints (intraday close, overnight penalties)
 
@@ -919,10 +928,60 @@ class JAXVectorizedPortfolioEnv:
         log_portfolio_return = jnp.where(jnp.isnan(log_portfolio_return), -0.01, log_portfolio_return)
 
         # Primary reward: actual wealth growth (already accounts for costs and risks)
-        reward = log_portfolio_return
+        base_reward = log_portfolio_return
 
-        # Clip to reasonable daily return bounds (±50% per day)
-        reward = jnp.clip(reward, -0.5, 0.5)
+        # Sharpe ratio bonus: encourage risk-adjusted returns
+        # Scale Sharpe to reasonable range and add as bonus
+        # Positive Sharpe = good risk-adjusted returns
+        sharpe_bonus = jnp.where(
+            sharpe_ratio > 0.0,
+            jnp.clip(sharpe_ratio * 0.1, 0.0, 0.05),  # Max +0.05 bonus for excellent Sharpe
+            0.0  # No penalty for negative Sharpe (already reflected in returns)
+        )
+
+        # Cash holding penalty: discourage all-cash strategy
+        # Penalize when cash weight > 80% to encourage active trading
+        cash_penalty = jnp.where(
+            normalized_cash_weight > 0.8,
+            (normalized_cash_weight - 0.8) * 0.0005,  # Small penalty scaling with excess cash
+            0.0
+        )
+
+        # Portfolio entropy bonus: encourage diversification
+        # Entropy = -sum(w * log(w)) for non-zero weights (higher = more diversified)
+        # This will be modulated by exploration coefficient in the trainer
+        weights_with_cash = new_portfolio_weights  # includes both stocks and cash
+        # Add small epsilon to avoid log(0)
+        safe_weights = jnp.maximum(weights_with_cash, 1e-10)
+        # Only compute entropy for non-negligible weights
+        significant_weights = jnp.where(weights_with_cash > 0.01, weights_with_cash, 0.0)
+        safe_significant = jnp.maximum(significant_weights, 1e-10)
+        # Entropy calculation: -sum(w * log(w))
+        entropy = -jnp.sum(
+            jnp.where(significant_weights > 0.01,
+                     significant_weights * jnp.log(safe_significant),
+                     0.0)
+        )
+        # Normalize entropy to [0, 1] range (max entropy = log(n_assets))
+        max_entropy = jnp.log(float(self.action_dim))
+        normalized_entropy = jnp.clip(entropy / (max_entropy + 1e-8), 0.0, 1.0)
+
+        # Exploration bonus: encourage portfolio diversification (especially early in training)
+        # This provides a small bonus for maintaining diverse portfolios
+        # The coefficient can be decayed over training via environment reinitialization
+        exploration_bonus_coeff = getattr(self, 'exploration_bonus_coeff', 0.01)  # Default 1%
+        exploration_bonus = normalized_entropy * exploration_bonus_coeff
+
+        # Combined reward
+        reward = base_reward + sharpe_bonus - cash_penalty + exploration_bonus
+
+        # Asymmetric reward clipping: allow large positive rewards, bound negative rewards
+        # This encourages the agent to seek high returns while limiting downside risk
+        reward = jnp.where(
+            reward < 0,
+            jnp.maximum(reward, -1000.0),  # Clip negative rewards at -1000
+            reward  # No upper bound on positive rewards
+        )
 
         
         # Check if episode is done
@@ -960,7 +1019,11 @@ class JAXVectorizedPortfolioEnv:
             'new_stock_weights': normalized_stock_weights,
             'new_cash_weight': normalized_cash_weight,
             'prev_stock_weights': prev_stock_weights,
-            'prev_cash_weight': prev_cash_weight
+            'prev_cash_weight': prev_cash_weight,
+            'portfolio_entropy': normalized_entropy,  # For logging
+            'sharpe_bonus': sharpe_bonus,  # For logging
+            'cash_penalty': cash_penalty,  # For logging
+            'exploration_bonus': exploration_bonus  # For logging
         }
 
         return new_env_state, next_obs, reward, done, info

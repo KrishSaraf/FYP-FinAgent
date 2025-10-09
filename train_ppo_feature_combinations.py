@@ -705,6 +705,7 @@ class CustomPortfolioEnv(JAXVectorizedPortfolioEnv):
                 end_date: str = '2025-03-06',
                 transaction_cost_rate: float = 0.005,
                 sharpe_window: int = 252,
+                eval_mode: bool = False,
                 **kwargs):
         """
         Initialize CustomPortfolioEnv with complete control over feature selection.
@@ -735,6 +736,8 @@ class CustomPortfolioEnv(JAXVectorizedPortfolioEnv):
             self.risk_free_rate_daily = 0.04 / 252.0
             self.cash_return_rate = 0.04 / 252.0
             self.close_price_idx = None
+            self.exploration_bonus_coeff = kwargs.get('exploration_bonus_coeff', 0.01)
+            self.eval_mode = eval_mode  # If True, always start from beginning for full backtest
 
             # Load stocks
             if stocks is None:
@@ -1062,7 +1065,8 @@ class FeatureCombinationPPOTrainer(PPOTrainer):
             start_date=self.config.get('train_start_date', '2024-06-06'),
             end_date=self.config.get('train_end_date', '2025-03-06'),
             transaction_cost_rate=self.config.get('transaction_cost_rate', 0.005),
-            sharpe_window=self.config.get('sharpe_window', 252)
+            sharpe_window=self.config.get('sharpe_window', 252),
+            exploration_bonus_coeff=0.01  # Start with 1% exploration bonus, will decay
         )
 
         logger.info(f"Environment initialized: obs_dim={self.env.obs_dim}, action_dim={self.env.action_dim}")
@@ -1425,6 +1429,11 @@ class FeatureCombinationPPOTrainer(PPOTrainer):
         # Use stage-relative counter for decay calculations
         self.config['action_std'] = self.get_current_action_std(self.stage_update_counter)
         self.config['entropy_coeff'] = self.get_current_entropy_coeff(self.stage_update_counter)
+
+        # Update exploration bonus coefficient in environment
+        new_exploration_coeff = self.get_current_exploration_bonus_coeff(self.stage_update_counter)
+        self.env.exploration_bonus_coeff = new_exploration_coeff
+
         self.stage_update_counter += 1  # Increment stage-relative counter
 
     def get_current_action_std(self, update: int) -> float:
@@ -1454,20 +1463,39 @@ class FeatureCombinationPPOTrainer(PPOTrainer):
         initial = float(self.config.get('original_entropy_coeff', 0.01))
         decay_fraction = float(self.config.get('entropy_decay_fraction', 0.7))  # Decay to 70% by default
         final = initial * decay_fraction
-        
+
         # Use more of the updates for decay
         decay_steps_fraction = float(self.config.get('decay_steps_fraction', 0.8))
         total_updates = int(self.config.get('num_updates', 1000))
         decay_steps = int(total_updates * decay_steps_fraction)
-        
+
         if update >= decay_steps:
             return final
-        
+
         # Cosine annealing for smoother decay
         progress = update / decay_steps
         cosine_decay = 0.5 * (1 + jnp.cos(jnp.pi * progress))
         value = final + (initial - final) * cosine_decay
-        
+
+        return float(jnp.maximum(value, 0.0))
+
+    def get_current_exploration_bonus_coeff(self, update: int) -> float:
+        """Decay exploration bonus coefficient from 0.01 to 0.0 over training."""
+        initial = 0.01  # Start with 1% exploration bonus
+        final = 0.0     # End with no exploration bonus
+
+        # Decay over 80% of training
+        decay_steps_fraction = 0.8
+        total_updates = int(self.config.get('num_updates', 1000))
+        decay_steps = int(total_updates * decay_steps_fraction)
+
+        if update >= decay_steps:
+            return final
+
+        # Linear decay for exploration bonus (simpler than cosine)
+        progress = update / decay_steps
+        value = initial * (1.0 - progress)
+
         return float(jnp.maximum(value, 0.0))
 
     def compute_robust_metrics(self, trajectory: Trajectory) -> Dict[str, float]:

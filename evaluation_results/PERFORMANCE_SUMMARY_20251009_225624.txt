@@ -1,0 +1,58 @@
+╔══════════════════════════════════════════════════════════════════════════════════════╗
+║           FYP-FinAgent Comprehensive Model Performance Summary                       ║
+╚══════════════════════════════════════════════════════════════════════════════════════╝
+
+Evaluation Timestamp: Thu Oct  9 22:58:50 +08 2025
+Evaluation Period: 2025-03-07 to 2025-06-06 (3 months)
+Number of Episodes: 1
+
+═══════════════════════════════════════════════════════════════════════════════════════
+
+Model                               |  Ann. Return |    Ann. Vol. |     Sharpe | Win Rate |     Max DD
+────────────────────────────────────────────────────────────────────────────────────────
+
+┌─ PPO LSTM ─────────────────────────────────────────────────────────────────────┐
+│   ohlcv                           |     -0.1037% |      0.1827% |    -0.9019 |       0% |   -0.0509% │
+│   ohlcv+technical                 |     -0.1037% |      0.1827% |    -0.9019 |       0% |   -0.0509% │
+│   ohlcv+technical+sentiment       |     -0.1037% |      0.1827% |    -0.9019 |       0% |   -0.0509% │
+│   all                             |     -0.1037% |      0.1827% |    -0.9019 |       0% |   -0.0509% │
+└──────────────────────────────────────────────────────────────────────────────────────┘
+
+┌─ Plain RL LSTM ─────────────────────────────────────────────────────────────────────┐
+│   ohlcv                           |     -0.1554% |      0.1742% |    -1.4736 |       0% |   -0.0605% │
+│   ohlcv+technical                 |     -0.2552% |      0.1891% |    -2.2658 |       0% |   -0.0765% │
+│   ohlcv+technical+sentiment       |     -0.1976% |      0.1854% |    -1.7719 |       0% |   -0.0670% │
+│   all                             |     -0.2712% |      0.1956% |    -2.3274 |       0% |   -0.0829% │
+└──────────────────────────────────────────────────────────────────────────────────────┘
+
+┌─ PPO MLP ─────────────────────────────────────────────────────────────────────┐
+│   ohlcv                           |     -0.2721% |      0.1897% |    -2.4139 |       0% |   -0.0796% │
+│   ohlcv+technical                 |     -0.2113% |      0.1976% |    -1.7719 |       0% |   -0.0690% │
+│   ohlcv+technical+sentiment       |     -0.2458% |      0.1682% |    -2.4711 |       0% |   -0.0764% │
+│   all                             |     -0.2633% |      0.1939% |    -2.2774 |       0% |   -0.0750% │
+└──────────────────────────────────────────────────────────────────────────────────────┘
+
+═══════════════════════════════════════════════════════════════════════════════════════
+
+Metric Definitions:
+  • Ann. Return: Annualized cumulative log return (from 3-month eval period)
+  • Ann. Vol.:   Annualized volatility (daily returns × √252)
+  • Sharpe:      Sharpe ratio (risk-adjusted return metric)
+  • Win Rate:    Percentage of episodes with positive returns
+  • Max DD:      Maximum drawdown (peak-to-trough decline)
+
+Notes:
+  • Returns are calculated as cumulative log returns to match training metrics
+  • All metrics are averaged across 1 evaluation episodes
+  • Evaluation performed on out-of-sample data (2025-03-07 to 2025-06-06)
+
+═══════════════════════════════════════════════════════════════════════════════════════
+
+Detailed Results Location:
+  • JSON files:  evaluation_results/<model_type>/<feature_combo>/
+  • Reports:     evaluation_results/<model_type>/<feature_combo>/performance_report_*.txt
+  • Plots:       evaluation_results/<model_type>/<feature_combo>/*.png
+  • Logs:        evaluation_logs/20251009_225624/
+
+Generated: Thu Oct  9 22:58:51 +08 2025
+═══════════════════════════════════════════════════════════════════════════════════════

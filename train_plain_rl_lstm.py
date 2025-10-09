@@ -444,6 +444,7 @@ class CustomPortfolioEnv(JAXVectorizedPortfolioEnv):
                 end_date: str = '2025-03-06',
                 transaction_cost_rate: float = 0.005,
                 sharpe_window: int = 252,
+                eval_mode: bool = False,
                 **kwargs):
         """
         Initialize CustomPortfolioEnv with complete control over feature selection.
@@ -472,6 +473,7 @@ class CustomPortfolioEnv(JAXVectorizedPortfolioEnv):
             self.risk_free_rate_daily = 0.04 / 252.0
             self.cash_return_rate = 0.04 / 252.0
             self.close_price_idx = None
+            self.eval_mode = eval_mode  # If True, always start from beginning for full backtest
 
             # Load stocks
             if stocks is None:

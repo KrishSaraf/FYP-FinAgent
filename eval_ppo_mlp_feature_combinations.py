@@ -52,8 +52,12 @@ class PPOMLPEvaluator:
             end_date=self.end_date,
             window_size=30,
             transaction_cost_rate=0.005,
-            sharpe_window=252
+            sharpe_window=252,
+            eval_mode=True  # Always start from beginning for full backtest
         )
+        logger.info(f"Evaluation environment created: {jax_env.n_timesteps} timesteps")
+        logger.info(f"Window size: {jax_env.window_size}")
+        logger.info(f"Expected steps per episode: {jax_env.n_timesteps - jax_env.window_size}")
         return JAXToSB3Wrapper(jax_env)
 
     def evaluate(self, num_episodes: int = 20, max_steps: int = 10000,
@@ -76,11 +80,13 @@ class PPOMLPEvaluator:
             logger.info(f"Episode {episode + 1}/{num_episodes}")
 
             obs, info = self.eval_env.reset()
+            logger.info(f"Episode {episode + 1}: Starting at step {self.eval_env._env_state.current_step}")
+
             done = False
             step_count = 0
 
             daily_results = []
-            portfolio_values = []
+            portfolio_values = [1.0]  # Start with initial portfolio value
             rewards = []
             returns_series = []
 
@@ -104,24 +110,44 @@ class PPOMLPEvaluator:
                 returns_series.append(float(info.get("daily_portfolio_return", 0.0)))
                 step_count += 1
 
-            # Calculate metrics
-            returns_array = np.array(returns_series)
-            returns_array = returns_array[~np.isnan(returns_array)]
+            logger.info(f"Episode {episode + 1}: Completed {step_count} steps, ended at step {self.eval_env._env_state.current_step}")
 
-            if len(returns_array) > 1:
-                volatility = float(np.std(returns_array) * np.sqrt(252))
-                sharpe = float(np.mean(returns_array) / (np.std(returns_array) + 1e-8) * np.sqrt(252))
-                cumulative_returns = np.cumprod(1 + returns_array)
-                running_max = np.maximum.accumulate(cumulative_returns)
-                drawdowns = (cumulative_returns - running_max) / running_max
-                max_drawdown = float(np.min(drawdowns))
+            # Calculate episode metrics
+            # CRITICAL FIX: Calculate cumulative log return to match training
+            if len(portfolio_values) > 1:
+                # Convert portfolio values to log returns (matching training reward)
+                pv_array = np.array(portfolio_values)
+                episode_log_returns = np.log(pv_array[1:] / pv_array[:-1])
+                episode_log_returns = episode_log_returns[~np.isnan(episode_log_returns)]
+
+                # Cumulative log return (comparable to training)
+                cumulative_log_return = np.sum(episode_log_returns)
+                final_return = float(cumulative_log_return)
+
+                # Also calculate simple return for reference
+                final_value = portfolio_values[-1]
+                simple_return = final_value - 1.0
+
+                # Calculate daily returns for Sharpe and volatility
+                returns_array = np.array(returns_series)
+                returns_array = returns_array[~np.isnan(returns_array)]
+
+                if len(returns_array) > 1:
+                    volatility = float(np.std(returns_array) * np.sqrt(252))
+                    sharpe = float(np.mean(returns_array) / (np.std(returns_array) + 1e-8) * np.sqrt(252))
+                    cumulative_returns = np.cumprod(1 + returns_array)
+                    running_max = np.maximum.accumulate(cumulative_returns)
+                    drawdowns = (cumulative_returns - running_max) / running_max
+                    max_drawdown = float(np.min(drawdowns))
+                else:
+                    volatility, sharpe, max_drawdown = 0.0, 0.0, 0.0
             else:
+                final_return = 0.0
+                simple_return = 0.0
+                final_value = 1.0
                 volatility, sharpe, max_drawdown = 0.0, 0.0, 0.0
 
-            final_value = portfolio_values[-1] if portfolio_values else 1.0
-            final_return = final_value - 1.0
-
-            episode_returns.append(final_return)
+            episode_returns.append(final_return)  # Cumulative log return
             episode_sharpes.append(sharpe)
             episode_vols.append(volatility)
             episode_drawdowns.append(max_drawdown)
@@ -130,8 +156,10 @@ class PPOMLPEvaluator:
             rewards_history.append(rewards)
             daily_results_history.append(daily_results)
 
-            logger.info(f"Episode {episode + 1}: Return={final_return:.4f}, Sharpe={sharpe:.4f}, "
-                       f"Vol={volatility:.4f}, MaxDD={max_drawdown:.4f}, Steps={step_count}")
+            logger.info(f"Episode {episode + 1} completed: Steps={step_count}, "
+                       f"CumLogReturn={final_return:.4f}, SimpleReturn={simple_return:.4f}, "
+                       f"FinalValue={final_value:.4f}, Sharpe={sharpe:.4f}, "
+                       f"Vol={volatility:.4f}, MaxDD={max_drawdown:.4f}")
 
         total_time = time.time() - start_time
 

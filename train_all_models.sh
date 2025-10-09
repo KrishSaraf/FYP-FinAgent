@@ -211,32 +211,32 @@ main() {
     # Train all models with all feature combinations
     for feature_combo in "${FEATURE_COMBINATIONS[@]}"; do
 
-        # # 1. Train PPO Feature Combinations (LSTM)
-        # print_status "[${completed_models}/${total_models}] Training PPO Feature Combinations - ${feature_combo}..."
-        # if train_ppo_feature_combinations "${feature_combo}"; then
-        #     ((completed_models++))
-        # else
-        #     ((failed_models++))
-        #     failed_trainings+=("PPO_Feature_Combinations_${feature_combo}")
-        # fi
-
-        # # 2. Train Plain RL LSTM
-        # print_status "[${completed_models}/${total_models}] Training Plain RL LSTM - ${feature_combo}..."
-        # if train_plain_rl_lstm "${feature_combo}"; then
-        #     ((completed_models++))
-        # else
-        #     ((failed_models++))
-        #     failed_trainings+=("Plain_RL_LSTM_${feature_combo}")
-        # fi
-
-        # 3. Train PPO Transformer
-        print_status "[${completed_models}/${total_models}] Training PPO Transformer - ${feature_combo}..."
-        if train_ppo_transformer "${feature_combo}"; then
+        # 1. Train PPO Feature Combinations (LSTM)
+        print_status "[${completed_models}/${total_models}] Training PPO Feature Combinations - ${feature_combo}..."
+        if train_ppo_feature_combinations "${feature_combo}"; then
             ((completed_models++))
         else
             ((failed_models++))
-            failed_trainings+=("PPO_Transformer_${feature_combo}")
+            failed_trainings+=("PPO_Feature_Combinations_${feature_combo}")
         fi
+
+        # 2. Train Plain RL LSTM
+        print_status "[${completed_models}/${total_models}] Training Plain RL LSTM - ${feature_combo}..."
+        if train_plain_rl_lstm "${feature_combo}"; then
+            ((completed_models++))
+        else
+            ((failed_models++))
+            failed_trainings+=("Plain_RL_LSTM_${feature_combo}")
+        fi
+
+        # # 3. Train PPO Transformer
+        # print_status "[${completed_models}/${total_models}] Training PPO Transformer - ${feature_combo}..."
+        # if train_ppo_transformer "${feature_combo}"; then
+        #     ((completed_models++))
+        # else
+        #     ((failed_models++))
+        #     failed_trainings+=("PPO_Transformer_${feature_combo}")
+        # fi
 
         # 4. Train PPO MLP
         print_status "[${completed_models}/${total_models}] Training PPO MLP - ${feature_combo}..."

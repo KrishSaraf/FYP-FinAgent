@@ -135,7 +135,8 @@ class PPOFeatureCombinationEvaluator:
             'transaction_cost_rate': self.config.get('transaction_cost_rate', 0.005),
             'sharpe_window': self.config.get('sharpe_window', 252),
             'use_all_features': False,  # Use custom feature selection
-            'selected_features': self.selected_features
+            'selected_features': self.selected_features,
+            'eval_mode': True  # Always start from beginning for full backtest
         }
         
         try:
@@ -147,6 +148,8 @@ class PPOFeatureCombinationEvaluator:
             self.vmap_step = jax.vmap(self.env.step, in_axes=(0, 0))
             
             logger.info(f"Evaluation environment created: {self.env.n_timesteps} timesteps")
+            logger.info(f"Window size: {self.env.window_size}")
+            logger.info(f"Expected steps per episode: {self.env.n_timesteps - self.env.window_size}")
             logger.info(f"Observation dimension: {self.env.obs_dim}")
             logger.info(f"Features per stock: {self.env.n_features}")
             
@@ -213,20 +216,22 @@ class PPOFeatureCombinationEvaluator:
         
         for episode in range(num_episodes):
             logger.info(f"Running episode {episode + 1}/{num_episodes}")
-            
+
             # Reset environment
             rng_key, reset_key = random.split(rng_key)
             env_state, obs = self.env.reset(reset_key)
-            
+
+            logger.info(f"Episode {episode + 1}: Starting at step {env_state.current_step}")
+
             # Initialize LSTM carry state
             lstm_carry = self._create_initial_carry(1)
-            
+
             # Episode tracking
             episode_portfolio_values = [float(env_state.portfolio_value)]
             episode_weights = [env_state.portfolio_weights.tolist()]
             episode_rewards = []
             episode_actions = []
-            
+
             done = False
             step_count = 0
             
@@ -251,31 +256,52 @@ class PPOFeatureCombinationEvaluator:
                 episode_rewards.append(float(reward))
                 
                 step_count += 1
-            
+
+            logger.info(f"Episode {episode + 1}: Completed {step_count} steps, ended at step {env_state.current_step}")
+
             # Calculate episode metrics
-            final_return = float(env_state.total_return)
-            final_portfolio_value = float(env_state.portfolio_value)
-            
-            # Calculate Sharpe ratio from episode
-            episode_returns_array = np.diff(episode_portfolio_values) / np.array(episode_portfolio_values[:-1])
-            episode_returns_array = episode_returns_array[~np.isnan(episode_returns_array)]
-            
-            if len(episode_returns_array) > 1:
-                sharpe_ratio = np.mean(episode_returns_array) / (np.std(episode_returns_array) + 1e-8) * np.sqrt(252)
-                volatility = np.std(episode_returns_array) * np.sqrt(252)
-                
-                # Calculate max drawdown
-                cumulative_returns = np.cumprod(1 + episode_returns_array)
-                running_max = np.maximum.accumulate(cumulative_returns)
-                drawdown = (cumulative_returns - running_max) / running_max
-                max_drawdown = np.min(drawdown)
+            # CRITICAL FIX: Calculate cumulative log return to match training
+            if len(episode_portfolio_values) > 1:
+                # Convert portfolio values to log returns (matching training reward)
+                pv_array = np.array(episode_portfolio_values)
+                episode_log_returns = np.log(pv_array[1:] / pv_array[:-1])
+                episode_log_returns = episode_log_returns[~np.isnan(episode_log_returns)]
+
+                # Cumulative log return (comparable to training)
+                cumulative_log_return = np.sum(episode_log_returns)
+                final_return = float(cumulative_log_return)
+
+                # Also calculate simple return for reference
+                simple_return = float(env_state.total_return)  # Simple return from environment
+                final_portfolio_value = float(env_state.portfolio_value)
+
+                # Calculate daily returns for Sharpe and volatility
+                daily_returns = np.diff(pv_array) / pv_array[:-1]
+                daily_returns = daily_returns[~np.isnan(daily_returns)]
+
+                if len(daily_returns) > 1:
+                    sharpe_ratio = np.mean(daily_returns) / (np.std(daily_returns) + 1e-8) * np.sqrt(252)
+                    volatility = np.std(daily_returns) * np.sqrt(252)
+
+                    # Calculate max drawdown
+                    cumulative_returns = np.cumprod(1 + daily_returns)
+                    running_max = np.maximum.accumulate(cumulative_returns)
+                    drawdown = (cumulative_returns - running_max) / running_max
+                    max_drawdown = np.min(drawdown)
+                else:
+                    sharpe_ratio = 0.0
+                    volatility = 0.0
+                    max_drawdown = 0.0
             else:
+                final_return = 0.0
+                simple_return = 0.0
+                final_portfolio_value = 1.0
                 sharpe_ratio = 0.0
                 volatility = 0.0
                 max_drawdown = 0.0
-            
+
             # Store episode results
-            episode_returns.append(final_return)
+            episode_returns.append(final_return)  # Cumulative log return
             episode_sharpe_ratios.append(sharpe_ratio)
             episode_max_drawdowns.append(max_drawdown)
             episode_volatilities.append(volatility)
@@ -283,9 +309,10 @@ class PPOFeatureCombinationEvaluator:
             weights_history.append(episode_weights)
             rewards_history.append(episode_rewards)
             actions_history.append(episode_actions)
-            
-            logger.info(f"Episode {episode + 1} completed: Return={final_return:.4f}, "
-                       f"Sharpe={sharpe_ratio:.4f}, MaxDD={max_drawdown:.4f}")
+
+            logger.info(f"Episode {episode + 1} completed: Steps={step_count}, "
+                       f"CumLogReturn={final_return:.4f}, SimpleReturn={simple_return:.4f}, "
+                       f"FinalValue={final_portfolio_value:.4f}, Sharpe={sharpe_ratio:.4f}, MaxDD={max_drawdown:.4f}")
         
         # Compile results
         results = {

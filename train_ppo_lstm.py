@@ -241,7 +241,7 @@ class ActorCriticLSTM(nn.Module):
         
         values = self.critic_output(critic_hidden).squeeze(-1)
         values = jnp.where(jnp.isnan(values), 0.0, values)
-        values = jnp.clip(values, -100.0, 100.0)
+        values = jnp.clip(values, -1000.0, 1000.0)
         
         return logits, values, new_carry_states
 
@@ -463,7 +463,7 @@ class PPOTrainer:
             logits = jnp.where(jnp.isnan(logits), 0.0, logits)
             values = jnp.where(jnp.isnan(values), 0.0, values)
             logits = jnp.clip(logits, -5.0, 5.0)  # Reduced clipping
-            values = jnp.clip(values, -50.0, 50.0)  # Reduced clipping
+            values = jnp.clip(values, -1000.0, 1000.0)  # Allow larger value predictions
 
             # Sample actions
             action_std = self.config.get('action_std', 1.0)
@@ -484,9 +484,14 @@ class PPOTrainer:
             # Lightweight environment output cleaning
             next_obs = jnp.where(jnp.isnan(next_obs), 0.0, next_obs)
             next_obs = jnp.clip(next_obs, -50.0, 50.0)  # Reduced clipping
-            
+
             rewards = jnp.where(jnp.isnan(rewards), 0.0, rewards)
-            rewards = jnp.clip(rewards, -50.0, 50.0)  # Reduced clipping
+            # Asymmetric reward clipping: allow large positive rewards, bound negative rewards
+            rewards = jnp.where(
+                rewards < 0,
+                jnp.maximum(rewards, -1000.0),  # Clip negative rewards at -1000
+                rewards  # No upper bound on positive rewards
+            )
             
             # Note: Reward statistics are logged in the main training loop
 
@@ -575,11 +580,15 @@ class PPOTrainer:
         rewards = jnp.where(jnp.isnan(trajectory.rewards), 0.0, trajectory.rewards)
         values = jnp.where(jnp.isnan(trajectory.values), 0.0, trajectory.values)
         last_values = jnp.where(jnp.isnan(last_values), 0.0, last_values)
-        
-        # Clip inputs to reasonable ranges
-        rewards = jnp.clip(rewards, -100.0, 100.0)
-        values = jnp.clip(values, -100.0, 100.0)
-        last_values = jnp.clip(last_values, -100.0, 100.0)
+
+        # Asymmetric reward clipping: allow large positive rewards, bound negative rewards
+        rewards = jnp.where(
+            rewards < 0,
+            jnp.maximum(rewards, -1000.0),  # Clip negative rewards at -1000
+            rewards  # No upper bound on positive rewards
+        )
+        values = jnp.clip(values, -1000.0, 1000.0)
+        last_values = jnp.clip(last_values, -1000.0, 1000.0)
 
         # Extend values for GAE calculation
         extended_values = jnp.concatenate([values, last_values[None, :]], axis=0)
@@ -597,7 +606,7 @@ class PPOTrainer:
 
             # Clean advantage
             advantage = jnp.where(jnp.isnan(advantage), 0.0, advantage)
-            advantage = jnp.clip(advantage, -100.0, 100.0)
+            advantage = jnp.clip(advantage, -1000.0, 1000.0)
 
             return advantage, advantage
 
@@ -620,12 +629,12 @@ class PPOTrainer:
 
         # Final cleaning
         advantages = jnp.where(jnp.isnan(advantages), 0.0, advantages)
-        advantages = jnp.clip(advantages, -100.0, 100.0)
-        
+        advantages = jnp.clip(advantages, -1000.0, 1000.0)
+
         # Compute returns
         returns = advantages + values
         returns = jnp.where(jnp.isnan(returns), 0.0, returns)
-        returns = jnp.clip(returns, -100.0, 100.0)
+        returns = jnp.clip(returns, -1000.0, 1000.0)
         
         return advantages, returns
 
@@ -661,19 +670,19 @@ class PPOTrainer:
         logits = jnp.where(jnp.isnan(logits), 0.0, logits)
         values = jnp.where(jnp.isnan(values), 0.0, values)
         logits = jnp.clip(logits, -10.0, 10.0)
-        values = jnp.clip(values, -100.0, 100.0)
-        
+        values = jnp.clip(values, -1000.0, 1000.0)
+
         # Clean targets
         returns = jnp.where(jnp.isnan(returns), 0.0, returns)
         gae_advantages = jnp.where(jnp.isnan(gae_advantages), 0.0, gae_advantages)
-        returns = jnp.clip(returns, -100.0, 100.0)
-        
+        returns = jnp.clip(returns, -1000.0, 1000.0)
+
         # Safe advantage normalization
         gae_advantages = safe_normalize(gae_advantages)
 
         # Value loss (clipped)
         old_values = jnp.where(jnp.isnan(train_batch.values), 0.0, train_batch.values)
-        old_values = jnp.clip(old_values, -100.0, 100.0)
+        old_values = jnp.clip(old_values, -1000.0, 1000.0)
         
         value_pred_clipped = old_values + (values - old_values).clip(
             -self.config.get('clip_eps', 0.2),

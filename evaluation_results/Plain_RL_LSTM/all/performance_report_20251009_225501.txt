@@ -1,0 +1,58 @@
+
+Plain RL LSTM Portfolio Model Evaluation Report
+==============================================
+
+Model Information:
+- Model Path: models/plain_rl_lstm/all/curriculum_stage_3.pkl
+- Algorithm: Plain RL (REINFORCE)
+- Training Step: 2600
+- Feature Combination: unknown
+- Evaluation Period: 2024-06-06 to 2025-03-06
+- Number of Stocks: 45
+- Number of Episodes: 1
+
+Feature Analysis:
+----------------
+Total Features Used: 216
+Feature Combination: unknown
+
+Feature Category Breakdown:
+- OHLCV Features: 63 
+- Technical Features: 89
+- Financial Features: 48
+- Sentiment Features: 16
+
+Selected Features:
+open_lag_20, metric_TotalAssets, dma_200_rolling_mean_20, dma_50_rolling_std_20, dma_200_rolling_std_20, metric_returnOnInvestmentMostRecentFiscalYear, log_returns_1d, volume_spike, close_momentum_20, volume_price_momentum...
+
+Portfolio Performance Metrics:
+-----------------------------
+Mean Return: -0.4943 (-49.43%)
+Standard Deviation: 0.0000
+Mean Sharpe Ratio: -0.5503
+Mean Volatility: 0.7919 (79.19% annualized)
+Mean Max Drawdown: -0.5391 (-53.91%)
+Success Rate: 0.00 (0.0% positive returns)
+
+Episode Statistics:
+------------------
+Best Return: -0.4943
+Worst Return: -0.4943
+Best Sharpe: -0.5503
+Worst Sharpe: -0.5503
+
+Risk Analysis:
+--------------
+Information Ratio: -49425760.4950
+Risk-Adjusted Return: -0.6242
+Calmar Ratio: -0.9168
+
+Stock Universe:
+--------------
+RELIANCE, TCS, HDFCBANK, INFY, ICICIBANK, HINDUNILVR, SBIN, BHARTIARTL, KOTAKBANK, LT, ASIANPAINT, AXISBANK, MARUTI, ULTRACEMCO, TITAN, BAJFINANCE, NESTLEIND, ONGC, POWERGRID, NTPC, ITC, BAJAJFINSV, SUNPHARMA, TECHM, WIPRO, HCLTECH, JSWSTEEL, TATAMOTORS, ADANIPORTS, BRITANNIA, SHREECEM, TATACONSUM, BPCL, INDUSINDBK, GRASIM, EICHERMOT, DRREDDY, COALINDIA, HEROMOTOCO, IOC, UPL, CIPLA, TATASTEEL, HDFCLIFE, BAJAJ-AUTO
+
+Configuration:
+-------------
+Transaction Cost Rate: 0.005
+Window Size: 30
+Evaluation Seed: 123

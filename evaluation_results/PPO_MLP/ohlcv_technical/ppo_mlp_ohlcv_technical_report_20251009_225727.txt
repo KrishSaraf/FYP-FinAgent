@@ -1,0 +1,30 @@
+
+PPO+MLP Feature Combinations Evaluation Report
+==============================================
+
+Feature Combination: ohlcv+technical
+Number of Features: 60
+Evaluation Period: 2025-03-07 to 2025-06-06
+Number of Episodes: 1
+
+Portfolio Performance Metrics:
+-----------------------------
+Mean Return: -0.0528 (-5.28%)
+Std Return: 0.0000
+Mean Sharpe Ratio: -1.7719
+Mean Volatility: 0.1976 (19.76% annualized)
+Mean Max Drawdown: -0.0690 (-6.90%)
+Success Rate: 0.0000 (0.0% positive returns)
+
+Episode Statistics:
+------------------
+Best Return: -0.0528
+Worst Return: -0.0528
+Best Sharpe: -1.7719
+Worst Sharpe: -1.7719
+
+Risk Analysis:
+--------------
+Information Ratio: -5283235.3257
+Risk-Adjusted Return: -0.2674
+Calmar Ratio: -0.7660

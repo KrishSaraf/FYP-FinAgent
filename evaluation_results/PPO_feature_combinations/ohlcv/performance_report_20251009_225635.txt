@@ -1,0 +1,57 @@
+
+PPO Feature Combination Portfolio Model Evaluation Report
+========================================================
+
+Model Information:
+- Model Path: models/ppo_feature_combinations/ohlcv/curriculum_stage_3.pkl
+- Training Step: 0
+- Feature Combination: unknown
+- Evaluation Period: 2025-03-07 to 2025-06-06
+- Number of Stocks: 45
+- Number of Episodes: 1
+
+Feature Analysis:
+----------------
+Total Features Used: 63
+Feature Combination: unknown
+
+Feature Category Breakdown:
+- OHLCV Features: 63 
+- Technical Features: 0
+- Financial Features: 0
+- Sentiment Features: 0
+
+Selected Features:
+close, open, high, low, volume, vwap, returns_1d, returns_3d, returns_5d, returns_10d...
+
+Portfolio Performance Metrics:
+-----------------------------
+Mean Return: -0.0259 (-2.59%)
+Standard Deviation: 0.0000
+Mean Sharpe Ratio: -0.9019
+Mean Volatility: 0.1827 (18.27% annualized)
+Mean Max Drawdown: -0.0509 (-5.09%)
+Success Rate: 0.00 (0.0% positive returns)
+
+Episode Statistics:
+------------------
+Best Return: -0.0259
+Worst Return: -0.0259
+Best Sharpe: -0.9019
+Worst Sharpe: -0.9019
+
+Risk Analysis:
+--------------
+Information Ratio: -2592238.7917
+Risk-Adjusted Return: -0.1419
+Calmar Ratio: -0.5095
+
+Stock Universe:
+--------------
+RELIANCE, TCS, HDFCBANK, INFY, ICICIBANK, HINDUNILVR, SBIN, BHARTIARTL, KOTAKBANK, LT, ASIANPAINT, AXISBANK, MARUTI, ULTRACEMCO, TITAN, BAJFINANCE, NESTLEIND, ONGC, POWERGRID, NTPC, ITC, BAJAJFINSV, SUNPHARMA, TECHM, WIPRO, HCLTECH, JSWSTEEL, TATAMOTORS, ADANIPORTS, BRITANNIA, SHREECEM, TATACONSUM, BPCL, INDUSINDBK, GRASIM, EICHERMOT, DRREDDY, COALINDIA, HEROMOTOCO, IOC, UPL, CIPLA, TATASTEEL, HDFCLIFE, BAJAJ-AUTO
+
+Configuration:
+-------------
+Transaction Cost Rate: 0.005
+Window Size: 30
+Evaluation Seed: 123

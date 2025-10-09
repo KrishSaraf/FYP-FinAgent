@@ -27,7 +27,7 @@ EVAL_RESULTS_DIR="evaluation_results"
 MODELS_DIR="models"
 
 # Evaluation parameters
-NUM_EVAL_EPISODES=20
+NUM_EVAL_EPISODES=1
 EVAL_START_DATE="2025-03-07"
 EVAL_END_DATE="2025-06-06"
 
@@ -43,7 +43,7 @@ FEATURE_COMBINATIONS=(
 MODEL_TYPES=(
     "ppo_feature_combinations"
     "plain_rl_lstm"
-    "ppo_transformer"
+    # "ppo_transformer"
     "ppo_mlp"
 )
 
@@ -135,10 +135,11 @@ find_latest_model() {
             )
             ;;
         "ppo_mlp")
+            # PPO MLP has nested structure: models/ppo_mlp/{feature_combo}/{feature_combo}/stage_X/
             model_patterns=(
-                "${model_dir}/stage_3/curriculum_stage_3.zip"
-                "${model_dir}/stage_2/curriculum_stage_2.zip"
-                "${model_dir}/stage_1/curriculum_stage_1.zip"
+                "${model_dir}/${feature_combo_safe}/stage_3/curriculum_stage_3.zip"
+                "${model_dir}/${feature_combo_safe}/stage_2/curriculum_stage_2.zip"
+                "${model_dir}/${feature_combo_safe}/stage_1/curriculum_stage_1.zip"
                 "${model_dir}/final_model_${feature_combo_safe}.zip"
                 "${model_dir}/checkpoint_*.zip"
             )
@@ -293,6 +294,168 @@ evaluate_ppo_mlp() {
     fi
 }
 
+# Function to extract metrics from JSON files
+extract_metrics() {
+    local json_file=$1
+    if [ ! -f "${json_file}" ]; then
+        echo "N/A|N/A|N/A|N/A|N/A"
+        return
+    fi
+
+    # Extract metrics using Python for robust JSON parsing
+    python3 << EOF
+import json
+import sys
+
+try:
+    with open("${json_file}", 'r') as f:
+        data = json.load(f)
+
+    # Extract metrics
+    mean_return = data.get('mean_return', 0.0)
+    mean_volatility = data.get('mean_volatility', 0.0)
+    mean_sharpe = data.get('mean_sharpe', 0.0)
+    success_rate = data.get('success_rate', 0.0)
+    mean_max_dd = data.get('mean_max_drawdown', 0.0)
+
+    # Calculate annualized return from cumulative log return
+    # Assuming 3 months ~ 65 business days ~ 0.25 years
+    # Annualized return = cumulative_return / years
+    eval_period_years = 0.25
+    annualized_return = mean_return / eval_period_years
+
+    # Format output
+    print(f"{annualized_return:.4f}|{mean_volatility:.4f}|{mean_sharpe:.4f}|{success_rate:.2f}|{mean_max_dd:.4f}")
+except Exception as e:
+    print("N/A|N/A|N/A|N/A|N/A", file=sys.stderr)
+    sys.exit(1)
+EOF
+}
+
+# Function to generate comprehensive summary with performance metrics
+generate_performance_summary() {
+    print_section "Generating Performance Summary"
+
+    local summary_file="${EVAL_RESULTS_DIR}/PERFORMANCE_SUMMARY_${TIMESTAMP}.txt"
+
+    print_status "Aggregating results from all evaluations..."
+
+    {
+        echo "╔══════════════════════════════════════════════════════════════════════════════════════╗"
+        echo "║           FYP-FinAgent Comprehensive Model Performance Summary                       ║"
+        echo "╚══════════════════════════════════════════════════════════════════════════════════════╝"
+        echo ""
+        echo "Evaluation Timestamp: $(date)"
+        echo "Evaluation Period: ${EVAL_START_DATE} to ${EVAL_END_DATE} (3 months)"
+        echo "Number of Episodes: ${NUM_EVAL_EPISODES}"
+        echo ""
+        echo "═══════════════════════════════════════════════════════════════════════════════════════"
+        echo ""
+
+        # Header for performance table
+        printf "%-35s | %12s | %12s | %10s | %8s | %10s\n" \
+            "Model" "Ann. Return" "Ann. Vol." "Sharpe" "Win Rate" "Max DD"
+        echo "────────────────────────────────────────────────────────────────────────────────────────"
+
+        # Collect results for each model type and feature combination
+        for model_type in "${MODEL_TYPES[@]}"; do
+            # Skip transformer if not evaluated
+            if [ "${model_type}" == "ppo_transformer" ]; then
+                continue
+            fi
+
+            # Map model_type to directory name
+            case "${model_type}" in
+                "ppo_feature_combinations")
+                    dir_name="PPO_feature_combinations"
+                    display_name="PPO LSTM"
+                    ;;
+                "plain_rl_lstm")
+                    dir_name="Plain_RL_LSTM"
+                    display_name="Plain RL LSTM"
+                    ;;
+                "ppo_mlp")
+                    dir_name="PPO_MLP"
+                    display_name="PPO MLP"
+                    ;;
+                *)
+                    continue
+                    ;;
+            esac
+
+            echo ""
+            echo "┌─ ${display_name} ─────────────────────────────────────────────────────────────────────┐"
+
+            for feature_combo in "${FEATURE_COMBINATIONS[@]}"; do
+                feature_combo_safe="${feature_combo//+/_}"
+
+                # Find the most recent JSON result file
+                result_dir="${EVAL_RESULTS_DIR}/${dir_name}/${feature_combo_safe}"
+                json_file=$(ls -t "${result_dir}"/evaluation_results_*.json 2>/dev/null | head -1)
+
+                if [ -z "${json_file}" ]; then
+                    json_file=$(ls -t "${result_dir}"/*evaluation*.json 2>/dev/null | head -1)
+                fi
+
+                if [ -n "${json_file}" ]; then
+                    # Extract metrics
+                    metrics=$(extract_metrics "${json_file}")
+                    IFS='|' read -r ann_ret vol sharpe win_rate max_dd <<< "${metrics}"
+
+                    # Format feature combination name
+                    feature_display="${feature_combo}"
+
+                    # Print row
+                    printf "│ %-33s | %11s%% | %11s%% | %10s | %7s%% | %9s%% │\n" \
+                        "  ${feature_display}" \
+                        "${ann_ret}" \
+                        "${vol}" \
+                        "${sharpe}" \
+                        "$(echo "${win_rate} * 100" | bc -l 2>/dev/null || echo ${win_rate})" \
+                        "${max_dd}"
+                else
+                    printf "│ %-33s | %12s | %12s | %10s | %8s | %10s │\n" \
+                        "  ${feature_combo}" "NO DATA" "NO DATA" "NO DATA" "NO DATA" "NO DATA"
+                fi
+            done
+            echo "└──────────────────────────────────────────────────────────────────────────────────────┘"
+        done
+
+        echo ""
+        echo "═══════════════════════════════════════════════════════════════════════════════════════"
+        echo ""
+        echo "Metric Definitions:"
+        echo "  • Ann. Return: Annualized cumulative log return (from 3-month eval period)"
+        echo "  • Ann. Vol.:   Annualized volatility (daily returns × √252)"
+        echo "  • Sharpe:      Sharpe ratio (risk-adjusted return metric)"
+        echo "  • Win Rate:    Percentage of episodes with positive returns"
+        echo "  • Max DD:      Maximum drawdown (peak-to-trough decline)"
+        echo ""
+        echo "Notes:"
+        echo "  • Returns are calculated as cumulative log returns to match training metrics"
+        echo "  • All metrics are averaged across ${NUM_EVAL_EPISODES} evaluation episodes"
+        echo "  • Evaluation performed on out-of-sample data (${EVAL_START_DATE} to ${EVAL_END_DATE})"
+        echo ""
+        echo "═══════════════════════════════════════════════════════════════════════════════════════"
+        echo ""
+        echo "Detailed Results Location:"
+        echo "  • JSON files:  ${EVAL_RESULTS_DIR}/<model_type>/<feature_combo>/"
+        echo "  • Reports:     ${EVAL_RESULTS_DIR}/<model_type>/<feature_combo>/performance_report_*.txt"
+        echo "  • Plots:       ${EVAL_RESULTS_DIR}/<model_type>/<feature_combo>/*.png"
+        echo "  • Logs:        ${EVAL_LOG_DIR}/"
+        echo ""
+        echo "Generated: $(date)"
+        echo "═══════════════════════════════════════════════════════════════════════════════════════"
+
+    } > "${summary_file}"
+
+    print_status "Performance summary saved to: ${summary_file}"
+
+    # Also print to console for immediate viewing
+    echo ""
+    cat "${summary_file}"
+}
+
 # Function to generate comparative analysis
 generate_comparative_analysis() {
     print_section "Generating Comparative Analysis"
@@ -354,6 +517,9 @@ generate_comparative_analysis() {
     } > "${summary_file}"
 
     print_status "Summary saved to: ${summary_file}"
+
+    # Generate comprehensive performance summary
+    generate_performance_summary
 }
 
 # Main evaluation loop
@@ -407,15 +573,15 @@ main() {
                         failed_evaluations+=("Plain_RL_LSTM_${feature_combo}")
                     fi
                     ;;
-                "ppo_transformer")
-                    evaluate_ppo_transformer "${feature_combo}" "${model_path}"
-                    if [ $? -eq 0 ]; then
-                        ((completed_evals++))
-                    else
-                        ((failed_evals++))
-                        failed_evaluations+=("PPO_Transformer_${feature_combo}")
-                    fi
-                    ;;
+                # "ppo_transformer")
+                #     evaluate_ppo_transformer "${feature_combo}" "${model_path}"
+                #     if [ $? -eq 0 ]; then
+                #         ((completed_evals++))
+                #     else
+                #         ((failed_evals++))
+                #         failed_evaluations+=("PPO_Transformer_${feature_combo}")
+                #     fi
+                #     ;;
                 "ppo_mlp")
                     evaluate_ppo_mlp "${feature_combo}" "${model_path}"
                     if [ $? -eq 0 ]; then

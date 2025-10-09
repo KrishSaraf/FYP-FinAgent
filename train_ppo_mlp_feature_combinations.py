@@ -193,8 +193,8 @@ def train_stage(stage_num: int, stage_config: Dict, selected_features: List[str]
             n_epochs=5,
             gamma=0.99,
             gae_lambda=0.95,
-            clip_range=stage_config['clip_range'],
-            clip_range_vf=0.05,
+            clip_range=lambda _: stage_config['clip_range'],
+            clip_range_vf=lambda _: 0.05,
             ent_coef=stage_config['ent_coef'],
             vf_coef=0.25,
             max_grad_norm=0.3,
@@ -205,7 +205,7 @@ def train_stage(stage_num: int, stage_config: Dict, selected_features: List[str]
         # Update hyperparameters
         model.learning_rate = stage_config['learning_rate']
         model.ent_coef = stage_config['ent_coef']
-        model.clip_range = stage_config['clip_range']
+        model.clip_range = lambda _: stage_config['clip_range']
         model.set_env(train_env)
 
     # Setup callbacks
@@ -253,7 +253,7 @@ def main():
     parser.add_argument('--start_stage', type=int, default=1, choices=[1, 2, 3])
 
     # Training parameters
-    parser.add_argument('--total_timesteps', type=int, default=100_000)
+    parser.add_argument('--total_timesteps', type=int, default=2_000_000)
     parser.add_argument('--data_root', type=str, default='processed_data/')
     parser.add_argument('--train_start_date', type=str, default='2024-06-06')
     parser.add_argument('--train_end_date', type=str, default='2025-03-06')
