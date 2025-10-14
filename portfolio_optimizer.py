@@ -457,6 +457,19 @@ def run_backtest(df: pd.DataFrame,
     turnover_s = pd.Series(turnover_records, index=w_df.index)
     portfolio_values_s = pd.Series(portfolio_values, index=w_df.index)
 
+    # Create formatted portfolio values CSV with dates and day numbers
+    portfolio_data = []
+    for i, (date, value) in enumerate(zip(w_df.index, portfolio_values)):
+        portfolio_data.append({
+            'Date': date.strftime('%Y-%m-%d'),
+            'Portfolio_Value': value,
+            'Day': i + 1
+        })
+
+    portfolio_df = pd.DataFrame(portfolio_data)
+    portfolio_df.to_csv('ridge_portfolio_values.csv', index=False)
+    print(f"✓ Portfolio values saved to 'ridge_portfolio_values.csv'")
+
     # Performance summary
     cum = (1 + pnl_s).cumprod()
     sharpe = np.sqrt(252) * pnl_s.mean() / (pnl_s.std(ddof=1) + 1e-12)
@@ -505,9 +518,10 @@ if __name__ == "__main__":
         
         print("\nResults saved to:")
         print("- weights_daily.csv")
-        print("- pnl_daily.csv") 
+        print("- pnl_daily.csv")
         print("- turnover_daily.csv")
         print("- portfolio_values_daily.csv")
+        print("- ridge_portfolio_values.csv (formatted with dates and day numbers)")
         
     except Exception as e:
         print(f"Error: {e}")

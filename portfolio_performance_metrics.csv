@@ -1,0 +1,22 @@
+Model,Total Return,Sharpe Ratio,Max Drawdown,Volatility,Avg Turnover,Calmar Ratio,Trading Days,Performance
+checkpoint_300000_steps,-4.73%,-3.12,-7.76%,8.76%,0.00%,-0.61,45,🔄 Training Issues
+checkpoint_350000_steps,-3.74%,-2.33,-6.90%,9.17%,0.00%,-0.54,45,🔄 Training Issues
+checkpoint_100000_steps,-3.00%,-1.98,-6.85%,8.63%,0.00%,-0.44,45,🔄 Training Issues
+checkpoint_250000_steps,-2.69%,-1.85,-6.03%,8.25%,0.00%,-0.45,45,🔄 Training Issues
+checkpoint_500000_steps,-3.41%,-1.82,-6.85%,10.58%,0.00%,-0.50,45,🔄 Training Issues
+checkpoint_950000_steps,-3.52%,-1.78,-7.54%,11.19%,0.00%,-0.47,45,🔄 Training Issues
+checkpoint_150000_steps,-2.79%,-1.69,-6.60%,9.32%,0.00%,-0.42,45,🔄 Training Issues
+checkpoint_750000_steps,-3.22%,-1.65,-7.15%,11.02%,0.00%,-0.45,45,🔄 Training Issues
+checkpoint_400000_steps,-2.78%,-1.65,-6.17%,9.54%,0.00%,-0.45,45,🔄 Training Issues
+checkpoint_450000_steps,-2.91%,-1.59,-6.43%,10.33%,0.00%,-0.45,45,🔄 Training Issues
+checkpoint_1000000_steps,-3.21%,-1.55,-7.54%,11.64%,0.00%,-0.43,45,🔄 Training Issues
+final_model,-3.21%,-1.55,-7.58%,11.64%,0.00%,-0.42,45,🔄 Training Issues
+checkpoint_700000_steps,-2.79%,-1.46,-6.85%,10.72%,0.00%,-0.41,45,🔄 Training Issues
+checkpoint_650000_steps,-2.68%,-1.34,-6.60%,11.14%,0.00%,-0.41,45,🔄 Training Issues
+checkpoint_900000_steps,-2.43%,-1.14,-6.77%,11.78%,0.00%,-0.36,45,🔄 Training Issues
+checkpoint_600000_steps,-2.30%,-1.13,-6.14%,11.26%,0.00%,-0.37,45,🔄 Training Issues
+checkpoint_200000_steps,-1.90%,-1.04,-6.33%,10.07%,0.00%,-0.30,45,🔄 Training Issues
+checkpoint_550000_steps,-1.87%,-0.98,-5.47%,10.53%,0.00%,-0.34,45,⚠️ Needs Improvement
+checkpoint_800000_steps,-1.97%,-0.96,-6.29%,11.27%,0.00%,-0.31,45,⚠️ Needs Improvement
+checkpoint_850000_steps,-1.99%,-0.93,-6.37%,11.63%,0.00%,-0.31,45,⚠️ Needs Improvement
+checkpoint_50000_steps,-0.31%,-0.11,-5.08%,11.05%,0.00%,-0.06,45,✅ Good

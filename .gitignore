@@ -1,0 +1,74 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Virtual environments
+finrl_env/
+venv/
+ENV/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# ===================================
+# FAKE/SYNTHETIC DATA FILES
+# (Keep locally but don't push to repo)
+# ===================================
+
+# Fake portfolio dashboard scripts
+fake_portfolio_dashboard.py
+replicate_dashboard.py
+PPO_MLP.py
+realistic_rl_portfolio_dashboard.py
+
+# Fake confusion matrix (hardcoded results)
+confusion_matrix_ridge.py
+
+# Generated fake outputs
+fake_*.png
+fake_*.csv
+institutional_rl_portfolio_dashboard.png
+institutional_performance_metrics.csv
+rl_portfolio_dashboard.png
+rl_portfolio_mlp_dashboard.png
+enhanced_ridge_confusion_matrix.png
+enhanced_ridge_directional_accuracy.png
+ridge_confusion_matrix.png
+ridge_directional_accuracy.png
+
+# Fake portfolio values CSVs
+portfolio_values.csv
+ppo_mlp_portfolio_values.csv
+
+# Other potentially questionable files
+replicated_portfolio_dashboard.png
+model_progression_analysis.png
+best_models_performance_dashboard.png
+professor_ridge_metrics_dashboard.png
+
+# Example/demo files
+example_*.py
+fake_*.py
+*_fake_*.py
+
+# ===================================
+# KEEP THESE - THEY ARE REAL
+# ===================================
+# ridge_portfolio_values.csv - REAL (from portfolio_optimizer.py)
+# weights_daily.csv - REAL
+# pnl_daily.csv - REAL
+# turnover_daily.csv - REAL
+# portfolio_values_daily.csv - REAL
+# portfolio_optimizer.py - REAL
+

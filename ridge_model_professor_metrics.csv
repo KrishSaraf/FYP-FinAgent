@@ -1,0 +1,14 @@
+Metric,Value,Interpretation
+Information Coefficient (IC),-0.0206,Correlation between predictions and actual returns
+IC Information Ratio,-0.1307,Risk-adjusted IC (IC/IC_std)
+R² Score,-0.0635,Proportion of variance explained by model
+Mean Absolute Error,0.0100,Average absolute prediction error
+Root Mean Square Error,0.0200,Root mean square prediction error
+Portfolio Sharpe Ratio,2.7399,Risk-adjusted portfolio performance
+Total Return,20.07%,Total portfolio return over period
+Maximum Drawdown,-6.86%,Maximum peak-to-trough loss
+Volatility (Annualized),17.19%,Annualized return volatility
+Cross-Validation Accuracy,53.54%,Average accuracy across time periods
+Cross-Validation IC,-0.0178,Average IC across time periods
+Top Stock Prediction Accuracy,65.38%,Best individual stock prediction accuracy
+Model Stability (CV Std),0.0524,Stability of model performance
